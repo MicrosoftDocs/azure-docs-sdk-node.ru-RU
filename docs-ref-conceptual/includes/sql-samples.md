@@ -1,0 +1,1 @@
+- [<span data-ttu-id="fa4ed-101">База данных SQL Azure: подключение и запрос данных с помощью Node.js</span><span class="sxs-lookup"><span data-stu-id="fa4ed-101">Azure SQL Database: Use Node.js to connect and query data</span></span>](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs)
