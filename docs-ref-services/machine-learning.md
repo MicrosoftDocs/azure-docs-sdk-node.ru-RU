@@ -1,25 +1,22 @@
 ---
 title: "Модули машинного обучения Azure для Node.js"
 description: "Справочник по модулям машинного обучения Azure для Node.js"
-keywords: Azure,SDK,API,Machine Learning, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Machine Learning
-ms.openlocfilehash: 465b569d0eef53208211be2c2ff36d28bb28d107
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 82f731971505250f1d637ae32b4c7a83ff24fccf
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-machine-learning-modules-for-nodejs"></a>Модули машинного обучения Azure для Node.js
-
-## <a name="overview"></a>Обзор
 
 Машинное обучение — это метод обработки и анализа данных, который позволяет выполнить обучение компьютеров на основе имеющихся данных с целью прогнозирования будущего поведения, результатов и тенденций. Эти прогнозы машинного обучения позволяют сделать приложения и устройства эффективнее. При покупках через Интернет машинное обучение помогает рекомендовать другие продукты, которые могут вам понравиться, на основе уже приобретенных вами товаров. При проведении кредитной карты через терминал машинное обучение сравнивает транзакцию с базой данных и позволяет обнаружить мошенничество. Когда робот-пылесос убирает комнату, машинное обучение позволяет определить, когда этот процесс окончен.
 

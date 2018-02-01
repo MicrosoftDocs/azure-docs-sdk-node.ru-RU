@@ -1,25 +1,22 @@
 ---
 title: "Другие модули Azure для Node.js"
 description: "Справочник по другим модулям Azure для Node.js"
-keywords: Azure,SDK,API,Other, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Other
-ms.openlocfilehash: deab8c06c7dbd88fee62de2366b7e6d85324f8cf
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 29a89faa57d295a3e157732efd612008b604fcdc
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-other-modules-for-nodejs"></a>Другие модули Azure для Node.js
-
-## <a name="overview"></a>Обзор
 
 Этот модуль содержит все отдельные модули Azure для Node.js в одном месте.
 

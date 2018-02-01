@@ -1,25 +1,23 @@
 ---
 title: "Модули Azure Logic Apps для Node.js"
 description: "Справочник по модулям Azure Logic Apps для Node.js"
-keywords: Azure,SDK,API,Logic Apps, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Logic Apps
-ms.openlocfilehash: 70380dbf1fd199ba4909975b05ade72efaa4e0ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 37e485bea316ebd7fb4a064e1919da5501d96eac
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-logic-apps-modules-for-nodejs"></a>Модули Azure Logic Apps для Node.js
 
-## <a name="overview"></a>Обзор
 Приложения логики позволяют упростить и реализовать масштабируемые рабочие процессы и сценарии интеграции в облаке. Это визуальный конструктор для моделирования и автоматизации процессов в виде ряда операций, которые называются рабочим процессом. Для облачных и локальных сред доступно множество соединителей, которые позволяют быстро реализовать сценарии интеграции в службах и протоколах. Приложение логики запускается при срабатывании триггера (например, "When an account is added to Dynamics CRM" (При добавлении учетной записи в Dynamics CRM)), после чего могут выполняться разные комбинации действий, преобразования и условная логика.
 
 Использование приложений логики связано со следующими преимуществами.

@@ -1,25 +1,22 @@
 ---
 title: "Модули кэша Redis для Microsoft Azure для Node.js"
 description: "Справочник по модулям кэша Redis для Microsoft Azure для Node.js"
-keywords: Azure,SDK,API,Redis Cache, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Redis Cache
-ms.openlocfilehash: 8a10e522e39461697b740750b63fc82a6cc320ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 5d3a410fefcf6840181701763346fbfe08fe023b
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-redis-cache-modules-for-nodejs"></a>Модули кэша Redis для Microsoft Azure для Node.js
-
-## <a name="overview"></a>Обзор
 
 Кэш Redis для Azure основан на популярном проекте с открытым кодом Redis. Он предоставляет доступ к безопасному выделенному экземпляру Redis, управляемому корпорацией Майкрософт и доступному из приложений Azure.
 

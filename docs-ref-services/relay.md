@@ -1,25 +1,22 @@
 ---
 title: "Модули ретранслятора Azure для Node.js"
 description: "Справочник по ретрансляторам Azure для Node.js"
-keywords: Azure,SDK,API,Relay, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Relay
-ms.openlocfilehash: 7e958433e0d3cc6b464bb5980d4f161323a18ab2
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 632e17f9169353ad9348b3b098b4a3e8d873238a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-relay-modules-for-nodejs"></a>Модули ретранслятора Azure для Node.js
-
-## <a name="overview"></a>Обзор
 
 Служба ретранслятора Azure помогает создавать гибридные приложения и позволяет безопасно предоставлять в общедоступном облаке службы, используемые в корпоративной сети предприятия. Для этого вам не нужно открывать подключения брандмауэра или вносить значительные изменения в инфраструктуру корпоративной сети. Ретранслятор поддерживает множество различных транспортных протоколов и стандартов веб-служб.
 

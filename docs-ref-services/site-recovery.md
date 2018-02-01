@@ -1,25 +1,22 @@
 ---
 title: "Модули Azure Site Recovery для Node.js"
 description: "Справочник по модулям Azure Site Recovery для Node.js"
-keywords: Azure,SDK,API,Site Recovery, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Site Recovery
-ms.openlocfilehash: 3537503118a6fbe181c8cc4b26da545a4bdbd764
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: a1f3e1c18be68dd7e68f38e353e0c2ba224fbaa1
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-site-recovery-modules-for-nodejs"></a>Модули Azure Site Recovery для Node.js
-
-## <a name="overview"></a>Обзор
 
 Служба Site Recovery позволяет автоматизировать репликацию виртуальных машин Azure между регионами, репликацию локальных виртуальных машин и физических серверов в Azure и репликацию локальных компьютеров во вторичный центр обработки данных.
 

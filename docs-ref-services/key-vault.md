@@ -1,25 +1,22 @@
 ---
 title: "Модули Azure Key Vault для Node.js"
 description: "Справочник по модулям Azure Key Vault для Node.js"
-keywords: Azure,SDK,API,Key Vault, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Key Vault
-ms.openlocfilehash: e497e1e0e369dfd975fe5a2d7759ec893fbf6aff
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: aacc02088236ee5b6a941dfb266b9b198b04ad3a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-key-vault-modules-for-nodejs"></a>Модули Azure Key Vault для Node.js
-
-## <a name="overview"></a>Обзор
 
 Хранилище ключей Azure помогает защитить криптографические ключи и секреты, используемые облачными приложениями и службами. С помощью хранилища ключей можно шифровать ключи и секреты (например, ключи аутентификации, ключи учетных записей хранения, ключи шифрования данных, PFX-файлы и пароли), используя ключи, защищенные аппаратными модулями безопасности. Чтобы обеспечить более высокий уровень защиты, ключи можно импортировать или создать в аппаратных модулях безопасности. Если вы выберете этот вариант, корпорация Майкрософт будет обрабатывать ключи в аппаратных модулях безопасности (оборудование и встроенное ПО), сертифицированных по стандарту FIPS 140-2 уровня 2.
 

@@ -1,25 +1,23 @@
 ---
 title: "Модули концентратора событий Azure для Node.js"
 description: "Справочник по модулям концентратора событий Azure для Node.js"
-keywords: Azure,SDK,API,Event Hub, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Event Hub
-ms.openlocfilehash: 5ac6fc3f86419602756c354393078b399a6cba23
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 043c34e5b352a786ebead986d05b18c8216d0c93
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-event-hub-modules-for-nodejs"></a>Модули концентратора событий Azure для Node.js
 
-## <a name="overview"></a>Обзор
 Концентраторы событий Azure — это высокомасштабируемая платформа потоковой передачи данных и служба потребления событий, принимающая и обрабатывающая миллионы событий в секунду. Концентраторы событий могут обрабатывать и сохранять события, данные и телеметрию, созданные распределенным программным обеспечением и устройствами. Данные, отправляемые в концентратор событий, можно преобразовывать и сохранять с помощью любого поставщика аналитики в реальном времени, а также с помощью адаптеров пакетной обработки или хранения. Благодаря возможности публикации и подписки с низкой задержкой и с неограниченным масштабированием концентраторы событий становятся "трамплином" для больших объемов данных.
 
 ## <a name="management-package"></a>Пакет управления

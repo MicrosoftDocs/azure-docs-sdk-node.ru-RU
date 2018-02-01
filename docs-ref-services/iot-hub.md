@@ -1,27 +1,24 @@
 ---
 title: "Модули Центра Интернета вещей Azure для Node.js"
 description: "Справочник по модулям Центра Интернета вещей Azure для Node.js"
-keywords: Azure,SDK,API,IoT Hub, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
-ms.openlocfilehash: 44d01ceb833d2acbef6f9f22b32d4ad66b1fd5ec
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 66a0cad731d8e8dfd5cea64bdc910189a23fc6f0
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-iot-hub-modules-for-nodejs"></a>Модули Центра Интернета вещей Azure для Node.js
 
-## <a name="overview"></a>Обзор
-
-Центр IoT Azure — это полностью управляемая служба, которая обеспечивает надежный и защищенный двунаправленный обмен данными между миллионами устройств IoT и серверной частью решения. Центр IoT Azure обеспечивает:
+Центр Интернета вещей Azure — это полностью управляемая служба, которая обеспечивает надежный и защищенный двунаправленный обмен данными между миллионами устройств Интернета вещей и серверной частью решения. Центр Интернета вещей Azure обеспечивает:
 - несколько вариантов взаимодействия между устройствами и облаком, в том числе одностороннюю передачу сообщений, передачу файлов и методы "запрос — ответ";
 - встроенную декларативную маршрутизацию сообщений к другим службам Azure;
 - хранилище для метаданных устройств и информации о состоянии синхронизации с возможностью запрашивания данных;

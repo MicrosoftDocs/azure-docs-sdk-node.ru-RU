@@ -1,25 +1,22 @@
 ---
 title: "Модули центров уведомлений Azure для Node.js"
 description: "Справочник по модулям центров уведомлений Azure для Node.js"
-keywords: Azure,SDK,API,Notification Hubs, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
-ms.openlocfilehash: 0141760cb93c77faed4a04893fe1376e4e75c361
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: c353bdc0fff7784881b5cd4f1d3b4dda5268f1ea
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-notification-hubs-modules-for-nodejs"></a>Модули центров уведомлений Azure для Node.js
-
-## <a name="overview"></a>Обзор
 
 Центры уведомлений Azure предлагают удобный и масштабируемый механизм для push-уведомлений с поддержкой разных платформ. Один вызов API, единый для всех платформ, позволяет легко отправлять целевые персонализированные push-уведомления на любую мобильную платформу с любого облачного или локального сервера.
 

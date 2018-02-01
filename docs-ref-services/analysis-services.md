@@ -1,21 +1,20 @@
 ---
 title: "Модули Azure Analysis Services для Node.js"
 description: "Справочник по модулям Azure Analysis Services для Node.js"
-keywords: Azure,SDK,API,Analysis Services, Node.js
-author: tomarcher
-ms.author: tarcher
-manager: douge
+author: craigshoemaker
+ms.author: cshoe
+manager: routlaw
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Analysis Services
-ms.openlocfilehash: ff38883eed2de5d95fb5bd5fd951c6b9564a4b35
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 7dd9ac4a2a4939b66f5a91d048e49fb59cd547c0
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="azure-analysis-services-modules-for-nodejs"></a>Модули Azure Analysis Services для Node.js
 
