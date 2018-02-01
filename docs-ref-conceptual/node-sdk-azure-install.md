@@ -1,10 +1,10 @@
 ---
 ROBOTS: NOINDEX
-redirect_url: https://docs.microsoft.com/nodejs/api/overview/azure/?view=azure-node-2.0.0
-redirect_document_id: True
-ms.openlocfilehash: b003478765522db5007f701cdccc115c5a179735
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+redirect_url: https://docs.microsoft.com/javascript/api/overview/azure/
+redirect_document_id: 
+ms.openlocfilehash: bac1ee2a98b67ad214aa05e2a86a6ecac12b0fc8
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---

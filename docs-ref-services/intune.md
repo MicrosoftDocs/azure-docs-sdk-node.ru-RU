@@ -1,8 +1,8 @@
 ---
-redirect_url: https://docs.microsoft.com/nodejs/azure/?view=azure-node-2.0.0
-ms.openlocfilehash: 4412ab2f02d84ad087c7ced976545ee5574e97bc
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+redirect_url: https://docs.microsoft.com/nodejs/azure
+ms.openlocfilehash: 3bc0a62254267d1e58cc6c1195ec617e7e62da2e
+ms.sourcegitcommit: 1ee45e915fe6358057effb65dd9a9131317b51b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/29/2018
 ---
