@@ -1,21 +1,20 @@
 ---
 title: "Модули управления Azure для веб-приложений Node.js"
-description: "Получите пример кода для создания и обновления веб-приложений Azure, размещенных в службе приложений, используя модули управления для Node.js"
-keywords: Azure, Node, SDK, API, web apps, app service
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Примеры кода Node.js для работы с модулями управления службы приложений Azure"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 6fb01ecef079530bacd551bd7bbc73aba61f9466
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 1e67b03d352b6877c5090d80571c6c396f334a53
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="azure-management-modules-for-nodejs-samples-for-web-apps"></a><span data-ttu-id="50a03-104">Модули управления Azure для веб-приложений Node.js</span><span class="sxs-lookup"><span data-stu-id="50a03-104">Azure management modules for Node.js samples for web apps</span></span>
+# <a name="nodejs-code-samples-for-azure-app-service-management-modules"></a><span data-ttu-id="e9ec0-103">Примеры кода Node.js для работы с модулями управления службы приложений Azure</span><span class="sxs-lookup"><span data-stu-id="e9ec0-103">Node.js Code samples for Azure App Service management modules</span></span>
 
 [!INCLUDE [node-appservice-samples](../docs-ref-conceptual/includes/appservice-samples.md)]
