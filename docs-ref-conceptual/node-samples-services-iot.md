@@ -1,18 +1,18 @@
 ---
-title: "Примеры кода: использование службы сообщений Azure и Интернета вещей с Node.js"
-description: "Примеры кода, которые иллюстрируют использование службы сообщений Azure и Интернета вещей с Node.js"
-author: tomarcher
-manager: douge
+title: "Примеры кода для работы со службой сообщений Azure и Интернетом вещей с помощью Node.js"
+description: "Пример кода, в котором показано, как работать со службой сообщений Azure и Интернетом вещей с помощью Node.js."
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 5d7fc46edde0df844f8e4933bef672e619bd06fc
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 45aad90670a8ac8c0f32f9deab2eb32043c52d96
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="sample-code-for-using-azure-messaging-and-iot-with-nodejs"></a>Примеры кода: использование службы сообщений Azure и Интернета вещей с Node.js
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 08/17/2017
 
 | | |
 |---|---|
-| **Центр Интернета вещей** ||
+| **Центр Интернета вещей Azure** ||
 | [Проверка связи с Центром Интернета вещей Azure](https://github.com/Azure-Samples/iot-hub-node-ping) | Простое решение для проверки связи, которое позволяет проверить возможность подключения устройств к Центру Интернета вещей Azure. |
 | [Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Отправка твита об аномальных вибрациях, обнаруженных службами Интернета вещей Azure на основе данных устройства Intel Edison с Node.js) | Проект Интернета вещей, который реализуется с помощью Центра Интернета вещей Azure и демонстрирует использование устройства с Node.js для отправки данных телеметрии, анализируемых службами Центра Интернета вещей Azure. |
 | **Интернет вещей для Intel Edison** ||

@@ -1,18 +1,18 @@
 ---
-title: "Руководства по использованию служб Azure Enterprise с Node.js"
+title: "Руководства по использованию служб Azure Enterprise с помощью Node.js."
 description: "Руководства по использованию служб Azure Enterprise с Node.js."
-author: tomarcher
-manager: douge
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 13a5a4d5d1e1bce2ff4a6f8eea5cb21334c15cf8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: d7e00b4df0f50eed80dd8c05ca407a92cafb3d7f
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="tutorials-for-using-azure-enterprise-services-with-nodejs"></a>Руководства по использованию служб Azure Enterprise с Node.js
 

@@ -1,20 +1,20 @@
 ---
-title: "Пример кода для использования безопасности и идентификации Azure с Node.js"
-description: "Пример кода иллюстрирует использование безопасности и идентификации Azure с Node.js."
-author: tomarcher
-manager: douge
+title: "Примеры кода для работы со службой безопасности и идентификации Azure с помощью Node.js"
+description: "Пример кода, в котором показано, как работать со службой безопасности и идентификации Azure с помощью Node.js."
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: 9bd49a6daaee0abdac84a00c89ba326abcbe253f
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 860539cf309acf4c4dd09f0924700bf93193195f
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-security-and-identity-with-nodejs"></a>Пример кода для использования безопасности и идентификации Azure с Node.js
+# <a name="azure-security-and-identity-with-nodejs-code-samples"></a>Примеры кода для работы со службой безопасности и идентификации Azure с помощью Node.js
 
 Пример кода ниже иллюстрирует использование безопасности и идентификации Azure с Node.js.
 

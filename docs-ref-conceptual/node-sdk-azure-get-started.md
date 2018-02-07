@@ -1,26 +1,25 @@
 ---
 title: "Начало работы с модулями Azure для Node.js"
-description: "Базовое использование модулей Azure для Node.js с подпиской Azure."
-keywords: Azure, Node, SDK, API, get-started, node.js
-author: tomarcher
-manager: douge
-ms.author: tarcher
+description: "Начало работы с модулями Azure для Node.js: аутентификация и управление ресурсами"
+author: craigshoemaker
+manager: routlaw
+ms.author: cshoe
 ms.date: 06/17/2017
 ms.topic: get-started-article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: ec83d58585014cca05885af4de55473637c410e8
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.openlocfilehash: 4c001fce93ef4b83f9e790b4b9374690c3ac04ef
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Начало работы с модулями Azure для Node.js
 
 Это руководство поможет вам установить модули Azure для Node.js, выполнить аутентификацию в Azure с помощью субъекта-службы и запустить пример кода, который создает ресурсы в подписке Azure и подключается к облачным службам Azure.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительным требованиям
 
 - Учетная запись Azure. Если у вас ее нет, [получите бесплатную пробную версию](https://azure.microsoft.com/free/).
 - [Node.js](https://nodejs.org)
@@ -258,13 +257,13 @@ node uploadFile.js
 az group delete --name myResourceGroup
 ```
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дополнительная информация
 
 См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.
 
 ## <a name="reference"></a>Справочные материалы 
 
-[Справочник](/nodejs/api/overview/azure/?view=azure-node-2.0.0) по всем пакетам.
+[Справочник](/javascript/api/overview/azure/) по всем пакетам.
 
 ## <a name="get-help-and-give-feedback"></a>Справка и отзывы
 

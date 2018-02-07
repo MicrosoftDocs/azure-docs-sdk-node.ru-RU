@@ -1,22 +1,22 @@
 ---
-title: "Пример кода для использования службы хранилища Azure с Node.js"
-description: "Примеры кода, которые иллюстрируют использование службы хранилища Azure с Node.js."
-author: tomarcher
-manager: douge
+title: "Примеры кода для работы со службой хранилища Azure с помощью Node.js"
+description: "Пример кода, в котором показано, как работать со службой хранилища Azure с помощью Node.js."
+author: craigshoemaker
+manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: tarcher
-ms.openlocfilehash: b8bb35016f229b12326ad0667ebdbba63614cb4e
-ms.sourcegitcommit: 9974b43899e98df10253738dab5b09b484ac1bf5
+ms.author: cshoe
+ms.openlocfilehash: 70a30d92dba7c18b7f85127ba7359d94711b570a
+ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 01/26/2018
 ---
-# <a name="sample-code-for-using-azure-storage-with-nodejs"></a>Пример кода для использования службы хранилища Azure с Node.js
+# <a name="azure-storage-with-nodejs-code-samples"></a>Примеры кода для работы со службой хранилища Azure с помощью Node.js
 
-В примерах кода ниже показано, как использовать службу хранилища Azure с Node.js.
+В следующем примере кода показано, как работать со службой хранилища Azure с помощью Node.js.
 
 Если вам нужен код для выполнения других задач, см. полный список [примеров кода Node.js для Azure](https://azure.microsoft.com/resources/samples/?term=nodejs).
 
