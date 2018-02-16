@@ -1,6 +1,4 @@
 {
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
     {
       "docset_name": "node-api",
@@ -8,7 +6,8 @@
       "build_output_subfolder": "node-api",
       "locale": "ru-RU",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -18,11 +17,25 @@
         "APIConnector": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "template_folder": "_themes",
+      "version": 0,
+      "customized_template_paths": [
+        "_dependentPackages/uref.plugins/content"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
+          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
+        ]
+      }
     }
   ],
   "notification_subscribers": [],
-  "branches_to_filter": [],
+  "branches_to_filter": [
+    "live-sxs"
+  ],
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/azure-docs-sdk-node.ru-ru",
+  "git_repository_branch_open_to_public_contributors": "live",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": false,
@@ -34,16 +47,20 @@
       "branch_mapping": {}
     },
     {
-      "path_to_root": "_repo.en-us",
-      "url": "https://github.com/MicrosoftDocs/azure-docs-sdk-node",
-      "branch": "live",
-      "branch_mapping": {
-        "live": "live",
-        "master": "master"
-      }
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
+  "branch_target_mapping": {
+    "live": [
+      "Publish"
+    ]
+  },
   "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
   "dependent_packages": [
     {
       "id": "opbuild.templates.uref",
@@ -65,8 +82,8 @@
       "TopLevelTOC": "docs-ref-mapping/reference.yml",
       "ReferenceTOC": "docs-ref-autogen/toc.yml",
       "ConceptualTOC": "docs-ref-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/nodejs/api/toc.json",
-      "ConceptualTOCUrl": "/nodejs/azure/toc.json",
+      "ReferenceTOCUrl": "/javascript/api/toc.json",
+      "ConceptualTOCUrl": "/javascript/azure/toc.json",
       "OutputFolder": "docs-ref-autogen/overview/azure",
       "ContainerPageMetadata": {
         "langs": [
@@ -78,5 +95,10 @@
   ],
   "DiffFolder": [
     "docs-ref-autogen/overview/azure"
-  ]
+  ],
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  }
 }
