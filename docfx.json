@@ -3,12 +3,21 @@
     "content": [
       {
         "files": [
+          "**/toc.md",
+          "**/toc.yml"
+        ],
+        "src" : "docs-ref-autogen",
+        "dest": "api/azure_node_ref_toc",
+        "version": "azure-node-latest"
+      },
+      {
+        "files": [
           "**/*.md",
           "**/*.yml"
         ],
         "src": "docs-ref-conceptual",
         "dest": "azure",
-        "version": "azure-node-2.0.0",
+        "version": "azure-node-latest",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -21,7 +30,7 @@
         ],
         "src": "docs-ref-autogen",
         "dest": "api",
-        "version": "azure-node-2.0.0",
+        "version": "azure-node-latest",
         "exclude": [
           "**/*..yml",
           "*/toc.yml"
@@ -34,7 +43,7 @@
         ],
         "src": "docs-ref-services",
         "dest": "api/overview/azure",
-        "version": "azure-node-2.0.0"
+        "version": "azure-node-latest"
       },
       {
         "files": [
@@ -68,13 +77,22 @@
           "**/obj/**",
           "**/includes/**"
         ]
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "_sdk/lib/services",
+        "dest": "api/overview/azure",
+        "version": "azure-node-latest"
       }
     ],
     "resource": [
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -82,7 +100,7 @@
         ],
         "src": "docs-ref-conceptual",
         "dest": "azure",
-        "version": "azure-node-2.0.0"
+        "version": "azure-node-latest"
       }
     ],
     "overwrite": [
@@ -90,29 +108,29 @@
         "files": [
           "docs-ref-overwrite/*.md"
         ],
-        "version": "azure-node-2.0.0"
+        "version": "azure-node-latest"
       }
     ],
     "versions": {
-      "azure-node-2.0.0": {
-        "dest": "azure-node-2.0.0"
+      "azure-node-latest": {
+        "dest": "azure-node-latest"
       }
     },
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/nodejs/azure/bread/toc.json",
-      "brand": "azure",
       "bilingual_type": "hover over"
+      "breadcrumb_path": "/javascript/azure/bread/toc.json",
+      "brand": "azure"
     },
     "fileMetadata": {
       "author": {
         "docs-ref-autogen/**": "tarcher"
       },
-      "ms.manager": {
-        "docs-ref-autogen/**": "erikson-doug"
+      "ms.manager":{
+        "docs-ref-autogen/**":"erikson-doug"
       },
-      "ms.author": {
-        "docs-ref-autogen/**": "douge"
+      "ms.author":{
+        "docs-ref-autogen/**":"douge"
       },
       "ms.devlang": {
         "docs-ref-autogen/**": "nodejs"
@@ -123,7 +141,7 @@
       "ms.topic": {
         "docs-ref-autogen/**": "reference"
       },
-      "ms.service": {
+      "ms.service":{
         "docs-ref-autogen/azure-arm-advisor/**": "advisor",
         "docs-ref-autogen/azure-arm-analysisservice/**": "analysis-services",
         "docs-ref-autogen/azure-arm-authorization/**": "authorization",
@@ -169,6 +187,7 @@
         "docs-ref-autogen/azure-arm-website/**": "websites",
         "docs-ref-autogen/azure/**": "azure"
       }
+
     },
     "template": [],
     "dest": "azure-node-sdk"
