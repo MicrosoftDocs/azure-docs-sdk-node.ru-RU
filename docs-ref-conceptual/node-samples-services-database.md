@@ -1,18 +1,18 @@
 ---
 title: Примеры кода для работы с базами данных Azure с помощью Node.js
 description: Пример кода, в котором показано, как работать с базами данных Azure с помощью Node.js.
-author: craigshoemaker
+author: rloutlaw
 manager: routlaw
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 03/20/2018
-ms.author: cshoe
-ms.openlocfilehash: 4fe35379c00bb321aa91cf36f8bf749d23120a2d
-ms.sourcegitcommit: 178734fbd3784ade4d8bdb5141be6d7ca7e017f0
+ms.author: routlaw
+ms.openlocfilehash: 64943a8cc4d366c9a255b4d310da3b8e7b61af40
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-databases-with-nodejs-code-samples"></a>Примеры кода для работы с базами данных Azure с помощью Node.js
 

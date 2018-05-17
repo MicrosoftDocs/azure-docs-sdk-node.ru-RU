@@ -1,19 +1,19 @@
 ---
-title: "Создание субъекта-службы Azure с помощью Node.js"
-description: "Узнайте, как использовать аутентификацию субъекта-службы с помощью Node.js"
-author: craigshoemaker
+title: Создание субъекта-службы Azure с помощью Node.js
+description: Узнайте, как использовать аутентификацию субъекта-службы с помощью Node.js
+author: rloutlaw
 manager: routlaw
-ms.author: cshoe
+ms.author: routlaw
 ms.date: 06/17/2017
 ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 73afa36571abcb7c87273e9c2b3665e199786931
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 81958e3d928eb2fe7d391044e3242492e54a1011
+ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="create-an-azure-service-principal-with-nodejs"></a>Создание субъекта-службы Azure с помощью Node.js 
 
