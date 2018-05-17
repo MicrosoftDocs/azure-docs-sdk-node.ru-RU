@@ -1,5 +1,5 @@
 | | |
 |---|---|
-| **Azure Active Directory** ||
-| [Защита веб-API с помощью Azure AD](https://azure.microsoft.com/resources/samples/active-directory-node-webapi/) | Веб-API NodeJS, защищенный с помощью Azure AD и маркеров доступа OAuth 2.0. |
-| [Интеграция Azure AD в веб-приложение NodeJS](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) | Веб-приложение NodeJS, проверяющее подлинность пользователей Azure AD с помощью OpenID Connect. |
+| <span data-ttu-id="83ecb-101">**Azure Active Directory**</span><span class="sxs-lookup"><span data-stu-id="83ecb-101">**Azure Active Directory**</span></span> ||
+| [<span data-ttu-id="83ecb-102">Защита веб-API с помощью Azure AD</span><span class="sxs-lookup"><span data-stu-id="83ecb-102">Securing a web API with Azure AD</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapi/) | <span data-ttu-id="83ecb-103">Веб-API NodeJS, защищенный с помощью Azure AD и маркеров доступа OAuth 2.0.</span><span class="sxs-lookup"><span data-stu-id="83ecb-103">A NodeJS web API that is secured using Azure AD and OAuth 2.0 access tokens.</span></span> |
+| [<span data-ttu-id="83ecb-104">Интеграция Azure AD в веб-приложение NodeJS</span><span class="sxs-lookup"><span data-stu-id="83ecb-104">Integrating Azure AD into a NodeJS web application</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) | <span data-ttu-id="83ecb-105">Веб-приложение NodeJS, проверяющее подлинность пользователей Azure AD с помощью OpenID Connect.</span><span class="sxs-lookup"><span data-stu-id="83ecb-105">A NodeJS web application that authenticates Azure AD users with OpenID Connect.</span></span> |
