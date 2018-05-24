@@ -1,20 +1,20 @@
 ---
 title: Модули Azure Cognitive Services для Node.js
 description: Справочник по модулям Azure Cognitive Services для Node.js
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+author: brapel
+ms.author: v-brapel
+manager: ehansen
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: 9f567092b6f0155a31388542039ffb7c3bc0a8b4
-ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
+ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>Модули Azure Cognitive Services для JavaScript
 

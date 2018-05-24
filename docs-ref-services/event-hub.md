@@ -1,20 +1,20 @@
 ---
-title: "Модули концентратора событий Azure для Node.js"
-description: "Справочник по модулям концентратора событий Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули концентратора событий Azure для Node.js
+description: Справочник по модулям концентратора событий Azure для Node.js
+author: sethmanheim
+ms.author: sethm
+manager: timlt
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Event Hub
-ms.openlocfilehash: 043c34e5b352a786ebead986d05b18c8216d0c93
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: ff167e911b68b82b880e792e7ff2649cbe5af342
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-event-hub-modules-for-nodejs"></a>Модули концентратора событий Azure для Node.js
 

@@ -1,20 +1,20 @@
 ---
-title: "Модули управления серверами Azure для Node.js"
-description: "Справочник по модулям управления серверами Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули управления серверами Azure для Node.js
+description: Справочник по модулям управления серверами Azure для Node.js
+author: rloutlaw
+ms.author: ROutlaw
+manager: angrobe
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Server Management
-ms.openlocfilehash: a3ac75c82df92c8ab5b8177da40d47c102311bb6
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: bd9577bf758552227a98a81b756a81ce05239be2
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-server-management-modules-for-nodejs"></a>Модули управления серверами Azure для Node.js
 

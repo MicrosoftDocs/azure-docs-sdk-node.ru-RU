@@ -1,20 +1,20 @@
 ---
-title: "Модули виртуальной сети Azure для Node.js"
-description: "Справочник по модулям виртуальной сети Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули виртуальной сети Azure для Node.js
+description: Справочник по модулям виртуальной сети Azure для Node.js
+author: jimdial
+ms.author: jdial
+manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Virtual Network
-ms.openlocfilehash: f073c700c8df7f7aa05c93d725051d3a9976bebc
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 456839dbecb9ddd1ad0d4b3f8aa7570a04c100b1
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-virtual-network-modules-for-nodejs"></a>Модули виртуальной сети Azure для Node.js
 

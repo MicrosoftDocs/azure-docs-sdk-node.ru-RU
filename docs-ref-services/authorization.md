@@ -1,20 +1,20 @@
 ---
-title: "Модули авторизации Azure для Node.js"
-description: "Справочник по модулям авторизации Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули авторизации Azure для Node.js
+description: Справочник по модулям авторизации Azure для Node.js
+author: rloutlaw
+ms.author: ROutlaw
+manager: angrobe
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Authorization
-ms.openlocfilehash: 6fbaaeba28cac81d360e93c5066791adfa51bcd5
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 5be0e069d0acf72de65e891e6304ef1ca78e967a
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-authorization-modules-for-nodejs"></a>Модули авторизации Azure для Node.js
 

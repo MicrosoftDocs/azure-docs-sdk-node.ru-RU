@@ -1,20 +1,20 @@
 ---
-title: "Модули сопоставления служб Azure для Node.js"
-description: "Справочник по модулям сопоставления служб Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули сопоставления служб Azure для Node.js
+description: Справочник по модулям сопоставления служб Azure для Node.js
+author: bwren
+ms.author: bwren
+manager: carmonm
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Map
-ms.openlocfilehash: 3f858e52f7a97ff77959825a1be993ef52f96e57
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: db064603e32446ba2f094da2a1601520b99a7304
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-service-map-modules-for-nodejs"></a>Модули сопоставления служб Azure для Node.js
 

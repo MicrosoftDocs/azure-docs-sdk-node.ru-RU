@@ -1,20 +1,20 @@
 ---
 title: Модули Azure Cosmos DB для Node.js
 description: Справочник по модулям Azure Cosmos DB для Node.js
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+author: SnehaGunda
+ms.author: sngun
+manager: kfile
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cosmos DB
-ms.openlocfilehash: 02d4729d72cba8628ac98de0bf41c30f54c75e85
-ms.sourcegitcommit: 178734fbd3784ade4d8bdb5141be6d7ca7e017f0
+ms.openlocfilehash: 4064f9f6c0e1369c8d6261a70709102e7492b340
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-cosmos-db-modules-for-nodejs"></a>Модули Azure Cosmos DB для Node.js
 

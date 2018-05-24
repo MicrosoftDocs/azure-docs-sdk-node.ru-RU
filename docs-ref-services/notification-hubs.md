@@ -1,20 +1,20 @@
 ---
-title: "Модули центров уведомлений Azure для Node.js"
-description: "Справочник по модулям центров уведомлений Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули центров уведомлений Azure для Node.js
+description: Справочник по модулям центров уведомлений Azure для Node.js
+author: rloutlaw
+ms.author: ROutlaw
+manager: angrobe
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
-ms.openlocfilehash: c353bdc0fff7784881b5cd4f1d3b4dda5268f1ea
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 30b8caa07111f9ceb5fa58f92649e4670aa6bee6
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-notification-hubs-modules-for-nodejs"></a>Модули центров уведомлений Azure для Node.js
 

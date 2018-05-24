@@ -1,20 +1,20 @@
 ---
-title: "Модули Azure Site Recovery для Node.js"
-description: "Справочник по модулям Azure Site Recovery для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули Azure Site Recovery для Node.js
+description: Справочник по модулям Azure Site Recovery для Node.js
+author: rayne-wiselman
+ms.author: raynew
+manager: carmonm
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Site Recovery
-ms.openlocfilehash: a1f3e1c18be68dd7e68f38e353e0c2ba224fbaa1
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 470124eb69a48486fa54be6628c028399f0c038e
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-site-recovery-modules-for-nodejs"></a>Модули Azure Site Recovery для Node.js
 

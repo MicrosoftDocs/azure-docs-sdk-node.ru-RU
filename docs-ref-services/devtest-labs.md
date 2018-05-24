@@ -1,20 +1,20 @@
 ---
-title: "Модули Azure DevTest Labs для Node.js"
-description: "Справочник по модулям Azure DevTest Labs для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули Azure DevTest Labs для Node.js
+description: Справочник по модулям Azure DevTest Labs для Node.js
+author: craigcaseyMSFT
+ms.author: v-craic
+manager: v-laurab
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
-ms.openlocfilehash: 7754280741c09d47e138518d33628c667944c651
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 5bd010d26ca11f9909191f25128b9bdb89811fd5
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-devtest-labs-modules-for-nodejs"></a>Модули Azure DevTest Labs для Node.js
 

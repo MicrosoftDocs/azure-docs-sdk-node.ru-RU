@@ -1,20 +1,20 @@
 ---
-title: "Модули Azure Monitor для Node.js"
-description: "Справочник по модулям Azure Monitor для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули Azure Monitor для Node.js
+description: Справочник по модулям Azure Monitor для Node.js
+author: rbouche
+ms.author: robb
+manager: carmonm
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
-ms.openlocfilehash: 37caeb2d7b6d757cbe8bb14b6d4909a7c67a37db
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 8a9411b7979f3130a1aa24fd2a0b294fc7f67718
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-monitor-modules-for-nodejs"></a>Модули Azure Monitor для Node.js
 

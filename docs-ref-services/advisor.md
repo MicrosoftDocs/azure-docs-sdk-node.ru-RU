@@ -1,20 +1,20 @@
 ---
-title: "Модули помощника по Azure для Node.js"
-description: "Справочник по модулям помощника по Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули помощника по Azure для Node.js
+description: Справочник по модулям помощника по Azure для Node.js
+author: KumudD
+ms.author: kumud
+manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Advisor
-ms.openlocfilehash: aad3b292c6304159f68a81270e671cd335c972ec
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 07b6369ef69343cc47cd38484ebb87d050264775
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-advisor-modules-for-nodejs"></a>Модули помощника по Azure для Node.js
 

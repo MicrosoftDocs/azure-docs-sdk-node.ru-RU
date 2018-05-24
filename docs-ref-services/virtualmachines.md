@@ -1,20 +1,20 @@
 ---
 title: Использование модулей виртуальных машин для Node.js в Azure
 description: Справочное руководство по модулям виртуальных машин Azure для Node.js
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+author: iainfoulds
+ms.author: iainfou
+manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: compute
-ms.openlocfilehash: 5ba40cb4c068b1af62aa8c654cbf2c3f66f83ff1
-ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
+ms.openlocfilehash: 891b441d25369db0f0a67d791d527e6644415434
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-virtual-machine-modules-for-nodejs"></a>Модули виртуальных машин Azure для Node.js
 

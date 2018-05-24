@@ -1,20 +1,20 @@
 ---
-title: "Модули кэша Redis для Microsoft Azure для Node.js"
-description: "Справочник по модулям кэша Redis для Microsoft Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули кэша Redis для Microsoft Azure для Node.js
+description: Справочник по модулям кэша Redis для Microsoft Azure для Node.js
+author: wesmc7777
+ms.author: wesmc
+manager: cfowler
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Redis Cache
-ms.openlocfilehash: 5d3a410fefcf6840181701763346fbfe08fe023b
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: afeee19cb79b54561b6cbef4a79de8b1606adb4d
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-redis-cache-modules-for-nodejs"></a>Модули кэша Redis для Microsoft Azure для Node.js
 

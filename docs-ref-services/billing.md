@@ -1,20 +1,20 @@
 ---
-title: "Модули выставления счетов Azure для Node.js"
-description: "Справочник по выставления счетов Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули выставления счетов Azure для Node.js
+description: Справочник по выставления счетов Azure для Node.js
+author: tfitzmac
+ms.author: tomfitz
+manager: timlt
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Billing
-ms.openlocfilehash: 58eed8996f543e845a53a741f8684d9e7f6cc1e4
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: 111ca8d4ed40200a307b608915d71d2fa6944ed2
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-billing-modules-for-nodejs"></a>Модули выставления счетов Azure для Node.js
 

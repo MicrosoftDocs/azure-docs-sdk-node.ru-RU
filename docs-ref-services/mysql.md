@@ -1,20 +1,20 @@
 ---
 title: Модули Azure MySQL для Node.js
 description: Справочник по модулям Azure MySQL для Node.js
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+author: ajlam
+ms.author: andrela
+manager: sukamat
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: mysql
-ms.openlocfilehash: 21b98aeba1e21ec1d9f7da4a115110fffe05b2b8
-ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
+ms.openlocfilehash: 293922c892722ed68a13fc36a80f7675450b2b54
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-mysql-modules-for-nodejs"></a>Модули Azure MySQL для Node.js
 

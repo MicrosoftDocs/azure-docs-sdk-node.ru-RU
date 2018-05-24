@@ -1,20 +1,20 @@
 ---
-title: "Модули Azure Active Directory для Node.js"
-description: "Справочник по модулям Azure Active Directory для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули Azure Active Directory для Node.js
+description: Справочник по модулям Azure Active Directory для Node.js
+author: celestedg
+ms.author: celested
+manager: mtillman
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: active-directory
-ms.openlocfilehash: c91b8396dbfeb766887b650541044f7ce2e7bde6
-ms.sourcegitcommit: 79213a25192d8913bf8ec16c19fbec6a8eb691f0
+ms.openlocfilehash: c356801500aa3ef9038fc27634c8a95debf152b3
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-active-directory-modules-for-nodejs"></a>Модули Azure Active Directory для Node.js
 

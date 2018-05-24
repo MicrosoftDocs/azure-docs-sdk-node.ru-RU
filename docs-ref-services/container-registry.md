@@ -1,20 +1,20 @@
 ---
-title: "Модули реестра контейнеров Azure для Node.js"
-description: "Справочник по модулям реестра контейнеров Azure для Node.js"
-author: craigshoemaker
-ms.author: cshoe
-manager: routlaw
+title: Модули реестра контейнеров Azure для Node.js
+description: Справочник по модулям реестра контейнеров Azure для Node.js
+author: mmacy
+ms.author: marsma
+manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
-ms.openlocfilehash: dda0e9bbfaa8a3e060f3b8f820d5bab315662629
-ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
+ms.openlocfilehash: ca83b97e94312498f4f93c587cf0c90485136841
+ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="azure-container-registry-modules-for-nodejs"></a>Модули реестра контейнеров Azure для Node.js
 
