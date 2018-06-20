@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260397"
 ---
 # <a name="azure-hdinsight-modules-for-nodejs"></a><span data-ttu-id="39a05-103">Модули Azure HDInsight для Node.js</span><span class="sxs-lookup"><span data-stu-id="39a05-103">Azure HDInsight Modules for Node.js</span></span>
 

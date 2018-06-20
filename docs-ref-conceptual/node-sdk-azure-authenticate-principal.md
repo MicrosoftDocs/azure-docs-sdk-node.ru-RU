@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220546"
 ---
 # <a name="create-an-azure-service-principal-with-nodejs"></a><span data-ttu-id="cf727-103">Создание субъекта-службы Azure с помощью Node.js</span><span class="sxs-lookup"><span data-stu-id="cf727-103">Create an Azure service principal with Node.js</span></span> 
 

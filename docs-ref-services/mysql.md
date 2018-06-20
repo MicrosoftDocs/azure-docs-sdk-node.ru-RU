@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34261814"
 ---
 # <a name="azure-mysql-modules-for-nodejs"></a><span data-ttu-id="b29d7-103">Модули Azure MySQL для Node.js</span><span class="sxs-lookup"><span data-stu-id="b29d7-103">Azure MySQL modules for Node.js</span></span>
 

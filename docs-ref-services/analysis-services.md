@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260367"
 ---
 # <a name="azure-analysis-services-modules-for-nodejs"></a><span data-ttu-id="d9e02-103">Модули Azure Analysis Services для Node.js</span><span class="sxs-lookup"><span data-stu-id="d9e02-103">Azure Analysis Services modules for Node.js</span></span>
 

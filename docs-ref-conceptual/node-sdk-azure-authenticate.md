@@ -14,6 +14,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220516"
 ---
 # <a name="authenticate-with-the-azure-modules-for-nodejs"></a><span data-ttu-id="616a7-103">Аутентификация с использованием модулей Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="616a7-103">Authenticate with the Azure modules for Node.js</span></span> 
 

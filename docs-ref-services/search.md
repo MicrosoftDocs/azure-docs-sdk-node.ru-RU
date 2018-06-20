@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264991"
 ---
 # <a name="azure-search-modules-for-nodejs"></a><span data-ttu-id="22940-103">Модули Поиска Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="22940-103">Azure Search modules for Node.js</span></span>
 

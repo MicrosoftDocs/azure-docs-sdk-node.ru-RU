@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260703"
 ---
 # <a name="azure-virtual-network-modules-for-nodejs"></a><span data-ttu-id="ce1ff-103">Модули виртуальной сети Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="ce1ff-103">Azure Virtual Network modules for Node.js</span></span>
 
