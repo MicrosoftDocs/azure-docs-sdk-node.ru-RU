@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34260892"
 ---
 # <a name="azure-powerbi-embedded-modules-for-nodejs"></a>Модули Azure PowerBI Embedded для Node.js
 

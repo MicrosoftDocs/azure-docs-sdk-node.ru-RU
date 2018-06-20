@@ -15,6 +15,7 @@ ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264715"
 ---
 # <a name="azure-automation-modules-for-nodejs"></a>Модули службы автоматизации Azure для Node.js
 

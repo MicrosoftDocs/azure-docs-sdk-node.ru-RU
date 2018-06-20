@@ -13,6 +13,7 @@ ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220526"
 ---
 # <a name="azure-security-and-identity-with-nodejs-code-samples"></a>Примеры кода для работы со службой безопасности и идентификации Azure с помощью Node.js
 

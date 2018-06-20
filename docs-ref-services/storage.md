@@ -1,6 +1,6 @@
 ---
-title: "Модули службы хранилища Azure для Node.js"
-description: "Справочник по модулям службы хранилища Azure для Node.js"
+title: Модули службы хранилища Azure для Node.js
+description: Справочник по модулям службы хранилища Azure для Node.js
 author: craigshoemaker
 ms.author: cshoe
 manager: routlaw
@@ -15,6 +15,7 @@ ms.sourcegitcommit: 78001187db408d21909e949c8a592f76626c2c3b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/26/2018
+ms.locfileid: "28116902"
 ---
 # <a name="azure-storage-modules-for-nodejs"></a>Модули службы хранилища Azure для Node.js
 
