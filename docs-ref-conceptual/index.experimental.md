@@ -4,12 +4,12 @@ hide_bc: true
 title: Центр разработки для Node.js | Документация Майкрософт
 description: Узнайте, как разрабатывать и развертывать приложения Node.js в облаке с помощью служб Azure.
 ms.topic: hub-page
-ms.openlocfilehash: 6365eb7b6d37f3f7008aa166f5e043e0e23aa870
-ms.sourcegitcommit: a25577e16c77775a4dc9ef598d585fa0346e0476
+ms.openlocfilehash: 589b5a19e8c659a58e42b765ba4ce48f6d82f1f8
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34761315"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39188980"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -29,7 +29,7 @@ ms.locfileid: "34761315"
                     margin-right: 10px;
 
                 ">
-                <a class="card" href="https://azure.microsoft.com/en-us/try/app-service/web/?language=nodejs">
+                <a class="card" href="https://azure.microsoft.com/try/app-service/web/?language=nodejs">
                     <br>
                         <div class="cardText">
                         <h3 style="
@@ -107,7 +107,7 @@ ms.locfileid: "34761315"
                 </a>
             </li>
             <li>
-                <a class="card" href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-node-node-getstarted">
+                <a class="card" href="https://docs.microsoft.com/azure/iot-hub/iot-hub-node-node-getstarted">
                     <img class="cardImage" role="presentation" alt="" src="https://docs.microsoft.com/azure/media/index/IOT_edge_50.svg">
                     <div class="cardText">
                         <h3>Connect and manage IoT devices</h3>
@@ -116,7 +116,7 @@ ms.locfileid: "34761315"
                 </a>
             </li>
             <li>
-                <a class="card" href="https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts">
+                <a class="card" href="https://docs.microsoft.com/vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=%2Fvsts%2Fdeploy-azure%2Ftoc.json&bc=%2Fvsts%2Fdeploy-azure%2Fbreadcrumb%2Ftoc.json&view=vsts">
                     <img class="cardImage" role="presentation" alt="" src="https://docs.microsoft.com/media/logos/logo_vs-team-services.svg">
                     <div class="cardText">
                         <h3>Add CI/CD</h3>
@@ -139,7 +139,7 @@ ms.locfileid: "34761315"
                         <div id="storage1">
                             <div>
                                 <h3>Upload files to Azure Storage </h3>
-                                <h4>1. Download the Azure CLI (on Windows <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest"> get the MSI</a>) and login.</h4> 
+                                <h4>1. Download the Azure CLI (on Windows <a href="https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest"> get the MSI</a>) and login.</h4> 
                                 <div class="codeHeader" data-bi-name="code-header"><span class="language">bash</span>
                                 </div>
                                 <pre><code class="lang-bash">
@@ -210,7 +210,7 @@ az storage account create -n mystorageaccount12312 -g MyResourceGroup -l westus 
                             <div>
 
                                 <h3>Get sentiment on any language. </h3>
-                                <h4>1. Download the Azure CLI (on Windows <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest"> get the MSI</a>) and login.</h4> 
+                                <h4>1. Download the Azure CLI (on Windows <a href="https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest"> get the MSI</a>) and login.</h4> 
                                 <div class="codeHeader" data-bi-name="code-header"><span class="language">bash</span>
                                 </div>
                                 <pre><code class="lang-bash">
@@ -275,7 +275,7 @@ getTextAnalytics.write(body); getTextAnalytics.end();
                     margin-right: 10px;
     
                 ">
-                <a class="card" href="https://azure.microsoft.com/en-us/try/app-service/web/?language=nodejs">
+                <a class="card" href="https://azure.microsoft.com/try/app-service/web/?language=nodejs">
                     <br>
                         <div class="cardText">
                         <h3 style="
@@ -296,7 +296,7 @@ getTextAnalytics.write(body); getTextAnalytics.end();
                     margin-bottom: 25px;
                     margin-left: 10px;
                 ">
-                <a class="card" href="https://docs.microsoft.com/en-us/javascript/api/overview/azure/?view=azure-node-latest">
+                <a class="card" href="https://docs.microsoft.com/javascript/api/overview/azure/?view=azure-node-latest">
                     <br>
                         <div class="cardText">
                         <h3 style="
