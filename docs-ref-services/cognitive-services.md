@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
-ms.openlocfilehash: fd0870f4b38928c23145a50d4c71456b4c94c3e9
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 7941d3850ef6c3518ff0ab13fe1b1ea239ab1828
+ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259973"
+ms.lasthandoff: 07/21/2018
+ms.locfileid: "39189000"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>Модули Azure Cognitive Services для JavaScript
 
@@ -29,7 +29,7 @@ ms.locfileid: "34259973"
 - Используйте параметры для определения непристойных материалов и содержимого для взрослых, чтобы включить автоматическое ограничение такого содержимого.
 - Определяйте типы изображений и цветовые схемы на фотографиях.
 
-[Попробуйте средства компьютерного зрения](https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/) в браузере бесплатно.
+[Попробуйте средства компьютерного зрения](https://azure.microsoft.com/services/cognitive-services/computer-vision/) в браузере бесплатно.
 
 Получите модуль JavaScript с помощью [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -55,7 +55,7 @@ npm install azure-cognitiveservices-contentmoderator
 
 Распознавание, идентификация, анализ и группировка лиц, а также добавление к ним тегов на фотографиях. 
 
-[Попробуйте API распознавания лиц](https://azure.microsoft.com/en-us/services/cognitive-services/face/) в браузере.
+[Попробуйте API распознавания лиц](https://azure.microsoft.com/services/cognitive-services/face/) в браузере.
 
 Получите модуль JavaScript с помощью [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -71,7 +71,7 @@ npm install azure-cognitiveservices-face
 
 Получайте веб-документы, индексированные с помощью API Bing для поиска в Интернете, и ограничивайте результаты по типу, дате создания и другим критериям. 
 
-[Попробуйте API Поиска в Интернете](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/) в браузере.
+[Попробуйте API Поиска в Интернете](https://azure.microsoft.com/services/cognitive-services/bing-web-search-api/) в браузере.
 
 Получите модуль JavaScript с помощью [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -85,7 +85,7 @@ npm install azure-cognitiveservices-websearch
 
 Выполняйте поиск изображений и получайте эскизы, полные URL-адреса изображений, метаданные изображения и другие сведения в качестве результатов.
 
-[Попробуйте API Поиска изображений](https://azure.microsoft.com/en-us/services/cognitive-services/bing-image-search-api/) в браузере.
+[Попробуйте API Поиска изображений](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/) в браузере.
 
 Получите модуль JavaScript с помощью [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -162,7 +162,7 @@ API анализа текста — это облачная служба, кот
 - Извлечение ключевой фразы
 - Определение языка
 
-[Попробуйте API анализа текста](https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/) в браузере.
+[Попробуйте API анализа текста](https://azure.microsoft.com/services/cognitive-services/text-analytics/) в браузере.
 
 Получите модуль JavaScript с помощью [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
@@ -177,7 +177,7 @@ npm install azure-cognitiveservices-textanalytics
 
 Выполняйте контекстные проверки грамматики и орфографии с помощью API проверки орфографии Bing.
 
-[Попробуйте API проверки орфографии](https://azure.microsoft.com/en-us/services/cognitive-services/spell-check/) в браузере.
+[Попробуйте API проверки орфографии](https://azure.microsoft.com/services/cognitive-services/spell-check/) в браузере.
 
 Получите модуль JavaScript с помощью [npm](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
