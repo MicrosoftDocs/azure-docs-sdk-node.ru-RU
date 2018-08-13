@@ -1,0 +1,403 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 93c9390372163dce12b8539afbad4c7434f676d1
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072264"
+items:
+- uid: ms-rest.ServiceClient
+  id: ms-rest.ServiceClient
+  name: ServiceClient
+  summary: <span data-ttu-id="c3b0e-101">Инициализирует новый экземпляр класса ServiceClient.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-101">Initializes a new instance of the ServiceClient class.</span></span>
+  fullName: ms-rest.ServiceClient
+  type: Class
+  children:
+  - ms-rest.ServiceClient.#ctor
+  - ms-rest.ServiceClient#addFilter
+  - ms-rest.ServiceClient#sendRequest
+  - ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  - ms-rest.ServiceClient#addUserAgentInfo
+  - ms-rest.ServiceClient#getPackageJsonInfo
+  langs:
+  - js
+- id: ms-rest.ServiceClient.#ctor
+  uid: ms-rest.ServiceClient.#ctor
+  parent: ms-rest.ServiceClient
+  name: ServiceClient(credentials, options)
+  fullName: ms-rest.ServiceClient.ServiceClient(credentials, options)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - object
+      description: <span data-ttu-id="c3b0e-102">BasicAuthenticationCredentials или TokenCredentials объект, используемый для проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-102">BasicAuthenticationCredentials or TokenCredentials object used for authentication.</span></span>
+      optional: true
+    - id: options
+      type:
+      - object
+      description: <span data-ttu-id="c3b0e-103">Параметры</span><span class="sxs-lookup"><span data-stu-id="c3b0e-103">The parameter options</span></span>
+      optional: true
+    - id: options.filters
+      type:
+      - Array
+      description: <span data-ttu-id="c3b0e-104">Фильтры, чтобы добавить в конвейер запросов</span><span class="sxs-lookup"><span data-stu-id="c3b0e-104">Filters to be added to the request pipeline</span></span>
+      optional: true
+    - id: options.requestOptions
+      type:
+      - object
+      description: <span data-ttu-id="c3b0e-105">Параметры для запроса объекта [параметры doc](https://github.com/request/request#requestoptions-callback)</span><span class="sxs-lookup"><span data-stu-id="c3b0e-105">Options for the request object [Options doc](https://github.com/request/request#requestoptions-callback)</span></span>
+      optional: true
+    - id: options.noRetryPolicy
+      type:
+      - undefinedbool
+      description: <span data-ttu-id="c3b0e-106">Если задано значение true, отключите политику повтора по умолчанию</span><span class="sxs-lookup"><span data-stu-id="c3b0e-106">If set to true, turn off default retry policy</span></span>
+      optional: true
+    - id: options.rpRegistrationRetryTimeout
+      type:
+      - number
+      description: <span data-ttu-id="c3b0e-107">Время ожидания повторных попыток для AutomaticRPRegistration в секундах.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-107">The retry timeout in seconds for AutomaticRPRegistration.</span></span> <span data-ttu-id="c3b0e-108">Значение по умолчанию — 30.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-108">Default value is 30.</span></span>
+      optional: true
+    content: new ServiceClient(credentials, options)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#addFilter
+  id: ms-rest.ServiceClient#addFilter
+  parent: ms-rest.ServiceClient
+  name: addFilter(filter)
+  summary: >-
+    <span data-ttu-id="c3b0e-109">С этой ServiceClient свяжите операцию фильтрации.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-109">Associate a filtering operation with this ServiceClient.</span></span> <span data-ttu-id="c3b0e-110">К операциям фильтрации могут относиться ведение журнала, автоматический повтор и т. д. Фильтр операции — это подпись функции:</span><span class="sxs-lookup"><span data-stu-id="c3b0e-110">Filtering operations can include logging, automatically retrying, etc. Filter operations are functions the signature:</span></span>
+
+        "function (requestOptions, next, callback)".
+
+    <span data-ttu-id="c3b0e-111">Выполнив предварительную обработку параметров запроса, метод должен вызвать «next», передавая текущие параметры и обратный вызов со следующей сигнатурой:</span><span class="sxs-lookup"><span data-stu-id="c3b0e-111">After doing its preprocessing on the request options, the method needs to call "next" passing the current options and a callback with the following signature:</span></span>
+
+        "function (error, result, response, body)"
+
+    <span data-ttu-id="c3b0e-112">В этом примере, а после обработки результата или ответ функция обратного вызова должна вызвать исходный, переданный в обратный вызов, чтобы продолжить обработку других фильтров и завершения обращения к службе.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-112">In this callback, and after processing the result or response, the callback needs invoke the original passed in callback to continue processing other filters and finish up the service invocation.</span></span>
+  fullName: ms-rest.ServiceClient.addFilter(filter)
+  type: Function
+  syntax:
+    parameters:
+    - id: filter
+      type:
+      - function
+      description: <span data-ttu-id="c3b0e-113">Новый объект фильтра.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-113">The new filter object.</span></span>
+    return:
+      type:
+      - ms-rest.QueueService
+      description: <span data-ttu-id="c3b0e-114">Новый клиент службы с применением фильтра.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-114">A new service client with the filter applied.</span></span>
+    content: function addFilter(filter)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#sendRequest
+  id: ms-rest.ServiceClient#sendRequest
+  parent: ms-rest.ServiceClient
+  name: sendRequest(options, optionalCallback)
+  summary: <span data-ttu-id="c3b0e-115">Отправляет запрос и возвращает ответ.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-115">Sends the request and returns the response.</span></span>
+  fullName: ms-rest.ServiceClient.sendRequest(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{result} - The parsed (JSON.parse()) responseBody.'
+    value: '{result} - The parsed (JSON.parse()) responseBody.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error}  - The error object.'
+    value: '{Error}  - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      - ms-rest.WebResource
+      description: <span data-ttu-id="c3b0e-116">Параметры запроса, которые должны предоставляться для отправки запроса успешно.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-116">The request options that should be provided to send a request successfully.</span></span> <span data-ttu-id="c3b0e-117">Это может быть объект параметров (объект простой json) или объект WebResource с все обязательные свойства, заданные для запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-117">It can either be an options object (a simple json object) or the WebResource object with all the required properties set to make a request.</span></span>
+    - id: options.method
+      type:
+      - string
+      description: "<span data-ttu-id=\"c3b0e-118\">Метод HTTP-запроса.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-118\">The HTTP request method.</span></span> <span data-ttu-id=\"c3b0e-119\">Допустимые значения: «GET», «PUT», «HEAD», «DELETE», «Параметры», «POST», «PATCH».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-119\">Valid values are 'GET', 'PUT', 'HEAD', 'DELETE', 'OPTIONS', 'POST', 'PATCH'.</span></span>"
+    - id: options.url
+      type:
+      - string
+      description: <span data-ttu-id="c3b0e-120">Запрос URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-120">The request url.</span></span> <span data-ttu-id="c3b0e-121">Он может или не может иметь параметров запроса в нем.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-121">It may or may not have query parameters in it.</span></span> <span data-ttu-id="c3b0e-122">Указать «url» или укажите «pathTemplate» в объект параметров.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-122">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="c3b0e-123">Оба варианта являются взаимоисключающими.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-123">Both the options are mutually exclusive.</span></span>
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"c3b0e-124\">Словарь параметров запроса, добавляемая к URL-адрес, где «key» — «запрос параметр name» и «значение» — «запрос--значение параметра».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-124\">A dictionary of query parameters to be appended to the url, where the 'key' is the 'query-parameter-name' and the 'value' is the 'query-parameter-value'.</span></span> <span data-ttu-id=\"c3b0e-125\">«Запрос параметр значение» может быть типа «String», или он может иметь тип «object».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-125\">The 'query-parameter-value' can be of type 'string' or it can be of type 'object'.</span></span> <span data-ttu-id=\"c3b0e-126\">Если вы хотите пропустить кодирования URL-адреса следует использовать формат «object».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-126\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"c3b0e-127\">При использовании формата объектов, объект должен иметь свойство с именем значение, содержащее «запрос параметр значение».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-127\">While using the object format, the object must have a property named value which provides the 'query-parameter-value'.</span></span>\n<span data-ttu-id=\"c3b0e-128\">Пример:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-128\">Example:</span></span> \n   - <span data-ttu-id=\"c3b0e-129\">значение параметра запроса — в формате «object»: {«запрос параметр name»: {значение: «запрос параметр значение», skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-129\">query-parameter-value in 'object' format: { 'query-parameter-name': { value: 'query-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"c3b0e-130\">значение параметра запроса — в формате «строка»: {«запрос параметр name»: «запрос параметр значение»}.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-130\">query-parameter-value in 'string' format: { 'query-parameter-name': 'query-parameter-value'}.</span></span>\n<span data-ttu-id=\"c3b0e-131\">Примечание: \"Если options.url уже имеет некоторые параметры запроса, то значение, указанное в options.queryParameters будут добавляться на URL-адрес.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-131\">Note: 'If options.url already has some query parameters, then the value provided in options.queryParameters will be appended to the url.</span></span>"
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="c3b0e-132">Шаблон пути запроса URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-132">The path template of the request url.</span></span> <span data-ttu-id="c3b0e-133">Указать «url» или укажите «pathTemplate» в объект параметров.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-133">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="c3b0e-134">Оба варианта являются взаимоисключающими.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-134">Both the options are mutually exclusive.</span></span>
+
+        <span data-ttu-id="c3b0e-135">Пример: "/ subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}"</span><span class="sxs-lookup"><span data-stu-id="c3b0e-135">Example: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span></span>
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "<span data-ttu-id=\"c3b0e-136\">Базовый URL-адрес запроса.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-136\">The base url of the request.</span></span> <span data-ttu-id=\"c3b0e-137\">Значение по умолчанию —: \"https://management.azure.com\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-137\">Default value is: 'https://management.azure.com'.</span></span> <span data-ttu-id=\"c3b0e-138\">Это применимо только с options.pathTemplate.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-138\">This is applicable only with options.pathTemplate.</span></span> <span data-ttu-id=\"c3b0e-139\">Если вы предоставляете options.url, то предполагается, что предоставить полный URL-адрес.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-139\">If you are providing options.url then it is expected that you provide the complete url.</span></span>"
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"c3b0e-140\">Словарь параметров пути, которые должны быть заменены фактическими значениями в pathTemplate.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-140\">A dictionary of path parameters that need to be replaced with actual values in the pathTemplate.</span></span>\n<span data-ttu-id=\"c3b0e-141\">Вот ключ «path параметр name», а значение — «path--значение параметра».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-141\">Here the key is the 'path-parameter-name' and the value is the 'path-parameter-value'.</span></span> <span data-ttu-id=\"c3b0e-142\">«Путь параметр значение» может быть типа «String», или он может иметь тип «object».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-142\">The 'path-parameter-value' can be of type 'string'  or it can be of type 'object'.</span></span>\n<span data-ttu-id=\"c3b0e-143\">Если вы хотите пропустить кодирования URL-адреса следует использовать формат «object».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-143\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"c3b0e-144\">При использовании формата объектов, объект должен иметь свойство с именем значение, содержащее «path параметр значение».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-144\">While using the object format, the object must have a property named value which provides the 'path-parameter-value'.</span></span>\n<span data-ttu-id=\"c3b0e-145\">Пример:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-145\">Example:</span></span> \n   - <span data-ttu-id=\"c3b0e-146\">параметра Path в формате «object»: {«path параметр name»: {значение: «-параметра Path», skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-146\">path-parameter-value in 'object' format: { 'path-parameter-name': { value: 'path-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"c3b0e-147\">параметра Path в формате «строка»: {«имя пути параметра»: '-параметра path'}.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-147\">path-parameter-value in 'string' format: { 'path-parameter-name': 'path-parameter-value' }.</span></span>"
+      optional: true
+    - id: options.formData
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="c3b0e-148">Словарь пар "ключ значение" для объекта данных.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-148">A dictionary of key-value pairs for the formData object.</span></span>
+
+        <span data-ttu-id="c3b0e-149">Если ожидаемое «Content-Type» устанавливаемое значение «application/x-www-формы-urlencoded» затем установите ее в объекте options.headers else в заголовке «Content-Type» будет указано значение «multipart/form-data».</span><span class="sxs-lookup"><span data-stu-id="c3b0e-149">If the expected 'Content-Type' to be set is 'application/x-www-form-urlencoded' then please set it in the options.headers object else the 'Content-Type' header will be set to 'multipart/form-data'.</span></span>
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="c3b0e-150">Словарь заголовков запросов, которые необходимо применить к запросу.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-150">A dictionary of request headers that need to be applied to the request.</span></span>
+
+        <span data-ttu-id="c3b0e-151">Вот ключ «заголовка name», а равно «-значение заголовка».</span><span class="sxs-lookup"><span data-stu-id="c3b0e-151">Here the key is the 'header-name' and the value is the 'header-value'.</span></span> <span data-ttu-id="c3b0e-152">Значение заголовка должно иметь строковый тип.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-152">The header-value MUST be of type string.</span></span>
+         - <span data-ttu-id="c3b0e-153">ContentType должен иметь вид с именем ключа «Content-Type».</span><span class="sxs-lookup"><span data-stu-id="c3b0e-153">ContentType must be provided with the key name as 'Content-Type'.</span></span> <span data-ttu-id="c3b0e-154">Значение по умолчанию "application/json; CharSet = utf-8 ".</span><span class="sxs-lookup"><span data-stu-id="c3b0e-154">Default value 'application/json; charset=utf-8'.</span></span>
+         - <span data-ttu-id="c3b0e-155">«Transfer-Encoding» имеет значение «фрагментированной» по умолчанию если «options.bodyIsStream» имеет значение true.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-155">'Transfer-Encoding' is set to 'chunked' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="c3b0e-156">«Content-Type» значение «application/octet-stream» по умолчанию Если задано значение «options.bodyIsStream» значение true.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-156">'Content-Type' is set to 'application/octet-stream' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="c3b0e-157">«принять языка» по умолчанию имеет значение «en US»</span><span class="sxs-lookup"><span data-stu-id="c3b0e-157">'accept-language' by default is set to 'en-US'</span></span>
+         - <span data-ttu-id="c3b0e-158">«x-ms-client-request-id» по умолчанию присваивается новый идентификатор Guid.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-158">'x-ms-client-request-id' by default is set to a new Guid.</span></span> <span data-ttu-id="c3b0e-159">Чтобы не создать guid для запроса, задайте options.disableClientRequestId значение true</span><span class="sxs-lookup"><span data-stu-id="c3b0e-159">To not generate a guid for the request, please set options.disableClientRequestId to true</span></span>
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: <span data-ttu-id="c3b0e-160">Если задано значение true, указывает, что клиенту не присвоено новой Guid() заголовок «x-ms-client-request-id».</span><span class="sxs-lookup"><span data-stu-id="c3b0e-160">When set to true, instructs the client to not set 'x-ms-client-request-id' header to a new Guid().</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="c3b0e-161">Текст запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-161">The request body.</span></span> <span data-ttu-id="c3b0e-162">Он может быть любого типа.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-162">It can be of any type.</span></span> <span data-ttu-id="c3b0e-163">Этот метод будет JSON.stringify() текст запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-163">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="c3b0e-164">Сведения о том, как сериализовать текст запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-164">Provides information on how to serialize the request body.</span></span>
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="c3b0e-165">Сведения о том, как выполнить десериализацию текста ответа.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-165">Provides information on how to deserialize the response body.</span></span>
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: '<span data-ttu-id="c3b0e-166">Если задано значение true, этот метод не будет применяться `JSON.stringify()` в тело запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-166">When set to true, this method will not apply `JSON.stringify()` to the request body.</span></span> <span data-ttu-id="c3b0e-167">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-167">Default value: false.</span></span>'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: <span data-ttu-id="c3b0e-168">Указывает, является ли тело запроса потока (полезно для сценариев передачи файлов).</span><span class="sxs-lookup"><span data-stu-id="c3b0e-168">Indicates whether the request body is a stream (useful for file upload scenarios).</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="c3b0e-169">Необязательный обратный вызов.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-169">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        <span data-ttu-id="c3b0e-170">Если обратный вызов был передан в качестве последнего параметра затем он возвращает else обратный вызов возвращает обещание.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-170">If a callback was passed as the last parameter then it returns the callback else returns a Promise.</span></span>
+
+            {function} optionalCallback(err, result, request, response)
+
+                         {Error}  err      - The Error object if an error occurred, null otherwise.
+
+                         {object} result   - The parsed (JSON.parse()) responseBody
+
+                         {object} request  - The HTTP Request object.
+
+                         {stream} response - The raw HTTP Response stream.
+
+            {Promise} A promise is returned.
+    content: function sendRequest(options, optionalCallback)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  id: ms-rest.ServiceClient#sendRequestWithHttpOperationResponse
+  parent: ms-rest.ServiceClient
+  name: sendRequestWithHttpOperationResponse(options, optionalCallback)
+  summary: <span data-ttu-id="c3b0e-171">Отправляет запрос и возвращает ответ.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-171">Sends the request and returns the response.</span></span>
+  fullName: ms-rest.ServiceClient.sendRequestWithHttpOperationResponse(options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<T>} - The HttpOperationResponse which contains the raw request, response and the parsed (JSON.parse) response body'
+    value: '{HttpOperationResponse<T>} - The HttpOperationResponse which contains the raw request, response and the parsed (JSON.parse) response body'
+  - originalTitle: reject
+    title: reject
+    text: '{Error}  - The error object.'
+    value: '{Error}  - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      - ms-rest.WebResource
+      description: <span data-ttu-id="c3b0e-172">Параметры запроса, которые должны предоставляться для отправки запроса успешно.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-172">The request options that should be provided to send a request successfully.</span></span> <span data-ttu-id="c3b0e-173">Это может быть объект параметров (объект простой json) или объект WebResource с все обязательные свойства, заданные для запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-173">It can either be an options object (a simple json object) or the WebResource object with all the required properties set to make a request.</span></span>
+    - id: options.method
+      type:
+      - string
+      description: "<span data-ttu-id=\"c3b0e-174\">Метод HTTP-запроса.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-174\">The HTTP request method.</span></span> <span data-ttu-id=\"c3b0e-175\">Допустимые значения: «GET», «PUT», «HEAD», «DELETE», «Параметры», «POST», «PATCH».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-175\">Valid values are 'GET', 'PUT', 'HEAD', 'DELETE', 'OPTIONS', 'POST', 'PATCH'.</span></span>"
+    - id: options.url
+      type:
+      - string
+      description: <span data-ttu-id="c3b0e-176">Запрос URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-176">The request url.</span></span> <span data-ttu-id="c3b0e-177">Он может или не может иметь параметров запроса в нем.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-177">It may or may not have query parameters in it.</span></span> <span data-ttu-id="c3b0e-178">Указать «url» или укажите «pathTemplate» в объект параметров.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-178">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="c3b0e-179">Оба варианта являются взаимоисключающими.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-179">Both the options are mutually exclusive.</span></span>
+      optional: true
+    - id: options.queryParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"c3b0e-180\">Словарь параметров запроса, добавляемая к URL-адрес, где «key» — «запрос параметр name» и «значение» — «запрос--значение параметра».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-180\">A dictionary of query parameters to be appended to the url, where the 'key' is the 'query-parameter-name' and the 'value' is the 'query-parameter-value'.</span></span> <span data-ttu-id=\"c3b0e-181\">«Запрос параметр значение» может быть типа «String», или он может иметь тип «object».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-181\">The 'query-parameter-value' can be of type 'string' or it can be of type 'object'.</span></span> <span data-ttu-id=\"c3b0e-182\">Если вы хотите пропустить кодирования URL-адреса следует использовать формат «object».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-182\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"c3b0e-183\">При использовании формата объектов, объект должен иметь свойство с именем значение, содержащее «запрос параметр значение».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-183\">While using the object format, the object must have a property named value which provides the 'query-parameter-value'.</span></span>\n<span data-ttu-id=\"c3b0e-184\">Пример:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-184\">Example:</span></span> \n   - <span data-ttu-id=\"c3b0e-185\">значение параметра запроса — в формате «object»: {«запрос параметр name»: {значение: «запрос параметр значение», skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-185\">query-parameter-value in 'object' format: { 'query-parameter-name': { value: 'query-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"c3b0e-186\">значение параметра запроса — в формате «строка»: {«запрос параметр name»: «запрос параметр значение»}.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-186\">query-parameter-value in 'string' format: { 'query-parameter-name': 'query-parameter-value'}.</span></span>\n<span data-ttu-id=\"c3b0e-187\">Примечание: \"Если options.url уже имеет некоторые параметры запроса, то значение, указанное в options.queryParameters будут добавляться на URL-адрес.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-187\">Note: 'If options.url already has some query parameters, then the value provided in options.queryParameters will be appended to the url.</span></span>"
+      optional: true
+    - id: options.pathTemplate
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="c3b0e-188">Шаблон пути запроса URL-адрес.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-188">The path template of the request url.</span></span> <span data-ttu-id="c3b0e-189">Указать «url» или укажите «pathTemplate» в объект параметров.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-189">Either provide the 'url' or provide the 'pathTemplate' in the options object.</span></span> <span data-ttu-id="c3b0e-190">Оба варианта являются взаимоисключающими.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-190">Both the options are mutually exclusive.</span></span>
+
+        <span data-ttu-id="c3b0e-191">Пример: "/ subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}"</span><span class="sxs-lookup"><span data-stu-id="c3b0e-191">Example: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}'</span></span>
+      optional: true
+    - id: options.baseUrl
+      type:
+      - string
+      description: "<span data-ttu-id=\"c3b0e-192\">Базовый URL-адрес запроса.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-192\">The base url of the request.</span></span> <span data-ttu-id=\"c3b0e-193\">Значение по умолчанию —: \"https://management.azure.com\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-193\">Default value is: 'https://management.azure.com'.</span></span> <span data-ttu-id=\"c3b0e-194\">Это применимо только с options.pathTemplate.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-194\">This is applicable only with options.pathTemplate.</span></span> <span data-ttu-id=\"c3b0e-195\">Если вы предоставляете options.url, то предполагается, что предоставить полный URL-адрес.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-195\">If you are providing options.url then it is expected that you provide the complete url.</span></span>"
+      optional: true
+    - id: options.pathParameters
+      type:
+      - object
+      description: "<span data-ttu-id=\"c3b0e-196\">Словарь параметров пути, которые должны быть заменены фактическими значениями в pathTemplate.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-196\">A dictionary of path parameters that need to be replaced with actual values in the pathTemplate.</span></span>\n<span data-ttu-id=\"c3b0e-197\">Вот ключ «path параметр name», а значение — «path--значение параметра».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-197\">Here the key is the 'path-parameter-name' and the value is the 'path-parameter-value'.</span></span> <span data-ttu-id=\"c3b0e-198\">«Путь параметр значение» может быть типа «String», или он может иметь тип «object».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-198\">The 'path-parameter-value' can be of type 'string'  or it can be of type 'object'.</span></span>\n<span data-ttu-id=\"c3b0e-199\">Если вы хотите пропустить кодирования URL-адреса следует использовать формат «object».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-199\">The 'object' format should be used when you want to skip url encoding.</span></span> <span data-ttu-id=\"c3b0e-200\">При использовании формата объектов, объект должен иметь свойство с именем значение, содержащее «path параметр значение».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-200\">While using the object format, the object must have a property named value which provides the 'path-parameter-value'.</span></span>\n<span data-ttu-id=\"c3b0e-201\">Пример:</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-201\">Example:</span></span> \n   - <span data-ttu-id=\"c3b0e-202\">параметра Path в формате «object»: {«path параметр name»: {значение: «-параметра Path», skipUrlEncoding: true}}</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-202\">path-parameter-value in 'object' format: { 'path-parameter-name': { value: 'path-parameter-value', skipUrlEncoding: true } }</span></span>\n   - <span data-ttu-id=\"c3b0e-203\">параметра Path в формате «строка»: {«имя пути параметра»: '-параметра path'}.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c3b0e-203\">path-parameter-value in 'string' format: { 'path-parameter-name': 'path-parameter-value' }.</span></span>"
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="c3b0e-204">Словарь заголовков запросов, которые необходимо применить к запросу.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-204">A dictionary of request headers that need to be applied to the request.</span></span>
+
+        <span data-ttu-id="c3b0e-205">Вот ключ «заголовка name», а равно «-значение заголовка».</span><span class="sxs-lookup"><span data-stu-id="c3b0e-205">Here the key is the 'header-name' and the value is the 'header-value'.</span></span> <span data-ttu-id="c3b0e-206">Значение заголовка должно иметь строковый тип.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-206">The header-value MUST be of type string.</span></span>
+         - <span data-ttu-id="c3b0e-207">ContentType должен иметь вид с именем ключа «Content-Type».</span><span class="sxs-lookup"><span data-stu-id="c3b0e-207">ContentType must be provided with the key name as 'Content-Type'.</span></span> <span data-ttu-id="c3b0e-208">Значение по умолчанию "application/json; CharSet = utf-8 ".</span><span class="sxs-lookup"><span data-stu-id="c3b0e-208">Default value 'application/json; charset=utf-8'.</span></span>
+         - <span data-ttu-id="c3b0e-209">«Transfer-Encoding» имеет значение «фрагментированной» по умолчанию если «options.bodyIsStream» имеет значение true.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-209">'Transfer-Encoding' is set to 'chunked' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="c3b0e-210">«Content-Type» значение «application/octet-stream» по умолчанию Если задано значение «options.bodyIsStream» значение true.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-210">'Content-Type' is set to 'application/octet-stream' by default if 'options.bodyIsStream' is set to true.</span></span>
+         - <span data-ttu-id="c3b0e-211">«принять языка» по умолчанию имеет значение «en US»</span><span class="sxs-lookup"><span data-stu-id="c3b0e-211">'accept-language' by default is set to 'en-US'</span></span>
+         - <span data-ttu-id="c3b0e-212">«x-ms-client-request-id» по умолчанию присваивается новый идентификатор Guid.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-212">'x-ms-client-request-id' by default is set to a new Guid.</span></span> <span data-ttu-id="c3b0e-213">Чтобы не создать guid для запроса, задайте options.disableClientRequestId значение true</span><span class="sxs-lookup"><span data-stu-id="c3b0e-213">To not generate a guid for the request, please set options.disableClientRequestId to true</span></span>
+      optional: true
+    - id: options.disableClientRequestId
+      type:
+      - boolean
+      description: <span data-ttu-id="c3b0e-214">Если задано значение true, указывает, что клиенту не присвоено новой Guid() заголовок «x-ms-client-request-id».</span><span class="sxs-lookup"><span data-stu-id="c3b0e-214">When set to true, instructs the client to not set 'x-ms-client-request-id' header to a new Guid().</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="c3b0e-215">Текст запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-215">The request body.</span></span> <span data-ttu-id="c3b0e-216">Он может быть любого типа.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-216">It can be of any type.</span></span> <span data-ttu-id="c3b0e-217">Этот метод будет JSON.stringify() текст запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-217">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.body
+      type:
+      - object
+      - string
+      - boolean
+      - array
+      - number
+      - ms-rest.null
+      - undefined
+      description: <span data-ttu-id="c3b0e-218">Текст запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-218">The request body.</span></span> <span data-ttu-id="c3b0e-219">Он может быть любого типа.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-219">It can be of any type.</span></span> <span data-ttu-id="c3b0e-220">Этот метод будет JSON.stringify() текст запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-220">This method will JSON.stringify() the request body.</span></span>
+      optional: true
+    - id: options.serializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="c3b0e-221">Сведения о том, как сериализовать текст запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-221">Provides information on how to serialize the request body.</span></span>
+      optional: true
+    - id: options.deserializationMapper
+      type:
+      - object
+      description: <span data-ttu-id="c3b0e-222">Сведения о том, как выполнить десериализацию текста ответа.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-222">Provides information on how to deserialize the response body.</span></span>
+      optional: true
+    - id: options.disableJsonStringifyOnBody
+      type:
+      - boolean
+      description: '<span data-ttu-id="c3b0e-223">Если задано значение true, этот метод не будет применяться `JSON.stringify()` в тело запроса.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-223">When set to true, this method will not apply `JSON.stringify()` to the request body.</span></span> <span data-ttu-id="c3b0e-224">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-224">Default value: false.</span></span>'
+      optional: true
+    - id: options.bodyIsStream
+      type:
+      - boolean
+      description: <span data-ttu-id="c3b0e-225">Указывает, является ли тело запроса потока (полезно для сценариев передачи файлов).</span><span class="sxs-lookup"><span data-stu-id="c3b0e-225">Indicates whether the request body is a stream (useful for file upload scenarios).</span></span>
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: <span data-ttu-id="c3b0e-226">Необязательный обратный вызов.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-226">The optional callback.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise
+      description: <span data-ttu-id="c3b0e-227">Обещание возвращается.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-227">A promise is returned.</span></span>
+    content: function sendRequestWithHttpOperationResponse(options, optionalCallback)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#addUserAgentInfo
+  id: ms-rest.ServiceClient#addUserAgentInfo
+  parent: ms-rest.ServiceClient
+  name: addUserAgentInfo(additionalUserAgentInfo)
+  summary: <span data-ttu-id="c3b0e-228">Добавляет пользовательскую информацию заголовка агента пользователя</span><span class="sxs-lookup"><span data-stu-id="c3b0e-228">Adds custom information to user agent header</span></span>
+  fullName: ms-rest.ServiceClient.addUserAgentInfo(additionalUserAgentInfo)
+  type: Function
+  syntax:
+    parameters:
+    - id: additionalUserAgentInfo
+      type:
+      - ms-rest.any
+      description: <span data-ttu-id="c3b0e-229">сведения для добавления заголовка агента пользователя, как строка.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-229">information to be added to user agent header, as string.</span></span>
+    content: function addUserAgentInfo(additionalUserAgentInfo)
+  langs:
+  - js
+- uid: ms-rest.ServiceClient#getPackageJsonInfo
+  id: ms-rest.ServiceClient#getPackageJsonInfo
+  parent: ms-rest.ServiceClient
+  name: getPackageJsonInfo(managementClientDir)
+  summary: >-
+    <span data-ttu-id="c3b0e-230">Пытается найти package.json для заданного azure nodejs пакета.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-230">Attempts to find package.json for the given azure nodejs package.</span></span>
+
+    <span data-ttu-id="c3b0e-231">Если найден, возвращает имя и версию пакета, считывая package.json. Если package.json не найден, возвращает значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-231">If found, returns the name and version of the package by reading the package.json If package.json is not found, returns a default value.</span></span>
+  fullName: ms-rest.ServiceClient.getPackageJsonInfo(managementClientDir)
+  type: Function
+  syntax:
+    parameters:
+    - id: managementClientDir
+      type:
+      - string
+      description: <span data-ttu-id="c3b0e-232">Передайте каталог клиента управления azure.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-232">pass the directory of the specific azure management client.</span></span>
+    return:
+      type:
+      - object
+      description: <span data-ttu-id="c3b0e-233">packageJsonInfo - «имя» и «версия» нужного пакета.</span><span class="sxs-lookup"><span data-stu-id="c3b0e-233">packageJsonInfo - "name" and "version" of the desired package.</span></span>
+    content: function getPackageJsonInfo(managementClientDir)
+  langs:
+  - js
+references:
+- uid: ms-rest.WebResource
+  name: WebResource
+  fullName: ms-rest.WebResource
+  isExternal: false
