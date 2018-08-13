@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0de96b9cfcb6a06de36df8c2df8311725add22d0
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40072052"
+items:
+- uid: documentdb.ProxyQueryExecutionContext
+  id: documentdb.ProxyQueryExecutionContext
+  name: ProxyQueryExecutionContext
+  summary: Представляет объект ProxyQueryExecutionContext. Если запрос является секционированного запроса, который может выполняться параллельно она переключает контекст выполнения.
+  fullName: documentdb.ProxyQueryExecutionContext
+  type: Class
+  children:
+  - documentdb.ProxyQueryExecutionContext.#ctor
+  - documentdb.ProxyQueryExecutionContext#nextItem
+  - documentdb.ProxyQueryExecutionContext#current
+  - documentdb.ProxyQueryExecutionContext#hasMoreResults
+  langs:
+  - js
+- id: documentdb.ProxyQueryExecutionContext.#ctor
+  uid: documentdb.ProxyQueryExecutionContext.#ctor
+  parent: documentdb.ProxyQueryExecutionContext
+  name: ProxyQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  fullName: documentdb.ProxyQueryExecutionContext.ProxyQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  summary: Представляет объект ProxyQueryExecutionContext. Если запрос является секционированного запроса, который может выполняться параллельно она переключает контекст выполнения.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: documentclient
+      type:
+      - object
+      description: Объект documentclient.
+    - id: query
+      type:
+      - undefinedSqlQuerySpec
+      - string
+      description: SQL-запроса.
+    - id: options
+      type:
+      - undefinedFeedOptions
+      description: Представляет параметры веб-канала.
+    - id: fetchFunctions
+      type:
+      - undefinedcallback
+      - undefinedArray.<callback>
+      description: Функция для извлечения каждой странице данных. Массив функций могут использоваться для запроса более чем одной секции.
+    - id: resourceLink
+      type:
+      - string
+      description: collectionLink для выполнения запросов параллельно.
+      optional: true
+    content: new ProxyQueryExecutionContext(documentclient, query, options, fetchFunctions, resourceLink)
+  langs:
+  - js
+- uid: documentdb.ProxyQueryExecutionContext#nextItem
+  id: documentdb.ProxyQueryExecutionContext#nextItem
+  parent: documentdb.ProxyQueryExecutionContext
+  name: nextItem(callback)
+  summary: Выполните указанный функцию на следующий элемент в ProxyQueryExecutionContext.
+  fullName: documentdb.ProxyQueryExecutionContext.nextItem(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Функция, выполняемая для каждого элемента. функция принимает два параметра ошибка, элемент.
+    content: function nextItem(callback)
+  langs:
+  - js
+- uid: documentdb.ProxyQueryExecutionContext#current
+  id: documentdb.ProxyQueryExecutionContext#current
+  parent: documentdb.ProxyQueryExecutionContext
+  name: current(callback)
+  summary: Извлечь текущий элемент на ProxyQueryExecutionContext.
+  fullName: documentdb.ProxyQueryExecutionContext.current(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Функция, выполняемая для текущего элемента. функция принимает два параметра ошибка, элемент.
+    content: function current(callback)
+  langs:
+  - js
+- uid: documentdb.ProxyQueryExecutionContext#hasMoreResults
+  id: documentdb.ProxyQueryExecutionContext#hasMoreResults
+  parent: documentdb.ProxyQueryExecutionContext
+  name: hasMoreResults()
+  summary: Определите, если еще остались ресурсов для обработки.
+  fullName: documentdb.ProxyQueryExecutionContext.hasMoreResults()
+  type: Function
+  syntax:
+    return:
+      type:
+      - Boolean
+      description: значение true, если другие элементы для обработки в ProxyQueryExecutionContext.
+    content: function hasMoreResults()
+  langs:
+  - js

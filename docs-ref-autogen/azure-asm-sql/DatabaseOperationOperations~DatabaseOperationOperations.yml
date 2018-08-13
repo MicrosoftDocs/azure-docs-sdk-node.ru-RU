@@ -1,0 +1,124 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 43d3f97bde82db60885553c1f3322b23ad527893
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064162"
+items:
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations
+  summary: >-
+    API управления базами данных SQL Azure включает операции для получения операций базы данных. В частности этот API позволяет получить определенную операцию, или чтобы получить список всех операций, которые произошли в определенной базе данных или во всех базах данных на сервере базы данных SQL Azure.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    См. в разделе [databaseOperations] {@link SqlManagementClient ~ SqlManagementClient #databaseOperations}.
+
+    Инициализирует новый экземпляр класса DatabaseOperationOperations.
+  fullName: azure-asm-sql.DatabaseOperationOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  - azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.#ctor
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: DatabaseOperationOperations(client)
+  fullName: azure-asm-sql.DatabaseOperationOperations.DatabaseOperationOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Ссылка на клиента службы.
+    content: new DatabaseOperationOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#get
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: get(serverName, operationGuid, callback)
+  summary: Возвращает сведения о конкретной операции с помощью операции Guid.
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.get(serverName, operationGuid, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера базы данных SQL Azure, где она размещена.
+    - id: operationGuid
+      type:
+      - string
+      description: Идентификатор Guid операции базы данных SQL Azure, получить невозможно.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function get(serverName, operationGuid, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByDatabase
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: listByDatabase(serverName, databaseName, callback)
+  summary: Извлекает всех операций, выполняемых в определенной базе данных.
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.listByDatabase(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера базы данных SQL Azure с базой данных.
+    - id: databaseName
+      type:
+      - string
+      description: Имя базы данных, для которого требуется получить операции.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function listByDatabase(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  id: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations#listByServer
+  parent: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations
+  name: listByServer(serverName, callback)
+  summary: Извлекает все операций, выполняемых на сервере базы данных SQL Azure.
+  fullName: azure-asm-sql.DatabaseOperationOperations~DatabaseOperationOperations.listByServer(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера базы данных SQL Azure, должны запрашиваться.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function listByServer(serverName, callback)
+  langs:
+  - js

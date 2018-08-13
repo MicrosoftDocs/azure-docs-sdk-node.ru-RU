@@ -1,0 +1,466 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f8d4332e8e550322acec13e55dc8b09a55d188ab
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063892"
+items:
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations
+  summary: >-
+    Шины API управления службами включает операции для управления пространствами имен служебной шины.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}.
+
+    См. в разделе [пространства имен] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #namespaces}.
+
+    Инициализирует новый экземпляр класса NamespaceOperations.
+  fullName: azure-asm-sb.NamespaceOperations
+  type: Class
+  children:
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  - azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  langs:
+  - js
+- id: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  uid: azure-asm-sb.NamespaceOperations~NamespaceOperations.#ctor
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: NamespaceOperations(client)
+  fullName: azure-asm-sb.NamespaceOperations.NamespaceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: Ссылка на клиента службы.
+    content: new NamespaceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#checkAvailability
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: checkAvailability(namespaceName, callback)
+  summary: Проверяет доступность заданного пространства имен во всех подписках Windows Azure. Это полезно, поскольку имя домена создается на основе имени пространства имен службы.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj870968.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.checkAvailability(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function checkAvailability(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#create
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: create(namespaceName, region, callback)
+  summary: Создает новое пространство имен службы. После создания манифеста ресурсов это пространство имен является неизменяемым. Эта операция является идемпотентной.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.create(namespaceName, region, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: region
+      type:
+      - string
+      description: Область пространства имен.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function create(namespaceName, region, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createAuthorizationRule(namespaceName, rule, callback)
+  summary: Операция правила авторизации пространства имен создания создает правило авторизации для пространства имен
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: Правила авторизации общего доступа.
+    - id: rule.keyName
+      type:
+      - string
+      description: Имя ключа, который был использован.
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: Первичный ключ, который был использован.
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: Вторичный ключ, который был использован.
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: Тип утверждения.
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: Значение утверждения.
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: Права, связанные с правилом.
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: Время, по которому был создан в правило авторизации.
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: Время последней обновить правил.
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: Номер редакции для правила.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function createAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#createNamespace
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: createNamespace(namespaceName, namespaceEntity, callback)
+  summary: Создает новое пространство имен службы. После создания манифеста ресурсов это пространство имен является неизменяемым. Эта операция является идемпотентной.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj856303.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.createNamespace(namespaceName, namespaceEntity, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: namespaceEntity
+      type:
+      - azure-asm-sb.ServiceBusNamespaceCreateParameters
+      description: Пространство имен служебной шины.
+    - id: namespaceEntity.region
+      type:
+      - string
+      description: Область пространства имен.
+    - id: namespaceEntity.createACSNamespace
+      type:
+      - boolean
+      description: Ли требуется проверка подлинности ACS для служебной шины.
+      optional: true
+    - id: namespaceEntity.namespaceType
+      type:
+      - azure-asm-sb.NamespaceType
+      description: Возвращает или задает тип пространства имен.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function createNamespace(namespaceName, namespaceEntity, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteMethod
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteMethod(namespaceName, callback)
+  summary: Удаляет существующее пространство имен. Эта операция также удаляет все связанные сущности, включая очереди, разделы, точки переключения и сообщения, хранящиеся в пространстве имен.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj856296.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteMethod(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function deleteMethod(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#deleteAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: deleteAuthorizationRule(namespaceName, ruleName, callback)
+  summary: Операция правила авторизации пространства имен delete удаляет правило авторизации для пространства имен
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.deleteAuthorizationRule(namespaceName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: ruleName
+      type:
+      - string
+      description: Имя правила.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function deleteAuthorizationRule(namespaceName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#get
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: get(namespaceName, callback)
+  summary: Возвращает описание указанного пространства имен.  (см. в разделе http://msdn.microsoft.com/library/azure/dn140232.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.get(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function get(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getAuthorizationRule(namespaceName, entityName, callback)
+  summary: Операция правила авторизации get возвращает правило авторизации для пространства имен по имени.
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getAuthorizationRule(namespaceName, entityName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Чтобы получить правила авторизации для пространства имен.
+    - id: entityName
+      type:
+      - string
+      description: Имя сущности, чтобы получить правила авторизации для.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function getAuthorizationRule(namespaceName, entityName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#getNamespaceDescription
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: getNamespaceDescription(namespaceName, callback)
+  summary: Описание пространства имен — это документ XML AtomPub, определяющий необходимую семантику пространства имен службы. Описание пространства имен содержит следующие свойства.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj873988.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.getNamespaceDescription(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function getNamespaceDescription(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#list
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: list(callback)
+  summary: Список доступных пространств имен.  (см. в разделе http://msdn.microsoft.com/en-us/library/azure/hh780759.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#listAuthorizationRules
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: listAuthorizationRules(namespaceName, callback)
+  summary: Операция правила авторизации get получает правила авторизации для пространства имен.
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.listAuthorizationRules(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Чтобы получить правила авторизации для пространства имен.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function listAuthorizationRules(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  id: azure-asm-sb.NamespaceOperations~NamespaceOperations#updateAuthorizationRule
+  parent: azure-asm-sb.NamespaceOperations~NamespaceOperations
+  name: updateAuthorizationRule(namespaceName, rule, callback)
+  summary: Операция правила авторизации обновление обновляет правило авторизации для пространства имен.
+  fullName: azure-asm-sb.NamespaceOperations~NamespaceOperations.updateAuthorizationRule(namespaceName, rule, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: rule
+      type:
+      - azure-asm-sb.ServiceBusSharedAccessAuthorizationRule
+      description: Правило авторизации обновленные доступа.
+      optional: true
+    - id: rule.keyName
+      type:
+      - string
+      description: Имя ключа, который был использован.
+      optional: true
+    - id: rule.primaryKey
+      type:
+      - string
+      description: Первичный ключ, который был использован.
+      optional: true
+    - id: rule.secondaryKey
+      type:
+      - string
+      description: Вторичный ключ, который был использован.
+      optional: true
+    - id: rule.claimType
+      type:
+      - string
+      description: Тип утверждения.
+      optional: true
+    - id: rule.claimValue
+      type:
+      - string
+      description: Значение утверждения.
+      optional: true
+    - id: rule.rights
+      type:
+      - array
+      description: Права, связанные с правилом.
+      optional: true
+    - id: rule.createdTime
+      type:
+      - date
+      description: Время, по которому был создан в правило авторизации.
+      optional: true
+    - id: rule.modifiedTime
+      type:
+      - date
+      description: Время последней обновить правил.
+      optional: true
+    - id: rule.revision
+      type:
+      - number
+      description: Номер редакции для правила.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function updateAuthorizationRule(namespaceName, rule, callback)
+  langs:
+  - js

@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: da3e7585cc8649d17699a945508b1a30766024a0
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063885"
+items:
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: ServiceCertificateOperations
+  summary: >-
+    Операции управления сертификатами службы для вашей подписки.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee795178.aspx подробнее) __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    См. в разделе [serviceCertificates] {@link ComputeManagementClient ~ ComputeManagementClient #serviceCertificates}.
+
+    Инициализирует новый экземпляр класса ServiceCertificateOperations.
+  fullName: azure-asm-compute.ServiceCertificateOperations
+  type: Class
+  children:
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  - azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.#ctor
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: ServiceCertificateOperations(client)
+  fullName: azure-asm-compute.ServiceCertificateOperations.ServiceCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Ссылка на клиента службы.
+    content: new ServiceCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginCreating
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: beginCreating(serviceName, parameters, callback)
+  summary: Операции с сертификатом службы начать создание добавляет сертификат в размещенную службу. Эта операция является асинхронной операцией. Чтобы определить, закончила ли служба управления обработку запроса, вызовите Получение состояния операции.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.beginCreating(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Префикс DNS-имя службы.
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateCreateParameters
+      description: Параметры, передаваемые операциям начать создание сертификата службы.
+    - id: parameters.data
+      type:
+      - azure-asm-compute.buffer
+      description: Файл pfx или CER-области.
+    - id: parameters.certificateFormat
+      type:
+      - azure-asm-compute.CertificateFormat
+      description: Формат сертификата службы. Azure поддерживает форматы файлов PFX-файл и CER-области.
+    - id: parameters.password
+      type:
+      - string
+      description: >-
+        Пароль для PFX-сертификат.
+
+        CER-сертификат не требуется пароль.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginCreating(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#beginDeleting
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: beginDeleting(parameters, callback)
+  summary: Начать удаление сертификата службы операция удаляет сертификат службы из хранилища сертификатов размещенной службы. Эта операция является асинхронной операцией. Чтобы определить, закончила ли служба управления обработку запроса, вызовите Получение состояния операции.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.beginDeleting(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateDeleteParameters
+      description: Параметры, передаваемые операциям начать удаление сертификата службы.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Префикс DNS-имя службы.
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: Алгоритм отпечатка сертификата.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: Шестнадцатеричным представлением отпечатка.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginDeleting(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#create
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: create(serviceName, parameters, callback)
+  summary: Операция Create Certificate служба добавляет сертификат в размещенную службу. Эта операция является асинхронной операцией. Чтобы определить, закончила ли служба управления обработку запроса, вызовите Получение состояния операции.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460817.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.create(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Префикс DNS-имя службы.
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateCreateParameters
+      description: Параметры для операции создания сертификата службы.
+    - id: parameters.data
+      type:
+      - azure-asm-compute.buffer
+      description: Файл pfx или CER-области.
+    - id: parameters.certificateFormat
+      type:
+      - azure-asm-compute.CertificateFormat
+      description: Формат сертификата службы. Azure поддерживает форматы файлов PFX-файл и CER-области.
+    - id: parameters.password
+      type:
+      - string
+      description: >-
+        Пароль для PFX-сертификат.
+
+        CER-сертификат не требуется пароль.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function create(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#deleteMethod
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: deleteMethod(parameters, callback)
+  summary: Операция удаления сертификата службы Удаляет сертификат службы из хранилища сертификатов размещенной службы. Эта операция является асинхронной операцией. Чтобы определить, закончила ли служба управления обработку запроса, вызовите Получение состояния операции.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460803.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.deleteMethod(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateDeleteParameters
+      description: Параметры для операции удаления сертификата службы.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Префикс DNS-имя службы.
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: Алгоритм отпечатка сертификата.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: Шестнадцатеричным представлением отпечатка.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function deleteMethod(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#get
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: get(parameters, callback)
+  summary: Операция получения сертификата службы возвращает открытые данные для указанного сертификата X.509, связанного с размещенной службой.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460792.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.get(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.ServiceCertificateGetParameters
+      description: Параметры для операции получения сертификата службы.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Префикс DNS-имя службы.
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: Алгоритм отпечатка сертификата.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: Шестнадцатеричным представлением отпечатка.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function get(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  id: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations#list
+  parent: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations
+  name: list(serviceName, callback)
+  summary: Перечисление сертификатов службы операция перечисляет все сертификаты службы, связанные с указанной размещенной службой.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.ServiceCertificateOperations~ServiceCertificateOperations.list(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя префикса DNS размещенной службы.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function list(serviceName, callback)
+  langs:
+  - js

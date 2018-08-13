@@ -1,0 +1,228 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 69cd8be33fc74bdf792e221b491c62d90f8c69d5
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064180"
+items:
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: DatabaseCopyOperations
+  summary: >-
+    Представляет API управления базами данных SQL включает операции управления копии базы данных SQL Server для подписки.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    См. в разделе [databaseCopies] {@link SqlManagementClient ~ SqlManagementClient #databaseCopies}.
+
+    Инициализирует новый экземпляр класса DatabaseCopyOperations.
+  fullName: azure-asm-sql.DatabaseCopyOperations
+  type: Class
+  children:
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  - azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  langs:
+  - js
+- id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.#ctor
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: DatabaseCopyOperations(client)
+  fullName: azure-asm-sql.DatabaseCopyOperations.DatabaseCopyOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Ссылка на клиента службы.
+    content: new DatabaseCopyOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#create
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: create(serverName, databaseName, parameters, callback)
+  summary: Запускает копию базы данных SQL Server.
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.create(serverName, databaseName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя SQL Server, на котором находится база данных-источник.
+    - id: databaseName
+      type:
+      - string
+      description: Имя базы данных-источника.
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCopyCreateParameters
+      description: Дополнительные параметры для операции создания копии базы данных.
+    - id: parameters.partnerServer
+      type:
+      - string
+      description: Возвращает имя целевого сервера для копирования.
+    - id: parameters.partnerDatabase
+      type:
+      - string
+      description: Возвращает имя целевой базы данных для копирования.
+    - id: parameters.isContinuous
+      type:
+      - boolean
+      description: Получает значение, указывающее, должен ли быть непрерывного копирования.
+    - id: parameters.isOfflineSecondary
+      type:
+      - boolean
+      description: Получает значение, указывающее, является ли автономной копии вторичной.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function create(serverName, databaseName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#deleteMethod
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  summary: Останавливает копию базы данных SQL Server.
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя экземпляра SQL Server источника или назначения.
+    - id: databaseName
+      type:
+      - string
+      description: Имя базы данных.
+    - id: databaseCopyName
+      type:
+      - azure-asm-sql.Guid
+      description: Уникальный идентификатор для остановить копию базы данных.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function deleteMethod(serverName, databaseName, databaseCopyName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#get
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: get(serverName, databaseName, databaseCopyName, callback)
+  summary: Извлекает сведения о копии базы данных SQL Server.
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.get(serverName, databaseName, databaseCopyName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя экземпляра SQL Server источника или назначения.
+    - id: databaseName
+      type:
+      - string
+      description: Имя базы данных.
+    - id: databaseCopyName
+      type:
+      - string
+      description: Уникальный идентификатор для копирования базы данных для извлечения.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function get(serverName, databaseName, databaseCopyName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#list
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: list(serverName, databaseName, callback)
+  summary: Получает список копий базы данных SQL Server для базы данных.
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.list(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера базы данных должны запрашиваться.
+    - id: databaseName
+      type:
+      - string
+      description: Имя базы данных, должны запрашиваться.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function list(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  id: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations#update
+  parent: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations
+  name: update(serverName, databaseName, databaseCopyName, parameters, callback)
+  summary: Обновляет копию базы данных SQL Server.
+  fullName: azure-asm-sql.DatabaseCopyOperations~DatabaseCopyOperations.update(serverName, databaseName, databaseCopyName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя экземпляра SQL Server источника или назначения.
+    - id: databaseName
+      type:
+      - string
+      description: Имя базы данных.
+    - id: databaseCopyName
+      type:
+      - azure-asm-sql.Guid
+      description: Уникальный идентификатор для копирования базы данных для обновления.
+    - id: parameters
+      type:
+      - azure-asm-sql.DatabaseCopyUpdateParameters
+      description: Дополнительные параметры для операции копирования обновления базы данных.
+    - id: parameters.isForcedTerminate
+      type:
+      - boolean
+      description: Возвращает или задает ли операции удаления базы данных приведет к принудительной или понятное завершение работы.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function update(serverName, databaseName, databaseCopyName, parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9a41cdf61a2d4bdc3d9643aa184a7b80ad2a7332
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063862"
+items:
+- uid: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations
+  id: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations
+  name: ClientRootCertificateOperations
+  summary: >-
+    API управления сетями включает операции управления клиентских корневых сертификатов для вашей подписки.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj154113.aspx подробнее) __Примечание__: экземпляр этого класса создается автоматически для экземпляра [NetworkManagementClient] {@link NetworkManagementClient ~ NetworkManagementClient}.
+
+    См. в разделе [clientRootCertificates] {@link NetworkManagementClient ~ NetworkManagementClient #clientRootCertificates}.
+
+    Инициализирует новый экземпляр класса ClientRootCertificateOperations.
+  fullName: azure-asm-network.ClientRootCertificateOperations
+  type: Class
+  children:
+  - azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations.#ctor
+  - azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#create
+  - azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#deleteMethod
+  - azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#get
+  - azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations.#ctor
+  uid: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations.#ctor
+  parent: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations
+  name: ClientRootCertificateOperations(client)
+  fullName: azure-asm-network.ClientRootCertificateOperations.ClientRootCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedNetworkManagementClient
+      description: Ссылка на клиента службы.
+    content: new ClientRootCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#create
+  id: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#create
+  parent: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations
+  name: create(networkName, parameters, callback)
+  summary: Операция передать клиентский корневой сертификат используется для передачи нового корневого сертификата клиента в Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn205129.aspx Дополнительные сведения)
+  fullName: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations.create(networkName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkName
+      type:
+      - string
+      description: Имя виртуальной сети для этого шлюза.
+    - id: parameters
+      type:
+      - azure-asm-network.ClientRootCertificateCreateParameters
+      description: Параметры для операции передачи клиента корневой сертификат шлюза виртуальной сети.
+    - id: parameters.certificate
+      type:
+      - string
+      description: Новый корневой сертификат клиента, чтобы отправить, в виде шестнадцатеричной кодированной строки.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function create(networkName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#deleteMethod
+  id: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#deleteMethod
+  parent: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations
+  name: deleteMethod(networkName, certificateThumbprint, callback)
+  summary: Удалить клиентский корневой сертификат операция удаляет ранее переданный клиентский корневой сертификат из Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn205128.aspx Дополнительные сведения)
+  fullName: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations.deleteMethod(networkName, certificateThumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkName
+      type:
+      - string
+      description: Имя виртуальной сети для этого шлюза.
+    - id: certificateThumbprint
+      type:
+      - string
+      description: X509 отпечаток сертификата.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function deleteMethod(networkName, certificateThumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#get
+  id: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#get
+  parent: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations
+  name: get(networkName, certificateThumbprint, callback)
+  summary: Операция получить клиентский корневой сертификат возвращает открытую часть ранее переданный клиентский корневой сертификат в формате в кодировке base-64 из Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn205127.aspx Дополнительные сведения)
+  fullName: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations.get(networkName, certificateThumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkName
+      type:
+      - string
+      description: Имя виртуальной сети для этого шлюза.
+    - id: certificateThumbprint
+      type:
+      - string
+      description: X509 отпечаток сертификата.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function get(networkName, certificateThumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#list
+  id: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations#list
+  parent: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations
+  name: list(networkName, callback)
+  summary: Перечисление клиентских корневых сертификатов операция возвращает список всех клиентских корневых сертификатов, связанных с указанной виртуальной сети в Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn205130.aspx Дополнительные сведения)
+  fullName: azure-asm-network.ClientRootCertificateOperations~ClientRootCertificateOperations.list(networkName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: networkName
+      type:
+      - string
+      description: Имя виртуальной сети для этого шлюза.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function list(networkName, callback)
+  langs:
+  - js

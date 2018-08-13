@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 77aef5d0743a622fd3d80f0c573f3b211f9e89f8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064198"
+items:
+- uid: azure-asm-sql.SqlManagementService
+  id: azure-asm-sql.SqlManagementService
+  name: SqlManagementService
+  summary: Объект SqlManagementService позволяет выполнять операции управления на серверах баз данных SQL Microsoft Azure.
+  fullName: azure-asm-sql.SqlManagementService
+  type: Class
+  children:
+  - azure-asm-sql.SqlManagementService.#ctor
+  - azure-asm-sql.SqlManagementService#listServers
+  - azure-asm-sql.SqlManagementService#deleteServer
+  - azure-asm-sql.SqlManagementService#createServer
+  - azure-asm-sql.SqlManagementService#listServerFirewallRules
+  - azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createServerFirewallRule
+  - azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  - azure-asm-sql.SqlManagementService#createDatabase
+  langs:
+  - js
+- id: azure-asm-sql.SqlManagementService.#ctor
+  uid: azure-asm-sql.SqlManagementService.#ctor
+  parent: azure-asm-sql.SqlManagementService
+  name: SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-sql.SqlManagementService.SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  summary: Создает новый объект SqlManagementService
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: Конфигурации, идентификатор подписки для учетной записи или строке подключения
+    - id: authentication
+      type:
+      - object
+      description: >-
+        Объект проверки подлинности для клиента.
+
+        Keyfile-certfile или keyvalue/certvalue необходимо использовать для предоставления сертификата управления для проверки подлинности запросов на обслуживание.
+    - id: authentication.keyfile
+      type:
+      - string
+      description: Путь к файлу, который содержит PEM ключ в кодировке
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: Путь к файлу, который содержит PEM сертификат в кодировке
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: Строка, содержащая PEM ключ в кодировке
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: Строка, содержащая PEM сертификат в кодировке
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: Параметры узла для переопределения значения по умолчанию.
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: Конечная точка управления.
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: Версия API для использования.
+      optional: true
+    content: new SqlManagementService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServers
+  id: azure-asm-sql.SqlManagementService#listServers
+  parent: azure-asm-sql.SqlManagementService
+  name: listServers(callback)
+  summary: Список доступных серверов базы данных SQL.
+  fullName: azure-asm-sql.SqlManagementService.listServers(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать список доступных данных серверов базы данных SQL.
+                                                               `response` будет содержать сведения, относящиеся к этой операции.
+    content: function listServers(callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServer
+  id: azure-asm-sql.SqlManagementService#deleteServer
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServer(name, callback)
+  summary: Удаление сервера базы данных SQL.
+  fullName: azure-asm-sql.SqlManagementService.deleteServer(name, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: Имя сервера SQL Server.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function deleteServer(name, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServer
+  id: azure-asm-sql.SqlManagementService#createServer
+  parent: azure-asm-sql.SqlManagementService
+  name: createServer(administratorLogin, administratorLoginPassword, location, callback)
+  summary: Создает сервер базы данных SQL.
+  fullName: azure-asm-sql.SqlManagementService.createServer(administratorLogin, administratorLoginPassword, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: administratorLogin
+      type:
+      - string
+      description: Имя входа администратора.
+    - id: administratorLoginPassword
+      type:
+      - string
+      description: Пароль администратора.
+    - id: location
+      type:
+      - string
+      description: Расположение сервера.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `server` будет содержать сведения о новом сервере.
+                                                                   `response` будет содержать сведения, относящиеся к этой операции.
+    content: function createServer(administratorLogin, administratorLoginPassword, location, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  id: azure-asm-sql.SqlManagementService#listServerFirewallRules
+  parent: azure-asm-sql.SqlManagementService
+  name: listServerFirewallRules(serverName, callback)
+  summary: Список правил брандмауэра базы данных SQL server.
+  fullName: azure-asm-sql.SqlManagementService.listServerFirewallRules(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать правила брандмауэра.
+                                                                  `response` будет содержать сведения, относящиеся к этой операции.
+    content: function listServerFirewallRules(serverName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#deleteServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: deleteServerFirewallRule(serverName, ruleName, callback)
+  summary: Удаляет правило брандмауэра базы данных SQL server.
+  fullName: azure-asm-sql.SqlManagementService.deleteServerFirewallRule(serverName, ruleName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера.
+    - id: ruleName
+      type:
+      - string
+      description: Имя правила.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function deleteServerFirewallRule(serverName, ruleName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#createServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: Создает правило брандмауэра сервера базы данных SQL.
+  fullName: azure-asm-sql.SqlManagementService.createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера.
+    - id: ruleName
+      type:
+      - string
+      description: Имя правила.
+    - id: startIPAddress
+      type:
+      - string
+      description: Начальный IP-адрес для правила.
+    - id: endIPAddress
+      type:
+      - string
+      description: Конечный IP-адрес для правила.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `rule` будет содержать новые сведения о правиле.
+                                                               `response` будет содержать сведения, относящиеся к этой операции.
+    content: function createServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  id: azure-asm-sql.SqlManagementService#updateServerFirewallRule
+  parent: azure-asm-sql.SqlManagementService
+  name: updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  summary: Обновляет правило брандмауэра сервера базы данных SQL.
+  fullName: azure-asm-sql.SqlManagementService.updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера.
+    - id: ruleName
+      type:
+      - string
+      description: Имя правила.
+    - id: startIPAddress
+      type:
+      - string
+      description: Начальный IP-адрес для правила.
+    - id: endIPAddress
+      type:
+      - string
+      description: Конечный IP-адрес для правила.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `rule` будет содержать данные обновленные правила.
+                                                               `response` будет содержать сведения, относящиеся к этой операции.
+    content: function updateServerFirewallRule(serverName, ruleName, startIPAddress, endIPAddress, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.SqlManagementService#createDatabase
+  id: azure-asm-sql.SqlManagementService#createDatabase
+  parent: azure-asm-sql.SqlManagementService
+  name: createDatabase(serverName, databaseName, options, callback)
+  summary: Создайте новую базу данных.
+  fullName: azure-asm-sql.SqlManagementService.createDatabase(serverName, databaseName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера
+    - id: databaseName
+      type:
+      - string
+      description: Имя базы данных, создание
+    - id: options
+      type:
+      - object
+      description: Параметры создания.
+      optional: true
+    - id: options.edition
+      type:
+      - string
+      description: «Web» или «Business».
+      optional: true
+    - id: options.maxsize
+      type:
+      - number
+      description: DB максимальный размер в Гигабайтах, значение по умолчанию — 1 для web, 10 для бизнеса, допустимы только определенные значения
+      optional: true
+    - id: options.collation
+      type:
+      - string
+      description: Имя параметров сортировки SQL
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `createResult` будет содержать новые сведения о базе данных.
+                                                                                       `response` будет содержать сведения, относящиеся к этой операции.
+    content: function createDatabase(serverName, databaseName, options, callback)
+  langs:
+  - js

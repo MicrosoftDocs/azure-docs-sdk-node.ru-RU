@@ -1,0 +1,2195 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4e6a7588c696df257654810f771efaba1e9c2907
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063940"
+items:
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: VirtualMachineOperations
+  summary: >-
+    API управления службами включает операции для управления виртуальными машинами в вашей подписке.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157206.aspx подробнее) __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    См. в разделе [virtualMachines] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachines}.
+
+    Инициализирует новый экземпляр класса VirtualMachineOperations.
+  fullName: azure-asm-compute.VirtualMachineOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.#ctor
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingOSImage
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingVMImage
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreating
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreatingDeployment
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginDeleting
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginInitiatingMaintenance
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRedeploying
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRestarting
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShutdown
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShuttingDownRoles
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStarting
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStartingRoles
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdating
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdatingLoadBalancedEndpointSet
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureOSImage
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureVMImage
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#create
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#createDeployment
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#deleteMethod
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#get
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#getRemoteDesktopFile
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#initiateMaintenance
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#redeploy
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#restart
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdown
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdownRoles
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#start
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#startRoles
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#update
+  - azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#updateLoadBalancedEndpointSet
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: VirtualMachineOperations(client)
+  fullName: azure-asm-compute.VirtualMachineOperations.VirtualMachineOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Ссылка на клиента службы.
+    content: new VirtualMachineOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingOSImage
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingOSImage
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginCapturingOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: >-
+    Начать захват роли операция создает копию операционной системы виртуального жесткого диска (VHD), развертывается на виртуальной машине, сохраняет его в то же место хранения VHD с операционной системой и регистрирует копию в качестве образа в коллекции образов . Из сохраненного образа можно создать дополнительно настраиваемые виртуальные машины.
+
+    Дополнительные сведения об образах и дисках см. в разделе Управление дисками и образами в http://msdn.microsoft.com/en-us/library/windowsazure/jj672979.aspx.
+
+    Дополнительные сведения о записи образов см. в разделе как записать образ виртуальной машины под управлением Windows Server 2008 R2 в http://www.windowsazure.com/en-us/documentation/articles/virtual-machines-capture-image-windows-server/ или как записать образ виртуальной машины под управлением Linux в http://www.windowsazure.com/en-us/documentation/articles/virtual-machines-linux-capture-image/.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157201.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginCapturingOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для перезапуска.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCaptureOSImageParameters
+      description: Параметры для операции начать захват виртуальной машины.
+    - id: parameters.postCaptureAction
+      type:
+      - azure-asm-compute.PostCaptureAction
+      description: 'Указывает действие, которое выполняется после завершения операции записи. Возможными значениями являются: Delete — это значение приводит к виртуальной машине должна быть удалена после записи образа; и затем вновь наполните службы - это значение вынуждает виртуальную машину для повторного развертывания после записи образа с помощью указанных сведений об в ProvisioningConfiguration.'
+    - id: parameters.provisioningConfiguration
+      type:
+      - azure-asm-compute.ConfigurationSet
+      description: Предоставляет информацию, используемую для повторного развертывания виртуальной машины после записи образа. Этот элемент используется только в том случае, если PostCaptureAction присвоено затем вновь наполните службы.
+      optional: true
+    - id: parameters.provisioningConfiguration.configurationSetType
+      type:
+      - string
+      description: Указывает тип конфигурации для набора конфигурации.
+      optional: true
+    - id: parameters.provisioningConfiguration.inputEndpoints
+      type:
+      - array
+      description: Содержит коллекцию внешних конечных точек для виртуальной машины. Этот элемент используется только с типом NetworkConfigurationSet.
+      optional: true
+    - id: parameters.provisioningConfiguration.subnetNames
+      type:
+      - array
+      description: Список имен подсетей виртуальной сети, к которым принадлежит развертывание. Этот элемент используется только с типом NetworkConfigurationSet.
+      optional: true
+    - id: parameters.provisioningConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: 'Указывает адрес клиента, т. е. IP-адрес, назначаемый виртуальной Машине в подсети виртуальной сети. Например: 10.0.0.4.'
+      optional: true
+    - id: parameters.provisioningConfiguration.publicIPs
+      type:
+      - array
+      description: >-
+        Необязательный элемент.
+
+        Набор общедоступных IP-адресов. В настоящее время поддерживается только один дополнительный общедоступный IP-адрес каждой роли, в развертывании IaaS. IP-адрес является дополнением к виртуальный IP-адрес по умолчанию для развертывания.
+      optional: true
+    - id: parameters.provisioningConfiguration.networkInterfaces
+      type:
+      - array
+      description: ''
+      optional: true
+    - id: parameters.provisioningConfiguration.networkSecurityGroup
+      type:
+      - string
+      description: Возвращает или задает группу безопасности сети, связанную с этой ролью. Необязательно
+      optional: true
+    - id: parameters.provisioningConfiguration.iPForwarding
+      type:
+      - string
+      description: Получает или задает состояние IP-пересылку для этой роли. Необязательно
+      optional: true
+    - id: parameters.provisioningConfiguration.computerName
+      type:
+      - string
+      description: >-
+        Указывает имя компьютера для виртуальной машины. Если имя компьютера не указан, имя создается на основе имени роли.
+
+        Имена компьютеров должны иметь 1 до 15 символов. Этот элемент используется только с WindowsProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.adminPassword
+      type:
+      - string
+      description: Задает строку, представляющую пароль администратора для виртуальной машины. Если виртуальная машина создается из образа «Специализированной» виртуальной Машины, пароль не требуется.
+      optional: true
+    - id: parameters.provisioningConfiguration.resetPasswordOnFirstLogon
+      type:
+      - boolean
+      description: Указывает, следует ли сбросить пароль при первом входе администратора в.
+      optional: true
+    - id: parameters.provisioningConfiguration.enableAutomaticUpdates
+      type:
+      - boolean
+      description: Указывает, включено ли автоматическое обновление для виртуальной машины. Этот элемент используется только с WindowsProvisioningConfiguration значение. По умолчанию для этого параметра используется значение false.
+      optional: true
+    - id: parameters.provisioningConfiguration.timeZone
+      type:
+      - string
+      description: Указывает часовой пояс для виртуальной машины. Этот элемент используется только с WindowsProvisioningConfiguration значение. Полный список поддерживаемых записей часового пояса можно обращаться к значениям, перечисленные в разделе реестра HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones на компьютере под управлением Windows 7, Windows Server 2008 и Windows Server 2008 R2, также можно использовать средство командной строки tzutil Чтобы вывести допустимое время. Средство tzutil устанавливается по умолчанию в Windows 7, Windows Server 2008 и Windows Server 2008 R2.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin
+      type:
+      - azure-asm-compute.DomainJoinSettings
+      description: Содержит свойства, укажите домен, к которому будет присоединена виртуальная машина. Этот элемент используется только с WindowsProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials
+      type:
+      - azure-asm-compute.DomainJoinCredentials
+      description: Указывает значения, используемые для соединения виртуальной машины к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.domain
+      type:
+      - string
+      description: 'Указывает имя домена, используемый для проверки подлинности учетной записи. Значение — это полное имя домена DNS. Если имя домена не указан, имя пользователя необходимо указать формат имени участника (UPN) пользователя (user@fully-qualified-DNS-domain) или полностью указанием DNS-формате domain\username. Пример: example.com.'
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.userName
+      type:
+      - string
+      description: Указывает имя пользователя в домене, который может использоваться для присоединения к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.password
+      type:
+      - string
+      description: Указывает пароль, используемый для присоединения к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.domainToJoin
+      type:
+      - string
+      description: Указывает домен для присоединения.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.ldapMachineObjectOU
+      type:
+      - string
+      description: >-
+        Указывает Lightweight Directory Access Protocol (LDAP) X 500 различающееся имя подразделения (OU), в котором создается учетная запись компьютера. Эта учетная запись находится в Active Directory на контроллере домена в домене, к которому присоединен компьютер.
+
+        Пример: OU=MyOu,OU=MyParentOu,DC=example.com,DC=MyCompany,DC=com.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.provisioning
+      type:
+      - azure-asm-compute.DomainJoinProvisioning
+      description: Дополнительные сведения для подготовки присоединения к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.provisioning.accountData
+      type:
+      - string
+      description: Сведения об учетной записи для присоединения к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.storedCertificateSettings
+      type:
+      - array
+      description: >-
+        Содержит список сертификатов службы с которыми будет выполняться провизионирование для новой роли.
+
+        Этот элемент используется только с WindowsProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.windowsRemoteManagement
+      type:
+      - azure-asm-compute.WindowsRemoteManagementSettings
+      description: Настраивает службу удаленного управления Windows на виртуальной машине, которая позволяет удаленно с помощью Windows PowerShell.
+      optional: true
+    - id: parameters.provisioningConfiguration.windowsRemoteManagement.listeners
+      type:
+      - array
+      description: Содержит коллекцию сведений для включения удаленного Windows PowerShell.
+      optional: true
+    - id: parameters.provisioningConfiguration.adminUserName
+      type:
+      - string
+      description: Указывает имя, которое используется для переименования учетной записи администратора по умолчанию. Если виртуальная машина создается из образа «Специализированной» виртуальной Машины, имя пользователя не требуется.
+      optional: true
+    - id: parameters.provisioningConfiguration.additionalUnattendContent
+      type:
+      - azure-asm-compute.AdditionalUnattendContentSettings
+      description: Указывает дополнительные base-64 закодированный в формате XML сведения, которые могут быть включены в файле Unattend.xml, который используется программой установки Windows.
+      optional: true
+    - id: parameters.provisioningConfiguration.additionalUnattendContent.unattendPasses
+      type:
+      - array
+      description: Указывает, передает автоматической установки
+      optional: true
+    - id: parameters.provisioningConfiguration.hostName
+      type:
+      - string
+      description: Указывает имя узла для виртуальной Машины. Имена узлов являются символьные строки ASCII 1 до 64 символов в длину. Этот элемент используется только с LinuxProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.userName
+      type:
+      - string
+      description: Указывает имя пользователя будет создан в группе sudoer виртуальной машины. Имена пользователей являются символьные строки ASCII 1 до 32 символов в длину. Этот элемент используется только с LinuxProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.userPassword
+      type:
+      - string
+      description: Указывает пароль для имени пользователя. Пароли являются символьные строки ASCII 6 до 72 символов в длину. Этот элемент используется только с LinuxProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.disableSshPasswordAuthentication
+      type:
+      - boolean
+      description: >-
+        Указывает, отключена ли проверка подлинности SSH для пароля.
+
+        Этот элемент используется только с LinuxProvisioningConfiguration значение. По умолчанию это значение на true.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings
+      type:
+      - azure-asm-compute.SshSettings
+      description: Указывает открытые ключи SSH и пар ключей для заполнения в образе во время подготовки. Этот элемент используется только с LinuxProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings.publicKeys
+      type:
+      - array
+      description: Указывает коллекцию открытых ключей SSH.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings.keyPairs
+      type:
+      - array
+      description: Указывает коллекцию пар ключей SSH.
+      optional: true
+    - id: parameters.provisioningConfiguration.customData
+      type:
+      - string
+      description: Необязательный элемент. Предоставляет пользовательские данные, передаваемые в виртуальную Машину в кодировке base64.
+      optional: true
+    - id: parameters.targetImageLabel
+      type:
+      - string
+      description: Указывает понятное имя записанного образа. Это значение, которое появляется в столбце Name для образа на портале управления Azure.
+    - id: parameters.targetImageName
+      type:
+      - string
+      description: Указывает имя образа, записанного образа.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginCapturingOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingVMImage
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCapturingVMImage
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginCapturingVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: Начните захват роли как шаблон виртуальной Машины.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginCapturingVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для перезапуска.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCaptureVMImageParameters
+      description: Параметры, передаваемые операциям запись виртуальной машины.
+    - id: parameters.operationType
+      type:
+      - string
+      description: Обязательный элемент. Должно быть присвоено CaptureRoleOperation.
+      optional: true
+    - id: parameters.oSState
+      type:
+      - string
+      description: 'Обязательный элемент. Состояние ОС: обобщить | Специализированные.'
+      optional: true
+    - id: parameters.vMImageName
+      type:
+      - string
+      description: Обязательный элемент. Имя шаблона виртуальной Машины.
+      optional: true
+    - id: parameters.vMImageLabel
+      type:
+      - string
+      description: Обязательный элемент. Метка шаблона виртуальной Машины.
+      optional: true
+    - id: parameters.statusCode
+      type:
+      - azure-asm-compute.HttpStatusCode
+      description: ''
+      optional: true
+    - id: parameters.requestId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginCapturingVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreating
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreating
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginCreating(serviceName, deploymentName, parameters, callback)
+  summary: 'Начать создание роли операцию добавляет виртуальную машину к существующему развертыванию. Можно ссылаться на osdisk в операции добавления роли следующим образом: Platform/User Image - присвоено SourceImageName платформенного или пользовательского образа. При необходимости можно указать значения DiskName и MediaLink в рамках операции для управления имя и расположение целевого диска. Если DiskName и MediaLink указаны в этом режиме, они не должен существовать в системе, в противном случае будет возвращена ошибка конфликта; UserDisk — набор DiskName пользователю предоставлен образа в репозитории образов. SourceImageName должен иметь значение NULL. Все прочие свойства игнорируются; или BLOB-объектов в учетной записи хранения — MediaLink на большой двоичный объект, содержащий изображение. SourceImageName и DiskName, присваивается значение NULL.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157186.aspx Дополнительные сведения)'
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginCreating(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCreateParameters
+      description: Параметры для операции начать создание виртуальной машины.
+    - id: parameters.roleName
+      type:
+      - string
+      description: Указывает имя виртуальной машины. Имя должно быть уникальным в пределах развертывания.
+    - id: parameters.availabilitySetName
+      type:
+      - string
+      description: Задает имя группы, к которому добавляется виртуальная машина доступности. Это значение управляет выделением виртуальных машин в среде Azure. Виртуальные машины, заданные в одной группе доступности, выделяются в различных узлах для достижения максимальной доступности.
+      optional: true
+    - id: parameters.roleSize
+      type:
+      - string
+      description: Размер виртуальной машины.
+      optional: true
+    - id: parameters.configurationSets
+      type:
+      - array
+      description: Содержит коллекцию наборов конфигурации, которые содержат параметры конфигурации системы и приложения.
+      optional: true
+    - id: parameters.resourceExtensionReferences
+      type:
+      - array
+      description: Содержит коллекцию расширений ресурсов, которые должны быть установлены на виртуальной машине. Этот элемент используется в том случае, если ProvisionGuestAgent задано значение true.
+      optional: true
+    - id: parameters.vMImageName
+      type:
+      - string
+      description: Имя образа виртуальной машины, из которого будет создаваться этой роли. Если на OSDisk в образ виртуальной машины был специализированный диск, затем не WindowsProvisioningConfigurationSet или LinuxProvisioningConfigurationSet следует указать. Нет OSVirtualHardDisk значение DataVirtualHardDisk следует указать или при использовании этого аргумента.
+      optional: true
+    - id: parameters.dataVirtualHardDisks
+      type:
+      - array
+      description: Содержит параметры, используемые Azure для создания диска данных для виртуальной машины.
+      optional: true
+    - id: parameters.oSVirtualHardDisk
+      type:
+      - azure-asm-compute.OSVirtualHardDisk
+      description: Содержит параметры, используемые для создания диска операционной системы для виртуальной машины Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.hostCaching
+      type:
+      - string
+      description: Указывает режим кэширования платформы BLOB-объектов диска операционной системы для повышения эффективности чтения и записи.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.label
+      type:
+      - string
+      description: Указывает понятное имя образа операционной системы в репозитории образов.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.name
+      type:
+      - string
+      description: Указывает имя образа операционной системы в репозитории образов.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.mediaLink
+      type:
+      - string
+      description: Указывает расположение диска операционной системы в хранилище Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.sourceImageName
+      type:
+      - string
+      description: Указывает имя образа источника, который был использован для подготовки виртуальной машины.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.operatingSystem
+      type:
+      - string
+      description: Операционная система, выполняющихся на виртуальной машине.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.remoteSourceImageLink
+      type:
+      - string
+      description: URI образа источника операционной системы, который будут скопированы в учетную запись хранения клиента создания виртуальной Машины. Если указан параметр RemoteSourceImageLink, затем MediaLink необходимо также указать. Если указан параметр RemoteSourceImageLink, thenSourceIamgeName не указывается.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.iOType
+      type:
+      - string
+      description: Получает или задает тип операции ввода-ВЫВОДА.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.resizedSizeInGB
+      type:
+      - number
+      description: При использовании образа ОС или RemoteSourceImage для создания osvirtualharddisk с помощью этого параметра можно изменить размер нового osvirtualharddisk с целью большего размера. Элемент ResizedSizeInGB должен быть больше, чем элемент logicalsizeingb базового образа ОС.
+      optional: true
+    - id: parameters.provisionGuestAgent
+      type:
+      - boolean
+      description: Указывает, установлена ли служба WindowsAzureGuestAgent на виртуальной машине. Чтобы использовать расширение ресурса в виртуальной машине, эта служба устанавливается.
+      optional: true
+    - id: parameters.mediaLocation
+      type:
+      - string
+      description: Расположение, где VHD образа виртуальной машины должно быть скопировано, для опубликованных образов.
+      optional: true
+    - id: parameters.vMImageInput
+      type:
+      - azure-asm-compute.VMImageInput
+      description: При использовании образа виртуальной Машины для создания нового PersistantVMRole DiskConfiguration в образе виртуальной Машины используются для создания новых дисков для новой виртуальной Машины. Этот параметр можно использовать для изменения размера на недавно созданные диски большего размера, чем базовый DiskConfiguration в свойства виртуальной Машины Image.This возвращается только с заголовком версии 2014-10-01 или более поздней версии.
+      optional: true
+    - id: parameters.vMImageInput.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfiguration
+      description: Это соответствует элементу OSDiskConfiguration образа виртуальной Машины, используемого для создания новой роли. Элемент OSDiskConfiguration только доступно при использовании версии 2014-10-01 или более поздней версии.
+      optional: true
+    - id: parameters.vMImageInput.oSDiskConfiguration.resizedSizeInGB
+      type:
+      - number
+      description: Указывает новый (больший) размер элемента OSVirtualHardDisk, созданного с помощью образа виртуальной Машины. Элемент ResizedSizeInGB только доступно при использовании версии 2014-10-01 или более поздней версии.
+      optional: true
+    - id: parameters.vMImageInput.dataDiskConfigurations
+      type:
+      - azure-asm-compute.IEnumerable
+      description: Это соответствует элементу DataDiskConfigurations образа виртуальной Машины, используемого для создания новой роли. Элемент DataDiskConfigurations только доступно при использовании версии 2014-10-01 или более поздней версии.
+      optional: true
+    - id: parameters.debugSettings
+      type:
+      - azure-asm-compute.DebugSettings
+      description: Параметры для выходных данных консоли отладки.
+      optional: true
+    - id: parameters.debugSettings.bootDiagnosticsEnabled
+      type:
+      - boolean
+      description: Включить или отключить диагностику загрузки.
+      optional: true
+    - id: parameters.debugSettings.consoleScreenshotBlobUri
+      type:
+      - string
+      description: Uri BLOB-объектов для снимок экрана консоли.
+      optional: true
+    - id: parameters.debugSettings.serialOutputBlobUri
+      type:
+      - string
+      description: Uri BLOB-объектов для последовательные выходные данные.
+      optional: true
+    - id: parameters.licenseType
+      type:
+      - string
+      description: 'Указывает, что образ или диск, который используется был лицензирован локально. Этот элемент используется только для образов, содержащих операционной системы Windows Server. Возможными значениями являются: Windows_Client, Windows_Server'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginCreating(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreatingDeployment
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginCreatingDeployment
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginCreatingDeployment(serviceName, parameters, callback)
+  summary: Операции начать создание развертывания виртуальной машины подготавливает виртуальную машину на основе предоставленных конфигурации. При создании развертывания виртуальной машины следует убедиться, что облачная служба и диск или образ, используемый расположены в одном регионе. Например если облачная служба была создана в западной части США, диск или образ, который можно использовать должен находиться в учетной записи хранения в западной части США.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157194.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginCreatingDeployment(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCreateDeploymentParameters
+      description: Параметры для операции начать создание развертывания виртуальной машины.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя для развертывания. Имя развертывания должно быть уникальным среди других развертываний для размещенной службы.
+    - id: parameters.deploymentSlot
+      type:
+      - azure-asm-compute.DeploymentSlot
+      description: 'Определяет среду, в котором будет развернута виртуальная машина. Возможными значениями являются: промежуточное хранение или производство.'
+    - id: parameters.label
+      type:
+      - string
+      description: Имя для размещенной службы. Имя может быть до 100 символов. Рекомендуется обеспечить в подписке уникальную метку. Имя может использоваться определять размещенную службу для целей отслеживания.
+    - id: parameters.roles
+      type:
+      - array
+      description: Содержит сведения о провизионировании для нового развертывания виртуальной машины.
+    - id: parameters.virtualNetworkName
+      type:
+      - string
+      description: Указывает имя существующей виртуальной сети, к которому будет принадлежать развертывание. Виртуальные сети создаются путем вызова операции задание сетевой конфигурации.
+      optional: true
+    - id: parameters.dnsSettings
+      type:
+      - azure-asm-compute.DnsSettings
+      description: Содержит список DNS-серверов, связываемых с машиной.
+      optional: true
+    - id: parameters.dnsSettings.dnsServers
+      type:
+      - array
+      description: Содержит коллекцию объектов, которые определяют параметры DNS-сервера.
+      optional: true
+    - id: parameters.reservedIPName
+      type:
+      - string
+      description: Необязательный элемент. Указывает имя существующего зарезервированного IP, к которому будет принадлежать развертывание. Зарезервированные IP-адреса создаются путем вызова операции создания зарезервированного IP-адреса.
+      optional: true
+    - id: parameters.loadBalancers
+      type:
+      - azure-asm-compute.IEnumerable
+      description: Список внутренних подсистем балансировки нагрузки, каждый обеспечивают балансировку нагрузки на частных виртуальных IP-адресов.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginCreatingDeployment(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginDeleting
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginDeleting
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginDeleting(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  summary: >-
+    Начать удаление роли операция удаляет указанную виртуальную машину.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157184.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginDeleting(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для удаления.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Указывает, что BLOB-объектов источник для виртуальной машины также будут удалены из хранилища.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginDeleting(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginInitiatingMaintenance
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginInitiatingMaintenance
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginInitiatingMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Начать обслуживание инициации операции роли инициирует обслуживание на указанной виртуальной машины.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginInitiatingMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины, чтобы запустить их обслуживание.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginInitiatingMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRedeploying
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRedeploying
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginRedeploying(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Операции Begin повторного развертывания роли повторно развертывает указанную виртуальную машину.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginRedeploying(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для повторного развертывания.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginRedeploying(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRestarting
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginRestarting
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginRestarting(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Операции Begin перезапуск роли перезапускает указанную виртуальную машину.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginRestarting(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для перезапуска.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginRestarting(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShutdown
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShutdown
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginShutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: >-
+    Завершить работу роли операция завершает работу указанной виртуальной машины.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157195.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginShutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для завершения работы.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineShutdownParameters
+      description: Параметры завершение работы виртуальной машины.
+    - id: parameters.postShutdownAction
+      type:
+      - azure-asm-compute.PostShutdownAction
+      description: Состояние виртуальной машины после завершения работы ("Остановлено" или "StoppedDeallocated").
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginShutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShuttingDownRoles
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginShuttingDownRoles
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginShuttingDownRoles(serviceName, deploymentName, parameters, callback)
+  summary: Операции Begin завершение работы роли Останавливает указанный набор виртуальных машин.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn469421.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginShuttingDownRoles(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineShutdownRolesParameters
+      description: Параметры для передачи в операцию начать завершение работы роли.
+    - id: parameters.roles
+      type:
+      - array
+      description: Набор ролей, чтобы завершить работу.
+      optional: true
+    - id: parameters.postShutdownAction
+      type:
+      - azure-asm-compute.PostShutdownAction
+      description: Состояние роли после завершения работы. Возможные значения включают остановлено "или" StoppedDeallocated.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginShuttingDownRoles(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStarting
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStarting
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginStarting(serviceName, deploymentName, virtualMachineName, callback)
+  summary: >-
+    Операция начинается запуск роли запускает указанную виртуальную машину.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157189.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginStarting(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя для запуска виртуальной машины.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginStarting(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStartingRoles
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginStartingRoles
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginStartingRoles(serviceName, deploymentName, parameters, callback)
+  summary: Начать запуск роли начнется указанный набор виртуальных машин.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn469419.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginStartingRoles(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineStartRolesParameters
+      description: Параметры для передачи в операцию начала запуска роли.
+    - id: parameters.roles
+      type:
+      - array
+      description: Набор ролей, чтобы завершить работу.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginStartingRoles(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdating
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdating
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginUpdating(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: Операция начинается обновление роли добавляет виртуальную машину к существующему развертыванию.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157187.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginUpdating(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineUpdateParameters
+      description: Параметры для операции начать обновление виртуальной машины.
+    - id: parameters.roleName
+      type:
+      - string
+      description: Указывает имя виртуальной машины. Имя должно быть уникальным в пределах развертывания.
+    - id: parameters.label
+      type:
+      - string
+      description: Указывает понятное имя для виртуальной машины.
+      optional: true
+    - id: parameters.availabilitySetName
+      type:
+      - string
+      description: Задает имя группы, к которому добавляется виртуальная машина доступности. Это значение управляет выделением виртуальных машин в среде Azure. Виртуальные машины, заданные в одной группе доступности, выделяются в различных узлах для достижения максимальной доступности.
+      optional: true
+    - id: parameters.roleSize
+      type:
+      - string
+      description: Размер виртуальной машины.
+      optional: true
+    - id: parameters.configurationSets
+      type:
+      - array
+      description: Содержит коллекцию наборов конфигурации, которые содержат параметры конфигурации системы и приложения.
+      optional: true
+    - id: parameters.resourceExtensionReferences
+      type:
+      - array
+      description: Содержит коллекцию расширений ресурсов, которые должны быть установлены на виртуальной машине. Этот элемент используется в том случае, если ProvisionGuestAgent задано значение true.
+      optional: true
+    - id: parameters.dataVirtualHardDisks
+      type:
+      - array
+      description: Содержит параметры, используемые Azure для создания диска данных для виртуальной машины.
+      optional: true
+    - id: parameters.oSVirtualHardDisk
+      type:
+      - azure-asm-compute.OSVirtualHardDisk
+      description: Содержит параметры, используемые для создания диска операционной системы для виртуальной машины Azure.
+    - id: parameters.oSVirtualHardDisk.hostCaching
+      type:
+      - string
+      description: Указывает режим кэширования платформы BLOB-объектов диска операционной системы для повышения эффективности чтения и записи.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.label
+      type:
+      - string
+      description: Указывает понятное имя образа операционной системы в репозитории образов.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.name
+      type:
+      - string
+      description: Указывает имя образа операционной системы в репозитории образов.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.mediaLink
+      type:
+      - string
+      description: Указывает расположение диска операционной системы в хранилище Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.sourceImageName
+      type:
+      - string
+      description: Указывает имя образа источника, который был использован для подготовки виртуальной машины.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.operatingSystem
+      type:
+      - string
+      description: Операционная система, выполняющихся на виртуальной машине.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.remoteSourceImageLink
+      type:
+      - string
+      description: URI образа источника операционной системы, который будут скопированы в учетную запись хранения клиента создания виртуальной Машины. Если указан параметр RemoteSourceImageLink, затем MediaLink необходимо также указать. Если указан параметр RemoteSourceImageLink, thenSourceIamgeName не указывается.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.iOType
+      type:
+      - string
+      description: Получает или задает тип операции ввода-ВЫВОДА.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.resizedSizeInGB
+      type:
+      - number
+      description: При использовании образа ОС или RemoteSourceImage для создания osvirtualharddisk с помощью этого параметра можно изменить размер нового osvirtualharddisk с целью большего размера. Элемент ResizedSizeInGB должен быть больше, чем элемент logicalsizeingb базового образа ОС.
+      optional: true
+    - id: parameters.provisionGuestAgent
+      type:
+      - boolean
+      description: Указывает, установлена ли служба WindowsAzureGuestAgent на виртуальной машине. Чтобы использовать расширение ресурса в виртуальной машине, эта служба устанавливается.
+      optional: true
+    - id: parameters.debugSettings
+      type:
+      - azure-asm-compute.DebugSettings
+      description: Параметры для выходных данных консоли отладки.
+      optional: true
+    - id: parameters.debugSettings.bootDiagnosticsEnabled
+      type:
+      - boolean
+      description: Включить или отключить диагностику загрузки.
+      optional: true
+    - id: parameters.debugSettings.consoleScreenshotBlobUri
+      type:
+      - string
+      description: Uri BLOB-объектов для снимок экрана консоли.
+      optional: true
+    - id: parameters.debugSettings.serialOutputBlobUri
+      type:
+      - string
+      description: Uri BLOB-объектов для последовательные выходные данные.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginUpdating(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdatingLoadBalancedEndpointSet
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#beginUpdatingLoadBalancedEndpointSet
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: beginUpdatingLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  summary: Операция начинается обновление загрузить набор со сбалансированной нагрузкой конечной точки изменяется указанный InputEndpoints с балансировкой нагрузки для всех ролей инфраструктуры, как развертывание службы. Конечные точки с балансировкой нагрузки не должна изменяться с помощью UpdateRole.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn469417.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.beginUpdatingLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineUpdateLoadBalancedSetParameters
+      description: Параметры, передаваемые операциям начать обновление набор с балансировкой нагрузки конечной точки.
+    - id: parameters.loadBalancedEndpoints
+      type:
+      - array
+      description: Список нагрузки равномерно InputEndpoints для обновления.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginUpdatingLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureOSImage
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureOSImage
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: captureOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: >-
+    Операции записи роль создает копию операционной системы виртуального жесткого диска (VHD), развертывается на виртуальной машине, сохраняет его в то же место хранения VHD с операционной системой и регистрирует копию в качестве образа в коллекции образов. Из сохраненного образа можно создать дополнительно настраиваемые виртуальные машины. Дополнительные сведения об образах и дисках см. в разделе Управление дисками и образами в http://msdn.microsoft.com/en-us/library/windowsazure/jj672979.aspx. Дополнительные сведения о записи образов см. в разделе как записать образ виртуальной машины под управлением Windows Server 2008 R2 в http://www.windowsazure.com/en-us/documentation/articles/virtual-machines-capture-image-windows-server/ или как записать образ виртуальной машины под управлением Linux в http://www.windowsazure.com/en-us/documentation/articles/virtual-machines-linux-capture-image/.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157201.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.captureOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для перезапуска.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCaptureOSImageParameters
+      description: Параметры, передаваемые операциям запись виртуальной машины.
+    - id: parameters.postCaptureAction
+      type:
+      - azure-asm-compute.PostCaptureAction
+      description: 'Указывает действие, которое выполняется после завершения операции записи. Возможными значениями являются: Delete — это значение приводит к виртуальной машине должна быть удалена после записи образа; и затем вновь наполните службы - это значение вынуждает виртуальную машину для повторного развертывания после записи образа с помощью указанных сведений об в ProvisioningConfiguration.'
+    - id: parameters.provisioningConfiguration
+      type:
+      - azure-asm-compute.ConfigurationSet
+      description: Предоставляет информацию, используемую для повторного развертывания виртуальной машины после записи образа. Этот элемент используется только в том случае, если PostCaptureAction присвоено затем вновь наполните службы.
+      optional: true
+    - id: parameters.provisioningConfiguration.configurationSetType
+      type:
+      - string
+      description: Указывает тип конфигурации для набора конфигурации.
+      optional: true
+    - id: parameters.provisioningConfiguration.inputEndpoints
+      type:
+      - array
+      description: Содержит коллекцию внешних конечных точек для виртуальной машины. Этот элемент используется только с типом NetworkConfigurationSet.
+      optional: true
+    - id: parameters.provisioningConfiguration.subnetNames
+      type:
+      - array
+      description: Список имен подсетей виртуальной сети, к которым принадлежит развертывание. Этот элемент используется только с типом NetworkConfigurationSet.
+      optional: true
+    - id: parameters.provisioningConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: 'Указывает адрес клиента, т. е. IP-адрес, назначаемый виртуальной Машине в подсети виртуальной сети. Например: 10.0.0.4.'
+      optional: true
+    - id: parameters.provisioningConfiguration.publicIPs
+      type:
+      - array
+      description: >-
+        Необязательный элемент.
+
+        Набор общедоступных IP-адресов. В настоящее время поддерживается только один дополнительный общедоступный IP-адрес каждой роли, в развертывании IaaS. IP-адрес является дополнением к виртуальный IP-адрес по умолчанию для развертывания.
+      optional: true
+    - id: parameters.provisioningConfiguration.networkInterfaces
+      type:
+      - array
+      description: ''
+      optional: true
+    - id: parameters.provisioningConfiguration.networkSecurityGroup
+      type:
+      - string
+      description: Возвращает или задает группу безопасности сети, связанную с этой ролью. Необязательно
+      optional: true
+    - id: parameters.provisioningConfiguration.iPForwarding
+      type:
+      - string
+      description: Получает или задает состояние IP-пересылку для этой роли. Необязательно
+      optional: true
+    - id: parameters.provisioningConfiguration.computerName
+      type:
+      - string
+      description: >-
+        Указывает имя компьютера для виртуальной машины. Если имя компьютера не указан, имя создается на основе имени роли.
+
+        Имена компьютеров должны иметь 1 до 15 символов. Этот элемент используется только с WindowsProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.adminPassword
+      type:
+      - string
+      description: Задает строку, представляющую пароль администратора для виртуальной машины. Если виртуальная машина создается из образа «Специализированной» виртуальной Машины, пароль не требуется.
+      optional: true
+    - id: parameters.provisioningConfiguration.resetPasswordOnFirstLogon
+      type:
+      - boolean
+      description: Указывает, следует ли сбросить пароль при первом входе администратора в.
+      optional: true
+    - id: parameters.provisioningConfiguration.enableAutomaticUpdates
+      type:
+      - boolean
+      description: Указывает, включено ли автоматическое обновление для виртуальной машины. Этот элемент используется только с WindowsProvisioningConfiguration значение. По умолчанию для этого параметра используется значение false.
+      optional: true
+    - id: parameters.provisioningConfiguration.timeZone
+      type:
+      - string
+      description: Указывает часовой пояс для виртуальной машины. Этот элемент используется только с WindowsProvisioningConfiguration значение. Полный список поддерживаемых записей часового пояса можно обращаться к значениям, перечисленные в разделе реестра HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones на компьютере под управлением Windows 7, Windows Server 2008 и Windows Server 2008 R2, также можно использовать средство командной строки tzutil Чтобы вывести допустимое время. Средство tzutil устанавливается по умолчанию в Windows 7, Windows Server 2008 и Windows Server 2008 R2.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin
+      type:
+      - azure-asm-compute.DomainJoinSettings
+      description: Содержит свойства, укажите домен, к которому будет присоединена виртуальная машина. Этот элемент используется только с WindowsProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials
+      type:
+      - azure-asm-compute.DomainJoinCredentials
+      description: Указывает значения, используемые для соединения виртуальной машины к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.domain
+      type:
+      - string
+      description: 'Указывает имя домена, используемый для проверки подлинности учетной записи. Значение — это полное имя домена DNS. Если имя домена не указан, имя пользователя необходимо указать формат имени участника (UPN) пользователя (user@fully-qualified-DNS-domain) или полностью указанием DNS-формате domain\username. Пример: example.com.'
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.userName
+      type:
+      - string
+      description: Указывает имя пользователя в домене, который может использоваться для присоединения к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.credentials.password
+      type:
+      - string
+      description: Указывает пароль, используемый для присоединения к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.domainToJoin
+      type:
+      - string
+      description: Указывает домен для присоединения.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.ldapMachineObjectOU
+      type:
+      - string
+      description: >-
+        Указывает Lightweight Directory Access Protocol (LDAP) X 500 различающееся имя подразделения (OU), в котором создается учетная запись компьютера. Эта учетная запись находится в Active Directory на контроллере домена в домене, к которому присоединен компьютер.
+
+        Пример: OU=MyOu,OU=MyParentOu,DC=example.com,DC=MyCompany,DC=com.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.provisioning
+      type:
+      - azure-asm-compute.DomainJoinProvisioning
+      description: Дополнительные сведения для подготовки присоединения к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.domainJoin.provisioning.accountData
+      type:
+      - string
+      description: Сведения об учетной записи для присоединения к домену.
+      optional: true
+    - id: parameters.provisioningConfiguration.storedCertificateSettings
+      type:
+      - array
+      description: >-
+        Содержит список сертификатов службы с которыми будет выполняться провизионирование для новой роли.
+
+        Этот элемент используется только с WindowsProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.windowsRemoteManagement
+      type:
+      - azure-asm-compute.WindowsRemoteManagementSettings
+      description: Настраивает службу удаленного управления Windows на виртуальной машине, которая позволяет удаленно с помощью Windows PowerShell.
+      optional: true
+    - id: parameters.provisioningConfiguration.windowsRemoteManagement.listeners
+      type:
+      - array
+      description: Содержит коллекцию сведений для включения удаленного Windows PowerShell.
+      optional: true
+    - id: parameters.provisioningConfiguration.adminUserName
+      type:
+      - string
+      description: Указывает имя, которое используется для переименования учетной записи администратора по умолчанию. Если виртуальная машина создается из образа «Специализированной» виртуальной Машины, имя пользователя не требуется.
+      optional: true
+    - id: parameters.provisioningConfiguration.additionalUnattendContent
+      type:
+      - azure-asm-compute.AdditionalUnattendContentSettings
+      description: Указывает дополнительные base-64 закодированный в формате XML сведения, которые могут быть включены в файле Unattend.xml, который используется программой установки Windows.
+      optional: true
+    - id: parameters.provisioningConfiguration.additionalUnattendContent.unattendPasses
+      type:
+      - array
+      description: Указывает, передает автоматической установки
+      optional: true
+    - id: parameters.provisioningConfiguration.hostName
+      type:
+      - string
+      description: Указывает имя узла для виртуальной Машины. Имена узлов являются символьные строки ASCII 1 до 64 символов в длину. Этот элемент используется только с LinuxProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.userName
+      type:
+      - string
+      description: Указывает имя пользователя будет создан в группе sudoer виртуальной машины. Имена пользователей являются символьные строки ASCII 1 до 32 символов в длину. Этот элемент используется только с LinuxProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.userPassword
+      type:
+      - string
+      description: Указывает пароль для имени пользователя. Пароли являются символьные строки ASCII 6 до 72 символов в длину. Этот элемент используется только с LinuxProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.disableSshPasswordAuthentication
+      type:
+      - boolean
+      description: >-
+        Указывает, отключена ли проверка подлинности SSH для пароля.
+
+        Этот элемент используется только с LinuxProvisioningConfiguration значение. По умолчанию это значение на true.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings
+      type:
+      - azure-asm-compute.SshSettings
+      description: Указывает открытые ключи SSH и пар ключей для заполнения в образе во время подготовки. Этот элемент используется только с LinuxProvisioningConfiguration значение.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings.publicKeys
+      type:
+      - array
+      description: Указывает коллекцию открытых ключей SSH.
+      optional: true
+    - id: parameters.provisioningConfiguration.sshSettings.keyPairs
+      type:
+      - array
+      description: Указывает коллекцию пар ключей SSH.
+      optional: true
+    - id: parameters.provisioningConfiguration.customData
+      type:
+      - string
+      description: Необязательный элемент. Предоставляет пользовательские данные, передаваемые в виртуальную Машину в кодировке base64.
+      optional: true
+    - id: parameters.targetImageLabel
+      type:
+      - string
+      description: Указывает понятное имя записанного образа. Это значение, которое появляется в столбце Name для образа на портале управления Azure.
+    - id: parameters.targetImageName
+      type:
+      - string
+      description: Указывает имя образа, записанного образа.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function captureOSImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureVMImage
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#captureVMImage
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: captureVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: Захват роли как шаблон виртуальной Машины.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.captureVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для перезапуска.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCaptureVMImageParameters
+      description: Параметры, передаваемые операциям запись виртуальной машины.
+    - id: parameters.operationType
+      type:
+      - string
+      description: Обязательный элемент. Должно быть присвоено CaptureRoleOperation.
+      optional: true
+    - id: parameters.oSState
+      type:
+      - string
+      description: 'Обязательный элемент. Состояние ОС: обобщить | Специализированные.'
+      optional: true
+    - id: parameters.vMImageName
+      type:
+      - string
+      description: Обязательный элемент. Имя шаблона виртуальной Машины.
+      optional: true
+    - id: parameters.vMImageLabel
+      type:
+      - string
+      description: Обязательный элемент. Метка шаблона виртуальной Машины.
+      optional: true
+    - id: parameters.statusCode
+      type:
+      - azure-asm-compute.HttpStatusCode
+      description: ''
+      optional: true
+    - id: parameters.requestId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function captureVMImage(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#create
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#create
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: create(serviceName, deploymentName, parameters, callback)
+  summary: 'Операция Create Role добавляет виртуальную машину к существующему развертыванию. Можно ссылаться на osdisk в операции добавления роли следующим образом: Platform/User Image - присвоено SourceImageName платформенного или пользовательского образа. При необходимости можно указать значения DiskName и MediaLink в рамках операции для управления имя и расположение целевого диска. Если DiskName и MediaLink указаны в этом режиме, они не должен существовать в системе, в противном случае будет возвращена ошибка конфликта; UserDisk — набор DiskName пользователю предоставлен образа в репозитории образов. SourceImageName должен иметь значение NULL. Все прочие свойства игнорируются; или BLOB-объектов в учетной записи хранения — MediaLink на большой двоичный объект, содержащий изображение. SourceImageName и DiskName, присваивается значение NULL.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157186.aspx Дополнительные сведения)'
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.create(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCreateParameters
+      description: Параметры для операции создания виртуальной машины.
+    - id: parameters.roleName
+      type:
+      - string
+      description: Указывает имя виртуальной машины. Имя должно быть уникальным в пределах развертывания.
+    - id: parameters.availabilitySetName
+      type:
+      - string
+      description: Задает имя группы, к которому добавляется виртуальная машина доступности. Это значение управляет выделением виртуальных машин в среде Azure. Виртуальные машины, заданные в одной группе доступности, выделяются в различных узлах для достижения максимальной доступности.
+      optional: true
+    - id: parameters.roleSize
+      type:
+      - string
+      description: Размер виртуальной машины.
+      optional: true
+    - id: parameters.configurationSets
+      type:
+      - array
+      description: Содержит коллекцию наборов конфигурации, которые содержат параметры конфигурации системы и приложения.
+      optional: true
+    - id: parameters.resourceExtensionReferences
+      type:
+      - array
+      description: Содержит коллекцию расширений ресурсов, которые должны быть установлены на виртуальной машине. Этот элемент используется в том случае, если ProvisionGuestAgent задано значение true.
+      optional: true
+    - id: parameters.vMImageName
+      type:
+      - string
+      description: Имя образа виртуальной машины, из которого будет создаваться этой роли. Если на OSDisk в образ виртуальной машины был специализированный диск, затем не WindowsProvisioningConfigurationSet или LinuxProvisioningConfigurationSet следует указать. Нет OSVirtualHardDisk значение DataVirtualHardDisk следует указать или при использовании этого аргумента.
+      optional: true
+    - id: parameters.dataVirtualHardDisks
+      type:
+      - array
+      description: Содержит параметры, используемые Azure для создания диска данных для виртуальной машины.
+      optional: true
+    - id: parameters.oSVirtualHardDisk
+      type:
+      - azure-asm-compute.OSVirtualHardDisk
+      description: Содержит параметры, используемые для создания диска операционной системы для виртуальной машины Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.hostCaching
+      type:
+      - string
+      description: Указывает режим кэширования платформы BLOB-объектов диска операционной системы для повышения эффективности чтения и записи.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.label
+      type:
+      - string
+      description: Указывает понятное имя образа операционной системы в репозитории образов.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.name
+      type:
+      - string
+      description: Указывает имя образа операционной системы в репозитории образов.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.mediaLink
+      type:
+      - string
+      description: Указывает расположение диска операционной системы в хранилище Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.sourceImageName
+      type:
+      - string
+      description: Указывает имя образа источника, который был использован для подготовки виртуальной машины.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.operatingSystem
+      type:
+      - string
+      description: Операционная система, выполняющихся на виртуальной машине.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.remoteSourceImageLink
+      type:
+      - string
+      description: URI образа источника операционной системы, который будут скопированы в учетную запись хранения клиента создания виртуальной Машины. Если указан параметр RemoteSourceImageLink, затем MediaLink необходимо также указать. Если указан параметр RemoteSourceImageLink, thenSourceIamgeName не указывается.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.iOType
+      type:
+      - string
+      description: Получает или задает тип операции ввода-ВЫВОДА.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.resizedSizeInGB
+      type:
+      - number
+      description: При использовании образа ОС или RemoteSourceImage для создания osvirtualharddisk с помощью этого параметра можно изменить размер нового osvirtualharddisk с целью большего размера. Элемент ResizedSizeInGB должен быть больше, чем элемент logicalsizeingb базового образа ОС.
+      optional: true
+    - id: parameters.provisionGuestAgent
+      type:
+      - boolean
+      description: Указывает, установлена ли служба WindowsAzureGuestAgent на виртуальной машине. Чтобы использовать расширение ресурса в виртуальной машине, эта служба устанавливается.
+      optional: true
+    - id: parameters.mediaLocation
+      type:
+      - string
+      description: Расположение, где VHD образа виртуальной машины должно быть скопировано, для опубликованных образов.
+      optional: true
+    - id: parameters.vMImageInput
+      type:
+      - azure-asm-compute.VMImageInput
+      description: При использовании образа виртуальной Машины для создания нового PersistantVMRole DiskConfiguration в образе виртуальной Машины используются для создания новых дисков для новой виртуальной Машины. Этот параметр можно использовать для изменения размера на недавно созданные диски большего размера, чем базовый DiskConfiguration в свойства виртуальной Машины Image.This возвращается только с заголовком версии 2014-10-01 или более поздней версии.
+      optional: true
+    - id: parameters.vMImageInput.oSDiskConfiguration
+      type:
+      - azure-asm-compute.OSDiskConfiguration
+      description: Это соответствует элементу OSDiskConfiguration образа виртуальной Машины, используемого для создания новой роли. Элемент OSDiskConfiguration только доступно при использовании версии 2014-10-01 или более поздней версии.
+      optional: true
+    - id: parameters.vMImageInput.oSDiskConfiguration.resizedSizeInGB
+      type:
+      - number
+      description: Указывает новый (больший) размер элемента OSVirtualHardDisk, созданного с помощью образа виртуальной Машины. Элемент ResizedSizeInGB только доступно при использовании версии 2014-10-01 или более поздней версии.
+      optional: true
+    - id: parameters.vMImageInput.dataDiskConfigurations
+      type:
+      - azure-asm-compute.IEnumerable
+      description: Это соответствует элементу DataDiskConfigurations образа виртуальной Машины, используемого для создания новой роли. Элемент DataDiskConfigurations только доступно при использовании версии 2014-10-01 или более поздней версии.
+      optional: true
+    - id: parameters.debugSettings
+      type:
+      - azure-asm-compute.DebugSettings
+      description: Параметры для выходных данных консоли отладки.
+      optional: true
+    - id: parameters.debugSettings.bootDiagnosticsEnabled
+      type:
+      - boolean
+      description: Включить или отключить диагностику загрузки.
+      optional: true
+    - id: parameters.debugSettings.consoleScreenshotBlobUri
+      type:
+      - string
+      description: Uri BLOB-объектов для снимок экрана консоли.
+      optional: true
+    - id: parameters.debugSettings.serialOutputBlobUri
+      type:
+      - string
+      description: Uri BLOB-объектов для последовательные выходные данные.
+      optional: true
+    - id: parameters.licenseType
+      type:
+      - string
+      description: 'Указывает, что образ или диск, который используется был лицензирован локально. Этот элемент используется только для образов, содержащих операционной системы Windows Server. Возможными значениями являются: Windows_Client, Windows_Server'
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function create(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#createDeployment
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#createDeployment
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: createDeployment(serviceName, parameters, callback)
+  summary: Операции создания развертывания виртуальной машины подготавливает виртуальную машину на основе предоставленных конфигурации. При создании развертывания виртуальной машины следует убедиться, что облачная служба и диск или образ, используемый расположены в одном регионе. Например если облачная служба была создана в западной части США, диск или образ, который можно использовать должен находиться в учетной записи хранения в западной части США.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157194.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.createDeployment(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineCreateDeploymentParameters
+      description: Параметры для операции создания развертывания виртуальной машины.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя для развертывания. Имя развертывания должно быть уникальным среди других развертываний для размещенной службы.
+    - id: parameters.deploymentSlot
+      type:
+      - azure-asm-compute.DeploymentSlot
+      description: 'Определяет среду, в котором будет развернута виртуальная машина. Возможными значениями являются: промежуточное хранение или производство.'
+    - id: parameters.label
+      type:
+      - string
+      description: Имя для размещенной службы. Имя может быть до 100 символов. Рекомендуется обеспечить в подписке уникальную метку. Имя может использоваться определять размещенную службу для целей отслеживания.
+    - id: parameters.roles
+      type:
+      - array
+      description: Содержит сведения о провизионировании для нового развертывания виртуальной машины.
+    - id: parameters.virtualNetworkName
+      type:
+      - string
+      description: Указывает имя существующей виртуальной сети, к которому будет принадлежать развертывание. Виртуальные сети создаются путем вызова операции задание сетевой конфигурации.
+      optional: true
+    - id: parameters.dnsSettings
+      type:
+      - azure-asm-compute.DnsSettings
+      description: Содержит список DNS-серверов, связываемых с машиной.
+      optional: true
+    - id: parameters.dnsSettings.dnsServers
+      type:
+      - array
+      description: Содержит коллекцию объектов, которые определяют параметры DNS-сервера.
+      optional: true
+    - id: parameters.reservedIPName
+      type:
+      - string
+      description: Необязательный элемент. Указывает имя существующего зарезервированного IP, к которому будет принадлежать развертывание. Зарезервированные IP-адреса создаются путем вызова операции создания зарезервированного IP-адреса.
+      optional: true
+    - id: parameters.loadBalancers
+      type:
+      - azure-asm-compute.IEnumerable
+      description: Список внутренних подсистем балансировки нагрузки, каждый обеспечивают балансировку нагрузки на частных виртуальных IP-адресов.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function createDeployment(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#deleteMethod
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#deleteMethod
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: deleteMethod(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  summary: Удалить роль операция удаляет указанную виртуальную машину.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157184.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.deleteMethod(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для удаления.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Указывает, что BLOB-объектов источник для виртуальной машины также будут удалены из хранилища.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function deleteMethod(serviceName, deploymentName, virtualMachineName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#get
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#get
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: get(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Получить роль операция извлекает сведения об указанной виртуальной машины.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157193.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.get(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function get(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#getRemoteDesktopFile
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#getRemoteDesktopFile
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: getRemoteDesktopFile(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Операции файловой скачайте RDP получает файл конфигурации протокола удаленного рабочего стола из указанной виртуальной машины.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157183.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.getRemoteDesktopFile(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function getRemoteDesktopFile(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#initiateMaintenance
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#initiateMaintenance
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: initiateMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Инициировать обслуживание на операции роли инициирует обслуживание на указанной виртуальной машины.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.initiateMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины, чтобы запустить их обслуживание.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function initiateMaintenance(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#redeploy
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#redeploy
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: redeploy(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Операции повторного развертывания роли повторно развертывает указанную виртуальную машину.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.redeploy(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для повторного развертывания.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function redeploy(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#restart
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#restart
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: restart(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Операции роли перезапуска перезапускает указанную виртуальную машину.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157197.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.restart(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для перезапуска.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function restart(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdown
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdown
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: shutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: >-
+    Завершить работу роли операция завершает работу указанной виртуальной машины.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157195.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.shutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины для завершения работы.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineShutdownParameters
+      description: Параметры завершение работы виртуальной машины.
+    - id: parameters.postShutdownAction
+      type:
+      - azure-asm-compute.PostShutdownAction
+      description: Состояние виртуальной машины после завершения работы ("Остановлено" или "StoppedDeallocated").
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function shutdown(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdownRoles
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#shutdownRoles
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: shutdownRoles(serviceName, deploymentName, parameters, callback)
+  summary: Завершение работы ролей операцию Останавливает указанный набор виртуальных машин.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.shutdownRoles(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineShutdownRolesParameters
+      description: Параметры для передачи в операцию завершение работы ролей.
+    - id: parameters.roles
+      type:
+      - array
+      description: Набор ролей, чтобы завершить работу.
+      optional: true
+    - id: parameters.postShutdownAction
+      type:
+      - azure-asm-compute.PostShutdownAction
+      description: Состояние роли после завершения работы. Возможные значения включают остановлено "или" StoppedDeallocated.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function shutdownRoles(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#start
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#start
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: start(serviceName, deploymentName, virtualMachineName, callback)
+  summary: Запустить роль начнется указанную виртуальную машину.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157189.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.start(serviceName, deploymentName, virtualMachineName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя для запуска виртуальной машины.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function start(serviceName, deploymentName, virtualMachineName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#startRoles
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#startRoles
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: startRoles(serviceName, deploymentName, parameters, callback)
+  summary: Запуск роли начнется указанный набор виртуальных машин.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.startRoles(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineStartRolesParameters
+      description: Параметры для передачи в операцию запуска роли.
+    - id: parameters.roles
+      type:
+      - array
+      description: Набор ролей, чтобы завершить работу.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function startRoles(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#update
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#update
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: update(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  summary: Операции обновления роли добавляет виртуальную машину к существующему развертыванию.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157187.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.update(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: virtualMachineName
+      type:
+      - string
+      description: Имя виртуальной машины.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineUpdateParameters
+      description: Параметры для операции обновления виртуальной машины.
+    - id: parameters.roleName
+      type:
+      - string
+      description: Указывает имя виртуальной машины. Имя должно быть уникальным в пределах развертывания.
+    - id: parameters.label
+      type:
+      - string
+      description: Указывает понятное имя для виртуальной машины.
+      optional: true
+    - id: parameters.availabilitySetName
+      type:
+      - string
+      description: Задает имя группы, к которому добавляется виртуальная машина доступности. Это значение управляет выделением виртуальных машин в среде Azure. Виртуальные машины, заданные в одной группе доступности, выделяются в различных узлах для достижения максимальной доступности.
+      optional: true
+    - id: parameters.roleSize
+      type:
+      - string
+      description: Размер виртуальной машины.
+      optional: true
+    - id: parameters.configurationSets
+      type:
+      - array
+      description: Содержит коллекцию наборов конфигурации, которые содержат параметры конфигурации системы и приложения.
+      optional: true
+    - id: parameters.resourceExtensionReferences
+      type:
+      - array
+      description: Содержит коллекцию расширений ресурсов, которые должны быть установлены на виртуальной машине. Этот элемент используется в том случае, если ProvisionGuestAgent задано значение true.
+      optional: true
+    - id: parameters.dataVirtualHardDisks
+      type:
+      - array
+      description: Содержит параметры, используемые Azure для создания диска данных для виртуальной машины.
+      optional: true
+    - id: parameters.oSVirtualHardDisk
+      type:
+      - azure-asm-compute.OSVirtualHardDisk
+      description: Содержит параметры, используемые для создания диска операционной системы для виртуальной машины Azure.
+    - id: parameters.oSVirtualHardDisk.hostCaching
+      type:
+      - string
+      description: Указывает режим кэширования платформы BLOB-объектов диска операционной системы для повышения эффективности чтения и записи.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.label
+      type:
+      - string
+      description: Указывает понятное имя образа операционной системы в репозитории образов.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.name
+      type:
+      - string
+      description: Указывает имя образа операционной системы в репозитории образов.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.mediaLink
+      type:
+      - string
+      description: Указывает расположение диска операционной системы в хранилище Azure.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.sourceImageName
+      type:
+      - string
+      description: Указывает имя образа источника, который был использован для подготовки виртуальной машины.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.operatingSystem
+      type:
+      - string
+      description: Операционная система, выполняющихся на виртуальной машине.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.remoteSourceImageLink
+      type:
+      - string
+      description: URI образа источника операционной системы, который будут скопированы в учетную запись хранения клиента создания виртуальной Машины. Если указан параметр RemoteSourceImageLink, затем MediaLink необходимо также указать. Если указан параметр RemoteSourceImageLink, thenSourceIamgeName не указывается.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.iOType
+      type:
+      - string
+      description: Получает или задает тип операции ввода-ВЫВОДА.
+      optional: true
+    - id: parameters.oSVirtualHardDisk.resizedSizeInGB
+      type:
+      - number
+      description: При использовании образа ОС или RemoteSourceImage для создания osvirtualharddisk с помощью этого параметра можно изменить размер нового osvirtualharddisk с целью большего размера. Элемент ResizedSizeInGB должен быть больше, чем элемент logicalsizeingb базового образа ОС.
+      optional: true
+    - id: parameters.provisionGuestAgent
+      type:
+      - boolean
+      description: Указывает, установлена ли служба WindowsAzureGuestAgent на виртуальной машине. Чтобы использовать расширение ресурса в виртуальной машине, эта служба устанавливается.
+      optional: true
+    - id: parameters.debugSettings
+      type:
+      - azure-asm-compute.DebugSettings
+      description: Параметры для выходных данных консоли отладки.
+      optional: true
+    - id: parameters.debugSettings.bootDiagnosticsEnabled
+      type:
+      - boolean
+      description: Включить или отключить диагностику загрузки.
+      optional: true
+    - id: parameters.debugSettings.consoleScreenshotBlobUri
+      type:
+      - string
+      description: Uri BLOB-объектов для снимок экрана консоли.
+      optional: true
+    - id: parameters.debugSettings.serialOutputBlobUri
+      type:
+      - string
+      description: Uri BLOB-объектов для последовательные выходные данные.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function update(serviceName, deploymentName, virtualMachineName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#updateLoadBalancedEndpointSet
+  id: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations#updateLoadBalancedEndpointSet
+  parent: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations
+  name: updateLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  summary: Операция обновления загрузить набор со сбалансированной нагрузкой конечной точки изменяется указанный InputEndpoints с балансировкой нагрузки для всех ролей инфраструктуры, как развертывание службы. Конечные точки с балансировкой нагрузки не должна изменяться с помощью UpdateRole.
+  fullName: azure-asm-compute.VirtualMachineOperations~VirtualMachineOperations.updateLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineUpdateLoadBalancedSetParameters
+      description: Параметры для операции обновления набор с балансировкой нагрузки конечной точки.
+    - id: parameters.loadBalancedEndpoints
+      type:
+      - array
+      description: Список нагрузки равномерно InputEndpoints для обновления.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function updateLoadBalancedEndpointSet(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js

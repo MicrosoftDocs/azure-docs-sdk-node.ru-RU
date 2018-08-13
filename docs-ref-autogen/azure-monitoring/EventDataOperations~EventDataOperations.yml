@@ -1,0 +1,325 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 15806f9b6bce4e4a7f5767f4db990555ca44ceb3
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064378"
+items:
+- uid: azure-monitoring.EventDataOperations~EventDataOperations
+  id: azure-monitoring.EventDataOperations~EventDataOperations
+  name: EventDataOperations
+  summary: >-
+    Операции для данных события.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [EventsClient] <xref:azure-monitoring.EventsClient~EventsClient>.
+
+    См. в разделе [eventData] <xref:azure-monitoring.EventsClient~EventsClient%23eventData>.
+
+    Инициализирует новый экземпляр класса EventDataOperations.
+  fullName: azure-monitoring.EventDataOperations
+  type: Class
+  children:
+  - azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  - azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  langs:
+  - js
+- id: azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  uid: azure-monitoring.EventDataOperations~EventDataOperations.#ctor
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: EventDataOperations(client)
+  fullName: azure-monitoring.EventDataOperations.EventDataOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedEventsClient
+      description: Ссылка на клиента службы.
+    content: new EventDataOperations(client)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEvents
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEvents(parameters, callback)
+  summary: Список значений событий операция получает список событий.
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEvents(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsParameters
+      description: ''
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала события.
+    - id: parameters.endTime
+      type:
+      - date
+      description: Время окончания события.
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: Каналы событий.
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: Следующий токен ссылки.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Поток ответа.
+    content: function listEvents(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForCorrelationId
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForCorrelationId(parameters, callback)
+  summary: Список значений событий операция получает список событий.
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForCorrelationId(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForCorrelationIdParameters
+      description: ''
+    - id: parameters.correlationId
+      type:
+      - string
+      description: Идентификатор корреляции событий.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала события.
+    - id: parameters.endTime
+      type:
+      - date
+      description: Время окончания события.
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: Каналы событий.
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: Следующий токен ссылки.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Поток ответа.
+    content: function listEventsForCorrelationId(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForEventSource
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForEventSource(parameters, callback)
+  summary: Список значений событий операция получает список событий.
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForEventSource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForEventSourceParameters
+      description: ''
+    - id: parameters.eventSource
+      type:
+      - string
+      description: Источник события.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала события.
+    - id: parameters.endTime
+      type:
+      - date
+      description: Время окончания события.
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: Каналы событий.
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: Следующий токен ссылки.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Поток ответа.
+    content: function listEventsForEventSource(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResource
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResource(parameters, callback)
+  summary: Список значений событий операция получает список событий.
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceParameters
+      description: ''
+    - id: parameters.resourceUri
+      type:
+      - string
+      description: Идентификатор ресурса.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала события.
+    - id: parameters.endTime
+      type:
+      - date
+      description: Время окончания события.
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: Каналы событий.
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: Следующий токен ссылки.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Поток ответа.
+    content: function listEventsForResource(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceGroup
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResourceGroup(parameters, callback)
+  summary: Список значений событий операция получает список событий.
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResourceGroup(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceGroupParameters
+      description: ''
+    - id: parameters.resourceGroupName
+      type:
+      - string
+      description: Имя группы ресурсов.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала события.
+    - id: parameters.endTime
+      type:
+      - date
+      description: Время окончания события.
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: Каналы событий.
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: Следующий токен ссылки.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Поток ответа.
+    content: function listEventsForResourceGroup(parameters, callback)
+  langs:
+  - js
+- uid: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  id: azure-monitoring.EventDataOperations~EventDataOperations#listEventsForResourceProvider
+  parent: azure-monitoring.EventDataOperations~EventDataOperations
+  name: listEventsForResourceProvider(parameters, callback)
+  summary: Список значений событий операция получает список событий.
+  fullName: azure-monitoring.EventDataOperations~EventDataOperations.listEventsForResourceProvider(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-monitoring.ListEventsForResourceProviderParameters
+      description: ''
+    - id: parameters.resourceProvider
+      type:
+      - string
+      description: Поставщик ресурсов.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала события.
+    - id: parameters.endTime
+      type:
+      - date
+      description: Время окончания события.
+      optional: true
+    - id: parameters.eventChannels
+      type:
+      - azure-monitoring.EventChannels
+      description: Каналы событий.
+      optional: true
+    - id: parameters.nextLink
+      type:
+      - string
+      description: Следующий токен ссылки.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-monitoring.Stream
+      description: Поток ответа.
+    content: function listEventsForResourceProvider(parameters, callback)
+  langs:
+  - js

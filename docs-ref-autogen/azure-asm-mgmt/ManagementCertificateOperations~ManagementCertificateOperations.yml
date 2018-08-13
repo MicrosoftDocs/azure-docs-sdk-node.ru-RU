@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ef1453429407ca3e3ebea6b93b11c0054bdc3c0b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063886"
+items:
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: ManagementCertificateOperations
+  summary: >-
+    Сертификаты управления, которые также называются сертификатами подписки, можно использовать для проверки подлинности клиентов, пытающихся подключиться к ресурсам, связанным с вашей подпиской Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj154124.aspx подробнее) __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ManagementClient] {@link ManagementClient ~ ManagementClient}.
+
+    См. в разделе [managementCertificates] {@link ManagementClient ~ ManagementClient #managementCertificates}.
+
+    Инициализирует новый экземпляр класса ManagementCertificateOperations.
+  fullName: azure-asm-mgmt.ManagementCertificateOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  - azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  langs:
+  - js
+- id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.#ctor
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: ManagementCertificateOperations(client)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations.ManagementCertificateOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: Ссылка на клиента службы.
+    content: new ManagementCertificateOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#create
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: create(parameters, callback)
+  summary: Операция Create Management Certificate добавляет сертификат в список сертификатов управления. Сертификаты управления, которые также называются сертификатами подписки, проверки подлинности клиентов, пытающихся подключиться к ресурсам, связанным с вашей подпиской Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj154123.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.ManagementCertificateCreateParameters
+      description: Параметры для операции создания сертификата управления.
+    - id: parameters.publicKey
+      type:
+      - azure-asm-mgmt.buffer
+      description: Base-64-представление открытого ключа сертификата управления.
+      optional: true
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: Отпечаток, однозначно определяющий сертификат управления.
+      optional: true
+    - id: parameters.data
+      type:
+      - azure-asm-mgmt.buffer
+      description: Необработанные данные сертификата в формате cer в кодировке base-64.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#deleteMethod
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: deleteMethod(thumbprint, callback)
+  summary: Удалить сертификат управления операция удаляет сертификат из списка сертификатов управления. Сертификаты управления, которые также называются сертификатами подписки, проверки подлинности клиентов, пытающихся подключиться к ресурсам, связанным с вашей подпиской Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj154127.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.deleteMethod(thumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: thumbprint
+      type:
+      - string
+      description: Значение отпечатка сертификата для удаления.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function deleteMethod(thumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#get
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: get(thumbprint, callback)
+  summary: Операция получения сертификата управления извлекает сведения о сертификате управления с указанным отпечатком. Сертификаты управления, которые также называются сертификатами подписки, проверки подлинности клиентов, пытающихся подключиться к ресурсам, связанным с вашей подпиской Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj154131.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.get(thumbprint, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: thumbprint
+      type:
+      - string
+      description: Значение отпечатка сертификата для получения сведений о.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function get(thumbprint, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  id: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations#list
+  parent: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations
+  name: list(callback)
+  summary: Перечисление сертификатов управления операция перечисляет и возвращает базовые сведения обо всех сертификатах управления, связанных с указанной подпиской. Сертификаты управления, которые также называются сертификатами подписки, проверки подлинности клиентов, пытающихся подключиться к ресурсам, связанным с вашей подпиской Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj154105.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.ManagementCertificateOperations~ManagementCertificateOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function list(callback)
+  langs:
+  - js

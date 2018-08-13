@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6a04037f15b27c25cdcef1beffe07ef3ce06d8a2
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063832"
+items:
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: CloudServiceManagementClient
+  summary: Инициализирует новый экземпляр класса CloudServiceManagementClient.
+  fullName: azure-asm-scheduler.CloudServiceManagementClient
+  type: Class
+  children:
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  - azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.#ctor
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: CloudServiceManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-scheduler.CloudServiceManagementClient.CloudServiceManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Получает учетные данные подписки, которые однозначно идентифицируют подписку Microsoft Azure. Идентификатор подписки формирует часть URI для каждого вызова службы.
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: Возвращает URI, используемый как базовый для всех запросов к облачным службам.
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new CloudServiceManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#cloudServices
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: cloudServices
+  summary: Предоставляет экземпляр [CloudServiceOperations](-CloudServiceOperations.html) объекта.
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.cloudServices
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: cloudServices
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#entitleResource
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: entitleResource(parameters, callback)
+  summary: EntitleResource используется только для сторонних поставщиков Store. Перед созданием этого типа ресурса для ресурса необходимо право каждой подписки.
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.entitleResource(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-scheduler.EntitleResourceParameters
+      description: Параметры, передаваемые в метод EntitleResource.
+    - id: parameters.resourceNamespace
+      type:
+      - string
+      description: Требуется идентификатор пространства имен для поставщика ресурсов.
+    - id: parameters.resourceType
+      type:
+      - string
+      description: Требуемый тип ресурса.
+    - id: parameters.registrationDate
+      type:
+      - date
+      description: Необходимые данные, когда выполняется назначением.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function entitleResource(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  id: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient#getOperationStatus
+  parent: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: Операция получения состояния операции возвращает состояние операции thespecified. После вызова асинхронной операции, можно вызвать получение состояния операции, чтобы определить, является ли операция завершилась успешно, сбой, или все еще выполняется.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx Дополнительные сведения)
+  fullName: azure-asm-scheduler.CloudServiceManagementClient~CloudServiceManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: Идентификатор запроса для запроса, который требуется отследить. Идентификатор запроса возвращается в заголовке ответа x-ms-request-id для каждого запроса.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js

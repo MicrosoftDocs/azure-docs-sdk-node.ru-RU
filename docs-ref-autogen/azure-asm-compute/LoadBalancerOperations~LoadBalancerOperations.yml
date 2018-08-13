@@ -1,0 +1,347 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: baf17532e911689324ff3b6a43fc6937bdf430d8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063891"
+items:
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations
+  summary: >-
+    API управления вычислений включает операции управления подсистем балансировки нагрузки для вашей подписки.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    См. в разделе [loadBalancers] {@link ComputeManagementClient ~ ComputeManagementClient #loadBalancers}.
+
+    Инициализирует новый экземпляр класса LoadBalancerOperations.
+  fullName: azure-asm-compute.LoadBalancerOperations
+  type: Class
+  children:
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  - azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.#ctor
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: LoadBalancerOperations(client)
+  fullName: azure-asm-compute.LoadBalancerOperations.LoadBalancerOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Ссылка на клиента службы.
+    content: new LoadBalancerOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginCreating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginCreating(serviceName, deploymentName, parameters, callback)
+  summary: Добавление внутреннего балансировщика нагрузки для существующего развертывания. При использовании входной конечной точкой внутреннего балансировщика нагрузки предоставит дополнительных Частных, который может использоваться для балансировки нагрузки до роли в этом развертывании.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginCreating(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: Параметры для операции создания подсистемы балансировки нагрузки.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя подсистемы балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: Предоставляет конфигурацию для виртуальных IP-адрес (VIP) этой подсистемы балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: Тип виртуального IP-адреса, предоставляемые этой подсистемы балансировки нагрузки. В настоящее время поддерживается только «Private». Это создаст служб в частных виртуальных IP-адресов для балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: Если развертывание находится в виртуальной сети, подсети этой виртуальной сети необходимо указать для подсистемы балансировки нагрузки. Виртуальный IP-адрес, управляемых подсистемой балансировки нагрузки будет IP-адрес из этой подсети. Если развертывание находится за пределами виртуальной сети, можно указать подсети нет и частных виртуальных IP-адресов будет IP-адрес из пула общие частных адресов.
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: Если развертывание находится в виртуальной сети, можно указать определенный адрес из подсети подсистемы балансировки нагрузки. Виртуальный IP-адрес для балансировщика нагрузки будет этот определенный IP-адрес. Если IP-адрес статического виртуальной сети указано, также должен быть указан элемент SubnetName подсистемы балансировки нагрузки. Если развертывание находится за пределами виртуальной сети, можно задать без виртуальной сети, статические IP-адреса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginCreating(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginDeleting
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  summary: Удаление подсистемы балансировки нагрузки в развертывании.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: loadBalancerName
+      type:
+      - string
+      description: Имя подсистемы балансировки нагрузки.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginDeleting(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#beginUpdating
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: Обновляет балансировщика нагрузки, связанные с существующим развертыванием.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: loadBalancerName
+      type:
+      - string
+      description: Имя подсистеме балансировки нагрузки.
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: Параметры для операции обновления подсистемы балансировки нагрузки.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя подсистемы балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: Предоставляет конфигурацию для виртуальных IP-адрес (VIP) этой подсистемы балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: Тип виртуального IP-адреса, предоставляемые этой подсистемы балансировки нагрузки. В настоящее время поддерживается только «Private». Это создаст служб в частных виртуальных IP-адресов для балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: Если развертывание находится в виртуальной сети, подсети этой виртуальной сети необходимо указать для подсистемы балансировки нагрузки. Виртуальный IP-адрес, управляемых подсистемой балансировки нагрузки будет IP-адрес из этой подсети. Если развертывание находится за пределами виртуальной сети, можно указать подсети нет и частных виртуальных IP-адресов будет IP-адрес из пула общие частных адресов.
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: Если развертывание находится в виртуальной сети, можно указать определенный адрес из подсети подсистемы балансировки нагрузки. Виртуальный IP-адрес для балансировщика нагрузки будет этот определенный IP-адрес. Если IP-адрес статического виртуальной сети указано, также должен быть указан элемент SubnetName подсистемы балансировки нагрузки. Если развертывание находится за пределами виртуальной сети, можно задать без виртуальной сети, статические IP-адреса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginUpdating(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#create
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: create(serviceName, deploymentName, parameters, callback)
+  summary: Добавление внутреннего балансировщика нагрузки для существующего развертывания. При использовании входной конечной точкой внутреннего балансировщика нагрузки предоставит дополнительных Частных, который может использоваться для балансировки нагрузки до роли в этом развертывании.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.create(serviceName, deploymentName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerCreateParameters
+      description: Параметры для операции создания подсистемы балансировки нагрузки.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя подсистемы балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: Предоставляет конфигурацию для виртуальных IP-адрес (VIP) этой подсистемы балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: Тип виртуального IP-адреса, предоставляемые этой подсистемы балансировки нагрузки. В настоящее время поддерживается только «Private». Это создаст служб в частных виртуальных IP-адресов для балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: Если развертывание находится в виртуальной сети, подсети этой виртуальной сети необходимо указать для подсистемы балансировки нагрузки. Виртуальный IP-адрес, управляемых подсистемой балансировки нагрузки будет IP-адрес из этой подсети. Если развертывание находится за пределами виртуальной сети, можно указать подсети нет и частных виртуальных IP-адресов будет IP-адрес из пула общие частных адресов.
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: Если развертывание находится в виртуальной сети, можно указать определенный адрес из подсети подсистемы балансировки нагрузки. Виртуальный IP-адрес для балансировщика нагрузки будет этот определенный IP-адрес. Если IP-адрес статического виртуальной сети указано, также должен быть указан элемент SubnetName подсистемы балансировки нагрузки. Если развертывание находится за пределами виртуальной сети, можно задать без виртуальной сети, статические IP-адреса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function create(serviceName, deploymentName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#deleteMethod
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  summary: Удаление подсистемы балансировки нагрузки в развертывании.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: loadBalancerName
+      type:
+      - string
+      description: Имя подсистемы балансировки нагрузки.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function deleteMethod(serviceName, deploymentName, loadBalancerName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  id: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations#update
+  parent: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations
+  name: update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  summary: Обновляет балансировщика нагрузки, связанные с существующим развертыванием.
+  fullName: azure-asm-compute.LoadBalancerOperations~LoadBalancerOperations.update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя службы.
+    - id: deploymentName
+      type:
+      - string
+      description: Имя развертывания.
+    - id: loadBalancerName
+      type:
+      - string
+      description: Имя подсистеме балансировки нагрузки.
+    - id: parameters
+      type:
+      - azure-asm-compute.LoadBalancerUpdateParameters
+      description: Параметры для операции обновления подсистемы балансировки нагрузки.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя подсистемы балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration
+      type:
+      - azure-asm-compute.FrontendIPConfiguration
+      description: Предоставляет конфигурацию для виртуальных IP-адрес (VIP) этой подсистемы балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration.type
+      type:
+      - string
+      description: Тип виртуального IP-адреса, предоставляемые этой подсистемы балансировки нагрузки. В настоящее время поддерживается только «Private». Это создаст служб в частных виртуальных IP-адресов для балансировки нагрузки.
+      optional: true
+    - id: parameters.frontendIPConfiguration.subnetName
+      type:
+      - string
+      description: Если развертывание находится в виртуальной сети, подсети этой виртуальной сети необходимо указать для подсистемы балансировки нагрузки. Виртуальный IP-адрес, управляемых подсистемой балансировки нагрузки будет IP-адрес из этой подсети. Если развертывание находится за пределами виртуальной сети, можно указать подсети нет и частных виртуальных IP-адресов будет IP-адрес из пула общие частных адресов.
+      optional: true
+    - id: parameters.frontendIPConfiguration.staticVirtualNetworkIPAddress
+      type:
+      - string
+      description: Если развертывание находится в виртуальной сети, можно указать определенный адрес из подсети подсистемы балансировки нагрузки. Виртуальный IP-адрес для балансировщика нагрузки будет этот определенный IP-адрес. Если IP-адрес статического виртуальной сети указано, также должен быть указан элемент SubnetName подсистемы балансировки нагрузки. Если развертывание находится за пределами виртуальной сети, можно задать без виртуальной сети, статические IP-адреса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function update(serviceName, deploymentName, loadBalancerName, parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,598 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 05bc8581f241d18eb92ecfc70c7cfacc08b4025a
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063910"
+items:
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: ReservedIPOperations
+  summary: >-
+    API управления сетями включает операции управления зарезервированные IP-адреса для вашей подписки.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [NetworkManagementClient] {@link NetworkManagementClient ~ NetworkManagementClient}.
+
+    См. в разделе [reservedIPs] {@link NetworkManagementClient ~ NetworkManagementClient #reservedIPs}.
+
+    Инициализирует новый экземпляр класса ReservedIPOperations.
+  fullName: azure-asm-network.ReservedIPOperations
+  type: Class
+  children:
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations.#ctor
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#abortMigration
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#associate
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginAbortMigration
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginAssociating
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginCommitMigration
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginCreating
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginDeleting
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginDisassociating
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginPrepareMigration
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#commitMigration
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#create
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#deleteMethod
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#disassociate
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#get
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#list
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#prepareMigration
+  - azure-asm-network.ReservedIPOperations~ReservedIPOperations#validateMigration
+  langs:
+  - js
+- id: azure-asm-network.ReservedIPOperations~ReservedIPOperations.#ctor
+  uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations.#ctor
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: ReservedIPOperations(client)
+  fullName: azure-asm-network.ReservedIPOperations.ReservedIPOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedNetworkManagementClient
+      description: Ссылка на клиента службы.
+    content: new ReservedIPOperations(client)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#abortMigration
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#abortMigration
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: abortMigration(ipName, callback)
+  summary: Прервать миграцию resservedIP api проверяет и прерывает выполнение заданного зарезервированный IP-адрес для классической службы IaaS в ARM миграции.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.abortMigration(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса для миграции.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function abortMigration(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#associate
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#associate
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: associate(reservedIpName, parameters, callback)
+  summary: Связать зарезервированный IP-адрес операции связывает зарезервированного IP-адреса в службе.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.associate(reservedIpName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: reservedIpName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса.
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkReservedIPMobilityParameters
+      description: Параметры для связывание зарезервированного IP-адреса.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Имя службы IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.deploymentName
+      type:
+      - string
+      description: Имя развертывания IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.virtualIPName
+      type:
+      - string
+      description: Имя виртуального IP-адреса, на котором необходимо выполнить операции мобильности с IP-адрес.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function associate(reservedIpName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginAbortMigration
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginAbortMigration
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: beginAbortMigration(ipName, callback)
+  summary: Прервать миграцию resservedIP api проверяет и прерывает выполнение заданного зарезервированный IP-адрес для классической службы IaaS в ARM миграции.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.beginAbortMigration(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса для миграции.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function beginAbortMigration(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginAssociating
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginAssociating
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: beginAssociating(reservedIpName, parameters, callback)
+  summary: BeginAssociate начинает сопоставление зарезервированного IP-адреса со службой.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.beginAssociating(reservedIpName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: reservedIpName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса.
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkReservedIPMobilityParameters
+      description: Параметры для Begin, связывание зарезервированного IP-адреса.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Имя службы IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.deploymentName
+      type:
+      - string
+      description: Имя развертывания IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.virtualIPName
+      type:
+      - string
+      description: Имя виртуального IP-адреса, на котором необходимо выполнить операции мобильности с IP-адрес.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function beginAssociating(reservedIpName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginCommitMigration
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginCommitMigration
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: beginCommitMigration(ipName, callback)
+  summary: Фиксировать миграцию resservedIP api проверяет и фиксирует заданного зарезервированный IP-адрес для классической службы IaaS в ARM миграции.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.beginCommitMigration(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса для миграции.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function beginCommitMigration(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginCreating
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginCreating
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: beginCreating(parameters, callback)
+  summary: Начать создание зарезервированного IP-адреса операция создает зарезервированным IP-адрес из вы будете подписки.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.beginCreating(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkReservedIPCreateParameters
+      description: Параметры, передаваемые операциям начать создание зарезервированного IP-адреса.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса.
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Понятный идентификатор сайта.
+      optional: true
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Имя службы IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.deploymentName
+      type:
+      - string
+      description: Имя развертывания IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: Расположение, где существует виртуальная сеть.
+      optional: true
+    - id: parameters.virtualIPName
+      type:
+      - string
+      description: Имя виртуального IP-адреса, который мы необходимо зарезервировать.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function beginCreating(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginDeleting
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginDeleting
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: beginDeleting(ipName, callback)
+  summary: Удаляет операции начать удаление зарезервированного IP-адреса зарезервированный IP-адрес от вас все подписки.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.beginDeleting(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function beginDeleting(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginDisassociating
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginDisassociating
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: beginDisassociating(reservedIpName, parameters, callback)
+  summary: BeginDisassociate начинает отменить связь зарезервированного IP-адреса из службы.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.beginDisassociating(reservedIpName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: reservedIpName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса.
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkReservedIPMobilityParameters
+      description: Параметры для Begin, разрыв соединения зарезервированный IP-адрес.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Имя службы IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.deploymentName
+      type:
+      - string
+      description: Имя развертывания IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.virtualIPName
+      type:
+      - string
+      description: Имя виртуального IP-адреса, на котором необходимо выполнить операции мобильности с IP-адрес.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function beginDisassociating(reservedIpName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginPrepareMigration
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#beginPrepareMigration
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: beginPrepareMigration(ipName, callback)
+  summary: Подготовка к миграции resservedIP, api проверяет и подготавливает заданного зарезервированный IP-адрес для классической службы IaaS в ARM миграции.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.beginPrepareMigration(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса для миграции.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function beginPrepareMigration(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#commitMigration
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#commitMigration
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: commitMigration(ipName, callback)
+  summary: Фиксировать миграцию resservedIP api проверяет и фиксирует заданного зарезервированный IP-адрес для классической службы IaaS в ARM миграции.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.commitMigration(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса для миграции.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function commitMigration(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#create
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#create
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: create(parameters, callback)
+  summary: Создать зарезервированный IP-адрес операция создает зарезервированным IP-адрес из вы будете подписки.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkReservedIPCreateParameters
+      description: Параметры для операции создания зарезервированного IP-адреса.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса.
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Понятный идентификатор сайта.
+      optional: true
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Имя службы IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.deploymentName
+      type:
+      - string
+      description: Имя развертывания IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: Расположение, где существует виртуальная сеть.
+      optional: true
+    - id: parameters.virtualIPName
+      type:
+      - string
+      description: Имя виртуального IP-адреса, который мы необходимо зарезервировать.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#deleteMethod
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#deleteMethod
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: deleteMethod(ipName, callback)
+  summary: Удалить зарезервированный IP-адрес операции удаляет зарезервированный IP-адрес от вас все подписки.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.deleteMethod(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function deleteMethod(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#disassociate
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#disassociate
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: disassociate(reservedIpName, parameters, callback)
+  summary: Отменить связь зарезервированного IP-адреса операция отменяет связь зарезервированного IP-адреса из службы.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.disassociate(reservedIpName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: reservedIpName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса.
+    - id: parameters
+      type:
+      - azure-asm-network.NetworkReservedIPMobilityParameters
+      description: Параметры для отменить связь зарезервированного IP-адреса.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Имя службы IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.deploymentName
+      type:
+      - string
+      description: Имя развертывания IP-адрес принадлежит, если используется.
+      optional: true
+    - id: parameters.virtualIPName
+      type:
+      - string
+      description: Имя виртуального IP-адреса, на котором необходимо выполнить операции мобильности с IP-адрес.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function disassociate(reservedIpName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#get
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#get
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: get(ipName, callback)
+  summary: Операция получения зарезервированный IP-адрес получает сведения для виртуального IP-адрес зарезервирован для подписки.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.get(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса для получения.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function get(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#list
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#list
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: list(callback)
+  summary: Зарезервированный IP-адрес списка операция извлекает все виртуальные IP-адресов, зарезервированных для подписки.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#prepareMigration
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#prepareMigration
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: prepareMigration(ipName, callback)
+  summary: Подготовка к миграции resservedIP, api проверяет и подготавливает заданного зарезервированный IP-адрес для классической службы IaaS в ARM миграции.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.prepareMigration(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса для миграции.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function prepareMigration(ipName, callback)
+  langs:
+  - js
+- uid: azure-asm-network.ReservedIPOperations~ReservedIPOperations#validateMigration
+  id: azure-asm-network.ReservedIPOperations~ReservedIPOperations#validateMigration
+  parent: azure-asm-network.ReservedIPOperations~ReservedIPOperations
+  name: validateMigration(ipName, callback)
+  summary: Проверить миграцию зарезервированный IP-адрес api для проверки данного зарезервированный IP-адрес для классической службы IaaS в ARM миграции.
+  fullName: azure-asm-network.ReservedIPOperations~ReservedIPOperations.validateMigration(ipName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: ipName
+      type:
+      - string
+      description: Имя зарезервированного IP-адреса для миграции.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-network.Stream
+      description: Поток ответа.
+    content: function validateMigration(ipName, callback)
+  langs:
+  - js

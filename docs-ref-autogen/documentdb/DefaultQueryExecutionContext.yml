@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5ba4bb585dd9cac11f6c5859153482c745810346
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064677"
+items:
+- uid: documentdb.DefaultQueryExecutionContext
+  id: documentdb.DefaultQueryExecutionContext
+  name: DefaultQueryExecutionContext
+  summary: Предоставляет базовый контекст выполнения запроса. Это создает оболочку выполнения запроса внутренней логики с помощью указанного функции выборки
+  fullName: documentdb.DefaultQueryExecutionContext
+  type: Class
+  children:
+  - documentdb.DefaultQueryExecutionContext.#ctor
+  - documentdb.DefaultQueryExecutionContext#nextItem
+  - documentdb.DefaultQueryExecutionContext#current
+  - documentdb.DefaultQueryExecutionContext#hasMoreResults
+  - documentdb.DefaultQueryExecutionContext#fetchMore
+  langs:
+  - js
+- id: documentdb.DefaultQueryExecutionContext.#ctor
+  uid: documentdb.DefaultQueryExecutionContext.#ctor
+  parent: documentdb.DefaultQueryExecutionContext
+  name: DefaultQueryExecutionContext(documentclient, query, options, fetchFunctions)
+  fullName: documentdb.DefaultQueryExecutionContext.DefaultQueryExecutionContext(documentclient, query, options, fetchFunctions)
+  summary: Предоставляет базовый контекст выполнения запроса. Это создает оболочку выполнения запроса внутренней логики с помощью указанного функции выборки
+  type: Constructor
+  syntax:
+    parameters:
+    - id: documentclient
+      type:
+      - undefinedDocumentClient
+      description: Конечная точка службы, используемая для создания клиента.
+    - id: query
+      type:
+      - undefinedSqlQuerySpec
+      - string
+      description: SQL-запроса.
+    - id: options
+      type:
+      - undefinedFeedOptions
+      description: Представляет параметры веб-канала.
+      optional: true
+    - id: fetchFunctions
+      type:
+      - undefinedcallback
+      - undefinedArray.<callback>
+      description: Функция для извлечения каждой странице данных. Массив функций могут использоваться для запроса более чем одной секции.
+    content: new DefaultQueryExecutionContext(documentclient, query, options, fetchFunctions)
+  langs:
+  - js
+- uid: documentdb.DefaultQueryExecutionContext#nextItem
+  id: documentdb.DefaultQueryExecutionContext#nextItem
+  parent: documentdb.DefaultQueryExecutionContext
+  name: nextItem(callback)
+  summary: Выполнение предоставленного обратного вызова на следующий элемент в контексте выполнения.
+  fullName: documentdb.DefaultQueryExecutionContext.nextItem(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Функция, выполняемая для каждого элемента. функция принимает два параметра ошибка, элемент.
+    content: function nextItem(callback)
+  langs:
+  - js
+- uid: documentdb.DefaultQueryExecutionContext#current
+  id: documentdb.DefaultQueryExecutionContext#current
+  parent: documentdb.DefaultQueryExecutionContext
+  name: current(callback)
+  summary: Получение текущего элемента, в контекст выполнения.
+  fullName: documentdb.DefaultQueryExecutionContext.current(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Функция, выполняемая для текущего элемента. функция принимает два параметра ошибка, элемент.
+    content: function current(callback)
+  langs:
+  - js
+- uid: documentdb.DefaultQueryExecutionContext#hasMoreResults
+  id: documentdb.DefaultQueryExecutionContext#hasMoreResults
+  parent: documentdb.DefaultQueryExecutionContext
+  name: hasMoreResults()
+  summary: Определите, если еще остались ресурсы к процессу, исходя из значения, маркер продолжения или элементов на текущий пакет в контексте выполнения.
+  fullName: documentdb.DefaultQueryExecutionContext.hasMoreResults()
+  type: Function
+  syntax:
+    return:
+      type:
+      - Boolean
+      description: значение true, если другие элементы для обработки в DefaultQueryExecutionContext.
+    content: function hasMoreResults()
+  langs:
+  - js
+- uid: documentdb.DefaultQueryExecutionContext#fetchMore
+  id: documentdb.DefaultQueryExecutionContext#fetchMore
+  parent: documentdb.DefaultQueryExecutionContext
+  name: fetchMore(callback)
+  summary: Получает следующий пакет веб-канала и передать их в виде массива на обратный вызов
+  fullName: documentdb.DefaultQueryExecutionContext.fetchMore(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: Функция, выполнение веб-канала ответа, принимает два параметры сообщения об ошибках, resourcesList
+    content: function fetchMore(callback)
+  langs:
+  - js

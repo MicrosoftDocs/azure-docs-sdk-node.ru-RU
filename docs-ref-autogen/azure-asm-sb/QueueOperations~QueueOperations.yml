@@ -1,0 +1,471 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4e46f0fcf1c3a688b4a2234840c62b9c527faea6
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063904"
+items:
+- uid: azure-asm-sb.QueueOperations~QueueOperations
+  id: azure-asm-sb.QueueOperations~QueueOperations
+  name: QueueOperations
+  summary: >-
+    Шины API управления службами включает операции управления очередями служебной шины.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ServiceBusManagementClient] {@link ServiceBusManagementClient ~ ServiceBusManagementClient}.
+
+    См. в разделе [очереди] {@link ServiceBusManagementClient ~ ServiceBusManagementClient #queues}.
+
+    Инициализирует новый экземпляр класса QueueOperations.
+  fullName: azure-asm-sb.QueueOperations
+  type: Class
+  children:
+  - azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  - azure-asm-sb.QueueOperations~QueueOperations#create
+  - azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  - azure-asm-sb.QueueOperations~QueueOperations#get
+  - azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  - azure-asm-sb.QueueOperations~QueueOperations#list
+  - azure-asm-sb.QueueOperations~QueueOperations#update
+  langs:
+  - js
+- id: azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  uid: azure-asm-sb.QueueOperations~QueueOperations.#ctor
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: QueueOperations(client)
+  fullName: azure-asm-sb.QueueOperations.QueueOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedServiceBusManagementClient
+      description: Ссылка на клиента службы.
+    content: new QueueOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#create
+  id: azure-asm-sb.QueueOperations~QueueOperations#create
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: create(namespaceName, queue, callback)
+  summary: Создает новую очередь. После создания манифеста ресурсов для этой очереди является неизменяемым. Эта операция является идемпотентной. Повторение вызова для создания, после успешного создания очереди с тем же именем приведет к сообщение об ошибке 409 конфликт.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj856295.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.create(namespaceName, queue, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: queue
+      type:
+      - azure-asm-sb.ServiceBusQueueCreateParameters
+      description: Очередь служебной шины.
+    - id: queue.name
+      type:
+      - string
+      description: Имя очереди.
+    - id: queue.lockDuration
+      type:
+      - string
+      description: >-
+        Определяет количество времени в секундах, в которых сообщение должно быть блокировано для обработки получателем.
+
+        По истечении этого периода сообщение разблокируется и становится доступным для потребления следующим получателем. Настраивается только при создании очереди: * диапазон: 0 – 5 минут. 0 означает, что сообщение не блокировано * по умолчанию: 30 секунд
+      optional: true
+    - id: queue.maxSizeInMegabytes
+      type:
+      - number
+      description: 'Определяет максимальный размер очереди в мегабайтах. Любая попытка постановки в очередь сообщение, которое приведет к очереди превышает это значение не удастся. Этот параметр можно задать только во время создания очереди, используя следующие значения: * диапазона: 1 – 1024 (допустимые значения: 1024, 2048, 3072, 4096, 5120) * по умолчанию: 1 * 1024 (допустимые значения: 1024, 2048, 3072, 4096, 5120)'
+      optional: true
+    - id: queue.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 'Настраивается только при time.* создания очереди по умолчанию для надежной очереди: false'
+      optional: true
+    - id: queue.requiresSession
+      type:
+      - boolean
+      description: 'Настраивается только при создании очереди. Если задано значение true, очередь будет учитывать сеансы и будут поддерживаться только SessionReceiver. Учитывать сеансы очереди не поддерживаются через REST.* по умолчанию для надежной очереди: false'
+      optional: true
+    - id: queue.defaultMessageTimeToLive
+      type:
+      - string
+      description: 'В зависимости от включения отправку в мертвые очереди сообщение будет автоматически перемещен в DeadLetterQueue или удалены, если он был сохранен в очереди дольше указанного времени. Это значение перезаписывается значением TTL, заданным в сообщении, тогда и только тогда, когда TTL сообщения меньше TTL, заданного в очереди. Это значение является неизменяемым, после создания очереди: * диапазона: 1 секунда – по умолчанию TimeSpan.MaxValue*: TimeSpan.MaxValue'
+      optional: true
+    - id: queue.deadLetteringOnMessageExpiration
+      type:
+      - boolean
+      description: 'Это поле управляет тем, как служебная шина обрабатывает сообщения с истекшим TTL. Если оно включено и срок действия сообщения истекает, служебная шина перемещает сообщение из очереди в очереди недоставленных сообщений-вложенную очередь. Если отключен, сообщение окончательно удаляется из очереди. Настраивается только при time.* создания очереди по умолчанию: false'
+      optional: true
+    - id: queue.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Указывает интервал времени, в течение которого служебная шина обнаруживает дублирование сообщений: * диапазона: 1 секунда — 7 дней * по умолчанию: 10 минут'
+      optional: true
+    - id: queue.maxDeliveryCount
+      type:
+      - number
+      description: Максимальное количество раз, когда сообщение SB попытается доставки до исчезновения благосостояние происходит или отменены.
+      optional: true
+    - id: queue.enableBatchedOperations
+      type:
+      - boolean
+      description: Включает или отключает на стороне службы, поведение пакетной обработки при выполнении операций для определенной очереди. Если этот параметр включен, служебная шина будет сбор нескольких операций в пакет в серверную часть для повышения эффективности подключения. Если пользователю необходимо уменьшить задержку выполнения операции, а затем их можно отключить эту функцию.
+      optional: true
+    - id: queue.sizeInBytes
+      type:
+      - number
+      description: 'Отражает фактическое количество байтов, что сообщения в очереди, в данный момент занимают к очереди quota.* диапазон: 0 - MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: queue.messageCount
+      type:
+      - number
+      description: Отображает число сообщений, которые в настоящее время в очереди.
+      optional: true
+    - id: queue.isAnonymousAccessible
+      type:
+      - boolean
+      description: Получает значение, указывающее разрешен анонимный доступ.
+      optional: true
+    - id: queue.authorizationRules
+      type:
+      - array
+      description: Получает правила авторизации для описания.
+      optional: true
+    - id: queue.status
+      type:
+      - string
+      description: Возвращает или задает текущее состояние очереди (включен или выключен). При отключении очереди этой очереди не может отправлять или получать сообщения.
+      optional: true
+    - id: queue.supportOrdering
+      type:
+      - boolean
+      description: Получает или задает поддержку порядка в очереди.
+      optional: true
+    - id: queue.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: Текущая статистика очереди.
+      optional: true
+    - id: queue.countDetails.activeMessageCount
+      type:
+      - number
+      description: Текущее количество активных сообщений.
+      optional: true
+    - id: queue.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: Текущее количество истекшим.
+      optional: true
+    - id: queue.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: Текущий номер запланированных сообщений.
+      optional: true
+    - id: queue.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: Текущее количество передачи истекшим.
+      optional: true
+    - id: queue.countDetails.transferMessageCount
+      type:
+      - number
+      description: Текущее количество сообщений для передачи.
+      optional: true
+    - id: queue.autoDeleteOnIdle
+      type:
+      - string
+      description: Реализовано.
+      optional: true
+    - id: queue.entityAvailabilityStatus
+      type:
+      - string
+      description: Текущее состояние доступности для очереди.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function create(namespaceName, queue, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  id: azure-asm-sb.QueueOperations~QueueOperations#deleteMethod
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: deleteMethod(namespaceName, queueName, callback)
+  summary: Удаляет существующую очередь. Эта операция также удалит все связанные состояния, в том числе сообщения в очереди.  (см. в разделе http://msdn.microsoft.com/en-us/library/hh780747.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.deleteMethod(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: queueName
+      type:
+      - string
+      description: Имя очереди.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function deleteMethod(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#get
+  id: azure-asm-sb.QueueOperations~QueueOperations#get
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: get(namespaceName, queueName, callback)
+  summary: Описание очереди — это документ XML AtomPub, определяющий необходимую семантику подписки. Описание очереди содержит следующие свойства. Дополнительные сведения см. в разделе Свойства описания.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/hh780773.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.get(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: queueName
+      type:
+      - string
+      description: Имя очереди.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function get(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  id: azure-asm-sb.QueueOperations~QueueOperations#getConnectionDetails
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: getConnectionDetails(namespaceName, queueName, callback)
+  summary: Возвращает набор строк подключения для очереди.
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.getConnectionDetails(namespaceName, queueName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: queueName
+      type:
+      - string
+      description: Имя очереди.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function getConnectionDetails(namespaceName, queueName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#list
+  id: azure-asm-sb.QueueOperations~QueueOperations#list
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: list(namespaceName, callback)
+  summary: Перечисляет очереди в пространстве имен службы. Результат возвращается в страницах, каждая из которых содержит 100 очередей. Если пространство имен содержит более 100 очередей, канал возвращается, содержащий первую страницу и далее ссылку с URI, чтобы перейти к следующей странице данных.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/hh780759.asp Дополнительные сведения)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.list(namespaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function list(namespaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-sb.QueueOperations~QueueOperations#update
+  id: azure-asm-sb.QueueOperations~QueueOperations#update
+  parent: azure-asm-sb.QueueOperations~QueueOperations
+  name: update(namespaceName, queue, callback)
+  summary: Обновляет описание очереди и делает вызов для обновления соответствующих записей базы данных.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj856305.aspx Дополнительные сведения)
+  fullName: azure-asm-sb.QueueOperations~QueueOperations.update(namespaceName, queue, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: namespaceName
+      type:
+      - string
+      description: Имя пространства имен.
+    - id: queue
+      type:
+      - azure-asm-sb.ServiceBusQueue
+      description: Очередь служебной шины.
+    - id: queue.name
+      type:
+      - string
+      description: Имя очереди.
+      optional: true
+    - id: queue.lockDuration
+      type:
+      - string
+      description: >-
+        Определяет количество времени в секундах, в которых сообщение должно быть блокировано для обработки получателем.
+
+        По истечении этого периода сообщение разблокируется и становится доступным для потребления следующим получателем. Настраивается только при создании очереди: * диапазон: 0 – 5 минут. 0 означает, что сообщение не блокировано * по умолчанию: 30 секунд
+      optional: true
+    - id: queue.maxSizeInMegabytes
+      type:
+      - number
+      description: 'Определяет максимальный размер очереди в мегабайтах. Любая попытка постановки в очередь сообщение, которое приведет к очереди превышает это значение не удастся. Этот параметр можно задать только во время создания очереди, используя следующие значения: * диапазона: 1 – 1024 (допустимые значения: 1024, 2048, 3072, 4096, 5120) * по умолчанию: 1 * 1024 (допустимые значения: 1024, 2048, 3072, 4096, 5120)'
+      optional: true
+    - id: queue.requiresDuplicateDetection
+      type:
+      - boolean
+      description: 'Настраивается только при time.* создания очереди по умолчанию для надежной очереди: false'
+      optional: true
+    - id: queue.requiresSession
+      type:
+      - boolean
+      description: 'Настраивается только при создании очереди. Если задано значение true, очередь будет учитывать сеансы и будут поддерживаться только SessionReceiver. Учитывать сеансы очереди не поддерживаются через REST.* по умолчанию для надежной очереди: false'
+      optional: true
+    - id: queue.defaultMessageTimeToLive
+      type:
+      - string
+      description: 'В зависимости от включения отправку в мертвые очереди сообщение будет автоматически перемещен в DeadLetterQueue или удалены, если он был сохранен в очереди дольше указанного времени. Это значение перезаписывается значением TTL, заданным в сообщении, тогда и только тогда, когда TTL сообщения меньше TTL, заданного в очереди. Это значение является неизменяемым, после создания очереди: * диапазона: 1 секунда – по умолчанию TimeSpan.MaxValue*: TimeSpan.MaxValue'
+      optional: true
+    - id: queue.deadLetteringOnMessageExpiration
+      type:
+      - boolean
+      description: 'Это поле управляет тем, как служебная шина обрабатывает сообщения с истекшим TTL. Если оно включено и срок действия сообщения истекает, служебная шина перемещает сообщение из очереди в очереди недоставленных сообщений-вложенную очередь. Если отключен, сообщение окончательно удаляется из очереди. Настраивается только при time.* создания очереди по умолчанию: false'
+      optional: true
+    - id: queue.duplicateDetectionHistoryTimeWindow
+      type:
+      - string
+      description: 'Указывает интервал времени, в течение которого служебная шина обнаруживает дублирование сообщений: * диапазона: 1 секунда — 7 дней * по умолчанию: 10 минут'
+      optional: true
+    - id: queue.maxDeliveryCount
+      type:
+      - number
+      description: Максимальное количество раз, когда сообщение SB попытается доставки до исчезновения благосостояние происходит или отменены.
+      optional: true
+    - id: queue.enableBatchedOperations
+      type:
+      - boolean
+      description: Включает или отключает на стороне службы, поведение пакетной обработки при выполнении операций для определенной очереди. Если этот параметр включен, служебная шина будет сбор нескольких операций в пакет в серверную часть для повышения эффективности подключения. Если пользователю необходимо уменьшить задержку выполнения операции, а затем их можно отключить эту функцию.
+      optional: true
+    - id: queue.sizeInBytes
+      type:
+      - number
+      description: 'Отражает фактическое количество байтов, что сообщения в очереди, в данный момент занимают к очереди quota.* диапазон: 0 - MaxTopicSizeinMegaBytes'
+      optional: true
+    - id: queue.messageCount
+      type:
+      - number
+      description: Отображает число сообщений, которые в настоящее время в очереди.
+      optional: true
+    - id: queue.isAnonymousAccessible
+      type:
+      - boolean
+      description: Получает значение, указывающее разрешен анонимный доступ.
+      optional: true
+    - id: queue.authorizationRules
+      type:
+      - array
+      description: Получает правила авторизации для описания.
+      optional: true
+    - id: queue.status
+      type:
+      - string
+      description: Возвращает или задает текущее состояние очереди (включен или выключен). При отключении очереди этой очереди не может отправлять или получать сообщения.
+      optional: true
+    - id: queue.createdAt
+      type:
+      - date
+      description: Время создания очереди в.
+      optional: true
+    - id: queue.updatedAt
+      type:
+      - date
+      description: Время последнего обновления очереди.
+      optional: true
+    - id: queue.accessedAt
+      type:
+      - date
+      description: Время последнего доступа к очереди.
+      optional: true
+    - id: queue.supportOrdering
+      type:
+      - boolean
+      description: Получает или задает поддержку порядка в очереди.
+      optional: true
+    - id: queue.countDetails
+      type:
+      - azure-asm-sb.CountDetails
+      description: Текущая статистика очереди.
+      optional: true
+    - id: queue.countDetails.activeMessageCount
+      type:
+      - number
+      description: Текущее количество активных сообщений.
+      optional: true
+    - id: queue.countDetails.deadLetterMessageCount
+      type:
+      - number
+      description: Текущее количество истекшим.
+      optional: true
+    - id: queue.countDetails.scheduledMessageCount
+      type:
+      - number
+      description: Текущий номер запланированных сообщений.
+      optional: true
+    - id: queue.countDetails.transferDeadLetterMessageCount
+      type:
+      - number
+      description: Текущее количество передачи истекшим.
+      optional: true
+    - id: queue.countDetails.transferMessageCount
+      type:
+      - number
+      description: Текущее количество сообщений для передачи.
+      optional: true
+    - id: queue.autoDeleteOnIdle
+      type:
+      - string
+      description: Реализовано.
+      optional: true
+    - id: queue.entityAvailabilityStatus
+      type:
+      - string
+      description: Текущее состояние доступности для очереди.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sb.Stream
+      description: Поток ответа.
+    content: function update(namespaceName, queue, callback)
+  langs:
+  - js

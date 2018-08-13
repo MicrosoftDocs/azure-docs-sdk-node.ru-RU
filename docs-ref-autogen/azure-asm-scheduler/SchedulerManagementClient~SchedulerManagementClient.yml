@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3328f766984be0a15424004f1eada8a5cfeac32b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064161"
+items:
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: SchedulerManagementClient
+  summary: Инициализирует новый экземпляр класса SchedulerManagementClient.
+  fullName: azure-asm-scheduler.SchedulerManagementClient
+  type: Class
+  children:
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.#ctor
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#jobCollections
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getOperationStatus
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getResourceProviderProperties
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#registerResourceProvider
+  - azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#unregisterResourceProvider
+  langs:
+  - js
+- id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.#ctor
+  uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.#ctor
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: SchedulerManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-scheduler.SchedulerManagementClient.SchedulerManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Получает учетные данные подписки, которые однозначно идентифицируют подписку Microsoft Azure. Идентификатор подписки формирует часть URI для каждого вызова службы.
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: Возвращает URI, используемый как базовый для всех запросов к облачным службам.
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new SchedulerManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#jobCollections
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#jobCollections
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: jobCollections
+  summary: Предоставляет экземпляр [JobCollectionOperations](-JobCollectionOperations.html) объекта.
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.jobCollections
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: jobCollections
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getOperationStatus
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getOperationStatus
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: Операция получения состояния операции возвращает состояние операции thespecified. После вызова асинхронной операции, можно вызвать получение состояния операции, чтобы определить, является ли операция завершилась успешно, сбой, или все еще выполняется.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx Дополнительные сведения)
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: Идентификатор запроса для запроса, который требуется отследить. Идентификатор запроса возвращается в заголовке ответа x-ms-request-id для каждого запроса.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getResourceProviderProperties
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#getResourceProviderProperties
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: getResourceProviderProperties(callback)
+  summary: Получает список свойств, для поставщика ресурсов, в том числе поддерживаемых регионов и планами.
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.getResourceProviderProperties(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function getResourceProviderProperties(callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#registerResourceProvider
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#registerResourceProvider
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: registerResourceProvider(callback)
+  summary: Зарегистрируйте поставщик ресурсов планировщика с вашей подпиской.
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.registerResourceProvider(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function registerResourceProvider(callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#unregisterResourceProvider
+  id: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient#unregisterResourceProvider
+  parent: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient
+  name: unregisterResourceProvider(callback)
+  summary: Отменяет регистрацию поставщика ресурсов планировщика с вашей подпиской.
+  fullName: azure-asm-scheduler.SchedulerManagementClient~SchedulerManagementClient.unregisterResourceProvider(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function unregisterResourceProvider(callback)
+  langs:
+  - js

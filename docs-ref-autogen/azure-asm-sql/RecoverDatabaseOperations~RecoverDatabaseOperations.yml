@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 22970fa66e05e7a1cf9212b905a6b01f85e9f393
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064137"
+items:
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations
+  summary: >-
+    Содержит операции для создания запросов на восстановление для баз данных SQL Azure.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    См. в разделе [recoverDatabaseOperations] {@link SqlManagementClient ~ SqlManagementClient #recoverDatabaseOperations}.
+
+    Инициализирует новый экземпляр класса RecoverDatabaseOperations.
+  fullName: azure-asm-sql.RecoverDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  - azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  langs:
+  - js
+- id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.#ctor
+  parent: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: RecoverDatabaseOperations(client)
+  fullName: azure-asm-sql.RecoverDatabaseOperations.RecoverDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Ссылка на клиента службы.
+    content: new RecoverDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  id: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations#create
+  parent: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations
+  name: create(sourceServerName, parameters, callback)
+  summary: Выдает запрос на восстановление базы данных SQL Azure.
+  fullName: azure-asm-sql.RecoverDatabaseOperations~RecoverDatabaseOperations.create(sourceServerName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: sourceServerName
+      type:
+      - string
+      description: Имя сервера базы данных SQL Azure, на котором размещена база данных.
+    - id: parameters
+      type:
+      - azure-asm-sql.RecoverDatabaseOperationCreateParameters
+      description: Дополнительные параметры для запроса создания операции восстановления базы данных.
+    - id: parameters.sourceDatabaseName
+      type:
+      - string
+      description: Возвращает или задает имя исходной базы данных SQL Azure.
+    - id: parameters.targetServerName
+      type:
+      - string
+      description: Получает или задает имя целевого сервера базы данных SQL Azure.
+      optional: true
+    - id: parameters.targetDatabaseName
+      type:
+      - string
+      description: Возвращает или задает имя целевой базы данных SQL Azure.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function create(sourceServerName, parameters, callback)
+  langs:
+  - js

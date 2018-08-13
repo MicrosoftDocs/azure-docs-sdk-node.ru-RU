@@ -1,0 +1,504 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 57224e72fed5742b00b47d14fd7204fa9fa44ef8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063909"
+items:
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: JobCollectionOperations
+  summary: >-
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [SchedulerManagementClient] {@link SchedulerManagementClient ~ SchedulerManagementClient}.
+
+    См. в разделе [jobCollections] {@link SchedulerManagementClient ~ SchedulerManagementClient #jobCollections}.
+
+    Инициализирует новый экземпляр класса JobCollectionOperations.
+  fullName: azure-asm-scheduler.JobCollectionOperations
+  type: Class
+  children:
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  - azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  langs:
+  - js
+- id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.#ctor
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: JobCollectionOperations(client)
+  fullName: azure-asm-scheduler.JobCollectionOperations.JobCollectionOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerManagementClient
+      description: Ссылка на клиента службы.
+    content: new JobCollectionOperations(client)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginCreating
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: Создайте коллекцию заданий.
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Имя облачной службы, содержащей коллекцию заданий.
+    - id: jobCollectionName
+      type:
+      - string
+      description: Имя коллекции заданий для создания.
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionCreateParameters
+      description: Параметры для операции создания коллекции заданий.
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: Версия внутренних свойств для ресурса. Если не указан, должны соответствовать версии ресурса контракта, регистрируемым по умолчанию.
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Метка для ресурса.
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: Встроенные параметры для коллекции заданий планировщика.
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: План ресурса.
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: Параметры квоты для коллекции заданий.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: Максимальное количество заданий, которые могут быть созданы в этой коллекции. Максимальное значение зависит от плана.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: Максимальное количество вхождений для всех заданий в коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: Определяет максимальное повторов, которые можно задать в любое задание, в этой коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: Определяет максимальное повторов, которые можно задать в любое задание, в этой коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: Определяет интервал.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function beginCreating(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginDeleting
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginDeleting(cloudServiceName, jobCollectionName, callback)
+  summary: Удаляет коллекцию заданий.
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginDeleting(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: jobCollectionName
+      type:
+      - string
+      description: Имя коллекции заданий для удаления.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function beginDeleting(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#beginUpdating
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: Обновите коллекцию заданий.
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Имя облачной службы, содержащей коллекцию заданий.
+    - id: jobCollectionName
+      type:
+      - string
+      description: Имя коллекции заданий для обновления.
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionUpdateParameters
+      description: Параметры для операции обновления коллекции заданий.
+    - id: parameters.eTag
+      type:
+      - string
+      description: >-
+        ETag коллекции заданий для обновления.
+
+        Обновление завершится ошибкой, если ETag не совпадают.
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: Версия внутренних свойств для ресурса. Если не указан, должны соответствовать версии ресурса контракта, регистрируемым по умолчанию.
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Метка для ресурса.
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: Встроенные параметры для коллекции заданий планировщика.
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: План ресурса.
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: Параметры квоты для коллекции заданий.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: Максимальное количество заданий, которые могут быть созданы в этой коллекции. Максимальное значение зависит от плана.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: Максимальное количество вхождений для всех заданий в коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: Определяет максимальное повторов, которые можно задать в любое задание, в этой коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: Определяет максимальное повторов, которые можно задать в любое задание, в этой коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: Определяет интервал.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function beginUpdating(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#checkNameAvailability
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  summary: >-
+    Определите, доступна ли имя JobCollection для использования.
+
+    JobCollection имена должны быть уникальными в пределах облачной службы.
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: jobCollectionName
+      type:
+      - string
+      description: Имя JobCollection. Имя должно быть уникальным, так как в пределах облачная служба.  Имя может быть до 100 символов.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function checkNameAvailability(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#create
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: create(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: Создайте коллекцию заданий.
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.create(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Имя облачной службы, содержащей коллекцию заданий.
+    - id: jobCollectionName
+      type:
+      - string
+      description: Имя коллекции заданий для создания.
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionCreateParameters
+      description: Параметры для операции создания коллекции заданий.
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: Версия внутренних свойств для ресурса. Если не указан, должны соответствовать версии ресурса контракта, регистрируемым по умолчанию.
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Метка для ресурса.
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: Встроенные параметры для коллекции заданий планировщика.
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: План ресурса.
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: Параметры квоты для коллекции заданий.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: Максимальное количество заданий, которые могут быть созданы в этой коллекции. Максимальное значение зависит от плана.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: Максимальное количество вхождений для всех заданий в коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: Определяет максимальное повторов, которые можно задать в любое задание, в этой коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: Определяет максимальное повторов, которые можно задать в любое задание, в этой коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: Определяет интервал.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function create(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#deleteMethod
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: deleteMethod(cloudServiceName, jobCollectionName, callback)
+  summary: Удаляет коллекцию заданий.
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.deleteMethod(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: jobCollectionName
+      type:
+      - string
+      description: Имя коллекции заданий для удаления.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function deleteMethod(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#get
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: get(cloudServiceName, jobCollectionName, callback)
+  summary: Получить коллекцию заданий.
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.get(cloudServiceName, jobCollectionName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: jobCollectionName
+      type:
+      - string
+      description: Имя коллекции заданий.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function get(cloudServiceName, jobCollectionName, callback)
+  langs:
+  - js
+- uid: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  id: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations#update
+  parent: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations
+  name: update(cloudServiceName, jobCollectionName, parameters, callback)
+  summary: Обновите коллекцию заданий.
+  fullName: azure-asm-scheduler.JobCollectionOperations~JobCollectionOperations.update(cloudServiceName, jobCollectionName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: cloudServiceName
+      type:
+      - string
+      description: Имя облачной службы, содержащей коллекцию заданий.
+    - id: jobCollectionName
+      type:
+      - string
+      description: Имя коллекции заданий для обновления.
+    - id: parameters
+      type:
+      - azure-asm-scheduler.JobCollectionUpdateParameters
+      description: Параметры для операции обновления коллекции заданий.
+    - id: parameters.eTag
+      type:
+      - string
+      description: >-
+        ETag коллекции заданий для обновления.
+
+        Обновление завершится ошибкой, если ETag не совпадают.
+    - id: parameters.schemaVersion
+      type:
+      - string
+      description: Версия внутренних свойств для ресурса. Если не указан, должны соответствовать версии ресурса контракта, регистрируемым по умолчанию.
+      optional: true
+    - id: parameters.label
+      type:
+      - string
+      description: Метка для ресурса.
+      optional: true
+    - id: parameters.intrinsicSettings
+      type:
+      - azure-asm-scheduler.JobCollectionIntrinsicSettings
+      description: Встроенные параметры для коллекции заданий планировщика.
+      optional: true
+    - id: parameters.intrinsicSettings.plan
+      type:
+      - azure-asm-scheduler.JobCollectionPlan
+      description: План ресурса.
+      optional: true
+    - id: parameters.intrinsicSettings.quota
+      type:
+      - azure-asm-scheduler.JobCollectionQuota
+      description: Параметры квоты для коллекции заданий.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobCount
+      type:
+      - number
+      description: Максимальное количество заданий, которые могут быть созданы в этой коллекции. Максимальное значение зависит от плана.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxJobOccurrence
+      type:
+      - number
+      description: Максимальное количество вхождений для всех заданий в коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence
+      type:
+      - azure-asm-scheduler.JobCollectionMaxRecurrence
+      description: Определяет максимальное повторов, которые можно задать в любое задание, в этой коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.frequency
+      type:
+      - azure-asm-scheduler.JobCollectionRecurrenceFrequency
+      description: Определяет максимальное повторов, которые можно задать в любое задание, в этой коллекции.
+      optional: true
+    - id: parameters.intrinsicSettings.quota.maxRecurrence.interval
+      type:
+      - number
+      description: Определяет интервал.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-scheduler.Stream
+      description: Поток ответа.
+    content: function update(cloudServiceName, jobCollectionName, parameters, callback)
+  langs:
+  - js

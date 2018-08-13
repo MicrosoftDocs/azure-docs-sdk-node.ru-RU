@@ -1,0 +1,95 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bf6aedf3528cf423db94b2360bafd8ed15b181d3
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064155"
+items:
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations
+  summary: >-
+    Содержит операции для получения баз данных SQL Azure, которые могут быть восстановлены.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [SqlManagementClient] {@link SqlManagementClient ~ SqlManagementClient}.
+
+    См. в разделе [recoverableDatabases] {@link SqlManagementClient ~ SqlManagementClient #recoverableDatabases}.
+
+    Инициализирует новый экземпляр класса RecoverableDatabaseOperations.
+  fullName: azure-asm-sql.RecoverableDatabaseOperations
+  type: Class
+  children:
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  - azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  langs:
+  - js
+- id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.#ctor
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: RecoverableDatabaseOperations(client)
+  fullName: azure-asm-sql.RecoverableDatabaseOperations.RecoverableDatabaseOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSqlManagementClient
+      description: Ссылка на клиента службы.
+    content: new RecoverableDatabaseOperations(client)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#get
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: get(serverName, databaseName, callback)
+  summary: Возвращает сведения о восстанавливаемой базы данных SQL Azure.
+  fullName: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.get(serverName, databaseName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера базы данных SQL Azure, на котором размещена база данных.
+    - id: databaseName
+      type:
+      - string
+      description: Имя восстанавливаемой базы данных SQL Azure должны быть получены.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function get(serverName, databaseName, callback)
+  langs:
+  - js
+- uid: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  id: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations#list
+  parent: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations
+  name: list(serverName, callback)
+  summary: Возвращает коллекцию баз данных, которые могут быть восстановлены с указанного сервера.
+  fullName: azure-asm-sql.RecoverableDatabaseOperations~RecoverableDatabaseOperations.list(serverName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serverName
+      type:
+      - string
+      description: Имя сервера базы данных SQL Azure, на котором были размещены базы данных.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-sql.Stream
+      description: Поток ответа.
+    content: function list(serverName, callback)
+  langs:
+  - js

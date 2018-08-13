@@ -1,0 +1,148 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4be253aec431b8ac2fcbd32b5734be951e96255d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063826"
+items:
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient
+  id: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: ManagementClient
+  summary: API управления службами предоставляет программный доступ к большинству функций, доступных через портал управления. API управления службами — это API REST. Все операции API выполняются по SSL и выполняют взаимную проверку подлинности с использованием сертификатов X.509 v3.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460799.aspx подробнее) Инициализирует новый экземпляр класса ManagementClient.
+  fullName: azure-asm-mgmt.ManagementClient
+  type: Class
+  children:
+  - azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  - azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  - azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  - azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  - azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  - azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  - azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  langs:
+  - js
+- id: azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  uid: azure-asm-mgmt.ManagementClient~ManagementClient.#ctor
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: ManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-mgmt.ManagementClient.ManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Получает учетные данные подписки, которые однозначно идентифицируют подписку Microsoft Azure. Идентификатор подписки формирует часть URI для каждого вызова службы.
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: Возвращает URI, используемый как базовый для всех запросов к облачным службам.
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new ManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#affinityGroups
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: affinityGroups
+  summary: Предоставляет экземпляр [AffinityGroupOperations](-AffinityGroupOperations.html) объекта.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.affinityGroups
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: affinityGroups
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#locations
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: locations
+  summary: Предоставляет экземпляр [LocationOperations](-LocationOperations.html) объекта.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.locations
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: locations
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#managementCertificates
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: managementCertificates
+  summary: Предоставляет экземпляр [ManagementCertificateOperations](-ManagementCertificateOperations.html) объекта.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.managementCertificates
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: managementCertificates
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#roleSizes
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: roleSizes
+  summary: Предоставляет экземпляр [RoleSizeOperations](-RoleSizeOperations.html) объекта.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.roleSizes
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: roleSizes
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#subscriptions
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: subscriptions
+  summary: Предоставляет экземпляр [SubscriptionOperations](-SubscriptionOperations.html) объекта.
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.subscriptions
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: subscriptions
+  langs:
+  - js
+- uid: azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  id: azure-asm-mgmt.ManagementClient~ManagementClient#getOperationStatus
+  parent: azure-asm-mgmt.ManagementClient~ManagementClient
+  name: getOperationStatus(requestId, callback)
+  summary: Операция получения состояния операции возвращает состояние указанной операции. После вызова асинхронной операции, можно вызвать получение состояния операции, чтобы определить, является ли операция завершилась успешно, сбой, или все еще выполняется.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.ManagementClient~ManagementClient.getOperationStatus(requestId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: requestId
+      type:
+      - string
+      description: Идентификатор запроса для запроса, который требуется отследить. Идентификатор запроса возвращается в заголовке ответа x-ms-request-id для каждого запроса.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function getOperationStatus(requestId, callback)
+  langs:
+  - js

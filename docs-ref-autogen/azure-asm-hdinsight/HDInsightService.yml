@@ -1,0 +1,341 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: de75df4066cec224dd433906c125d5d5831dec66
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063898"
+items:
+- uid: azure-asm-hdinsight.HDInsightService
+  id: azure-asm-hdinsight.HDInsightService
+  name: HDInsightService
+  summary: Класс HDInsightService используется для выполнения операций в службе Microsoft Azure HDInsight.
+  fullName: azure-asm-hdinsight.HDInsightService
+  type: Class
+  children:
+  - azure-asm-hdinsight.HDInsightService.#ctor
+  - azure-asm-hdinsight.HDInsightService#convertCreationObject
+  - azure-asm-hdinsight.HDInsightService#deleteCluster
+  - azure-asm-hdinsight.HDInsightService#createCluster
+  - azure-asm-hdinsight.HDInsightService#listClusters
+  langs:
+  - js
+- id: azure-asm-hdinsight.HDInsightService.#ctor
+  uid: azure-asm-hdinsight.HDInsightService.#ctor
+  parent: azure-asm-hdinsight.HDInsightService
+  name: HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-hdinsight.HDInsightService.HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  summary: Создает новый объект HDInsightService
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: Идентификатор конфигурации хранилища или подписку для учетной записи или строке подключения
+    - id: authentication
+      type:
+      - object
+      description: >-
+        Объект проверки подлинности для клиента.
+
+
+        Keyfile-certfile или keyvalue/certvalue необходимо использовать для предоставления сертификата управления для проверки подлинности запросов на обслуживание.
+    - id: authentication.keyfile
+      type:
+      - string
+      description: Путь к файлу, который содержит PEM ключ в кодировке
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: Путь к файлу, который содержит PEM сертификат в кодировке
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: Строка, содержащая PEM ключ в кодировке
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: Строка, содержащая PEM сертификат в кодировке
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: Параметры узла для переопределения значения по умолчанию.
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: Конечная точка управления.
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: Версия API для использования.
+      optional: true
+    content: new HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#convertCreationObject
+  id: azure-asm-hdinsight.HDInsightService#convertCreationObject
+  parent: azure-asm-hdinsight.HDInsightService
+  name: convertCreationObject(clusterCreationObject)
+  summary: Преобразует объект создания кластера в playload, который фактически отправляется на сервер для создания кластера.
+  fullName: azure-asm-hdinsight.HDInsightService.convertCreationObject(clusterCreationObject)
+  type: Function
+  syntax:
+    parameters:
+    - id: clusterCreationObject
+      type:
+      - object
+      description: Объект, используемый для предоставления все параметры, необходимые для создания кластера.
+    - id: clusterCreationObject.name
+      type:
+      - string
+      description: Имя кластера (имя dns) нижнем регистре
+    - id: clusterCreationObject.location
+      type:
+      - string
+      description: Центр обработки данных Azure, где будет создаваться кластера
+    - id: clusterCreationObject.defaultStorageAccountName
+      type:
+      - string
+      description: Имя учетной записи хранения Azure по умолчанию
+    - id: clusterCreationObject.defaultStorageAccountKey
+      type:
+      - string
+      description: Секретный ключ для учетной записи хранения Azure по умолчанию
+    - id: clusterCreationObject.defaultStorageContainer
+      type:
+      - string
+      description: Контейнер для учетной записи хранения Azure по умолчанию
+    - id: clusterCreationObject.user
+      type:
+      - string
+      description: Имя пользователя, используемое для кластера
+    - id: clusterCreationObject.password
+      type:
+      - string
+      description: Пароль, используемый для кластера
+    - id: clusterCreationObject.nodes
+      type:
+      - azure-asm-hdinsight.int
+      description: Количество узлов для использования
+    - id: clusterCreationObject.additionalStorageAccounts
+      type:
+      - array
+      description: Массив объектов, позволяет предоставить дополнительное хранилище сведения об учетной записи
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.name
+      type:
+      - string
+      description: Имя учетной записи хранения
+    - id: clusterCreationObject.additionalStorageAccounts.key
+      type:
+      - string
+      description: Ключ для учетной записи хранения
+    - id: clusterCreationObject.oozieMetastore
+      type:
+      - object
+      description: Объект, используемый для передачи параметров хранилища метаданных Oozie
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.server
+      type:
+      - string
+      description: Имя сервера базы данных SQL для использования
+    - id: clusterCreationObject.oozieMetastore.database
+      type:
+      - string
+      description: Имя базы данных для использования
+    - id: clusterCreationObject.oozieMetastore.user
+      type:
+      - string
+      description: Имя пользователя, используемое при проверке подлинности на сервере базы данных /
+    - id: clusterCreationObject.oozieMetastore.password
+      type:
+      - string
+      description: Пароль пользователя
+    - id: clusterCreationObject.hiveMetastore
+      type:
+      - object
+      description: Объект, используемый для передачи параметров хранилища метаданных Hive
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.server
+      type:
+      - string
+      description: Имя сервера базы данных SQL для использования
+    - id: clusterCreationObject.hiveMetastore.database
+      type:
+      - string
+      description: Имя базы данных для использования
+    - id: clusterCreationObject.hiveMetastore.user
+      type:
+      - string
+      description: Имя пользователя, используемое при проверке подлинности на сервере базы данных /
+    - id: clusterCreationObject.hiveMetastore.password
+      type:
+      - string
+      description: Пароль пользователя
+    content: function convertCreationObject(clusterCreationObject)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#deleteCluster
+  id: azure-asm-hdinsight.HDInsightService#deleteCluster
+  parent: azure-asm-hdinsight.HDInsightService
+  name: deleteCluster(name, location, callback)
+  summary: Удаление кластера HDInsight
+  fullName: azure-asm-hdinsight.HDInsightService.deleteCluster(name, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: location
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function deleteCluster(name, location, callback)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#createCluster
+  id: azure-asm-hdinsight.HDInsightService#createCluster
+  parent: azure-asm-hdinsight.HDInsightService
+  name: createCluster(clusterCreationObject, callback)
+  summary: Создает новый кластер HDInsight
+  fullName: azure-asm-hdinsight.HDInsightService.createCluster(clusterCreationObject, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: clusterCreationObject
+      type:
+      - object
+      description: Сведения о кластере для создания.
+    - id: clusterCreationObject.name
+      type:
+      - string
+      description: Имя кластера (имя dns) нижнем регистре
+    - id: clusterCreationObject.location
+      type:
+      - string
+      description: Центр обработки данных Azure, где будет создаваться кластера
+    - id: clusterCreationObject.defaultStorageAccountName
+      type:
+      - string
+      description: Имя учетной записи хранения Azure по умолчанию
+    - id: clusterCreationObject.defaultStorageAccountKey
+      type:
+      - string
+      description: Секретный ключ для учетной записи хранения Azure по умолчанию
+    - id: clusterCreationObject.defaultStorageContainer
+      type:
+      - string
+      description: Контейнер для учетной записи хранения Azure по умолчанию
+    - id: clusterCreationObject.user
+      type:
+      - string
+      description: Имя пользователя, используемое для кластера
+    - id: clusterCreationObject.password
+      type:
+      - string
+      description: Пароль, используемый для кластера
+    - id: clusterCreationObject.nodes
+      type:
+      - number
+      description: Количество узлов для использования
+    - id: clusterCreationObject.additionalStorageAccounts
+      type:
+      - array
+      description: Дополнительные учетные записи хранения
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.name
+      type:
+      - string
+      description: Имя учетной записи хранения
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.key
+      type:
+      - string
+      description: Секретный ключ для учетной записи хранения
+      optional: true
+    - id: clusterCreationObject.oozieMetastore
+      type:
+      - object
+      description: Сведения о хранилище метаданных Oozie
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.server
+      type:
+      - string
+      description: Имя sql server для использования
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.database
+      type:
+      - string
+      description: Базе данных sql для использования
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.user
+      type:
+      - string
+      description: Имя пользователя, необходимо использовать для входа в базу данных
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.password
+      type:
+      - string
+      description: Пароль, используемый при входе в базу данных
+      optional: true
+    - id: clusterCreationObject.hiveMetastore
+      type:
+      - object
+      description: Сведения о хранилище метаданных Hive
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.server
+      type:
+      - string
+      description: Имя sql server для использования
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.database
+      type:
+      - string
+      description: Базе данных sql для использования
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.user
+      type:
+      - string
+      description: Имя пользователя, необходимо использовать для входа в базу данных
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.password
+      type:
+      - string
+      description: Пароль, используемый при входе в базу данных
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function createCluster(clusterCreationObject, callback)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#listClusters
+  id: azure-asm-hdinsight.HDInsightService#listClusters
+  parent: azure-asm-hdinsight.HDInsightService
+  name: listClusters(callback)
+  summary: Список всех кластеров HDInsight, текущий, существующие в подписке.
+  fullName: azure-asm-hdinsight.HDInsightService.listClusters(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function listClusters(callback)
+  langs:
+  - js

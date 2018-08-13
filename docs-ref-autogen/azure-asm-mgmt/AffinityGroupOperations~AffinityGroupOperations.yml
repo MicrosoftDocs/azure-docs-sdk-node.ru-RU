@@ -1,0 +1,190 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3433701b84a6eeb4afb19279ae12ec0bdc29c3da
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063879"
+items:
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: AffinityGroupOperations
+  summary: >-
+    Операции управления территориальными группами в вашей подписке.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460798.aspx подробнее) __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ManagementClient] {@link ManagementClient ~ ManagementClient}.
+
+    См. в разделе [affinityGroups] {@link ManagementClient ~ ManagementClient #affinityGroups}.
+
+    Инициализирует новый экземпляр класса AffinityGroupOperations.
+  fullName: azure-asm-mgmt.AffinityGroupOperations
+  type: Class
+  children:
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  - azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  langs:
+  - js
+- id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.#ctor
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: AffinityGroupOperations(client)
+  fullName: azure-asm-mgmt.AffinityGroupOperations.AffinityGroupOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedManagementClient
+      description: Ссылка на клиента службы.
+    content: new AffinityGroupOperations(client)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#create
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: create(parameters, callback)
+  summary: Операция создания территориальной группы создает новую территориальную группу для указанной подписки.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/gg715317.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-mgmt.AffinityGroupCreateParameters
+      description: Параметры для операции создания территориальной группы.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя для территориальной группы, уникальное для подписки.
+    - id: parameters.label
+      type:
+      - string
+      description: Кодировке base-64 имя для территориальной группы. Имя может быть до 100 символов. Его значение по умолчанию имя территориальной группы, если не указано.
+    - id: parameters.description
+      type:
+      - string
+      description: Описание для территориальной группы. Описание может содержать до 1024 символов.
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: Расположение, где будет создана территориальная группа центра обработки данных. Отображение списка доступных расположений, см. в разделе операции List Locations.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#deleteMethod
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: deleteMethod(affinityGroupName, callback)
+  summary: Удаление территориальной группы операция удаляет территориальную группу для указанной подписки.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/gg715314.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.deleteMethod(affinityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: Имя территориальной группы.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function deleteMethod(affinityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#get
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: get(affinityGroupName, callback)
+  summary: Получение свойств территориальной группы операция возвращает системные свойства, связанные с указанной территориальной группой.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460789.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.get(affinityGroupName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: Имя нужной территориальной группы, возвращенным элементом name операции List Affinity Groups.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function get(affinityGroupName, callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#list
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: list(callback)
+  summary: Операция List Affinity Groups перечисляет Территориальные группы, связанные с указанной подпиской.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460797.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  id: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations#update
+  parent: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations
+  name: update(affinityGroupName, parameters, callback)
+  summary: Операция обновления территориальная группа обновляет метку или описание территориальной группы для указанной подписки.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/gg715316.aspx Дополнительные сведения)
+  fullName: azure-asm-mgmt.AffinityGroupOperations~AffinityGroupOperations.update(affinityGroupName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: affinityGroupName
+      type:
+      - string
+      description: Имя территориальной группы.
+    - id: parameters
+      type:
+      - azure-asm-mgmt.AffinityGroupUpdateParameters
+      description: Параметры для операции обновления территориальную группу.
+    - id: parameters.label
+      type:
+      - string
+      description: Имя сходства, указанного как строка в кодировке base-64. Метка может быть до 100 символов.
+    - id: parameters.description
+      type:
+      - string
+      description: Описание для территориальной группы. Описание может содержать до 1024 символов.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-mgmt.Stream
+      description: Поток ответа.
+    content: function update(affinityGroupName, parameters, callback)
+  langs:
+  - js

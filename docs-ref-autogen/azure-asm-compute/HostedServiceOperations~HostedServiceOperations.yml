@@ -1,0 +1,649 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d38827acb2346617b73ae6afad4c40d4452cd82
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063934"
+items:
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations
+  summary: >-
+    API управления службами включает операции управления размещенными службами под вашей подпиской.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460812.aspx подробнее) __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    См. в разделе [hostedServices] {@link ComputeManagementClient ~ ComputeManagementClient #hostedServices}.
+
+    Инициализирует новый экземпляр класса HostedServiceOperations.
+  fullName: azure-asm-compute.HostedServiceOperations
+  type: Class
+  children:
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  - azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.#ctor
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: HostedServiceOperations(client)
+  fullName: azure-asm-compute.HostedServiceOperations.HostedServiceOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Ссылка на клиента службы.
+    content: new HostedServiceOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#addExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: addExtension(serviceName, parameters, callback)
+  summary: >-
+    Добавить расширение операции добавляет доступное расширение к облачной службе. В Azure процесс может выполняться как расширение облачной службы.
+
+    Например удаленный доступ к рабочему столу или агент Azure Diagnostics может работать как расширения в облачную службу. Доступное расширение можно найти с помощью операции перечисления доступных расширений.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.addExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: Параметры, передаваемые операциям добавить расширение.
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: Пространство имен поставщика расширения. Пространство имен поставщика для расширений Azure — Microsoft.Windows.Azure.Extensions.
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: Тип расширения.
+    - id: parameters.id
+      type:
+      - string
+      description: Идентификатор расширения.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: Отпечаток сертификата, который используется для шифрования конфигурации, заданной в PrivateConfiguration. Если этот элемент не указан, сертификат может быть автоматически создается и добавляется к облачной службе.
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: Алгоритм отпечатка сертификата, который используется для шифрования конфигурации, заданной в PrivateConfiguration.
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: Открытая конфигурация, который определен с помощью схемы, возвращаемые операцией перечисления доступных расширений.
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: Закрытая конфигурация, который определен с помощью схемы, возвращаемые операцией перечисления доступных расширений.
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: Указывает версию расширения. Если этот элемент не указан или звездочка (*) используется значение, последнюю версию расширения. Если значение указано с основным номером версии и звездочкой в качестве дополнительного номера версии (X.*), выбирается последняя дополнительная версия указанной основной версии. Если указан номер основной версии и дополнительный номера версии (X.Y), выбирается соответствующая версия расширения. Если версия указана, выполняется автоматическое обновление выполняется в экземпляре роли.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function addExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginAddingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginAddingExtension(serviceName, parameters, callback)
+  summary: >-
+    Начать добавление расширения операции добавляет доступное расширение к облачной службе. В Azure процесс может выполняться как расширение облачной службы. Например удаленный доступ к рабочему столу или агент Azure Diagnostics может работать как расширения в облачную службу. Доступное расширение можно найти с помощью операции перечисления доступных расширений.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn169558.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginAddingExtension(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceAddExtensionParameters
+      description: Параметры, передаваемые операциям начать добавление расширения.
+    - id: parameters.providerNamespace
+      type:
+      - string
+      description: Пространство имен поставщика расширения. Пространство имен поставщика для расширений Azure — Microsoft.Windows.Azure.Extensions.
+      optional: true
+    - id: parameters.type
+      type:
+      - string
+      description: Тип расширения.
+    - id: parameters.id
+      type:
+      - string
+      description: Идентификатор расширения.
+    - id: parameters.thumbprint
+      type:
+      - string
+      description: Отпечаток сертификата, который используется для шифрования конфигурации, заданной в PrivateConfiguration. Если этот элемент не указан, сертификат может быть автоматически создается и добавляется к облачной службе.
+      optional: true
+    - id: parameters.thumbprintAlgorithm
+      type:
+      - string
+      description: Алгоритм отпечатка сертификата, который используется для шифрования конфигурации, заданной в PrivateConfiguration.
+      optional: true
+    - id: parameters.publicConfiguration
+      type:
+      - string
+      description: Открытая конфигурация, который определен с помощью схемы, возвращаемые операцией перечисления доступных расширений.
+      optional: true
+    - id: parameters.privateConfiguration
+      type:
+      - string
+      description: Закрытая конфигурация, который определен с помощью схемы, возвращаемые операцией перечисления доступных расширений.
+      optional: true
+    - id: parameters.version
+      type:
+      - string
+      description: Указывает версию расширения. Если этот элемент не указан или звездочка (*) используется значение, последнюю версию расширения. Если значение указано с основным номером версии и звездочкой в качестве дополнительного номера версии (X.*), выбирается последняя дополнительная версия указанной основной версии. Если указан номер основной версии и дополнительный номера версии (X.Y), выбирается соответствующая версия расширения. Если версия указана, выполняется автоматическое обновление выполняется в экземпляре роли.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginAddingExtension(serviceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingAll(serviceName, callback)
+  summary: Операции службы, размещенной в DeleteAll удаляет указанную облачную службу, а также диск операционной системы, подключенные диски данных и исходный BLOB-объект для дисков из хранилища из Microsoft Azure. (см. в разделе "http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx" Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginDeletingAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#beginDeletingExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: beginDeletingExtension(serviceName, extensionId, callback)
+  summary: Начать удаление расширения операция удаляет указанное расширение из облачной службы.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.beginDeletingExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: extensionId
+      type:
+      - string
+      description: Идентификатор, который был назначен расширению, когда оно было добавлено в облачную службу
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginDeletingExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#checkNameAvailability
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: checkNameAvailability(serviceName, callback)
+  summary: Проверка доступности имени размещенной службы операция проверяет доступность имени указанной облачной службы.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj154116.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.checkNameAvailability(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы, который вы хотите использовать.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function checkNameAvailability(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#create
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: create(parameters, callback)
+  summary: >-
+    Операция создания размещенной службы создает новую облачную службу в Azure.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/gg441304.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceCreateParameters
+      description: Параметры для операции создания размещенной службы.
+    - id: parameters.serviceName
+      type:
+      - string
+      description: Имя для облачной службы, который является уникальным в пределах Azure. Это имя префикса DNS-имя и может использоваться для доступа к службе.
+    - id: parameters.label
+      type:
+      - string
+      description: Имя для облачной службы. Имя может быть до 100 символов. Имя может использоваться для идентификации учетной записи хранения для целей отслеживания.
+    - id: parameters.description
+      type:
+      - string
+      description: Описание для облачной службы. Описание может содержать до 1024 символов.
+      optional: true
+    - id: parameters.location
+      type:
+      - string
+      description: Расположение, где будут создаваться в облачную службу. Требуется, если не указан AffinityGroup. Укажите расположение или AffinityGroup, но не оба. Отображение списка доступных расположений, используйте операцию List Locations.
+      optional: true
+    - id: parameters.affinityGroup
+      type:
+      - string
+      description: Имя существующей территориальной группы связанных с этой подпиской. Требуется, если расположение не указано. Это имя является идентификатором GUID и может быть получено считыванием элемента name текста ответа, возвращаемого операцией перечисление территориальных групп. Укажите расположение или AffinityGroup, но не оба. Чтобы пронумеровать доступные Территориальные группы, используйте операцию List Affinity Groups.
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: Представляет имя расширенного свойства облачной службы. Каждое расширенное свойство должно иметь определенное имя и значение. Может иметь не более 50 пар имени и значения расширенных свойств. Максимальная длина имени элемента — 64 символа, в имени допустимы только буквенно-цифровые символы и знаки подчеркивания и должно начинаться с буквы. Попытка использовать другие символы, начать не с буквы или ввести имя, которое имеется у другого расширенного свойства в той же службы приведет к 400 (неправильный запрос) ошибке с кодом состояния. Значение каждого расширенного свойства имеет максимальную длину 255 символов.
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: DNS-адрес, к которому разрешение IP-адреса облачной службы, когда запрос обратного запроса Dns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteMethod
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteMethod(serviceName, callback)
+  summary: Операция удаления размещенной службы удаляет указанную облачную службу из Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteMethod(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function deleteMethod(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteAll
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteAll(serviceName, callback)
+  summary: Операции службы, размещенной в DeleteAll удаляет указанную облачную службу, а также диск операционной системы, подключенные диски данных и исходный BLOB-объект для дисков из хранилища из Microsoft Azure. (см. в разделе "http://msdn.microsoft.com/en-us/library/windowsazure/gg441305.aspx" Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteAll(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function deleteAll(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#deleteExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: deleteExtension(serviceName, extensionId, callback)
+  summary: Операция удаления расширения удаляет указанное расширение из облачной службы.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn169560.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.deleteExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: extensionId
+      type:
+      - string
+      description: Идентификатор, который был назначен расширению, когда оно было добавлено в облачную службу
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function deleteExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#get
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: get(serviceName, callback)
+  summary: >-
+    Операция Get Hosted Service Properties извлекает системные свойства для указанной облачной службы. Эти свойства включают имя службы и тип службы; и имя территориальной группы, к которому принадлежит служба, или ее расположение, если он не является частью территориальной группы.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.get(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function get(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getDetailed
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getDetailed(serviceName, callback)
+  summary: Получить подробные свойства размещенной службы операция извлекает системные свойства для указанной облачной службы. Эти свойства включают имя службы и тип службы; Имя территориальной группы, к которому принадлежит службы или ее расположение, если он не является частью территориальной группы; и сведения о развертываниях службы.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460806.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getDetailed(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function getDetailed(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#getExtension
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: getExtension(serviceName, extensionId, callback)
+  summary: Операция получения расширение извлекает сведения об указанном расширении, который был добавлен в облачную службу.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn169557.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.getExtension(serviceName, extensionId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: extensionId
+      type:
+      - string
+      description: Идентификатор, который был назначен расширению, когда оно было добавлено в облачную службу
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function getExtension(serviceName, extensionId, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#list
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: list(callback)
+  summary: Перечисление размещенных служб операция получает список облачных служб, доступных в текущей подписке.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460781.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listAvailableExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listAvailableExtensions(callback)
+  summary: Операция перечисления доступных расширений перечисляет расширения, доступные для добавления к облачной службе. В Windows Azure процесс может выполняться как расширение облачной службы. Например удаленный доступ к рабочему столу или агент Azure Diagnostics может работать как расширения в облачную службу.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listAvailableExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function listAvailableExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensions(serviceName, callback)
+  summary: Список модулей обработки операция получает список всех расширений, которые были добавлены в облачную службу.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn169561.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensions(serviceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function listExtensions(serviceName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listExtensionVersions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listExtensionVersions(providerNamespace, extensionType, callback)
+  summary: >-
+    Перечисление версий расширения операции перечислены версии расширения, доступные для добавления в облачную службу. В Azure процесс может выполняться как расширение облачной службы. Например удаленный доступ к рабочему столу или агент Azure Diagnostics может работать как расширения в облачную службу.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn495437.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listExtensionVersions(providerNamespace, extensionType, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: providerNamespace
+      type:
+      - string
+      description: Пространство имен поставщика.
+    - id: extensionType
+      type:
+      - string
+      description: Имя типа расширения.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function listExtensionVersions(providerNamespace, extensionType, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#listPublisherExtensions
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: listPublisherExtensions(callback)
+  summary: Операция перечисления доступных расширений перечисляет расширения, доступные для добавления к облачной службе. В Windows Azure процесс может выполняться как расширение облачной службы. Например удаленный доступ к рабочему столу или агент Azure Diagnostics может работать как расширения в облачную службу.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn169559.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.listPublisherExtensions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function listPublisherExtensions(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  id: azure-asm-compute.HostedServiceOperations~HostedServiceOperations#update
+  parent: azure-asm-compute.HostedServiceOperations~HostedServiceOperations
+  name: update(serviceName, parameters, callback)
+  summary: Операции обновления размещенной службы можно обновить метку или описание облачной службы в Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/gg441303.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.HostedServiceOperations~HostedServiceOperations.update(serviceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: serviceName
+      type:
+      - string
+      description: Имя облачной службы.
+    - id: parameters
+      type:
+      - azure-asm-compute.HostedServiceUpdateParameters
+      description: Параметры для операции обновления размещенной службы.
+    - id: parameters.label
+      type:
+      - string
+      description: Имя для облачной службы. Имя может быть до 100 символов. Необходимо указать значение хотя бы для одного из метку или описание. Рекомендуется обеспечить в подписке уникальную метку. Можно использовать имя определения службы для целей отслеживания.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Описание для облачной службы. Описание может иметь длину до 1024 символов. Необходимо указать значение хотя бы для одного из метку или описание.
+      optional: true
+    - id: parameters.extendedProperties
+      type:
+      - object
+      description: Представляет имя расширенного свойства облачной службы. Каждое расширенное свойство должно иметь определенное имя и значение. Может иметь не более 50 пар имени и значения расширенных свойств. Максимальная длина имени элемента — 64 символа, в имени допустимы только буквенно-цифровые символы и знаки подчеркивания и должно начинаться с буквы. Попытка использовать другие символы, начать не с буквы или ввести имя, которое имеется у другого расширенного свойства в той же службы приведет к 400 (неправильный запрос) ошибке с кодом состояния. Значение каждого расширенного свойства имеет максимальную длину 255 символов.
+      optional: true
+    - id: parameters.reverseDnsFqdn
+      type:
+      - string
+      description: DNS-адрес, к которому разрешение IP-адреса облачной службы, когда запрос обратного запроса Dns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function update(serviceName, parameters, callback)
+  langs:
+  - js

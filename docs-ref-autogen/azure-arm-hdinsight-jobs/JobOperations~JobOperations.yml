@@ -1,0 +1,387 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e5947b368a1053213551619245e92169ec241f0b
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063627"
+items:
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: JobOperations
+  summary: >-
+    Операции для управления заданиями для кластеров HDInsight.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [HDInsightJobManagementClient] {@link HDInsightJobManagementClient ~ HDInsightJobManagementClient}.
+
+    См. в разделе [jobManagement] {@link HDInsightJobManagementClient ~ HDInsightJobManagementClient #jobManagement}.
+
+    Инициализирует новый экземпляр класса JobOperations.
+  fullName: azure-arm-hdinsight-jobs.JobOperations
+  type: Class
+  children:
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations.#ctor
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#getJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#killJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#listJobs
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitHiveJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceStreamingJob
+  - azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitPigJob
+  langs:
+  - js
+- id: azure-arm-hdinsight-jobs.JobOperations~JobOperations.#ctor
+  uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations.#ctor
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: JobOperations(client)
+  fullName: azure-arm-hdinsight-jobs.JobOperations.JobOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedHDInsightJobManagementClient
+      description: Ссылка на клиента службы.
+    content: new JobOperations(client)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#getJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#getJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: getJob(jobId, callback)
+  summary: Возвращает список заданий от указанного кластера HDInsight.
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.getJob(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Идентификатор задания.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: Поток ответа.
+    content: function getJob(jobId, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#killJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#killJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: killJob(jobId, callback)
+  summary: Возвращает список заданий от указанного кластера HDInsight.
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.killJob(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Идентификатор задания.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: Поток ответа.
+    content: function killJob(jobId, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#listJobs
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#listJobs
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: listJobs(callback)
+  summary: Возвращает список заданий от указанного кластера HDInsight.
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.listJobs(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: Поток ответа.
+    content: function listJobs(callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitHiveJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitHiveJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: submitHiveJob(parameters, callback)
+  summary: Отправка задания Hive для кластера HDINSIGHT.
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.submitHiveJob(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-hdinsight-jobs.HiveJobSubmissionParameters
+      description: Hive параметры задания.
+    - id: parameters.query
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.userName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.file
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.files
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.defines
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.arguments
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.statusDir
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.enableLog
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: Поток ответа.
+    content: function submitHiveJob(parameters, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: submitMapReduceJob(parameters, callback)
+  summary: Отправляет задание MapReduce в hdinsight.
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.submitMapReduceJob(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-hdinsight-jobs.MapReduceJobSubmissionParameters
+      description: Параметры задания MapReduce.
+    - id: parameters.userName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.jarFile
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.jarClass
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.libJars
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.files
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.defines
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.arguments
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.statusDir
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.enableLog
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: Поток ответа.
+    content: function submitMapReduceJob(parameters, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceStreamingJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitMapReduceStreamingJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: submitMapReduceStreamingJob(parameters, callback)
+  summary: Отправляет задание потоковой передачи MapReduce в hdinsight.
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.submitMapReduceStreamingJob(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-hdinsight-jobs.MapReduceStreamingJobSubmissionParameters
+      description: Параметры задания MapReduce.
+    - id: parameters.userName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.input
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.output
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.mapper
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.reducer
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.file
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.defines
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.arguments
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.cmdEnv
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.statusDir
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.enableLog
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: Поток ответа.
+    content: function submitMapReduceStreamingJob(parameters, callback)
+  langs:
+  - js
+- uid: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitPigJob
+  id: azure-arm-hdinsight-jobs.JobOperations~JobOperations#submitPigJob
+  parent: azure-arm-hdinsight-jobs.JobOperations~JobOperations
+  name: submitPigJob(parameters, callback)
+  summary: Отправка задания Hive для кластера HDINSIGHT.
+  fullName: azure-arm-hdinsight-jobs.JobOperations~JobOperations.submitPigJob(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-hdinsight-jobs.PigJobSubmissionParameters
+      description: Параметры задания pig.
+    - id: parameters.query
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.userName
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.file
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.files
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.arguments
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.statusDir
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: parameters.enableLog
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-arm-hdinsight-jobs.Stream
+      description: Поток ответа.
+    content: function submitPigJob(parameters, callback)
+  langs:
+  - js

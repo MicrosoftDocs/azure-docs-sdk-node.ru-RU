@@ -1,0 +1,1384 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 710b634fa6d51baa927cf736564cb3b38a6c36d9
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064396"
+items:
+- uid: azure-sb.ServiceBusService
+  id: azure-sb.ServiceBusService
+  name: ServiceBusService
+  summary: >-
+    ServiceBusServices позволяет работать с Microsoft Azure Service Bus.
+
+    Служебная шина предоставляет обе очереди для отправки и получения сообщений, а также Push-уведомлений для мобильных устройств.
+
+
+    Очереди служебной шины предоставляют функциональные возможности очереди обоих стандартное сообщение, а также функциях публикации и подписки.
+
+    Дополнительные сведения об очередях служебной шины, а также как задачи Дополнительные сведения об использовании их в приложениях Node.js, см. в разделе [Практическое использование очередей служебной шины](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-queues/) и [как для использования разделов и подписок служебной шины](https://www.windowsazure.com/en-us/develop/nodejs/how-to-guides/service-bus-topics/).
+
+
+    Служебная шина предоставляет Push-уведомлений через Центр уведомлений.
+
+    Хотя ServiceBusService можно использовать для управления центрами уведомлений, необходимо использовать <xref:azure-sb.NotificationHubService> для отправки сообщений на мобильных устройствах.
+  fullName: azure-sb.ServiceBusService
+  type: Class
+  children:
+  - azure-sb.ServiceBusService.#ctor
+  - azure-sb.ServiceBusService#receiveQueueMessage
+  - azure-sb.ServiceBusService#receiveSubscriptionMessage
+  - azure-sb.ServiceBusService#deleteMessage
+  - azure-sb.ServiceBusService#unlockMessage
+  - azure-sb.ServiceBusService#renewLockForMessage
+  - azure-sb.ServiceBusService#sendQueueMessage
+  - azure-sb.ServiceBusService#sendTopicMessage
+  - azure-sb.ServiceBusService#createQueue
+  - azure-sb.ServiceBusService#createQueueIfNotExists
+  - azure-sb.ServiceBusService#deleteQueue
+  - azure-sb.ServiceBusService#getQueue
+  - azure-sb.ServiceBusService#listQueues
+  - azure-sb.ServiceBusService#createTopic
+  - azure-sb.ServiceBusService#createTopicIfNotExists
+  - azure-sb.ServiceBusService#deleteTopic
+  - azure-sb.ServiceBusService#getTopic
+  - azure-sb.ServiceBusService#listTopics
+  - azure-sb.ServiceBusService#createSubscription
+  - azure-sb.ServiceBusService#deleteSubscription
+  - azure-sb.ServiceBusService#getSubscription
+  - azure-sb.ServiceBusService#listSubscriptions
+  - azure-sb.ServiceBusService#createRule
+  - azure-sb.ServiceBusService#deleteRule
+  - azure-sb.ServiceBusService#getRule
+  - azure-sb.ServiceBusService#listRules
+  - azure-sb.ServiceBusService#createNotificationHub
+  - azure-sb.ServiceBusService#getNotificationHub
+  - azure-sb.ServiceBusService#listNotificationHubs
+  - azure-sb.ServiceBusService#deleteNotificationHub
+  langs:
+  - js
+- id: azure-sb.ServiceBusService.#ctor
+  uid: azure-sb.ServiceBusService.#ctor
+  parent: azure-sb.ServiceBusService
+  name: ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  fullName: azure-sb.ServiceBusService.ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  summary: >-
+    Создает новый объект ServiceBusService.
+
+
+    Модуль azure считывает переменные среды AZURE_SERVICEBUS_NAMESPACE и AZURE_SERVICEBUS_ACCESS_KEY сведения, необходимые для подключения к служебной шине Microsoft Azure.
+
+    Если эти переменные среды не заданы, необходимо указать данные учетной записи, при создании объекта ServiceBusService.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrNamespaceOrConnectionString
+      type:
+      - string
+      description: Пространство имен служебной шины или строке подключения.
+      optional: true
+    - id: accessKey
+      type:
+      - string
+      description: Пароль. Только в том случае, если строка подключения не передается.
+      optional: true
+    - id: issuer
+      type:
+      - string
+      description: Издатель.
+      optional: true
+    - id: acsNamespace
+      type:
+      - string
+      description: Пространство имен acs. Обычно такой же, как пространство имен sb с «-sb» суффикс.
+      optional: true
+    - id: host
+      type:
+      - string
+      description: Адрес узла.
+      optional: true
+    - id: authenticationProvider
+      type:
+      - object
+      description: Поставщик проверки подлинности.
+      optional: true
+    content: new ServiceBusService(configOrNamespaceOrConnectionString, accessKey, issuer, acsNamespace, host, authenticationProvider)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#receiveQueueMessage
+  id: azure-sb.ServiceBusService#receiveQueueMessage
+  parent: azure-sb.ServiceBusService
+  name: receiveQueueMessage(queuePath, options, callback)
+  summary: Получает сообщения из очереди.
+  fullName: azure-sb.ServiceBusService.receiveQueueMessage(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя очереди, к которому будут отправляться сообщения.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.isPeekLock
+      type:
+      - azure-sb.bool
+      description: Логическое значение, указывающее, если сообщение следует просмотреть или получено.
+      optional: true
+    - id: options.timeoutIntervalInS
+      type:
+      - azure-sb.int
+      description: Интервал времени ожидания в секундах, используемый для запроса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `receivequeuemessageresult` будет содержать сведения о результате сообщения.
+                                                                                        `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function receiveQueueMessage(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#receiveSubscriptionMessage
+  id: azure-sb.ServiceBusService#receiveSubscriptionMessage
+  parent: azure-sb.ServiceBusService
+  name: receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  summary: Получает сообщение подписки.
+  fullName: azure-sb.ServiceBusService.receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для получения.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Строковый объект, который представляет имя подписки из сообщения будут получены.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.isPeekLock
+      type:
+      - azure-sb.bool
+      description: Логическое значение, указывающее, если сообщение следует просмотреть или получено.
+      optional: true
+    - id: options.timeoutIntervalInS
+      type:
+      - azure-sb.int
+      description: Интервал времени ожидания в секундах, используемый для запроса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `receivetopicmessageresult` будет содержать сведения о результате сообщения.
+                                                                                        `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function receiveSubscriptionMessage(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteMessage
+  id: azure-sb.ServiceBusService#deleteMessage
+  parent: azure-sb.ServiceBusService
+  name: deleteMessage(message, callback)
+  summary: Удаляет сообщение.
+  fullName: azure-sb.ServiceBusService.deleteMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: Объект сообщения или строка с расположение сообщений.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#unlockMessage
+  id: azure-sb.ServiceBusService#unlockMessage
+  parent: azure-sb.ServiceBusService
+  name: unlockMessage(message, callback)
+  summary: Разблокирует сообщение.
+  fullName: azure-sb.ServiceBusService.unlockMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: Объект сообщения или строка с расположение сообщений.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function unlockMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#renewLockForMessage
+  id: azure-sb.ServiceBusService#renewLockForMessage
+  parent: azure-sb.ServiceBusService
+  name: renewLockForMessage(message, callback)
+  summary: Продление блокировки сообщения.
+  fullName: azure-sb.ServiceBusService.renewLockForMessage(message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: message
+      type:
+      - object
+      - string
+      description: Объект сообщения или строка с расположение сообщений.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function renewLockForMessage(message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#sendQueueMessage
+  id: azure-sb.ServiceBusService#sendQueueMessage
+  parent: azure-sb.ServiceBusService
+  name: sendQueueMessage(queuePath, message, callback)
+  summary: Отправляет сообщение очереди.
+  fullName: azure-sb.ServiceBusService.sendQueueMessage(queuePath, message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя очереди, к которому будут отправляться сообщения.
+    - id: message
+      type:
+      - object
+      - string
+      description: Объект сообщения, который представляет сообщение для отправки.
+    - id: message.body
+      type:
+      - string
+      description: Текст сообщения.
+      optional: true
+    - id: message.customProperties
+      type:
+      - object
+      description: Пользовательские свойства сообщения.
+      optional: true
+    - id: message.brokerProperties.CorrelationId
+      type:
+      - string
+      description: Идентификатор сообщения корреляции.
+      optional: true
+    - id: message.brokerProperties.SessionId
+      type:
+      - string
+      description: Идентификатор сеанса.
+      optional: true
+    - id: message.brokerProperties.MessageId
+      type:
+      - string
+      description: Идентификатор сообщения.
+      optional: true
+    - id: message.brokerProperties.Label
+      type:
+      - string
+      description: Метка сообщения.
+      optional: true
+    - id: message.brokerProperties.ReplyTo
+      type:
+      - string
+      description: Сообщения ответить.
+      optional: true
+    - id: message.brokerProperties.TimeToLive
+      type:
+      - string
+      description: Срок жизни сообщения.
+      optional: true
+    - id: message.brokerProperties.To
+      type:
+      - string
+      description: Сообщения с.
+      optional: true
+    - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+      type:
+      - string
+      description: Время запланированного постановки в очередь сообщения в формате UTC.
+      optional: true
+    - id: message.brokerProperties.ReplyToSessionId
+      type:
+      - string
+      description: Сообщение ответа на идентификатор сеанса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendQueueMessage(queuePath, message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#sendTopicMessage
+  id: azure-sb.ServiceBusService#sendTopicMessage
+  parent: azure-sb.ServiceBusService
+  name: sendTopicMessage(topicPath, message, callback)
+  summary: Отправляет сообщения раздела.
+  fullName: azure-sb.ServiceBusService.sendTopicMessage(topicPath, message, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела, к которому будут отправляться сообщения.
+    - id: message
+      type:
+      - object
+      - string
+      description: Объект сообщения, который представляет сообщение для отправки.
+    - id: message.body
+      type:
+      - string
+      description: Текст сообщения.
+      optional: true
+    - id: message.customProperties
+      type:
+      - object
+      description: Пользовательские свойства сообщения.
+      optional: true
+    - id: message.brokerProperties.CorrelationId
+      type:
+      - string
+      description: Идентификатор сообщения корреляции.
+      optional: true
+    - id: message.brokerProperties.SessionId
+      type:
+      - string
+      description: Идентификатор сеанса.
+      optional: true
+    - id: message.brokerProperties.MessageId
+      type:
+      - string
+      description: Идентификатор сообщения.
+      optional: true
+    - id: message.brokerProperties.Label
+      type:
+      - string
+      description: Метка сообщения.
+      optional: true
+    - id: message.brokerProperties.ReplyTo
+      type:
+      - string
+      description: Сообщения ответить.
+      optional: true
+    - id: message.brokerProperties.TimeToLive
+      type:
+      - string
+      description: Срок жизни сообщения.
+      optional: true
+    - id: message.brokerProperties.To
+      type:
+      - string
+      description: Сообщения с.
+      optional: true
+    - id: message.brokerProperties.ScheduledEnqueueTimeUtc
+      type:
+      - string
+      description: Время запланированного постановки в очередь сообщения в формате UTC.
+      optional: true
+    - id: message.brokerProperties.ReplyToSessionId
+      type:
+      - string
+      description: Сообщение ответа на идентификатор сеанса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `receivetopicmessageresult` будет содержать сведения о результате сообщения.
+                                                                                          `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTopicMessage(topicPath, message, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createQueue
+  id: azure-sb.ServiceBusService#createQueue
+  parent: azure-sb.ServiceBusService
+  name: createQueue(queuePath, options, callback)
+  summary: Создание очереди.
+  fullName: azure-sb.ServiceBusService.createQueue(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя очереди.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.MaxSizeInMegaBytes
+      type:
+      - azure-sb.int
+      description: Определяет максимальный размер очереди в мегабайтах. Любая попытка постановки в очередь сообщение, которое приведет к очереди превышает это значение не удастся.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: В зависимости от включения отправку в мертвые очереди сообщение будет автоматически перемещен в DeadLetterQueue или удалены, если он был сохранен в очереди дольше указанного времени. Это значение перезаписывается значением TTL, заданным в сообщении, тогда и только тогда, когда TTL сообщения меньше TTL, заданного в очереди. Это значение является неизменяемым, после создания очереди.
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: Определяет количество времени в секундах, в которых сообщение должно быть блокировано для обработки получателем. По истечении этого периода сообщение разблокируется и становится доступным для потребления следующим получателем. Настраивается только при создании очереди.
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: Настраивается только при создании очереди. Если задано значение true, очередь будет учитывать сеансы и будут поддерживаться только SessionReceiver. Учитывать сеансы очереди не поддерживаются через REST.
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: Настраивается только при создании очереди.
+      optional: true
+    - id: options.DeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: Это поле управляет тем, как служебная шина обрабатывает сообщения с истекшим TTL. Если оно включено и срок действия сообщения истекает, служебная шина перемещает сообщение из очереди в очереди недоставленных сообщений-вложенную очередь. Если отключен, сообщение окончательно удаляется из очереди. Настраивается только при создании очереди.
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.bool
+      description: Указывает интервал времени, в течение которого Service Bus определяет наличие повторяющихся сообщений.
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: Указывает, должны быть секционированы очереди.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `createqueueresult` будет содержать сведения о новом очереди.
+                                                                                          `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createQueue(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createQueueIfNotExists
+  id: azure-sb.ServiceBusService#createQueueIfNotExists
+  parent: azure-sb.ServiceBusService
+  name: createQueueIfNotExists(queuePath, options, callback)
+  summary: Создает очередь, если он уже не существует.
+  fullName: azure-sb.ServiceBusService.createQueueIfNotExists(queuePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя очереди для удаления.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.MaxSizeInMegaBytes
+      type:
+      - azure-sb.int
+      description: Определяет максимальный размер очереди в мегабайтах. Любая попытка постановки в очередь сообщение, которое приведет к очереди превышает это значение не удастся.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: В зависимости от включения отправку в мертвые очереди сообщение будет автоматически перемещен в DeadLetterQueue или удалены, если он был сохранен в очереди дольше указанного времени. Это значение перезаписывается значением TTL, заданным в сообщении, тогда и только тогда, когда TTL сообщения меньше TTL, заданного в очереди. Это значение является неизменяемым, после создания очереди.
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: Определяет количество времени в секундах, в которых сообщение должно быть блокировано для обработки получателем. По истечении этого периода сообщение разблокируется и становится доступным для потребления следующим получателем. Настраивается только при создании очереди.
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: Настраивается только при создании очереди. Если задано значение true, очередь будет учитывать сеансы и будут поддерживаться только SessionReceiver. Учитывать сеансы очереди не поддерживаются через REST.
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: Настраивается только при создании очереди.
+      optional: true
+    - id: options.DeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: Это поле управляет тем, как служебная шина обрабатывает сообщения с истекшим TTL. Если оно включено и срок действия сообщения истекает, служебная шина перемещает сообщение из очереди в очереди недоставленных сообщений-вложенную очередь. Если отключен, сообщение окончательно удаляется из очереди. Настраивается только при создании очереди.
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.bool
+      description: Указывает интервал времени, в течение которого Service Bus определяет наличие повторяющихся сообщений.
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: Указывает, должны быть секционированы очереди.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `queueCreated` будет содержать сведения о новом очереди.
+                                                                                          `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createQueueIfNotExists(queuePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteQueue
+  id: azure-sb.ServiceBusService#deleteQueue
+  parent: azure-sb.ServiceBusService
+  name: deleteQueue(queuePath, callback)
+  summary: Удаляет очередь.
+  fullName: azure-sb.ServiceBusService.deleteQueue(queuePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя очереди для удаления.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteQueue(queuePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getQueue
+  id: azure-sb.ServiceBusService#getQueue
+  parent: azure-sb.ServiceBusService
+  name: getQueue(queuePath, callback)
+  summary: Извлекает очередь.
+  fullName: azure-sb.ServiceBusService.getQueue(queuePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: queuePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя очереди для извлечения.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `queueresult` будет содержать данные об очередях.
+                                                                                          `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getQueue(queuePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listQueues
+  id: azure-sb.ServiceBusService#listQueues
+  parent: azure-sb.ServiceBusService
+  name: listQueues(options, callback)
+  summary: Возвращает список очередей.
+  fullName: azure-sb.ServiceBusService.listQueues(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Предложение top для получения списка очередей.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Предложение skip, для получения списка очередей.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `listqueueresult` будет содержать список очередей.
+                                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listQueues(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createTopic
+  id: azure-sb.ServiceBusService#createTopic
+  parent: azure-sb.ServiceBusService
+  name: createTopic(topic, options, callback)
+  summary: Создает раздел.
+  fullName: azure-sb.ServiceBusService.createTopic(topic, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topic
+      type:
+      - azure-sb.TopicInfo
+      description: Объект раздела, который представляет разделом для создания.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.MaxSizeInMegabytes
+      type:
+      - azure-sb.int
+      description: Определяет максимальный размер раздела в мегабайтах. Любая попытка постановки в очередь сообщение, которое вызовет раздела превышает это значение не удастся. Все сообщения, которые хранятся в разделе или любой из его подписок учитываются это значение. Несколько копий сообщения, которые находятся в одной или нескольких подписках учитываются как одно сообщение. Например если сообщение m существует один раз в s1 подписки и дважды в подписке s2, m считается как одно сообщение.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: Определяет, как долго сообщение живет в связанных подписках. Подписки наследуют срок ЖИЗНИ из раздела, если они созданы явно с меньшим TTL. Включена ли сохранение недоставленных сообщений, сообщения с истекшим TTL будет либо перемещаться в очередь DeadLtterQueue связанные подписки или будут окончательно удалены.
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: Если параметр включен, раздел обнаруживает дублированные сообщения в пределах временного интервала, заданного в свойстве DuplicateDetectionHistoryTimeWindow. Настраивается только при создании раздела.
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.PTnHnMnS
+      description: Указывает интервал времени, в течение которого Service Bus буди обнаруживать дублирование сообщений.
+      optional: true
+    - id: options.EnableBatchedOperations
+      type:
+      - azure-sb.bool
+      description: Указывает, если разрешено использовать пакетные операции.
+      optional: true
+    - id: options.SizeInBytes
+      type:
+      - azure-sb.int
+      description: Указывает размер раздела в байтах.
+      optional: true
+    - id: options.SupportOrdering
+      type:
+      - azure-sb.bool
+      description: Указывает, поддерживает ли раздел упорядочение сообщений.
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: Указывает, должны быть секционированы раздела
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `createtopicresult` будет содержать сведения о новом разделе.
+                                                                                                `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTopic(topic, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createTopicIfNotExists
+  id: azure-sb.ServiceBusService#createTopicIfNotExists
+  parent: azure-sb.ServiceBusService
+  name: createTopicIfNotExists(topic, options, callback)
+  summary: Создает раздел, если он не существует.
+  fullName: azure-sb.ServiceBusService.createTopicIfNotExists(topic, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topic
+      type:
+      - azure-sb.TopicInfo
+      description: Объект раздела, который представляет разделом для создания.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.MaxSizeInMegabytes
+      type:
+      - azure-sb.int
+      description: Определяет максимальный размер раздела в мегабайтах. Любая попытка постановки в очередь сообщение, которое вызовет раздела превышает это значение не удастся. Все сообщения, которые хранятся в разделе или любой из его подписок учитываются это значение. Несколько копий сообщения, которые находятся в одной или нескольких подписках учитываются как одно сообщение. Например если сообщение m существует один раз в s1 подписки и дважды в подписке s2, m считается как одно сообщение.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: Определяет, как долго сообщение живет в связанных подписках. Подписки наследуют срок ЖИЗНИ из раздела, если они созданы явно с меньшим TTL. Включена ли сохранение недоставленных сообщений, сообщения с истекшим TTL будет либо перемещаться в очередь DeadLtterQueue связанные подписки или будут окончательно удалены.
+      optional: true
+    - id: options.RequiresDuplicateDetection
+      type:
+      - azure-sb.bool
+      description: Если параметр включен, раздел обнаруживает дублированные сообщения в пределах временного интервала, заданного в свойстве DuplicateDetectionHistoryTimeWindow. Настраивается только при создании раздела.
+      optional: true
+    - id: options.DuplicateDetectionHistoryTimeWindow
+      type:
+      - azure-sb.PTnHnMnS
+      description: Указывает интервал времени, в течение которого Service Bus буди обнаруживать дублирование сообщений.
+      optional: true
+    - id: options.MaxSubscriptionsPerTopic
+      type:
+      - azure-sb.int
+      description: Указывает максимальное число подписок, которые могут быть связаны с разделом.
+      optional: true
+    - id: options.MaxSqlFiltersPerTopic
+      type:
+      - azure-sb.int
+      description: Указывает максимальное количество выражений фильтра SQL (в всего), которые могут добавляться к подпискам, связанным с разделом.
+      optional: true
+    - id: options.MaxCorrelationFiltersPerTopic
+      type:
+      - azure-sb.int
+      description: Указывает максимальное количество выражений фильтра корреляции (в всего), которые могут добавляться к подпискам, связанным с разделом.
+      optional: true
+    - id: options.EnableDeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: Настраивается только при создании раздела.
+      optional: true
+    - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+      type:
+      - azure-sb.bool
+      description: Настраивается только при создании раздела.
+      optional: true
+    - id: options.SupportOrdering
+      type:
+      - azure-sb.bool
+      description: Указывает, поддерживает ли раздел упорядочение сообщений.
+      optional: true
+    - id: options.EnablePartitioning
+      type:
+      - azure-sb.bool
+      description: Указывает, должны быть секционированы раздела
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `topicCreated` будет содержать сведения о новом разделе.
+                                                                                                `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTopicIfNotExists(topic, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteTopic
+  id: azure-sb.ServiceBusService#deleteTopic
+  parent: azure-sb.ServiceBusService
+  name: deleteTopic(topicPath, callback)
+  summary: Удаляет раздел.
+  fullName: azure-sb.ServiceBusService.deleteTopic(topicPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Объект <code>String</code> , представляющий имя очереди для удаления.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteTopic(topicPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getTopic
+  id: azure-sb.ServiceBusService#getTopic
+  parent: azure-sb.ServiceBusService
+  name: getTopic(topicPath, callback)
+  summary: Извлекает раздел.
+  fullName: azure-sb.ServiceBusService.getTopic(topicPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Объект <code>String</code> , представляющий имя раздела для извлечения.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `gettopicresult` будет содержать сведения о разделах.
+                                                                         `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getTopic(topicPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listTopics
+  id: azure-sb.ServiceBusService#listTopics
+  parent: azure-sb.ServiceBusService
+  name: listTopics(options, callback)
+  summary: Возвращает список разделов.
+  fullName: azure-sb.ServiceBusService.listTopics(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Число разделов для выборки.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Число разделов для пропуска.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `listtopicsresult` будет содержать список разделов.
+                                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listTopics(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createSubscription
+  id: azure-sb.ServiceBusService#createSubscription
+  parent: azure-sb.ServiceBusService
+  name: createSubscription(topicPath, subscriptionPath, options, callback)
+  summary: Создается подписка.
+  fullName: azure-sb.ServiceBusService.createSubscription(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для подписки.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя подписки.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.LockDuration
+      type:
+      - azure-sb.PTnHnMnS
+      description: Длительность блокировки по умолчанию применяется к подпискам, которые не задана длительность блокировки. Настраивается только при создании подписки.
+      optional: true
+    - id: options.RequiresSession
+      type:
+      - azure-sb.bool
+      description: Настраивается только при создании подписки. Если задано значение true, подписка будет учитывать сеансы и будут поддерживаться только SessionReceiver. Учитывать сеансы подписки не поддерживаются через REST.
+      optional: true
+    - id: options.DefaultMessageTimeToLive
+      type:
+      - azure-sb.PTnHnMnS
+      description: Определяет, как долго сообщение находится в подписке. Основываясь на том, включен ли сохранение недоставленных сообщений, сообщения с истекшим TTL будут перемещены в очередь DeadLtterQueue связанные подписки или удалены.
+      optional: true
+    - id: options.EnableDeadLetteringOnMessageExpiration
+      type:
+      - azure-sb.bool
+      description: Это поле управляет тем, как служебная шина обрабатывает сообщения с истекшим TTL. Если оно включено и срок действия сообщения истекает, служебная шина перемещает сообщение из очереди в подочередь недоставленных сообщений-подписки. Если отключен, сообщение окончательно удаляется из главной очереди подписки. Настраивается только при создании подписки.
+      optional: true
+    - id: options.EnableDeadLetteringOnFilterEvaluationExceptions
+      type:
+      - azure-sb.bool
+      description: Определяет, как служебная шина обрабатывает сообщение, которое приводит к возникновению исключения во время вычисления фильтра подписки. Если присвоено значение true, сообщение, которое вызвало исключение перемещается в очередь недоставленных сообщений-подписки. В противном случае оно будет отвергнуто. По умолчанию этот параметр имеет значение true, которое дает пользователю возможность установить причину исключения. Оно может быть неправильно сформированное сообщение или неверными предположениями, внесенные в фильтре о форме сообщения. Настраивается только при создании раздела.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `createsubscriptionresult` будет содержать новые сведения о подписке.
+                                                                                          `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createSubscription(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteSubscription
+  id: azure-sb.ServiceBusService#deleteSubscription
+  parent: azure-sb.ServiceBusService
+  name: deleteSubscription(topicPath, subscriptionPath, callback)
+  summary: Удаляет подписку.
+  fullName: azure-sb.ServiceBusService.deleteSubscription(topicPath, subscriptionPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для подписки.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя подписки для удаления.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteSubscription(topicPath, subscriptionPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getSubscription
+  id: azure-sb.ServiceBusService#getSubscription
+  parent: azure-sb.ServiceBusService
+  name: getSubscription(topicPath, subscriptionPath, callback)
+  summary: Извлекает подписки.
+  fullName: azure-sb.ServiceBusService.getSubscription(topicPath, subscriptionPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для подписки.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя подписки для извлечения.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `getsubscriptionresult` будет содержать сведения о подписке.
+                                                                                        `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getSubscription(topicPath, subscriptionPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listSubscriptions
+  id: azure-sb.ServiceBusService#listSubscriptions
+  parent: azure-sb.ServiceBusService
+  name: listSubscriptions(topicPath, options, callback)
+  summary: Возвращает список подписок.
+  fullName: azure-sb.ServiceBusService.listSubscriptions(topicPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для подписок, для извлечения.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Число разделов для выборки.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Число разделов для пропуска.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `listsubscriptionresult` будет содержать список подписок.
+                                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listSubscriptions(topicPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createRule
+  id: azure-sb.ServiceBusService#createRule
+  parent: azure-sb.ServiceBusService
+  name: createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  summary: Создает правило.
+  fullName: azure-sb.ServiceBusService.createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для подписки.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя подписки, для которого создается правило.
+    - id: rulePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя правила.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.trueFilter
+      type:
+      - string
+      description: Определяет выражение, которое правило оценивается как true, фильтр.
+      optional: true
+    - id: options.falseFilter
+      type:
+      - string
+      description: Определяет выражение, которое правило оценивается как false фильтр.
+      optional: true
+    - id: options.sqlExpressionFilter
+      type:
+      - string
+      description: Определяет выражение, которое оценивается правило. Строка выражения интерпретируется как выражение SQL92, в которой должен быть равен True или False. Можно определить только один между корреляция и выражением sql.
+      optional: true
+    - id: options.correlationIdFilter
+      type:
+      - string
+      description: Определяет выражение, которое оценивается правило. Допускаются только те сообщения, для которого CorrelationId соответствует CorrelationId, заданное в критерии фильтра. Можно определить только один между корреляция и выражением sql.
+      optional: true
+    - id: options.sqlRuleAction
+      type:
+      - string
+      description: Определяет выражение, которое оценивается правило. Если правило типа SQL, строка выражения интерпретируется как выражение SQL92, в которой должен быть равен True или False. Если правило имеет тип CorrelationFilterExpression, а затем допускаются только те сообщения, для которого CorrelationId соответствует CorrelationId, заданное в критерии фильтра.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `createruleresults` будет содержать новые сведения о правиле.
+                                                                                    `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRule(topicPath, subscriptionPath, rulePath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteRule
+  id: azure-sb.ServiceBusService#deleteRule
+  parent: azure-sb.ServiceBusService
+  name: deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  summary: Удаляет правило.
+  fullName: azure-sb.ServiceBusService.deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для подписки.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя подписки, для которого удаляется правило.
+    - id: rulePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя удаляемого правила.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteRule(topicPath, subscriptionPath, rulePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getRule
+  id: azure-sb.ServiceBusService#getRule
+  parent: azure-sb.ServiceBusService
+  name: getRule(topicPath, subscriptionPath, rulePath, callback)
+  summary: Извлекает правила.
+  fullName: azure-sb.ServiceBusService.getRule(topicPath, subscriptionPath, rulePath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для подписки.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя подписки, для которого требуется получить правило.
+    - id: rulePath
+      type:
+      - string
+      description: Строковый объект, представляющий имя правила для извлечения.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `getruleresult` будет содержать сведения о правиле.
+                                                                                        `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getRule(topicPath, subscriptionPath, rulePath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listRules
+  id: azure-sb.ServiceBusService#listRules
+  parent: azure-sb.ServiceBusService
+  name: listRules(topicPath, subscriptionPath, options, callback)
+  summary: Возвращает список правил.
+  fullName: azure-sb.ServiceBusService.listRules(topicPath, subscriptionPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: topicPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя раздела для подписки.
+    - id: subscriptionPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя подписки, правила которых требуется получить.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Число разделов для выборки.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Число разделов для пропуска.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `listrulesresult` будет содержать список правил.
+                                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRules(topicPath, subscriptionPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#createNotificationHub
+  id: azure-sb.ServiceBusService#createNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: createNotificationHub(hubPath, options, callback)
+  summary: Создает центр уведомлений.
+  fullName: azure-sb.ServiceBusService.createNotificationHub(hubPath, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя центра уведомлений.
+    - id: options
+      type:
+      - object
+      description: Запрос параметров или функции обратного вызова.
+      optional: true
+    - id: options.wns
+      type:
+      - object
+      description: Объект, с помощью пар "ключ-значение" для учетных данных WNS.
+      optional: true
+    - id: options.apns
+      type:
+      - object
+      description: Объект, с помощью пар "ключ-значение" для учетных данных APNS.
+      optional: true
+    - id: options.gcm
+      type:
+      - object
+      description: Объект, с помощью пар "ключ-значение" для учетных данных GCM.
+      optional: true
+    - id: options.mpns
+      type:
+      - object
+      description: Объект, с помощью пар "ключ-значение" для учетные данные MPNS.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `result` будет содержать новые сведения о концентраторе уведомлений.
+                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNotificationHub(hubPath, options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#getNotificationHub
+  id: azure-sb.ServiceBusService#getNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: getNotificationHub(hubPath, callback)
+  summary: Получает концентратора уведомлений.
+  fullName: azure-sb.ServiceBusService.getNotificationHub(hubPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя центра уведомлений.
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `result` будет содержать сведения о концентраторе уведомлений.
+                                                                                    `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function getNotificationHub(hubPath, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#listNotificationHubs
+  id: azure-sb.ServiceBusService#listNotificationHubs
+  parent: azure-sb.ServiceBusService
+  name: listNotificationHubs(options, callback)
+  summary: Возвращает список центров уведомлений.
+  fullName: azure-sb.ServiceBusService.listNotificationHubs(options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: options
+      type:
+      - object
+      description: Запрос параметров или функции обратного вызова.
+      optional: true
+    - id: options.top
+      type:
+      - azure-sb.int
+      description: Число разделов для выборки.
+      optional: true
+    - id: options.skip
+      type:
+      - azure-sb.int
+      description: Число разделов для пропуска.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `result` будет содержаться список центров уведомлений.
+                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listNotificationHubs(options, callback)
+  langs:
+  - js
+- uid: azure-sb.ServiceBusService#deleteNotificationHub
+  id: azure-sb.ServiceBusService#deleteNotificationHub
+  parent: azure-sb.ServiceBusService
+  name: deleteNotificationHub(hubPath, callback)
+  summary: Удаление концентратора уведомлений.
+  fullName: azure-sb.ServiceBusService.deleteNotificationHub(hubPath, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: hubPath
+      type:
+      - string
+      description: Строковый объект, представляющий имя центра уведомлений.
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function deleteNotificationHub(hubPath, callback)
+  langs:
+  - js

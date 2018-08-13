@@ -1,0 +1,989 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2edf9f5bc2da7407d7a8e5e49124d9284317f648
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064390"
+items:
+- uid: azure-sb.MpnsService
+  id: azure-sb.MpnsService
+  name: MpnsService
+  summary: Класс MpnsService используется для отправки уведомлений с помощью [Microsoft Push Notification Service](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402558).
+  fullName: azure-sb.MpnsService
+  type: Class
+  children:
+  - azure-sb.MpnsService.#ctor
+  - azure-sb.MpnsService#createNativeRegistration
+  - azure-sb.MpnsService#createOrUpdateNativeRegistration
+  - azure-sb.MpnsService#createFlipTileRegistration
+  - azure-sb.MpnsService#createTileRegistration
+  - azure-sb.MpnsService#createToastRegistration
+  - azure-sb.MpnsService#createRawTemplateRegistration
+  - azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  - azure-sb.MpnsService#updateFlipTileRegistration
+  - azure-sb.MpnsService#updateTileRegistration
+  - azure-sb.MpnsService#updatesToastRegistration
+  - azure-sb.MpnsService#updatesRawTemplateRegistration
+  - azure-sb.MpnsService#listRegistrationsByChannel
+  - azure-sb.MpnsService#sendFlipTile
+  - azure-sb.MpnsService#sendTile
+  - azure-sb.MpnsService#sendToast
+  - azure-sb.MpnsService#send
+  langs:
+  - js
+- id: azure-sb.MpnsService.#ctor
+  uid: azure-sb.MpnsService.#ctor
+  parent: azure-sb.MpnsService
+  name: MpnsService(notificationHubService)
+  fullName: azure-sb.MpnsService.MpnsService(notificationHubService)
+  summary: >-
+    Создает новый объект MpnsService.
+
+
+    __Примечание__: экземпляр этого объекта создается автоматически при <xref:azure-sb.NotificationHubService> создается объект. См. <xref:azure-sb.NotificationHubService%23gcm>.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: notificationHubService
+      type:
+      - undefinedNotificationHubService
+      description: Служба концентратора уведомлений.
+    content: new MpnsService(notificationHubService)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createNativeRegistration
+  id: azure-sb.MpnsService#createNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createNativeRegistration(channel, tags, options, callback)
+  summary: Создает собственную регистрацию MPNS.
+  fullName: azure-sb.MpnsService.createNativeRegistration(channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Uri канала устройства.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createNativeRegistration(channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  id: azure-sb.MpnsService#createOrUpdateNativeRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  summary: Создает или обновляет собственную регистрацию MPNS.
+  fullName: azure-sb.MpnsService.createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Идентификатор регистрации.
+    - id: channel
+      type:
+      - string
+      description: Uri канала устройства.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateNativeRegistration(registrationId, channel, tags, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createFlipTileRegistration
+  id: azure-sb.MpnsService#createFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: createFlipTileRegistration(channel, tags, template, options, callback)
+  summary: Создает регистрацию с шаблоном FlipTile (версия только Windows Phone 7.8 или выше). Дополнительные сведения см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.createFlipTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Канала.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - object
+      description: Шаблон регистрации.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: URI фонового изображения для мозаичного элемента.
+    - id: template.count
+      type:
+      - string
+      description: Число, которое отображается на плитке.
+    - id: template.title
+      type:
+      - string
+      description: Текст заголовка плитки.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: URI изображения на обратной стороне плитки.
+    - id: template.backTitle
+      type:
+      - string
+      description: Заголовок для обратной стороны плитки.
+    - id: template.backContent
+      type:
+      - string
+      description: Текст для обратной стороны плитки.
+    - id: template.id
+      type:
+      - string
+      description: Идентификатор родственной вторичной карточки.
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: URI для фонового изображения карточки при ее уменьшении до малого размера.
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: URI для фонового изображения карточки при ее развертывании до широкого размера.
+    - id: template.wideBackContent
+      type:
+      - string
+      description: Содержимое обратной стороны карточки при ее развертывании до широкого размера.
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: URI для изображения на обратной стороне плитки при ее развертывании до широкого размера.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createFlipTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createTileRegistration
+  id: azure-sb.MpnsService#createTileRegistration
+  parent: azure-sb.MpnsService
+  name: createTileRegistration(channel, tags, template, options, callback)
+  summary: Создает регистрацию с шаблоном плитки. Дополнительные сведения см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.createTileRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Канала.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - object
+      description: Шаблон регистрации.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: URI фонового изображения для мозаичного элемента.
+    - id: template.count
+      type:
+      - string
+      description: Число, которое отображается на плитке.
+    - id: template.title
+      type:
+      - string
+      description: Текст заголовка плитки.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: URI изображения на обратной стороне плитки.
+    - id: template.backTitle
+      type:
+      - string
+      description: Заголовок для обратной стороны плитки.
+    - id: template.backContent
+      type:
+      - string
+      description: Текст для обратной стороны плитки.
+    - id: template.id
+      type:
+      - string
+      description: Идентификатор родственной вторичной карточки.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createTileRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createToastRegistration
+  id: azure-sb.MpnsService#createToastRegistration
+  parent: azure-sb.MpnsService
+  name: createToastRegistration(channel, tags, template, options, callback)
+  summary: Создает регистрацию с шаблоном всплывающего уведомления Дополнительные сведения см. http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.createToastRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Канала.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - object
+      description: Шаблон регистрации.
+    - id: template.text1
+      type:
+      - string
+      description: Text1
+    - id: template.text2
+      type:
+      - string
+      description: Text2
+    - id: template.param
+      type:
+      - string
+      description: (необязательно) (Только для версии Windows Phone 7.5 или более поздней версии)
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createToastRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createRawTemplateRegistration
+  id: azure-sb.MpnsService#createRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createRawTemplateRegistration(channel, tags, template, options, callback)
+  summary: Создает регистрацию необработанного шаблона.
+  fullName: azure-sb.MpnsService.createRawTemplateRegistration(channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Uri канала устройства.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - json
+      description: Шаблон для регистрации.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Включить заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createRawTemplateRegistration(channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  id: azure-sb.MpnsService#createOrUpdateRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Создает регистрацию необработанного шаблона.
+  fullName: azure-sb.MpnsService.createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Идентификатор регистрации.
+    - id: channel
+      type:
+      - string
+      description: Uri канала устройства.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - json
+      description: Шаблон для регистрации.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Включить заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function createOrUpdateRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateFlipTileRegistration
+  id: azure-sb.MpnsService#updateFlipTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Обновляет регистрацию с шаблоном FlipTile (версия только Windows Phone 7.8 или выше). Дополнительные сведения см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Идентификатор регистрации.
+    - id: channel
+      type:
+      - string
+      description: Канала.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - object
+      description: Шаблон регистрации.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: URI фонового изображения для мозаичного элемента.
+    - id: template.count
+      type:
+      - string
+      description: Число, которое отображается на плитке.
+    - id: template.title
+      type:
+      - string
+      description: Текст заголовка плитки.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: URI изображения на обратной стороне плитки.
+    - id: template.backTitle
+      type:
+      - string
+      description: Заголовок для обратной стороны плитки.
+    - id: template.backContent
+      type:
+      - string
+      description: Текст для обратной стороны плитки.
+    - id: template.id
+      type:
+      - string
+      description: Идентификатор родственной вторичной карточки.
+    - id: template.smallBackgroundImage
+      type:
+      - string
+      description: URI для фонового изображения карточки при ее уменьшении до малого размера.
+    - id: template.wideBackgroundImage
+      type:
+      - string
+      description: URI для фонового изображения карточки при ее развертывании до широкого размера.
+    - id: template.wideBackContent
+      type:
+      - string
+      description: Содержимое обратной стороны карточки при ее развертывании до широкого размера.
+    - id: template.wideBackBackgroundImage
+      type:
+      - string
+      description: URI для изображения на обратной стороне плитки при ее развертывании до широкого размера.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateFlipTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updateTileRegistration
+  id: azure-sb.MpnsService#updateTileRegistration
+  parent: azure-sb.MpnsService
+  name: updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Обновляет регистрацию с шаблоном плитки. Дополнительные сведения см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Идентификатор регистрации.
+    - id: channel
+      type:
+      - string
+      description: Канала.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - object
+      description: Шаблон регистрации.
+    - id: template.backgroundImage
+      type:
+      - string
+      description: URI фонового изображения для мозаичного элемента.
+    - id: template.count
+      type:
+      - string
+      description: Число, которое отображается на плитке.
+    - id: template.title
+      type:
+      - string
+      description: Текст заголовка плитки.
+    - id: template.backBackgroundImage
+      type:
+      - string
+      description: URI изображения на обратной стороне плитки.
+    - id: template.backTitle
+      type:
+      - string
+      description: Заголовок для обратной стороны плитки.
+    - id: template.backContent
+      type:
+      - string
+      description: Текст для обратной стороны плитки.
+    - id: template.id
+      type:
+      - string
+      description: Идентификатор родственной вторичной карточки.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updateTileRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesToastRegistration
+  id: azure-sb.MpnsService#updatesToastRegistration
+  parent: azure-sb.MpnsService
+  name: updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Обновляет регистрацию с шаблоном всплывающего уведомления. Дополнительные сведения см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Идентификатор регистрации.
+    - id: channel
+      type:
+      - string
+      description: Канала.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - object
+      description: Шаблон регистрации.
+    - id: template.text1
+      type:
+      - string
+      description: Text1
+    - id: template.text2
+      type:
+      - string
+      description: Text2
+    - id: template.param
+      type:
+      - string
+      description: (необязательно) (Только для версии Windows Phone 7.5 или более поздней версии)
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesToastRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#updatesRawTemplateRegistration
+  id: azure-sb.MpnsService#updatesRawTemplateRegistration
+  parent: azure-sb.MpnsService
+  name: updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  summary: Обновляет регистрацию необработанного шаблона.
+  fullName: azure-sb.MpnsService.updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: registrationId
+      type:
+      - string
+      description: Идентификатор регистрации.
+    - id: channel
+      type:
+      - string
+      description: Канала.
+    - id: tags
+      type:
+      - string
+      - array
+      description: Теги (с разделителями-запятыми, без пробелов).
+    - id: template
+      type:
+      - json
+      description: Шаблон для регистрации.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Включить заголовки mpns.
+      optional: true
+    - id: options.etag
+      type:
+      - object
+      description: Еtag для включения.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function updatesRawTemplateRegistration(registrationId, channel, tags, template, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#listRegistrationsByChannel
+  id: azure-sb.MpnsService#listRegistrationsByChannel
+  parent: azure-sb.MpnsService
+  name: listRegistrationsByChannel(channel, options, callback)
+  summary: Извлекает регистрацию по каналу.
+  fullName: azure-sb.MpnsService.listRegistrationsByChannel(channel, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: channel
+      type:
+      - string
+      description: Канала.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса. Дополнительные свойства передаются как заголовки.
+      optional: true
+    - id: options.top
+      type:
+      - object
+      description: Указывает максимальное количество регистраций для получения из вызова.
+      optional: true
+    - id: options.skip
+      type:
+      - object
+      description: Указывает количество регистраций для пропуска в вызове.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function listRegistrationsByChannel(channel, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendFlipTile
+  id: azure-sb.MpnsService#sendFlipTile
+  parent: azure-sb.MpnsService
+  name: sendFlipTile(tags, payload, options, callback)
+  summary: Отправляет уведомление FlipTile (версия только Windows Phone 7.8 или выше). Дополнительные сведения см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj206971.aspx.
+  fullName: azure-sb.MpnsService.sendFlipTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Один тег или выражение тегов.
+    - id: payload
+      type:
+      - object
+      description: Полезные данные сообщения.
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: URI фонового изображения для мозаичного элемента.
+    - id: payload.count
+      type:
+      - string
+      description: Число, которое отображается на плитке.
+    - id: payload.title
+      type:
+      - string
+      description: Текст заголовка плитки.
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: URI изображения на обратной стороне плитки.
+    - id: payload.backTitle
+      type:
+      - string
+      description: Заголовок для обратной стороны плитки.
+    - id: payload.backContent
+      type:
+      - string
+      description: Текст для обратной стороны плитки.
+    - id: payload.id
+      type:
+      - string
+      description: Идентификатор родственной вторичной карточки.
+    - id: payload.smallBackgroundImage
+      type:
+      - string
+      description: URI для фонового изображения карточки при ее уменьшении до малого размера.
+    - id: payload.wideBackgroundImage
+      type:
+      - string
+      description: URI для фонового изображения карточки при ее развертывании до широкого размера.
+    - id: payload.wideBackContent
+      type:
+      - string
+      description: Содержимое обратной стороны карточки при ее развертывании до широкого размера.
+    - id: payload.wideBackBackgroundImage
+      type:
+      - string
+      description: URI для изображения на обратной стороне плитки при ее развертывании до широкого размера.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendFlipTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendTile
+  id: azure-sb.MpnsService#sendTile
+  parent: azure-sb.MpnsService
+  name: sendTile(tags, payload, options, callback)
+  summary: Отправляет уведомление с плиткой. Дополнительные сведения см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.sendTile(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Один тег или выражение тегов.
+    - id: payload
+      type:
+      - object
+      description: Полезные данные сообщения.
+    - id: payload.backgroundImage
+      type:
+      - string
+      description: URI фонового изображения для мозаичного элемента.
+    - id: payload.count
+      type:
+      - string
+      description: число, которое отображается на плитке.
+    - id: payload.title
+      type:
+      - string
+      description: текст заголовка плитки.
+    - id: payload.backBackgroundImage
+      type:
+      - string
+      description: URI изображения на обратной стороне плитки.
+    - id: payload.backTitle
+      type:
+      - string
+      description: Заголовок для обратной стороны плитки.
+    - id: payload.backContent
+      type:
+      - string
+      description: Текст для обратной стороны плитки.
+    - id: payload.id
+      type:
+      - string
+      description: Идентификатор родственной вторичной карточки.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendTile(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#sendToast
+  id: azure-sb.MpnsService#sendToast
+  parent: azure-sb.MpnsService
+  name: sendToast(tags, payload, options, callback)
+  summary: Отправляет всплывающее уведомление. Дополнительные сведения см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj553779.aspx.
+  fullName: azure-sb.MpnsService.sendToast(tags, payload, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Один тег или выражение тегов.
+    - id: payload
+      type:
+      - object
+      description: Полезные данные сообщения.
+    - id: payload.text1
+      type:
+      - string
+      description: Text1
+    - id: payload.text2
+      type:
+      - string
+      description: Text2
+    - id: payload.param
+      type:
+      - string
+      description: (необязательно) (Только для версии Windows Phone 7.5 или более поздней версии)
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function sendToast(tags, payload, options, callback)
+  langs:
+  - js
+- uid: azure-sb.MpnsService#send
+  id: azure-sb.MpnsService#send
+  parent: azure-sb.MpnsService
+  name: send(tags, payload, targetName, notificationClass, options, callback)
+  summary: Отправляет настраиваемое уведомление MPNS. Этот метод следует используйте, если вы хотите иметь полный доступ для полезных данных.
+  fullName: azure-sb.MpnsService.send(tags, payload, targetName, notificationClass, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: tags
+      type:
+      - string
+      description: Один тег или выражение тегов.
+    - id: payload
+      type:
+      - string
+      description: Полезные данные XML сообщения.
+    - id: targetName
+      type:
+      - string
+      description: Имя целевой.
+    - id: notificationClass
+      type:
+      - string
+      description: Класс уведомления.
+    - id: options
+      type:
+      - object
+      description: Параметры запроса.
+      optional: true
+    - id: options.headers
+      type:
+      - object
+      description: Заголовки mpns.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: Функция обратного вызова.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function send(tags, payload, targetName, notificationClass, options, callback)
+  langs:
+  - js
