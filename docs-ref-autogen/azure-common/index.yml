@@ -1,0 +1,1164 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6894afa5a4cabd5c941cec9d9770b727ab0335b7
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064395"
+items:
+- uid: azure-common
+  name: azure-common
+  langs:
+  - js
+  type: package
+  summary: ''
+  children:
+  - azure-common.StorageServiceClient
+  - azure-common.ServiceManagementClient
+  - azure-common.ServiceClient
+  - azure-common.HmacSha256Sign
+  - azure-common.LinearRetryPolicyFilter
+  - azure-common.ExponentialRetryPolicyFilter
+  - azure-common.TokenCloudCredentials
+  - azure-common.CertificateCloudCredentials
+  - azure-common.AnonymousCloudCredentials
+  - azure-common.ConnectionStringParser
+  - azure-common.WebResource
+  - azure-common.parse
+  - azure-common.create
+  - azure-common.setAgent
+  - azure-common.DEFAULT_PROTOCOL
+  - azure-common.noMatchConnectionString
+  - azure-common.noMatchSettings
+  - azure-common.parseAndValidateKeys
+  - azure-common.getValidator
+  - azure-common.setting
+  - azure-common.atLeastOne
+  - azure-common.optional
+  - azure-common.allRequired
+  - azure-common.settingWithFunc
+  - azure-common.matchedSpecification
+  - azure-common.serializeEntry
+  - azure-common.propertyType
+  - azure-common.unserializeValue
+  - azure-common.serializeQueryValue
+  - azure-common.format
+  - azure-common.encodeUri
+  - azure-common.objectKeysLength
+  - azure-common.objectFirstKey
+  - azure-common.objectIsNull
+  - azure-common.objectIsEmpty
+  - azure-common.objectIsInt
+  - azure-common.objectIsString
+  - azure-common.objectIsFunction
+  - azure-common.zeroPaddingString
+  - azure-common.stringIsEmpty
+  - azure-common.stringFormat
+  - azure-common.stringStartsWith
+  - azure-common.stringEndsWith
+  - azure-common.stringIsInt
+  - azure-common.stringIsFloat
+  - azure-common.stringIsNumber
+  - azure-common.stringIsDate
+  - azure-common.urlIsHTTPS
+  - azure-common.removeBOM
+  - azure-common.merge
+  - azure-common.inArrayInsensitive
+  - azure-common.tryGetValueInsensitive
+  - azure-common.getNameSpace
+  - azure-common.isInt
+  - azure-common.tryGetValueChain
+  - azure-common.truncatedISO8061Date
+  - azure-common.isBufferAllZero
+  - azure-common.getContentMd5
+  - azure-common.isValidUri
+  - azure-common.isValidHDInsightCreationObject
+  - azure-common.isBase64Encoded
+  - azure-common.isValidFunction
+  - azure-common.namespaceNameIsValid
+  - azure-common.containerNameIsValid
+  - azure-common.blobNameIsValid
+  - azure-common.tableNameIsValid
+  - azure-common.queueNameIsValid
+- uid: azure-common.parse
+  id: azure-common.parse
+  name: parse(connectionString)
+  summary: Выполняет синтаксический анализ строки подключения.
+  fullName: azure-common.parse(connectionString)
+  type: Function
+  syntax:
+    parameters:
+    - id: connectionString
+      type:
+      - number
+      description: Строка подключения, который необходимо проанализировать.
+    return:
+      type:
+      - object
+      description: Объект строки соединения.
+    content: function parse(connectionString)
+  langs:
+  - js
+- uid: azure-common.create
+  id: azure-common.create
+  name: create()
+  summary: Создает фильтр, чтобы обработать сообщение об ошибке. Сюда входят анализ и нормализация сообщения об ошибках.
+  fullName: azure-common.create()
+  type: Function
+  syntax:
+    content: function create()
+  langs:
+  - js
+- uid: azure-common.setAgent
+  id: azure-common.setAgent
+  name: setAgent(resouce, proxy)
+  summary: Агент для использования в запросе результирующий набор зависит от того, параметры прокси-сервера и протокола
+  fullName: azure-common.setAgent(resouce, proxy)
+  type: Function
+  syntax:
+    parameters:
+    - id: resouce
+      type:
+      - object
+      description: Параметры запроса для запроса.
+    - id: proxy
+      type:
+      - object
+      description: Проанализированный URL-адрес прокси-сервера.
+    content: function setAgent(resouce, proxy)
+  langs:
+  - js
+- uid: azure-common.DEFAULT_PROTOCOL
+  id: azure-common.DEFAULT_PROTOCOL
+  name: DEFAULT_PROTOCOL
+  summary: Протокол по умолчанию.
+  fullName: azure-common.DEFAULT_PROTOCOL
+  type: Member
+  syntax:
+    content: DEFAULT_PROTOCOL
+  langs:
+  - js
+- uid: azure-common.noMatchConnectionString
+  id: azure-common.noMatchConnectionString
+  name: noMatchConnectionString(connectionString)
+  summary: Создает исключение, если формат строки соединения не соответствует ни одному из доступных форматов.
+  fullName: azure-common.noMatchConnectionString(connectionString)
+  type: Function
+  syntax:
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: Недопустимый форматированную строку подключения.
+    return:
+      description: Нет
+    content: function noMatchConnectionString(connectionString)
+  langs:
+  - js
+- uid: azure-common.noMatchSettings
+  id: azure-common.noMatchSettings
+  name: noMatchSettings(settings)
+  summary: Создает исключение, если параметры не соответствует ни одному из доступных форматов.
+  fullName: azure-common.noMatchSettings(settings)
+  type: Function
+  syntax:
+    parameters:
+    - id: settings
+      type:
+      - object
+      description: Недопустимые параметры.
+    return:
+      description: Нет
+    content: function noMatchSettings(settings)
+  langs:
+  - js
+- uid: azure-common.parseAndValidateKeys
+  id: azure-common.parseAndValidateKeys
+  name: parseAndValidateKeys(connectionString, validKeys)
+  summary: Анализирует строку подключения и последующей проверки принадлежности к validSettingKeys проанализированный ключи
+  fullName: azure-common.parseAndValidateKeys(connectionString, validKeys)
+  type: Function
+  syntax:
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: Строка подключения, предоставленного пользователем.
+    - id: validKeys
+      type:
+      - array
+      description: Допустимые ключи.
+    return:
+      type:
+      - array
+      description: Строковые ключи токенами подключения.
+    content: function parseAndValidateKeys(connectionString, validKeys)
+  langs:
+  - js
+- uid: azure-common.getValidator
+  id: azure-common.getValidator
+  name: getValidator(array, boolean, boolean)
+  summary: Создает анонимную функцию, которая выступает в качестве предиката для выполнения проверки.
+  fullName: azure-common.getValidator(array, boolean, boolean)
+  type: Function
+  syntax:
+    parameters:
+    - id: array
+      type:
+      - azure-common.requirements
+      description: Массив условий для удовлетворения.
+    - id: boolean
+      type:
+      - azure-common.isRequired
+      description: Либо выполнение этих условий все необходимые или все необязательные.
+    - id: boolean
+      type:
+      - azure-common.atLeastOne
+      description: Указывает, что по крайней мере одно-единственное требование должна завершиться успешно.
+    return:
+      type:
+      - function
+      description: ''
+    content: function getValidator(array, boolean, boolean)
+  langs:
+  - js
+- uid: azure-common.setting
+  id: azure-common.setting
+  name: setting(name)
+  summary: Создает значение параметра условие, которое проверяет его является одним из переданных допустимых значений.
+  fullName: azure-common.setting(name)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: Имя ключа параметра.
+    return:
+      type:
+      - array
+      description: ''
+    content: function setting(name)
+  langs:
+  - js
+- uid: azure-common.atLeastOne
+  id: azure-common.atLeastOne
+  name: atLeastOne()
+  summary: Создает предикат «в аренду один» для предоставленного списка требований.
+  fullName: azure-common.atLeastOne()
+  type: Function
+  syntax:
+    return:
+      description: Вызываемый
+    content: function atLeastOne()
+  langs:
+  - js
+- uid: azure-common.optional
+  id: azure-common.optional
+  name: optional()
+  summary: Создает дополнительный предикат для предоставленного списка требований.
+  fullName: azure-common.optional()
+  type: Function
+  syntax:
+    return:
+      type:
+      - function
+      description: ''
+    content: function optional()
+  langs:
+  - js
+- uid: azure-common.allRequired
+  id: azure-common.allRequired
+  name: allRequired()
+  summary: Создает предикат, необходимые для предоставленного списка требований.
+  fullName: azure-common.allRequired()
+  type: Function
+  syntax:
+    return:
+      type:
+      - function
+      description: ''
+    content: function allRequired()
+  langs:
+  - js
+- uid: azure-common.settingWithFunc
+  id: azure-common.settingWithFunc
+  name: settingWithFunc(name, predicate)
+  summary: Создает условия значение параметра, используя переданный предикат.
+  fullName: azure-common.settingWithFunc(name, predicate)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: Имя ключа параметра.
+    - id: predicate
+      type:
+      - function
+      description: Предикат значение параметра.
+    return:
+      type:
+      - array
+      description: ''
+    content: function settingWithFunc(name, predicate)
+  langs:
+  - js
+- uid: azure-common.matchedSpecification
+  id: azure-common.matchedSpecification
+  name: matchedSpecification(array)
+  summary: Проверяет заданный список параметров, соответствует ли набор фильтров точно.
+  fullName: azure-common.matchedSpecification(array)
+  type: Function
+  syntax:
+    parameters:
+    - id: array
+      description: $settings параметры для проверки.
+    return:
+      description: логический, если фильтр возвращает значение null, значение false. Если существуют какие-либо параметры, оставленные после все фильтры будут обработаны, false. Значение true, в противном случае.
+    content: function matchedSpecification(array)
+  langs:
+  - js
+- uid: azure-common.serializeEntry
+  id: azure-common.serializeEntry
+  name: serializeEntry(content, namespaces)
+  summary: ''
+  fullName: azure-common.serializeEntry(content, namespaces)
+  type: Function
+  syntax:
+    parameters:
+    - id: content
+      type:
+      - object
+      description: Полезные данные содержимого, так как он является сериализуется с помощью js2xml. Оно должно включать все узлы корневого.
+    - id: namespaces
+      type:
+      - array
+      description: Массив пространств имен верхнего уровня должен быть определен.
+    content: function serializeEntry(content, namespaces)
+  langs:
+  - js
+- uid: azure-common.propertyType
+  id: azure-common.propertyType
+  name: propertyType(value)
+  summary: Получите тип Edm объекта.
+  fullName: azure-common.propertyType(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: Типизированный экземпляр.
+    return:
+      type:
+      - string
+      description: Тип Edm.
+    content: function propertyType(value)
+  langs:
+  - js
+- uid: azure-common.unserializeValue
+  id: azure-common.unserializeValue
+  name: unserializeValue(type, value)
+  summary: Преобразование сериализованного значения в типизированный объект.
+  fullName: azure-common.unserializeValue(type, value)
+  type: Function
+  syntax:
+    parameters:
+    - id: type
+      type:
+      - string
+      description: Тип значения, так как он отображается в атрибуте типа.
+    - id: value
+      type:
+      - string
+      description: Значение в строковом формате.
+    return:
+      type:
+      - object
+      description: Типизированное значение.
+    content: function unserializeValue(type, value)
+  langs:
+  - js
+- uid: azure-common.serializeQueryValue
+  id: azure-common.serializeQueryValue
+  name: serializeQueryValue(value)
+  summary: Сериализует значение в соответствующее значение для использования в odata значение запроса.
+  fullName: azure-common.serializeQueryValue(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: Значение, подлежащий сериализации.
+    return:
+      type:
+      - string
+      description: Сериализованное значение.
+    content: function serializeQueryValue(value)
+  langs:
+  - js
+- uid: azure-common.format
+  id: azure-common.format
+  name: format(date, skipMilliseconds, millisecondsPading)
+  summary: Форматирует дату в виде строки iso 8061.
+  fullName: azure-common.format(date, skipMilliseconds, millisecondsPading)
+  type: Function
+  syntax:
+    parameters:
+    - id: date
+      type:
+      - date
+      description: Дата для форматирования.
+    - id: skipMilliseconds
+      type:
+      - azure-common.bool
+      description: Логическое значение, указывающее, если время в миллисекундах части даты не будут включены.
+    - id: millisecondsPading
+      type:
+      - azure-common.integer
+      description: Количество разрядов слева рукописного ввода время в миллисекундах.
+    return:
+      type:
+      - string
+      description: Дата в формате ISO 8061 оповещением.
+    content: function format(date, skipMilliseconds, millisecondsPading)
+  langs:
+  - js
+- uid: azure-common.encodeUri
+  id: azure-common.encodeUri
+  name: encodeUri(uri)
+  summary: Кодирует URI.
+  fullName: azure-common.encodeUri(uri)
+  type: Function
+  syntax:
+    parameters:
+    - id: uri
+      type:
+      - string
+      description: Кодируемый URI.
+    return:
+      type:
+      - string
+      description: Зашифрованный URI-адрес.
+    content: function encodeUri(uri)
+  langs:
+  - js
+- uid: azure-common.objectKeysLength
+  id: azure-common.objectKeysLength
+  name: objectKeysLength(value)
+  summary: Возвращает число ключей (свойства) в объект.
+  fullName: azure-common.objectKeysLength(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: Объект, который ключи являются для подсчета.
+    return:
+      type:
+      - number
+      description: Количество ключей в объекте.
+    content: function objectKeysLength(value)
+  langs:
+  - js
+- uid: azure-common.objectFirstKey
+  id: azure-common.objectFirstKey
+  name: objectFirstKey(value)
+  summary: Возвращает имя первого свойства в объекте.
+  fullName: azure-common.objectFirstKey(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: Объект, какой ключ должны быть возвращены.
+    return:
+      type:
+      - number
+      description: Имя первого ключа в объекте.
+    content: function objectFirstKey(value)
+  langs:
+  - js
+- uid: azure-common.objectIsNull
+  id: azure-common.objectIsNull
+  name: objectIsNull(value)
+  summary: Проверяет, является ли значение null или быть неопределенным.
+  fullName: azure-common.objectIsNull(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: Значение для проверки null или быть неопределенным.
+    return:
+      type:
+      - azure-common.bool
+      description: Значение true, если значение равно null или undefined, false в противном случае.
+    content: function objectIsNull(value)
+  langs:
+  - js
+- uid: azure-common.objectIsEmpty
+  id: azure-common.objectIsEmpty
+  name: objectIsEmpty(object)
+  summary: Проверяет, является ли объект пустым.
+  fullName: azure-common.objectIsEmpty(object)
+  type: Function
+  syntax:
+    parameters:
+    - id: object
+      type:
+      - object
+      description: Объект для проверки, если он имеет значение null.
+    return:
+      type:
+      - azure-common.bool
+      description: Значение true, если объект является пустым, значение false в противном случае.
+    content: function objectIsEmpty(object)
+  langs:
+  - js
+- uid: azure-common.objectIsInt
+  id: azure-common.objectIsInt
+  name: objectIsInt(value)
+  summary: Определяет, содержит ли объект целое число.
+  fullName: azure-common.objectIsInt(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: Объект, для подтверждения.
+    return:
+      type:
+      - azure-common.bool
+      description: Значение true, если объект содержит целое число; значение false в противном случае.
+    content: function objectIsInt(value)
+  langs:
+  - js
+- uid: azure-common.objectIsString
+  id: azure-common.objectIsString
+  name: objectIsString(object)
+  summary: Проверяет, если объект является строкой.
+  fullName: azure-common.objectIsString(object)
+  type: Function
+  syntax:
+    parameters:
+    - id: object
+      type:
+      - object
+      description: Объект для проверки, если он является строкой.
+    return:
+      type:
+      - azure-common.bool
+      description: Значение true, если объект является strign false в противном случае.
+    content: function objectIsString(object)
+  langs:
+  - js
+- uid: azure-common.objectIsFunction
+  id: azure-common.objectIsFunction
+  name: objectIsFunction(object)
+  summary: Проверьте, если объект является функцией
+  fullName: azure-common.objectIsFunction(object)
+  type: Function
+  syntax:
+    parameters:
+    - id: object
+      type:
+      - object
+      description: Объект для проверки, является ли функция
+    return:
+      type:
+      - azure-common.bool
+      description: Значение true, если указанный объект является функцией, в противном случае false
+    content: function objectIsFunction(object)
+  langs:
+  - js
+- uid: azure-common.zeroPaddingString
+  id: azure-common.zeroPaddingString
+  name: zeroPaddingString()
+  summary: Передняя ноль заполнения строки до длины sepcified
+  fullName: azure-common.zeroPaddingString()
+  type: Function
+  syntax:
+    content: function zeroPaddingString()
+  langs:
+  - js
+- uid: azure-common.stringIsEmpty
+  id: azure-common.stringIsEmpty
+  name: stringIsEmpty(value)
+  summary: Проверяет, является ли значение является пустой строкой, значение null или быть неопределенным.
+  fullName: azure-common.stringIsEmpty(value)
+  type: Function
+  syntax:
+    parameters:
+    - id: value
+      type:
+      - object
+      description: Значение для проверки является пустой строкой, значение null или быть неопределенным.
+    return:
+      type:
+      - azure-common.bool
+      description: Значение true, если значение является пустой строкой, значение false, null или не определено, в противном случае.
+    content: function stringIsEmpty(value)
+  langs:
+  - js
+- uid: azure-common.stringFormat
+  id: azure-common.stringFormat
+  name: stringFormat(text, arguments)
+  summary: Форматирует текст замены "?" аргументами.
+  fullName: azure-common.stringFormat(text, arguments)
+  type: Function
+  syntax:
+    parameters:
+    - id: text
+      type:
+      - string
+      description: Строка где? следует заменить.
+    - id: arguments
+      type:
+      - array
+      description: Значения для вставки в вопросе помечать параметры (?).
+    return:
+      type:
+      - string
+      description: ''
+    content: function stringFormat(text, arguments)
+  langs:
+  - js
+- uid: azure-common.stringStartsWith
+  id: azure-common.stringStartsWith
+  name: stringStartsWith(text, prefix)
+  summary: Определяет, начинается ли строка с другой.
+  fullName: azure-common.stringStartsWith(text, prefix)
+  type: Function
+  syntax:
+    parameters:
+    - id: text
+      type:
+      - string
+      description: Строка, для подтверждения.
+    - id: prefix
+      type:
+      - string
+      description: Префикс строки.
+    return:
+      type:
+      - azure-common.Bool
+      description: Значение true, если строка начинается с этого префикса. значение false в противном случае.
+    content: function stringStartsWith(text, prefix)
+  langs:
+  - js
+- uid: azure-common.stringEndsWith
+  id: azure-common.stringEndsWith
+  name: stringEndsWith(text, suffix)
+  summary: Определяет, заканчивается ли строка другой.
+  fullName: azure-common.stringEndsWith(text, suffix)
+  type: Function
+  syntax:
+    parameters:
+    - id: text
+      type:
+      - string
+      description: Строка, для подтверждения.
+    - id: suffix
+      type:
+      - string
+      description: Суффикс строки.
+    return:
+      type:
+      - azure-common.Bool
+      description: Значение true, если строка заканчивается суффиксом; значение false в противном случае.
+    content: function stringEndsWith(text, suffix)
+  langs:
+  - js
+- uid: azure-common.stringIsInt
+  id: azure-common.stringIsInt
+  name: stringIsInt(text)
+  summary: Определяет, содержит ли строка, целое число.
+  fullName: azure-common.stringIsInt(text)
+  type: Function
+  syntax:
+    parameters:
+    - id: text
+      type:
+      - string
+      description: Строка, для подтверждения.
+    return:
+      type:
+      - azure-common.Bool
+      description: Значение true, если строка содержит целое число; значение false в противном случае.
+    content: function stringIsInt(text)
+  langs:
+  - js
+- uid: azure-common.stringIsFloat
+  id: azure-common.stringIsFloat
+  name: stringIsFloat(text)
+  summary: Определяет, содержит ли строка число с плавающей запятой.
+  fullName: azure-common.stringIsFloat(text)
+  type: Function
+  syntax:
+    parameters:
+    - id: text
+      type:
+      - string
+      description: Строка, для подтверждения.
+    return:
+      type:
+      - azure-common.Bool
+      description: Значение true, если строка содержит число с плавающей запятой; значение false в противном случае.
+    content: function stringIsFloat(text)
+  langs:
+  - js
+- uid: azure-common.stringIsNumber
+  id: azure-common.stringIsNumber
+  name: stringIsNumber(text)
+  summary: Определяет, содержит ли строка число.
+  fullName: azure-common.stringIsNumber(text)
+  type: Function
+  syntax:
+    parameters:
+    - id: text
+      type:
+      - string
+      description: Строка, для подтверждения.
+    return:
+      type:
+      - azure-common.Bool
+      description: Значение true, если строка содержит число; значение false в противном случае.
+    content: function stringIsNumber(text)
+  langs:
+  - js
+- uid: azure-common.stringIsDate
+  id: azure-common.stringIsDate
+  name: stringIsDate(date)
+  summary: Определяет, является ли допустимым объект даты.
+  fullName: azure-common.stringIsDate(date)
+  type: Function
+  syntax:
+    parameters:
+    - id: date
+      type:
+      - Date
+      description: Дата для тестирования
+    return:
+      type:
+      - azure-common.Bool
+      description: Значение true, если дата является допустимым; значение false в противном случае.
+    content: function stringIsDate(date)
+  langs:
+  - js
+- uid: azure-common.urlIsHTTPS
+  id: azure-common.urlIsHTTPS
+  name: urlIsHTTPS(urlToCheck)
+  summary: Проверяет, является ли анализируемый URL-адрес HTTPS
+  fullName: azure-common.urlIsHTTPS(urlToCheck)
+  type: Function
+  syntax:
+    parameters:
+    - id: urlToCheck
+      type:
+      - object
+      description: URL-адрес для проверки
+    return:
+      type:
+      - azure-common.bool
+      description: Значение true, если URL-адрес HTTPS; значение false в противном случае.
+    content: function urlIsHTTPS(urlToCheck)
+  langs:
+  - js
+- uid: azure-common.removeBOM
+  id: azure-common.removeBOM
+  name: removeBOM(str)
+  summary: Удаляет метки порядка БАЙТОВ из строки.
+  fullName: azure-common.removeBOM(str)
+  type: Function
+  syntax:
+    parameters:
+    - id: str
+      type:
+      - string
+      description: Строка, из которой должен удаляться метки порядка БАЙТОВ
+    return:
+      type:
+      - string
+      description: Строка без метки порядка БАЙТОВ.
+    content: function removeBOM(str)
+  langs:
+  - js
+- uid: azure-common.merge
+  id: azure-common.merge
+  name: merge(object)
+  summary: Объединяет несколько объектов.
+  fullName: azure-common.merge(object)
+  type: Function
+  syntax:
+    parameters:
+    - id: object
+      type:
+      - object
+      description: Объекты для слияния
+    return:
+      type:
+      - object
+      description: Объединенный объект.
+    content: function merge(object)
+  langs:
+  - js
+- uid: azure-common.inArrayInsensitive
+  id: azure-common.inArrayInsensitive
+  name: inArrayInsensitive(needle, haystack)
+  summary: Проверяет, существует ли значение в массиве. Сравнение выполняется без учета регистра образом.
+  fullName: azure-common.inArrayInsensitive(needle, haystack)
+  type: Function
+  syntax:
+    parameters:
+    - id: needle
+      type:
+      - string
+      description: Значение поиска.
+    - id: haystack
+      type:
+      - array
+      description: Массив.
+    return:
+      type:
+      - boolean
+      description: ''
+    content: function inArrayInsensitive(needle, haystack)
+  langs:
+  - js
+- uid: azure-common.tryGetValueInsensitive
+  id: azure-common.tryGetValueInsensitive
+  name: tryGetValueInsensitive(key, haystack, default)
+  summary: Возвращает значение указанного ключа, передаваемое из объекта и в случае, этот ключ не существует, возвращается значение по умолчанию. Ключа сопоставление выполняется в режиме без учета регистра.
+  fullName: azure-common.tryGetValueInsensitive(key, haystack, default)
+  type: Function
+  syntax:
+    parameters:
+    - id: key
+      type:
+      - string
+      description: Ключ массива.
+    - id: haystack
+      type:
+      - object
+      description: Объект для использования.
+    - id: default
+      type:
+      - azure-common.mix
+      description: Значение, возвращаемое, если $key не найден в $array.
+    return:
+      description: MIX
+    content: function tryGetValueInsensitive(key, haystack, default)
+  langs:
+  - js
+- uid: azure-common.getNameSpace
+  id: azure-common.getNameSpace
+  name: getNameSpace()
+  summary: Возвращает пространство имен subscriptoinId, префикса и расположения
+  fullName: azure-common.getNameSpace()
+  tags:
+  - originalTitle: subscriptionId
+    title: subscriptionid
+    text: '{string}  The Azure subscription id.'
+    value: '{string}  The Azure subscription id.'
+  - originalTitle: prefix
+    title: prefix
+    text: '{string}          The prifix for the service.'
+    value: '{string}          The prifix for the service.'
+  - originalTitle: location
+    title: location
+    text: '{string}        The location of the service.'
+    value: '{string}        The location of the service.'
+  type: Function
+  syntax:
+    return:
+      type:
+      - azure-common.Bool
+      description: Значение true, если значение является целым числом; значение false в противном случае.
+    content: function getNameSpace()
+  langs:
+  - js
+- uid: azure-common.isInt
+  id: azure-common.isInt
+  name: isInt(The)
+  summary: Определяет, является ли значение (строка или число) целое число.
+  fullName: azure-common.isInt(The)
+  type: Function
+  syntax:
+    parameters:
+    - id: The
+      type:
+      - object
+      description: значение для оценки.
+    return:
+      type:
+      - azure-common.Bool
+      description: Значение true, если значение является целым числом; значение false в противном случае.
+    content: function isInt(The)
+  langs:
+  - js
+- uid: azure-common.tryGetValueChain
+  id: azure-common.tryGetValueChain
+  name: tryGetValueChain(object, keys, default)
+  summary: Возвращает значение в объект цепочки.
+  fullName: azure-common.tryGetValueChain(object, keys, default)
+  type: Function
+  syntax:
+    parameters:
+    - id: object
+      type:
+      - object
+      description: Объект со значениями.
+    - id: keys
+      type:
+      - array
+      description: Ключи.
+    - id: default
+      type:
+      - azure-common.mix
+      description: Значение, возвращаемое, если $key не найден в $array.
+    return:
+      description: MIX
+    content: function tryGetValueChain(object, keys, default)
+  langs:
+  - js
+- uid: azure-common.truncatedISO8061Date
+  id: azure-common.truncatedISO8061Date
+  name: truncatedISO8061Date(a)
+  summary: Округляет даты до секунд.
+  fullName: azure-common.truncatedISO8061Date(a)
+  type: Function
+  syntax:
+    parameters:
+    - id: a
+      type:
+      - Date
+      description: дата
+    return:
+      type:
+      - string
+      description: Дата в формате ISO8061 ни один компонент миллисекунд
+    content: function truncatedISO8061Date(a)
+  langs:
+  - js
+- uid: azure-common.isBufferAllZero
+  id: azure-common.isBufferAllZero
+  name: isBufferAllZero()
+  summary: Является ли содержимое буфера все нулю
+  fullName: azure-common.isBufferAllZero()
+  type: Function
+  syntax:
+    content: function isBufferAllZero()
+  langs:
+  - js
+- uid: azure-common.getContentMd5
+  id: azure-common.getContentMd5
+  name: getContentMd5()
+  summary: Вычисление контрольной суммы MD5 для содержимого
+  fullName: azure-common.getContentMd5()
+  type: Function
+  syntax:
+    content: function getContentMd5()
+  langs:
+  - js
+- uid: azure-common.isValidUri
+  id: azure-common.isValidUri
+  name: isValidUri(uri)
+  summary: Создает функцию анонимные, проверьте, если данный uri является допустимым, или нет.
+  fullName: azure-common.isValidUri(uri)
+  type: Function
+  syntax:
+    parameters:
+    - id: uri
+      type:
+      - string
+      description: Проверяемый uri.
+    return:
+      type:
+      - function
+      description: ''
+    content: function isValidUri(uri)
+  langs:
+  - js
+- uid: azure-common.isValidHDInsightCreationObject
+  id: azure-common.isValidHDInsightCreationObject
+  name: isValidHDInsightCreationObject(clusterCreationObject)
+  summary: Проверяет, что clusterCreationObject сформирован правильно.
+  fullName: azure-common.isValidHDInsightCreationObject(clusterCreationObject)
+  type: Function
+  syntax:
+    parameters:
+    - id: clusterCreationObject
+      type:
+      - object
+      description: >-
+        Объект, используемый для предоставления все параметры, необходимые для создания кластера.
+
+        {/ / Ниже приведены обязательные поля name: "имя кластера (имя dns) только строчные буквы", расположение: «где кластера будет создаваться центр обработки данных Azure», defaultStorageAccountName: «Имя учетной записи хранения Azure по умолчанию» defaultStorageAccountKey: «Секретный ключ для учетной записи хранения Azure по умолчанию» defaultStorageContainer: «Контейнер учетной записи хранения Azure по умолчанию», пользователь: «Имя пользователя, используемое для кластера», пароль: «Пароль, используемый для кластера», узлов: номер / / количество узлов для использования / / ниже приведены необязательные поля additionalStorageAccounts: [{имя: «имя учетной записи хранения» ключ: «секретный ключ для учетной записи хранения»}, {/ / дополнительные учетные записи следуя тому же шаблону}] / / следующие не являются обязательными, но если он указан, другой — требуется oozieMetastore: {сервера: «имя sql server для использования», базы данных: «базе данных sql, для которого использование» пользователя: «имя пользователя, используемое для входа в базу данных» пароль: "пароль, используемый при входе базы данных "} hiveMetastore: {сервера: «имя sql server для использования», база данных: «базе данных sql, для которого использование» пользователя: «имя пользователя, используемое для входа в базу данных» пароль: «пароль, используемый при входе в базу данных»}}
+    content: function isValidHDInsightCreationObject(clusterCreationObject)
+  langs:
+  - js
+- uid: azure-common.isBase64Encoded
+  id: azure-common.isBase64Encoded
+  name: isBase64Encoded(key)
+  summary: Создает функцию анонимные, проверять, является ли заданный ключ в кодировке base-64.
+  fullName: azure-common.isBase64Encoded(key)
+  type: Function
+  syntax:
+    parameters:
+    - id: key
+      type:
+      - string
+      description: Ключ для проверки.
+    return:
+      type:
+      - function
+      description: ''
+    content: function isBase64Encoded(key)
+  langs:
+  - js
+- uid: azure-common.isValidFunction
+  id: azure-common.isValidFunction
+  name: isValidFunction(function)
+  summary: Проверяет функцию.
+  fullName: azure-common.isValidFunction(function)
+  type: Function
+  syntax:
+    parameters:
+    - id: function
+      type:
+      - object
+      description: Функция для проверки.
+    return:
+      type:
+      - function
+      description: ''
+    content: function isValidFunction(function)
+  langs:
+  - js
+- uid: azure-common.namespaceNameIsValid
+  id: azure-common.namespaceNameIsValid
+  name: namespaceNameIsValid(name)
+  summary: Проверяется по закону допустимое имя пространства имен служебной шины. Не проверяет доступность.
+  fullName: azure-common.namespaceNameIsValid(name)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: имя для проверки
+    return:
+      description: либо облако, либо ничего. Создает исключение, если имя является недопустимым, сообщение описывает оно нарушает допустимость критерии.
+    content: function namespaceNameIsValid(name)
+  langs:
+  - js
+- uid: azure-common.containerNameIsValid
+  id: azure-common.containerNameIsValid
+  name: containerNameIsValid(containerName)
+  summary: Проверяет имя контейнера.
+  fullName: azure-common.containerNameIsValid(containerName)
+  type: Function
+  syntax:
+    parameters:
+    - id: containerName
+      type:
+      - string
+      description: Имя контейнера.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function containerNameIsValid(containerName)
+  langs:
+  - js
+- uid: azure-common.blobNameIsValid
+  id: azure-common.blobNameIsValid
+  name: blobNameIsValid(containerName, blobname)
+  summary: Проверяет имя большого двоичного объекта.
+  fullName: azure-common.blobNameIsValid(containerName, blobname)
+  type: Function
+  syntax:
+    parameters:
+    - id: containerName
+      type:
+      - string
+      description: Имя контейнера.
+    - id: blobname
+      type:
+      - string
+      description: Имя большого двоичного объекта.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function blobNameIsValid(containerName, blobname)
+  langs:
+  - js
+- uid: azure-common.tableNameIsValid
+  id: azure-common.tableNameIsValid
+  name: tableNameIsValid(table)
+  summary: Проверяет имя таблицы.
+  fullName: azure-common.tableNameIsValid(table)
+  type: Function
+  syntax:
+    parameters:
+    - id: table
+      type:
+      - string
+      description: Имя таблицы.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function tableNameIsValid(table)
+  langs:
+  - js
+- uid: azure-common.queueNameIsValid
+  id: azure-common.queueNameIsValid
+  name: queueNameIsValid(queue)
+  summary: Проверяет имя очереди.
+  fullName: azure-common.queueNameIsValid(queue)
+  type: Function
+  syntax:
+    parameters:
+    - id: queue
+      type:
+      - string
+      description: Имя очереди.
+    return:
+      type:
+      - undefined
+      description: ''
+    content: function queueNameIsValid(queue)
+  langs:
+  - js
+references:
+- uid: azure-common.StorageServiceClient
+  name: StorageServiceClient
+- uid: azure-common.ServiceManagementClient
+  name: ServiceManagementClient
+- uid: azure-common.ServiceClient
+  name: ServiceClient
+- uid: azure-common.HmacSha256Sign
+  name: HmacSha256Sign
+- uid: azure-common.LinearRetryPolicyFilter
+  name: LinearRetryPolicyFilter
+- uid: azure-common.ExponentialRetryPolicyFilter
+  name: ExponentialRetryPolicyFilter
+- uid: azure-common.TokenCloudCredentials
+  name: TokenCloudCredentials
+- uid: azure-common.CertificateCloudCredentials
+  name: CertificateCloudCredentials
+- uid: azure-common.AnonymousCloudCredentials
+  name: AnonymousCloudCredentials
+- uid: azure-common.ConnectionStringParser
+  name: ConnectionStringParser
+- uid: azure-common.WebResource
+  name: WebResource

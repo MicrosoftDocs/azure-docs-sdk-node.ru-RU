@@ -1,0 +1,341 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: de75df4066cec224dd433906c125d5d5831dec66
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063898"
+items:
+- uid: azure-asm-hdinsight.HDInsightService
+  id: azure-asm-hdinsight.HDInsightService
+  name: HDInsightService
+  summary: <span data-ttu-id="d0476-101">Класс HDInsightService используется для выполнения операций в службе Microsoft Azure HDInsight.</span><span class="sxs-lookup"><span data-stu-id="d0476-101">The HDInsightService class is used to perform operations on the Microsoft Azure HDInsight Service.</span></span>
+  fullName: azure-asm-hdinsight.HDInsightService
+  type: Class
+  children:
+  - azure-asm-hdinsight.HDInsightService.#ctor
+  - azure-asm-hdinsight.HDInsightService#convertCreationObject
+  - azure-asm-hdinsight.HDInsightService#deleteCluster
+  - azure-asm-hdinsight.HDInsightService#createCluster
+  - azure-asm-hdinsight.HDInsightService#listClusters
+  langs:
+  - js
+- id: azure-asm-hdinsight.HDInsightService.#ctor
+  uid: azure-asm-hdinsight.HDInsightService.#ctor
+  parent: azure-asm-hdinsight.HDInsightService
+  name: HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-hdinsight.HDInsightService.HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  summary: <span data-ttu-id="d0476-102">Создает новый объект HDInsightService</span><span class="sxs-lookup"><span data-stu-id="d0476-102">Creates a new HDInsightService object</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: <span data-ttu-id="d0476-103">Идентификатор конфигурации хранилища или подписку для учетной записи или строке подключения</span><span class="sxs-lookup"><span data-stu-id="d0476-103">configuration store or subscription ID for the account or the connection string</span></span>
+    - id: authentication
+      type:
+      - object
+      description: >-
+        <span data-ttu-id="d0476-104">Объект проверки подлинности для клиента.</span><span class="sxs-lookup"><span data-stu-id="d0476-104">The authentication object for the client.</span></span>
+
+
+        <span data-ttu-id="d0476-105">Keyfile-certfile или keyvalue/certvalue необходимо использовать для предоставления сертификата управления для проверки подлинности запросов на обслуживание.</span><span class="sxs-lookup"><span data-stu-id="d0476-105">You must use either keyfile/certfile or keyvalue/certvalue to provide a management certificate to authenticate service requests.</span></span>
+    - id: authentication.keyfile
+      type:
+      - string
+      description: <span data-ttu-id="d0476-106">Путь к файлу, который содержит PEM ключ в кодировке</span><span class="sxs-lookup"><span data-stu-id="d0476-106">The path to a file that contains the PEM encoded key</span></span>
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: <span data-ttu-id="d0476-107">Путь к файлу, который содержит PEM сертификат в кодировке</span><span class="sxs-lookup"><span data-stu-id="d0476-107">The path to a file that contains the PEM encoded certificate</span></span>
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: <span data-ttu-id="d0476-108">Строка, содержащая PEM ключ в кодировке</span><span class="sxs-lookup"><span data-stu-id="d0476-108">A string that contains the PEM encoded key</span></span>
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: <span data-ttu-id="d0476-109">Строка, содержащая PEM сертификат в кодировке</span><span class="sxs-lookup"><span data-stu-id="d0476-109">A string that contains the PEM encoded certificate</span></span>
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: <span data-ttu-id="d0476-110">Параметры узла для переопределения значения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="d0476-110">The host options to override defaults.</span></span>
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: <span data-ttu-id="d0476-111">Конечная точка управления.</span><span class="sxs-lookup"><span data-stu-id="d0476-111">The management endpoint.</span></span>
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: <span data-ttu-id="d0476-112">Версия API для использования.</span><span class="sxs-lookup"><span data-stu-id="d0476-112">The API vesion to be used.</span></span>
+      optional: true
+    content: new HDInsightService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#convertCreationObject
+  id: azure-asm-hdinsight.HDInsightService#convertCreationObject
+  parent: azure-asm-hdinsight.HDInsightService
+  name: convertCreationObject(clusterCreationObject)
+  summary: <span data-ttu-id="d0476-113">Преобразует объект создания кластера в playload, который фактически отправляется на сервер для создания кластера.</span><span class="sxs-lookup"><span data-stu-id="d0476-113">Converts a cluster creation object into a playload that is actually sent to the server to create the cluster.</span></span>
+  fullName: azure-asm-hdinsight.HDInsightService.convertCreationObject(clusterCreationObject)
+  type: Function
+  syntax:
+    parameters:
+    - id: clusterCreationObject
+      type:
+      - object
+      description: <span data-ttu-id="d0476-114">Объект, используемый для предоставления все параметры, необходимые для создания кластера.</span><span class="sxs-lookup"><span data-stu-id="d0476-114">The object used to supply all parameters needed to create a cluster.</span></span>
+    - id: clusterCreationObject.name
+      type:
+      - string
+      description: <span data-ttu-id="d0476-115">Имя кластера (имя dns) нижнем регистре</span><span class="sxs-lookup"><span data-stu-id="d0476-115">The name of the cluster (dns name) all lower case</span></span>
+    - id: clusterCreationObject.location
+      type:
+      - string
+      description: <span data-ttu-id="d0476-116">Центр обработки данных Azure, где будет создаваться кластера</span><span class="sxs-lookup"><span data-stu-id="d0476-116">The Azure data center where the cluster is to be created</span></span>
+    - id: clusterCreationObject.defaultStorageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="d0476-117">Имя учетной записи хранения Azure по умолчанию</span><span class="sxs-lookup"><span data-stu-id="d0476-117">The name of the default Azure storage account</span></span>
+    - id: clusterCreationObject.defaultStorageAccountKey
+      type:
+      - string
+      description: <span data-ttu-id="d0476-118">Секретный ключ для учетной записи хранения Azure по умолчанию</span><span class="sxs-lookup"><span data-stu-id="d0476-118">The secret key for the default Azure storage account</span></span>
+    - id: clusterCreationObject.defaultStorageContainer
+      type:
+      - string
+      description: <span data-ttu-id="d0476-119">Контейнер для учетной записи хранения Azure по умолчанию</span><span class="sxs-lookup"><span data-stu-id="d0476-119">The container for the default Azure storage account</span></span>
+    - id: clusterCreationObject.user
+      type:
+      - string
+      description: <span data-ttu-id="d0476-120">Имя пользователя, используемое для кластера</span><span class="sxs-lookup"><span data-stu-id="d0476-120">The username to use for the cluster</span></span>
+    - id: clusterCreationObject.password
+      type:
+      - string
+      description: <span data-ttu-id="d0476-121">Пароль, используемый для кластера</span><span class="sxs-lookup"><span data-stu-id="d0476-121">The password to use for the cluster</span></span>
+    - id: clusterCreationObject.nodes
+      type:
+      - azure-asm-hdinsight.int
+      description: <span data-ttu-id="d0476-122">Количество узлов для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-122">The number of nodes to use</span></span>
+    - id: clusterCreationObject.additionalStorageAccounts
+      type:
+      - array
+      description: <span data-ttu-id="d0476-123">Массив объектов, позволяет предоставить дополнительное хранилище сведения об учетной записи</span><span class="sxs-lookup"><span data-stu-id="d0476-123">The array of objects used to supply additional storage account information</span></span>
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.name
+      type:
+      - string
+      description: <span data-ttu-id="d0476-124">Имя учетной записи хранения</span><span class="sxs-lookup"><span data-stu-id="d0476-124">The name of the storage account</span></span>
+    - id: clusterCreationObject.additionalStorageAccounts.key
+      type:
+      - string
+      description: <span data-ttu-id="d0476-125">Ключ для учетной записи хранения</span><span class="sxs-lookup"><span data-stu-id="d0476-125">The key for the storage account</span></span>
+    - id: clusterCreationObject.oozieMetastore
+      type:
+      - object
+      description: <span data-ttu-id="d0476-126">Объект, используемый для передачи параметров хранилища метаданных Oozie</span><span class="sxs-lookup"><span data-stu-id="d0476-126">The object used to supply parameters for the Oozie metastore</span></span>
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.server
+      type:
+      - string
+      description: <span data-ttu-id="d0476-127">Имя сервера базы данных SQL для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-127">The name of the SQL Database server to use</span></span>
+    - id: clusterCreationObject.oozieMetastore.database
+      type:
+      - string
+      description: <span data-ttu-id="d0476-128">Имя базы данных для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-128">The name of the database to use</span></span>
+    - id: clusterCreationObject.oozieMetastore.user
+      type:
+      - string
+      description: <span data-ttu-id="d0476-129">Имя пользователя, используемое при проверке подлинности на сервере базы данных /</span><span class="sxs-lookup"><span data-stu-id="d0476-129">The user name to use when authenticating to the database/server</span></span>
+    - id: clusterCreationObject.oozieMetastore.password
+      type:
+      - string
+      description: <span data-ttu-id="d0476-130">Пароль пользователя</span><span class="sxs-lookup"><span data-stu-id="d0476-130">The user password</span></span>
+    - id: clusterCreationObject.hiveMetastore
+      type:
+      - object
+      description: <span data-ttu-id="d0476-131">Объект, используемый для передачи параметров хранилища метаданных Hive</span><span class="sxs-lookup"><span data-stu-id="d0476-131">The object used to supply parameters for the Hive metastore</span></span>
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.server
+      type:
+      - string
+      description: <span data-ttu-id="d0476-132">Имя сервера базы данных SQL для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-132">The name of the SQL Database server to use</span></span>
+    - id: clusterCreationObject.hiveMetastore.database
+      type:
+      - string
+      description: <span data-ttu-id="d0476-133">Имя базы данных для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-133">The name of the database to use</span></span>
+    - id: clusterCreationObject.hiveMetastore.user
+      type:
+      - string
+      description: <span data-ttu-id="d0476-134">Имя пользователя, используемое при проверке подлинности на сервере базы данных /</span><span class="sxs-lookup"><span data-stu-id="d0476-134">The user name to use when authenticating to the database/server</span></span>
+    - id: clusterCreationObject.hiveMetastore.password
+      type:
+      - string
+      description: <span data-ttu-id="d0476-135">Пароль пользователя</span><span class="sxs-lookup"><span data-stu-id="d0476-135">The user password</span></span>
+    content: function convertCreationObject(clusterCreationObject)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#deleteCluster
+  id: azure-asm-hdinsight.HDInsightService#deleteCluster
+  parent: azure-asm-hdinsight.HDInsightService
+  name: deleteCluster(name, location, callback)
+  summary: <span data-ttu-id="d0476-136">Удаление кластера HDInsight</span><span class="sxs-lookup"><span data-stu-id="d0476-136">Deletes an HDInsight Cluster</span></span>
+  fullName: azure-asm-hdinsight.HDInsightService.deleteCluster(name, location, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: location
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="d0476-137">`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.</span><span class="sxs-lookup"><span data-stu-id="d0476-137">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function deleteCluster(name, location, callback)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#createCluster
+  id: azure-asm-hdinsight.HDInsightService#createCluster
+  parent: azure-asm-hdinsight.HDInsightService
+  name: createCluster(clusterCreationObject, callback)
+  summary: <span data-ttu-id="d0476-138">Создает новый кластер HDInsight</span><span class="sxs-lookup"><span data-stu-id="d0476-138">Creates a new HDInsight Cluster</span></span>
+  fullName: azure-asm-hdinsight.HDInsightService.createCluster(clusterCreationObject, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: clusterCreationObject
+      type:
+      - object
+      description: <span data-ttu-id="d0476-139">Сведения о кластере для создания.</span><span class="sxs-lookup"><span data-stu-id="d0476-139">The details of the cluster to create.</span></span>
+    - id: clusterCreationObject.name
+      type:
+      - string
+      description: <span data-ttu-id="d0476-140">Имя кластера (имя dns) нижнем регистре</span><span class="sxs-lookup"><span data-stu-id="d0476-140">The name of the cluster (dns name) all lower case</span></span>
+    - id: clusterCreationObject.location
+      type:
+      - string
+      description: <span data-ttu-id="d0476-141">Центр обработки данных Azure, где будет создаваться кластера</span><span class="sxs-lookup"><span data-stu-id="d0476-141">The Azure data center where the cluster is to be created</span></span>
+    - id: clusterCreationObject.defaultStorageAccountName
+      type:
+      - string
+      description: <span data-ttu-id="d0476-142">Имя учетной записи хранения Azure по умолчанию</span><span class="sxs-lookup"><span data-stu-id="d0476-142">The name of the default Azure storage account</span></span>
+    - id: clusterCreationObject.defaultStorageAccountKey
+      type:
+      - string
+      description: <span data-ttu-id="d0476-143">Секретный ключ для учетной записи хранения Azure по умолчанию</span><span class="sxs-lookup"><span data-stu-id="d0476-143">The secret key for the default Azure storage account</span></span>
+    - id: clusterCreationObject.defaultStorageContainer
+      type:
+      - string
+      description: <span data-ttu-id="d0476-144">Контейнер для учетной записи хранения Azure по умолчанию</span><span class="sxs-lookup"><span data-stu-id="d0476-144">The container for the default Azure storage account</span></span>
+    - id: clusterCreationObject.user
+      type:
+      - string
+      description: <span data-ttu-id="d0476-145">Имя пользователя, используемое для кластера</span><span class="sxs-lookup"><span data-stu-id="d0476-145">The username to use for the cluster</span></span>
+    - id: clusterCreationObject.password
+      type:
+      - string
+      description: <span data-ttu-id="d0476-146">Пароль, используемый для кластера</span><span class="sxs-lookup"><span data-stu-id="d0476-146">The password to use for the cluster</span></span>
+    - id: clusterCreationObject.nodes
+      type:
+      - number
+      description: <span data-ttu-id="d0476-147">Количество узлов для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-147">The number of nodes to use</span></span>
+    - id: clusterCreationObject.additionalStorageAccounts
+      type:
+      - array
+      description: <span data-ttu-id="d0476-148">Дополнительные учетные записи хранения</span><span class="sxs-lookup"><span data-stu-id="d0476-148">The additional storage accounts</span></span>
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.name
+      type:
+      - string
+      description: <span data-ttu-id="d0476-149">Имя учетной записи хранения</span><span class="sxs-lookup"><span data-stu-id="d0476-149">The name of the storage acount</span></span>
+      optional: true
+    - id: clusterCreationObject.additionalStorageAccounts.key
+      type:
+      - string
+      description: <span data-ttu-id="d0476-150">Секретный ключ для учетной записи хранения</span><span class="sxs-lookup"><span data-stu-id="d0476-150">The secret key for the storage acount</span></span>
+      optional: true
+    - id: clusterCreationObject.oozieMetastore
+      type:
+      - object
+      description: <span data-ttu-id="d0476-151">Сведения о хранилище метаданных Oozie</span><span class="sxs-lookup"><span data-stu-id="d0476-151">The Oozie metastore information</span></span>
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.server
+      type:
+      - string
+      description: <span data-ttu-id="d0476-152">Имя sql server для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-152">The name of the sql server to use</span></span>
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.database
+      type:
+      - string
+      description: <span data-ttu-id="d0476-153">Базе данных sql для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-153">The sql databse to use</span></span>
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.user
+      type:
+      - string
+      description: <span data-ttu-id="d0476-154">Имя пользователя, необходимо использовать для входа в базу данных</span><span class="sxs-lookup"><span data-stu-id="d0476-154">The user name to use when logging into the database</span></span>
+      optional: true
+    - id: clusterCreationObject.oozieMetastore.password
+      type:
+      - string
+      description: <span data-ttu-id="d0476-155">Пароль, используемый при входе в базу данных</span><span class="sxs-lookup"><span data-stu-id="d0476-155">The password to use when logging into the database</span></span>
+      optional: true
+    - id: clusterCreationObject.hiveMetastore
+      type:
+      - object
+      description: <span data-ttu-id="d0476-156">Сведения о хранилище метаданных Hive</span><span class="sxs-lookup"><span data-stu-id="d0476-156">The Hive metastore information</span></span>
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.server
+      type:
+      - string
+      description: <span data-ttu-id="d0476-157">Имя sql server для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-157">The name of the sql server to use</span></span>
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.database
+      type:
+      - string
+      description: <span data-ttu-id="d0476-158">Базе данных sql для использования</span><span class="sxs-lookup"><span data-stu-id="d0476-158">The sql databse to use</span></span>
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.user
+      type:
+      - string
+      description: <span data-ttu-id="d0476-159">Имя пользователя, необходимо использовать для входа в базу данных</span><span class="sxs-lookup"><span data-stu-id="d0476-159">The user name to use when logging into the database</span></span>
+      optional: true
+    - id: clusterCreationObject.hiveMetastore.password
+      type:
+      - string
+      description: <span data-ttu-id="d0476-160">Пароль, используемый при входе в базу данных</span><span class="sxs-lookup"><span data-stu-id="d0476-160">The password to use when logging into the database</span></span>
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="d0476-161">`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.</span><span class="sxs-lookup"><span data-stu-id="d0476-161">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function createCluster(clusterCreationObject, callback)
+  langs:
+  - js
+- uid: azure-asm-hdinsight.HDInsightService#listClusters
+  id: azure-asm-hdinsight.HDInsightService#listClusters
+  parent: azure-asm-hdinsight.HDInsightService
+  name: listClusters(callback)
+  summary: <span data-ttu-id="d0476-162">Список всех кластеров HDInsight, текущий, существующие в подписке.</span><span class="sxs-lookup"><span data-stu-id="d0476-162">Lists all HDInsight clusters current existing on the subscription.</span></span>
+  fullName: azure-asm-hdinsight.HDInsightService.listClusters(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: <span data-ttu-id="d0476-163">`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.</span><span class="sxs-lookup"><span data-stu-id="d0476-163">`error` will contain information if an error occurs; otherwise, `response` will contain information related to this operation.</span></span>
+    content: function listClusters(callback)
+  langs:
+  - js

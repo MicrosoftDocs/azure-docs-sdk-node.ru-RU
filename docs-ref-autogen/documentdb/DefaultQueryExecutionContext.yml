@@ -1,0 +1,116 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5ba4bb585dd9cac11f6c5859153482c745810346
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40064677"
+items:
+- uid: documentdb.DefaultQueryExecutionContext
+  id: documentdb.DefaultQueryExecutionContext
+  name: DefaultQueryExecutionContext
+  summary: <span data-ttu-id="b4f13-101">Предоставляет базовый контекст выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="b4f13-101">Provides the basic Query Execution Context.</span></span> <span data-ttu-id="b4f13-102">Это создает оболочку выполнения запроса внутренней логики с помощью указанного функции выборки</span><span class="sxs-lookup"><span data-stu-id="b4f13-102">This wraps the internal logic query execution using provided fetch functions</span></span>
+  fullName: documentdb.DefaultQueryExecutionContext
+  type: Class
+  children:
+  - documentdb.DefaultQueryExecutionContext.#ctor
+  - documentdb.DefaultQueryExecutionContext#nextItem
+  - documentdb.DefaultQueryExecutionContext#current
+  - documentdb.DefaultQueryExecutionContext#hasMoreResults
+  - documentdb.DefaultQueryExecutionContext#fetchMore
+  langs:
+  - js
+- id: documentdb.DefaultQueryExecutionContext.#ctor
+  uid: documentdb.DefaultQueryExecutionContext.#ctor
+  parent: documentdb.DefaultQueryExecutionContext
+  name: DefaultQueryExecutionContext(documentclient, query, options, fetchFunctions)
+  fullName: documentdb.DefaultQueryExecutionContext.DefaultQueryExecutionContext(documentclient, query, options, fetchFunctions)
+  summary: <span data-ttu-id="b4f13-103">Предоставляет базовый контекст выполнения запроса.</span><span class="sxs-lookup"><span data-stu-id="b4f13-103">Provides the basic Query Execution Context.</span></span> <span data-ttu-id="b4f13-104">Это создает оболочку выполнения запроса внутренней логики с помощью указанного функции выборки</span><span class="sxs-lookup"><span data-stu-id="b4f13-104">This wraps the internal logic query execution using provided fetch functions</span></span>
+  type: Constructor
+  syntax:
+    parameters:
+    - id: documentclient
+      type:
+      - undefinedDocumentClient
+      description: <span data-ttu-id="b4f13-105">Конечная точка службы, используемая для создания клиента.</span><span class="sxs-lookup"><span data-stu-id="b4f13-105">The service endpoint to use to create the client.</span></span>
+    - id: query
+      type:
+      - undefinedSqlQuerySpec
+      - string
+      description: <span data-ttu-id="b4f13-106">SQL-запроса.</span><span class="sxs-lookup"><span data-stu-id="b4f13-106">A SQL query.</span></span>
+    - id: options
+      type:
+      - undefinedFeedOptions
+      description: <span data-ttu-id="b4f13-107">Представляет параметры веб-канала.</span><span class="sxs-lookup"><span data-stu-id="b4f13-107">Represents the feed options.</span></span>
+      optional: true
+    - id: fetchFunctions
+      type:
+      - undefinedcallback
+      - undefinedArray.<callback>
+      description: <span data-ttu-id="b4f13-108">Функция для извлечения каждой странице данных.</span><span class="sxs-lookup"><span data-stu-id="b4f13-108">A function to retrieve each page of data.</span></span> <span data-ttu-id="b4f13-109">Массив функций могут использоваться для запроса более чем одной секции.</span><span class="sxs-lookup"><span data-stu-id="b4f13-109">An array of functions may be used to query more than one partition.</span></span>
+    content: new DefaultQueryExecutionContext(documentclient, query, options, fetchFunctions)
+  langs:
+  - js
+- uid: documentdb.DefaultQueryExecutionContext#nextItem
+  id: documentdb.DefaultQueryExecutionContext#nextItem
+  parent: documentdb.DefaultQueryExecutionContext
+  name: nextItem(callback)
+  summary: <span data-ttu-id="b4f13-110">Выполнение предоставленного обратного вызова на следующий элемент в контексте выполнения.</span><span class="sxs-lookup"><span data-stu-id="b4f13-110">Execute a provided callback on the next element in the execution context.</span></span>
+  fullName: documentdb.DefaultQueryExecutionContext.nextItem(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: <span data-ttu-id="b4f13-111">Функция, выполняемая для каждого элемента.</span><span class="sxs-lookup"><span data-stu-id="b4f13-111">Function to execute for each element.</span></span> <span data-ttu-id="b4f13-112">функция принимает два параметра ошибка, элемент.</span><span class="sxs-lookup"><span data-stu-id="b4f13-112">the function takes two parameters error, element.</span></span>
+    content: function nextItem(callback)
+  langs:
+  - js
+- uid: documentdb.DefaultQueryExecutionContext#current
+  id: documentdb.DefaultQueryExecutionContext#current
+  parent: documentdb.DefaultQueryExecutionContext
+  name: current(callback)
+  summary: <span data-ttu-id="b4f13-113">Получение текущего элемента, в контекст выполнения.</span><span class="sxs-lookup"><span data-stu-id="b4f13-113">Retrieve the current element on the execution context.</span></span>
+  fullName: documentdb.DefaultQueryExecutionContext.current(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: <span data-ttu-id="b4f13-114">Функция, выполняемая для текущего элемента.</span><span class="sxs-lookup"><span data-stu-id="b4f13-114">Function to execute for the current element.</span></span> <span data-ttu-id="b4f13-115">функция принимает два параметра ошибка, элемент.</span><span class="sxs-lookup"><span data-stu-id="b4f13-115">the function takes two parameters error, element.</span></span>
+    content: function current(callback)
+  langs:
+  - js
+- uid: documentdb.DefaultQueryExecutionContext#hasMoreResults
+  id: documentdb.DefaultQueryExecutionContext#hasMoreResults
+  parent: documentdb.DefaultQueryExecutionContext
+  name: hasMoreResults()
+  summary: <span data-ttu-id="b4f13-116">Определите, если еще остались ресурсы к процессу, исходя из значения, маркер продолжения или элементов на текущий пакет в контексте выполнения.</span><span class="sxs-lookup"><span data-stu-id="b4f13-116">Determine if there are still remaining resources to processs based on the value of the continuation token or the elements remaining on the current batch in the execution context.</span></span>
+  fullName: documentdb.DefaultQueryExecutionContext.hasMoreResults()
+  type: Function
+  syntax:
+    return:
+      type:
+      - Boolean
+      description: <span data-ttu-id="b4f13-117">значение true, если другие элементы для обработки в DefaultQueryExecutionContext.</span><span class="sxs-lookup"><span data-stu-id="b4f13-117">true if there is other elements to process in the DefaultQueryExecutionContext.</span></span>
+    content: function hasMoreResults()
+  langs:
+  - js
+- uid: documentdb.DefaultQueryExecutionContext#fetchMore
+  id: documentdb.DefaultQueryExecutionContext#fetchMore
+  parent: documentdb.DefaultQueryExecutionContext
+  name: fetchMore(callback)
+  summary: <span data-ttu-id="b4f13-118">Получает следующий пакет веб-канала и передать их в виде массива на обратный вызов</span><span class="sxs-lookup"><span data-stu-id="b4f13-118">Fetches the next batch of the feed and pass them as an array to a callback</span></span>
+  fullName: documentdb.DefaultQueryExecutionContext.fetchMore(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - documentdb.callback
+      description: <span data-ttu-id="b4f13-119">Функция, выполнение веб-канала ответа, принимает два параметры сообщения об ошибках, resourcesList</span><span class="sxs-lookup"><span data-stu-id="b4f13-119">Function execute on the feed response, takes two parameters error, resourcesList</span></span>
+    content: function fetchMore(callback)
+  langs:
+  - js
