@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: fc9b23253ca4ce2e6ab56c856509d5e5dd75f750
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074344"
+items:
+- uid: azure-event-hubs.retry
+  name: retry
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: Предпринимается попытка линейно повторить операцию указанное число раз с заданной задержкой между попытками. Повторные попытки произойдет только в том случае, если ошибка вызвана возможности повторной попытки.
+  syntax:
+    content: 'function retry<T>(operation: () => Promise<T>, times?: number, delayInSeconds?: number)'
+    parameters:
+    - id: operation
+      type:
+      - () => Promise<T>
+      description: Операция, которую необходимо повторить.
+    - id: times
+      type:
+      - number
+      description: ''
+      optional: true
+    - id: delayInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<T>
+  package: azure-event-hubs

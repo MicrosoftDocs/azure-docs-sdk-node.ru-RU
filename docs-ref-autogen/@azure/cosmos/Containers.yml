@@ -1,0 +1,217 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8782d0bb5cc1c9e037d86d2afa22bc3833db3f38
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40076929"
+items:
+- uid: '@azure/cosmos.Containers'
+  name: Containers
+  fullName: Containers
+  children:
+  - '@azure/cosmos.Containers.constructor'
+  - '@azure/cosmos.Containers.create'
+  - '@azure/cosmos.Containers.createIfNotExists'
+  - '@azure/cosmos.Containers.database'
+  - '@azure/cosmos.Containers.query'
+  - '@azure/cosmos.Containers.readAll'
+  langs:
+  - typeScript
+  type: class
+  summary: Операции для создания новых контейнеров и чтения/запроса все контейнеры
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Containers.constructor'
+  name: Containers
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new Containers(database: Database)'
+    parameters:
+    - id: database
+      type:
+      - '@azure/cosmos.Database'
+      description: ''
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Containers.create'
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Создает контейнер.
+
+    Контейнер — это именованный логический контейнер для элементов.
+
+
+    База данных может содержать ноль или более именованных контейнеры и каждый контейнер содержит ноль или более элементов JSON.
+
+
+    Отсутствие схем, элементы в контейнере не обязательно должны совместно использовать одну и ту же структуру или поля.
+
+
+
+    Так как контейнеры ресурсов приложения, их можно авторизовать с помощью главного ключа или ключей ресурсов.
+  syntax:
+    content: 'function create(body: ContainerDefinition, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - '@azure/cosmos.ContainerDefinition'
+      description: Представляет текст контейнера.
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        Используйте, чтобы задать параметры, такие как размер страницы ответов, маркеры продолжения и т. д.
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Containers.createIfNotExists'
+  name: createIfNotExists
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Проверяет, если контейнер существует и, если это не так, она будет создана.
+
+    Это сделает операцией чтения, на основе идентификатора в `body`, затем, если он не найден, операция создания.
+
+    Убедитесь, что выходные данные соответствует текст, переданный для свойства не по умолчанию (т. е. индексирования политики и т. д.) Контейнер — это именованный логический контейнер для элементов.
+
+
+    База данных может содержать ноль или более именованных контейнеры и каждый контейнер содержит ноль или более элементов JSON.
+
+
+    Отсутствие схем, элементы в контейнере не обязательно должны совместно использовать одну и ту же структуру или поля.
+
+
+
+    Так как контейнеры ресурсов приложения, их можно авторизовать с помощью главного ключа или ключей ресурсов.
+  syntax:
+    content: 'function createIfNotExists(body: ContainerDefinition, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - '@azure/cosmos.ContainerDefinition'
+      description: Представляет текст контейнера.
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        Используйте, чтобы задать параметры, такие как размер страницы ответов, маркеры продолжения и т. д.
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Containers.database'
+  name: database
+  fullName: database
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'database: Database'
+    return:
+      type:
+      - '@azure/cosmos.Database'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Containers.query'
+  name: query
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запрашивает все контейнеры.
+  syntax:
+    content: 'function query(query: SqlQuerySpec, options?: FeedOptions)'
+    parameters:
+    - id: query
+      type:
+      - '@azure/cosmos.SqlQuerySpec'
+      description: Настройка запроса для операции. См. в разделе <xref:SqlQuerySpec> Дополнительные сведения о том, как настроить запрос.
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: Используйте, чтобы задать параметры, такие как размер страницы ответов, маркеры продолжения и т. д.
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.ContainerDefinition>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Containers.readAll'
+  name: readAll
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Считывает все контейнеры.
+  syntax:
+    content: 'function readAll(options?: FeedOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: Используйте, чтобы задать параметры, такие как размер страницы ответов, маркеры продолжения и т. д.
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.ContainerDefinition>'
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.Database'
+  spec.typeScript:
+  - name: Database
+    fullName: Database
+    uid: '@azure/cosmos.Database'
+- uid: '@azure/cosmos.ContainerDefinition'
+  spec.typeScript:
+  - name: ContainerDefinition
+    fullName: ContainerDefinition
+    uid: '@azure/cosmos.ContainerDefinition'
+- uid: '@azure/cosmos.RequestOptions'
+  spec.typeScript:
+  - name: RequestOptions
+    fullName: RequestOptions
+    uid: '@azure/cosmos.RequestOptions'
+- uid: Promise<@azure/cosmos.ContainerResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ContainerResponse
+    fullName: ContainerResponse
+    uid: '@azure/cosmos.ContainerResponse'
+  - name: '>'
+    fullName: '>'
+- uid: '@azure/cosmos.SqlQuerySpec'
+  spec.typeScript:
+  - name: SqlQuerySpec
+    fullName: SqlQuerySpec
+    uid: '@azure/cosmos.SqlQuerySpec'
+- uid: '@azure/cosmos.FeedOptions'
+  spec.typeScript:
+  - name: FeedOptions
+    fullName: FeedOptions
+    uid: '@azure/cosmos.FeedOptions'
+- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.ContainerDefinition>'
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <
+    fullName: <
+  - name: ContainerDefinition
+    fullName: ContainerDefinition
+    uid: '@azure/cosmos.ContainerDefinition'
+  - name: '>'
+    fullName: '>'

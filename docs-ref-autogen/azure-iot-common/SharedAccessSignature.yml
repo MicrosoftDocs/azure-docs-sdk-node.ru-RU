@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 1c6f6ffcfe66af1de73e92a91def6cd7bc7bcaa1
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074184"
+items:
+- uid: azure-iot-common.SharedAccessSignature
+  name: SharedAccessSignature
+  fullName: SharedAccessSignature
+  children:
+  - azure-iot-common.SharedAccessSignature.create
+  - azure-iot-common.SharedAccessSignature.extend
+  - azure-iot-common.SharedAccessSignature.parse
+  - azure-iot-common.SharedAccessSignature.toString
+  langs:
+  - typeScript
+  type: class
+  summary: Маркеры подписи общего доступа используются для проверки подлинности подключения при использовании симметричных ключей (в отличие от x509 сертификаты) для обеспечения безопасного подключения с центром Интернета вещей Azure.
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.create
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создайте экземпляр маркер SharedAccessSignature с заданными параметрами.
+  syntax:
+    content: 'static function create(resourceUri: string, keyName: string, key: string, expiry: number | string)'
+    parameters:
+    - id: resourceUri
+      type:
+      - string
+      description: URI для кодирования в маркер ресурса.
+    - id: keyName
+      type:
+      - string
+      description: идентификатор, связанный с ключом.
+    - id: key
+      type:
+      - string
+      description: 64 разрядной кодировки значение ключа.
+    - id: expiry
+      type:
+      - number | string
+      description: >
+        целое число, представляющее количество секунд, прошедших с 00:00:00 UTC начала эпохи 1 января 1970 г.
+    return:
+      type:
+      - azure-iot-common.SharedAccessSignature
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.extend
+  name: extend
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Расширьте Sas и возвращения его.
+  syntax:
+    content: 'function extend(expiry: number)'
+    parameters:
+    - id: expiry
+      type:
+      - number
+      description: >
+        целое число, представляющее количество секунд, прошедших с 00:00:00 UTC начала эпохи 1 января 1970 г.
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.parse
+  name: parse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создайте экземпляр SharedAccessSignature маркер из строки.
+  syntax:
+    content: 'static function parse(source: string, requiredFields?: string[])'
+    parameters:
+    - id: source
+      type:
+      - string
+      description: Строка для синтаксического анализа для создания маркера SharedAccessSignature.
+    - id: requiredFields
+      type:
+      - string[]
+      description: >
+        Массив полей, которые мы ожидаем найти в исходной строке.
+      optional: true
+    return:
+      type:
+      - azure-iot-common.SharedAccessSignature
+  package: azure-iot-common
+- uid: azure-iot-common.SharedAccessSignature.toString
+  name: toString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Форматирует SharedAccessSignatureObject в правильно отформатированную строку.
+  syntax:
+    content: function toString()
+    parameters: []
+    return:
+      type:
+      - string
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.SharedAccessSignature
+  spec.typeScript:
+  - name: SharedAccessSignature
+    fullName: SharedAccessSignature
+    uid: azure-iot-common.SharedAccessSignature
