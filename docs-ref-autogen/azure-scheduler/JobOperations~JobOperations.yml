@@ -1,0 +1,812 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6fa2e2901b7265c9426541584abde0d99339d194
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072265"
+items:
+- uid: azure-scheduler.JobOperations~JobOperations
+  id: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations
+  summary: >-
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [SchedulerClient] <xref:azure-scheduler.SchedulerClient~SchedulerClient>.
+
+    См. в разделе [задания] <xref:azure-scheduler.SchedulerClient~SchedulerClient%23jobs>.
+
+    Инициализирует новый экземпляр класса JobOperations.
+  fullName: azure-scheduler.JobOperations
+  type: Class
+  children:
+  - azure-scheduler.JobOperations~JobOperations.#ctor
+  - azure-scheduler.JobOperations~JobOperations#create
+  - azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  - azure-scheduler.JobOperations~JobOperations#deleteMethod
+  - azure-scheduler.JobOperations~JobOperations#get
+  - azure-scheduler.JobOperations~JobOperations#getHistory
+  - azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  - azure-scheduler.JobOperations~JobOperations#list
+  - azure-scheduler.JobOperations~JobOperations#listWithFilter
+  - azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  - azure-scheduler.JobOperations~JobOperations#updateState
+  langs:
+  - js
+- id: azure-scheduler.JobOperations~JobOperations.#ctor
+  uid: azure-scheduler.JobOperations~JobOperations.#ctor
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: JobOperations(client)
+  fullName: azure-scheduler.JobOperations.JobOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSchedulerClient
+      description: Ссылка на клиента службы.
+    content: new JobOperations(client)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#create
+  id: azure-scheduler.JobOperations~JobOperations#create
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: create(parameters, callback)
+  summary: Создает новое задание, позволяя службе для создания идентификатора задания. Используйте CreateOrUpdate, если требуется идентификатор задания выбранные пользователем.
+  fullName: azure-scheduler.JobOperations~JobOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateParameters
+      description: Параметры, указывающие определение задания для операции создания заданий.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала для задания.  Определен как ISO 8601.
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: Действие, вызываемое для задания.
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: Тип действия. Может принимать одно из http, https, storageQueue.
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: Политика повтора для действия задания.
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: Тип повтора на основе политики повтора. Можно использовать «fixed» или «none».
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: Интервал между повторными попытками.
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: Количество повторных попыток.
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: Действие при возникновении ошибки в задании.
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: Тип действия. Может принимать одно из http, https, storageQueue.
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Запрос для действия типа http или https.
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: Возвращает или задает Uri конечной точки для вызова.
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: Возвращает или задает Http, метод например GET, PUT, POST, DELETE.
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: Возвращает или задает заголовок пар имя-значение для предоставления с действием http/https.
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: Возвращает или задает текст запроса.
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: Возвращает или задает проверку подлинности запроса.
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: Указывает тип проверки подлинности
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: Тип очереди и содержимое для действия сообщения очереди.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: Имя учетной записи хранения для очереди.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: Имя очереди для отправки.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: Ключ SAS учетной записи хранения для отправки сообщения в очередь.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: Содержимое сообщения для отправки в очередь.
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Запрос для действия типа http или https.
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: Возвращает или задает Uri конечной точки для вызова.
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: Возвращает или задает Http, метод например GET, PUT, POST, DELETE.
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: Возвращает или задает заголовок пар имя-значение для предоставления с действием http/https.
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: Возвращает или задает текст запроса.
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: Возвращает или задает проверку подлинности запроса.
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: Указывает тип проверки подлинности
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: Тип очереди и содержимое для действия сообщения очереди.
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: Имя учетной записи хранения для очереди.
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: Имя очереди для отправки.
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: Ключ SAS учетной записи хранения для отправки сообщения в очередь.
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: Содержимое сообщения для отправки в очередь.
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: Расписание повторения для задания.
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: Частота повторения.
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: Интервал повторения с заданной частотой.
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: Число вхождений, которые будут выполняться. Необязательный элемент. По умолчанию будет повторяться бесконечно
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: Время в формате ISO 8601, после которого будет выполняться нет других вхождений.
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: Расписание повторения для задания.
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: Минуты часа, которые должны выполняться задания в.
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: Часы дня, которые должны выполняться задания в.
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: Дни недели, в которые задание должно выполняться на.
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: Месяцы, в которых следует выполнять задания в.  Должно быть от 1 до 12.
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: Дни месяца, задание должно выполняться на.  Должно быть от 1 до 31.
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: Вхождения дни месяца.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  id: azure-scheduler.JobOperations~JobOperations#createOrUpdate
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: createOrUpdate(jobId, parameters, callback)
+  summary: Создает новое задание с идентификатором задания пользовательских или обновляет существующее задание, заменив указанный его определение.
+  fullName: azure-scheduler.JobOperations~JobOperations.createOrUpdate(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Идентификатор задания для создания или обновления.
+    - id: parameters
+      type:
+      - azure-scheduler.JobCreateOrUpdateParameters
+      description: Параметры, указывающие определение задания для операции задания CreateOrUpdate.
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала для задания. Определен как ISO 8601.
+      optional: true
+    - id: parameters.action
+      type:
+      - azure-scheduler.JobAction
+      description: Действие, вызываемое для задания.
+    - id: parameters.action.type
+      type:
+      - azure-scheduler.JobActionType
+      description: Тип действия. Может принимать одно из http, https, storageQueue.
+    - id: parameters.action.retryPolicy
+      type:
+      - azure-scheduler.RetryPolicy
+      description: Политика повтора для действия задания.
+      optional: true
+    - id: parameters.action.retryPolicy.retryType
+      type:
+      - azure-scheduler.RetryType
+      description: Тип повтора на основе политики повтора. Можно использовать «fixed» или «none».
+      optional: true
+    - id: parameters.action.retryPolicy.retryInterval
+      type:
+      - azure-scheduler.TimeSpan
+      description: Интервал между повторными попытками.
+      optional: true
+    - id: parameters.action.retryPolicy.retryCount
+      type:
+      - number
+      description: Количество повторных попыток.
+      optional: true
+    - id: parameters.action.errorAction
+      type:
+      - azure-scheduler.JobErrorAction
+      description: Действие при возникновении ошибки в задании.
+      optional: true
+    - id: parameters.action.errorAction.type
+      type:
+      - azure-scheduler.JobActionType
+      description: Тип действия. Может принимать одно из http, https, storageQueue.
+      optional: true
+    - id: parameters.action.errorAction.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Запрос для действия типа http или https.
+      optional: true
+    - id: parameters.action.errorAction.request.uri
+      type:
+      - string
+      description: Возвращает или задает Uri конечной точки для вызова.
+      optional: true
+    - id: parameters.action.errorAction.request.method
+      type:
+      - string
+      description: Возвращает или задает Http, метод например GET, PUT, POST, DELETE.
+      optional: true
+    - id: parameters.action.errorAction.request.headers
+      type:
+      - object
+      description: Возвращает или задает заголовок пар имя-значение для предоставления с действием http/https.
+      optional: true
+    - id: parameters.action.errorAction.request.body
+      type:
+      - string
+      description: Возвращает или задает текст запроса.
+      optional: true
+    - id: parameters.action.errorAction.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: Возвращает или задает проверку подлинности запроса.
+      optional: true
+    - id: parameters.action.errorAction.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: Указывает тип проверки подлинности
+      optional: true
+    - id: parameters.action.errorAction.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: Тип очереди и содержимое для действия сообщения очереди.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.storageAccountName
+      type:
+      - string
+      description: Имя учетной записи хранения для очереди.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.queueName
+      type:
+      - string
+      description: Имя очереди для отправки.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.sasToken
+      type:
+      - string
+      description: Ключ SAS учетной записи хранения для отправки сообщения в очередь.
+      optional: true
+    - id: parameters.action.errorAction.queueMessage.message
+      type:
+      - string
+      description: Содержимое сообщения для отправки в очередь.
+      optional: true
+    - id: parameters.action.request
+      type:
+      - azure-scheduler.JobHttpRequest
+      description: Запрос для действия типа http или https.
+      optional: true
+    - id: parameters.action.request.uri
+      type:
+      - string
+      description: Возвращает или задает Uri конечной точки для вызова.
+      optional: true
+    - id: parameters.action.request.method
+      type:
+      - string
+      description: Возвращает или задает Http, метод например GET, PUT, POST, DELETE.
+      optional: true
+    - id: parameters.action.request.headers
+      type:
+      - object
+      description: Возвращает или задает заголовок пар имя-значение для предоставления с действием http/https.
+      optional: true
+    - id: parameters.action.request.body
+      type:
+      - string
+      description: Возвращает или задает текст запроса.
+      optional: true
+    - id: parameters.action.request.authentication
+      type:
+      - azure-scheduler.HttpAuthentication
+      description: Возвращает или задает проверку подлинности запроса.
+      optional: true
+    - id: parameters.action.request.authentication.type
+      type:
+      - azure-scheduler.HttpAuthenticationType
+      description: Указывает тип проверки подлинности
+      optional: true
+    - id: parameters.action.queueMessage
+      type:
+      - azure-scheduler.JobQueueMessage
+      description: Тип очереди и содержимое для действия сообщения очереди.
+      optional: true
+    - id: parameters.action.queueMessage.storageAccountName
+      type:
+      - string
+      description: Имя учетной записи хранения для очереди.
+      optional: true
+    - id: parameters.action.queueMessage.queueName
+      type:
+      - string
+      description: Имя очереди для отправки.
+      optional: true
+    - id: parameters.action.queueMessage.sasToken
+      type:
+      - string
+      description: Ключ SAS учетной записи хранения для отправки сообщения в очередь.
+      optional: true
+    - id: parameters.action.queueMessage.message
+      type:
+      - string
+      description: Содержимое сообщения для отправки в очередь.
+      optional: true
+    - id: parameters.recurrence
+      type:
+      - azure-scheduler.JobRecurrence
+      description: Расписание повторения для задания.
+      optional: true
+    - id: parameters.recurrence.frequency
+      type:
+      - azure-scheduler.JobRecurrenceFrequency
+      description: Частота повторения.
+      optional: true
+    - id: parameters.recurrence.interval
+      type:
+      - number
+      description: Интервал повторения с заданной частотой.
+      optional: true
+    - id: parameters.recurrence.count
+      type:
+      - number
+      description: Число вхождений, которые будут выполняться. Необязательный элемент. По умолчанию будет повторяться бесконечно
+      optional: true
+    - id: parameters.recurrence.endTime
+      type:
+      - date
+      description: Время в формате ISO 8601, после которого будет выполняться нет других вхождений.
+      optional: true
+    - id: parameters.recurrence.schedule
+      type:
+      - azure-scheduler.JobRecurrenceSchedule
+      description: Расписание повторения для задания.
+      optional: true
+    - id: parameters.recurrence.schedule.minutes
+      type:
+      - array
+      description: Минуты часа, которые должны выполняться задания в.
+      optional: true
+    - id: parameters.recurrence.schedule.hours
+      type:
+      - array
+      description: Часы дня, которые должны выполняться задания в.
+      optional: true
+    - id: parameters.recurrence.schedule.days
+      type:
+      - array
+      description: Дни недели, в которые задание должно выполняться на.
+      optional: true
+    - id: parameters.recurrence.schedule.months
+      type:
+      - array
+      description: Месяцы, в которых следует выполнять задания в.  Должно быть от 1 до 12.
+      optional: true
+    - id: parameters.recurrence.schedule.monthDays
+      type:
+      - array
+      description: Дни месяца, задание должно выполняться на.  Должно быть от 1 до 31.
+      optional: true
+    - id: parameters.recurrence.schedule.monthlyOccurrences
+      type:
+      - array
+      description: Вхождения дни месяца.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function createOrUpdate(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  id: azure-scheduler.JobOperations~JobOperations#deleteMethod
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: deleteMethod(jobId, callback)
+  summary: Удаляет задание.
+  fullName: azure-scheduler.JobOperations~JobOperations.deleteMethod(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Идентификатор задания для удаления.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function deleteMethod(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#get
+  id: azure-scheduler.JobOperations~JobOperations#get
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: get(jobId, callback)
+  summary: Получение определения и состояние задания.
+  fullName: azure-scheduler.JobOperations~JobOperations.get(jobId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Идентификатор задания для получения.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function get(jobId, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistory
+  id: azure-scheduler.JobOperations~JobOperations#getHistory
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistory(jobId, parameters, callback)
+  summary: Получение истории выполнения задания.
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistory(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Идентификатор задания для получения истории.
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryParameters
+      description: Параметры, передаваемые операциям получить журнал заданий.
+    - id: parameters.skip
+      type:
+      - number
+      description: Укажите список журнала, с которого начинается запроса записей индекс (с нуля).
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: Укажите число записей журнала для запроса, в диапазоне [1..100].
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function getHistory(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#getHistoryWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: getHistoryWithFilter(jobId, parameters, callback)
+  summary: Получите журнал выполнения задания с фильтром на состояние задания.
+  fullName: azure-scheduler.JobOperations~JobOperations.getHistoryWithFilter(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Идентификатор задания для получения истории.
+    - id: parameters
+      type:
+      - azure-scheduler.JobGetHistoryWithFilterParameters
+      description: Параметры для операции получения журнал задания с помощью фильтра.
+    - id: parameters.status
+      type:
+      - azure-scheduler.JobHistoryStatus
+      description: Отфильтровать журнал заданий, чтобы он только попытки выполнения задания возвращаемого значения с определенным состоянием, «завершено» или «сбой».
+    - id: parameters.skip
+      type:
+      - number
+      description: Укажите список журнала, с которого начинается запроса записей индекс (с нуля).
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: Укажите число записей журнала для запроса, в диапазоне [1..100].
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function getHistoryWithFilter(jobId, parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#list
+  id: azure-scheduler.JobOperations~JobOperations#list
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: list(parameters, callback)
+  summary: Получите список всех заданий в коллекции заданий.
+  fullName: azure-scheduler.JobOperations~JobOperations.list(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListParameters
+      description: Параметры для операции списка заданий.
+    - id: parameters.skip
+      type:
+      - number
+      description: Укажите список заданий, с которого начинается запроса записей индекс (с нуля).
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: Укажите количество заданий для запроса, в диапазоне [1..100].
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function list(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  id: azure-scheduler.JobOperations~JobOperations#listWithFilter
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: listWithFilter(parameters, callback)
+  summary: Получение списка заданий в коллекции заданий, соответствующих фильтру состояния задания.
+  fullName: azure-scheduler.JobOperations~JobOperations.listWithFilter(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobListWithFilterParameters
+      description: Параметры для получения списка заданий с помощью операции фильтрации.
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: Отфильтровать журнал заданий для его наличие определенном состоянии, включена, отключена, произошел сбой или завершения попытки выполнения только возвращаемое задания.
+    - id: parameters.skip
+      type:
+      - number
+      description: Укажите список заданий, с которого начинается запроса записей индекс (с нуля).
+      optional: true
+    - id: parameters.top
+      type:
+      - number
+      description: Укажите количество заданий для запроса, в диапазоне [1..100].
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function listWithFilter(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  id: azure-scheduler.JobOperations~JobOperations#updateJobCollectionState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateJobCollectionState(parameters, callback)
+  summary: Обновите состояние всех заданий в коллекции заданий.
+  fullName: azure-scheduler.JobOperations~JobOperations.updateJobCollectionState(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-scheduler.JobCollectionJobsUpdateStateParameters
+      description: Параметры для операции обновления состояния задания.
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: 'Новое состояние для обновления до: «enabled» или «отключено».'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function updateJobCollectionState(parameters, callback)
+  langs:
+  - js
+- uid: azure-scheduler.JobOperations~JobOperations#updateState
+  id: azure-scheduler.JobOperations~JobOperations#updateState
+  parent: azure-scheduler.JobOperations~JobOperations
+  name: updateState(jobId, parameters, callback)
+  summary: Обновите состояние задания.
+  fullName: azure-scheduler.JobOperations~JobOperations.updateState(jobId, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: Идентификатор задания для обновления.
+    - id: parameters
+      type:
+      - azure-scheduler.JobUpdateStateParameters
+      description: Параметры для операции обновления состояния задания.
+    - id: parameters.state
+      type:
+      - azure-scheduler.JobState
+      description: 'Новое состояние для обновления до: «enabled» или «отключено».'
+    - id: parameters.updateStateReason
+      type:
+      - string
+      description: Описание условия, связанные с этим обновлением состояния задания.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-scheduler.Stream
+      description: Поток ответа.
+    content: function updateState(jobId, parameters, callback)
+  langs:
+  - js

@@ -1,0 +1,168 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f2b1902892f0ceca8dec5071fab2387fa7ac8172
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072244"
+items:
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: WebSiteManagementClient
+  summary: API управления веб-сайтов предоставляет набор REST, веб-служб, которые взаимодействуют со службой веб-сайтов Windows Azure для управления веб-сайтов. API содержит сущности, которые моделируют связь между конечным пользователем и службой веб-сайтов Windows Azure.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn166981.aspx подробнее) Инициализирует новый экземпляр класса WebSiteManagementClient.
+  fullName: azure-asm-website.WebSiteManagementClient
+  type: Class
+  children:
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.#ctor
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webHostingPlans
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSites
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSpaces
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#getOperationStatus
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#registerSubscription
+  - azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription
+  langs:
+  - js
+- id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.#ctor
+  uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.#ctor
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: WebSiteManagementClient(credentials, baseUri, filters)
+  fullName: azure-asm-website.WebSiteManagementClient.WebSiteManagementClient(credentials, baseUri, filters)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: credentials
+      type:
+      - undefinedSubscriptionCloudCredentials
+      description: Получает учетные данные подписки, которые однозначно идентифицируют подписку Microsoft Azure. Идентификатор подписки формирует часть URI для каждого вызова службы.
+    - id: credentials.subscriptionId
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: baseUri
+      type:
+      - string
+      description: Возвращает URI, используемый как базовый для всех запросов к облачным службам.
+      optional: true
+    - id: filters
+      type:
+      - Array
+      description: ''
+    content: new WebSiteManagementClient(credentials, baseUri, filters)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webHostingPlans
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webHostingPlans
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: webHostingPlans
+  summary: Предоставляет экземпляр [WebHostingPlanOperations](-WebHostingPlanOperations.html) объекта.
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.webHostingPlans
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: webHostingPlans
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSites
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSites
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: webSites
+  summary: Предоставляет экземпляр [WebSiteOperations](-WebSiteOperations.html) объекта.
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.webSites
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: webSites
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSpaces
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#webSpaces
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: webSpaces
+  summary: Предоставляет экземпляр [WebSpaceOperations](-WebSpaceOperations.html) объекта.
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.webSpaces
+  type: Member
+  syntax:
+    return:
+      type:
+      - object
+    content: webSpaces
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#getOperationStatus
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#getOperationStatus
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: getOperationStatus(webSpaceName, siteName, operationId, callback)
+  summary: Операция получения состояния операции возвращает состояние указанной операции. После вызова долго выполняющейся операции, можно вызвать получение состояния операции, чтобы определить, является ли операция удачей, неудачей, истекло время ожидания, или все еще выполняется.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/ee460783.aspx Дополнительные сведения)
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.getOperationStatus(webSpaceName, siteName, operationId, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: Имя веб-пространства для веб-сайта, где был направлен операцию.
+    - id: siteName
+      type:
+      - string
+      description: Имя узла, где был направлен операцию.
+    - id: operationId
+      type:
+      - string
+      description: Идентификатор операции для операции, которые вы хотите отслеживать. Идентификатор операции возвращается в поле ID в тексте ответа для длительных операций.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function getOperationStatus(webSpaceName, siteName, operationId, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#registerSubscription
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#registerSubscription
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: registerSubscription(callback)
+  summary: Зарегистрируйте вашу подписку для использования веб-сайтов Azure.
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.registerSubscription(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function registerSubscription(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription
+  id: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient#unregisterSubscription
+  parent: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient
+  name: unregisterSubscription(callback)
+  summary: Отмена регистрации подписки для использования веб-сайтов Azure.
+  fullName: azure-asm-website.WebSiteManagementClient~WebSiteManagementClient.unregisterSubscription(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function unregisterSubscription(callback)
+  langs:
+  - js

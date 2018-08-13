@@ -1,0 +1,619 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5efb8a7b946da712ef31453d6d1493aa72a5d4c8
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072261"
+items:
+- uid: azure-asm-website.WebsiteManagementService
+  id: azure-asm-website.WebsiteManagementService
+  name: WebsiteManagementService
+  summary: Объект WebsiteManagementService позволяет выполнять операции управления веб-сайтов Azure на Microsoft.
+  fullName: azure-asm-website.WebsiteManagementService
+  type: Class
+  children:
+  - azure-asm-website.WebsiteManagementService.#ctor
+  - azure-asm-website.WebsiteManagementService#listWebspaces
+  - azure-asm-website.WebsiteManagementService#listGeoRegions
+  - azure-asm-website.WebsiteManagementService#listPublishingUsers
+  - azure-asm-website.WebsiteManagementService#listDNSSuffix
+  - azure-asm-website.WebsiteManagementService#createPublishingUser
+  - azure-asm-website.WebsiteManagementService#listSites
+  - azure-asm-website.WebsiteManagementService#getSite
+  - azure-asm-website.WebsiteManagementService#createSite
+  - azure-asm-website.WebsiteManagementService#deleteSite
+  - azure-asm-website.WebsiteManagementService#updateSite
+  - azure-asm-website.WebsiteManagementService#getSiteConfiguration
+  - azure-asm-website.WebsiteManagementService#updateSiteConfiguration
+  - azure-asm-website.WebsiteManagementService#createServerFarm
+  - azure-asm-website.WebsiteManagementService#updateServerFarm
+  - azure-asm-website.WebsiteManagementService#getServerFarm
+  - azure-asm-website.WebsiteManagementService#createSiteRepository
+  - azure-asm-website.WebsiteManagementService#deleteSiteRepository
+  - azure-asm-website.WebsiteManagementService#syncSiteRepository
+  langs:
+  - js
+- id: azure-asm-website.WebsiteManagementService.#ctor
+  uid: azure-asm-website.WebsiteManagementService.#ctor
+  parent: azure-asm-website.WebsiteManagementService
+  name: WebsiteManagementService(configOrSubscriptionId, authentication, hostOptions)
+  fullName: azure-asm-website.WebsiteManagementService.WebsiteManagementService(configOrSubscriptionId, authentication, hostOptions)
+  summary: Создает новый объект WebsiteManagementService.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: configOrSubscriptionId
+      type:
+      - string
+      description: Сведения о конфигурации, идентификатор подписки для учетной записи или строке подключения
+    - id: authentication
+      type:
+      - object
+      description: >-
+        Объект проверки подлинности для клиента.
+
+        Keyfile-certfile или keyvalue/certvalue необходимо использовать для предоставления сертификата управления для проверки подлинности запросов на обслуживание.
+    - id: authentication.keyfile
+      type:
+      - string
+      description: Путь к файлу, который содержит PEM ключ в кодировке
+      optional: true
+    - id: authentication.certfile
+      type:
+      - string
+      description: Путь к файлу, который содержит PEM сертификат в кодировке
+      optional: true
+    - id: authentication.keyvalue
+      type:
+      - string
+      description: Строка, содержащая PEM ключ в кодировке
+      optional: true
+    - id: authentication.certvalue
+      type:
+      - string
+      description: Строка, содержащая PEM сертификат в кодировке
+      optional: true
+    - id: hostOptions
+      type:
+      - object
+      description: Параметры узла для переопределения значения по умолчанию.
+      optional: true
+    - id: hostOptions.host
+      type:
+      - string
+      description: Конечная точка управления.
+      optional: true
+    - id: hostOptions.apiversion
+      type:
+      - string
+      description: Версия API для использования.
+      optional: true
+    content: new WebsiteManagementService(configOrSubscriptionId, authentication, hostOptions)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listWebspaces
+  id: azure-asm-website.WebsiteManagementService#listWebspaces
+  parent: azure-asm-website.WebsiteManagementService
+  name: listWebspaces(callback)
+  summary: Список доступных веб-пространствами.
+  fullName: azure-asm-website.WebsiteManagementService.listWebspaces(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать список веб-пространствами.
+                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    content: function listWebspaces(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listGeoRegions
+  id: azure-asm-website.WebsiteManagementService#listGeoRegions
+  parent: azure-asm-website.WebsiteManagementService
+  name: listGeoRegions(callback)
+  summary: Список доступных географических регионов, доступных для размещения веб-сайтов.
+  fullName: azure-asm-website.WebsiteManagementService.listGeoRegions(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержаться список этих регионов.
+                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    content: function listGeoRegions(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listPublishingUsers
+  id: azure-asm-website.WebsiteManagementService#listPublishingUsers
+  parent: azure-asm-website.WebsiteManagementService
+  name: listPublishingUsers(callback)
+  summary: Список доступных пользователей, публикации.
+  fullName: azure-asm-website.WebsiteManagementService.listPublishingUsers(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать список пользователей.
+                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    content: function listPublishingUsers(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listDNSSuffix
+  id: azure-asm-website.WebsiteManagementService#listDNSSuffix
+  parent: azure-asm-website.WebsiteManagementService
+  name: listDNSSuffix(callback)
+  summary: Список DNS-суффикс.
+  fullName: azure-asm-website.WebsiteManagementService.listDNSSuffix(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать сведения о суффикс DNS.
+                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    content: function listDNSSuffix(callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#createPublishingUser
+  id: azure-asm-website.WebsiteManagementService#createPublishingUser
+  parent: azure-asm-website.WebsiteManagementService
+  name: createPublishingUser(username, password, options, callback)
+  summary: Создает нового пользователя публикации.
+  fullName: azure-asm-website.WebsiteManagementService.createPublishingUser(username, password, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: username
+      type:
+      - string
+      description: Имя пользователя публикации пользователя.
+    - id: password
+      type:
+      - string
+      description: Пароль пользователя публикации.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: options.name
+      type:
+      - azure-asm-website.int
+      description: Имя пользователя публикации.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function createPublishingUser(username, password, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#listSites
+  id: azure-asm-website.WebsiteManagementService#listSites
+  parent: azure-asm-website.WebsiteManagementService
+  name: listSites(webspaceName, options, callback)
+  summary: Извлекает существующих веб-сайтов.
+  fullName: azure-asm-website.WebsiteManagementService.listSites(webspaceName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: options.propertiesToInclude
+      type:
+      - array
+      description: Свойства для включения.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать список веб-сайтов.
+                                                                    `response` будет содержать сведения, относящиеся к этой операции.
+    content: function listSites(webspaceName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#getSite
+  id: azure-asm-website.WebsiteManagementService#getSite
+  parent: azure-asm-website.WebsiteManagementService
+  name: getSite(webspaceName, siteName, options, callback)
+  summary: Извлекает существующий веб-сайт.
+  fullName: azure-asm-website.WebsiteManagementService.getSite(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: options.propertiesToInclude
+      type:
+      - array
+      description: Свойства для включения.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать сведения веб-сайта.
+                                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    content: function getSite(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#createSite
+  id: azure-asm-website.WebsiteManagementService#createSite
+  parent: azure-asm-website.WebsiteManagementService
+  name: createSite(webspaceName, siteName, options, callback)
+  summary: Создает новый веб-сайт.
+  fullName: azure-asm-website.WebsiteManagementService.createSite(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: options.propertiesToInclude
+      type:
+      - array
+      description: Свойства для включения.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать сведения о новом сайте.
+                                                                    `response` будет содержать сведения, относящиеся к этой операции.
+    content: function createSite(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#deleteSite
+  id: azure-asm-website.WebsiteManagementService#deleteSite
+  parent: azure-asm-website.WebsiteManagementService
+  name: deleteSite(webspaceName, siteName, options, callback)
+  summary: Удаляет веб-сайта.
+  fullName: azure-asm-website.WebsiteManagementService.deleteSite(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function deleteSite(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#updateSite
+  id: azure-asm-website.WebsiteManagementService#updateSite
+  parent: azure-asm-website.WebsiteManagementService
+  name: updateSite(webspaceName, siteName, options, callback)
+  summary: Обновляет существующий веб-сайт.
+  fullName: azure-asm-website.WebsiteManagementService.updateSite(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: options.propertiesToInclude
+      type:
+      - array
+      description: Свойства для включения.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать сведения обновленного веб-узла.
+                                                                    `response` будет содержать сведения, относящиеся к этой операции.
+    content: function updateSite(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#getSiteConfiguration
+  id: azure-asm-website.WebsiteManagementService#getSiteConfiguration
+  parent: azure-asm-website.WebsiteManagementService
+  name: getSiteConfiguration(webspaceName, siteName, options, callback)
+  summary: Возвращает конфигурацию сайта.
+  fullName: azure-asm-website.WebsiteManagementService.getSiteConfiguration(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: >-
+        `error` будет содержать сведения, если произошла ошибка; в противном случае `results` будет содержать конфигурации сайта.
+                                                              `response` будет содержать сведения, относящиеся к этой операции.
+    content: function getSiteConfiguration(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#updateSiteConfiguration
+  id: azure-asm-website.WebsiteManagementService#updateSiteConfiguration
+  parent: azure-asm-website.WebsiteManagementService
+  name: updateSiteConfiguration(webspaceName, siteName, options, callback)
+  summary: Обновляет конфигурацию сайта.
+  fullName: azure-asm-website.WebsiteManagementService.updateSiteConfiguration(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function updateSiteConfiguration(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#createServerFarm
+  id: azure-asm-website.WebsiteManagementService#createServerFarm
+  parent: azure-asm-website.WebsiteManagementService
+  name: createServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  summary: Создает новую ферму серверов.
+  fullName: azure-asm-website.WebsiteManagementService.createServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: serverFarmName
+      type:
+      - string
+      description: Имя фермы серверов.
+    - id: numberOfWorkers
+      type:
+      - string
+      description: Количество исполнителей.
+    - id: workerSize
+      type:
+      - string
+      description: Размер рабочего потока.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function createServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#updateServerFarm
+  id: azure-asm-website.WebsiteManagementService#updateServerFarm
+  parent: azure-asm-website.WebsiteManagementService
+  name: updateServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  summary: Обновления фермы серверов.
+  fullName: azure-asm-website.WebsiteManagementService.updateServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: serverFarmName
+      type:
+      - string
+      description: Имя фермы серверов.
+    - id: numberOfWorkers
+      type:
+      - string
+      description: Количество исполнителей.
+    - id: workerSize
+      type:
+      - string
+      description: Размер рабочего потока.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function updateServerFarm(webspaceName, serverFarmName, numberOfWorkers, workerSize, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#getServerFarm
+  id: azure-asm-website.WebsiteManagementService#getServerFarm
+  parent: azure-asm-website.WebsiteManagementService
+  name: getServerFarm(webspaceName, serverFarmName, options, callback)
+  summary: Извлекает фермы серверов.
+  fullName: azure-asm-website.WebsiteManagementService.getServerFarm(webspaceName, serverFarmName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: serverFarmName
+      type:
+      - string
+      description: Имя фермы серверов.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function getServerFarm(webspaceName, serverFarmName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#createSiteRepository
+  id: azure-asm-website.WebsiteManagementService#createSiteRepository
+  parent: azure-asm-website.WebsiteManagementService
+  name: createSiteRepository(webspaceName, siteName, options, callback)
+  summary: Создает репозиторий веб-сайта.
+  fullName: azure-asm-website.WebsiteManagementService.createSiteRepository(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function createSiteRepository(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#deleteSiteRepository
+  id: azure-asm-website.WebsiteManagementService#deleteSiteRepository
+  parent: azure-asm-website.WebsiteManagementService
+  name: deleteSiteRepository(webspaceName, siteName, options, callback)
+  summary: Удаляет репозиторий веб-сайта.
+  fullName: azure-asm-website.WebsiteManagementService.deleteSiteRepository(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function deleteSiteRepository(webspaceName, siteName, options, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebsiteManagementService#syncSiteRepository
+  id: azure-asm-website.WebsiteManagementService#syncSiteRepository
+  parent: azure-asm-website.WebsiteManagementService
+  name: syncSiteRepository(webspaceName, siteName, options, callback)
+  summary: Синхронизация репозитория веб-сайта.
+  fullName: azure-asm-website.WebsiteManagementService.syncSiteRepository(webspaceName, siteName, options, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webspaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: siteName
+      type:
+      - string
+      description: Имя сайта.
+    - id: options
+      type:
+      - object
+      description: Параметры.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: '`error` будет содержать сведения, если произошла ошибка; в противном случае `response` будет содержать сведения, относящиеся к этой операции.'
+    content: function syncSiteRepository(webspaceName, siteName, options, callback)
+  langs:
+  - js

@@ -1,0 +1,297 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b1b639bf4cfb4408fcf6bcf53c7cc5cf81a00250
+ms.sourcegitcommit: f774f8ce6b26593f73a5893bfa47f9c510fc51a7
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "40072256"
+items:
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations
+  summary: >-
+    Операции для управления веб-хостинга планы под вашей подпиской.
+
+    __Примечание__: экземпляр этого класса создается автоматически для экземпляра [WebSiteManagementClient] {@link WebSiteManagementClient ~ WebSiteManagementClient}.
+
+    См. в разделе [webHostingPlans] {@link WebSiteManagementClient ~ WebSiteManagementClient #webHostingPlans}.
+
+    Инициализирует новый экземпляр класса WebHostingPlanOperations.
+  fullName: azure-asm-website.WebHostingPlanOperations
+  type: Class
+  children:
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  - azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  langs:
+  - js
+- id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.#ctor
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: WebHostingPlanOperations(client)
+  fullName: azure-asm-website.WebHostingPlanOperations.WebHostingPlanOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedWebSiteManagementClient
+      description: Ссылка на клиента службы.
+    content: new WebHostingPlanOperations(client)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#create
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: create(webSpaceName, parameters, callback)
+  summary: Создает новый план веб-размещения.  (см. в разделе http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ Дополнительные сведения)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.create(webSpaceName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanCreateParameters
+      description: Web размещение параметры плана.
+    - id: parameters.name
+      type:
+      - string
+      description: Имя плана размещения веб-узла.
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: Запрашиваемое количество рабочих ролей.
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: Номер SKU плана размещения веб-узла.
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        Размер рабочего потока.
+
+        Возможные значения: малый, средний и большой. Для JSON эквивалентными значениями являются 0 = мелкий, 1 = средний и 2 = Large.
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: Сайт администратора. Сайт администратора используется для развертывания расширения сайтов или содержимое, общими для всех сайтов в плане.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function create(webSpaceName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#deleteMethod
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: deleteMethod(webSpaceName, webHostingPlanName, callback)
+  summary: Удаление плана веб-размещения (см. в разделе http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ Дополнительные сведения)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.deleteMethod(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: webHostingPlanName
+      type:
+      - string
+      description: Имя плана размещения веб-узла.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function deleteMethod(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#get
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: get(webSpaceName, webHostingPlanName, callback)
+  summary: Возвращает сведения о существующих плана веб-размещения (см. в разделе http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ Дополнительные сведения)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.get(webSpaceName, webHostingPlanName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: webHostingPlanName
+      type:
+      - string
+      description: Имя плана размещения веб-узла.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function get(webSpaceName, webHostingPlanName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#getHistoricalUsageMetrics
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: Можно получить исторические показатели использования для сайта путем выполнения запроса HTTP GET.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn166964.aspx Дополнительные сведения)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: webHostingPlanName
+      type:
+      - string
+      description: Имя плана размещения веб-узла.
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanGetHistoricalUsageMetricsParameters
+      description: Параметры для получения ведением журнала об использовании метрик веб-размещения операция плана.
+    - id: parameters.metricNames
+      type:
+      - array
+      description: Задает список разделенных запятыми имен возвращаемых показателей. Если имена параметров не указан, то возвращаются все доступные метрики.
+      optional: true
+    - id: parameters.startTime
+      type:
+      - date
+      description: Время начала возвращаемых показателей. Если этот параметр не указан, используется начало текущего часа.
+      optional: true
+    - id: parameters.endTime
+      type:
+      - date
+      description: Время окончания возвращаемых показателей. Если этот параметр не указан, используется текущее время.
+      optional: true
+    - id: parameters.timeGrain
+      type:
+      - string
+      description: 'Степень детализации, по которому возвращаются метрики. Поддерживаемые значения: PT1M (минуты), PT1H (час), P1D (день).'
+      optional: true
+    - id: parameters.includeInstanceBreakdown
+      type:
+      - boolean
+      description: >-
+        Флаг, указывающий, если метрики для каждого экземпляра машины должны быть включены.
+
+        Для сайтов, работающих на более чем одном компьютере это может быть полезно определить неправильный машины.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function getHistoricalUsageMetrics(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#list
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: list(webSpaceName, callback)
+  summary: Список веб-пространств в текущей подписке можно получить, отправив запрос GET.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/dn166961.aspx Дополнительные сведения)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.list(webSpaceName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function list(webSpaceName, callback)
+  langs:
+  - js
+- uid: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  id: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations#update
+  parent: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations
+  name: update(webSpaceName, webHostingPlanName, parameters, callback)
+  summary: Обновляет существующий план веб-размещения.  (см. в разделе http://azure.microsoft.com/en-us/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/ Дополнительные сведения)
+  fullName: azure-asm-website.WebHostingPlanOperations~WebHostingPlanOperations.update(webSpaceName, webHostingPlanName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: webSpaceName
+      type:
+      - string
+      description: Имя веб-пространства.
+    - id: webHostingPlanName
+      type:
+      - string
+      description: Имя плана размещения веб-узла.
+    - id: parameters
+      type:
+      - azure-asm-website.WebHostingPlanUpdateParameters
+      description: Параметры для операции обновления плана веб-размещения.
+    - id: parameters.numberOfWorkers
+      type:
+      - number
+      description: Запрашиваемое количество рабочих ролей.
+      optional: true
+    - id: parameters.sKU
+      type:
+      - azure-asm-website.SkuOptions
+      description: Номер SKU плана размещения веб-узла.
+      optional: true
+    - id: parameters.workerSize
+      type:
+      - azure-asm-website.WorkerSizeOptions
+      description: >-
+        Размер рабочего потока.
+
+        Возможные значения: малый, средний и большой. Для JSON эквивалентными значениями являются 0 = мелкий, 1 = средний и 2 = Large.
+      optional: true
+    - id: parameters.adminSiteName
+      type:
+      - string
+      description: Сайт администратора. Сайт администратора используется для развертывания расширения сайтов или содержимое, общими для всех сайтов в плане.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-website.Stream
+      description: Поток ответа.
+    content: function update(webSpaceName, webHostingPlanName, parameters, callback)
+  langs:
+  - js
