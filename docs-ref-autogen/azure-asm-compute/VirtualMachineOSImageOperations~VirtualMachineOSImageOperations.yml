@@ -1,0 +1,519 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 0fa91a962ed248c95b5964118e06e0fda3ca6528
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40063916"
+items:
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: VirtualMachineOSImageOperations
+  summary: >-
+    API управления службами включает операции управления образами ОС в вашей подписке.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157175.aspx подробнее) __Примечание__: экземпляр этого класса создается автоматически для экземпляра [ComputeManagementClient] {@link ComputeManagementClient ~ ComputeManagementClient}.
+
+    См. в разделе [virtualMachineOSImages] {@link ComputeManagementClient ~ ComputeManagementClient #virtualMachineOSImages}.
+
+    Инициализирует новый экземпляр класса VirtualMachineOSImageOperations.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations
+  type: Class
+  children:
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  - azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  langs:
+  - js
+- id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.#ctor
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: VirtualMachineOSImageOperations(client)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations.VirtualMachineOSImageOperations(client)
+  summary: ''
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedComputeManagementClient
+      description: Ссылка на клиента службы.
+    content: new VirtualMachineOSImageOperations(client)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginSharing
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: beginSharing(imageName, permission, callback)
+  summary: Совместное использование уже реплицированным образ операционной системы. Эта операция выполняется только для издателей. Вы должны быть зарегистрированы в качестве издателя образа с помощью Windows Azure, чтобы иметь возможность вызывать этот метод.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.beginSharing(imageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Имя образа виртуальной машины для совместного использования.
+    - id: permission
+      type:
+      - string
+      description: 'Разрешением на совместное использование: public, msdn или private.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginSharing(imageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#beginUnreplicating
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: beginUnreplicating(imageName, callback)
+  summary: 'Отменить репликацию образа ОС в нескольких целевое расположение. Эта операция выполняется только для издателей. Вы должны быть зарегистрированы в качестве издателя образа с помощью Windows Azure, чтобы иметь возможность вызывать этот метод. Примечание: Операция удаляет опубликованные копии пользовательского образа ОС. Пользовательский образ операционной системы не удаляется. Чтобы удалить пользовательский образ ОС, издатель должен будет вызываться удалить образ операционной системы.'
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.beginUnreplicating(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: 'Имя образа виртуальной машины для репликации. Примечание: Имя образа операционной системы должен быть пользователь образ ОС, не опубликованных имя образа ОС.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function beginUnreplicating(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#create
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: create(parameters, callback)
+  summary: >-
+    Операция создания образа ОС добавляет образ операционной системы, который хранится в учетной записи хранения и доступен из репозитория образов.
+
+    (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157192.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.create(parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageCreateParameters
+      description: Параметры для операции создания образа виртуальной машины.
+    - id: parameters.label
+      type:
+      - string
+      description: Указывает понятное имя образа.
+    - id: parameters.mediaLinkUri
+      type:
+      - string
+      description: 'Указывает расположение BLOB-объекта в службе хранилища Azure. Расположение BLOB-объекта должно принадлежать учетной записи хранения в подписке, заданной значением SubscriptionId в вызове операции. Пример: http://example.blob.core.windows.net/disks/mydisk.vhd.'
+    - id: parameters.name
+      type:
+      - string
+      description: Задает имя, которое используется для определения образа при создании одного или нескольких виртуальных машин Azure.
+    - id: parameters.operatingSystemType
+      type:
+      - string
+      description: 'Тип операционной системы образа ОС. Возможными значениями являются: Windows или Linux.'
+    - id: parameters.eula
+      type:
+      - string
+      description: Указывает лицензионное соглашение конечного пользователя, связанный с изображением. Значение для этого элемента является строкой, но рекомендуется, чтобы значение было URL-адрес, указывающий на лицензионное соглашение.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Указывает описание образа ОС.
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: Указывает значение, которое можно использовать для группирования образов ОС.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Указывает дату добавления образа ОС в репозиторий образов.
+      optional: true
+    - id: parameters.isPremium
+      type:
+      - boolean
+      description: Указывает, содержит ли образ программные или связанные службы, которые повлекут за собой оплату выше базовой цены за виртуальную машину.
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: Указывает, должен ли образ появиться в коллекции образов.
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: Задает URI, указывающий на документ, содержащий политику конфиденциальности, связанную с образом операционной системы.
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: Задает URI значка, отображаемого для образов на портале управления.
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: Указывает используемый размер для виртуальной машины, созданной из образа ОС.
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: Указывает URI мелкого значка, который отображается, если образ уже присутствует на портале управления Azure. Элемент SmallIconUri только доступно при использовании версии 2013-03-01 или более поздней версии.
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: >-
+        Указывает язык образа.
+
+        Языковой элемент только доступно при использовании версии 2013-03-01 или более поздней версии.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function create(parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#deleteMethod
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: deleteMethod(imageName, deleteFromStorage, callback)
+  summary: Удаление образа ОС Операция удаляет указанный образ ОС из репозитория образов.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157203.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.deleteMethod(imageName, deleteFromStorage, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Имя образа для удаления.
+    - id: deleteFromStorage
+      type:
+      - boolean
+      description: Указывает, что BLOB-объект источника для изображения, следует также удалить из хранилища.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function deleteMethod(imageName, deleteFromStorage, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#get
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: get(imageName, callback)
+  summary: Операция получения образа операционной системы извлекает подробные сведения о образа операционной системы из репозитория образов.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.get(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Имя образа ОС для извлечения.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function get(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#getDetails
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: getDetails(imageName, callback)
+  summary: Получает свойства образ операционной системы и сведения о нем репликации. Эта операция выполняется только для издателей. Вы должны быть зарегистрированы в качестве издателя образа с помощью Windows Azure, чтобы иметь возможность вызывать этот метод.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.getDetails(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Имя образа виртуальной машины для репликации.
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function getDetails(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#list
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: list(callback)
+  summary: Перечисление образов ОС Операция извлекает список образов операционной системы из репозитория образов.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157191.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.list(callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function list(callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#replicate
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: replicate(imageName, parameters, callback)
+  summary: Репликация образов ОС в несколько конечных расположений. Эта операция выполняется только для издателей. Вы должны быть зарегистрированы в качестве издателя образа с помощью Windows Azure, чтобы иметь возможность вызывать этот метод.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.replicate(imageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Имя образа ОС виртуальной машины для репликации.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageReplicateParameters
+      description: Параметры, передаваемые операциям реплицировать образ виртуальной машины.
+    - id: parameters.targetLocations
+      type:
+      - array
+      description: 'Региональные расположения целевой объект репликации. Примечание: Регионов в тексте запроса не суммируются. Если образ операционной системы уже были реплицированы в регионы, A, B и C и выполняется запрос для репликации в регионах A и D, образ виртуальной Машины будет оставаться в регионе А, будут реплицированы в регион D и будет нереплицированные из регионов B и C.'
+      optional: true
+    - id: parameters.computeImageAttributes
+      type:
+      - azure-asm-compute.ComputeImageAttributes
+      description: Атрибуты образа вычислений. Метаданные, который необходим для этого образа быть useablein Microsoft.Compute Provider.The сочетания значений, указанное для предложения, Sku и версию должно быть уникальным для издателя.
+    - id: parameters.computeImageAttributes.offer
+      type:
+      - string
+      description: Получает или задает имя издателя определенные предложения. Разрешенные символы, прописные или строчные буквы, цифры, hypen(-), точка (.). Максимально допустимая длина составляет 64 символов.
+    - id: parameters.computeImageAttributes.sku
+      type:
+      - string
+      description: Получает или задает имя издателя определенные номера SKU. Разрешенные символы, прописные или строчные буквы, цифры, hypen(-), точка (.). Максимально допустимая длина составляет 64 символов.
+    - id: parameters.computeImageAttributes.version
+      type:
+      - string
+      description: 'Получает или задает версию издателя определенные изображения. Разрешенные символы, цифры и период. Формат: <MajorVersion>.<MinorVersion>.<Patch>Пример: "1.0.0» или"1.1.0» номер версии 3, чтобы соответствовать стандарту большинства RPs.See http://semver.org/.'
+    - id: parameters.marketplaceImageAttributes
+      type:
+      - azure-asm-compute.MarketplaceImageAttributes
+      description: Атрибуты образа рынке. Метаданные, что необходимо для виртуальной Машины Marketplace источником imagesto быть готовый к применению в поставщике Microsoft.Compute.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.publisherId
+      type:
+      - string
+      description: Возвращает или задает идентификатор издателя Это имя издателя Microsoft.Compute поставщика для образа.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan
+      type:
+      - azure-asm-compute.Plan
+      description: Возвращает или задает контекст покупки любой третьей стороной артефакт.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.name
+      type:
+      - string
+      description: Получает или задает имя определяемой пользователем сторонних производителей артефакта, который является получены.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.publisher
+      type:
+      - string
+      description: Возвращает или задает издателя сторонних производителей артефакта, для которого создается bought.E.g. Contoso.
+      optional: true
+    - id: parameters.marketplaceImageAttributes.plan.product
+      type:
+      - string
+      description: Возвращает или задает 3-й сторона артефакт, для которого создается procured.E.g. "Борей".
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function replicate(imageName, parameters, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#share
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: share(imageName, permission, callback)
+  summary: Совместное использование уже реплицированным образ операционной системы. Эта операция выполняется только для издателей. Вы должны быть зарегистрированы в качестве издателя образа с помощью Windows Azure, чтобы иметь возможность вызывать этот метод.
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.share(imageName, permission, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Имя образа виртуальной машины для совместного использования.
+    - id: permission
+      type:
+      - string
+      description: 'Разрешением на совместное использование: public, msdn или private.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function share(imageName, permission, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#unreplicate
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: unreplicate(imageName, callback)
+  summary: 'Отменить репликацию образа ОС в нескольких целевое расположение. Эта операция выполняется только для издателей. Вы должны быть зарегистрированы в качестве издателя образа с помощью Windows Azure, чтобы иметь возможность вызывать этот метод. Примечание: Операция удаляет опубликованные копии пользовательского образа ОС. Пользовательский образ операционной системы не удаляется. Чтобы удалить пользовательский образ ОС, издатель должен будет вызываться удалить образ операционной системы.'
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.unreplicate(imageName, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: 'Имя образа виртуальной машины для репликации. Примечание: Имя образа операционной системы должен быть пользователь образ ОС, не опубликованных имя образа ОС.'
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function unreplicate(imageName, callback)
+  langs:
+  - js
+- uid: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  id: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations#update
+  parent: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations
+  name: update(imageName, parameters, callback)
+  summary: Обновление образа ОС операции обновления операционной системы образа, который в репозитории образов.  (см. в разделе http://msdn.microsoft.com/en-us/library/windowsazure/jj157198.aspx Дополнительные сведения)
+  fullName: azure-asm-compute.VirtualMachineOSImageOperations~VirtualMachineOSImageOperations.update(imageName, parameters, callback)
+  type: Function
+  syntax:
+    parameters:
+    - id: imageName
+      type:
+      - string
+      description: Имя образа виртуальной машины, который требуется обновить.
+    - id: parameters
+      type:
+      - azure-asm-compute.VirtualMachineOSImageUpdateParameters
+      description: Параметры для операции обновления образа виртуальной машины.
+    - id: parameters.label
+      type:
+      - string
+      description: Указывает понятное имя образа, который требуется обновить. Эту операцию нельзя использовать для обновления образов, предоставляемых платформой Azure.
+    - id: parameters.eula
+      type:
+      - string
+      description: Указывает лицензионное соглашение конечного пользователя, связанный с изображением. Значение для этого элемента является строкой, но рекомендуется, чтобы значение было URL-адрес, указывающий на лицензионное соглашение.
+      optional: true
+    - id: parameters.description
+      type:
+      - string
+      description: Указывает описание образа ОС.
+      optional: true
+    - id: parameters.imageFamily
+      type:
+      - string
+      description: Указывает значение, которое можно использовать для группирования образов ОС.
+      optional: true
+    - id: parameters.showInGui
+      type:
+      - boolean
+      description: При публикации этот образ появятся в коллекции образов azure windows или нет. Значение true означает, что по умолчанию.
+      optional: true
+    - id: parameters.publishedDate
+      type:
+      - date
+      description: Указывает дату добавления образа ОС в репозиторий образов.
+      optional: true
+    - id: parameters.isPremium
+      type:
+      - boolean
+      description: Указывает, содержит ли образ программные или связанные службы, которые повлекут за собой оплату выше базовой цены за виртуальную машину.
+      optional: true
+    - id: parameters.privacyUri
+      type:
+      - string
+      description: Задает URI, указывающий на документ, содержащий политику конфиденциальности, связанную с образом операционной системы.
+      optional: true
+    - id: parameters.iconUri
+      type:
+      - string
+      description: Задает URI значка, отображаемого для образов на портале управления.
+      optional: true
+    - id: parameters.recommendedVMSize
+      type:
+      - string
+      description: Указывает используемый размер для виртуальной машины, созданной из образа ОС.
+      optional: true
+    - id: parameters.smallIconUri
+      type:
+      - string
+      description: Указывает URI мелкого значка, который отображается, если образ уже присутствует на портале управления Azure. Элемент SmallIconUri только доступно при использовании версии 2013-03-01 или более поздней версии.
+      optional: true
+    - id: parameters.language
+      type:
+      - string
+      description: >-
+        Указывает язык образа.
+
+        Языковой элемент только доступно при использовании версии 2013-03-01 или более поздней версии.
+      optional: true
+    - id: callback
+      type:
+      - function
+      description: ''
+    return:
+      type:
+      - azure-asm-compute.Stream
+      description: Поток ответа.
+    content: function update(imageName, parameters, callback)
+  langs:
+  - js
