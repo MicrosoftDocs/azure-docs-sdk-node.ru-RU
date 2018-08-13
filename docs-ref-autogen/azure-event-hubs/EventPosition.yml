@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2bb39336cac3fe404366a95799522d14d6109f14
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074173"
+items:
+- uid: azure-event-hubs.EventPosition
+  name: EventPosition
+  fullName: EventPosition
+  children:
+  - azure-event-hubs.EventPosition.customFilter
+  - azure-event-hubs.EventPosition.endOfStream
+  - azure-event-hubs.EventPosition.enqueuedTime
+  - azure-event-hubs.EventPosition.constructor
+  - azure-event-hubs.EventPosition.fromEnd
+  - azure-event-hubs.EventPosition.fromEnqueuedTime
+  - azure-event-hubs.EventPosition.fromOffset
+  - azure-event-hubs.EventPosition.fromSequenceNumber
+  - azure-event-hubs.EventPosition.fromStart
+  - azure-event-hubs.EventPosition.getExpression
+  - azure-event-hubs.EventPosition.isInclusive
+  - azure-event-hubs.EventPosition.offset
+  - azure-event-hubs.EventPosition.sequenceNumber
+  - azure-event-hubs.EventPosition.startOfStream
+  - azure-event-hubs.EventPosition.withCustomFilter
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    <span data-ttu-id="8bcf4-101">Представляет параметры можно задать во время создания приемника концентратора событий.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-101">Represents options can be set during the creation of a event hub receiver.</span></span>
+
+    <span data-ttu-id="8bcf4-102">Определяет позицию @link~ EventData в секции концентратора событий.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-102">Defines a position of an @link~EventData in the event hub partition.</span></span>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.customFilter
+  name: customFilter
+  fullName: customFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'customFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.endOfStream
+  name: endOfStream
+  fullName: endOfStream
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'static endOfStream: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.enqueuedTime
+  name: enqueuedTime
+  fullName: enqueuedTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'enqueuedTime?: Date | number'
+    return:
+      type:
+      - Date | number
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.constructor
+  name: EventPosition
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new EventPosition(options?: EventPositionOptions)'
+    parameters:
+    - id: options
+      type:
+      - azure-event-hubs.EventPositionOptions
+      description: ''
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromEnd
+  name: fromEnd
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8bcf4-103">Возвращает позицию окончания потока.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-103">Returns the position for the end of a stream.</span></span> <span data-ttu-id="8bcf4-104">Предоставить этой позиции в создании получателя к получению из следующего события доступны в разделе после создания получателя.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-104">Provide this position in receiver creation to start receiving from the next available event in the partition after the receiver is created.</span></span>
+  syntax:
+    content: static function fromEnd()
+    parameters: []
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromEnqueuedTime
+  name: fromEnqueuedTime
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8bcf4-105">Создает позицию во время заданного поставлено в очередь.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-105">Creates a position at the given enqueued time.</span></span>
+  syntax:
+    content: 'static function fromEnqueuedTime(enqueuedTime: Date | number)'
+    parameters:
+    - id: enqueuedTime
+      type:
+      - Date | number
+      description: <span data-ttu-id="8bcf4-106">Время постановки в очередь.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-106">The enqueue time.</span></span> <span data-ttu-id="8bcf4-107">Это значение представляет фактическое время постановки сообщения.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-107">This value represents the actual time of enqueuing the message.</span></span>
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromOffset
+  name: fromOffset
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8bcf4-108">Создает позицию с указанным смещением.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-108">Creates a position at the given offset.</span></span>
+  syntax:
+    content: 'static function fromOffset(offset: string, isInclusive?: boolean)'
+    parameters:
+    - id: offset
+      type:
+      - string
+      description: >-
+        <span data-ttu-id="8bcf4-109">Смещение данных относительно потока разделов концентратора событий.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-109">The offset of the data relative to the Event Hub partition stream.</span></span>
+
+        <span data-ttu-id="8bcf4-110">Смещение — это маркер или идентификатор события в потоке концентраторов событий.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-110">The offset is a marker or identifier for an event within the Event Hubs stream.</span></span>
+
+        <span data-ttu-id="8bcf4-111">Этот идентификатор уникален внутри раздела потока концентраторов событий.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-111">The identifier is unique within a partition of the Event Hubs stream.</span></span>
+    - id: isInclusive
+      type:
+      - boolean
+      description: '<span data-ttu-id="8bcf4-112">Значение true, если указанное событие включено. в противном случае возвращается следующее событие.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-112">If true, the specified event is included; otherwise the next event is returned.</span></span> <span data-ttu-id="8bcf4-113">По умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-113">Default: false.</span></span>'
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromSequenceNumber
+  name: fromSequenceNumber
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8bcf4-114">Создает заданный порядковый номер позиции.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-114">Creates a position at the given sequence number.</span></span>
+  syntax:
+    content: 'static function fromSequenceNumber(sequenceNumber: number, isInclusive?: boolean)'
+    parameters:
+    - id: sequenceNumber
+      type:
+      - number
+      description: <span data-ttu-id="8bcf4-115">Логический порядковый номер события в потоке секции концентратора событий.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-115">The logical sequence number of the event within the partition stream of the Event Hub.</span></span>
+    - id: isInclusive
+      type:
+      - boolean
+      description: '<span data-ttu-id="8bcf4-116">Значение true, если указанное событие включено. в противном случае возвращается следующее событие.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-116">If true, the specified event is included; otherwise the next event is returned.</span></span> <span data-ttu-id="8bcf4-117">По умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-117">Default false.</span></span>'
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.fromStart
+  name: fromStart
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8bcf4-118">Возвращает позицию начала потока.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-118">Returns the position for the start of a stream.</span></span> <span data-ttu-id="8bcf4-119">Предоставить этой позиции в создании получателя к получению из первого события доступны в разделе.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-119">Provide this position in receiver creation to start receiving from the first available event in the partition.</span></span>
+  syntax:
+    content: static function fromStart()
+    parameters: []
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.getExpression
+  name: getExpression
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8bcf4-120">Возвращает выражение (предложение фильтра), необходимо задать в источнике.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-120">Gets the expression (filter clause) that needs to be set on the source.</span></span>
+  syntax:
+    content: function getExpression()
+    parameters: []
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.isInclusive
+  name: isInclusive
+  fullName: isInclusive
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'isInclusive: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.offset
+  name: offset
+  fullName: offset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'offset?: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.sequenceNumber
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'sequenceNumber?: number'
+    return:
+      type:
+      - number
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.startOfStream
+  name: startOfStream
+  fullName: startOfStream
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'static startOfStream: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventPosition.withCustomFilter
+  name: withCustomFilter
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="8bcf4-121">Создает позиции, основанной на заданный пользовательский фильтр.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-121">Creates a position based on the given custom filter.</span></span>
+  syntax:
+    content: 'static function withCustomFilter(customFilter: string)'
+    parameters:
+    - id: customFilter
+      type:
+      - string
+      description: >
+        <span data-ttu-id="8bcf4-122">Пользовательские критерий фильтра, требующее применения на стороне получателя.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-122">The cutom filter expression that needs to be applied on the receiver.</span></span> <span data-ttu-id="8bcf4-123">Это следует использовать только в том случае, когда один из других методов `fromOffset()`, `fromSequenceNumber()`, `fromEnqueuedTime()` не подходит для вашего сценария.</span><span class="sxs-lookup"><span data-stu-id="8bcf4-123">This should be used only when one of the other methods `fromOffset()`, `fromSequenceNumber()`, `fromEnqueuedTime()` is not applicable for your scenario.</span></span>
+    return:
+      type:
+      - azure-event-hubs.EventPosition
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.EventPositionOptions
+  spec.typeScript:
+  - name: EventPositionOptions
+    fullName: EventPositionOptions
+    uid: azure-event-hubs.EventPositionOptions
+- uid: azure-event-hubs.EventPosition
+  spec.typeScript:
+  - name: EventPosition
+    fullName: EventPosition
+    uid: azure-event-hubs.EventPosition

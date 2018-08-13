@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 6bdf12f37e564aaac17b43d3d18abd4acfc689ad
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074253"
+items:
+- uid: azure-iot-common.RetryPolicy
+  name: RetryPolicy
+  fullName: RetryPolicy
+  children:
+  - azure-iot-common.RetryPolicy.nextRetryTimeout
+  - azure-iot-common.RetryPolicy.shouldRetry
+  langs:
+  - typeScript
+  type: interface
+  summary: >
+    <span data-ttu-id="337ca-101">Интерфейс, описывающий объект политики повторных попыток.</span><span class="sxs-lookup"><span data-stu-id="337ca-101">Interface describing a retry policy object.</span></span>
+
+    <span data-ttu-id="337ca-102">Политики повтора состоят из 2 объектов</span><span class="sxs-lookup"><span data-stu-id="337ca-102">Retry policies are composed of 2 things</span></span>
+
+    - <span data-ttu-id="337ca-103">Алгоритм, который вычисляет в следующий раз, чтобы повторить попытку, исходя из текущего номера или повторных попыток.</span><span class="sxs-lookup"><span data-stu-id="337ca-103">An algorithm that computes the next time to retry based on the current number or retries.</span></span>
+
+    - <span data-ttu-id="337ca-104">Ошибка фильтра, решает, основываясь на тип ошибки при получении ли повторная попытка должны быть выполнены или нет.</span><span class="sxs-lookup"><span data-stu-id="337ca-104">An error filter that decides, based on the type of error received, whether a retry should happen or not.</span></span>
+
+    <span data-ttu-id="337ca-105">Эти два компонента скрывающиеся за 2 вызовы методов, описанных в этом интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="337ca-105">Those 2 components hide behind 2 method calls described in this interface.</span></span>
+  package: azure-iot-common
+- uid: azure-iot-common.RetryPolicy.nextRetryTimeout
+  name: nextRetryTimeout
+  fullName: nextRetryTimeout
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="337ca-106">Вычисляет интервал ожидания перед повторной попыткой в каждый новый "Повторить" под вопросом.</span><span class="sxs-lookup"><span data-stu-id="337ca-106">Computes the interval to wait before retrying at each new retry tentative.</span></span>
+  syntax:
+    content: 'nextRetryTimeout: (retryCount: number, isThrottled: boolean) => number'
+    return:
+      type:
+      - '(retryCount: number, isThrottled: boolean) => number'
+  package: azure-iot-common
+- uid: azure-iot-common.RetryPolicy.shouldRetry
+  name: shouldRetry
+  fullName: shouldRetry
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="337ca-107">В зависимости от ошибки, переданный в качестве аргумента, определяет, если ошибка является временной и операцию следует повторить или нет.</span><span class="sxs-lookup"><span data-stu-id="337ca-107">Based on the error passed as argument, determines if an error is transient and if the operation should be retried or not.</span></span>
+  syntax:
+    content: 'shouldRetry: (error: Error) => boolean'
+    return:
+      type:
+      - '(error: Error) => boolean'
+  package: azure-iot-common

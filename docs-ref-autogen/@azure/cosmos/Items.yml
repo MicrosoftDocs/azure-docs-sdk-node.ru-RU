@@ -1,0 +1,318 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e03cf2dd3e5568e032b681af3e7c2ed68f5694e7
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40076173"
+items:
+- uid: '@azure/cosmos.Items'
+  name: Items
+  fullName: Items
+  children:
+  - '@azure/cosmos.Items.container'
+  - '@azure/cosmos.Items.create'
+  - '@azure/cosmos.Items.create_1'
+  - '@azure/cosmos.Items.query'
+  - '@azure/cosmos.Items.query_1'
+  - '@azure/cosmos.Items.readAll'
+  - '@azure/cosmos.Items.readAll_1'
+  - '@azure/cosmos.Items.upsert'
+  - '@azure/cosmos.Items.upsert_1'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="c63e2-101">Операции для создания новых элементов и чтения/запроса все элементы</span><span class="sxs-lookup"><span data-stu-id="c63e2-101">Operations for creating new items, and reading/querying all items</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.container'
+  name: container
+  fullName: container
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'container: Container'
+    return:
+      type:
+      - '@azure/cosmos.Container'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.create'
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c63e2-102">Создание элемента.</span><span class="sxs-lookup"><span data-stu-id="c63e2-102">Create a item.</span></span>
+
+    <span data-ttu-id="c63e2-103">Нет схемы, набор элементов JSON.</span><span class="sxs-lookup"><span data-stu-id="c63e2-103">There is no set schema for JSON items.</span></span> <span data-ttu-id="c63e2-104">Они могут содержать любое количество пользовательских свойств...</span><span class="sxs-lookup"><span data-stu-id="c63e2-104">They may contain any number of custom properties..</span></span>
+  syntax:
+    content: 'function create(body: any, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - any
+      description: <span data-ttu-id="c63e2-105">Представляет текст элемента.</span><span class="sxs-lookup"><span data-stu-id="c63e2-105">Represents the body of the item.</span></span> <span data-ttu-id="c63e2-106">Может содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-106">Can contain any number of user defined properties.</span></span>
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c63e2-107">Для изменения запроса (например, если указать ключ раздела).</span><span class="sxs-lookup"><span data-stu-id="c63e2-107">Used for modifying the request (for instance, specifying the partition key).</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<@azure/cosmos.ItemDefinition>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.create_1'
+  name: create
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c63e2-108">Создание элемента.</span><span class="sxs-lookup"><span data-stu-id="c63e2-108">Create a item.</span></span>
+
+    <span data-ttu-id="c63e2-109">Любой при условии, что тип T, не обязательно принудительно с помощью пакета SDK.</span><span class="sxs-lookup"><span data-stu-id="c63e2-109">Any provided type, T, is not necessarily enforced by the SDK.</span></span>
+
+    <span data-ttu-id="c63e2-110">Может появиться больше или меньше свойств, и именно логика должна обеспечивать его выполнение.</span><span class="sxs-lookup"><span data-stu-id="c63e2-110">You may get more or less properties and it's up to your logic to enforce it.</span></span>
+
+
+    <span data-ttu-id="c63e2-111">Нет схемы, набор элементов JSON.</span><span class="sxs-lookup"><span data-stu-id="c63e2-111">There is no set schema for JSON items.</span></span> <span data-ttu-id="c63e2-112">Они могут содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-112">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function create<T>(body: T, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - T
+      description: <span data-ttu-id="c63e2-113">Представляет текст элемента.</span><span class="sxs-lookup"><span data-stu-id="c63e2-113">Represents the body of the item.</span></span> <span data-ttu-id="c63e2-114">Может содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-114">Can contain any number of user defined properties.</span></span>
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c63e2-115">Для изменения запроса (например, если указать ключ раздела).</span><span class="sxs-lookup"><span data-stu-id="c63e2-115">Used for modifying the request (for instance, specifying the partition key).</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.query'
+  name: query
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c63e2-116">Запрашивает все элементы.</span><span class="sxs-lookup"><span data-stu-id="c63e2-116">Queries all items.</span></span>
+  syntax:
+    content: 'function query(query: string | SqlQuerySpec, options?: FeedOptions)'
+    parameters:
+    - id: query
+      type:
+      - string | @azure/cosmos.SqlQuerySpec
+      description: <span data-ttu-id="c63e2-117">Настройка запроса для операции.</span><span class="sxs-lookup"><span data-stu-id="c63e2-117">Query configuration for the operation.</span></span> <span data-ttu-id="c63e2-118">См. в разделе <xref:SqlQuerySpec> Дополнительные сведения о том, как настроить запрос.</span><span class="sxs-lookup"><span data-stu-id="c63e2-118">See <xref:SqlQuerySpec> for more info on how to configure a query.</span></span>
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: <span data-ttu-id="c63e2-119">Для изменения запроса (например, если указать ключ раздела).</span><span class="sxs-lookup"><span data-stu-id="c63e2-119">Used for modifying the request (for instance, specifying the partition key).</span></span>
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.ItemDefinition>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.query_1'
+  name: query
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="c63e2-120">Запрашивает все элементы.</span><span class="sxs-lookup"><span data-stu-id="c63e2-120">Queries all items.</span></span>
+  syntax:
+    content: 'function query<T>(query: string | SqlQuerySpec, options?: FeedOptions)'
+    parameters:
+    - id: query
+      type:
+      - string | @azure/cosmos.SqlQuerySpec
+      description: <span data-ttu-id="c63e2-121">Настройка запроса для операции.</span><span class="sxs-lookup"><span data-stu-id="c63e2-121">Query configuration for the operation.</span></span> <span data-ttu-id="c63e2-122">См. в разделе <xref:SqlQuerySpec> Дополнительные сведения о том, как настроить запрос.</span><span class="sxs-lookup"><span data-stu-id="c63e2-122">See <xref:SqlQuerySpec> for more info on how to configure a query.</span></span>
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: <span data-ttu-id="c63e2-123">Для изменения запроса (например, если указать ключ раздела).</span><span class="sxs-lookup"><span data-stu-id="c63e2-123">Used for modifying the request (for instance, specifying the partition key).</span></span>
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<T>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.readAll'
+  name: readAll
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c63e2-124">Чтение всех элементов.</span><span class="sxs-lookup"><span data-stu-id="c63e2-124">Read all items.</span></span>
+
+    <span data-ttu-id="c63e2-125">Нет схемы, набор элементов JSON.</span><span class="sxs-lookup"><span data-stu-id="c63e2-125">There is no set schema for JSON items.</span></span> <span data-ttu-id="c63e2-126">Они могут содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-126">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function readAll(options?: FeedOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: <span data-ttu-id="c63e2-127">Для изменения запроса (например, если указать ключ раздела).</span><span class="sxs-lookup"><span data-stu-id="c63e2-127">Used for modifying the request (for instance, specifying the partition key).</span></span>
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.ItemDefinition>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.readAll_1'
+  name: readAll
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c63e2-128">Чтение всех элементов.</span><span class="sxs-lookup"><span data-stu-id="c63e2-128">Read all items.</span></span>
+
+    <span data-ttu-id="c63e2-129">Любой при условии, что тип T, не обязательно принудительно с помощью пакета SDK.</span><span class="sxs-lookup"><span data-stu-id="c63e2-129">Any provided type, T, is not necessarily enforced by the SDK.</span></span>
+
+    <span data-ttu-id="c63e2-130">Может появиться больше или меньше свойств, и именно логика должна обеспечивать его выполнение.</span><span class="sxs-lookup"><span data-stu-id="c63e2-130">You may get more or less properties and it's up to your logic to enforce it.</span></span>
+
+
+    <span data-ttu-id="c63e2-131">Нет схемы, набор элементов JSON.</span><span class="sxs-lookup"><span data-stu-id="c63e2-131">There is no set schema for JSON items.</span></span> <span data-ttu-id="c63e2-132">Они могут содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-132">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function readAll<T>(options?: FeedOptions)'
+    parameters:
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: <span data-ttu-id="c63e2-133">Для изменения запроса (например, если указать ключ раздела).</span><span class="sxs-lookup"><span data-stu-id="c63e2-133">Used for modifying the request (for instance, specifying the partition key).</span></span>
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<T>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.upsert'
+  name: upsert
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c63e2-134">Upsert элемента.</span><span class="sxs-lookup"><span data-stu-id="c63e2-134">Upsert an item.</span></span>
+
+    <span data-ttu-id="c63e2-135">Нет схемы, набор элементов JSON.</span><span class="sxs-lookup"><span data-stu-id="c63e2-135">There is no set schema for JSON items.</span></span> <span data-ttu-id="c63e2-136">Они могут содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-136">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function upsert(body: any, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - any
+      description: <span data-ttu-id="c63e2-137">Представляет текст элемента.</span><span class="sxs-lookup"><span data-stu-id="c63e2-137">Represents the body of the item.</span></span> <span data-ttu-id="c63e2-138">Может содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-138">Can contain any number of user defined properties.</span></span>
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c63e2-139">Для изменения запроса (например, если указать ключ раздела).</span><span class="sxs-lookup"><span data-stu-id="c63e2-139">Used for modifying the request (for instance, specifying the partition key).</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<@azure/cosmos.ItemDefinition>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Items.upsert_1'
+  name: upsert
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="c63e2-140">Upsert элемента.</span><span class="sxs-lookup"><span data-stu-id="c63e2-140">Upsert an item.</span></span>
+
+    <span data-ttu-id="c63e2-141">Любой при условии, что тип T, не обязательно принудительно с помощью пакета SDK.</span><span class="sxs-lookup"><span data-stu-id="c63e2-141">Any provided type, T, is not necessarily enforced by the SDK.</span></span>
+
+    <span data-ttu-id="c63e2-142">Может появиться больше или меньше свойств, и именно логика должна обеспечивать его выполнение.</span><span class="sxs-lookup"><span data-stu-id="c63e2-142">You may get more or less properties and it's up to your logic to enforce it.</span></span>
+
+
+    <span data-ttu-id="c63e2-143">Нет схемы, набор элементов JSON.</span><span class="sxs-lookup"><span data-stu-id="c63e2-143">There is no set schema for JSON items.</span></span> <span data-ttu-id="c63e2-144">Они могут содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-144">They may contain any number of custom properties.</span></span>
+  syntax:
+    content: 'function upsert<T>(body: T, options?: RequestOptions)'
+    parameters:
+    - id: body
+      type:
+      - T
+      description: <span data-ttu-id="c63e2-145">Представляет текст элемента.</span><span class="sxs-lookup"><span data-stu-id="c63e2-145">Represents the body of the item.</span></span> <span data-ttu-id="c63e2-146">Может содержать любое количество пользовательских свойств.</span><span class="sxs-lookup"><span data-stu-id="c63e2-146">Can contain any number of user defined properties.</span></span>
+    - id: options
+      type:
+      - '@azure/cosmos.RequestOptions'
+      description: >
+        <span data-ttu-id="c63e2-147">Для изменения запроса (например, если указать ключ раздела).</span><span class="sxs-lookup"><span data-stu-id="c63e2-147">Used for modifying the request (for instance, specifying the partition key).</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<@azure/cosmos.ItemResponse<T>>
+  package: '@azure/cosmos'
+references:
+- uid: '@azure/cosmos.Container'
+  spec.typeScript:
+  - name: Container
+    fullName: Container
+    uid: '@azure/cosmos.Container'
+- uid: '@azure/cosmos.RequestOptions'
+  spec.typeScript:
+  - name: RequestOptions
+    fullName: RequestOptions
+    uid: '@azure/cosmos.RequestOptions'
+- uid: Promise<@azure/cosmos.ItemResponse<@azure/cosmos.ItemDefinition>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ItemResponse
+    fullName: ItemResponse
+    uid: '@azure/cosmos.ItemResponse'
+  - name: <
+    fullName: <
+  - name: ItemDefinition
+    fullName: ItemDefinition
+    uid: '@azure/cosmos.ItemDefinition'
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<@azure/cosmos.ItemResponse<T>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ItemResponse
+    fullName: ItemResponse
+    uid: '@azure/cosmos.ItemResponse'
+  - name: <T>>
+    fullName: <T>>
+- uid: string | @azure/cosmos.SqlQuerySpec
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: SqlQuerySpec
+    fullName: SqlQuerySpec
+    uid: '@azure/cosmos.SqlQuerySpec'
+- uid: '@azure/cosmos.FeedOptions'
+  spec.typeScript:
+  - name: FeedOptions
+    fullName: FeedOptions
+    uid: '@azure/cosmos.FeedOptions'
+- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.ItemDefinition>'
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <
+    fullName: <
+  - name: ItemDefinition
+    fullName: ItemDefinition
+    uid: '@azure/cosmos.ItemDefinition'
+  - name: '>'
+    fullName: '>'
+- uid: '@azure/cosmos.QueryIterator<T>'
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <T>
+    fullName: <T>
