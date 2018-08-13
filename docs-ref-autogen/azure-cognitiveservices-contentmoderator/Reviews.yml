@@ -1,0 +1,2875 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: afa6fb747e4e5b55f8e84107a854615c3c631e24
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40075837"
+items:
+- uid: azure-cognitiveservices-contentmoderator.Reviews
+  name: Reviews
+  fullName: Reviews
+  children:
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStreamWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrlWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_1
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_2
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResultWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.createJob
+  - azure-cognitiveservices-contentmoderator.Reviews.createJob_1
+  - azure-cognitiveservices-contentmoderator.Reviews.createJob_2
+  - azure-cognitiveservices-contentmoderator.Reviews.createJobWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.createReviews
+  - azure-cognitiveservices-contentmoderator.Reviews.createReviews_1
+  - azure-cognitiveservices-contentmoderator.Reviews.createReviews_2
+  - azure-cognitiveservices-contentmoderator.Reviews.createReviewsWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews_1
+  - azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews_2
+  - azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews
+  - azure-cognitiveservices-contentmoderator.Reviews.createVideoReviewsWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.getJobDetails
+  - azure-cognitiveservices-contentmoderator.Reviews.getJobDetails_1
+  - azure-cognitiveservices-contentmoderator.Reviews.getJobDetails_2
+  - azure-cognitiveservices-contentmoderator.Reviews.getJobDetailsWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.getReview
+  - azure-cognitiveservices-contentmoderator.Reviews.getReview_1
+  - azure-cognitiveservices-contentmoderator.Reviews.getReview_2
+  - azure-cognitiveservices-contentmoderator.Reviews.getReviewWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames
+  - azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames_1
+  - azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames_2
+  - azure-cognitiveservices-contentmoderator.Reviews.getVideoFramesWithHttpOperationResponse
+  - azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview
+  - azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview_1
+  - azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview_2
+  - azure-cognitiveservices-contentmoderator.Reviews.publishVideoReviewWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame
+  name: addVideoFrame
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function addVideoFrame(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame_1
+  name: addVideoFrame
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function addVideoFrame(teamName: string, reviewId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrame_2
+  name: addVideoFrame
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function addVideoFrame(teamName: string, reviewId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_1
+  name: addVideoFrameStream
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Используйте этот метод для добавления кадров для просмотра видео. Временная шкала: Этот параметр является фактором, который используется для преобразования отметка времени на кадра в миллисекундах. Шкала времени предоставляется в выходных данных обработчика Content Moderator видео мультимедиа на платформе служб мультимедиа Azure. Шкала времени в выходных данных модерации видео — тактов в секунду.'
+  syntax:
+    content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: stream.Readable, frameMetadata: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: frameImageZip
+      type:
+      - stream.Readable
+      description: ''
+    - id: frameMetadata
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream
+  name: addVideoFrameStream
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Используйте этот метод для добавления кадров для просмотра видео. Временная шкала: Этот параметр является фактором, который используется для преобразования отметка времени на кадра в миллисекундах. Шкала времени предоставляется в выходных данных обработчика Content Moderator видео мультимедиа на платформе служб мультимедиа Azure. Шкала времени в выходных данных модерации видео — тактов в секунду.'
+  syntax:
+    content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: stream.Readable, frameMetadata: string, options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: frameImageZip
+      type:
+      - stream.Readable
+      description: >
+        ZIP-файл, содержащий кадра изображения.
+    - id: frameMetadata
+      type:
+      - string
+      description: >
+        Метаданные кадра.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStream_2
+  name: addVideoFrameStream
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Используйте этот метод для добавления кадров для просмотра видео. Временная шкала: Этот параметр является фактором, который используется для преобразования отметка времени на кадра в миллисекундах. Шкала времени предоставляется в выходных данных обработчика Content Moderator видео мультимедиа на платформе служб мультимедиа Azure. Шкала времени в выходных данных модерации видео — тактов в секунду.'
+  syntax:
+    content: 'function addVideoFrameStream(contentType: string, teamName: string, reviewId: string, frameImageZip: stream.Readable, frameMetadata: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: frameImageZip
+      type:
+      - stream.Readable
+      description: ''
+    - id: frameMetadata
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameStreamWithHttpOperationResponse
+  name: addVideoFrameStreamWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Используйте этот метод для добавления кадров для просмотра видео. Временная шкала: Этот параметр является фактором, который используется для преобразования отметка времени на кадра в миллисекундах. Шкала времени предоставляется в выходных данных обработчика Content Moderator видео мультимедиа на платформе служб мультимедиа Azure. Шкала времени в выходных данных модерации видео — тактов в секунду.'
+  syntax:
+    content: 'function addVideoFrameStreamWithHttpOperationResponse(contentType: string, teamName: string, reviewId: string, frameImageZip: stream.Readable, frameMetadata: string, options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: frameImageZip
+      type:
+      - stream.Readable
+      description: >
+        ZIP-файл, содержащий кадра изображения.
+    - id: frameMetadata
+      type:
+      - string
+      description: >
+        Метаданные кадра.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl
+  name: addVideoFrameUrl
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Используйте этот метод для добавления кадров для просмотра видео. Временная шкала: Этот параметр является фактором, который используется для преобразования отметка времени на кадра в миллисекундах. Шкала времени предоставляется в выходных данных обработчика Content Moderator видео мультимедиа на платформе служб мультимедиа Azure. Шкала времени в выходных данных модерации видео — тактов в секунду.'
+  syntax:
+    content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: videoFrameBody
+      type:
+      - azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+      description: >
+        Текст для добавления кадров видео API
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_1
+  name: addVideoFrameUrl
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Используйте этот метод для добавления кадров для просмотра видео. Временная шкала: Этот параметр является фактором, который используется для преобразования отметка времени на кадра в миллисекундах. Шкала времени предоставляется в выходных данных обработчика Content Moderator видео мультимедиа на платформе служб мультимедиа Azure. Шкала времени в выходных данных модерации видео — тактов в секунду.'
+  syntax:
+    content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: videoFrameBody
+      type:
+      - azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrl_2
+  name: addVideoFrameUrl
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Используйте этот метод для добавления кадров для просмотра видео. Временная шкала: Этот параметр является фактором, который используется для преобразования отметка времени на кадра в миллисекундах. Шкала времени предоставляется в выходных данных обработчика Content Moderator видео мультимедиа на платформе служб мультимедиа Azure. Шкала времени в выходных данных модерации видео — тактов в секунду.'
+  syntax:
+    content: 'function addVideoFrameUrl(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: videoFrameBody
+      type:
+      - azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameUrlWithHttpOperationResponse
+  name: addVideoFrameUrlWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Используйте этот метод для добавления кадров для просмотра видео. Временная шкала: Этот параметр является фактором, который используется для преобразования отметка времени на кадра в миллисекундах. Шкала времени предоставляется в выходных данных обработчика Content Moderator видео мультимедиа на платформе служб мультимедиа Azure. Шкала времени в выходных данных модерации видео — тактов в секунду.'
+  syntax:
+    content: 'function addVideoFrameUrlWithHttpOperationResponse(contentType: string, teamName: string, reviewId: string, videoFrameBody: VideoFrameBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: videoFrameBody
+      type:
+      - azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+      description: >
+        Текст для добавления кадров видео API
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoFrameWithHttpOperationResponse
+  name: addVideoFrameWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function addVideoFrameWithHttpOperationResponse(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript_1
+  name: addVideoTranscript
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Этот API добавляет файл расшифровку дикторского текста (текстовую версию всех слов, произносимого в видео) в видео анализ. Файл должен находиться в допустимом формате WebVTT.
+  syntax:
+    content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: stream.Readable, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: vTTfile
+      type:
+      - stream.Readable
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript
+  name: addVideoTranscript
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Этот API добавляет файл расшифровку дикторского текста (текстовую версию всех слов, произносимого в видео) в видео анализ. Файл должен находиться в допустимом формате WebVTT.
+  syntax:
+    content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: stream.Readable, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: vTTfile
+      type:
+      - stream.Readable
+      description: >
+        Файл записи видео.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscript_2
+  name: addVideoTranscript
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Этот API добавляет файл расшифровку дикторского текста (текстовую версию всех слов, произносимого в видео) в видео анализ. Файл должен находиться в допустимом формате WebVTT.
+  syntax:
+    content: 'function addVideoTranscript(teamName: string, reviewId: string, vTTfile: stream.Readable, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: vTTfile
+      type:
+      - stream.Readable
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult
+  name: addVideoTranscriptModerationResult
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Этот API добавляет расшифровку дикторского текста экрана текстовый файл с результатами для просмотра видео.
+
+    Результат текстовый файл для записи экрана является результатом API текста на экране. Для формирования результатов текстовый файл для записи экрана, созданного файла должен проверяться с помощью API текстовой экрана ненормативной.
+  syntax:
+    content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: transcriptModerationBody
+      type:
+      - azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+      description: >
+        Текст для добавить запись разговоров в видео "умеренность" результат API
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_1
+  name: addVideoTranscriptModerationResult
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Этот API добавляет расшифровку дикторского текста экрана текстовый файл с результатами для просмотра видео.
+
+    Результат текстовый файл для записи экрана является результатом API текста на экране. Для формирования результатов текстовый файл для записи экрана, созданного файла должен проверяться с помощью API текстовой экрана ненормативной.
+  syntax:
+    content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: transcriptModerationBody
+      type:
+      - azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResult_2
+  name: addVideoTranscriptModerationResult
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Этот API добавляет расшифровку дикторского текста экрана текстовый файл с результатами для просмотра видео.
+
+    Результат текстовый файл для записи экрана является результатом API текста на экране. Для формирования результатов текстовый файл для записи экрана, созданного файла должен проверяться с помощью API текстовой экрана ненормативной.
+  syntax:
+    content: 'function addVideoTranscriptModerationResult(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: transcriptModerationBody
+      type:
+      - azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptModerationResultWithHttpOperationResponse
+  name: addVideoTranscriptModerationResultWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Этот API добавляет расшифровку дикторского текста экрана текстовый файл с результатами для просмотра видео.
+
+    Результат текстовый файл для записи экрана является результатом API текста на экране. Для формирования результатов текстовый файл для записи экрана, созданного файла должен проверяться с помощью API текстовой экрана ненормативной.
+  syntax:
+    content: 'function addVideoTranscriptModerationResultWithHttpOperationResponse(contentType: string, teamName: string, reviewId: string, transcriptModerationBody: TranscriptModerationBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: transcriptModerationBody
+      type:
+      - azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+      description: >
+        Текст для добавить запись разговоров в видео "умеренность" результат API
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.addVideoTranscriptWithHttpOperationResponse
+  name: addVideoTranscriptWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Этот API добавляет файл расшифровку дикторского текста (текстовую версию всех слов, произносимого в видео) в видео анализ. Файл должен находиться в допустимом формате WebVTT.
+  syntax:
+    content: 'function addVideoTranscriptWithHttpOperationResponse(teamName: string, reviewId: string, vTTfile: stream.Readable, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: vTTfile
+      type:
+      - stream.Readable
+      description: >
+        Файл записи видео.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createJob
+  name: createJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Задание идентификатора будет возвращаться для содержимого, размещенного на этой конечной точки.
+
+    После сравнивается содержимое рабочего процесса условии проверки будет создана или обрабатывается на основе выражения рабочего процесса.
+
+
+    <h3>Схемы обратного вызова </h3>
+
+
+    <p>
+
+    <h4>Пример CallBack завершения задания</h4><br/>
+
+
+    {<br/>
+
+    «JobId»: "<Job Id>,<br/>
+
+    «ReviewId»: «< идентификатор проверки, если задания привело к проверку, чтобы создать >»,<br/>
+
+    «WorkFlowId»: «default»<br/>
+
+    «Состояние»: «< это будет одним из завершить, InProgress, ошибка >»,<br/>
+
+    «ContentType»: «Изображение»,<br/>
+
+    «ContentId»: "<This is the ContentId that was specified on input>«,<br/>
+
+    «CallBackType»: «Задание»,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>
+
+    <p>
+
+    <h4>Пример CallBack завершения проверки</h4><br/>
+
+
+    {«ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx», «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createJob(teamName: string, contentType: string, contentId: string, workflowName: string, jobContentType: string, content: Content, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: contentType
+      type:
+      - string
+      description: >
+        Изображение, текст или видео. Возможные значения: «Изображение», «Текст», «Видео»
+    - id: contentId
+      type:
+      - string
+      description: >
+        Идентификатор или имя для идентификации контент, отправленный.
+    - id: workflowName
+      type:
+      - string
+      description: >
+        Имя рабочего процесса, который требуется вызвать.
+    - id: jobContentType
+      type:
+      - string
+      description: >
+        Тип содержимого. Возможные значения: «application/json», «image/jpeg»
+    - id: content
+      type:
+      - azure-cognitiveservices-contentmoderator.Content
+      description: >
+        Содержимое для оценки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.JobId>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createJob_1
+  name: createJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Задание идентификатора будет возвращаться для содержимого, размещенного на этой конечной точки.
+
+    После сравнивается содержимое рабочего процесса условии проверки будет создана или обрабатывается на основе выражения рабочего процесса.
+
+
+    <h3>Схемы обратного вызова </h3>
+
+
+    <p>
+
+    <h4>Пример CallBack завершения задания</h4><br/>
+
+
+    {<br/>
+
+    «JobId»: "<Job Id>,<br/>
+
+    «ReviewId»: «< идентификатор проверки, если задания привело к проверку, чтобы создать >»,<br/>
+
+    «WorkFlowId»: «default»<br/>
+
+    «Состояние»: «< это будет одним из завершить, InProgress, ошибка >»,<br/>
+
+    «ContentType»: «Изображение»,<br/>
+
+    «ContentId»: "<This is the ContentId that was specified on input>«,<br/>
+
+    «CallBackType»: «Задание»,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>
+
+    <p>
+
+    <h4>Пример CallBack завершения проверки</h4><br/>
+
+
+    {«ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx», «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createJob(teamName: string, contentType: string, contentId: string, workflowName: string, jobContentType: string, content: Content, callback: ServiceCallback<JobId>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: contentId
+      type:
+      - string
+      description: ''
+    - id: workflowName
+      type:
+      - string
+      description: ''
+    - id: jobContentType
+      type:
+      - string
+      description: ''
+    - id: content
+      type:
+      - azure-cognitiveservices-contentmoderator.Content
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.JobId>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.JobId>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createJob_2
+  name: createJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Задание идентификатора будет возвращаться для содержимого, размещенного на этой конечной точки.
+
+    После сравнивается содержимое рабочего процесса условии проверки будет создана или обрабатывается на основе выражения рабочего процесса.
+
+
+    <h3>Схемы обратного вызова </h3>
+
+
+    <p>
+
+    <h4>Пример CallBack завершения задания</h4><br/>
+
+
+    {<br/>
+
+    «JobId»: "<Job Id>,<br/>
+
+    «ReviewId»: «< идентификатор проверки, если задания привело к проверку, чтобы создать >»,<br/>
+
+    «WorkFlowId»: «default»<br/>
+
+    «Состояние»: «< это будет одним из завершить, InProgress, ошибка >»,<br/>
+
+    «ContentType»: «Изображение»,<br/>
+
+    «ContentId»: "<This is the ContentId that was specified on input>«,<br/>
+
+    «CallBackType»: «Задание»,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>
+
+    <p>
+
+    <h4>Пример CallBack завершения проверки</h4><br/>
+
+
+    {«ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx», «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createJob(teamName: string, contentType: string, contentId: string, workflowName: string, jobContentType: string, content: Content, options: function, callback: ServiceCallback<JobId>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: contentId
+      type:
+      - string
+      description: ''
+    - id: workflowName
+      type:
+      - string
+      description: ''
+    - id: jobContentType
+      type:
+      - string
+      description: ''
+    - id: content
+      type:
+      - azure-cognitiveservices-contentmoderator.Content
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.JobId>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.JobId>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createJobWithHttpOperationResponse
+  name: createJobWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Задание идентификатора будет возвращаться для содержимого, размещенного на этой конечной точки.
+
+    После сравнивается содержимое рабочего процесса условии проверки будет создана или обрабатывается на основе выражения рабочего процесса.
+
+
+    <h3>Схемы обратного вызова </h3>
+
+
+    <p>
+
+    <h4>Пример CallBack завершения задания</h4><br/>
+
+
+    {<br/>
+
+    «JobId»: "<Job Id>,<br/>
+
+    «ReviewId»: «< идентификатор проверки, если задания привело к проверку, чтобы создать >»,<br/>
+
+    «WorkFlowId»: «default»<br/>
+
+    «Состояние»: «< это будет одним из завершить, InProgress, ошибка >»,<br/>
+
+    «ContentType»: «Изображение»,<br/>
+
+    «ContentId»: "<This is the ContentId that was specified on input>«,<br/>
+
+    «CallBackType»: «Задание»,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>
+
+    <p>
+
+    <h4>Пример CallBack завершения проверки</h4><br/>
+
+
+    {«ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx», «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createJobWithHttpOperationResponse(teamName: string, contentType: string, contentId: string, workflowName: string, jobContentType: string, content: Content, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: contentType
+      type:
+      - string
+      description: >
+        Изображение, текст или видео. Возможные значения: «Изображение», «Текст», «Видео»
+    - id: contentId
+      type:
+      - string
+      description: >
+        Идентификатор или имя для идентификации контент, отправленный.
+    - id: workflowName
+      type:
+      - string
+      description: >
+        Имя рабочего процесса, который требуется вызвать.
+    - id: jobContentType
+      type:
+      - string
+      description: >
+        Тип содержимого. Возможные значения: «application/json», «image/jpeg»
+    - id: content
+      type:
+      - azure-cognitiveservices-contentmoderator.Content
+      description: >
+        Содержимое для оценки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.JobId>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createReviews
+  name: createReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options?: function)'
+    parameters:
+    - id: urlContentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: createReviewBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+      description: >
+        Текст для проверки создания API
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createReviews_1
+  name: createReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], callback: ServiceCallback<string[]>)'
+    parameters:
+    - id: urlContentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: createReviewBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<string[]>
+      description: ''
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createReviews_2
+  name: createReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createReviews(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options: function, callback: ServiceCallback<string[]>)'
+    parameters:
+    - id: urlContentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: createReviewBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<string[]>
+      description: ''
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createReviewsWithHttpOperationResponse
+  name: createReviewsWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createReviewsWithHttpOperationResponse(urlContentType: string, teamName: string, createReviewBody: CreateReviewBodyItem[], options?: function)'
+    parameters:
+    - id: urlContentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: createReviewBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+      description: >
+        Текст для проверки создания API
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<string[]>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews_1
+  name: createVideoReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], callback: ServiceCallback<string[]>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: createVideoReviewsBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<string[]>
+      description: ''
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews_2
+  name: createVideoReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options: function, callback: ServiceCallback<string[]>)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: ''
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: createVideoReviewsBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<string[]>
+      description: ''
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createVideoReviews
+  name: createVideoReviews
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createVideoReviews(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: createVideoReviewsBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+      description: >
+        Текст для проверки создания API
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.createVideoReviewsWithHttpOperationResponse
+  name: createVideoReviewsWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function createVideoReviewsWithHttpOperationResponse(contentType: string, teamName: string, createVideoReviewsBody: CreateVideoReviewsBodyItem[], options?: function)'
+    parameters:
+    - id: contentType
+      type:
+      - string
+      description: >
+        Тип содержимого.
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: createVideoReviewsBody
+      type:
+      - azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+      description: >
+        Текст для проверки создания API
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<string[]>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getJobDetails
+  name: getJobDetails
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение сведений о задании для идентификатора задания.
+  syntax:
+    content: 'function getJobDetails(teamName: string, jobId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: jobId
+      type:
+      - string
+      description: >
+        Идентификатор задания.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Job>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getJobDetails_1
+  name: getJobDetails
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение сведений о задании для идентификатора задания.
+  syntax:
+    content: 'function getJobDetails(teamName: string, jobId: string, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Job>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getJobDetails_2
+  name: getJobDetails
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение сведений о задании для идентификатора задания.
+  syntax:
+    content: 'function getJobDetails(teamName: string, jobId: string, options: function, callback: ServiceCallback<Job>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Job>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Job>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getJobDetailsWithHttpOperationResponse
+  name: getJobDetailsWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение сведений о задании для идентификатора задания.
+  syntax:
+    content: 'function getJobDetailsWithHttpOperationResponse(teamName: string, jobId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: jobId
+      type:
+      - string
+      description: >
+        Идентификатор задания.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Job>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getReview
+  name: getReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает сведения для проверки, переданный идентификатор.
+  syntax:
+    content: 'function getReview(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Review>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getReview_1
+  name: getReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает сведения для проверки, переданный идентификатор.
+  syntax:
+    content: 'function getReview(teamName: string, reviewId: string, callback: ServiceCallback<Review>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Review>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Review>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getReview_2
+  name: getReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает сведения для проверки, переданный идентификатор.
+  syntax:
+    content: 'function getReview(teamName: string, reviewId: string, options: function, callback: ServiceCallback<Review>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Review>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Review>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getReviewWithHttpOperationResponse
+  name: getReviewWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает сведения для проверки, переданный идентификатор.
+  syntax:
+    content: 'function getReviewWithHttpOperationResponse(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Review>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames
+  name: getVideoFrames
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function getVideoFrames(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Frames>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames_1
+  name: getVideoFrames
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function getVideoFrames(teamName: string, reviewId: string, callback: ServiceCallback<Frames>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Frames>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Frames>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getVideoFrames_2
+  name: getVideoFrames
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function getVideoFrames(teamName: string, reviewId: string, options: function, callback: ServiceCallback<Frames>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-contentmoderator.Frames>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-contentmoderator.Frames>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.getVideoFramesWithHttpOperationResponse
+  name: getVideoFramesWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Обзоры создан будет отображаться для рецензентов в вашей команде. Как проверяющие выполняют проверки, результаты проверки будет выполнена на указанный CallBackEndpoint (т. е. HTTP POST).
+
+    <h3>Схемы обратного вызова </h3>
+
+    <h4>Пример CallBack завершения проверки</h4>
+
+    <p>
+
+    {<br/>
+
+    «ReviewId»: "<Review Id>«,<br/>
+
+    «ModifiedOn»: «2016-10-11T22:36:32.9934851Z»,<br/>
+
+    «Кем изменено»: "<Name of the Reviewer>«,<br/>
+
+    «CallBackType»: «Review»,<br/>
+
+    «ContentId»: "<The ContentId that was specified input>«,<br/>
+
+    «Метаданные»: {}<br/>
+
+    «adultscore»: «0.xxx»,<br/>
+
+    «»: «False»,<br/>
+
+    «racyscore»: «0.xxx»,<br/>
+
+    «r»: «True»<br/>
+
+    },<br/>
+
+    «ReviewerResultTags»: {}<br/>
+
+    «»: «False»,<br/>
+
+    «r»: «True»<br/>
+
+    }<br/>
+
+    }<br/>
+
+
+    </p>.
+  syntax:
+    content: 'function getVideoFramesWithHttpOperationResponse(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Frames>>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview
+  name: publishVideoReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Публикация видео проверку, чтобы сделать его доступным для просмотра.
+  syntax:
+    content: 'function publishVideoReview(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview_1
+  name: publishVideoReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Публикация видео проверку, чтобы сделать его доступным для просмотра.
+  syntax:
+    content: 'function publishVideoReview(teamName: string, reviewId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.publishVideoReview_2
+  name: publishVideoReview
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Публикация видео проверку, чтобы сделать его доступным для просмотра.
+  syntax:
+    content: 'function publishVideoReview(teamName: string, reviewId: string, options: function, callback: ServiceCallback<void>)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: ''
+    - id: reviewId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - function
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-cognitiveservices-contentmoderator
+- uid: azure-cognitiveservices-contentmoderator.Reviews.publishVideoReviewWithHttpOperationResponse
+  name: publishVideoReviewWithHttpOperationResponse
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Публикация видео проверку, чтобы сделать его доступным для просмотра.
+  syntax:
+    content: 'function publishVideoReviewWithHttpOperationResponse(teamName: string, reviewId: string, options?: function)'
+    parameters:
+    - id: teamName
+      type:
+      - string
+      description: >
+        Имя группы.
+    - id: reviewId
+      type:
+      - string
+      description: >
+        Идентификатор проверки.
+    - id: options
+      type:
+      - function
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-cognitiveservices-contentmoderator
+references:
+- uid: azure-cognitiveservices-contentmoderator.VideoFrameBodyItem[]
+  spec.typeScript:
+  - name: VideoFrameBodyItem
+    fullName: VideoFrameBodyItem
+    uid: azure-cognitiveservices-contentmoderator.VideoFrameBodyItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem[]
+  spec.typeScript:
+  - name: TranscriptModerationBodyItem
+    fullName: TranscriptModerationBodyItem
+    uid: azure-cognitiveservices-contentmoderator.TranscriptModerationBodyItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-cognitiveservices-contentmoderator.Content
+  spec.typeScript:
+  - name: Content
+    fullName: Content
+    uid: azure-cognitiveservices-contentmoderator.Content
+- uid: Promise<azure-cognitiveservices-contentmoderator.JobId>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: JobId
+    fullName: JobId
+    uid: azure-cognitiveservices-contentmoderator.JobId
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-contentmoderator.JobId>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: JobId
+    fullName: JobId
+    uid: azure-cognitiveservices-contentmoderator.JobId
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.JobId>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: JobId
+    fullName: JobId
+    uid: azure-cognitiveservices-contentmoderator.JobId
+  - name: '>>'
+    fullName: '>>'
+- uid: azure-cognitiveservices-contentmoderator.CreateReviewBodyItem[]
+  spec.typeScript:
+  - name: CreateReviewBodyItem
+    fullName: CreateReviewBodyItem
+    uid: azure-cognitiveservices-contentmoderator.CreateReviewBodyItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem[]
+  spec.typeScript:
+  - name: CreateVideoReviewsBodyItem
+    fullName: CreateVideoReviewsBodyItem
+    uid: azure-cognitiveservices-contentmoderator.CreateVideoReviewsBodyItem
+  - name: '[]'
+    fullName: '[]'
+- uid: Promise<azure-cognitiveservices-contentmoderator.Job>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Job
+    fullName: Job
+    uid: azure-cognitiveservices-contentmoderator.Job
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-contentmoderator.Job>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Job
+    fullName: Job
+    uid: azure-cognitiveservices-contentmoderator.Job
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Job>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Job
+    fullName: Job
+    uid: azure-cognitiveservices-contentmoderator.Job
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-cognitiveservices-contentmoderator.Review>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Review
+    fullName: Review
+    uid: azure-cognitiveservices-contentmoderator.Review
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-contentmoderator.Review>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Review
+    fullName: Review
+    uid: azure-cognitiveservices-contentmoderator.Review
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Review>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Review
+    fullName: Review
+    uid: azure-cognitiveservices-contentmoderator.Review
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-cognitiveservices-contentmoderator.Frames>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Frames
+    fullName: Frames
+    uid: azure-cognitiveservices-contentmoderator.Frames
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-cognitiveservices-contentmoderator.Frames>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: Frames
+    fullName: Frames
+    uid: azure-cognitiveservices-contentmoderator.Frames
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-contentmoderator.Frames>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: Frames
+    fullName: Frames
+    uid: azure-cognitiveservices-contentmoderator.Frames
+  - name: '>>'
+    fullName: '>>'

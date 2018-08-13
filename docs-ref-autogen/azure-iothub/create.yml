@@ -1,0 +1,39 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b153f4bffb05f3df1f8560dcf62917df2f9fec9d
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40075673"
+items:
+- uid: azure-iothub.create
+  name: create
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: Создает токен подписи общего доступа для проверки подлинности подключения к службе с помощью центра Интернета вещей Azure.
+  syntax:
+    content: 'function create(host: string, policy: string, key: string, expiry: string | number)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: Имя узла центра Интернета вещей Azure.
+    - id: policy
+      type:
+      - string
+      description: Имя политики для подключения к центру Интернета вещей Azure (обычно `ServiceConnect`, `iothubowner` и т.д. См. в разделе [управления доступом к центру Интернета вещей Azure](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security).
+    - id: key
+      type:
+      - string
+      description: Симметричный ключ, используемый для создания токенов подписи общего доступа.
+    - id: expiry
+      type:
+      - string | number
+      description: >
+        Время окончания срока действия для маркера, который будет создан.
+    return:
+      type:
+      - SharedAccessSignature
+  package: azure-iothub

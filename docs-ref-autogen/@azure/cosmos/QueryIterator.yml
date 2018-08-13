@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 47883452a0cbdb278f33d889b368dd1d9980f547
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40076500"
+items:
+- uid: '@azure/cosmos.QueryIterator'
+  name: QueryIterator
+  fullName: QueryIterator<T>
+  children:
+  - '@azure/cosmos.QueryIterator.current'
+  - '@azure/cosmos.QueryIterator.executeNext'
+  - '@azure/cosmos.QueryIterator.forEach'
+  - '@azure/cosmos.QueryIterator.hasMoreResults'
+  - '@azure/cosmos.QueryIterator.nextItem'
+  - '@azure/cosmos.QueryIterator.reset'
+  - '@azure/cosmos.QueryIterator.toArray'
+  langs:
+  - typeScript
+  type: class
+  summary: Представляет объект QueryIterator implmenetation веб-канал или ответ на запрос, позволяющий обхода и прохода ответ в службу базы данных Azure Cosmos DB.
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.current'
+  name: current
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Извлечь текущий элемент на QueryIterator.
+  syntax:
+    content: function current()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.executeNext'
+  name: executeNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение следующего пакета веб-канала и передать их в виде массива в функцию
+  syntax:
+    content: function executeNext()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.forEach'
+  name: forEach
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Выполните указанный функцию один раз в элемент feed.
+  syntax:
+    content: function forEach()
+    parameters: []
+    return:
+      type:
+      - AsyncIterable<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.hasMoreResults'
+  name: hasMoreResults
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: function hasMoreResults()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+  deprecated:
+    content: >-
+      Instead check if nextItem() or current() returns undefined.
+
+
+      Determine if there are still remaining resources to processs based on the value of the continuation token or the\
+
+      elements remaining on the current batch in the QueryIterator.
+- uid: '@azure/cosmos.QueryIterator.nextItem'
+  name: nextItem
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Выполните указанный функцию на следующий элемент в QueryIterator.
+  syntax:
+    content: function nextItem()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.reset'
+  name: reset
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Сброс QueryIterator в начало и очистить все ресурсы внутри него
+  syntax:
+    content: function reset()
+    parameters: []
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.toArray'
+  name: toArray
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить все элементы веб-канала и передать их в виде массива в функцию
+  syntax:
+    content: function toArray()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T[]>>
+  package: '@azure/cosmos'
+references:
+- uid: Promise<@azure/cosmos.Response<T>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T>>
+    fullName: <T>>
+- uid: AsyncIterable<@azure/cosmos.Response<T>>
+  spec.typeScript:
+  - name: AsyncIterable<
+    fullName: AsyncIterable<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T>>
+    fullName: <T>>
+- uid: Promise<@azure/cosmos.Response<T[]>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T[]>>
+    fullName: <T[]>>

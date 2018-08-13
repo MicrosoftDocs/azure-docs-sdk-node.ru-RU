@@ -1,0 +1,275 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7cb17321fac415a5f2a5a07d198cddac0ebcfde8
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40075772"
+items:
+- uid: azure-iothub.JobClient
+  name: JobClient
+  fullName: JobClient
+  children:
+  - azure-iothub.JobClient.cancelJob
+  - azure-iothub.JobClient.createQuery
+  - azure-iothub.JobClient.fromConnectionString
+  - azure-iothub.JobClient.fromSharedAccessSignature
+  - azure-iothub.JobClient.getJob
+  - azure-iothub.JobClient.JobCallback
+  - azure-iothub.JobClient.scheduleDeviceMethod
+  - azure-iothub.JobClient.scheduleTwinUpdate
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    Предоставляет методы для создания, обновления, отслеживать и отменить длительные задания в экземпляре центра Интернета вещей, а также существующие задания запроса.
+
+    API заданий в центре Интернета вещей Azure позволяет планировать вызовов прямого метода и обновления двойника на нескольких устройствах.
+
+    Пакет SDK пользователи должны создавать <xref:azure-iothub.JobClient> экземпляры с помощью методов фабрики <xref:azure-iothub.JobClient.fromConnectionString> и <xref:azure-iothub.JobClient.fromSharedAccessSignature>.
+  package: azure-iothub
+- uid: azure-iothub.JobClient.cancelJob
+  name: cancelJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Отменяет существующее задание.
+  syntax:
+    content: 'function cancelJob(jobId: string | number, done: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: Идентификатор существующего задания.
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: объект ошибки (может иметь значение null), объект задания и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
+  package: azure-iothub
+- uid: azure-iothub.JobClient.createQuery
+  name: createQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает запрос, который может использоваться для возврата страницы существующее задание, в зависимости от типа и состояния.
+  syntax:
+    content: 'function createQuery(jobType?: JobType, jobStatus?: JobStatus, pageSize?: number)'
+    parameters:
+    - id: jobType
+      type:
+      - azure-iothub.JobType
+      description: Тип, который должен использоваться для фильтрации результатов.
+      optional: true
+    - id: jobStatus
+      type:
+      - azure-iothub.JobStatus
+      description: Состояние, которое следует использовать для фильтрации результатов.
+      optional: true
+    - id: pageSize
+      type:
+      - number
+      description: >
+        Число элементов для возвращения на страницу.
+      optional: true
+    return:
+      type:
+      - azure-iothub.Query
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает объект JobClient в строке данного соединения.
+  syntax:
+    content: 'static function fromConnectionString(connectionString: string)'
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: >
+        Строка подключения, которая инкапсулирует соответствующий (считывают или записывают) разрешения для реестра.
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает объект JobClient из заданного подписанные URL-адреса.
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: >
+        Подписанные URL-адреса, инкапсулирующий соответствующий (считывают или записывают) разрешения для реестра.
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.getJob
+  name: getJob
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запрашивает информацию о существующем задании.
+  syntax:
+    content: 'function getJob(jobId: string | number, done: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: Идентификатор существующего задания.
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: объект ошибки (может иметь значение null), объект задания и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
+  package: azure-iothub
+- uid: azure-iothub.JobClient.JobCallback
+  name: JobCallback
+  fullName: JobCallback
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n"
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod
+  name: scheduleDeviceMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Планирует задание, которое будет выполняться метода устройства в наборе устройств.
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: Уникальный идентификатор, который должен использоваться для этого задания.
+    - id: queryCondition
+      type:
+      - string
+      description: SQL-запрос предложение WHERE, используемое для вычисления список устройств, на которых должно запускаться данное задание.
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: >-
+        Объект, описывающий метод и должен иметь следующие свойства:-имя_метода имя метода, который должен вызываться.
+
+        -[необязательно] полезные данные полезной нагрузки, чтобы использовать для вызова метода.
+
+        -responseTimeoutInSeconds [optional] количество секунд, центр Интернета вещей должен ожидать устройства
+    - id: jobStartTime
+      type:
+      - Date | azure-iothub.JobClient.JobCallback
+      description: Время, по которому должно запуститься задание
+      optional: true
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number | azure-iothub.JobClient.JobCallback
+      description: Задано максимальное время для этого задания для выполнения в секундах.
+      optional: true
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: объект ошибки (может иметь значение null), объект задания и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate
+  name: scheduleTwinUpdate
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: Уникальный идентификатор, который должен использоваться для этого задания.
+    - id: queryCondition
+      type:
+      - string
+      description: SQL-запрос предложение WHERE, используемое для вычисления список устройств, на которых должно запускаться данное задание.
+    - id: patch
+      type:
+      - any
+      description: Исправление двойника, должны быть применены к двойников.
+    - id: jobStartTime
+      type:
+      - Date | azure-iothub.JobClient.JobCallback
+      description: Время, по которому должно запуститься задание
+      optional: true
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number | azure-iothub.JobClient.JobCallback
+      description: Задано максимальное время для этого задания для выполнения в секундах.
+      optional: true
+    - id: done
+      type:
+      - azure-iothub.JobClient.JobCallback
+      description: >
+        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: объект ошибки (может иметь значение null), объект задания и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
+      optional: true
+  package: azure-iothub
+references:
+- uid: azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: azure-iothub.JobType
+  spec.typeScript:
+  - name: JobType
+    fullName: JobType
+    uid: azure-iothub.JobType
+- uid: azure-iothub.JobStatus
+  spec.typeScript:
+  - name: JobStatus
+    fullName: JobStatus
+    uid: azure-iothub.JobStatus
+- uid: azure-iothub.Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-iothub.Query
+- uid: azure-iothub.DeviceMethodParams
+  spec.typeScript:
+  - name: DeviceMethodParams
+    fullName: DeviceMethodParams
+    uid: azure-iothub.DeviceMethodParams
+- uid: Date | azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: 'Date | '
+    fullName: 'Date | '
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: number | azure-iothub.JobClient.JobCallback
+  spec.typeScript:
+  - name: 'number | '
+    fullName: 'number | '
+  - name: JobCallback
+    fullName: JobCallback
+    uid: azure-iothub.JobClient.JobCallback
+- uid: azure-iothub.JobClient
+  spec.typeScript:
+  - name: JobClient
+    fullName: JobClient
+    uid: azure-iothub.JobClient

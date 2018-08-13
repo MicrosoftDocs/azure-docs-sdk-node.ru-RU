@@ -1,0 +1,270 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9c3056ca55b3b3542975f0315500c5004669a889
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40075716"
+items:
+- uid: azure-iot-common.Message
+  name: Message
+  fullName: Message
+  children:
+  - azure-iot-common.Message.ack
+  - azure-iot-common.Message.BufferConvertible
+  - azure-iot-common.Message.contentEncoding
+  - azure-iot-common.Message.contentType
+  - azure-iot-common.Message.correlationId
+  - azure-iot-common.Message.data
+  - azure-iot-common.Message.expiryTimeUtc
+  - azure-iot-common.Message.getBytes
+  - azure-iot-common.Message.getData
+  - azure-iot-common.Message.isBufferConvertible
+  - azure-iot-common.Message.lockToken
+  - azure-iot-common.Message.constructor
+  - azure-iot-common.Message.messageId
+  - azure-iot-common.Message.properties
+  - azure-iot-common.Message.to
+  - azure-iot-common.Message.userId
+  langs:
+  - typeScript
+  type: class
+  summary: <xref:azure-iot-common.Message> Объект используется для получения данных телеметрии (device-to-cloud) и команды (cloud-to-device) асинхронный обмен сообщениями между устройством и службой центра Интернета вещей. Она независима от транспорта, это означает, что он работает так же, как по AMQP, MQTT и HTTP.
+  package: azure-iot-common
+- uid: azure-iot-common.Message.ack
+  name: ack
+  fullName: ack
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Тип отзыва, запрошенный (в случае команды облака на устройство)
+  syntax:
+    content: 'ack: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.BufferConvertible
+  name: BufferConvertible
+  fullName: BufferConvertible
+  children: []
+  langs:
+  - typeScript
+  type: class
+  summary: "\n«BufferConvertible» является псевдонимом типа. Он ссылается на буфер, строки, любой [] и ArrayBuffer."
+  package: azure-iot-common
+- uid: azure-iot-common.Message.contentEncoding
+  name: contentEncoding
+  fullName: contentEncoding
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Кодировка содержимого текста сообщения. может быть «utf-8", «utf-16" или «utf-32".
+  syntax:
+    content: 'contentEncoding: undefined | "utf-8" | "utf-16" | "utf-32"'
+    return:
+      type:
+      - undefined | "utf-8" | "utf-16" | "utf-32"
+  package: azure-iot-common
+- uid: azure-iot-common.Message.contentType
+  name: contentType
+  fullName: contentType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Свойства типа содержимого, используемого для маршрутов с помощью тело сообщения. Должно быть «application/json».
+  syntax:
+    content: 'contentType: undefined | "application/json"'
+    return:
+      type:
+      - undefined | "application/json"
+  package: azure-iot-common
+- uid: azure-iot-common.Message.correlationId
+  name: correlationId
+  fullName: correlationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Используемый в ответах на сообщение и отзывах
+  syntax:
+    content: 'correlationId: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.data
+  name: data
+  fullName: data
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'data: any'
+    return:
+      type:
+      - any
+  package: azure-iot-common
+- uid: azure-iot-common.Message.expiryTimeUtc
+  name: expiryTimeUtc
+  fullName: expiryTimeUtc
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Время окончания срока действия в формате UTC, интерпретируется концентратора сообщений C2D. Учитывается в других случаях.
+  syntax:
+    content: 'expiryTimeUtc: any'
+    return:
+      type:
+      - any
+  package: azure-iot-common
+- uid: azure-iot-common.Message.getBytes
+  name: getBytes
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает данные, передаваемые в конструктор в качестве [буфера](https://nodejs.org/api/globals.html#globals_class_buffer)
+  syntax:
+    content: function getBytes()
+    parameters: []
+    return:
+      type:
+      - Buffer
+  package: azure-iot-common
+- uid: azure-iot-common.Message.getData
+  name: getData
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает содержимое (тела) <xref:azure-iot-common.Message>.
+  syntax:
+    content: function getData()
+    parameters: []
+    return:
+      type:
+      - azure-iot-common.Message.BufferConvertible
+  package: azure-iot-common
+- uid: azure-iot-common.Message.isBufferConvertible
+  name: isBufferConvertible
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает значение true, если заданный объект имеет тип <xref:Message.BufferConvertible>.  Объекты типа <xref:Message.BufferConvertible> могут быть переданы в <xref:Message> конструктор.
+  syntax:
+    content: 'static function isBufferConvertible(obj: any)'
+    parameters:
+    - id: obj
+      type:
+      - any
+      description: >
+        проверяемый экземпляр объекта
+    return:
+      type:
+      - boolean
+  package: azure-iot-common
+- uid: azure-iot-common.Message.lockToken
+  name: lockToken
+  fullName: lockToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Используется для отмены, отклонить или принять сообщение
+  syntax:
+    content: 'lockToken: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.constructor
+  name: Message
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Создает новый <xref:azure-iot-common.Message> объекта
+  syntax:
+    content: 'new Message(data: Message.BufferConvertible)'
+    parameters:
+    - id: data
+      type:
+      - azure-iot-common.Message.BufferConvertible
+      description: >
+        Узел [буфера](https://nodejs.org/api/globals.html#globals_class_buffer) объекта, или что-нибудь, который может быть передан в [буфера](https://nodejs.org/api/globals.html#globals_class_buffer) конструктор для создания [буфера](https://nodejs.org/api/globals.html#globals_class_buffer) из.
+  package: azure-iot-common
+- uid: azure-iot-common.Message.messageId
+  name: messageId
+  fullName: messageId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "Используется для корреляции двустороннего обмена данными. Формат: Строка с учетом регистра (длиной до 128 знаков long) буквенно-цифровые знаки ASCII 7-разрядных и следующие специальные символы: <br/>`- : . + % _ # * ? ! ( ) , = @ ; $ '`."
+  syntax:
+    content: 'messageId: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Карта, содержащая строковые ключи и значения для хранения пользовательские свойства сообщения.
+  syntax:
+    content: 'properties: Properties'
+    return:
+      type:
+      - azure-iot-common.Properties
+  package: azure-iot-common
+- uid: azure-iot-common.Message.to
+  name: to
+  fullName: to
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Назначение сообщения.
+  syntax:
+    content: 'to: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+- uid: azure-iot-common.Message.userId
+  name: userId
+  fullName: userId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Используется для указания сущностей, создание сообщения
+  syntax:
+    content: 'userId: string'
+    return:
+      type:
+      - string
+  package: azure-iot-common
+references:
+- uid: azure-iot-common.Message.BufferConvertible
+  spec.typeScript:
+  - name: BufferConvertible
+    fullName: BufferConvertible
+    uid: azure-iot-common.Message.BufferConvertible
+- uid: azure-iot-common.Properties
+  spec.typeScript:
+  - name: Properties
+    fullName: Properties
+    uid: azure-iot-common.Properties

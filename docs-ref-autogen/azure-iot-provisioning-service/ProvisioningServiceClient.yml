@@ -1,0 +1,410 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 9ad29b980facd9e0591910722aaf2f5dea600cca
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40075660"
+items:
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient
+  name: ProvisioningServiceClient
+  fullName: ProvisioningServiceClient
+  children:
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStateQuery
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createIndividualEnrollmentQuery
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateEnrollmentGroup
+  - azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
+  - azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationState
+  - azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
+  - azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
+  - azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
+  - azure-iot-provisioning-service.ProvisioningServiceClient.constructor
+  - azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupDeviceRegistrationStateQuery
+  name: createEnrollmentGroupDeviceRegistrationStateQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает запрос, который может использоваться для возврата для определенных EnrollmentGroup, страницы существующих состоянию регистрации устройства.
+  syntax:
+    content: 'function createEnrollmentGroupDeviceRegistrationStateQuery(querySpecification: QuerySpecification, enrollmentGroupId: string, pageSize?: number)'
+    parameters:
+    - id: querySpecification
+      type:
+      - azure-iot-provisioning-service.QuerySpecification
+      description: Спецификация запроса.
+    - id: enrollmentGroupId
+      type:
+      - string
+      description: Идентификатор EnrollmentGroup, который предоставляет область для запроса.
+    - id: pageSize
+      type:
+      - number
+      description: >
+        Максимальное количество элементов для возвращения на страницу.
+      optional: true
+    return:
+      type:
+      - azure-iot-provisioning-service.Query
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createEnrollmentGroupQuery
+  name: createEnrollmentGroupQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает запрос, который может использоваться для возврата страницы из имеющихся групп регистраций.
+  syntax:
+    content: 'function createEnrollmentGroupQuery(querySpecification: QuerySpecification, pageSize?: number)'
+    parameters:
+    - id: querySpecification
+      type:
+      - azure-iot-provisioning-service.QuerySpecification
+      description: Спецификация запроса.
+    - id: pageSize
+      type:
+      - number
+      description: >
+        Максимальное количество элементов для возвращения на страницу.
+      optional: true
+    return:
+      type:
+      - azure-iot-provisioning-service.Query
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createIndividualEnrollmentQuery
+  name: createIndividualEnrollmentQuery
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает запрос, который может использоваться для возврата страницы существующих регистраций.
+  syntax:
+    content: 'function createIndividualEnrollmentQuery(querySpecification: QuerySpecification, pageSize?: number)'
+    parameters:
+    - id: querySpecification
+      type:
+      - azure-iot-provisioning-service.QuerySpecification
+      description: Спецификация запроса.
+    - id: pageSize
+      type:
+      - number
+      description: >
+        Максимальное количество элементов для возвращения на страницу.
+      optional: true
+    return:
+      type:
+      - azure-iot-provisioning-service.Query
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateEnrollmentGroup
+  name: createOrUpdateEnrollmentGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создать или обновить группу регистрации устройств.
+  syntax:
+    content: 'function createOrUpdateEnrollmentGroup(enrollmentGroup: EnrollmentGroup, callback?: (err: Error, enrollmentGroup?: EnrollmentGroup, response?: any) => void)'
+    parameters:
+    - id: enrollmentGroup
+      type:
+      - azure-iot-provisioning-service.EnrollmentGroup
+      description: В группу регистрации устройств.
+    - id: callback
+      type:
+      - '(err: Error, enrollmentGroup?: EnrollmentGroup, response?: any) => void'
+      description: >
+        Вызывается после завершения операции.
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.createOrUpdateIndividualEnrollment
+  name: createOrUpdateIndividualEnrollment
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создать или обновить запись регистрации устройства.
+  syntax:
+    content: 'function createOrUpdateIndividualEnrollment(enrollment: IndividualEnrollment, callback?: (err: Error, enrollment?: IndividualEnrollment, response?: any) => void)'
+    parameters:
+    - id: enrollment
+      type:
+      - azure-iot-provisioning-service.IndividualEnrollment
+      description: Запись регистрации устройства.
+    - id: callback
+      type:
+      - '(err: Error, enrollment?: IndividualEnrollment, response?: any) => void'
+      description: >
+        Вызывается после завершения операции.
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.deleteDeviceRegistrationState
+  name: deleteDeviceRegistrationState
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удалите состояние регистрации устройства.
+  syntax:
+    content: 'function deleteDeviceRegistrationState(idOrRegistrationState: string | DeviceRegistrationState, etagOrCallback?: string | DeleteCallback, deleteCallback?: DeleteCallback)'
+    parameters:
+    - id: idOrRegistrationState
+      type:
+      - string | azure-iot-provisioning-service.DeviceRegistrationState
+      description: Строка, содержащая идентификатор регистрации или фактический DeviceRegistrationState.
+    - id: etagOrCallback
+      type:
+      - string | azure-iot-provisioning-service.DeleteCallback
+      description: В случае первого аргумента, в виде строки, это может быть etag (или обратный вызов).
+      optional: true
+    - id: deleteCallback
+      type:
+      - azure-iot-provisioning-service.DeleteCallback
+      description: >
+        Вызывается после завершения операции.
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.deleteEnrollmentGroup
+  name: deleteEnrollmentGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удалите группу регистрации устройств.
+  syntax:
+    content: 'function deleteEnrollmentGroup(enrollmentGroupOrId: string | EnrollmentGroup, etagOrCallback?: string | DeleteCallback, deleteCallback?: DeleteCallback)'
+    parameters:
+    - id: enrollmentGroupOrId
+      type:
+      - string | azure-iot-provisioning-service.EnrollmentGroup
+      description: EnrollmentGroup объект или строка, содержащая регистрации идентификатор группы.
+    - id: etagOrCallback
+      type:
+      - string | azure-iot-provisioning-service.DeleteCallback
+      description: В случае первого аргумента, в виде строки, это может быть etag (или обратный вызов).
+      optional: true
+    - id: deleteCallback
+      type:
+      - azure-iot-provisioning-service.DeleteCallback
+      description: >
+        Вызывается после завершения операции.
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.deleteIndividualEnrollment
+  name: deleteIndividualEnrollment
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удалите запись регистрации устройства.
+  syntax:
+    content: 'function deleteIndividualEnrollment(enrollmentOrId: string | IndividualEnrollment, etagOrCallback?: string | DeleteCallback, deleteCallback?: DeleteCallback)'
+    parameters:
+    - id: enrollmentOrId
+      type:
+      - string | azure-iot-provisioning-service.IndividualEnrollment
+      description: Объект IndividualEnrollment или строка, содержащая идентификатор регистрации.
+    - id: etagOrCallback
+      type:
+      - string | azure-iot-provisioning-service.DeleteCallback
+      description: В случае первого аргумента, в виде строки, это может быть etag (или обратный вызов).
+      optional: true
+    - id: deleteCallback
+      type:
+      - azure-iot-provisioning-service.DeleteCallback
+      description: >
+        Вызывается после завершения операции.
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает объект ProvisioningServiceClient в строке данного соединения, с помощью транспорта по умолчанию ([Http](xref:azure-iothub.Http)).
+  syntax:
+    content: 'static function fromConnectionString(value: string)'
+    parameters:
+    - id: value
+      type:
+      - string
+      description: Строка подключения, которая инкапсулирует соответствующий (считывают или записывают) ProvisioningServiceClient разрешения.
+    return:
+      type:
+      - azure-iot-provisioning-service.ProvisioningServiceClient
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
+  name: getDeviceRegistrationState
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает состояние регистрации устройства.
+  syntax:
+    content: 'function getDeviceRegistrationState(id: string, callback: (err: Error, registrationState?: DeviceRegistrationState, response?: any) => void)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: Идентификатор регистрации.
+    - id: callback
+      type:
+      - '(err: Error, registrationState?: DeviceRegistrationState, response?: any) => void'
+      description: >
+        Вызывается после завершения операции.
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
+  name: getEnrollmentGroup
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получите группу регистрации устройств.
+  syntax:
+    content: 'function getEnrollmentGroup(id: string, getCallback: (err: Error, enrollmentGroup: EnrollmentGroup, response?: any) => void)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: Идентификатор группы IndividualEnrollment.
+    - id: getCallback
+      type:
+      - '(err: Error, enrollmentGroup: EnrollmentGroup, response?: any) => void'
+      description: >
+        Вызывается после завершения операции.
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
+  name: getIndividualEnrollment
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получите запись регистрации устройства.
+  syntax:
+    content: 'function getIndividualEnrollment(id: string, getCallback: (err: Error, enrollmentRecord?: IndividualEnrollment, response?: any) => void)'
+    parameters:
+    - id: id
+      type:
+      - string
+      description: Идентификатор регистрации.
+    - id: getCallback
+      type:
+      - '(err: Error, enrollmentRecord?: IndividualEnrollment, response?: any) => void'
+      description: >
+        Вызывается после завершения операции.
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.constructor
+  name: ProvisioningServiceClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new ProvisioningServiceClient(config: TransportConfig, restApiClient?: RestApiClient)'
+    parameters:
+    - id: config
+      type:
+      - TransportConfig
+      description: ''
+    - id: restApiClient
+      type:
+      - RestApiClient
+      description: ''
+      optional: true
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
+  name: runBulkEnrollmentOperation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запускает число операций CRUD с массивом записей регистрации.
+  syntax:
+    content: 'function runBulkEnrollmentOperation(bulkEnrollmentOperation: BulkEnrollmentOperation, callback?: (err: Error, bulkEnrollmentOperationResult?: BulkEnrollmentOperationResult, response?: any) => void)'
+    parameters:
+    - id: bulkEnrollmentOperation
+      type:
+      - azure-iot-provisioning-service.BulkEnrollmentOperation
+      description: Объект, задающий одного вида операций CRUD в массиве объектов IndividualEnrollment, которые также являются частью объекта.
+    - id: callback
+      type:
+      - '(err: Error, bulkEnrollmentOperationResult?: BulkEnrollmentOperationResult, response?: any) => void'
+      description: >
+        Вызывается после завершения операции.
+      optional: true
+  package: azure-iot-provisioning-service
+references:
+- uid: azure-iot-provisioning-service.QuerySpecification
+  spec.typeScript:
+  - name: QuerySpecification
+    fullName: QuerySpecification
+    uid: azure-iot-provisioning-service.QuerySpecification
+- uid: azure-iot-provisioning-service.Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-iot-provisioning-service.Query
+- uid: azure-iot-provisioning-service.EnrollmentGroup
+  spec.typeScript:
+  - name: EnrollmentGroup
+    fullName: EnrollmentGroup
+    uid: azure-iot-provisioning-service.EnrollmentGroup
+- uid: azure-iot-provisioning-service.IndividualEnrollment
+  spec.typeScript:
+  - name: IndividualEnrollment
+    fullName: IndividualEnrollment
+    uid: azure-iot-provisioning-service.IndividualEnrollment
+- uid: string | azure-iot-provisioning-service.DeviceRegistrationState
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: DeviceRegistrationState
+    fullName: DeviceRegistrationState
+    uid: azure-iot-provisioning-service.DeviceRegistrationState
+- uid: string | azure-iot-provisioning-service.DeleteCallback
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: DeleteCallback
+    fullName: DeleteCallback
+    uid: azure-iot-provisioning-service.DeleteCallback
+- uid: azure-iot-provisioning-service.DeleteCallback
+  spec.typeScript:
+  - name: DeleteCallback
+    fullName: DeleteCallback
+    uid: azure-iot-provisioning-service.DeleteCallback
+- uid: string | azure-iot-provisioning-service.EnrollmentGroup
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: EnrollmentGroup
+    fullName: EnrollmentGroup
+    uid: azure-iot-provisioning-service.EnrollmentGroup
+- uid: string | azure-iot-provisioning-service.IndividualEnrollment
+  spec.typeScript:
+  - name: 'string | '
+    fullName: 'string | '
+  - name: IndividualEnrollment
+    fullName: IndividualEnrollment
+    uid: azure-iot-provisioning-service.IndividualEnrollment
+- uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+  spec.typeScript:
+  - name: BulkEnrollmentOperation
+    fullName: BulkEnrollmentOperation
+    uid: azure-iot-provisioning-service.BulkEnrollmentOperation
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient
+  spec.typeScript:
+  - name: ProvisioningServiceClient
+    fullName: ProvisioningServiceClient
+    uid: azure-iot-provisioning-service.ProvisioningServiceClient

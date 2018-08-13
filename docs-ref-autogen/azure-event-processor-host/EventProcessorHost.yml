@@ -1,0 +1,366 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 903c391913659600a4f98ef1b3541f52745d7dfe
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40076560"
+items:
+- uid: azure-event-processor-host.EventProcessorHost
+  name: EventProcessorHost
+  fullName: EventProcessorHost
+  children:
+  - azure-event-processor-host.EventProcessorHost.autoCheckpoint
+  - azure-event-processor-host.EventProcessorHost.closed
+  - azure-event-processor-host.EventProcessorHost.consumerGroup
+  - azure-event-processor-host.EventProcessorHost.createFromAadTokenCredentials
+  - azure-event-processor-host.EventProcessorHost.createFromConnectionString
+  - azure-event-processor-host.EventProcessorHost.createHostName
+  - azure-event-processor-host.EventProcessorHost.error
+  - azure-event-processor-host.EventProcessorHost.constructor
+  - azure-event-processor-host.EventProcessorHost.getHubRuntimeInformation
+  - azure-event-processor-host.EventProcessorHost.getPartitionIds
+  - azure-event-processor-host.EventProcessorHost.getPartitionInformation
+  - azure-event-processor-host.EventProcessorHost.hostName
+  - azure-event-processor-host.EventProcessorHost.message
+  - azure-event-processor-host.EventProcessorHost.opened
+  - azure-event-processor-host.EventProcessorHost.start
+  - azure-event-processor-host.EventProcessorHost.stop
+  langs:
+  - typeScript
+  type: class
+  summary: Описывает узел обработчика событий для обработки событий из концентратора событий.
+  extends:
+    name: EventEmitter
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.autoCheckpoint
+  name: autoCheckpoint
+  fullName: autoCheckpoint
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'autoCheckpoint: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.closed
+  name: closed
+  fullName: closed
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Закрыто: Запуск каждый раз, когда секции теряет аренды и приходится отказаться от получения, или в том случае, когда основное приложение завершает работу. Прослушиватель событий передается PartitionContext и причину закрытия.'
+  syntax:
+    content: 'static closed: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.consumerGroup
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Предоставляет потребителю имя группы для узла обработчика событий.
+  syntax:
+    content: 'consumerGroup: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createFromAadTokenCredentials
+  name: createFromAadTokenCredentials
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает новый узел для обработки событий из концентратора событий.
+  syntax:
+    content: 'static function createFromAadTokenCredentials(hostName: string, storageConnectionString: string, namespace: string, eventHubPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: EventProcessorOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        Имя узла обработчика. ДОЛЖНО БЫТЬ УНИКАЛЬНЫМ.
+
+        Настоятельно рекомендуется, включая идентификатор Guid или префикс с идентификатором guid, чтобы обеспечить его уникальность. Можно использовать `EventProcessorHost.createHostName("your-prefix")`; Значение по умолчанию — `js-host-${uuid()}`.
+    - id: storageConnectionString
+      type:
+      - string
+      description: Строка подключения к учетной записи хранилища Azure, используемой для аренды и создание контрольных точек. Пример DefaultEndpointsProtocol = https; AccountName = < имя учетной записи >; AccountKey = < ключ учетной записи >; EndpointSuffix=core.windows.net
+    - id: namespace
+      type:
+      - string
+      description: >-
+        Полное доменное имя для концентраторов событий.
+
+        Пример: «{your-sb-namespace}. servicebus.windows .net»
+    - id: eventHubPath
+      type:
+      - string
+      description: Имя концентратора событий.
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: 'Учетные данные маркера AAD. Он может иметь одно из следующих: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.'
+    - id: options
+      type:
+      - azure-event-processor-host.EventProcessorOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-processor-host.EventProcessorHost
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createFromConnectionString
+  name: createFromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает новый узел для обработки событий из концентратора событий.
+  syntax:
+    content: 'static function createFromConnectionString(hostName: string, storageConnectionString: string, eventHubConnectionString: string, options?: ConnectionStringBasedOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        Имя узла обработчика. ДОЛЖНО БЫТЬ УНИКАЛЬНЫМ.
+
+        Настоятельно рекомендуется, включая идентификатор Guid или префикс с идентификатором guid, чтобы обеспечить его уникальность. Можно использовать `EventProcessorHost.createHostName("your-prefix")`; Значение по умолчанию — `js-host-${uuid()}`.
+    - id: storageConnectionString
+      type:
+      - string
+      description: Строка подключения к учетной записи хранилища Azure, используемой для аренды и создание контрольных точек. Пример DefaultEndpointsProtocol = https; AccountName = < имя учетной записи >; AccountKey = < ключ учетной записи >; EndpointSuffix=core.windows.net
+    - id: eventHubConnectionString
+      type:
+      - string
+      description: >-
+        Строка подключения для концентратора событий для получения от.
+
+        Пример: "Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-name; SharedAccessKey my-SA-key = "
+    - id: options
+      type:
+      - azure-event-processor-host.ConnectionStringBasedOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-processor-host.EventProcessorHost
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.createHostName
+  name: createHostName
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удобный метод для генерации уникальное имя узла.
+  syntax:
+    content: 'static function createHostName(prefix?: string)'
+    parameters:
+    - id: prefix
+      type:
+      - string
+      description: ''
+      optional: true
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.error
+  name: error
+  fullName: error
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Ошибка: Активируется при возникновении ошибки в заданным получателем. EventHubsError или универсальный объект ошибки передается на прослушиватель событий.'
+  syntax:
+    content: 'static error: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.constructor
+  name: EventProcessorHost
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Создает новый узел для обработки событий из концентратора событий.
+  syntax:
+    content: 'new EventProcessorHost(hostName: string, storageConnectionString: string, eventHubClient: EventHubClient, options?: EventProcessorOptions)'
+    parameters:
+    - id: hostName
+      type:
+      - string
+      description: >-
+        Имя узла обработчика. ДОЛЖНО БЫТЬ УНИКАЛЬНЫМ.
+
+        Настоятельно рекомендуется, включая идентификатор Guid или префикс с идентификатором guid, чтобы обеспечить его уникальность. Можно использовать `EventProcessorHost.createHostName("your-prefix")`; Значение по умолчанию — `js-host-${uuid()}`.
+    - id: storageConnectionString
+      type:
+      - string
+      description: Строка подключения к учетной записи хранилища Azure, используемой для аренды и создание контрольных точек. Пример DefaultEndpointsProtocol = https; AccountName = < имя учетной записи >; AccountKey = < ключ учетной записи >; EndpointSuffix=core.windows.net
+    - id: eventHubClient
+      type:
+      - EventHubClient
+      description: Клиент концентратора событий.
+    - id: options
+      type:
+      - azure-event-processor-host.EventProcessorOptions
+      description: ''
+      optional: true
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getHubRuntimeInformation
+  name: getHubRuntimeInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Предоставляет сведения о среде выполнения концентратора событий.
+  syntax:
+    content: function getHubRuntimeInformation()
+    parameters: []
+    return:
+      type:
+      - Promise<EventHubRuntimeInformation>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getPartitionIds
+  name: getPartitionIds
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Предоставляет целый ряд partitionIds.
+  syntax:
+    content: function getPartitionIds()
+    parameters: []
+    return:
+      type:
+      - Promise<string[]>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.getPartitionInformation
+  name: getPartitionInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Сведения об указанной секции.
+  syntax:
+    content: 'function getPartitionInformation(partitionId: string | number)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: >
+        Идентификатор секции, для какой раздел сведения не требуются.
+    return:
+      type:
+      - Promise<EventHubPartitionRuntimeInformation>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.hostName
+  name: hostName
+  fullName: hostName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Предоставляет имя узла для узла обработчика событий.
+  syntax:
+    content: 'hostName: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.message
+  name: message
+  fullName: message
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Сообщение об ошибке: Запускается каждый раз, когда сообщение поступает в данном разделе. PartitionContext и EventData передается прослушиватель событий.'
+  syntax:
+    content: 'static message: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.opened
+  name: opened
+  fullName: opened
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Открыть: Запускается, когда в секции получает аренду. PartitionContext передается на прослушиватель событий.'
+  syntax:
+    content: 'static opened: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.start
+  name: start
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запускает узел обработчика событий, получение списка секций, (при необходимости) их фильтрацию и попытка получить аренду на наборе (отфильтрованное). Каждая аренда успешно будет получить сведения из большого двоичного объекта и начните приемником в момент, в котором она остановилась ранее.
+  syntax:
+    content: 'function start(options?: StartEPHOptions)'
+    parameters:
+    - id: options
+      type:
+      - azure-event-processor-host.StartEPHOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHost.stop
+  name: stop
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Останавливает EventProcessorHost от обработки сообщений.
+  syntax:
+    content: function stop()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.EventProcessorOptions
+  spec.typeScript:
+  - name: EventProcessorOptions
+    fullName: EventProcessorOptions
+    uid: azure-event-processor-host.EventProcessorOptions
+- uid: azure-event-processor-host.StartEPHOptions
+  spec.typeScript:
+  - name: StartEPHOptions
+    fullName: StartEPHOptions
+    uid: azure-event-processor-host.StartEPHOptions
+- uid: azure-event-processor-host.EventProcessorHost
+  spec.typeScript:
+  - name: EventProcessorHost
+    fullName: EventProcessorHost
+    uid: azure-event-processor-host.EventProcessorHost
+- uid: azure-event-processor-host.ConnectionStringBasedOptions
+  spec.typeScript:
+  - name: ConnectionStringBasedOptions
+    fullName: ConnectionStringBasedOptions
+    uid: azure-event-processor-host.ConnectionStringBasedOptions
