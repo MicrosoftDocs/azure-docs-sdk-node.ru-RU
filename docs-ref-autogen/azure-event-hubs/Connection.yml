@@ -1,0 +1,307 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 685c62758b7f26967fac57e034b0ab66612ea2d9
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074976"
+items:
+- uid: azure-event-hubs.Connection
+  name: Connection
+  fullName: Connection
+  children:
+  - azure-event-hubs.Connection.close
+  - azure-event-hubs.Connection.constructor
+  - azure-event-hubs.Connection.createReceiver
+  - azure-event-hubs.Connection.createRequestResponseLink
+  - azure-event-hubs.Connection.createSender
+  - azure-event-hubs.Connection.createSession
+  - azure-event-hubs.Connection.id
+  - azure-event-hubs.Connection.isOpen
+  - azure-event-hubs.Connection.open
+  - azure-event-hubs.Connection.options
+  - azure-event-hubs.Connection.registerHandler
+  - azure-event-hubs.Connection.removeHandler
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cad6c-101">Закрывает подключение amqp.</span><span class="sxs-lookup"><span data-stu-id="cad6c-101">Closes the amqp connection.</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.constructor
+  name: Connection
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new Connection(options?: ConnectionOptions)'
+    parameters:
+    - id: options
+      type:
+      - ConnectionOptions
+      description: ''
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.createReceiver
+  name: createReceiver
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cad6c-102">Создает ссылку amqp получателя.</span><span class="sxs-lookup"><span data-stu-id="cad6c-102">Creates an amqp receiver link.</span></span> <span data-ttu-id="cad6c-103">Он использует предоставленный сеанс или создает новую.</span><span class="sxs-lookup"><span data-stu-id="cad6c-103">It either uses the provided session or creates a new one.</span></span>
+  syntax:
+    content: 'function createReceiver(options?: ReceiverOptionsWithSession)'
+    parameters:
+    - id: options
+      type:
+      - azure-event-hubs.ReceiverOptionsWithSession
+      description: <span data-ttu-id="cad6c-104">Необязательные параметры, чтобы создать связь приемника.</span><span class="sxs-lookup"><span data-stu-id="cad6c-104">Optional parameters to create a receiver link.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-hubs.Receiver>
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.createRequestResponseLink
+  name: createRequestResponseLink
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="cad6c-105">Создает ссылку amqp отправителя и получателя.</span><span class="sxs-lookup"><span data-stu-id="cad6c-105">Creates an amqp sender-receiver link.</span></span> <span data-ttu-id="cad6c-106">Он использует предоставленный сеанс или создает новую.</span><span class="sxs-lookup"><span data-stu-id="cad6c-106">It either uses the provided session or creates a new one.</span></span>
+
+    <span data-ttu-id="cad6c-107">Этот метод создает ссылку отправитель получатель в том же сеансе.</span><span class="sxs-lookup"><span data-stu-id="cad6c-107">This method creates a sender-receiver link on the same session.</span></span> <span data-ttu-id="cad6c-108">Это полезно для операций управления стиля, где может потребоваться отправка запроса и оператора await для ответа.</span><span class="sxs-lookup"><span data-stu-id="cad6c-108">It is useful for management style operations where one may want to send a request and await for response.</span></span>
+  syntax:
+    content: 'function createRequestResponseLink(senderOptions: SenderOptions, receiverOptions: ReceiverOptions, providedSession?: Session)'
+    parameters:
+    - id: senderOptions
+      type:
+      - azure-event-hubs.SenderOptions
+      description: <span data-ttu-id="cad6c-109">Параметры, чтобы создать отправителя.</span><span class="sxs-lookup"><span data-stu-id="cad6c-109">Parameters to create a sender.</span></span>
+    - id: receiverOptions
+      type:
+      - azure-event-hubs.ReceiverOptions
+      description: <span data-ttu-id="cad6c-110">Параметры, чтобы создать получатель.</span><span class="sxs-lookup"><span data-stu-id="cad6c-110">Parameters to create a receiver.</span></span>
+    - id: providedSession
+      type:
+      - azure-event-hubs.Session
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-hubs.ReqResLink>
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.createSender
+  name: createSender
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cad6c-111">Создает ссылку amqp отправителя.</span><span class="sxs-lookup"><span data-stu-id="cad6c-111">Creates an amqp sender link.</span></span> <span data-ttu-id="cad6c-112">Он использует предоставленный сеанс или создает новую.</span><span class="sxs-lookup"><span data-stu-id="cad6c-112">It either uses the provided session or creates a new one.</span></span>
+  syntax:
+    content: 'function createSender(options?: SenderOptionsWithSession)'
+    parameters:
+    - id: options
+      type:
+      - azure-event-hubs.SenderOptionsWithSession
+      description: <span data-ttu-id="cad6c-113">Необязательные параметры для создания связи отправителя.</span><span class="sxs-lookup"><span data-stu-id="cad6c-113">Optional parameters to create a sender link.</span></span>
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-hubs.Sender>
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.createSession
+  name: createSession
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cad6c-114">Создает сеанс amqp на подключение предоставленный amqp.</span><span class="sxs-lookup"><span data-stu-id="cad6c-114">Creates an amqp session on the provided amqp connection.</span></span>
+  syntax:
+    content: function createSession()
+    parameters: []
+    return:
+      type:
+      - Promise<azure-event-hubs.Session>
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.isOpen
+  name: isOpen
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cad6c-115">Определяет, открыто ли соединение.</span><span class="sxs-lookup"><span data-stu-id="cad6c-115">Determines whether the connection is open.</span></span>
+  syntax:
+    content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.open
+  name: open
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cad6c-116">Создает новое подключение amqp.</span><span class="sxs-lookup"><span data-stu-id="cad6c-116">Creates a new amqp connection.</span></span>
+  syntax:
+    content: function open()
+    parameters: []
+    return:
+      type:
+      - Promise<azure-event-hubs.Connection>
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.options
+  name: options
+  fullName: options
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'options?: ConnectionOptions'
+    return:
+      type:
+      - ConnectionOptions
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.registerHandler
+  name: registerHandler
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function registerHandler(event: ConnectionEvents, handler: rhea.OnAmqpEvent)'
+    parameters:
+    - id: event
+      type:
+      - ConnectionEvents
+      description: ''
+    - id: handler
+      type:
+      - rhea.OnAmqpEvent
+      description: ''
+  package: azure-event-hubs
+- uid: azure-event-hubs.Connection.removeHandler
+  name: removeHandler
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function removeHandler(event: ConnectionEvents, handler: rhea.OnAmqpEvent)'
+    parameters:
+    - id: event
+      type:
+      - ConnectionEvents
+      description: ''
+    - id: handler
+      type:
+      - rhea.OnAmqpEvent
+      description: ''
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.ReceiverOptionsWithSession
+  spec.typeScript:
+  - name: ReceiverOptionsWithSession
+    fullName: ReceiverOptionsWithSession
+    uid: azure-event-hubs.ReceiverOptionsWithSession
+- uid: Promise<azure-event-hubs.Receiver>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Receiver
+    fullName: Receiver
+    uid: azure-event-hubs.Receiver
+  - name: '>'
+    fullName: '>'
+- uid: azure-event-hubs.SenderOptions
+  spec.typeScript:
+  - name: SenderOptions
+    fullName: SenderOptions
+    uid: azure-event-hubs.SenderOptions
+- uid: azure-event-hubs.ReceiverOptions
+  spec.typeScript:
+  - name: ReceiverOptions
+    fullName: ReceiverOptions
+    uid: azure-event-hubs.ReceiverOptions
+- uid: azure-event-hubs.Session
+  spec.typeScript:
+  - name: Session
+    fullName: Session
+    uid: azure-event-hubs.Session
+- uid: Promise<azure-event-hubs.ReqResLink>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ReqResLink
+    fullName: ReqResLink
+    uid: azure-event-hubs.ReqResLink
+  - name: '>'
+    fullName: '>'
+- uid: azure-event-hubs.SenderOptionsWithSession
+  spec.typeScript:
+  - name: SenderOptionsWithSession
+    fullName: SenderOptionsWithSession
+    uid: azure-event-hubs.SenderOptionsWithSession
+- uid: Promise<azure-event-hubs.Sender>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Sender
+    fullName: Sender
+    uid: azure-event-hubs.Sender
+  - name: '>'
+    fullName: '>'
+- uid: Promise<azure-event-hubs.Session>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Session
+    fullName: Session
+    uid: azure-event-hubs.Session
+  - name: '>'
+    fullName: '>'
+- uid: Promise<azure-event-hubs.Connection>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Connection
+    fullName: Connection
+    uid: azure-event-hubs.Connection
+  - name: '>'
+    fullName: '>'

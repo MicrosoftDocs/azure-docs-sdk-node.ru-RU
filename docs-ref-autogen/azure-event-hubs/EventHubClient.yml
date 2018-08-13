@@ -1,0 +1,406 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e46a5a038ac1b40706d5d7c5d49f04bec86c3f84
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40074981"
+items:
+- uid: azure-event-hubs.EventHubClient
+  name: EventHubClient
+  fullName: EventHubClient
+  children:
+  - azure-event-hubs.EventHubClient.close
+  - azure-event-hubs.EventHubClient.connectionId
+  - azure-event-hubs.EventHubClient.createFromAadTokenCredentials
+  - azure-event-hubs.EventHubClient.createFromConnectionString
+  - azure-event-hubs.EventHubClient.createFromIotHubConnectionString
+  - azure-event-hubs.EventHubClient.constructor
+  - azure-event-hubs.EventHubClient.getHubRuntimeInformation
+  - azure-event-hubs.EventHubClient.getPartitionIds
+  - azure-event-hubs.EventHubClient.getPartitionInformation
+  - azure-event-hubs.EventHubClient.receive
+  - azure-event-hubs.EventHubClient.receiveBatch
+  - azure-event-hubs.EventHubClient.send
+  - azure-event-hubs.EventHubClient.sendBatch
+  langs:
+  - typeScript
+  type: class
+  summary: ''
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-101">Закрывает подключение AMQP в концентратор событий для данного клиента, возвращая обещание, которое разрешается в завершении отключения.</span><span class="sxs-lookup"><span data-stu-id="aa402-101">Closes the AMQP connection to the Event Hub for this client, returning a promise that will be resolved when disconnection is completed.</span></span>
+  syntax:
+    content: function close()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.connectionId
+  name: connectionId
+  fullName: connectionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'connectionId?: string'
+    return:
+      type:
+      - string
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.createFromAadTokenCredentials
+  name: createFromAadTokenCredentials
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-102">Создает клиент концентратора событий из AADTokenCredentials.</span><span class="sxs-lookup"><span data-stu-id="aa402-102">Creates an EventHub Client from AADTokenCredentials.</span></span>
+  syntax:
+    content: 'static function createFromAadTokenCredentials(host: string, entityPath: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ClientOptionsBase)'
+    parameters:
+    - id: host
+      type:
+      - string
+      description: <span data-ttu-id="aa402-103">Полное доменное имя для концентраторов событий.</span><span class="sxs-lookup"><span data-stu-id="aa402-103">Fully qualified domain name for Event Hubs.</span></span> <span data-ttu-id="aa402-104">Скорее всего, {yournamespace}. servicebus.windows .net</span><span class="sxs-lookup"><span data-stu-id="aa402-104">Most likely, {yournamespace}.servicebus.windows.net</span></span>
+    - id: entityPath
+      type:
+      - string
+      description: <span data-ttu-id="aa402-105">Пути концентратора событий в формате «my событие hub-name»</span><span class="sxs-lookup"><span data-stu-id="aa402-105">EventHub path of the form 'my-event-hub-name'</span></span>
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: '<span data-ttu-id="aa402-106">Учетные данные маркера AAD.</span><span class="sxs-lookup"><span data-stu-id="aa402-106">The AAD Token credentials.</span></span> <span data-ttu-id="aa402-107">Он может иметь одно из следующих: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span><span class="sxs-lookup"><span data-stu-id="aa402-107">It can be one of the following: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials.</span></span>'
+    - id: options
+      type:
+      - azure-event-hubs.ClientOptionsBase
+      description: <span data-ttu-id="aa402-108">Параметры, можно указать во время создания клиента.</span><span class="sxs-lookup"><span data-stu-id="aa402-108">The options that can be provided during client creation.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventHubClient
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.createFromConnectionString
+  name: createFromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-109">Создает клиент концентратора событий из строки подключения.</span><span class="sxs-lookup"><span data-stu-id="aa402-109">Creates an EventHub Client from connection string.</span></span>
+  syntax:
+    content: 'static function createFromConnectionString(connectionString: string, path?: string, options?: ClientOptions)'
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: <span data-ttu-id="aa402-110">Строка подключения вида "Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-name; SharedAccessKey my-SA-key = "</span><span class="sxs-lookup"><span data-stu-id="aa402-110">Connection string of the form 'Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+    - id: path
+      type:
+      - string
+      description: ''
+      optional: true
+    - id: options
+      type:
+      - azure-event-hubs.ClientOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.EventHubClient
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.createFromIotHubConnectionString
+  name: createFromIotHubConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-111">Создает клиент концентратора событий из строки подключения.</span><span class="sxs-lookup"><span data-stu-id="aa402-111">Creates an EventHub Client from connection string.</span></span>
+  syntax:
+    content: 'static function createFromIotHubConnectionString(iothubConnectionString: string, options?: ClientOptions)'
+    parameters:
+    - id: iothubConnectionString
+      type:
+      - string
+      description: <span data-ttu-id="aa402-112">Строку подключения в формате "имя узла = iot имя узла; SharedAccessKeyName = my-SA-name; SharedAccessKey my-SA-key = "</span><span class="sxs-lookup"><span data-stu-id="aa402-112">Connection string of the form 'HostName=iot-host-name;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key'</span></span>
+    - id: options
+      type:
+      - azure-event-hubs.ClientOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-hubs.EventHubClient>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.constructor
+  name: EventHubClient
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-113">Создает экземпляр клиента, указывающий на концентратор событий, предоставляемых этой конфигурации.</span><span class="sxs-lookup"><span data-stu-id="aa402-113">Instantiates a client pointing to the Event Hub given by this configuration.</span></span>
+  syntax:
+    content: 'new EventHubClient(config: ConnectionConfig, options?: ClientOptions)'
+    parameters:
+    - id: config
+      type:
+      - azure-event-hubs.ConnectionConfig
+      description: <span data-ttu-id="aa402-114">Конфигурация подключения для создания клиента концентратора событий.</span><span class="sxs-lookup"><span data-stu-id="aa402-114">The connection configuration to create the EventHub Client.</span></span>
+    - id: options
+      type:
+      - azure-event-hubs.ClientOptions
+      description: >
+        <span data-ttu-id="aa402-115">Необязательные параметры, которые можно указать в конструктор клиента концентратора событий.</span><span class="sxs-lookup"><span data-stu-id="aa402-115">The optional parameters that can be provided to the EventHub Client constructor.</span></span>
+      optional: true
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.getHubRuntimeInformation
+  name: getHubRuntimeInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-116">Предоставляет сведения о среде выполнения концентратора событий.</span><span class="sxs-lookup"><span data-stu-id="aa402-116">Provides the eventhub runtime information.</span></span>
+  syntax:
+    content: function getHubRuntimeInformation()
+    parameters: []
+    return:
+      type:
+      - Promise<azure-event-hubs.EventHubRuntimeInformation>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.getPartitionIds
+  name: getPartitionIds
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-117">Предоставляет целый ряд partitionIds.</span><span class="sxs-lookup"><span data-stu-id="aa402-117">Provides an array of partitionIds.</span></span>
+  syntax:
+    content: function getPartitionIds()
+    parameters: []
+    return:
+      type:
+      - Promise<Array<string>>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.getPartitionInformation
+  name: getPartitionInformation
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-118">Сведения об указанной секции.</span><span class="sxs-lookup"><span data-stu-id="aa402-118">Provides information about the specified partition.</span></span>
+  syntax:
+    content: 'function getPartitionInformation(partitionId: string | number)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: <span data-ttu-id="aa402-119">Идентификатор секции, для какой раздел сведения не требуются.</span><span class="sxs-lookup"><span data-stu-id="aa402-119">Partition ID for which partition information is required.</span></span>
+    return:
+      type:
+      - Promise<azure-event-hubs.EventHubPartitionRuntimeInformation>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.receive
+  name: receive
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-120">Получатель начинается с установления сеанса AMQP и ссылка получателя AMQP на сеанс.</span><span class="sxs-lookup"><span data-stu-id="aa402-120">Starts the receiver by establishing an AMQP session and an AMQP receiver link on the session.</span></span> <span data-ttu-id="aa402-121">Сообщения передаются в обработчик предоставленный onMessage и ошибки, которые будут передаваться обработчику предоставленный onError.</span><span class="sxs-lookup"><span data-stu-id="aa402-121">Messages will be passed to the provided onMessage handler and error will be passed to the provided onError handler.</span></span>
+  syntax:
+    content: 'function receive(partitionId: string | number, onMessage: OnMessage, onError: OnError, options?: ReceiveOptions)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: <span data-ttu-id="aa402-122">Идентификатор секции, от которого требуется получить.</span><span class="sxs-lookup"><span data-stu-id="aa402-122">Partition ID from which to receive.</span></span>
+    - id: onMessage
+      type:
+      - azure-event-hubs.OnMessage
+      description: <span data-ttu-id="aa402-123">Обработчик сообщений для получения объектов данных событий.</span><span class="sxs-lookup"><span data-stu-id="aa402-123">The message handler to receive event data objects.</span></span>
+    - id: onError
+      type:
+      - azure-event-hubs.OnError
+      description: <span data-ttu-id="aa402-124">Обработчик ошибок, получит сообщение об ошибке, возникающее при получении сообщения.</span><span class="sxs-lookup"><span data-stu-id="aa402-124">The error handler to receive an error that occurs while receiving messages.</span></span>
+    - id: options
+      type:
+      - azure-event-hubs.ReceiveOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - azure-event-hubs.ReceiveHandler
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.receiveBatch
+  name: receiveBatch
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-125">Получает пакет объектов EventData из секции концентратора событий для указанного счетчика и заданного максимальное время ожидания в секундах, какое событие произойдет раньше.</span><span class="sxs-lookup"><span data-stu-id="aa402-125">Receives a batch of EventData objects from an EventHub partition for a given count and a given max wait time in seconds, whichever happens first.</span></span> <span data-ttu-id="aa402-126">Этот метод можно использовать непосредственно после создания объекта получателя и **не должна** использоваться вместе с `start()` метод.</span><span class="sxs-lookup"><span data-stu-id="aa402-126">This method can be used directly after creating the receiver object and **MUST NOT** be used along with the `start()` method.</span></span>
+  syntax:
+    content: 'function receiveBatch(partitionId: string | number, maxMessageCount: number, maxWaitTimeInSeconds?: number, options?: ReceiveOptions)'
+    parameters:
+    - id: partitionId
+      type:
+      - string | number
+      description: <span data-ttu-id="aa402-127">Идентификатор секции, от которого требуется получить.</span><span class="sxs-lookup"><span data-stu-id="aa402-127">Partition ID from which to receive.</span></span>
+    - id: maxMessageCount
+      type:
+      - number
+      description: <span data-ttu-id="aa402-128">Максимальное число сообщений.</span><span class="sxs-lookup"><span data-stu-id="aa402-128">The maximum message count.</span></span> <span data-ttu-id="aa402-129">Должно быть значение больше 0.</span><span class="sxs-lookup"><span data-stu-id="aa402-129">Must be a value greater than 0.</span></span>
+    - id: maxWaitTimeInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    - id: options
+      type:
+      - azure-event-hubs.ReceiveOptions
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-event-hubs.EventData[]>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.send
+  name: send
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-130">Отправляет данное сообщение к концентратору событий.</span><span class="sxs-lookup"><span data-stu-id="aa402-130">Sends the given message to the EventHub.</span></span>
+  syntax:
+    content: 'function send(data: EventData, partitionId?: string | number)'
+    parameters:
+    - id: data
+      type:
+      - azure-event-hubs.EventData
+      description: <span data-ttu-id="aa402-131">Отправляемое сообщение.</span><span class="sxs-lookup"><span data-stu-id="aa402-131">Message to send.</span></span>  <span data-ttu-id="aa402-132">Будут отправляться в виде строки JSON в кодировке UTF-8.</span><span class="sxs-lookup"><span data-stu-id="aa402-132">Will be sent as UTF8-encoded JSON string.</span></span>
+    - id: partitionId
+      type:
+      - string | number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Delivery>
+  package: azure-event-hubs
+- uid: azure-event-hubs.EventHubClient.sendBatch
+  name: sendBatch
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="aa402-133">Отправьте пакет EventData концентратора событий.</span><span class="sxs-lookup"><span data-stu-id="aa402-133">Send a batch of EventData to the EventHub.</span></span> <span data-ttu-id="aa402-134">«Message_annotations», «application_properties» и «свойства» первого сообщения будет установлен в качестве, конверта (пакетного сообщения).</span><span class="sxs-lookup"><span data-stu-id="aa402-134">The "message_annotations", "application_properties" and "properties" of the first message will be set as that of the envelope (batch message).</span></span>
+  syntax:
+    content: 'function sendBatch(datas: EventData[], partitionId?: string | number)'
+    parameters:
+    - id: datas
+      type:
+      - azure-event-hubs.EventData[]
+      description: <span data-ttu-id="aa402-135">Массив объектов EventData, которые будут отправляться в сообщении пакета.</span><span class="sxs-lookup"><span data-stu-id="aa402-135">An array of EventData objects to be sent in a Batch message.</span></span>
+    - id: partitionId
+      type:
+      - string | number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Delivery>
+  package: azure-event-hubs
+references:
+- uid: azure-event-hubs.ConnectionConfig
+  spec.typeScript:
+  - name: ConnectionConfig
+    fullName: ConnectionConfig
+    uid: azure-event-hubs.ConnectionConfig
+- uid: azure-event-hubs.ClientOptions
+  spec.typeScript:
+  - name: ClientOptions
+    fullName: ClientOptions
+    uid: azure-event-hubs.ClientOptions
+- uid: Promise<azure-event-hubs.EventHubRuntimeInformation>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventHubRuntimeInformation
+    fullName: EventHubRuntimeInformation
+    uid: azure-event-hubs.EventHubRuntimeInformation
+  - name: '>'
+    fullName: '>'
+- uid: Promise<azure-event-hubs.EventHubPartitionRuntimeInformation>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventHubPartitionRuntimeInformation
+    fullName: EventHubPartitionRuntimeInformation
+    uid: azure-event-hubs.EventHubPartitionRuntimeInformation
+  - name: '>'
+    fullName: '>'
+- uid: azure-event-hubs.OnMessage
+  spec.typeScript:
+  - name: OnMessage
+    fullName: OnMessage
+    uid: azure-event-hubs.OnMessage
+- uid: azure-event-hubs.OnError
+  spec.typeScript:
+  - name: OnError
+    fullName: OnError
+    uid: azure-event-hubs.OnError
+- uid: azure-event-hubs.ReceiveOptions
+  spec.typeScript:
+  - name: ReceiveOptions
+    fullName: ReceiveOptions
+    uid: azure-event-hubs.ReceiveOptions
+- uid: azure-event-hubs.ReceiveHandler
+  spec.typeScript:
+  - name: ReceiveHandler
+    fullName: ReceiveHandler
+    uid: azure-event-hubs.ReceiveHandler
+- uid: Promise<azure-event-hubs.EventData[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+  - name: '[]>'
+    fullName: '[]>'
+- uid: azure-event-hubs.EventData
+  spec.typeScript:
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+- uid: azure-event-hubs.EventData[]
+  spec.typeScript:
+  - name: EventData
+    fullName: EventData
+    uid: azure-event-hubs.EventData
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-event-hubs.ClientOptionsBase
+  spec.typeScript:
+  - name: ClientOptionsBase
+    fullName: ClientOptionsBase
+    uid: azure-event-hubs.ClientOptionsBase
+- uid: azure-event-hubs.EventHubClient
+  spec.typeScript:
+  - name: EventHubClient
+    fullName: EventHubClient
+    uid: azure-event-hubs.EventHubClient
+- uid: Promise<azure-event-hubs.EventHubClient>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: EventHubClient
+    fullName: EventHubClient
+    uid: azure-event-hubs.EventHubClient
+  - name: '>'
+    fullName: '>'

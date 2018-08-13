@@ -1,0 +1,312 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 70f7fdced044f28d0c42ea199dc464034747e39c
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40075676"
+items:
+- uid: azure-iot-device.ModuleClient
+  name: ModuleClient
+  fullName: ModuleClient
+  children:
+  - azure-iot-device.ModuleClient.close
+  - azure-iot-device.ModuleClient.fromAuthenticationProvider
+  - azure-iot-device.ModuleClient.fromConnectionString
+  - azure-iot-device.ModuleClient.fromEnvironment
+  - azure-iot-device.ModuleClient.fromSharedAccessSignature
+  - azure-iot-device.ModuleClient.invokeMethod
+  - azure-iot-device.ModuleClient.invokeMethod_1
+  - azure-iot-device.ModuleClient.onMethod
+  - azure-iot-device.ModuleClient.sendOutputEvent
+  - azure-iot-device.ModuleClient.sendOutputEventBatch
+  - azure-iot-device.ModuleClient.setOptions
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="a587c-101">Центр Интернета вещей устройства клиент, используемый для подключения устройства к центру Интернета вещей Azure.</span><span class="sxs-lookup"><span data-stu-id="a587c-101">IoT Hub device client used to connect a device with an Azure IoT hub.</span></span>
+
+    <span data-ttu-id="a587c-102">Пользователи пакета SDK должны вызвать один из методов фабрики, [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString) или [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) для создания клиента устройства центра Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="a587c-102">Users of the SDK should call one of the factory methods, [fromConnectionString](xref:azure-iot-device.Client.fromConnectionString) or [fromSharedAccessSignature](xref:azure-iot-device.Client.fromSharedAccessSignature) to create an IoT Hub device client.</span></span>
+  extends:
+    name: InternalClient
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.close
+  name: close
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="a587c-103">Закрывает транспортное соединение и уничтожает ресурсов клиента.</span><span class="sxs-lookup"><span data-stu-id="a587c-103">Closes the transport connection and destroys the client resources.</span></span>
+
+    <span data-ttu-id="a587c-104">*Примечание: После вызова этого метода ModuleClient объект нельзя использовать повторно.*</span><span class="sxs-lookup"><span data-stu-id="a587c-104">*Note: After calling this method the ModuleClient object cannot be reused.*</span></span>
+  syntax:
+    content: 'function close(closeCallback?: (err?: Error, result?: Disconnected) => void)'
+    parameters:
+    - id: closeCallback
+      type:
+      - '(err?: Error, result?: Disconnected) => void'
+      description: >
+        <span data-ttu-id="a587c-105">Функция, вызываемая после отключения транспорта и клиент закрыт.</span><span class="sxs-lookup"><span data-stu-id="a587c-105">Function to call once the transport is disconnected and the client closed.</span></span>
+      optional: true
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromAuthenticationProvider
+  name: fromAuthenticationProvider
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-106">Создает клиент модуль центра Интернета вещей на основе либо метод проверки подлинности, используя тип данного транспорта.</span><span class="sxs-lookup"><span data-stu-id="a587c-106">Creates an IoT Hub module client from the given authentication method and using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromAuthenticationProvider(authenticationProvider: AuthenticationProvider, transportCtor: any)'
+    parameters:
+    - id: authenticationProvider
+      type:
+      - AuthenticationProvider
+      description: <span data-ttu-id="a587c-107">Объект, используемый для получения параметров проверки подлинности для центра Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="a587c-107">Object used to obtain the authentication parameters for the IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: >
+        <span data-ttu-id="a587c-108">Транспортный протокол, используемый для подключения к центру Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="a587c-108">Transport protocol used to connect to IoT hub.</span></span>
+    return:
+      type:
+      - any
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromConnectionString
+  name: fromConnectionString
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-109">Создает клиент устройства центра Интернета вещей из строки соединения, используя тип данного транспорта.</span><span class="sxs-lookup"><span data-stu-id="a587c-109">Creates an IoT Hub device client from the given connection string using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromConnectionString(connStr: string, transportCtor: any)'
+    parameters:
+    - id: connStr
+      type:
+      - string
+      description: <span data-ttu-id="a587c-110">Строку подключения, которая инкапсулирует «подключение» разрешения для центра Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="a587c-110">A connection string which encapsulates "device connect" permissions on an IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: >
+        <span data-ttu-id="a587c-111">Конструктор транспорта.</span><span class="sxs-lookup"><span data-stu-id="a587c-111">A transport constructor.</span></span>
+    return:
+      type:
+      - azure-iot-device.ModuleClient
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromEnvironment
+  name: fromEnvironment
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="a587c-112">Создает клиент модуль центра Интернета вещей, используя сведения о конфигурации из среды.</span><span class="sxs-lookup"><span data-stu-id="a587c-112">Creates an IoT Hub module client by using configuration information from the environment.</span></span>
+
+    <span data-ttu-id="a587c-113">При вызове переменной среды `EdgeHubConnectionString` или `IotHubConnectionString` существует, то это значение используется, и идентичен вызову `fromConnectionString` передачи, в.</span><span class="sxs-lookup"><span data-stu-id="a587c-113">If an environment variable called `EdgeHubConnectionString` or `IotHubConnectionString` exists, then that value is used and behavior is identical to calling `fromConnectionString` passing that in.</span></span> <span data-ttu-id="a587c-114">Если эти переменные среды не существует должны быть определены следующие переменные:</span><span class="sxs-lookup"><span data-stu-id="a587c-114">If those environment variables do not exist then the following variables MUST be defined:</span></span>
+
+        - <span data-ttu-id="a587c-115">IOTEDGE_WORKLOADURI URI для рабочей нагрузки iotedged API</span><span class="sxs-lookup"><span data-stu-id="a587c-115">IOTEDGE_WORKLOADURI          URI for iotedged's workload API</span></span>
+        - <span data-ttu-id="a587c-116">Идентификатор устройства IOTEDGE_DEVICEID</span><span class="sxs-lookup"><span data-stu-id="a587c-116">IOTEDGE_DEVICEID             Device identifier</span></span>
+        - <span data-ttu-id="a587c-117">Идентификатор модуля IOTEDGE_MODULEID</span><span class="sxs-lookup"><span data-stu-id="a587c-117">IOTEDGE_MODULEID             Module identifier</span></span>
+        - <span data-ttu-id="a587c-118">Идентификатор модуля IOTEDGE_MODULEGENERATIONID поколения</span><span class="sxs-lookup"><span data-stu-id="a587c-118">IOTEDGE_MODULEGENERATIONID   Module generation identifier</span></span>
+        - <span data-ttu-id="a587c-119">Имя узла центра Интернета вещей IOTEDGE_IOTHUBHOSTNAME</span><span class="sxs-lookup"><span data-stu-id="a587c-119">IOTEDGE_IOTHUBHOSTNAME       IoT Hub host name</span></span>
+        - <span data-ttu-id="a587c-120">Схема проверки подлинности IOTEDGE_AUTHSCHEME для использования; должен быть «sasToken»</span><span class="sxs-lookup"><span data-stu-id="a587c-120">IOTEDGE_AUTHSCHEME           Authentication scheme to use; must be "sasToken"</span></span>
+  syntax:
+    content: 'static function fromEnvironment(transportCtor: any, callback: (err?: Error, client?: ModuleClient) => void)'
+    parameters:
+    - id: transportCtor
+      type:
+      - any
+      description: <span data-ttu-id="a587c-121">Транспортный протокол, используемый для подключения к центру Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="a587c-121">Transport protocol used to connect to IoT hub.</span></span>
+    - id: callback
+      type:
+      - '(err?: Error, client?: ModuleClient) => void'
+      description: >
+        <span data-ttu-id="a587c-122">Обратный вызов, производимый после ModuleClient constructured или если произошла ошибка при создании клиента.</span><span class="sxs-lookup"><span data-stu-id="a587c-122">Callback to invoke when the ModuleClient has been constructured or if an error occurs while creating the client.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.fromSharedAccessSignature
+  name: fromSharedAccessSignature
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-123">Создает клиент модуль центра Интернета вещей на основе заданного подписанный URL-адрес, используя тип данного транспорта.</span><span class="sxs-lookup"><span data-stu-id="a587c-123">Creates an IoT Hub module client from the given shared access signature using the given transport type.</span></span>
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string, transportCtor: any)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: <span data-ttu-id="a587c-124">Подпись общего доступа инкапсулирует «подключение» разрешения для центра Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="a587c-124">A shared access signature which encapsulates "device connect" permissions on an IoT hub.</span></span>
+    - id: transportCtor
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - any
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.invokeMethod
+  name: invokeMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-125">Вызывает метод на подчиненного устройства или в другом модуле на одном устройстве Edge.</span><span class="sxs-lookup"><span data-stu-id="a587c-125">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="a587c-126">Обратите внимание на то, что эта функция работает только при запуске модуля как часть пограничного устройства.</span><span class="sxs-lookup"><span data-stu-id="a587c-126">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
+  syntax:
+    content: 'function invokeMethod(deviceId: string, methodParams: MethodParams, callback: MethodCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: <span data-ttu-id="a587c-127">Идентификатор целевого устройства</span><span class="sxs-lookup"><span data-stu-id="a587c-127">target device identifier</span></span>
+    - id: methodParams
+      type:
+      - azure-iot-device.MethodParams
+      description: <span data-ttu-id="a587c-128">Параметры вызова прямого метода</span><span class="sxs-lookup"><span data-stu-id="a587c-128">parameters of the direct method call</span></span>
+    - id: callback
+      type:
+      - azure-iot-device.MethodCallback
+      description: >
+        <span data-ttu-id="a587c-129">обратный вызов, который будет вызываться с помощью объекта ошибки или результат вызова метода.</span><span class="sxs-lookup"><span data-stu-id="a587c-129">callback that will be invoked either with an Error object or the result of the method call.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.invokeMethod_1
+  name: invokeMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-130">Вызывает метод на подчиненного устройства или в другом модуле на одном устройстве Edge.</span><span class="sxs-lookup"><span data-stu-id="a587c-130">Invokes a method on a downstream device or on another module on the same Edge device.</span></span> <span data-ttu-id="a587c-131">Обратите внимание на то, что эта функция работает только при запуске модуля как часть пограничного устройства.</span><span class="sxs-lookup"><span data-stu-id="a587c-131">Please note that this feature only works when the module is being run as part of an Edge device.</span></span>
+  syntax:
+    content: 'function invokeMethod(deviceId: string, moduleId: string, methodParams: MethodParams, callback: MethodCallback)'
+    parameters:
+    - id: deviceId
+      type:
+      - string
+      description: ''
+    - id: moduleId
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iot-device.MethodParams
+      description: ''
+    - id: callback
+      type:
+      - azure-iot-device.MethodCallback
+      description: ''
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.onMethod
+  name: onMethod
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-132">Регистрирует обратный вызов для метода с именем `methodName`.</span><span class="sxs-lookup"><span data-stu-id="a587c-132">Registers a callback for a method named `methodName`.</span></span>
+  syntax:
+    content: 'function onMethod(methodName: string, callback: (request: DeviceMethodRequest, response: DeviceMethodResponse) => void)'
+    parameters:
+    - id: methodName
+      type:
+      - string
+      description: <span data-ttu-id="a587c-133">Имя метода, которая будет обрабатываться функцией обратного вызова</span><span class="sxs-lookup"><span data-stu-id="a587c-133">Name of the method that will be handled by the callback</span></span>
+    - id: callback
+      type:
+      - '(request: DeviceMethodRequest, response: DeviceMethodResponse) => void'
+      description: >
+        <span data-ttu-id="a587c-134">Функция, которая должна вызываться при каждом вызове запроса метода для метода `methodName` получении.</span><span class="sxs-lookup"><span data-stu-id="a587c-134">Function that shall be called whenever a method request for the method called `methodName` is received.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.sendOutputEvent
+  name: sendOutputEvent
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-135">Отправляет событие в выходные данные заданного модуля</span><span class="sxs-lookup"><span data-stu-id="a587c-135">Sends an event to the given module output</span></span>
+  syntax:
+    content: 'function sendOutputEvent(outputName: string, message: Message, callback: (err?: Error, result?: MessageEnqueued) => void)'
+    parameters:
+    - id: outputName
+      type:
+      - string
+      description: <span data-ttu-id="a587c-136">Имя выходных данных для отправки события</span><span class="sxs-lookup"><span data-stu-id="a587c-136">Name of the output to send the event to</span></span>
+    - id: message
+      type:
+      - Message
+      description: <span data-ttu-id="a587c-137">Сообщение для отправки заданных выходных данных</span><span class="sxs-lookup"><span data-stu-id="a587c-137">Message to send to the given output</span></span>
+    - id: callback
+      type:
+      - '(err?: Error, result?: MessageEnqueued) => void'
+      description: >
+        <span data-ttu-id="a587c-138">Функция, вызываемая при операции помещено в очередь.</span><span class="sxs-lookup"><span data-stu-id="a587c-138">Function to call when the operation has been queued.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.sendOutputEventBatch
+  name: sendOutputEventBatch
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-139">Отправляет массив событий в указанный модуль выходные данные</span><span class="sxs-lookup"><span data-stu-id="a587c-139">Sends an array of events to the given module output</span></span>
+  syntax:
+    content: 'function sendOutputEventBatch(outputName: string, messages: Message[], callback: (err?: Error, result?: MessageEnqueued) => void)'
+    parameters:
+    - id: outputName
+      type:
+      - string
+      description: <span data-ttu-id="a587c-140">Имя выходных данных для отправки события</span><span class="sxs-lookup"><span data-stu-id="a587c-140">Name of the output to send the events to</span></span>
+    - id: messages
+      type:
+      - Message[]
+      description: ''
+    - id: callback
+      type:
+      - '(err?: Error, result?: MessageEnqueued) => void'
+      description: >
+        <span data-ttu-id="a587c-141">Функция, вызываемая при операции были помещены в очередь.</span><span class="sxs-lookup"><span data-stu-id="a587c-141">Function to call when the operations have been queued.</span></span>
+  package: azure-iot-device
+- uid: azure-iot-device.ModuleClient.setOptions
+  name: setOptions
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="a587c-142">Передает параметры `ModuleClient` объект, который может использоваться для настройки транспорта.</span><span class="sxs-lookup"><span data-stu-id="a587c-142">Passes options to the `ModuleClient` object that can be used to configure the transport.</span></span>
+  syntax:
+    content: 'function setOptions(options: DeviceClientOptions, done?: (err?: Error, result?: TransportConfigured) => void)'
+    parameters:
+    - id: options
+      type:
+      - azure-iot-device.DeviceClientOptions
+      description: <span data-ttu-id="a587c-143">Объект <xref:DeviceClientOptions> объекта.</span><span class="sxs-lookup"><span data-stu-id="a587c-143">A <xref:DeviceClientOptions> object.</span></span>
+    - id: done
+      type:
+      - '(err?: Error, result?: TransportConfigured) => void'
+      description: >
+        <span data-ttu-id="a587c-144">Обратный вызов для вызова после задания параметров.</span><span class="sxs-lookup"><span data-stu-id="a587c-144">The callback to call once the options have been set.</span></span>
+      optional: true
+  package: azure-iot-device
+references:
+- uid: azure-iot-device.MethodParams
+  spec.typeScript:
+  - name: MethodParams
+    fullName: MethodParams
+    uid: azure-iot-device.MethodParams
+- uid: azure-iot-device.MethodCallback
+  spec.typeScript:
+  - name: MethodCallback
+    fullName: MethodCallback
+    uid: azure-iot-device.MethodCallback
+- uid: azure-iot-device.DeviceClientOptions
+  spec.typeScript:
+  - name: DeviceClientOptions
+    fullName: DeviceClientOptions
+    uid: azure-iot-device.DeviceClientOptions
+- uid: azure-iot-device.ModuleClient
+  spec.typeScript:
+  - name: ModuleClient
+    fullName: ModuleClient
+    uid: azure-iot-device.ModuleClient

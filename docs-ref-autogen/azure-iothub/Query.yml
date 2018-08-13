@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a973deb25b3fc4ed450d5ffef2aeb261e1b97bb4
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "40076628"
+items:
+- uid: azure-iothub.Query
+  name: Query
+  fullName: Query
+  children:
+  - azure-iothub.Query.continuationToken
+  - azure-iothub.Query.hasMoreResults
+  - azure-iothub.Query.next
+  - azure-iothub.Query.nextAsTwin
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    <span data-ttu-id="d2a4e-101">Создает объект запроса, который предоставляет API-интерфейсы для активации выполнения запроса устройства.</span><span class="sxs-lookup"><span data-stu-id="d2a4e-101">Constructs a Query object that provides APIs to trigger the execution of a device query.</span></span>
+
+    <span data-ttu-id="d2a4e-102">Пакет SDK пользователи должны создавать запросы с помощью <xref:azure-iothub.JobClient.createQuery> и <xref:azure-iothub.Registry.createQuery> API-интерфейсов и не следует пытаться создать экземпляр этого класса напрямую.</span><span class="sxs-lookup"><span data-stu-id="d2a4e-102">SDK users should create queries using the <xref:azure-iothub.JobClient.createQuery> and <xref:azure-iothub.Registry.createQuery> APIs and should not try to instantiate this class directly.</span></span>
+  package: azure-iothub
+- uid: azure-iothub.Query.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d2a4e-103">Токен, используемый для итерации по несколько страниц результатов.</span><span class="sxs-lookup"><span data-stu-id="d2a4e-103">Token used to iterate over multiple pages of results.</span></span>
+  syntax:
+    content: 'continuationToken: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Query.hasMoreResults
+  name: hasMoreResults
+  fullName: hasMoreResults
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="d2a4e-104">Логическое значение, указывающее, есть ли дополнительные страницы результатов.</span><span class="sxs-lookup"><span data-stu-id="d2a4e-104">Boolean indicating whether there are more results pages.</span></span>
+  syntax:
+    content: 'hasMoreResults: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iothub
+- uid: azure-iothub.Query.next
+  name: next
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d2a4e-105">Возвращает следующую страницу результатов для этого запроса.</span><span class="sxs-lookup"><span data-stu-id="d2a4e-105">Gets the next page of results for this query.</span></span>
+  syntax:
+    content: 'function next(continuationTokenOrCallback: string | Callback<any>, done?: Callback<any>)'
+    parameters:
+    - id: continuationTokenOrCallback
+      type:
+      - string | Callback<any>
+      description: ''
+    - id: done
+      type:
+      - Callback<any>
+      description: >
+        <span data-ttu-id="d2a4e-106">Обратный вызов, который будет вызываться с ошибка объекта или результаты запроса.</span><span class="sxs-lookup"><span data-stu-id="d2a4e-106">The callback that will be called with either an Error object or the results of the query.</span></span>
+      optional: true
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin
+  name: nextAsTwin
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="d2a4e-107">Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.</span><span class="sxs-lookup"><span data-stu-id="d2a4e-107">Gets the next page of results for this query and cast them as Twins.</span></span>
+  syntax:
+    content: 'function nextAsTwin(continuationToken: string | Callback<Twin[]>, done?: Callback<Twin[]>)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string | Callback<azure-iothub.Twin[]>
+      description: <span data-ttu-id="d2a4e-108">Токен продолжения для разбиения на страницы результатов (необязательно)</span><span class="sxs-lookup"><span data-stu-id="d2a4e-108">Continuation Token used for paging through results (optional)</span></span>
+    - id: done
+      type:
+      - Callback<azure-iothub.Twin[]>
+      description: >
+        <span data-ttu-id="d2a4e-109">Обратный вызов, который будет вызываться с ошибка объекта или результаты запроса.</span><span class="sxs-lookup"><span data-stu-id="d2a4e-109">The callback that will be called with either an Error object or the results of the query.</span></span>
+      optional: true
+  package: azure-iothub
+references:
+- uid: string | Callback<azure-iothub.Twin[]>
+  spec.typeScript:
+  - name: string | Callback<
+    fullName: string | Callback<
+  - name: Twin
+    fullName: Twin
+    uid: azure-iothub.Twin
+  - name: '[]>'
+    fullName: '[]>'
+- uid: Callback<azure-iothub.Twin[]>
+  spec.typeScript:
+  - name: Callback<
+    fullName: Callback<
+  - name: Twin
+    fullName: Twin
+    uid: azure-iothub.Twin
+  - name: '[]>'
+    fullName: '[]>'

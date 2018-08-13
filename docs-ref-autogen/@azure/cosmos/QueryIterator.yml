@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 47883452a0cbdb278f33d889b368dd1d9980f547
+ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40076500"
+items:
+- uid: '@azure/cosmos.QueryIterator'
+  name: QueryIterator
+  fullName: QueryIterator<T>
+  children:
+  - '@azure/cosmos.QueryIterator.current'
+  - '@azure/cosmos.QueryIterator.executeNext'
+  - '@azure/cosmos.QueryIterator.forEach'
+  - '@azure/cosmos.QueryIterator.hasMoreResults'
+  - '@azure/cosmos.QueryIterator.nextItem'
+  - '@azure/cosmos.QueryIterator.reset'
+  - '@azure/cosmos.QueryIterator.toArray'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="f8420-101">Представляет объект QueryIterator implmenetation веб-канал или ответ на запрос, позволяющий обхода и прохода ответ в службу базы данных Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="f8420-101">Represents a QueryIterator Object, an implmenetation of feed or query response that enables traversal and iterating over the response in the Azure Cosmos DB database service.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.current'
+  name: current
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8420-102">Извлечь текущий элемент на QueryIterator.</span><span class="sxs-lookup"><span data-stu-id="f8420-102">Retrieve the current element on the QueryIterator.</span></span>
+  syntax:
+    content: function current()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.executeNext'
+  name: executeNext
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8420-103">Получение следующего пакета веб-канала и передать их в виде массива в функцию</span><span class="sxs-lookup"><span data-stu-id="f8420-103">Retrieve the next batch of the feed and pass them as an array to a function</span></span>
+  syntax:
+    content: function executeNext()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.forEach'
+  name: forEach
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8420-104">Выполните указанный функцию один раз в элемент feed.</span><span class="sxs-lookup"><span data-stu-id="f8420-104">Execute a provided function once per feed element.</span></span>
+  syntax:
+    content: function forEach()
+    parameters: []
+    return:
+      type:
+      - AsyncIterable<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.hasMoreResults'
+  name: hasMoreResults
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: function hasMoreResults()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: '@azure/cosmos'
+  deprecated:
+    content: >-
+      Instead check if nextItem() or current() returns undefined.
+
+
+      Determine if there are still remaining resources to processs based on the value of the continuation token or the\
+
+      elements remaining on the current batch in the QueryIterator.
+- uid: '@azure/cosmos.QueryIterator.nextItem'
+  name: nextItem
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8420-105">Выполните указанный функцию на следующий элемент в QueryIterator.</span><span class="sxs-lookup"><span data-stu-id="f8420-105">Execute a provided function on the next element in the QueryIterator.</span></span>
+  syntax:
+    content: function nextItem()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T>>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.reset'
+  name: reset
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8420-106">Сброс QueryIterator в начало и очистить все ресурсы внутри него</span><span class="sxs-lookup"><span data-stu-id="f8420-106">Reset the QueryIterator to the beginning and clear all the resources inside it</span></span>
+  syntax:
+    content: function reset()
+    parameters: []
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.QueryIterator.toArray'
+  name: toArray
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f8420-107">Получить все элементы веб-канала и передать их в виде массива в функцию</span><span class="sxs-lookup"><span data-stu-id="f8420-107">Retrieve all the elements of the feed and pass them as an array to a function</span></span>
+  syntax:
+    content: function toArray()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/cosmos.Response<T[]>>
+  package: '@azure/cosmos'
+references:
+- uid: Promise<@azure/cosmos.Response<T>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T>>
+    fullName: <T>>
+- uid: AsyncIterable<@azure/cosmos.Response<T>>
+  spec.typeScript:
+  - name: AsyncIterable<
+    fullName: AsyncIterable<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T>>
+    fullName: <T>>
+- uid: Promise<@azure/cosmos.Response<T[]>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: Response
+    fullName: Response
+    uid: '@azure/cosmos.Response'
+  - name: <T[]>>
+    fullName: <T[]>>
