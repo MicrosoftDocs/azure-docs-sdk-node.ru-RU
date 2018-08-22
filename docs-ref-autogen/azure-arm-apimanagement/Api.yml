@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 18705ea2d95a0a971cd40bc3925672b0c5898101
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 20a414766fb6371c5906a617b3e76e896a4d30cf
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40074872"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41681289"
 items:
 - uid: azure-arm-apimanagement.Api
   name: Api
@@ -59,7 +59,7 @@ items:
   - typeScript
   summary: Создает новые или обновляет существующий указанный API экземпляра службы управления API.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiCreateOrUpdateParameter, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiCreateOrUpdateParameter, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -83,7 +83,7 @@ items:
         Создание или обновление параметров.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -132,7 +132,7 @@ items:
   - typeScript
   summary: Создает новые или обновляет существующий указанный API экземпляра службы управления API.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiCreateOrUpdateParameter, options: function, callback: ServiceCallback<ApiContract>)'
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiCreateOrUpdateParameter, options: Object, callback: ServiceCallback<ApiContract>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -152,7 +152,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -170,7 +170,7 @@ items:
   - typeScript
   summary: Создает новые или обновляет существующий указанный API экземпляра службы управления API.
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiCreateOrUpdateParameter, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiCreateOrUpdateParameter, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -194,7 +194,7 @@ items:
         Создание или обновление параметров.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -209,7 +209,7 @@ items:
   - typeScript
   summary: Удаляет указанный API экземпляра службы управления API.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -233,7 +233,7 @@ items:
         ETag сущности. ETag должен соответствовать текущее состояние сущности из заголовка ответа на запрос GET, или он должен быть * для Безусловное обновление.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -248,7 +248,7 @@ items:
   - typeScript
   summary: Удаляет указанный API экземпляра службы управления API.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -268,7 +268,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -320,7 +320,7 @@ items:
   - typeScript
   summary: Удаляет указанный API экземпляра службы управления API.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -344,7 +344,7 @@ items:
         ETag сущности. ETag должен соответствовать текущее состояние сущности из заголовка ответа на запрос GET, или он должен быть * для Безусловное обновление.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -389,7 +389,7 @@ items:
   - typeScript
   summary: Возвращает сведения об API, указанного по его идентификатору.
   syntax:
-    content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, options?: function)'
+    content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -408,7 +408,7 @@ items:
         Идентификатор редакции API. Должно быть уникальным в текущем экземпляре службы управления API. Версия Non-current подчеркнут rev = n в качестве суффикса, где n — номер редакции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -423,7 +423,7 @@ items:
   - typeScript
   summary: Возвращает сведения об API, указанного по его идентификатору.
   syntax:
-    content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, options: function, callback: ServiceCallback<ApiContract>)'
+    content: 'function get(resourceGroupName: string, serviceName: string, apiId: string, options: Object, callback: ServiceCallback<ApiContract>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -439,7 +439,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -457,7 +457,7 @@ items:
   - typeScript
   summary: Получает версия состояния сущности (Etag) API, указанного по его идентификатору.
   syntax:
-    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, options?: function)'
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -476,7 +476,7 @@ items:
         Идентификатор редакции API. Должно быть уникальным в текущем экземпляре службы управления API. Версия Non-current подчеркнут rev = n в качестве суффикса, где n — номер редакции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -521,7 +521,7 @@ items:
   - typeScript
   summary: Получает версия состояния сущности (Etag) API, указанного по его идентификатору.
   syntax:
-    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, apiId: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -537,7 +537,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -555,7 +555,7 @@ items:
   - typeScript
   summary: Получает версия состояния сущности (Etag) API, указанного по его идентификатору.
   syntax:
-    content: 'function getEntityTagWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, options?: function)'
+    content: 'function getEntityTagWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -574,7 +574,7 @@ items:
         Идентификатор редакции API. Должно быть уникальным в текущем экземпляре службы управления API. Версия Non-current подчеркнут rev = n в качестве суффикса, где n — номер редакции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -589,7 +589,7 @@ items:
   - typeScript
   summary: Возвращает сведения об API, указанного по его идентификатору.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -608,7 +608,7 @@ items:
         Идентификатор редакции API. Должно быть уникальным в текущем экземпляре службы управления API. Версия Non-current подчеркнут rev = n в качестве суффикса, где n — номер редакции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -623,7 +623,7 @@ items:
   - typeScript
   summary: Перечисляет все API-интерфейсы экземпляра службы управления API.
   syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, options?: function)'
+    content: 'function listByService(resourceGroupName: string, serviceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -637,7 +637,7 @@ items:
         Имя службы управления API.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -678,7 +678,7 @@ items:
   - typeScript
   summary: Перечисляет все API-интерфейсы экземпляра службы управления API.
   syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, options: function, callback: ServiceCallback<ApiCollection>)'
+    content: 'function listByService(resourceGroupName: string, serviceName: string, options: Object, callback: ServiceCallback<ApiCollection>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -690,7 +690,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -708,7 +708,7 @@ items:
   - typeScript
   summary: Перечисляет все API-интерфейсы экземпляра службы управления API.
   syntax:
-    content: 'function listByServiceNext(nextPageLink: string, options?: function)'
+    content: 'function listByServiceNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -717,7 +717,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -732,7 +732,7 @@ items:
   - typeScript
   summary: Перечисляет все API-интерфейсы экземпляра службы управления API.
   syntax:
-    content: 'function listByServiceNext(nextPageLink: string, options: function, callback: ServiceCallback<ApiCollection>)'
+    content: 'function listByServiceNext(nextPageLink: string, options: Object, callback: ServiceCallback<ApiCollection>)'
     parameters:
     - id: nextPageLink
       type:
@@ -740,7 +740,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -780,7 +780,7 @@ items:
   - typeScript
   summary: Перечисляет все API-интерфейсы экземпляра службы управления API.
   syntax:
-    content: 'function listByServiceNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByServiceNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -789,7 +789,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -804,7 +804,7 @@ items:
   - typeScript
   summary: Перечисляет все API-интерфейсы экземпляра службы управления API.
   syntax:
-    content: 'function listByServiceWithHttpOperationResponse(resourceGroupName: string, serviceName: string, options?: function)'
+    content: 'function listByServiceWithHttpOperationResponse(resourceGroupName: string, serviceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -818,7 +818,7 @@ items:
         Имя службы управления API.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -833,7 +833,7 @@ items:
   - typeScript
   summary: Перечисляет коллекцию API, связанных с тегами.
   syntax:
-    content: 'function listByTags(resourceGroupName: string, serviceName: string, options?: function)'
+    content: 'function listByTags(resourceGroupName: string, serviceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -847,7 +847,7 @@ items:
         Имя службы управления API.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -888,7 +888,7 @@ items:
   - typeScript
   summary: Перечисляет коллекцию API, связанных с тегами.
   syntax:
-    content: 'function listByTags(resourceGroupName: string, serviceName: string, options: function, callback: ServiceCallback<TagResourceCollection>)'
+    content: 'function listByTags(resourceGroupName: string, serviceName: string, options: Object, callback: ServiceCallback<TagResourceCollection>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -900,7 +900,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -918,7 +918,7 @@ items:
   - typeScript
   summary: Перечисляет коллекцию API, связанных с тегами.
   syntax:
-    content: 'function listByTagsNext(nextPageLink: string, options?: function)'
+    content: 'function listByTagsNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -927,7 +927,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -964,7 +964,7 @@ items:
   - typeScript
   summary: Перечисляет коллекцию API, связанных с тегами.
   syntax:
-    content: 'function listByTagsNext(nextPageLink: string, options: function, callback: ServiceCallback<TagResourceCollection>)'
+    content: 'function listByTagsNext(nextPageLink: string, options: Object, callback: ServiceCallback<TagResourceCollection>)'
     parameters:
     - id: nextPageLink
       type:
@@ -972,7 +972,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -990,7 +990,7 @@ items:
   - typeScript
   summary: Перечисляет коллекцию API, связанных с тегами.
   syntax:
-    content: 'function listByTagsNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByTagsNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -999,7 +999,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1014,7 +1014,7 @@ items:
   - typeScript
   summary: Перечисляет коллекцию API, связанных с тегами.
   syntax:
-    content: 'function listByTagsWithHttpOperationResponse(resourceGroupName: string, serviceName: string, options?: function)'
+    content: 'function listByTagsWithHttpOperationResponse(resourceGroupName: string, serviceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1028,7 +1028,7 @@ items:
         Имя службы управления API.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1043,7 +1043,7 @@ items:
   - typeScript
   summary: Обновляет указанный API экземпляра службы управления API.
   syntax:
-    content: 'function update(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiUpdateContract, ifMatch: string, options?: function)'
+    content: 'function update(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiUpdateContract, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1072,7 +1072,7 @@ items:
         ETag сущности. ETag должен соответствовать текущее состояние сущности из заголовка ответа на запрос GET, или он должен быть * для Безусловное обновление.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1125,7 +1125,7 @@ items:
   - typeScript
   summary: Обновляет указанный API экземпляра службы управления API.
   syntax:
-    content: 'function update(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiUpdateContract, ifMatch: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function update(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiUpdateContract, ifMatch: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1149,7 +1149,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1167,7 +1167,7 @@ items:
   - typeScript
   summary: Обновляет указанный API экземпляра службы управления API.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiUpdateContract, ifMatch: string, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, serviceName: string, apiId: string, parameters: ApiUpdateContract, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1196,7 +1196,7 @@ items:
         ETag сущности. ETag должен соответствовать текущее состояние сущности из заголовка ответа на запрос GET, или он должен быть * для Безусловное обновление.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
