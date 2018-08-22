@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 757aa62899e80b2f6aab59a6249e126931e1f287
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: ab106b4cabe183b378ffae873d15e198770308c1
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40076457"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41691870"
 items:
 - uid: azure-arm-cosmosdb.CollectionPartition
   name: CollectionPartition
@@ -31,7 +31,7 @@ items:
   - typeScript
   summary: Получает метрики, определяется заданным фильтром для данной коллекции, разбиение по секциям.
   syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options?: function)'
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -60,7 +60,7 @@ items:
         Выражение фильтра OData, описывающий подмножество возвращаемых показателей. Параметры, которые могут быть отфильтрованы являются name.value (Имя метрики, могут иметь имена или нескольких), startTime, endTime и timeGrain. Поддерживаемый оператор является eq.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -113,7 +113,7 @@ items:
   - typeScript
   summary: Получает метрики, определяется заданным фильтром для данной коллекции, разбиение по секциям.
   syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options: function, callback: ServiceCallback<PartitionMetricListResult>)'
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options: Object, callback: ServiceCallback<PartitionMetricListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -137,7 +137,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -155,7 +155,7 @@ items:
   - typeScript
   summary: Получает метрики, определяется заданным фильтром для данной коллекции, разбиение по секциям.
   syntax:
-    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options?: function)'
+    content: 'function listMetricsWithHttpOperationResponse(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -184,7 +184,7 @@ items:
         Выражение фильтра OData, описывающий подмножество возвращаемых показателей. Параметры, которые могут быть отфильтрованы являются name.value (Имя метрики, могут иметь имена или нескольких), startTime, endTime и timeGrain. Поддерживаемый оператор является eq.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -199,7 +199,7 @@ items:
   - typeScript
   summary: Извлекает данные об использовании (самые последние данные в хранилище) для данной коллекции, разбиение по секциям.
   syntax:
-    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options?: function)'
+    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -223,7 +223,7 @@ items:
         Коллекция Cosmos DB rid.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -272,7 +272,7 @@ items:
   - typeScript
   summary: Извлекает данные об использовании (самые последние данные в хранилище) для данной коллекции, разбиение по секциям.
   syntax:
-    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options: function, callback: ServiceCallback<PartitionUsagesResult>)'
+    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options: Object, callback: ServiceCallback<PartitionUsagesResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -292,7 +292,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -310,7 +310,7 @@ items:
   - typeScript
   summary: Извлекает данные об использовании (самые последние данные в хранилище) для данной коллекции, разбиение по секциям.
   syntax:
-    content: 'function listUsagesWithHttpOperationResponse(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options?: function)'
+    content: 'function listUsagesWithHttpOperationResponse(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -334,7 +334,7 @@ items:
         Коллекция Cosmos DB rid.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 80b442f5d901c98fab62df1c801b309932a5f5db
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 3bb4849e823176988eb0a1e05641eb7911e78346
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40073921"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41691676"
 items:
 - uid: azure-arm-resource.Resources
   name: Resources
@@ -119,7 +119,7 @@ items:
   - typeScript
   summary: Создает ресурс.
   syntax:
-    content: 'function beginCreateOrUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -158,7 +158,7 @@ items:
         Параметры для создания или обновления ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -219,7 +219,7 @@ items:
   - typeScript
   summary: Создает ресурс.
   syntax:
-    content: 'function beginCreateOrUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -251,7 +251,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -299,7 +299,7 @@ items:
   - typeScript
   summary: Создание ресурсов по идентификатору.
   syntax:
-    content: 'function beginCreateOrUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function beginCreateOrUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceId
       type:
@@ -315,7 +315,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -333,7 +333,7 @@ items:
   - typeScript
   summary: Создание ресурсов по идентификатору.
   syntax:
-    content: 'function beginCreateOrUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function beginCreateOrUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -352,7 +352,7 @@ items:
         Создание или обновление параметров ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -367,7 +367,7 @@ items:
   - typeScript
   summary: Создание ресурсов по идентификатору.
   syntax:
-    content: 'function beginCreateOrUpdateByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function beginCreateOrUpdateByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -386,7 +386,7 @@ items:
         Создание или обновление параметров ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -401,7 +401,7 @@ items:
   - typeScript
   summary: Создает ресурс.
   syntax:
-    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -440,7 +440,7 @@ items:
         Параметры для создания или обновления ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -455,7 +455,7 @@ items:
   - typeScript
   summary: Удаляет ресурс по идентификатору.
   syntax:
-    content: 'function beginDeleteById(resourceId: string, apiVersion: string, options?: function)'
+    content: 'function beginDeleteById(resourceId: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -469,7 +469,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -484,7 +484,7 @@ items:
   - typeScript
   summary: Удаляет ресурс по идентификатору.
   syntax:
-    content: 'function beginDeleteById(resourceId: string, apiVersion: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginDeleteById(resourceId: string, apiVersion: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceId
       type:
@@ -496,7 +496,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -540,7 +540,7 @@ items:
   - typeScript
   summary: Удаляет ресурс по идентификатору.
   syntax:
-    content: 'function beginDeleteByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, options?: function)'
+    content: 'function beginDeleteByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -554,7 +554,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -569,7 +569,7 @@ items:
   - typeScript
   summary: Удаляет ресурс.
   syntax:
-    content: 'function beginDeleteMethod(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: function)'
+    content: 'function beginDeleteMethod(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -603,7 +603,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -660,7 +660,7 @@ items:
   - typeScript
   summary: Удаляет ресурс.
   syntax:
-    content: 'function beginDeleteMethod(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginDeleteMethod(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -688,7 +688,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -706,7 +706,7 @@ items:
   - typeScript
   summary: Удаляет ресурс.
   syntax:
-    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: function)'
+    content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -740,7 +740,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -755,7 +755,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -767,7 +767,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -811,7 +811,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: function)'
+    content: 'function beginMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: Object)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -825,7 +825,7 @@ items:
         Параметры для перемещения ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -840,7 +840,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginMoveResourcesWithHttpOperationResponse(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: function)'
+    content: 'function beginMoveResourcesWithHttpOperationResponse(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: Object)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -854,7 +854,7 @@ items:
         Параметры для перемещения ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -869,7 +869,7 @@ items:
   - typeScript
   summary: Обновляет ресурс.
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function beginUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -908,7 +908,7 @@ items:
         Параметры для обновления ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -969,7 +969,7 @@ items:
   - typeScript
   summary: Обновляет ресурс.
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function beginUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1001,7 +1001,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1049,7 +1049,7 @@ items:
   - typeScript
   summary: Обновляет ресурс по идентификатору.
   syntax:
-    content: 'function beginUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function beginUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceId
       type:
@@ -1065,7 +1065,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1083,7 +1083,7 @@ items:
   - typeScript
   summary: Обновляет ресурс по идентификатору.
   syntax:
-    content: 'function beginUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function beginUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -1102,7 +1102,7 @@ items:
         Обновление параметров ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1117,7 +1117,7 @@ items:
   - typeScript
   summary: Обновляет ресурс по идентификатору.
   syntax:
-    content: 'function beginUpdateByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function beginUpdateByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -1136,7 +1136,7 @@ items:
         Обновление параметров ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1151,7 +1151,7 @@ items:
   - typeScript
   summary: Обновляет ресурс.
   syntax:
-    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1190,7 +1190,7 @@ items:
         Параметры для обновления ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1231,7 +1231,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginValidateMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: function)'
+    content: 'function beginValidateMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: Object)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -1245,7 +1245,7 @@ items:
         Параметры для перемещения ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1260,7 +1260,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginValidateMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginValidateMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -1272,7 +1272,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1290,7 +1290,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginValidateMoveResourcesWithHttpOperationResponse(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: function)'
+    content: 'function beginValidateMoveResourcesWithHttpOperationResponse(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: Object)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -1304,7 +1304,7 @@ items:
         Параметры для перемещения ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1319,7 +1319,7 @@ items:
   - typeScript
   summary: Проверяет, существует ли ресурс.
   syntax:
-    content: 'function checkExistence(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: function)'
+    content: 'function checkExistence(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1353,7 +1353,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1410,7 +1410,7 @@ items:
   - typeScript
   summary: Проверяет, существует ли ресурс.
   syntax:
-    content: 'function checkExistence(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options: function, callback: ServiceCallback<boolean>)'
+    content: 'function checkExistence(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options: Object, callback: ServiceCallback<boolean>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1438,7 +1438,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1456,7 +1456,7 @@ items:
   - typeScript
   summary: Проверка по Идентификатору ресурса.
   syntax:
-    content: 'function checkExistenceById(resourceId: string, apiVersion: string, options?: function)'
+    content: 'function checkExistenceById(resourceId: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -1470,7 +1470,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1511,7 +1511,7 @@ items:
   - typeScript
   summary: Проверка по Идентификатору ресурса.
   syntax:
-    content: 'function checkExistenceById(resourceId: string, apiVersion: string, options: function, callback: ServiceCallback<boolean>)'
+    content: 'function checkExistenceById(resourceId: string, apiVersion: string, options: Object, callback: ServiceCallback<boolean>)'
     parameters:
     - id: resourceId
       type:
@@ -1523,7 +1523,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1541,7 +1541,7 @@ items:
   - typeScript
   summary: Проверка по Идентификатору ресурса.
   syntax:
-    content: 'function checkExistenceByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, options?: function)'
+    content: 'function checkExistenceByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -1555,7 +1555,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1570,7 +1570,7 @@ items:
   - typeScript
   summary: Проверяет, существует ли ресурс.
   syntax:
-    content: 'function checkExistenceWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: function)'
+    content: 'function checkExistenceWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1604,7 +1604,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1619,7 +1619,7 @@ items:
   - typeScript
   summary: Создает ресурс.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1658,7 +1658,7 @@ items:
         Параметры для создания или обновления ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1719,7 +1719,7 @@ items:
   - typeScript
   summary: Создает ресурс.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function createOrUpdate(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1751,7 +1751,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1769,7 +1769,7 @@ items:
   - typeScript
   summary: Создание ресурсов по идентификатору.
   syntax:
-    content: 'function createOrUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function createOrUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -1788,7 +1788,7 @@ items:
         Создание или обновление параметров ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1833,7 +1833,7 @@ items:
   - typeScript
   summary: Создание ресурсов по идентификатору.
   syntax:
-    content: 'function createOrUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function createOrUpdateById(resourceId: string, apiVersion: string, parameters: GenericResource, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceId
       type:
@@ -1849,7 +1849,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1867,7 +1867,7 @@ items:
   - typeScript
   summary: Создание ресурсов по идентификатору.
   syntax:
-    content: 'function createOrUpdateByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function createOrUpdateByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -1886,7 +1886,7 @@ items:
         Создание или обновление параметров ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1901,7 +1901,7 @@ items:
   - typeScript
   summary: Создает ресурс.
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1940,7 +1940,7 @@ items:
         Параметры для создания или обновления ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1955,7 +1955,7 @@ items:
   - typeScript
   summary: Удаляет ресурс по идентификатору.
   syntax:
-    content: 'function deleteById(resourceId: string, apiVersion: string, options?: function)'
+    content: 'function deleteById(resourceId: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -1969,7 +1969,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2010,7 +2010,7 @@ items:
   - typeScript
   summary: Удаляет ресурс по идентификатору.
   syntax:
-    content: 'function deleteById(resourceId: string, apiVersion: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteById(resourceId: string, apiVersion: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceId
       type:
@@ -2022,7 +2022,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2040,7 +2040,7 @@ items:
   - typeScript
   summary: Удаляет ресурс по идентификатору.
   syntax:
-    content: 'function deleteByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, options?: function)'
+    content: 'function deleteByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -2054,7 +2054,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2069,7 +2069,7 @@ items:
   - typeScript
   summary: Удаляет ресурс.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2103,7 +2103,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2118,7 +2118,7 @@ items:
   - typeScript
   summary: Удаляет ресурс.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2146,7 +2146,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2206,7 +2206,7 @@ items:
   - typeScript
   summary: Удаляет ресурс.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2240,7 +2240,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2255,7 +2255,7 @@ items:
   - typeScript
   summary: Получает ресурс.
   syntax:
-    content: 'function get(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: function)'
+    content: 'function get(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2289,7 +2289,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2304,7 +2304,7 @@ items:
   - typeScript
   summary: Получает ресурс.
   syntax:
-    content: 'function get(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function get(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2332,7 +2332,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2392,7 +2392,7 @@ items:
   - typeScript
   summary: Получает ресурс по идентификатору.
   syntax:
-    content: 'function getById(resourceId: string, apiVersion: string, options?: function)'
+    content: 'function getById(resourceId: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -2406,7 +2406,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2447,7 +2447,7 @@ items:
   - typeScript
   summary: Получает ресурс по идентификатору.
   syntax:
-    content: 'function getById(resourceId: string, apiVersion: string, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function getById(resourceId: string, apiVersion: string, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceId
       type:
@@ -2459,7 +2459,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2477,7 +2477,7 @@ items:
   - typeScript
   summary: Получает ресурс по идентификатору.
   syntax:
-    content: 'function getByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, options?: function)'
+    content: 'function getByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -2491,7 +2491,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2506,7 +2506,7 @@ items:
   - typeScript
   summary: Получает ресурс.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2540,7 +2540,7 @@ items:
         Версия API для использования в операции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2555,11 +2555,11 @@ items:
   - typeScript
   summary: Получите все ресурсы в подписке.
   syntax:
-    content: 'function list(options?: function)'
+    content: 'function list(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2574,11 +2574,11 @@ items:
   - typeScript
   summary: Получите все ресурсы в подписке.
   syntax:
-    content: 'function list(options: function, callback: ServiceCallback<ResourceListResult>)'
+    content: 'function list(options: Object, callback: ServiceCallback<ResourceListResult>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2614,7 +2614,7 @@ items:
   - typeScript
   summary: Получите все ресурсы для группы ресурсов.
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2623,7 +2623,7 @@ items:
         Группа ресурсов с ресурсами для получения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2660,7 +2660,7 @@ items:
   - typeScript
   summary: Получите все ресурсы для группы ресурсов.
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<ResourceListResult>)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<ResourceListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2668,7 +2668,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2686,7 +2686,7 @@ items:
   - typeScript
   summary: Получите все ресурсы для группы ресурсов.
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -2695,7 +2695,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2732,7 +2732,7 @@ items:
   - typeScript
   summary: Получите все ресурсы для группы ресурсов.
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options: function, callback: ServiceCallback<ResourceListResult>)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<ResourceListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -2740,7 +2740,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2758,7 +2758,7 @@ items:
   - typeScript
   summary: Получите все ресурсы для группы ресурсов.
   syntax:
-    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -2767,7 +2767,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2782,7 +2782,7 @@ items:
   - typeScript
   summary: Получите все ресурсы для группы ресурсов.
   syntax:
-    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2791,7 +2791,7 @@ items:
         Группа ресурсов с ресурсами для получения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2828,7 +2828,7 @@ items:
   - typeScript
   summary: Получите все ресурсы в подписке.
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<ResourceListResult>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<ResourceListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -2836,7 +2836,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2854,7 +2854,7 @@ items:
   - typeScript
   summary: Получите все ресурсы в подписке.
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -2863,7 +2863,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2878,7 +2878,7 @@ items:
   - typeScript
   summary: Получите все ресурсы в подписке.
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -2887,7 +2887,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2902,11 +2902,11 @@ items:
   - typeScript
   summary: Получите все ресурсы в подписке.
   syntax:
-    content: 'function listWithHttpOperationResponse(options?: function)'
+    content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2921,7 +2921,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function moveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: function)'
+    content: 'function moveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: Object)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -2935,7 +2935,7 @@ items:
         Параметры для перемещения ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2976,7 +2976,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function moveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options: function, callback: ServiceCallback<void>)'
+    content: 'function moveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -2988,7 +2988,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -3006,7 +3006,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function moveResourcesWithHttpOperationResponse(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: function)'
+    content: 'function moveResourcesWithHttpOperationResponse(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: Object)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -3020,7 +3020,7 @@ items:
         Параметры для перемещения ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -3035,7 +3035,7 @@ items:
   - typeScript
   summary: Обновляет ресурс.
   syntax:
-    content: 'function update(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function update(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -3074,7 +3074,7 @@ items:
         Параметры для обновления ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -3135,7 +3135,7 @@ items:
   - typeScript
   summary: Обновляет ресурс.
   syntax:
-    content: 'function update(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function update(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -3167,7 +3167,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -3185,7 +3185,7 @@ items:
   - typeScript
   summary: Обновляет ресурс по идентификатору.
   syntax:
-    content: 'function updateById(resourceId: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function updateById(resourceId: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -3204,7 +3204,7 @@ items:
         Обновление параметров ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -3249,7 +3249,7 @@ items:
   - typeScript
   summary: Обновляет ресурс по идентификатору.
   syntax:
-    content: 'function updateById(resourceId: string, apiVersion: string, parameters: GenericResource, options: function, callback: ServiceCallback<GenericResource>)'
+    content: 'function updateById(resourceId: string, apiVersion: string, parameters: GenericResource, options: Object, callback: ServiceCallback<GenericResource>)'
     parameters:
     - id: resourceId
       type:
@@ -3265,7 +3265,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -3283,7 +3283,7 @@ items:
   - typeScript
   summary: Обновляет ресурс по идентификатору.
   syntax:
-    content: 'function updateByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function updateByIdWithHttpOperationResponse(resourceId: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceId
       type:
@@ -3302,7 +3302,7 @@ items:
         Обновление параметров ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -3317,7 +3317,7 @@ items:
   - typeScript
   summary: Обновляет ресурс.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, resourceProviderNamespace: string, parentResourcePath: string, resourceType: string, resourceName: string, apiVersion: string, parameters: GenericResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -3356,7 +3356,7 @@ items:
         Параметры для обновления ресурса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -3371,7 +3371,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function validateMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: function)'
+    content: 'function validateMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: Object)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -3385,7 +3385,7 @@ items:
         Параметры для перемещения ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -3426,7 +3426,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function validateMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options: function, callback: ServiceCallback<void>)'
+    content: 'function validateMoveResources(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -3438,7 +3438,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -3456,7 +3456,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function validateMoveResourcesWithHttpOperationResponse(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: function)'
+    content: 'function validateMoveResourcesWithHttpOperationResponse(sourceResourceGroupName: string, parameters: ResourcesMoveInfo, options?: Object)'
     parameters:
     - id: sourceResourceGroupName
       type:
@@ -3470,7 +3470,7 @@ items:
         Параметры для перемещения ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
