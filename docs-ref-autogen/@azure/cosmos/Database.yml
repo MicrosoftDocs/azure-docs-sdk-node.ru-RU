@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4beb3e4403ee3d2adac43843b0b8f717f13d012a
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: f65057c5254ef5765a4d0c94c31ba22cce8ecae5
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40073441"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41695703"
 items:
 - uid: '@azure/cosmos.Database'
   name: Database
@@ -23,7 +23,7 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="24b17-101">Операции для чтения или удаление существующей базы данных.</span><span class="sxs-lookup"><span data-stu-id="24b17-101">Operations for reading or deleting an existing database.</span></span>
+  summary: <span data-ttu-id="43021-101">Операции для чтения или удаление существующей базы данных.</span><span class="sxs-lookup"><span data-stu-id="43021-101">Operations for reading or deleting an existing database.</span></span>
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Database.client'
   name: client
@@ -46,7 +46,7 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="24b17-102">Используется для чтения, замены или удаления конкретного, существующие <xref:Database> по идентификатору. Используйте `.containers` создавая контейнеры или запросов/чтения всех контейнеров.</span><span class="sxs-lookup"><span data-stu-id="24b17-102">Used to read, replace, or delete a specific, existing <xref:Database> by id. Use `.containers` creating new containers, or querying/reading all containers.</span></span>
+    <span data-ttu-id="43021-102">Используется для чтения, замены или удаления конкретного, существующие <xref:Database> по идентификатору. Используйте `.containers` создавая контейнеры или запросов/чтения всех контейнеров.</span><span class="sxs-lookup"><span data-stu-id="43021-102">Used to read, replace, or delete a specific, existing <xref:Database> by id. Use `.containers` creating new containers, or querying/reading all containers.</span></span>
   syntax:
     content: 'function container(id: string)'
     parameters:
@@ -66,9 +66,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="24b17-103">Используется для создания новых контейнеров или запросов/чтения всех контейнеров.</span><span class="sxs-lookup"><span data-stu-id="24b17-103">Used for creating new containers, or querying/reading all containers.</span></span>
+    <span data-ttu-id="43021-103">Используется для создания новых контейнеров или запросов/чтения всех контейнеров.</span><span class="sxs-lookup"><span data-stu-id="43021-103">Used for creating new containers, or querying/reading all containers.</span></span>
 
-    <span data-ttu-id="24b17-104">Используйте `.container(id)` для чтения, замены или удаления конкретного, существующие <xref:Database> по идентификатору.</span><span class="sxs-lookup"><span data-stu-id="24b17-104">Use `.container(id)` to read, replace, or delete a specific, existing <xref:Database> by id.</span></span>
+    <span data-ttu-id="43021-104">Используйте `.container(id)` для чтения, замены или удаления конкретного, существующие <xref:Database> по идентификатору.</span><span class="sxs-lookup"><span data-stu-id="43021-104">Use `.container(id)` to read, replace, or delete a specific, existing <xref:Database> by id.</span></span>
   syntax:
     content: 'containers: Containers'
     return:
@@ -82,11 +82,11 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="24b17-105">Возвращает новый <xref:Database> экземпляра.</span><span class="sxs-lookup"><span data-stu-id="24b17-105">Returns a new <xref:Database> instance.</span></span>
+    <span data-ttu-id="43021-105">Возвращает новый <xref:Database> экземпляра.</span><span class="sxs-lookup"><span data-stu-id="43021-105">Returns a new <xref:Database> instance.</span></span>
 
-    <span data-ttu-id="24b17-106">Примечание: планируется получить этот объект из объекта <xref:CosmosClient> через `client.databsae(id)`, не для реализации объекта его самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="24b17-106">Note: the intention is to get this object from <xref:CosmosClient> via `client.databsae(id)`, not to instaniate it yourself.</span></span>
+    <span data-ttu-id="43021-106">Примечание: планируется получить этот объект из объекта <xref:CosmosClient> через `client.databsae(id)`, не для реализации объекта его самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="43021-106">Note: the intention is to get this object from <xref:CosmosClient> via `client.databsae(id)`, not to instaniate it yourself.</span></span>
   syntax:
-    content: 'new Database(client: CosmosClient, id: string)'
+    content: 'new Database(client: CosmosClient, id: string, clientContext: ClientContext)'
     parameters:
     - id: client
       type:
@@ -96,6 +96,10 @@ items:
       type:
       - string
       description: ''
+    - id: clientContext
+      type:
+      - ClientContext
+      description: ''
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Database.delete'
   name: delete
@@ -103,7 +107,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="24b17-107">Удаление указанной базы данных.</span><span class="sxs-lookup"><span data-stu-id="24b17-107">Delete the given Database.</span></span>
+  summary: <span data-ttu-id="43021-107">Удаление указанной базы данных.</span><span class="sxs-lookup"><span data-stu-id="43021-107">Delete the given Database.</span></span>
   syntax:
     content: 'function delete(options?: RequestOptions)'
     parameters:
@@ -136,7 +140,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="24b17-108">Чтение определения данной базе данных.</span><span class="sxs-lookup"><span data-stu-id="24b17-108">Read the definition of the given Database.</span></span>
+  summary: <span data-ttu-id="43021-108">Чтение определения данной базе данных.</span><span class="sxs-lookup"><span data-stu-id="43021-108">Read the definition of the given Database.</span></span>
   syntax:
     content: 'function read(options?: RequestOptions)'
     parameters:
@@ -156,7 +160,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="24b17-109">Возвращает URL-адрес ссылки на ресурс.</span><span class="sxs-lookup"><span data-stu-id="24b17-109">Returns a reference URL to the resource.</span></span> <span data-ttu-id="24b17-110">Используется для связывания в разрешениях.</span><span class="sxs-lookup"><span data-stu-id="24b17-110">Used for linking in Permissions.</span></span>
+  summary: <span data-ttu-id="43021-109">Возвращает URL-адрес ссылки на ресурс.</span><span class="sxs-lookup"><span data-stu-id="43021-109">Returns a reference URL to the resource.</span></span> <span data-ttu-id="43021-110">Используется для связывания в разрешениях.</span><span class="sxs-lookup"><span data-stu-id="43021-110">Used for linking in Permissions.</span></span>
   syntax:
     content: 'url: string'
     return:
@@ -170,7 +174,7 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="24b17-111">Используется для чтения, замены или удаления конкретного, существующие <xref:User> по идентификатору. Используйте `.users` для создания новых пользователей или запросов/чтения всех пользователей.</span><span class="sxs-lookup"><span data-stu-id="24b17-111">Used to read, replace, or delete a specific, existing <xref:User> by id. Use `.users` for creating new users, or querying/reading all users.</span></span>
+    <span data-ttu-id="43021-111">Используется для чтения, замены или удаления конкретного, существующие <xref:User> по идентификатору. Используйте `.users` для создания новых пользователей или запросов/чтения всех пользователей.</span><span class="sxs-lookup"><span data-stu-id="43021-111">Used to read, replace, or delete a specific, existing <xref:User> by id. Use `.users` for creating new users, or querying/reading all users.</span></span>
   syntax:
     content: 'function user(id: string)'
     parameters:
@@ -190,9 +194,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="24b17-112">Используется для создания новых пользователей или запросов/чтения всех пользователей.</span><span class="sxs-lookup"><span data-stu-id="24b17-112">Used for creating new users, or querying/reading all users.</span></span>
+    <span data-ttu-id="43021-112">Используется для создания новых пользователей или запросов/чтения всех пользователей.</span><span class="sxs-lookup"><span data-stu-id="43021-112">Used for creating new users, or querying/reading all users.</span></span>
 
-    <span data-ttu-id="24b17-113">Используйте `.user(id)` для чтения, замены или удаления конкретного, существующие <xref:User> по идентификатору.</span><span class="sxs-lookup"><span data-stu-id="24b17-113">Use `.user(id)` to read, replace, or delete a specific, existing <xref:User> by id.</span></span>
+    <span data-ttu-id="43021-113">Используйте `.user(id)` для чтения, замены или удаления конкретного, существующие <xref:User> по идентификатору.</span><span class="sxs-lookup"><span data-stu-id="43021-113">Use `.user(id)` to read, replace, or delete a specific, existing <xref:User> by id.</span></span>
   syntax:
     content: 'users: Users'
     return:
