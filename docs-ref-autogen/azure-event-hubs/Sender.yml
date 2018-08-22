@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: d694f449078a8087f6e94153ea07a59681065ae8
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: dd9ce5d7e0c431f2655cbf469b0092b341b5c3b4
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40072961"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41692463"
 items:
 - uid: azure-event-hubs.Sender
   name: Sender
@@ -16,7 +16,11 @@ items:
   - azure-event-hubs.Sender.credit
   - azure-event-hubs.Sender.error
   - azure-event-hubs.Sender.getMaxListeners
+  - azure-event-hubs.Sender.isClosed
+  - azure-event-hubs.Sender.isItselfClosed
   - azure-event-hubs.Sender.isOpen
+  - azure-event-hubs.Sender.isSessionClosed
+  - azure-event-hubs.Sender.isSessionItselfClosed
   - azure-event-hubs.Sender.name
   - azure-event-hubs.Sender.properties
   - azure-event-hubs.Sender.registerHandler
@@ -121,6 +125,40 @@ items:
       type:
       - number
   package: azure-event-hubs
+- uid: azure-event-hubs.Sender.isClosed
+  name: isClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Определяет, закрываются ли локальные и удаленные конечной точки для ссылки или его базовых сеанса или его базовое подключение.
+
+    В «sender_close» «session_close» обработчик событий, если этот метод возвращает `false` это означает, что локальная конечная по-прежнему открыт. Его можно использовать для определения закрытия было инициировано локально в таких обстоятельствах.
+  syntax:
+    content: function isClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Sender.isItselfClosed
+  name: isItselfClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Определяет, закрываются ли локальные и удаленные конечную точку для просто сама ссылка.
+
+    В обработчик событий «sender_close», если этот метод возвращает `false` это означает, что локальная конечная по-прежнему открыт. Его можно использовать для определения закрытия было инициировано локально в таких обстоятельствах.
+  syntax:
+    content: function isItselfClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
 - uid: azure-event-hubs.Sender.isOpen
   name: isOpen
   children: []
@@ -130,6 +168,40 @@ items:
   summary: Определяет, открыт ли ссылке отправителя.
   syntax:
     content: function isOpen()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Sender.isSessionClosed
+  name: isSessionClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Определяет, закрываются ли локальные и удаленные конечную точку для сеанса, или его базовое подключение.
+
+    В обработчик событий «session_close», если этот метод возвращает `false` это означает, что локальная конечная по-прежнему открыт. Его можно использовать для определения закрытия было инициировано локально в таких обстоятельствах.
+  syntax:
+    content: function isSessionClosed()
+    parameters: []
+    return:
+      type:
+      - boolean
+  package: azure-event-hubs
+- uid: azure-event-hubs.Sender.isSessionItselfClosed
+  name: isSessionItselfClosed
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Определяет, закрываются ли локальные и удаленные конечную точку для самого сеанса.
+
+    В обработчик событий «session_close», если этот метод возвращает `false` это означает, что локальная конечная по-прежнему открыт. Его можно использовать для определения закрытия было инициировано локально в таких обстоятельствах.
+  syntax:
+    content: function isSessionItselfClosed()
     parameters: []
     return:
       type:
@@ -207,7 +279,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: ''
+  summary: Удаляет отправителя и он является базового сеанса из внутреннего сопоставления.
   syntax:
     content: function remove()
     parameters: []

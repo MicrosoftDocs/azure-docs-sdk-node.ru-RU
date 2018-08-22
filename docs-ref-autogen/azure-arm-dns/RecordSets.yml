@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 946261e163ffded64f9e6467ab5f4c864f1e0f77
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 897bfad995c9df7c9e5714356955c0a842e07764
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40076856"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41690790"
 items:
 - uid: azure-arm-dns.RecordSets
   name: RecordSets
@@ -63,13 +63,13 @@ items:
   - typeScript
   summary: Создает или обновляет в пределах зоны DNS набор записей.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -92,7 +92,7 @@ items:
         Параметры для операции CreateOrUpdate.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -145,7 +145,7 @@ items:
   - typeScript
   summary: Создает или обновляет в пределах зоны DNS набор записей.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options: function, callback: ServiceCallback<RecordSet>)'
+    content: 'function createOrUpdate(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options: Object, callback: ServiceCallback<RecordSet>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -169,7 +169,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -187,13 +187,13 @@ items:
   - typeScript
   summary: Создает или обновляет в пределах зоны DNS набор записей.
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -216,7 +216,7 @@ items:
         Параметры для операции CreateOrUpdate.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -231,13 +231,13 @@ items:
   - typeScript
   summary: Удаляет из зоны DNS набор записей. Эту операцию нельзя отменить.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -255,7 +255,7 @@ items:
         Тип записи DNS в этом наборе записей. Тип, SOA невозможно удалить наборы записей (они удаляются при удалении зоны DNS). Возможные значения: «», «AAAA», «CAA», «CNAME», «MX», «NS», «PTR», «SOA», «SRV», «TXT»
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -270,7 +270,7 @@ items:
   - typeScript
   summary: Удаляет из зоны DNS набор записей. Эту операцию нельзя отменить.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -290,7 +290,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -342,13 +342,13 @@ items:
   - typeScript
   summary: Удаляет из зоны DNS набор записей. Эту операцию нельзя отменить.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -366,7 +366,7 @@ items:
         Тип записи DNS в этом наборе записей. Тип, SOA невозможно удалить наборы записей (они удаляются при удалении зоны DNS). Возможные значения: «», «AAAA», «CAA», «CNAME», «MX», «NS», «PTR», «SOA», «SRV», «TXT»
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -381,13 +381,13 @@ items:
   - typeScript
   summary: Возвращает набор записей.
   syntax:
-    content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options?: function)'
+    content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -407,7 +407,7 @@ items:
         Возможные значения: «», «AAAA», «CAA», «CNAME», «MX», «NS», «PTR», «SOA», «SRV», «TXT»
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -456,7 +456,7 @@ items:
   - typeScript
   summary: Возвращает набор записей.
   syntax:
-    content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options: function, callback: ServiceCallback<RecordSet>)'
+    content: 'function get(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options: Object, callback: ServiceCallback<RecordSet>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -476,7 +476,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -494,13 +494,13 @@ items:
   - typeScript
   summary: Возвращает набор записей.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -520,7 +520,7 @@ items:
         Возможные значения: «», «AAAA», «CAA», «CNAME», «MX», «NS», «PTR», «SOA», «SRV», «TXT»
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -561,7 +561,7 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options: function, callback: ServiceCallback<RecordSetListResult>)'
+    content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options: Object, callback: ServiceCallback<RecordSetListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -573,7 +573,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -591,13 +591,13 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options?: function)'
+    content: 'function listAllByDnsZone(resourceGroupName: string, zoneName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -605,7 +605,7 @@ items:
         Имя зоны DNS (без завершающего точки).
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -620,7 +620,7 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listAllByDnsZoneNext(nextPageLink: string, options?: function)'
+    content: 'function listAllByDnsZoneNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -629,7 +629,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -666,7 +666,7 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listAllByDnsZoneNext(nextPageLink: string, options: function, callback: ServiceCallback<RecordSetListResult>)'
+    content: 'function listAllByDnsZoneNext(nextPageLink: string, options: Object, callback: ServiceCallback<RecordSetListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -674,7 +674,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -692,7 +692,7 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listAllByDnsZoneNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listAllByDnsZoneNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -701,7 +701,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -716,13 +716,13 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listAllByDnsZoneWithHttpOperationResponse(resourceGroupName: string, zoneName: string, options?: function)'
+    content: 'function listAllByDnsZoneWithHttpOperationResponse(resourceGroupName: string, zoneName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -730,7 +730,7 @@ items:
         Имя зоны DNS (без завершающего точки).
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -745,13 +745,13 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options?: function)'
+    content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -759,7 +759,7 @@ items:
         Имя зоны DNS (без завершающего точки).
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -800,7 +800,7 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options: function, callback: ServiceCallback<RecordSetListResult>)'
+    content: 'function listByDnsZone(resourceGroupName: string, zoneName: string, options: Object, callback: ServiceCallback<RecordSetListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -812,7 +812,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -830,7 +830,7 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listByDnsZoneNext(nextPageLink: string, options?: function)'
+    content: 'function listByDnsZoneNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -839,7 +839,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -854,7 +854,7 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listByDnsZoneNext(nextPageLink: string, options: function, callback: ServiceCallback<RecordSetListResult>)'
+    content: 'function listByDnsZoneNext(nextPageLink: string, options: Object, callback: ServiceCallback<RecordSetListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -862,7 +862,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -902,7 +902,7 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listByDnsZoneNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByDnsZoneNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -911,7 +911,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -926,13 +926,13 @@ items:
   - typeScript
   summary: Список всех наборов записей в зоне DNS.
   syntax:
-    content: 'function listByDnsZoneWithHttpOperationResponse(resourceGroupName: string, zoneName: string, options?: function)'
+    content: 'function listByDnsZoneWithHttpOperationResponse(resourceGroupName: string, zoneName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -940,7 +940,7 @@ items:
         Имя зоны DNS (без завершающего точки).
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -955,13 +955,13 @@ items:
   - typeScript
   summary: Список наборов записей указанного типа в зоне DNS.
   syntax:
-    content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: string, options?: function)'
+    content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -974,7 +974,7 @@ items:
         Тип записи задает для перечисления. Возможные значения: «», «AAAA», «CAA», «CNAME», «MX», «NS», «PTR», «SOA», «SRV», «TXT»
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1019,7 +1019,7 @@ items:
   - typeScript
   summary: Список наборов записей указанного типа в зоне DNS.
   syntax:
-    content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: string, options: function, callback: ServiceCallback<RecordSetListResult>)'
+    content: 'function listByType(resourceGroupName: string, zoneName: string, recordType: string, options: Object, callback: ServiceCallback<RecordSetListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1035,7 +1035,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1053,7 +1053,7 @@ items:
   - typeScript
   summary: Список наборов записей указанного типа в зоне DNS.
   syntax:
-    content: 'function listByTypeNext(nextPageLink: string, options?: function)'
+    content: 'function listByTypeNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -1062,7 +1062,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1099,7 +1099,7 @@ items:
   - typeScript
   summary: Список наборов записей указанного типа в зоне DNS.
   syntax:
-    content: 'function listByTypeNext(nextPageLink: string, options: function, callback: ServiceCallback<RecordSetListResult>)'
+    content: 'function listByTypeNext(nextPageLink: string, options: Object, callback: ServiceCallback<RecordSetListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -1107,7 +1107,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1125,7 +1125,7 @@ items:
   - typeScript
   summary: Список наборов записей указанного типа в зоне DNS.
   syntax:
-    content: 'function listByTypeNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByTypeNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -1134,7 +1134,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1149,13 +1149,13 @@ items:
   - typeScript
   summary: Список наборов записей указанного типа в зоне DNS.
   syntax:
-    content: 'function listByTypeWithHttpOperationResponse(resourceGroupName: string, zoneName: string, recordType: string, options?: function)'
+    content: 'function listByTypeWithHttpOperationResponse(resourceGroupName: string, zoneName: string, recordType: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -1168,7 +1168,7 @@ items:
         Тип записи задает для перечисления. Возможные значения: «», «AAAA», «CAA», «CNAME», «MX», «NS», «PTR», «SOA», «SRV», «TXT»
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1183,13 +1183,13 @@ items:
   - typeScript
   summary: Обновляет в пределах зоны DNS набор записей.
   syntax:
-    content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options?: function)'
+    content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -1214,7 +1214,7 @@ items:
         Параметры для операции обновления.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1267,7 +1267,7 @@ items:
   - typeScript
   summary: Обновляет в пределах зоны DNS набор записей.
   syntax:
-    content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options: function, callback: ServiceCallback<RecordSet>)'
+    content: 'function update(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options: Object, callback: ServiceCallback<RecordSet>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1291,7 +1291,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1309,13 +1309,13 @@ items:
   - typeScript
   summary: Обновляет в пределах зоны DNS набор записей.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, zoneName: string, relativeRecordSetName: string, recordType: string, parameters: RecordSet, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов. Имя без учета регистра.
     - id: zoneName
       type:
       - string
@@ -1340,7 +1340,7 @@ items:
         Параметры для операции обновления.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

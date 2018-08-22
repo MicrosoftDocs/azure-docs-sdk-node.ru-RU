@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 455636327b1b95bc3da434bcc704203c411a98ad
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: fd6e67fb4b2a429eff50ffb492f94806768eba18
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40073609"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41683473"
 items:
 - uid: azure-arm-mobileengagement.ImportTasks
   name: ImportTasks
@@ -39,7 +39,7 @@ items:
   - typeScript
   summary: Создает задание для импорта в storageUrl указанных данных.
   syntax:
-    content: 'function create(resourceGroupName: string, appCollection: string, appName: string, parameters: ImportTask, options?: function)'
+    content: 'function create(resourceGroupName: string, appCollection: string, appName: string, parameters: ImportTask, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -62,7 +62,7 @@ items:
       description: "\n"
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -77,7 +77,7 @@ items:
   - typeScript
   summary: Создает задание для импорта в storageUrl указанных данных.
   syntax:
-    content: 'function create(resourceGroupName: string, appCollection: string, appName: string, parameters: ImportTask, options: function, callback: ServiceCallback<ImportTaskResult>)'
+    content: 'function create(resourceGroupName: string, appCollection: string, appName: string, parameters: ImportTask, options: Object, callback: ServiceCallback<ImportTaskResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -97,7 +97,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -149,7 +149,7 @@ items:
   - typeScript
   summary: Создает задание для импорта в storageUrl указанных данных.
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, appCollection: string, appName: string, parameters: ImportTask, options?: function)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, appCollection: string, appName: string, parameters: ImportTask, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -172,7 +172,7 @@ items:
       description: "\n"
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -187,7 +187,7 @@ items:
   - typeScript
   summary: Операция задания импорта Get извлекает сведения о ранее созданное задание импорта.
   syntax:
-    content: 'function get(id: string, resourceGroupName: string, appCollection: string, appName: string, options?: function)'
+    content: 'function get(id: string, resourceGroupName: string, appCollection: string, appName: string, options?: Object)'
     parameters:
     - id: id
       type:
@@ -211,7 +211,7 @@ items:
         Имя ресурса приложения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -260,7 +260,7 @@ items:
   - typeScript
   summary: Операция задания импорта Get извлекает сведения о ранее созданное задание импорта.
   syntax:
-    content: 'function get(id: string, resourceGroupName: string, appCollection: string, appName: string, options: function, callback: ServiceCallback<ImportTaskResult>)'
+    content: 'function get(id: string, resourceGroupName: string, appCollection: string, appName: string, options: Object, callback: ServiceCallback<ImportTaskResult>)'
     parameters:
     - id: id
       type:
@@ -280,7 +280,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -298,7 +298,7 @@ items:
   - typeScript
   summary: Операция задания импорта Get извлекает сведения о ранее созданное задание импорта.
   syntax:
-    content: 'function getWithHttpOperationResponse(id: string, resourceGroupName: string, appCollection: string, appName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(id: string, resourceGroupName: string, appCollection: string, appName: string, options?: Object)'
     parameters:
     - id: id
       type:
@@ -322,7 +322,7 @@ items:
         Имя ресурса приложения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -337,7 +337,7 @@ items:
   - typeScript
   summary: Получение списка заданий импорта.
   syntax:
-    content: 'function list(resourceGroupName: string, appCollection: string, appName: string, options?: function)'
+    content: 'function list(resourceGroupName: string, appCollection: string, appName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -356,7 +356,7 @@ items:
         Имя ресурса приложения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -401,7 +401,7 @@ items:
   - typeScript
   summary: Получение списка заданий импорта.
   syntax:
-    content: 'function list(resourceGroupName: string, appCollection: string, appName: string, options: function, callback: ServiceCallback<ImportTaskListResult>)'
+    content: 'function list(resourceGroupName: string, appCollection: string, appName: string, options: Object, callback: ServiceCallback<ImportTaskListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -417,7 +417,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -435,7 +435,7 @@ items:
   - typeScript
   summary: Получение списка заданий импорта.
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -444,7 +444,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -481,7 +481,7 @@ items:
   - typeScript
   summary: Получение списка заданий импорта.
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<ImportTaskListResult>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<ImportTaskListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -489,7 +489,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -507,7 +507,7 @@ items:
   - typeScript
   summary: Получение списка заданий импорта.
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -516,7 +516,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -531,7 +531,7 @@ items:
   - typeScript
   summary: Получение списка заданий импорта.
   syntax:
-    content: 'function listWithHttpOperationResponse(resourceGroupName: string, appCollection: string, appName: string, options?: function)'
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, appCollection: string, appName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -550,7 +550,7 @@ items:
         Имя ресурса приложения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

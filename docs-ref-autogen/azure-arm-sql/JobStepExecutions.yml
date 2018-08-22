@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 5cd34824f9151357e77ee6661a29be0cb34e7319
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 39ef6eff8193fa04ab08c786e7b5224eeeb0445d
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40076821"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41696283"
 items:
 - uid: azure-arm-sql.JobStepExecutions
   name: JobStepExecutions
@@ -35,7 +35,7 @@ items:
   - typeScript
   summary: Получает выполнения этапа выполнения задания.
   syntax:
-    content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -69,7 +69,7 @@ items:
         Имя шага.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -84,7 +84,7 @@ items:
   - typeScript
   summary: Получает выполнения этапа выполнения задания.
   syntax:
-    content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options: function, callback: ServiceCallback<JobExecution>)'
+    content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options: Object, callback: ServiceCallback<JobExecution>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -112,7 +112,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -172,7 +172,7 @@ items:
   - typeScript
   summary: Получает выполнения этапа выполнения задания.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, stepName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -206,7 +206,7 @@ items:
         Имя шага.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -221,7 +221,7 @@ items:
   - typeScript
   summary: Список выполнений шаг выполнения задания.
   syntax:
-    content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: function)'
+    content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -250,7 +250,7 @@ items:
         Идентификатор выполнения задания
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -303,7 +303,7 @@ items:
   - typeScript
   summary: Список выполнений шаг выполнения задания.
   syntax:
-    content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options: function, callback: ServiceCallback<JobExecutionListResult>)'
+    content: 'function listByJobExecution(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options: Object, callback: ServiceCallback<JobExecutionListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -327,7 +327,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -345,7 +345,7 @@ items:
   - typeScript
   summary: Список выполнений шаг выполнения задания.
   syntax:
-    content: 'function listByJobExecutionNext(nextPageLink: string, options?: function)'
+    content: 'function listByJobExecutionNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -354,7 +354,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -391,7 +391,7 @@ items:
   - typeScript
   summary: Список выполнений шаг выполнения задания.
   syntax:
-    content: 'function listByJobExecutionNext(nextPageLink: string, options: function, callback: ServiceCallback<JobExecutionListResult>)'
+    content: 'function listByJobExecutionNext(nextPageLink: string, options: Object, callback: ServiceCallback<JobExecutionListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -399,7 +399,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -417,7 +417,7 @@ items:
   - typeScript
   summary: Список выполнений шаг выполнения задания.
   syntax:
-    content: 'function listByJobExecutionNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByJobExecutionNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -426,7 +426,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -441,7 +441,7 @@ items:
   - typeScript
   summary: Список выполнений шаг выполнения задания.
   syntax:
-    content: 'function listByJobExecutionWithHttpOperationResponse(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: function)'
+    content: 'function listByJobExecutionWithHttpOperationResponse(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -470,7 +470,7 @@ items:
         Идентификатор выполнения задания
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

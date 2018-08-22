@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3a5def3fa62d435e703f893bc7bc837c7e7edc4d
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 57672b4b9c1994a62816bf6bbbe5b6b9588ea454
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40073136"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41694913"
 items:
 - uid: azure-arm-recoveryservicesbackup.ProtectionContainers
   name: ProtectionContainers
@@ -43,7 +43,7 @@ items:
   - typeScript
   summary: Возвращает сведения о конкретных контейнеров, зарегистрированных в хранилище служб восстановления.
   syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: function)'
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -67,7 +67,7 @@ items:
         Имя контейнера, сведения о которых необходимо извлечь.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -82,7 +82,7 @@ items:
   - typeScript
   summary: Возвращает сведения о конкретных контейнеров, зарегистрированных в хранилище служб восстановления.
   syntax:
-    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options: function, callback: ServiceCallback<ProtectionContainerResource>)'
+    content: 'function get(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options: Object, callback: ServiceCallback<ProtectionContainerResource>)'
     parameters:
     - id: vaultName
       type:
@@ -102,7 +102,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -154,7 +154,7 @@ items:
   - typeScript
   summary: Возвращает сведения о конкретных контейнеров, зарегистрированных в хранилище служб восстановления.
   syntax:
-    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -178,7 +178,7 @@ items:
         Имя контейнера, сведения о которых необходимо извлечь.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -193,7 +193,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function inquire(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: function)'
+    content: 'function inquire(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -217,7 +217,7 @@ items:
         Имя контейнера, в котором запрос должен активироваться.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -266,7 +266,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function inquire(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function inquire(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: vaultName
       type:
@@ -286,7 +286,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -304,7 +304,7 @@ items:
   - typeScript
   summary: ''
   syntax:
-    content: 'function inquireWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: function)'
+    content: 'function inquireWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -328,7 +328,7 @@ items:
         Имя контейнера, в котором запрос должен активироваться.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -343,7 +343,7 @@ items:
   - typeScript
   summary: Находит все контейнеры в подписке, которые можно архивировать в хранилище служб восстановления. Это асинхронная операция. Чтобы узнать состояние операции, вызовите GetRefreshOperationResult API.
   syntax:
-    content: 'function refresh(vaultName: string, resourceGroupName: string, fabricName: string, options?: function)'
+    content: 'function refresh(vaultName: string, resourceGroupName: string, fabricName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -362,7 +362,7 @@ items:
         Имя структуры связанного контейнера.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -407,7 +407,7 @@ items:
   - typeScript
   summary: Находит все контейнеры в подписке, которые можно архивировать в хранилище служб восстановления. Это асинхронная операция. Чтобы узнать состояние операции, вызовите GetRefreshOperationResult API.
   syntax:
-    content: 'function refresh(vaultName: string, resourceGroupName: string, fabricName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function refresh(vaultName: string, resourceGroupName: string, fabricName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: vaultName
       type:
@@ -423,7 +423,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -441,7 +441,7 @@ items:
   - typeScript
   summary: Находит все контейнеры в подписке, которые можно архивировать в хранилище служб восстановления. Это асинхронная операция. Чтобы узнать состояние операции, вызовите GetRefreshOperationResult API.
   syntax:
-    content: 'function refreshWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, options?: function)'
+    content: 'function refreshWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -460,7 +460,7 @@ items:
         Имя структуры связанного контейнера.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -478,7 +478,7 @@ items:
 
     Это асинхронная операция. Чтобы отслеживать состояние операции, заголовок location используется для вызова получить последнее состояние операции.
   syntax:
-    content: 'function register(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, parameters: ProtectionContainerResource, options?: function)'
+    content: 'function register(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, parameters: ProtectionContainerResource, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -507,7 +507,7 @@ items:
         Текст запроса для операции
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -566,7 +566,7 @@ items:
 
     Это асинхронная операция. Чтобы отслеживать состояние операции, заголовок location используется для вызова получить последнее состояние операции.
   syntax:
-    content: 'function register(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, parameters: ProtectionContainerResource, options: function, callback: ServiceCallback<ProtectionContainerResource>)'
+    content: 'function register(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, parameters: ProtectionContainerResource, options: Object, callback: ServiceCallback<ProtectionContainerResource>)'
     parameters:
     - id: vaultName
       type:
@@ -590,7 +590,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -611,7 +611,7 @@ items:
 
     Это асинхронная операция. Чтобы отслеживать состояние операции, заголовок location используется для вызова получить последнее состояние операции.
   syntax:
-    content: 'function registerWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, parameters: ProtectionContainerResource, options?: function)'
+    content: 'function registerWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, parameters: ProtectionContainerResource, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -640,7 +640,7 @@ items:
         Текст запроса для операции
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -655,7 +655,7 @@ items:
   - typeScript
   summary: Отменяет регистрацию заданного контейнера в хранилище служб восстановления. Это асинхронная операция. Чтобы определить, закончила ли во внутреннюю службу обработки запроса, вызовите результат API получения операции контейнера.
   syntax:
-    content: 'function unregister(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: function)'
+    content: 'function unregister(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -679,7 +679,7 @@ items:
         Имя контейнера, которую нужно отменить регистрацию в хранилище служб восстановления.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -728,7 +728,7 @@ items:
   - typeScript
   summary: Отменяет регистрацию заданного контейнера в хранилище служб восстановления. Это асинхронная операция. Чтобы определить, закончила ли во внутреннюю службу обработки запроса, вызовите результат API получения операции контейнера.
   syntax:
-    content: 'function unregister(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function unregister(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: vaultName
       type:
@@ -748,7 +748,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -766,7 +766,7 @@ items:
   - typeScript
   summary: Отменяет регистрацию заданного контейнера в хранилище служб восстановления. Это асинхронная операция. Чтобы определить, закончила ли во внутреннюю службу обработки запроса, вызовите результат API получения операции контейнера.
   syntax:
-    content: 'function unregisterWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: function)'
+    content: 'function unregisterWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, options?: Object)'
     parameters:
     - id: vaultName
       type:
@@ -790,7 +790,7 @@ items:
         Имя контейнера, которую нужно отменить регистрацию в хранилище служб восстановления.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

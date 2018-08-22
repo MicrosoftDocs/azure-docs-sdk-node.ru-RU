@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 67845b8486114cd2de536226607a092cc098ebfe
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: bfc98e8bed978e481762515a2835ac1a9839c685
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40075988"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41684482"
 items:
 - uid: azure-arm-devtestlabs.Artifacts
   name: Artifacts
@@ -39,7 +39,7 @@ items:
   - typeScript
   summary: Создает шаблон ARM для заданного артефакта, передает необходимые файлы в учетную запись хранения и проверяет созданный артефакт.
   syntax:
-    content: 'function generateArmTemplate(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, generateArmTemplateRequest: GenerateArmTemplateRequest, options?: function)'
+    content: 'function generateArmTemplate(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, generateArmTemplateRequest: GenerateArmTemplateRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -68,7 +68,7 @@ items:
         Параметры для создания шаблона ARM для развертывания артефактов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -83,7 +83,7 @@ items:
   - typeScript
   summary: Создает шаблон ARM для заданного артефакта, передает необходимые файлы в учетную запись хранения и проверяет созданный артефакт.
   syntax:
-    content: 'function generateArmTemplate(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, generateArmTemplateRequest: GenerateArmTemplateRequest, options: function, callback: ServiceCallback<ArmTemplateInfo>)'
+    content: 'function generateArmTemplate(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, generateArmTemplateRequest: GenerateArmTemplateRequest, options: Object, callback: ServiceCallback<ArmTemplateInfo>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -107,7 +107,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -163,7 +163,7 @@ items:
   - typeScript
   summary: Создает шаблон ARM для заданного артефакта, передает необходимые файлы в учетную запись хранения и проверяет созданный артефакт.
   syntax:
-    content: 'function generateArmTemplateWithHttpOperationResponse(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, generateArmTemplateRequest: GenerateArmTemplateRequest, options?: function)'
+    content: 'function generateArmTemplateWithHttpOperationResponse(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, generateArmTemplateRequest: GenerateArmTemplateRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -192,7 +192,7 @@ items:
         Параметры для создания шаблона ARM для развертывания артефактов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -207,7 +207,7 @@ items:
   - typeScript
   summary: Получите артефакта.
   syntax:
-    content: 'function get(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, options?: function)'
+    content: 'function get(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -231,7 +231,7 @@ items:
         Имя артефакта.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -280,7 +280,7 @@ items:
   - typeScript
   summary: Получите артефакта.
   syntax:
-    content: 'function get(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, options: function, callback: ServiceCallback<Artifact>)'
+    content: 'function get(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, options: Object, callback: ServiceCallback<Artifact>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -300,7 +300,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -318,7 +318,7 @@ items:
   - typeScript
   summary: Получите артефакта.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, labName: string, artifactSourceName: string, name: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -342,7 +342,7 @@ items:
         Имя артефакта.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -357,7 +357,7 @@ items:
   - typeScript
   summary: Перечислите артефакты в источнике заданного артефакта.
   syntax:
-    content: 'function list(resourceGroupName: string, labName: string, artifactSourceName: string, options?: function)'
+    content: 'function list(resourceGroupName: string, labName: string, artifactSourceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -376,7 +376,7 @@ items:
         Имя источника артефакта.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -421,7 +421,7 @@ items:
   - typeScript
   summary: Перечислите артефакты в источнике заданного артефакта.
   syntax:
-    content: 'function list(resourceGroupName: string, labName: string, artifactSourceName: string, options: function, callback: ServiceCallback<ResponseWithContinuationArtifact>)'
+    content: 'function list(resourceGroupName: string, labName: string, artifactSourceName: string, options: Object, callback: ServiceCallback<ResponseWithContinuationArtifact>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -437,7 +437,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -455,7 +455,7 @@ items:
   - typeScript
   summary: Перечислите артефакты в источнике заданного артефакта.
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -464,7 +464,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -501,7 +501,7 @@ items:
   - typeScript
   summary: Перечислите артефакты в источнике заданного артефакта.
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<ResponseWithContinuationArtifact>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<ResponseWithContinuationArtifact>)'
     parameters:
     - id: nextPageLink
       type:
@@ -509,7 +509,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -527,7 +527,7 @@ items:
   - typeScript
   summary: Перечислите артефакты в источнике заданного артефакта.
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -536,7 +536,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -551,7 +551,7 @@ items:
   - typeScript
   summary: Перечислите артефакты в источнике заданного артефакта.
   syntax:
-    content: 'function listWithHttpOperationResponse(resourceGroupName: string, labName: string, artifactSourceName: string, options?: function)'
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, labName: string, artifactSourceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -570,7 +570,7 @@ items:
         Имя источника артефакта.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

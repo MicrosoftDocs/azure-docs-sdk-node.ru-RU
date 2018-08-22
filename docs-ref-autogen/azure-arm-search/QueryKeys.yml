@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 47fb552dc4e24e8539ed68bdaf36b926954e4978
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 9674deaf1511aff3d56e49d1e40672c8b2e4cd02
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40072609"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41697293"
 items:
 - uid: azure-arm-search.QueryKeys
   name: QueryKeys
@@ -35,7 +35,7 @@ items:
   - typeScript
   summary: Создает новый ключ запроса для указанной службы поиска. Вы можете создать до 50 ключей запросов на службу.
   syntax:
-    content: 'function create(resourceGroupName: string, searchServiceName: string, name: string, options?: function)'
+    content: 'function create(resourceGroupName: string, searchServiceName: string, name: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -54,7 +54,7 @@ items:
         Имя нового ключа API запроса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -69,7 +69,7 @@ items:
   - typeScript
   summary: Создает новый ключ запроса для указанной службы поиска. Вы можете создать до 50 ключей запросов на службу.
   syntax:
-    content: 'function create(resourceGroupName: string, searchServiceName: string, name: string, options: function, callback: ServiceCallback<QueryKey>)'
+    content: 'function create(resourceGroupName: string, searchServiceName: string, name: string, options: Object, callback: ServiceCallback<QueryKey>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -85,7 +85,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -133,7 +133,7 @@ items:
   - typeScript
   summary: Создает новый ключ запроса для указанной службы поиска. Вы можете создать до 50 ключей запросов на службу.
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, name: string, options?: function)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, name: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -152,7 +152,7 @@ items:
         Имя нового ключа API запроса.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -167,7 +167,7 @@ items:
   - typeScript
   summary: Удаляет указанный ключ запроса. В отличие от ключей администраторов ключи запросов не обновляются. Для обновления кода запроса необходимо удалить и заново создать его.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, key: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, key: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -186,7 +186,7 @@ items:
         Ключ запроса для удаления. Ключи запроса идентифицируются по значению, не по имени.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -231,7 +231,7 @@ items:
   - typeScript
   summary: Удаляет указанный ключ запроса. В отличие от ключей администраторов ключи запросов не обновляются. Для обновления кода запроса необходимо удалить и заново создать его.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, key: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, searchServiceName: string, key: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -247,7 +247,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -265,7 +265,7 @@ items:
   - typeScript
   summary: Удаляет указанный ключ запроса. В отличие от ключей администраторов ключи запросов не обновляются. Для обновления кода запроса необходимо удалить и заново создать его.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, key: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, key: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -284,7 +284,7 @@ items:
         Ключ запроса для удаления. Ключи запроса идентифицируются по значению, не по имени.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -299,7 +299,7 @@ items:
   - typeScript
   summary: Возвращает список ключей API запроса для данной службы поиска Azure.
   syntax:
-    content: 'function listBySearchService(resourceGroupName: string, searchServiceName: string, options?: function)'
+    content: 'function listBySearchService(resourceGroupName: string, searchServiceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -313,7 +313,7 @@ items:
         Имя службы поиска Azure, связанной с определенной группе ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -354,7 +354,7 @@ items:
   - typeScript
   summary: Возвращает список ключей API запроса для данной службы поиска Azure.
   syntax:
-    content: 'function listBySearchService(resourceGroupName: string, searchServiceName: string, options: function, callback: ServiceCallback<ListQueryKeysResult>)'
+    content: 'function listBySearchService(resourceGroupName: string, searchServiceName: string, options: Object, callback: ServiceCallback<ListQueryKeysResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -366,7 +366,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -384,7 +384,7 @@ items:
   - typeScript
   summary: Возвращает список ключей API запроса для данной службы поиска Azure.
   syntax:
-    content: 'function listBySearchServiceWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, options?: function)'
+    content: 'function listBySearchServiceWithHttpOperationResponse(resourceGroupName: string, searchServiceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -398,7 +398,7 @@ items:
         Имя службы поиска Azure, связанной с определенной группе ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

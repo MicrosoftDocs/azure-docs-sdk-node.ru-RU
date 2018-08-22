@@ -1,19 +1,19 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fac3478480f0f9eadbf0a7a5c10206693a696c5c
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 901829822b46ccfc26e7afb338fd07d8b7799312
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40072640"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41695733"
 items:
 - uid: azure-arm-datafactory.Factories
   name: Factories
   fullName: Factories
   children:
-  - azure-arm-datafactory.Factories.cancelPipelineRun
-  - azure-arm-datafactory.Factories.cancelPipelineRun_1
-  - azure-arm-datafactory.Factories.cancelPipelineRun_2
-  - azure-arm-datafactory.Factories.cancelPipelineRunWithHttpOperationResponse
+  - azure-arm-datafactory.Factories.configureFactoryRepo
+  - azure-arm-datafactory.Factories.configureFactoryRepo_1
+  - azure-arm-datafactory.Factories.configureFactoryRepo_2
+  - azure-arm-datafactory.Factories.configureFactoryRepoWithHttpOperationResponse
   - azure-arm-datafactory.Factories.createOrUpdate
   - azure-arm-datafactory.Factories.createOrUpdate_2
   - azure-arm-datafactory.Factories.createOrUpdate_1
@@ -51,137 +51,119 @@ items:
   type: interface
   summary: ''
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.Factories.cancelPipelineRun
-  name: cancelPipelineRun
+- uid: azure-arm-datafactory.Factories.configureFactoryRepo
+  name: configureFactoryRepo
   children: []
   type: method
   langs:
   - typeScript
-  summary: Отмена выполнения по идентификатору выполнения конвейера
+  summary: Обновляет сведения о репозитории фабрики.
   syntax:
-    content: 'function cancelPipelineRun(resourceGroupName: string, factoryName: string, runId: string, options?: function)'
+    content: 'function configureFactoryRepo(locationId: string, factoryRepoUpdate: FactoryRepoUpdate, options?: Object)'
     parameters:
-    - id: resourceGroupName
+    - id: locationId
       type:
       - string
       description: >
-        Имя группы ресурсов.
-    - id: factoryName
+        Идентификатор расположения.
+    - id: factoryRepoUpdate
       type:
-      - string
+      - azure-arm-datafactory.FactoryRepoUpdate
       description: >
-        Имя фабрики.
-    - id: runId
-      type:
-      - string
-      description: >
-        Идентификатор выполнения конвейера.
+        Обновите определение запроса репозитория фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-datafactory.Factory>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.Factories.cancelPipelineRun_1
-  name: cancelPipelineRun
+- uid: azure-arm-datafactory.Factories.configureFactoryRepo_1
+  name: configureFactoryRepo
   children: []
   type: method
   langs:
   - typeScript
-  summary: Отмена выполнения по идентификатору выполнения конвейера
+  summary: Обновляет сведения о репозитории фабрики.
   syntax:
-    content: 'function cancelPipelineRun(resourceGroupName: string, factoryName: string, runId: string, callback: ServiceCallback<void>)'
+    content: 'function configureFactoryRepo(locationId: string, factoryRepoUpdate: FactoryRepoUpdate, callback: ServiceCallback<Factory>)'
     parameters:
-    - id: resourceGroupName
+    - id: locationId
       type:
       - string
       description: ''
-    - id: factoryName
+    - id: factoryRepoUpdate
       type:
-      - string
-      description: ''
-    - id: runId
-      type:
-      - string
+      - azure-arm-datafactory.FactoryRepoUpdate
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-datafactory.Factory>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-datafactory.Factory>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.Factories.cancelPipelineRun_2
-  name: cancelPipelineRun
+- uid: azure-arm-datafactory.Factories.configureFactoryRepo_2
+  name: configureFactoryRepo
   children: []
   type: method
   langs:
   - typeScript
-  summary: Отмена выполнения по идентификатору выполнения конвейера
+  summary: Обновляет сведения о репозитории фабрики.
   syntax:
-    content: 'function cancelPipelineRun(resourceGroupName: string, factoryName: string, runId: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function configureFactoryRepo(locationId: string, factoryRepoUpdate: FactoryRepoUpdate, options: Object, callback: ServiceCallback<Factory>)'
     parameters:
-    - id: resourceGroupName
+    - id: locationId
       type:
       - string
       description: ''
-    - id: factoryName
+    - id: factoryRepoUpdate
       type:
-      - string
-      description: ''
-    - id: runId
-      type:
-      - string
+      - azure-arm-datafactory.FactoryRepoUpdate
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-datafactory.Factory>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-datafactory.Factory>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.Factories.cancelPipelineRunWithHttpOperationResponse
-  name: cancelPipelineRunWithHttpOperationResponse
+- uid: azure-arm-datafactory.Factories.configureFactoryRepoWithHttpOperationResponse
+  name: configureFactoryRepoWithHttpOperationResponse
   children: []
   type: method
   langs:
   - typeScript
-  summary: Отмена выполнения по идентификатору выполнения конвейера
+  summary: Обновляет сведения о репозитории фабрики.
   syntax:
-    content: 'function cancelPipelineRunWithHttpOperationResponse(resourceGroupName: string, factoryName: string, runId: string, options?: function)'
+    content: 'function configureFactoryRepoWithHttpOperationResponse(locationId: string, factoryRepoUpdate: FactoryRepoUpdate, options?: Object)'
     parameters:
-    - id: resourceGroupName
+    - id: locationId
       type:
       - string
       description: >
-        Имя группы ресурсов.
-    - id: factoryName
+        Идентификатор расположения.
+    - id: factoryRepoUpdate
       type:
-      - string
+      - azure-arm-datafactory.FactoryRepoUpdate
       description: >
-        Имя фабрики.
-    - id: runId
-      type:
-      - string
-      description: >
-        Идентификатор выполнения конвейера.
+        Обновите определение запроса репозитория фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<void>>
+      - Promise<HttpOperationResponse<azure-arm-datafactory.Factory>>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.Factories.createOrUpdate
   name: createOrUpdate
@@ -191,7 +173,7 @@ items:
   - typeScript
   summary: Создает или обновляет фабрику.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -210,7 +192,7 @@ items:
         Определение ресурсов фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -225,7 +207,7 @@ items:
   - typeScript
   summary: Создает или обновляет фабрику.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, options: function, callback: ServiceCallback<Factory>)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, factory: Factory, options: Object, callback: ServiceCallback<Factory>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -241,7 +223,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -289,7 +271,7 @@ items:
   - typeScript
   summary: Создает или обновляет фабрику.
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, factory: Factory, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, factory: Factory, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -308,7 +290,7 @@ items:
         Определение ресурсов фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -349,7 +331,7 @@ items:
   - typeScript
   summary: Удаляет фабрику.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -363,7 +345,7 @@ items:
         Имя фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -378,7 +360,7 @@ items:
   - typeScript
   summary: Удаляет фабрику.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -390,7 +372,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -408,7 +390,7 @@ items:
   - typeScript
   summary: Удаляет фабрику.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -422,7 +404,7 @@ items:
         Имя фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -437,7 +419,7 @@ items:
   - typeScript
   summary: Получает фабрику.
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -451,7 +433,7 @@ items:
         Имя фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -492,7 +474,7 @@ items:
   - typeScript
   summary: Получает фабрику.
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, options: function, callback: ServiceCallback<Factory>)'
+    content: 'function get(resourceGroupName: string, factoryName: string, options: Object, callback: ServiceCallback<Factory>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -504,7 +486,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -522,7 +504,7 @@ items:
   - typeScript
   summary: Получает фабрику.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -536,7 +518,7 @@ items:
         Имя фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -551,11 +533,11 @@ items:
   - typeScript
   summary: Список фабрик в указанной подписке.
   syntax:
-    content: 'function list(options?: function)'
+    content: 'function list(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -588,11 +570,11 @@ items:
   - typeScript
   summary: Список фабрик в указанной подписке.
   syntax:
-    content: 'function list(options: function, callback: ServiceCallback<FactoryListResponse>)'
+    content: 'function list(options: Object, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -610,7 +592,7 @@ items:
   - typeScript
   summary: Список фабрик.
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -619,7 +601,7 @@ items:
         Имя группы ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -634,7 +616,7 @@ items:
   - typeScript
   summary: Список фабрик.
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<FactoryListResponse>)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -642,7 +624,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -682,7 +664,7 @@ items:
   - typeScript
   summary: Список фабрик.
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -691,7 +673,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -728,7 +710,7 @@ items:
   - typeScript
   summary: Список фабрик.
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options: function, callback: ServiceCallback<FactoryListResponse>)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
     - id: nextPageLink
       type:
@@ -736,7 +718,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -754,7 +736,7 @@ items:
   - typeScript
   summary: Список фабрик.
   syntax:
-    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -763,7 +745,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -778,7 +760,7 @@ items:
   - typeScript
   summary: Список фабрик.
   syntax:
-    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -787,7 +769,7 @@ items:
         Имя группы ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -802,7 +784,7 @@ items:
   - typeScript
   summary: Список фабрик в указанной подписке.
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -811,7 +793,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -848,7 +830,7 @@ items:
   - typeScript
   summary: Список фабрик в указанной подписке.
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<FactoryListResponse>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<FactoryListResponse>)'
     parameters:
     - id: nextPageLink
       type:
@@ -856,7 +838,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -874,7 +856,7 @@ items:
   - typeScript
   summary: Список фабрик в указанной подписке.
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -883,7 +865,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -898,11 +880,11 @@ items:
   - typeScript
   summary: Список фабрик в указанной подписке.
   syntax:
-    content: 'function listWithHttpOperationResponse(options?: function)'
+    content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -917,7 +899,7 @@ items:
   - typeScript
   summary: Обновляет фабрику.
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options?: function)'
+    content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -936,7 +918,7 @@ items:
         Параметры для обновления фабрику.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -981,7 +963,7 @@ items:
   - typeScript
   summary: Обновляет фабрику.
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options: function, callback: ServiceCallback<Factory>)'
+    content: 'function update(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options: Object, callback: ServiceCallback<Factory>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -997,7 +979,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1015,7 +997,7 @@ items:
   - typeScript
   summary: Обновляет фабрику.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, factoryUpdateParameters: FactoryUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1034,7 +1016,7 @@ items:
         Параметры для обновления фабрику.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1042,11 +1024,11 @@ items:
       - Promise<HttpOperationResponse<azure-arm-datafactory.Factory>>
   package: azure-arm-datafactory
 references:
-- uid: azure-arm-datafactory.Factory
+- uid: azure-arm-datafactory.FactoryRepoUpdate
   spec.typeScript:
-  - name: Factory
-    fullName: Factory
-    uid: azure-arm-datafactory.Factory
+  - name: FactoryRepoUpdate
+    fullName: FactoryRepoUpdate
+    uid: azure-arm-datafactory.FactoryRepoUpdate
 - uid: Promise<azure-arm-datafactory.Factory>
   spec.typeScript:
   - name: Promise<
@@ -1074,6 +1056,11 @@ references:
     uid: azure-arm-datafactory.Factory
   - name: '>>'
     fullName: '>>'
+- uid: azure-arm-datafactory.Factory
+  spec.typeScript:
+  - name: Factory
+    fullName: Factory
+    uid: azure-arm-datafactory.Factory
 - uid: Promise<azure-arm-datafactory.FactoryListResponse>
   spec.typeScript:
   - name: Promise<

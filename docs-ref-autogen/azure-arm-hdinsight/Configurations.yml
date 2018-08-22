@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: d4a32ddbe61d57b96f30e816dbd52a7573218048
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 7ee37aadfd241b62cac0c38999d2d77c675da429
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40076292"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41695309"
 items:
 - uid: azure-arm-hdinsight.Configurations
   name: Configurations
@@ -35,7 +35,7 @@ items:
   - typeScript
   summary: Настраивает конфигурацию в указанном кластере.
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, clusterName: string, configurationName: string, parameters: function, options?: function)'
+    content: 'function beginUpdate(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -54,12 +54,12 @@ items:
         Имя конфигурации кластера.
     - id: parameters
       type:
-      - function
+      - '[key: string]: string'
       description: >
         Конфигурации кластера.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -74,7 +74,7 @@ items:
   - typeScript
   summary: Настраивает конфигурацию в указанном кластере.
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, clusterName: string, configurationName: string, parameters: function, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginUpdate(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -90,11 +90,11 @@ items:
       description: ''
     - id: parameters
       type:
-      - function
+      - '[key: string]: string'
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -112,7 +112,7 @@ items:
   - typeScript
   summary: Настраивает конфигурацию в указанном кластере.
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, clusterName: string, configurationName: string, parameters: function, callback: ServiceCallback<void>)'
+    content: 'function beginUpdate(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -128,7 +128,7 @@ items:
       description: ''
     - id: parameters
       type:
-      - function
+      - '[key: string]: string'
       description: ''
     - id: callback
       type:
@@ -146,7 +146,7 @@ items:
   - typeScript
   summary: Настраивает конфигурацию в указанном кластере.
   syntax:
-    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, clusterName: string, configurationName: string, parameters: function, options?: function)'
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -165,12 +165,12 @@ items:
         Имя конфигурации кластера.
     - id: parameters
       type:
-      - function
+      - '[key: string]: string'
       description: >
         Конфигурации кластера.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -185,7 +185,7 @@ items:
   - typeScript
   summary: Объект конфигурации для указанного кластера.
   syntax:
-    content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -204,12 +204,12 @@ items:
         Имя конфигурации кластера.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<function>
+      - 'Promise<[key: string]: string>'
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Configurations.get_1
   name: get
@@ -219,7 +219,7 @@ items:
   - typeScript
   summary: Объект конфигурации для указанного кластера.
   syntax:
-    content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, callback: ServiceCallback<function>)'
+    content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, callback: ServiceCallback<[key: string]: string>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -235,11 +235,11 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<function>
+      - 'ServiceCallback<[key: string]: string>'
       description: ''
     return:
       type:
-      - Promise<function>
+      - 'Promise<[key: string]: string>'
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Configurations.get_2
   name: get
@@ -249,7 +249,7 @@ items:
   - typeScript
   summary: Объект конфигурации для указанного кластера.
   syntax:
-    content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, options: function, callback: ServiceCallback<function>)'
+    content: 'function get(resourceGroupName: string, clusterName: string, configurationName: string, options: Object, callback: ServiceCallback<[key: string]: string>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -265,15 +265,15 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
-      - ServiceCallback<function>
+      - 'ServiceCallback<[key: string]: string>'
       description: ''
     return:
       type:
-      - Promise<function>
+      - 'Promise<[key: string]: string>'
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Configurations.getWithHttpOperationResponse
   name: getWithHttpOperationResponse
@@ -283,7 +283,7 @@ items:
   - typeScript
   summary: Объект конфигурации для указанного кластера.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, clusterName: string, configurationName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, clusterName: string, configurationName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -302,12 +302,12 @@ items:
         Имя конфигурации кластера.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<function>>
+      - 'Promise<HttpOperationResponse<[key: string]: string>>'
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Configurations.update
   name: update
@@ -317,7 +317,7 @@ items:
   - typeScript
   summary: Настраивает конфигурацию в указанном кластере.
   syntax:
-    content: 'function update(resourceGroupName: string, clusterName: string, configurationName: string, parameters: function, options?: function)'
+    content: 'function update(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -336,12 +336,12 @@ items:
         Имя конфигурации кластера.
     - id: parameters
       type:
-      - function
+      - '[key: string]: string'
       description: >
         Конфигурации кластера.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -356,7 +356,7 @@ items:
   - typeScript
   summary: Настраивает конфигурацию в указанном кластере.
   syntax:
-    content: 'function update(resourceGroupName: string, clusterName: string, configurationName: string, parameters: function, callback: ServiceCallback<void>)'
+    content: 'function update(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -372,7 +372,7 @@ items:
       description: ''
     - id: parameters
       type:
-      - function
+      - '[key: string]: string'
       description: ''
     - id: callback
       type:
@@ -390,7 +390,7 @@ items:
   - typeScript
   summary: Настраивает конфигурацию в указанном кластере.
   syntax:
-    content: 'function update(resourceGroupName: string, clusterName: string, configurationName: string, parameters: function, options: function, callback: ServiceCallback<void>)'
+    content: 'function update(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -406,11 +406,11 @@ items:
       description: ''
     - id: parameters
       type:
-      - function
+      - '[key: string]: string'
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -428,7 +428,7 @@ items:
   - typeScript
   summary: Настраивает конфигурацию в указанном кластере.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, clusterName: string, configurationName: string, parameters: function, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, clusterName: string, configurationName: string, parameters: [key: string]: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -447,12 +447,12 @@ items:
         Имя конфигурации кластера.
     - id: parameters
       type:
-      - function
+      - '[key: string]: string'
       description: >
         Конфигурации кластера.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

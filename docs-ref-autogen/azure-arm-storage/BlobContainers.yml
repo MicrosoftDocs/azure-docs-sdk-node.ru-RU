@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f6278ec3e2f1f1451d80e1327f91eed10a0fc78d
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 16e5c8d5e48a413877be9cffa7bf2a859943cbd2
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40073936"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41697413"
 items:
 - uid: azure-arm-storage.BlobContainers
   name: BlobContainers
@@ -71,7 +71,7 @@ items:
   - typeScript
   summary: Очищает юридические хранения тегов. Удаление этого же или несуществующий тега приведет к идемпотентной операции. ClearLegalHold очищает только теги, указанный в запросе.
   syntax:
-    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -97,7 +97,7 @@ items:
         Каждый тег должен быть буквенно-цифровые символы 3 до 23 и нормализуется в нижний регистр в SRP.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -146,7 +146,7 @@ items:
   - typeScript
   summary: Очищает юридические хранения тегов. Удаление этого же или несуществующий тега приведет к идемпотентной операции. ClearLegalHold очищает только теги, указанный в запросе.
   syntax:
-    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: function, callback: ServiceCallback<LegalHold>)'
+    content: 'function clearLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -166,7 +166,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -184,7 +184,7 @@ items:
   - typeScript
   summary: Очищает юридические хранения тегов. Удаление этого же или несуществующий тега приведет к идемпотентной операции. ClearLegalHold очищает только теги, указанный в запросе.
   syntax:
-    content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function clearLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -210,7 +210,7 @@ items:
         Каждый тег должен быть буквенно-цифровые символы 3 до 23 и нормализуется в нижний регистр в SRP.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -225,7 +225,7 @@ items:
   - typeScript
   summary: Создает новый контейнер в указанной учетной записи, как описано в тексте запроса. Ресурс контейнера содержит метаданные и свойства для этого контейнера. Он не включает список больших двоичных объектов, содержащихся в контейнере.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -246,7 +246,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -261,7 +261,7 @@ items:
   - typeScript
   summary: Создает новый контейнер в указанной учетной записи, как описано в тексте запроса. Ресурс контейнера содержит метаданные и свойства для этого контейнера. Он не включает список больших двоичных объектов, содержащихся в контейнере.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function create(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -277,7 +277,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -325,7 +325,7 @@ items:
   - typeScript
   summary: Создает или обновляет политику неизменяемости разблокирован. ETag в If-Match учитывается, если предоставлен, но не требуется для этой операции.
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -351,7 +351,7 @@ items:
         Неизменность период для больших двоичных объектов в контейнере с момента создания политики, в днях.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -400,7 +400,7 @@ items:
   - typeScript
   summary: Создает или обновляет политику неизменяемости разблокирован. ETag в If-Match учитывается, если предоставлен, но не требуется для этой операции.
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function createOrUpdateImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -420,7 +420,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -438,7 +438,7 @@ items:
   - typeScript
   summary: Создает или обновляет политику неизменяемости разблокирован. ETag в If-Match учитывается, если предоставлен, но не требуется для этой операции.
   syntax:
-    content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function createOrUpdateImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -464,7 +464,7 @@ items:
         Неизменность период для больших двоичных объектов в контейнере с момента создания политики, в днях.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -479,7 +479,7 @@ items:
   - typeScript
   summary: Создает новый контейнер в указанной учетной записи, как описано в тексте запроса. Ресурс контейнера содержит метаданные и свойства для этого контейнера. Он не включает список больших двоичных объектов, содержащихся в контейнере.
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -500,7 +500,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -549,7 +549,7 @@ items:
   - typeScript
   summary: Прерывает политику неизменяемости разблокирован. Ответ delete имеет immutabilityPeriodSinceCreationInDays, равным 0. ETag в If-Match является обязательным для этой операции. Удаление политики заблокированные неизменность не допускается, единственным способом является удаление контейнера после удаления всех больших двоичных объектов в контейнере.
   syntax:
-    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -575,7 +575,7 @@ items:
         Версия состояния (ETag) сущности для обновления политики неизменяемости. Значение «*» можно использовать для применения операции только в том случае, если политика неизменяемости уже существует. Если не указано, эта операция всегда будет применяться.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -590,7 +590,7 @@ items:
   - typeScript
   summary: Прерывает политику неизменяемости разблокирован. Ответ delete имеет immutabilityPeriodSinceCreationInDays, равным 0. ETag в If-Match является обязательным для этой операции. Удаление политики заблокированные неизменность не допускается, единственным способом является удаление контейнера после удаления всех больших двоичных объектов в контейнере.
   syntax:
-    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function deleteImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -610,7 +610,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -628,7 +628,7 @@ items:
   - typeScript
   summary: Прерывает политику неизменяемости разблокирован. Ответ delete имеет immutabilityPeriodSinceCreationInDays, равным 0. ETag в If-Match является обязательным для этой операции. Удаление политики заблокированные неизменность не допускается, единственным способом является удаление контейнера после удаления всех больших двоичных объектов в контейнере.
   syntax:
-    content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function deleteImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -654,7 +654,7 @@ items:
         Версия состояния (ETag) сущности для обновления политики неизменяемости. Значение «*» можно использовать для применения операции только в том случае, если политика неизменяемости уже существует. Если не указано, эта операция всегда будет применяться.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -669,7 +669,7 @@ items:
   - typeScript
   summary: Удаляет заданный контейнер под его учетной записью.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -690,7 +690,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -735,7 +735,7 @@ items:
   - typeScript
   summary: Удаляет заданный контейнер под его учетной записью.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -751,7 +751,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -769,7 +769,7 @@ items:
   - typeScript
   summary: Удаляет заданный контейнер под его учетной записью.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -790,7 +790,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -805,7 +805,7 @@ items:
   - typeScript
   summary: Расширяет immutabilityPeriodSinceCreationInDays заблокированные политика неизменяемости. В политике Locked допустимо только действие будет это действие. ETag в If-Match является обязательным для этой операции.
   syntax:
-    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -836,7 +836,7 @@ items:
         Неизменность период для больших двоичных объектов в контейнере с момента создания политики, в днях.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -889,7 +889,7 @@ items:
   - typeScript
   summary: Расширяет immutabilityPeriodSinceCreationInDays заблокированные политика неизменяемости. В политике Locked допустимо только действие будет это действие. ETag в If-Match является обязательным для этой операции.
   syntax:
-    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function extendImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -913,7 +913,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -931,7 +931,7 @@ items:
   - typeScript
   summary: Расширяет immutabilityPeriodSinceCreationInDays заблокированные политика неизменяемости. В политике Locked допустимо только действие будет это действие. ETag в If-Match является обязательным для этой операции.
   syntax:
-    content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: function)'
+    content: 'function extendImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, immutabilityPeriodSinceCreationInDays: number, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -962,7 +962,7 @@ items:
         Неизменность период для больших двоичных объектов в контейнере с момента создания политики, в днях.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -977,7 +977,7 @@ items:
   - typeScript
   summary: Получает свойства указанного контейнера.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -998,7 +998,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1043,7 +1043,7 @@ items:
   - typeScript
   summary: Получает свойства указанного контейнера.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function get(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1059,7 +1059,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1077,7 +1077,7 @@ items:
   - typeScript
   summary: Получает существующую политику неизменяемости вместе с соответствующей ETag в ответ заголовки и текст.
   syntax:
-    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1098,7 +1098,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1113,7 +1113,7 @@ items:
   - typeScript
   summary: Получает существующую политику неизменяемости вместе с соответствующей ETag в ответ заголовки и текст.
   syntax:
-    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function getImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1129,7 +1129,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1177,7 +1177,7 @@ items:
   - typeScript
   summary: Получает существующую политику неизменяемости вместе с соответствующей ETag в ответ заголовки и текст.
   syntax:
-    content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1198,7 +1198,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1213,7 +1213,7 @@ items:
   - typeScript
   summary: Получает свойства указанного контейнера.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1234,7 +1234,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1249,7 +1249,7 @@ items:
   - typeScript
   summary: Перечисляет все контейнеры и не поддерживает префикс, например плоскости данных. Также политик ограниченного использования Программ уже сегодня не возвращает токен продолжения.
   syntax:
-    content: 'function list(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function list(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1263,7 +1263,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1304,7 +1304,7 @@ items:
   - typeScript
   summary: Перечисляет все контейнеры и не поддерживает префикс, например плоскости данных. Также политик ограниченного использования Программ уже сегодня не возвращает токен продолжения.
   syntax:
-    content: 'function list(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<ListContainerItems>)'
+    content: 'function list(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<ListContainerItems>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1316,7 +1316,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1334,7 +1334,7 @@ items:
   - typeScript
   summary: Перечисляет все контейнеры и не поддерживает префикс, например плоскости данных. Также политик ограниченного использования Программ уже сегодня не возвращает токен продолжения.
   syntax:
-    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1348,7 +1348,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1363,7 +1363,7 @@ items:
   - typeScript
   summary: Задает состояние заблокирована политика неизменяемости. В политике Locked допустимо только действие — действие ExtendImmutabilityPolicy. ETag в If-Match является обязательным для этой операции.
   syntax:
-    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1389,7 +1389,7 @@ items:
         Версия состояния (ETag) сущности для обновления политики неизменяемости. Значение «*» можно использовать для применения операции только в том случае, если политика неизменяемости уже существует. Если не указано, эта операция всегда будет применяться.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1438,7 +1438,7 @@ items:
   - typeScript
   summary: Задает состояние заблокирована политика неизменяемости. В политике Locked допустимо только действие — действие ExtendImmutabilityPolicy. ETag в If-Match является обязательным для этой операции.
   syntax:
-    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: function, callback: ServiceCallback<ImmutabilityPolicy>)'
+    content: 'function lockImmutabilityPolicy(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options: Object, callback: ServiceCallback<ImmutabilityPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1458,7 +1458,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1476,7 +1476,7 @@ items:
   - typeScript
   summary: Задает состояние заблокирована политика неизменяемости. В политике Locked допустимо только действие — действие ExtendImmutabilityPolicy. ETag в If-Match является обязательным для этой операции.
   syntax:
-    content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: function)'
+    content: 'function lockImmutabilityPolicyWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, ifMatch: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1502,7 +1502,7 @@ items:
         Версия состояния (ETag) сущности для обновления политики неизменяемости. Значение «*» можно использовать для применения операции только в том случае, если политика неизменяемости уже существует. Если не указано, эта операция всегда будет применяться.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1517,7 +1517,7 @@ items:
   - typeScript
   summary: Наборы юридические хранения тегов. Задание те же результаты тега в идемпотентной операции. SetLegalHold шаблону append и снимите флажок не out существующие теги, которые не указаны в запросе.
   syntax:
-    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1543,7 +1543,7 @@ items:
         Каждый тег должен быть буквенно-цифровые символы 3 до 23 и нормализуется в нижний регистр в SRP.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1592,7 +1592,7 @@ items:
   - typeScript
   summary: Наборы юридические хранения тегов. Задание те же результаты тега в идемпотентной операции. SetLegalHold шаблону append и снимите флажок не out существующие теги, которые не указаны в запросе.
   syntax:
-    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: function, callback: ServiceCallback<LegalHold>)'
+    content: 'function setLegalHold(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options: Object, callback: ServiceCallback<LegalHold>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1612,7 +1612,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1630,7 +1630,7 @@ items:
   - typeScript
   summary: Наборы юридические хранения тегов. Задание те же результаты тега в идемпотентной операции. SetLegalHold шаблону append и снимите флажок не out существующие теги, которые не указаны в запросе.
   syntax:
-    content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: function)'
+    content: 'function setLegalHoldWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, tags: string[], options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1656,7 +1656,7 @@ items:
         Каждый тег должен быть буквенно-цифровые символы 3 до 23 и нормализуется в нижний регистр в SRP.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1671,7 +1671,7 @@ items:
   - typeScript
   summary: Обновляет свойства контейнера, как указано в тексте запроса. Свойства, не упоминается в запросе, будут без изменений. Если указанный контейнер не существует, происходит сбой обновления.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1692,7 +1692,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1737,7 +1737,7 @@ items:
   - typeScript
   summary: Обновляет свойства контейнера, как указано в тексте запроса. Свойства, не упоминается в запросе, будут без изменений. Если указанный контейнер не существует, происходит сбой обновления.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: function, callback: ServiceCallback<BlobContainer>)'
+    content: 'function update(resourceGroupName: string, accountName: string, containerName: string, options: Object, callback: ServiceCallback<BlobContainer>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1753,7 +1753,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1771,7 +1771,7 @@ items:
   - typeScript
   summary: Обновляет свойства контейнера, как указано в тексте запроса. Свойства, не упоминается в запросе, будут без изменений. Если указанный контейнер не существует, происходит сбой обновления.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, containerName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1792,7 +1792,7 @@ items:
         Каждого символа дефиса (-) непосредственно перед и после него должны буква или цифра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

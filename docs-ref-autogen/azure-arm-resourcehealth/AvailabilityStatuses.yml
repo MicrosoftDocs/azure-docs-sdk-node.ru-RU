@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fb3b1553d0aa9767712ae129a7e7345be4310c20
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 501ee7516ed16b297033599cc55a88be533c6827
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40075876"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41695383"
 items:
 - uid: azure-arm-resourcehealth.AvailabilityStatuses
   name: AvailabilityStatuses
@@ -51,7 +51,7 @@ items:
   - typeScript
   summary: Возвращает текущее состояние доступности для одного ресурса, выполните следующие действия.
   syntax:
-    content: 'function getByResource(resourceUri: string, options?: function)'
+    content: 'function getByResource(resourceUri: string, options?: Object)'
     parameters:
     - id: resourceUri
       type:
@@ -60,7 +60,7 @@ items:
         Полный идентификатор ресурса, включая имя ресурса и тип ресурса. В настоящее время не вложенные поддержка API и одного вложения ресурсов на уровне типов: / subscriptions/{subscriptionId}/resourceGroups/{resource-group-name}/providers/{resource-provider-name}/{resource-type}/{resource-name} и {} / subscriptions / идентификатор подписки} /resourceGroups/ {resourceGroupName} /providers/ {resource-provider-name} / {parentResourceType} / {parentResourceName} / {Тип_ресурса} / {resourceName}
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -97,7 +97,7 @@ items:
   - typeScript
   summary: Возвращает текущее состояние доступности для одного ресурса, выполните следующие действия.
   syntax:
-    content: 'function getByResource(resourceUri: string, options: function, callback: ServiceCallback<AvailabilityStatus>)'
+    content: 'function getByResource(resourceUri: string, options: Object, callback: ServiceCallback<AvailabilityStatus>)'
     parameters:
     - id: resourceUri
       type:
@@ -105,7 +105,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -123,7 +123,7 @@ items:
   - typeScript
   summary: Возвращает текущее состояние доступности для одного ресурса, выполните следующие действия.
   syntax:
-    content: 'function getByResourceWithHttpOperationResponse(resourceUri: string, options?: function)'
+    content: 'function getByResourceWithHttpOperationResponse(resourceUri: string, options?: Object)'
     parameters:
     - id: resourceUri
       type:
@@ -132,7 +132,7 @@ items:
         Полный идентификатор ресурса, включая имя ресурса и тип ресурса. В настоящее время не вложенные поддержка API и одного вложения ресурсов на уровне типов: / subscriptions/{subscriptionId}/resourceGroups/{resource-group-name}/providers/{resource-provider-name}/{resource-type}/{resource-name} и {} / subscriptions / идентификатор подписки} /resourceGroups/ {resourceGroupName} /providers/ {resource-provider-name} / {parentResourceType} / {parentResourceName} / {Тип_ресурса} / {resourceName}
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -147,7 +147,7 @@ items:
   - typeScript
   summary: Перечислены все переходы исторических доступности и событиях повлиять на работу для одного ресурса. Свойство nextLink в ответе для получения следующей страницы состояние доступности
   syntax:
-    content: 'function list(resourceUri: string, options?: function)'
+    content: 'function list(resourceUri: string, options?: Object)'
     parameters:
     - id: resourceUri
       type:
@@ -156,7 +156,7 @@ items:
         Полный идентификатор ресурса, включая имя ресурса и тип ресурса. В настоящее время не вложенные поддержка API и одного вложения ресурсов на уровне типов: / subscriptions/{subscriptionId}/resourceGroups/{resource-group-name}/providers/{resource-provider-name}/{resource-type}/{resource-name} и {} / subscriptions / идентификатор подписки} /resourceGroups/ {resourceGroupName} /providers/ {resource-provider-name} / {parentResourceType} / {parentResourceName} / {Тип_ресурса} / {resourceName}
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -171,7 +171,7 @@ items:
   - typeScript
   summary: Перечислены все переходы исторических доступности и событиях повлиять на работу для одного ресурса. Свойство nextLink в ответе для получения следующей страницы состояние доступности
   syntax:
-    content: 'function list(resourceUri: string, options: function, callback: ServiceCallback<AvailabilityStatusListResult>)'
+    content: 'function list(resourceUri: string, options: Object, callback: ServiceCallback<AvailabilityStatusListResult>)'
     parameters:
     - id: resourceUri
       type:
@@ -179,7 +179,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -241,7 +241,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в группе ресурсов. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -250,7 +250,7 @@ items:
         Имя группы ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -265,7 +265,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в группе ресурсов. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<AvailabilityStatusListResult>)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<AvailabilityStatusListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -273,7 +273,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -291,7 +291,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в группе ресурсов. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -300,7 +300,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -337,7 +337,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в группе ресурсов. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listByResourceGroupNext(nextPageLink: string, options: function, callback: ServiceCallback<AvailabilityStatusListResult>)'
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<AvailabilityStatusListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -345,7 +345,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -363,7 +363,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в группе ресурсов. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -372,7 +372,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -387,7 +387,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в группе ресурсов. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -396,7 +396,7 @@ items:
         Имя группы ресурсов.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -411,11 +411,11 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в подписке. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listBySubscriptionId(options?: function)'
+    content: 'function listBySubscriptionId(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -430,11 +430,11 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в подписке. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listBySubscriptionId(options: function, callback: ServiceCallback<AvailabilityStatusListResult>)'
+    content: 'function listBySubscriptionId(options: Object, callback: ServiceCallback<AvailabilityStatusListResult>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -470,7 +470,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в подписке. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listBySubscriptionIdNext(nextPageLink: string, options?: function)'
+    content: 'function listBySubscriptionIdNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -479,7 +479,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -516,7 +516,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в подписке. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listBySubscriptionIdNext(nextPageLink: string, options: function, callback: ServiceCallback<AvailabilityStatusListResult>)'
+    content: 'function listBySubscriptionIdNext(nextPageLink: string, options: Object, callback: ServiceCallback<AvailabilityStatusListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -524,7 +524,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -542,7 +542,7 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в подписке. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listBySubscriptionIdNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listBySubscriptionIdNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -551,7 +551,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -566,11 +566,11 @@ items:
   - typeScript
   summary: Показывает текущее состояние доступности для всех ресурсов в подписке. Используйте свойство nextLink в ответе, чтобы перейти на следующую страницу состояния доступности.
   syntax:
-    content: 'function listBySubscriptionIdWithHttpOperationResponse(options?: function)'
+    content: 'function listBySubscriptionIdWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -585,7 +585,7 @@ items:
   - typeScript
   summary: Перечислены все переходы исторических доступности и событиях повлиять на работу для одного ресурса. Свойство nextLink в ответе для получения следующей страницы состояние доступности
   syntax:
-    content: 'function listNext(nextPageLink: string, options?: function)'
+    content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -594,7 +594,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -631,7 +631,7 @@ items:
   - typeScript
   summary: Перечислены все переходы исторических доступности и событиях повлиять на работу для одного ресурса. Свойство nextLink в ответе для получения следующей страницы состояние доступности
   syntax:
-    content: 'function listNext(nextPageLink: string, options: function, callback: ServiceCallback<AvailabilityStatusListResult>)'
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<AvailabilityStatusListResult>)'
     parameters:
     - id: nextPageLink
       type:
@@ -639,7 +639,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -657,7 +657,7 @@ items:
   - typeScript
   summary: Перечислены все переходы исторических доступности и событиях повлиять на работу для одного ресурса. Свойство nextLink в ответе для получения следующей страницы состояние доступности
   syntax:
-    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -666,7 +666,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -681,7 +681,7 @@ items:
   - typeScript
   summary: Перечислены все переходы исторических доступности и событиях повлиять на работу для одного ресурса. Свойство nextLink в ответе для получения следующей страницы состояние доступности
   syntax:
-    content: 'function listWithHttpOperationResponse(resourceUri: string, options?: function)'
+    content: 'function listWithHttpOperationResponse(resourceUri: string, options?: Object)'
     parameters:
     - id: resourceUri
       type:
@@ -690,7 +690,7 @@ items:
         Полный идентификатор ресурса, включая имя ресурса и тип ресурса. В настоящее время не вложенные поддержка API и одного вложения ресурсов на уровне типов: / subscriptions/{subscriptionId}/resourceGroups/{resource-group-name}/providers/{resource-provider-name}/{resource-type}/{resource-name} и {} / subscriptions / идентификатор подписки} /resourceGroups/ {resourceGroupName} /providers/ {resource-provider-name} / {parentResourceType} / {parentResourceName} / {Тип_ресурса} / {resourceName}
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
