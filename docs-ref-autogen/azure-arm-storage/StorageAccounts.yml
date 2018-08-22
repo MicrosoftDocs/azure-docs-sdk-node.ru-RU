@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 937d978c38f15492d7555089842122a22c9cc663
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: ba6569dcedff3dac3f3c12c2aee5a462e15389e8
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40076144"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41700593"
 items:
 - uid: azure-arm-storage.StorageAccounts
   name: StorageAccounts
@@ -86,7 +86,7 @@ items:
 
     Если уже создается учетная запись, с различными свойствами выдается запрос на создание последующих свойства учетной записи будет обновляться. Если учетная запись уже создается и последующий запрос создания или обновления, выпущенные с одинаковые наборы свойств, запрос завершится успешно.
   syntax:
-    content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: function)'
+    content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -105,7 +105,7 @@ items:
         Параметры, чтобы предоставить для него учетную запись.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -156,7 +156,7 @@ items:
 
     Если уже создается учетная запись, с различными свойствами выдается запрос на создание последующих свойства учетной записи будет обновляться. Если учетная запись уже создается и последующий запрос создания или обновления, выпущенные с одинаковые наборы свойств, запрос завершится успешно.
   syntax:
-    content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options: function, callback: ServiceCallback<StorageAccount>)'
+    content: 'function beginCreate(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options: Object, callback: ServiceCallback<StorageAccount>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -172,7 +172,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -193,7 +193,7 @@ items:
 
     Если уже создается учетная запись, с различными свойствами выдается запрос на создание последующих свойства учетной записи будет обновляться. Если учетная запись уже создается и последующий запрос создания или обновления, выпущенные с одинаковые наборы свойств, запрос завершится успешно.
   syntax:
-    content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: function)'
+    content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -212,7 +212,7 @@ items:
         Параметры, чтобы предоставить для него учетную запись.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -227,7 +227,7 @@ items:
   - typeScript
   summary: Проверяет, что имя учетной записи хранения является допустимым и уже не используется.
   syntax:
-    content: 'function checkNameAvailability(name: string, options?: function)'
+    content: 'function checkNameAvailability(name: string, options?: Object)'
     parameters:
     - id: name
       type:
@@ -236,7 +236,7 @@ items:
         имя учетной записи хранения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -273,7 +273,7 @@ items:
   - typeScript
   summary: Проверяет, что имя учетной записи хранения является допустимым и уже не используется.
   syntax:
-    content: 'function checkNameAvailability(name: string, options: function, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+    content: 'function checkNameAvailability(name: string, options: Object, callback: ServiceCallback<CheckNameAvailabilityResult>)'
     parameters:
     - id: name
       type:
@@ -281,7 +281,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -299,7 +299,7 @@ items:
   - typeScript
   summary: Проверяет, что имя учетной записи хранения является допустимым и уже не используется.
   syntax:
-    content: 'function checkNameAvailabilityWithHttpOperationResponse(name: string, options?: function)'
+    content: 'function checkNameAvailabilityWithHttpOperationResponse(name: string, options?: Object)'
     parameters:
     - id: name
       type:
@@ -308,7 +308,7 @@ items:
         имя учетной записи хранения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -359,7 +359,7 @@ items:
 
     Если уже создается учетная запись, с различными свойствами выдается запрос на создание последующих свойства учетной записи будет обновляться. Если учетная запись уже создается и последующий запрос создания или обновления, выпущенные с одинаковые наборы свойств, запрос завершится успешно.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options: function, callback: ServiceCallback<StorageAccount>)'
+    content: 'function create(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options: Object, callback: ServiceCallback<StorageAccount>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -375,7 +375,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -396,7 +396,7 @@ items:
 
     Если уже создается учетная запись, с различными свойствами выдается запрос на создание последующих свойства учетной записи будет обновляться. Если учетная запись уже создается и последующий запрос создания или обновления, выпущенные с одинаковые наборы свойств, запрос завершится успешно.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: function)'
+    content: 'function create(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -415,7 +415,7 @@ items:
         Параметры, чтобы предоставить для него учетную запись.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -456,7 +456,7 @@ items:
   - typeScript
   summary: Задает данные правила политики, связанные с указанной учетной записи хранения.
   syntax:
-    content: 'function createOrUpdateManagementPolicies(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<StorageAccountManagementPolicies>)'
+    content: 'function createOrUpdateManagementPolicies(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<StorageAccountManagementPolicies>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -468,7 +468,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -486,7 +486,7 @@ items:
   - typeScript
   summary: Задает данные правила политики, связанные с указанной учетной записи хранения.
   syntax:
-    content: 'function createOrUpdateManagementPolicies(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function createOrUpdateManagementPolicies(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -500,7 +500,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -515,7 +515,7 @@ items:
   - typeScript
   summary: Задает данные правила политики, связанные с указанной учетной записи хранения.
   syntax:
-    content: 'function createOrUpdateManagementPoliciesWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function createOrUpdateManagementPoliciesWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -529,7 +529,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -547,7 +547,7 @@ items:
 
     Если уже создается учетная запись, с различными свойствами выдается запрос на создание последующих свойства учетной записи будет обновляться. Если учетная запись уже создается и последующий запрос создания или обновления, выпущенные с одинаковые наборы свойств, запрос завершится успешно.
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: function)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: StorageAccountCreateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -566,7 +566,7 @@ items:
         Параметры, чтобы предоставить для него учетную запись.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -607,7 +607,7 @@ items:
   - typeScript
   summary: Удаление правила политики данных, связанных с указанной учетной записи хранения.
   syntax:
-    content: 'function deleteManagementPolicies(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function deleteManagementPolicies(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -621,7 +621,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -636,7 +636,7 @@ items:
   - typeScript
   summary: Удаление правила политики данных, связанных с указанной учетной записи хранения.
   syntax:
-    content: 'function deleteManagementPolicies(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteManagementPolicies(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -648,7 +648,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -666,7 +666,7 @@ items:
   - typeScript
   summary: Удаление правила политики данных, связанных с указанной учетной записи хранения.
   syntax:
-    content: 'function deleteManagementPoliciesWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function deleteManagementPoliciesWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -680,7 +680,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -695,7 +695,7 @@ items:
   - typeScript
   summary: Удаляет учетную запись хранения в Microsoft Azure.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -709,7 +709,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -750,7 +750,7 @@ items:
   - typeScript
   summary: Удаляет учетную запись хранения в Microsoft Azure.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -762,7 +762,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -780,7 +780,7 @@ items:
   - typeScript
   summary: Удаляет учетную запись хранения в Microsoft Azure.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -794,7 +794,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -809,7 +809,7 @@ items:
   - typeScript
   summary: Получает данные правила политики, связанные с указанной учетной записи хранения.
   syntax:
-    content: 'function getManagementPolicies(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function getManagementPolicies(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -823,7 +823,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -864,7 +864,7 @@ items:
   - typeScript
   summary: Получает данные правила политики, связанные с указанной учетной записи хранения.
   syntax:
-    content: 'function getManagementPolicies(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<StorageAccountManagementPolicies>)'
+    content: 'function getManagementPolicies(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<StorageAccountManagementPolicies>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -876,7 +876,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -894,7 +894,7 @@ items:
   - typeScript
   summary: Получает данные правила политики, связанные с указанной учетной записи хранения.
   syntax:
-    content: 'function getManagementPoliciesWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function getManagementPoliciesWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -908,7 +908,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -923,7 +923,7 @@ items:
   - typeScript
   summary: Возвращает свойства для указанной учетной записи хранения в том числе имя, номер SKU имя, расположение и состояние учетной записи. Операция ListKeys должен использоваться для получения ключей к хранилищу.
   syntax:
-    content: 'function getProperties(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function getProperties(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -937,7 +937,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -978,7 +978,7 @@ items:
   - typeScript
   summary: Возвращает свойства для указанной учетной записи хранения в том числе имя, номер SKU имя, расположение и состояние учетной записи. Операция ListKeys должен использоваться для получения ключей к хранилищу.
   syntax:
-    content: 'function getProperties(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<StorageAccount>)'
+    content: 'function getProperties(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<StorageAccount>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -990,7 +990,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1008,7 +1008,7 @@ items:
   - typeScript
   summary: Возвращает свойства для указанной учетной записи хранения в том числе имя, номер SKU имя, расположение и состояние учетной записи. Операция ListKeys должен использоваться для получения ключей к хранилищу.
   syntax:
-    content: 'function getPropertiesWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function getPropertiesWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1022,7 +1022,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1037,11 +1037,11 @@ items:
   - typeScript
   summary: Список всех доступных учетных записей хранения в подписке. Обратите внимание, что хранилище ключей не возвращаются; Используйте операцию ListKeys для этого.
   syntax:
-    content: 'function list(options?: function)'
+    content: 'function list(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1056,11 +1056,11 @@ items:
   - typeScript
   summary: Список всех доступных учетных записей хранения в подписке. Обратите внимание, что хранилище ключей не возвращаются; Используйте операцию ListKeys для этого.
   syntax:
-    content: 'function list(options: function, callback: ServiceCallback<StorageAccountListResult>)'
+    content: 'function list(options: Object, callback: ServiceCallback<StorageAccountListResult>)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1126,7 +1126,7 @@ items:
   - typeScript
   summary: Вывод списка учетных данных SAS учетной записи хранения.
   syntax:
-    content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options: function, callback: ServiceCallback<ListAccountSasResponse>)'
+    content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options: Object, callback: ServiceCallback<ListAccountSasResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1142,7 +1142,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1160,7 +1160,7 @@ items:
   - typeScript
   summary: Вывод списка учетных данных SAS учетной записи хранения.
   syntax:
-    content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options?: function)'
+    content: 'function listAccountSAS(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1179,7 +1179,7 @@ items:
         Параметры, чтобы предоставить список учетных данных SAS для учетной записи хранения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1194,7 +1194,7 @@ items:
   - typeScript
   summary: Вывод списка учетных данных SAS учетной записи хранения.
   syntax:
-    content: 'function listAccountSASWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options?: function)'
+    content: 'function listAccountSASWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: AccountSasParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1213,7 +1213,7 @@ items:
         Параметры, чтобы предоставить список учетных данных SAS для учетной записи хранения.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1231,7 +1231,7 @@ items:
 
     Обратите внимание, что хранилище ключей не возвращаются; Используйте операцию ListKeys для этого.
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1240,7 +1240,7 @@ items:
         Имя группы ресурсов в подписке пользователя. Имя без учета регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1283,7 +1283,7 @@ items:
 
     Обратите внимание, что хранилище ключей не возвращаются; Используйте операцию ListKeys для этого.
   syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, options: function, callback: ServiceCallback<StorageAccountListResult>)'
+    content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<StorageAccountListResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1291,7 +1291,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1312,7 +1312,7 @@ items:
 
     Обратите внимание, что хранилище ключей не возвращаются; Используйте операцию ListKeys для этого.
   syntax:
-    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: function)'
+    content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1321,7 +1321,7 @@ items:
         Имя группы ресурсов в подписке пользователя. Имя без учета регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1336,7 +1336,7 @@ items:
   - typeScript
   summary: Список ключей доступа для указанной учетной записи хранения.
   syntax:
-    content: 'function listKeys(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function listKeys(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1350,7 +1350,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1391,7 +1391,7 @@ items:
   - typeScript
   summary: Список ключей доступа для указанной учетной записи хранения.
   syntax:
-    content: 'function listKeys(resourceGroupName: string, accountName: string, options: function, callback: ServiceCallback<StorageAccountListKeysResult>)'
+    content: 'function listKeys(resourceGroupName: string, accountName: string, options: Object, callback: ServiceCallback<StorageAccountListKeysResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1403,7 +1403,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1421,7 +1421,7 @@ items:
   - typeScript
   summary: Список ключей доступа для указанной учетной записи хранения.
   syntax:
-    content: 'function listKeysWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: function)'
+    content: 'function listKeysWithHttpOperationResponse(resourceGroupName: string, accountName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1435,7 +1435,7 @@ items:
         Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1480,7 +1480,7 @@ items:
   - typeScript
   summary: Вывод списка учетных данных SAS службы определенного ресурса.
   syntax:
-    content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options: function, callback: ServiceCallback<ListServiceSasResponse>)'
+    content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options: Object, callback: ServiceCallback<ListServiceSasResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1496,7 +1496,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1514,7 +1514,7 @@ items:
   - typeScript
   summary: Вывод списка учетных данных SAS службы определенного ресурса.
   syntax:
-    content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options?: function)'
+    content: 'function listServiceSAS(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1533,7 +1533,7 @@ items:
         Параметры для предоставления учетных данных SAS службы списка.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1548,7 +1548,7 @@ items:
   - typeScript
   summary: Вывод списка учетных данных SAS службы определенного ресурса.
   syntax:
-    content: 'function listServiceSASWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options?: function)'
+    content: 'function listServiceSASWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: ServiceSasParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1567,7 +1567,7 @@ items:
         Параметры для предоставления учетных данных SAS службы списка.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1582,11 +1582,11 @@ items:
   - typeScript
   summary: Список всех доступных учетных записей хранения в подписке. Обратите внимание, что хранилище ключей не возвращаются; Используйте операцию ListKeys для этого.
   syntax:
-    content: 'function listWithHttpOperationResponse(options?: function)'
+    content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1601,7 +1601,7 @@ items:
   - typeScript
   summary: Повторное создание ключей доступа для указанной учетной записи хранения.
   syntax:
-    content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options?: function)'
+    content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1620,7 +1620,7 @@ items:
         Имя хранилища ключей, должны быть vaules создан повторно, возможно, key1, key2.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1665,7 +1665,7 @@ items:
   - typeScript
   summary: Повторное создание ключей доступа для указанной учетной записи хранения.
   syntax:
-    content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options: function, callback: ServiceCallback<StorageAccountListKeysResult>)'
+    content: 'function regenerateKey(resourceGroupName: string, accountName: string, keyName: string, options: Object, callback: ServiceCallback<StorageAccountListKeysResult>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1681,7 +1681,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1699,7 +1699,7 @@ items:
   - typeScript
   summary: Повторное создание ключей доступа для указанной учетной записи хранения.
   syntax:
-    content: 'function regenerateKeyWithHttpOperationResponse(resourceGroupName: string, accountName: string, keyName: string, options?: function)'
+    content: 'function regenerateKeyWithHttpOperationResponse(resourceGroupName: string, accountName: string, keyName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1718,7 +1718,7 @@ items:
         Имя хранилища ключей, должны быть vaules создан повторно, возможно, key1, key2.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1733,7 +1733,7 @@ items:
   - typeScript
   summary: Операция обновления может использоваться для обновления SKU, шифрования, а также уровень доступа или теги для учетной записи хранения. Он может также использоваться для сопоставления учетной записи с личным доменом. Только один личный домен в секунду на учетную запись хранения. Замена или изменение личного домена не поддерживается. Чтобы заменить старый пользовательский домен, старое значение должен быть очищен или отменена его регистрация, прежде чем можно задать новое значение. Поддерживается обновление нескольких свойств. Этот вызов не меняйте ключи хранилища для учетной записи. Если вы хотите изменить ключи учетной записи хранения, используйте операцию повторное создание ключей. После создания невозможно изменить расположение и имя учетной записи хранения.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options?: function)'
+    content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1752,7 +1752,7 @@ items:
         Параметры, чтобы указать для обновленной записи.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1797,7 +1797,7 @@ items:
   - typeScript
   summary: Операция обновления может использоваться для обновления SKU, шифрования, а также уровень доступа или теги для учетной записи хранения. Он может также использоваться для сопоставления учетной записи с личным доменом. Только один личный домен в секунду на учетную запись хранения. Замена или изменение личного домена не поддерживается. Чтобы заменить старый пользовательский домен, старое значение должен быть очищен или отменена его регистрация, прежде чем можно задать новое значение. Поддерживается обновление нескольких свойств. Этот вызов не меняйте ключи хранилища для учетной записи. Если вы хотите изменить ключи учетной записи хранения, используйте операцию повторное создание ключей. После создания невозможно изменить расположение и имя учетной записи хранения.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options: function, callback: ServiceCallback<StorageAccount>)'
+    content: 'function update(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options: Object, callback: ServiceCallback<StorageAccount>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1813,7 +1813,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1831,7 +1831,7 @@ items:
   - typeScript
   summary: Операция обновления может использоваться для обновления SKU, шифрования, а также уровень доступа или теги для учетной записи хранения. Он может также использоваться для сопоставления учетной записи с личным доменом. Только один личный домен в секунду на учетную запись хранения. Замена или изменение личного домена не поддерживается. Чтобы заменить старый пользовательский домен, старое значение должен быть очищен или отменена его регистрация, прежде чем можно задать новое значение. Поддерживается обновление нескольких свойств. Этот вызов не меняйте ключи хранилища для учетной записи. Если вы хотите изменить ключи учетной записи хранения, используйте операцию повторное создание ключей. После создания невозможно изменить расположение и имя учетной записи хранения.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, parameters: StorageAccountUpdateParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1850,7 +1850,7 @@ items:
         Параметры, чтобы указать для обновленной записи.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:

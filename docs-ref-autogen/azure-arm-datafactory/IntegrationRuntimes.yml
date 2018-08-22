@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 11653afe9c8c4a422ac1494551bebf01c8cbe3f9
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: 2aa2f985e3acb65c13b9498c33083859100ddf81
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40075220"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41702372"
 items:
 - uid: azure-arm-datafactory.IntegrationRuntimes
   name: IntegrationRuntimes
@@ -58,10 +58,10 @@ items:
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKey_2
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKey
   - azure-arm-datafactory.IntegrationRuntimes.regenerateAuthKeyWithHttpOperationResponse
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode_2
-  - azure-arm-datafactory.IntegrationRuntimes.removeNode_1
-  - azure-arm-datafactory.IntegrationRuntimes.removeNodeWithHttpOperationResponse
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks_2
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinks_1
+  - azure-arm-datafactory.IntegrationRuntimes.removeLinksWithHttpOperationResponse
   - azure-arm-datafactory.IntegrationRuntimes.start
   - azure-arm-datafactory.IntegrationRuntimes.start_1
   - azure-arm-datafactory.IntegrationRuntimes.start_2
@@ -95,7 +95,7 @@ items:
   - typeScript
   summary: Запускает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -114,7 +114,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -159,7 +159,7 @@ items:
   - typeScript
   summary: Запускает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function beginStart(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -175,7 +175,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -193,7 +193,7 @@ items:
   - typeScript
   summary: Запускает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function beginStartWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStartWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -212,7 +212,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -227,7 +227,7 @@ items:
   - typeScript
   summary: Останавливает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -246,7 +246,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -291,7 +291,7 @@ items:
   - typeScript
   summary: Останавливает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function beginStop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -307,7 +307,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -325,7 +325,7 @@ items:
   - typeScript
   summary: Останавливает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function beginStopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function beginStopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -344,7 +344,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -393,7 +393,7 @@ items:
   - typeScript
   summary: Создание или обновление среды выполнения интеграции.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: function)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -417,7 +417,7 @@ items:
         Определение ресурсов среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -432,7 +432,7 @@ items:
   - typeScript
   summary: Создание или обновление среды выполнения интеграции.
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options: function, callback: ServiceCallback<IntegrationRuntimeResource>)'
+    content: 'function createOrUpdate(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -452,7 +452,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -470,7 +470,7 @@ items:
   - typeScript
   summary: Создание или обновление среды выполнения интеграции.
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: function)'
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, integrationRuntime: IntegrationRuntimeResource, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -494,7 +494,7 @@ items:
         Определение ресурсов среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -509,7 +509,7 @@ items:
   - typeScript
   summary: Удаляет среду выполнения интеграции.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -525,7 +525,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -543,7 +543,7 @@ items:
   - typeScript
   summary: Удаляет среду выполнения интеграции.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function deleteMethod(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -562,7 +562,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -607,7 +607,7 @@ items:
   - typeScript
   summary: Удаляет среду выполнения интеграции.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -626,7 +626,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -671,7 +671,7 @@ items:
   - typeScript
   summary: Получает среду выполнения интеграции.
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeResource>)'
+    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -687,7 +687,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -705,7 +705,7 @@ items:
   - typeScript
   summary: Получает среду выполнения интеграции.
   syntax:
-    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function get(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -724,7 +724,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -739,7 +739,7 @@ items:
   - typeScript
   summary: Возвращает локальные сведения о соединении среды выполнения интеграции для шифрования учетных данных источника данных в локальной.
   syntax:
-    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -758,7 +758,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -773,7 +773,7 @@ items:
   - typeScript
   summary: Возвращает локальные сведения о соединении среды выполнения интеграции для шифрования учетных данных источника данных в локальной.
   syntax:
-    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeConnectionInfo>)'
+    content: 'function getConnectionInfo(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeConnectionInfo>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -789,7 +789,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -837,7 +837,7 @@ items:
   - typeScript
   summary: Возвращает локальные сведения о соединении среды выполнения интеграции для шифрования учетных данных источника данных в локальной.
   syntax:
-    content: 'function getConnectionInfoWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getConnectionInfoWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -856,7 +856,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -901,7 +901,7 @@ items:
   - typeScript
   summary: Получение данных, которая включает данные монитор для всех узлов в этой среде integration runtime мониторинга среды выполнения интеграции.
   syntax:
-    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -920,7 +920,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -935,7 +935,7 @@ items:
   - typeScript
   summary: Получение данных, которая включает данные монитор для всех узлов в этой среде integration runtime мониторинга среды выполнения интеграции.
   syntax:
-    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeMonitoringData>)'
+    content: 'function getMonitoringData(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeMonitoringData>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -951,7 +951,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -969,7 +969,7 @@ items:
   - typeScript
   summary: Получение данных, которая включает данные монитор для всех узлов в этой среде integration runtime мониторинга среды выполнения интеграции.
   syntax:
-    content: 'function getMonitoringDataWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getMonitoringDataWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -988,7 +988,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1033,7 +1033,7 @@ items:
   - typeScript
   summary: Возвращает подробные сведения о состоянии среды выполнения интеграции.
   syntax:
-    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1049,7 +1049,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1067,7 +1067,7 @@ items:
   - typeScript
   summary: Возвращает подробные сведения о состоянии среды выполнения интеграции.
   syntax:
-    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getStatus(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1086,7 +1086,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1101,7 +1101,7 @@ items:
   - typeScript
   summary: Возвращает подробные сведения о состоянии среды выполнения интеграции.
   syntax:
-    content: 'function getStatusWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getStatusWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1120,7 +1120,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1135,7 +1135,7 @@ items:
   - typeScript
   summary: Получает среду выполнения интеграции.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1154,7 +1154,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1169,7 +1169,7 @@ items:
   - typeScript
   summary: Получает ключи проверки подлинности для среды выполнения интеграции.
   syntax:
-    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1188,7 +1188,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1233,7 +1233,7 @@ items:
   - typeScript
   summary: Получает ключи проверки подлинности для среды выполнения интеграции.
   syntax:
-    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
+    content: 'function listAuthKeys(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1249,7 +1249,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1267,7 +1267,7 @@ items:
   - typeScript
   summary: Получает ключи проверки подлинности для среды выполнения интеграции.
   syntax:
-    content: 'function listAuthKeysWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function listAuthKeysWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1286,7 +1286,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1301,7 +1301,7 @@ items:
   - typeScript
   summary: Список сред выполнения интеграции.
   syntax:
-    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1315,7 +1315,7 @@ items:
         Имя фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1356,7 +1356,7 @@ items:
   - typeScript
   summary: Список сред выполнения интеграции.
   syntax:
-    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options: function, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
+    content: 'function listByFactory(resourceGroupName: string, factoryName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1368,7 +1368,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1386,7 +1386,7 @@ items:
   - typeScript
   summary: Список сред выполнения интеграции.
   syntax:
-    content: 'function listByFactoryNext(nextPageLink: string, options?: function)'
+    content: 'function listByFactoryNext(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -1395,7 +1395,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1432,7 +1432,7 @@ items:
   - typeScript
   summary: Список сред выполнения интеграции.
   syntax:
-    content: 'function listByFactoryNext(nextPageLink: string, options: function, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
+    content: 'function listByFactoryNext(nextPageLink: string, options: Object, callback: ServiceCallback<IntegrationRuntimeListResponse>)'
     parameters:
     - id: nextPageLink
       type:
@@ -1440,7 +1440,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1458,7 +1458,7 @@ items:
   - typeScript
   summary: Список сред выполнения интеграции.
   syntax:
-    content: 'function listByFactoryNextWithHttpOperationResponse(nextPageLink: string, options?: function)'
+    content: 'function listByFactoryNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
     - id: nextPageLink
       type:
@@ -1467,7 +1467,7 @@ items:
         NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1482,7 +1482,7 @@ items:
   - typeScript
   summary: Список сред выполнения интеграции.
   syntax:
-    content: 'function listByFactoryWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: function)'
+    content: 'function listByFactoryWithHttpOperationResponse(resourceGroupName: string, factoryName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1496,7 +1496,7 @@ items:
         Имя фабрики.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1545,7 +1545,7 @@ items:
   - typeScript
   summary: Повторно создает ключ проверки подлинности для среды выполнения интеграции.
   syntax:
-    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options: function, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
+    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options: Object, callback: ServiceCallback<IntegrationRuntimeAuthKeys>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1565,7 +1565,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1583,7 +1583,7 @@ items:
   - typeScript
   summary: Повторно создает ключ проверки подлинности для среды выполнения интеграции.
   syntax:
-    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: function)'
+    content: 'function regenerateAuthKey(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1607,7 +1607,7 @@ items:
         Параметры повторное создание ключа проверки подлинности для среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1622,7 +1622,7 @@ items:
   - typeScript
   summary: Повторно создает ключ проверки подлинности для среды выполнения интеграции.
   syntax:
-    content: 'function regenerateAuthKeyWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: function)'
+    content: 'function regenerateAuthKeyWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, regenerateKeyParameters: IntegrationRuntimeRegenerateKeyParameters, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1646,22 +1646,22 @@ items:
         Параметры повторное создание ключа проверки подлинности для среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
       - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeAuthKeys>>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: Удаление узла из среды выполнения интеграции.
+  summary: Удалите все связанные интеграции среды выполнения под конкретную фабрику данных в локальную среду выполнения интеграции.
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options?: function)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1678,29 +1678,29 @@ items:
       - string
       description: >
         Имя среды выполнения интеграции.
-    - id: removeNodeParameters
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: >
-        Имя узла, который необходимо удалить из среды выполнения интеграции.
+        Имя фабрики данных для связанного integration runtime.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode_2
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks_2
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: Удаление узла из среды выполнения интеграции.
+  summary: Удалите все связанные интеграции среды выполнения под конкретную фабрику данных в локальную среду выполнения интеграции.
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options: function, callback: ServiceCallback<void>)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1714,13 +1714,13 @@ items:
       type:
       - string
       description: ''
-    - id: removeNodeParameters
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1730,15 +1730,15 @@ items:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNode_1
-  name: removeNode
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinks_1
+  name: removeLinks
   children: []
   type: method
   langs:
   - typeScript
-  summary: Удаление узла из среды выполнения интеграции.
+  summary: Удалите все связанные интеграции среды выполнения под конкретную фабрику данных в локальную среду выполнения интеграции.
   syntax:
-    content: 'function removeNode(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, callback: ServiceCallback<void>)'
+    content: 'function removeLinks(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1752,9 +1752,9 @@ items:
       type:
       - string
       description: ''
-    - id: removeNodeParameters
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: ''
     - id: callback
       type:
@@ -1764,15 +1764,15 @@ items:
       type:
       - Promise<void>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.IntegrationRuntimes.removeNodeWithHttpOperationResponse
-  name: removeNodeWithHttpOperationResponse
+- uid: azure-arm-datafactory.IntegrationRuntimes.removeLinksWithHttpOperationResponse
+  name: removeLinksWithHttpOperationResponse
   children: []
   type: method
   langs:
   - typeScript
-  summary: Удаление узла из среды выполнения интеграции.
+  summary: Удалите все связанные интеграции среды выполнения под конкретную фабрику данных в локальную среду выполнения интеграции.
   syntax:
-    content: 'function removeNodeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, removeNodeParameters: IntegrationRuntimeRemoveNodeRequest, options?: function)'
+    content: 'function removeLinksWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, linkedIntegrationRuntimeRequest: LinkedIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1789,14 +1789,14 @@ items:
       - string
       description: >
         Имя среды выполнения интеграции.
-    - id: removeNodeParameters
+    - id: linkedIntegrationRuntimeRequest
       type:
-      - azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+      - azure-arm-datafactory.LinkedIntegrationRuntimeRequest
       description: >
-        Имя узла, который необходимо удалить из среды выполнения интеграции.
+        Имя фабрики данных для связанного integration runtime.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1811,7 +1811,7 @@ items:
   - typeScript
   summary: Запускает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1830,7 +1830,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1875,7 +1875,7 @@ items:
   - typeScript
   summary: Запускает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function start(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1891,7 +1891,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -1909,7 +1909,7 @@ items:
   - typeScript
   summary: Запускает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function startWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function startWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1928,7 +1928,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1943,7 +1943,7 @@ items:
   - typeScript
   summary: Останавливает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1962,7 +1962,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -1977,7 +1977,7 @@ items:
   - typeScript
   summary: Останавливает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function stop(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1993,7 +1993,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2041,7 +2041,7 @@ items:
   - typeScript
   summary: Останавливает среду выполнения интеграции ManagedReserved типа.
   syntax:
-    content: 'function stopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function stopWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2060,7 +2060,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2075,7 +2075,7 @@ items:
   - typeScript
   summary: Принудительное среды выполнения интеграции для синхронизации учетных данных в узлы среды выполнения интеграции, и это будет переопределить учетные данные на всех рабочих узлах с тех, которые доступны на узле диспетчера. Если у вас уже есть последнюю резервную копию файла учетных данных, следует вручную импортировать его (предпочтительно) на любом узле среды выполнения интеграции, чем при использовании этого API напрямую.
   syntax:
-    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2094,7 +2094,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2139,7 +2139,7 @@ items:
   - typeScript
   summary: Принудительное среды выполнения интеграции для синхронизации учетных данных в узлы среды выполнения интеграции, и это будет переопределить учетные данные на всех рабочих узлах с тех, которые доступны на узле диспетчера. Если у вас уже есть последнюю резервную копию файла учетных данных, следует вручную импортировать его (предпочтительно) на любом узле среды выполнения интеграции, чем при использовании этого API напрямую.
   syntax:
-    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function syncCredentials(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2155,7 +2155,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2173,7 +2173,7 @@ items:
   - typeScript
   summary: Принудительное среды выполнения интеграции для синхронизации учетных данных в узлы среды выполнения интеграции, и это будет переопределить учетные данные на всех рабочих узлах с тех, которые доступны на узле диспетчера. Если у вас уже есть последнюю резервную копию файла учетных данных, следует вручную импортировать его (предпочтительно) на любом узле среды выполнения интеграции, чем при использовании этого API напрямую.
   syntax:
-    content: 'function syncCredentialsWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function syncCredentialsWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2192,7 +2192,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2207,7 +2207,7 @@ items:
   - typeScript
   summary: Обновление среды выполнения интеграции.
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: function)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2231,12 +2231,12 @@ items:
         Параметры для обновления среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.update_1
   name: update
@@ -2246,7 +2246,7 @@ items:
   - typeScript
   summary: Обновление среды выполнения интеграции.
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2266,11 +2266,11 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeResource>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.update_2
   name: update
@@ -2280,7 +2280,7 @@ items:
   - typeScript
   summary: Обновление среды выполнения интеграции.
   syntax:
-    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options: function, callback: ServiceCallback<IntegrationRuntimeStatusResponse>)'
+    content: 'function update(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options: Object, callback: ServiceCallback<IntegrationRuntimeResource>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2300,15 +2300,15 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - ServiceCallback<azure-arm-datafactory.IntegrationRuntimeResource>
       description: ''
     return:
       type:
-      - Promise<azure-arm-datafactory.IntegrationRuntimeStatusResponse>
+      - Promise<azure-arm-datafactory.IntegrationRuntimeResource>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.updateWithHttpOperationResponse
   name: updateWithHttpOperationResponse
@@ -2318,7 +2318,7 @@ items:
   - typeScript
   summary: Обновление среды выполнения интеграции.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: function)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, updateIntegrationRuntimeRequest: UpdateIntegrationRuntimeRequest, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2342,12 +2342,12 @@ items:
         Параметры для обновления среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeStatusResponse>>
+      - Promise<HttpOperationResponse<azure-arm-datafactory.IntegrationRuntimeResource>>
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.IntegrationRuntimes.upgrade
   name: upgrade
@@ -2357,7 +2357,7 @@ items:
   - typeScript
   summary: Обновление локальной среды выполнения интеграции до последней версии, если эксклюзивном.
   syntax:
-    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2376,7 +2376,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2421,7 +2421,7 @@ items:
   - typeScript
   summary: Обновление локальной среды выполнения интеграции до последней версии, если эксклюзивном.
   syntax:
-    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: function, callback: ServiceCallback<void>)'
+    content: 'function upgrade(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2437,7 +2437,7 @@ items:
       description: ''
     - id: options
       type:
-      - function
+      - Object
       description: ''
     - id: callback
       type:
@@ -2455,7 +2455,7 @@ items:
   - typeScript
   summary: Обновление локальной среды выполнения интеграции до последней версии, если эксклюзивном.
   syntax:
-    content: 'function upgradeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: function)'
+    content: 'function upgradeWithHttpOperationResponse(resourceGroupName: string, factoryName: string, integrationRuntimeName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -2474,7 +2474,7 @@ items:
         Имя среды выполнения интеграции.
     - id: options
       type:
-      - function
+      - Object
       description: ''
       optional: true
     return:
@@ -2654,11 +2654,11 @@ references:
   - name: IntegrationRuntimeRegenerateKeyParameters
     fullName: IntegrationRuntimeRegenerateKeyParameters
     uid: azure-arm-datafactory.IntegrationRuntimeRegenerateKeyParameters
-- uid: azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+- uid: azure-arm-datafactory.LinkedIntegrationRuntimeRequest
   spec.typeScript:
-  - name: IntegrationRuntimeRemoveNodeRequest
-    fullName: IntegrationRuntimeRemoveNodeRequest
-    uid: azure-arm-datafactory.IntegrationRuntimeRemoveNodeRequest
+  - name: LinkedIntegrationRuntimeRequest
+    fullName: LinkedIntegrationRuntimeRequest
+    uid: azure-arm-datafactory.LinkedIntegrationRuntimeRequest
 - uid: azure-arm-datafactory.UpdateIntegrationRuntimeRequest
   spec.typeScript:
   - name: UpdateIntegrationRuntimeRequest
