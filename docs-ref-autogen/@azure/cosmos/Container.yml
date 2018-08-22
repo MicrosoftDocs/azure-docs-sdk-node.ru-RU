@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8d085c8c928b40486992ef118d6155a39853015e
-ms.sourcegitcommit: 87f95d58ec8de16e115bc344efeb084afc346b74
+ms.openlocfilehash: f8106145cc2f1591901b57d76a3dcdbd0f179424
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "40073196"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "41702672"
 items:
 - uid: '@azure/cosmos.Container'
   name: Container
@@ -13,6 +13,7 @@ items:
   - '@azure/cosmos.Container.conflict'
   - '@azure/cosmos.Container.database'
   - '@azure/cosmos.Container.delete'
+  - '@azure/cosmos.Container.extractPartitionKey'
   - '@azure/cosmos.Container.id'
   - '@azure/cosmos.Container.item'
   - '@azure/cosmos.Container.items'
@@ -28,7 +29,7 @@ items:
   langs:
   - typeScript
   type: class
-  summary: <span data-ttu-id="23b41-101">Операции чтения, замены или удаления контейнера определенной, существующий по идентификатору.</span><span class="sxs-lookup"><span data-stu-id="23b41-101">Operations for reading, replacing, or deleting a specific, existing container by id.</span></span>
+  summary: <span data-ttu-id="9e140-101">Операции чтения, замены или удаления контейнера определенной, существующий по идентификатору.</span><span class="sxs-lookup"><span data-stu-id="9e140-101">Operations for reading, replacing, or deleting a specific, existing container by id.</span></span>
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Container.conflict'
   name: conflict
@@ -36,7 +37,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="23b41-102">Используется для чтения, замены или удаления конкретного, существующие <xref:Conflict> по идентификатору. Используйте `.conflicts` для создания новых конфликтов или запросов/чтения все конфликты.</span><span class="sxs-lookup"><span data-stu-id="23b41-102">Used to read, replace, or delete a specific, existing <xref:Conflict> by id. Use `.conflicts` for creating new conflicts, or querying/reading all conflicts.</span></span>
+  summary: <span data-ttu-id="9e140-102">Используется для чтения, замены или удаления конкретного, существующие <xref:Conflict> по идентификатору. Используйте `.conflicts` для создания новых конфликтов или запросов/чтения все конфликты.</span><span class="sxs-lookup"><span data-stu-id="9e140-102">Used to read, replace, or delete a specific, existing <xref:Conflict> by id. Use `.conflicts` for creating new conflicts, or querying/reading all conflicts.</span></span>
   syntax:
     content: 'function conflict(id: string)'
     parameters:
@@ -44,7 +45,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="23b41-103">Идентификатор <xref:Conflict>.</span><span class="sxs-lookup"><span data-stu-id="23b41-103">The id of the <xref:Conflict>.</span></span>
+        <span data-ttu-id="9e140-103">Идентификатор <xref:Conflict>.</span><span class="sxs-lookup"><span data-stu-id="9e140-103">The id of the <xref:Conflict>.</span></span>
     return:
       type:
       - '@azure/cosmos.Conflict'
@@ -69,7 +70,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="23b41-104">Удаление контейнера</span><span class="sxs-lookup"><span data-stu-id="23b41-104">Delete the container</span></span>
+  summary: <span data-ttu-id="9e140-104">Удаление контейнера</span><span class="sxs-lookup"><span data-stu-id="9e140-104">Delete the container</span></span>
   syntax:
     content: 'function delete(options?: RequestOptions)'
     parameters:
@@ -81,6 +82,28 @@ items:
     return:
       type:
       - Promise<@azure/cosmos.ContainerResponse>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Container.extractPartitionKey'
+  name: extractPartitionKey
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function extractPartitionKey(document: any, partitionKeyDefinition: PartitionKeyDefinition)'
+    parameters:
+    - id: document
+      type:
+      - any
+      description: ''
+    - id: partitionKeyDefinition
+      type:
+      - '@azure/cosmos.PartitionKeyDefinition'
+      description: ''
+    return:
+      type:
+      - '@azure/cosmos.PartitionKey[]'
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Container.id'
   name: id
@@ -103,18 +126,18 @@ items:
   langs:
   - typeScript
   summary: >
-    <span data-ttu-id="23b41-105">Используется для чтения, замены или удаления конкретного, существующие <xref:Item> по идентификатору. Используйте `.items` для создания новых элементов или запросов/чтения всех элементов.</span><span class="sxs-lookup"><span data-stu-id="23b41-105">Used to read, replace, or delete a specific, existing <xref:Item> by id. Use `.items` for creating new items, or querying/reading all items.</span></span>
+    <span data-ttu-id="9e140-105">Используется для чтения, замены или удаления конкретного, существующие <xref:Item> по идентификатору. Используйте `.items` для создания новых элементов или запросов/чтения всех элементов.</span><span class="sxs-lookup"><span data-stu-id="9e140-105">Used to read, replace, or delete a specific, existing <xref:Item> by id. Use `.items` for creating new items, or querying/reading all items.</span></span>
   syntax:
     content: 'function item(id: string, partitionKey?: string)'
     parameters:
     - id: id
       type:
       - string
-      description: <span data-ttu-id="23b41-106">Идентификатор <xref:Item>.</span><span class="sxs-lookup"><span data-stu-id="23b41-106">The id of the <xref:Item>.</span></span>
+      description: <span data-ttu-id="9e140-106">Идентификатор <xref:Item>.</span><span class="sxs-lookup"><span data-stu-id="9e140-106">The id of the <xref:Item>.</span></span>
     - id: partitionKey
       type:
       - string
-      description: <span data-ttu-id="23b41-107">Ключ раздела <xref:Item>.</span><span class="sxs-lookup"><span data-stu-id="23b41-107">The partition key of the <xref:Item>.</span></span> <span data-ttu-id="23b41-108">(Требуется для секционированных контейнеров).</span><span class="sxs-lookup"><span data-stu-id="23b41-108">(Required for partitioned containers).</span></span>
+      description: <span data-ttu-id="9e140-107">Ключ раздела <xref:Item>.</span><span class="sxs-lookup"><span data-stu-id="9e140-107">The partition key of the <xref:Item>.</span></span> <span data-ttu-id="9e140-108">(Требуется для секционированных контейнеров).</span><span class="sxs-lookup"><span data-stu-id="9e140-108">(Required for partitioned containers).</span></span>
       optional: true
     return:
       type:
@@ -128,7 +151,7 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="23b41-109">Операции для создания новых элементов и чтения/запроса все элементы для чтения, замене или удалении существующего элемента, используют `.item(id)`.</span><span class="sxs-lookup"><span data-stu-id="23b41-109">Operations for creating new items, and reading/querying all items For reading, replacing, or deleting an existing item, use `.item(id)`.</span></span>
+    <span data-ttu-id="9e140-109">Операции для создания новых элементов и чтения/запроса все элементы для чтения, замене или удалении существующего элемента, используют `.item(id)`.</span><span class="sxs-lookup"><span data-stu-id="9e140-109">Operations for creating new items, and reading/querying all items For reading, replacing, or deleting an existing item, use `.item(id)`.</span></span>
   syntax:
     content: 'items: Items'
     return:
@@ -141,7 +164,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="23b41-110">Считывание определения контейнера</span><span class="sxs-lookup"><span data-stu-id="23b41-110">Read the container's definition</span></span>
+  summary: <span data-ttu-id="9e140-110">Считывание определения контейнера</span><span class="sxs-lookup"><span data-stu-id="9e140-110">Read the container's definition</span></span>
   syntax:
     content: 'function read(options?: RequestOptions)'
     parameters:
@@ -160,7 +183,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="23b41-111">Замените определение контейнера</span><span class="sxs-lookup"><span data-stu-id="23b41-111">Replace the container's definition</span></span>
+  summary: <span data-ttu-id="9e140-111">Замените определение контейнера</span><span class="sxs-lookup"><span data-stu-id="9e140-111">Replace the container's definition</span></span>
   syntax:
     content: 'function replace(body: ContainerDefinition, options?: RequestOptions)'
     parameters:
@@ -183,7 +206,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="23b41-112">Используется для чтения, замены или удаления конкретного, существующие <xref:StoredProcedure> по идентификатору. Используйте `.storedProcedures` для создания новых хранимых процедур или запросов/чтения все хранимые процедуры.</span><span class="sxs-lookup"><span data-stu-id="23b41-112">Used to read, replace, or delete a specific, existing <xref:StoredProcedure> by id. Use `.storedProcedures` for creating new stored procedures, or querying/reading all stored procedures.</span></span>
+  summary: <span data-ttu-id="9e140-112">Используется для чтения, замены или удаления конкретного, существующие <xref:StoredProcedure> по идентификатору. Используйте `.storedProcedures` для создания новых хранимых процедур или запросов/чтения все хранимые процедуры.</span><span class="sxs-lookup"><span data-stu-id="9e140-112">Used to read, replace, or delete a specific, existing <xref:StoredProcedure> by id. Use `.storedProcedures` for creating new stored procedures, or querying/reading all stored procedures.</span></span>
   syntax:
     content: 'function storedProcedure(id: string)'
     parameters:
@@ -191,7 +214,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="23b41-113">Идентификатор <xref:StoredProcedure>.</span><span class="sxs-lookup"><span data-stu-id="23b41-113">The id of the <xref:StoredProcedure>.</span></span>
+        <span data-ttu-id="9e140-113">Идентификатор <xref:StoredProcedure>.</span><span class="sxs-lookup"><span data-stu-id="9e140-113">The id of the <xref:StoredProcedure>.</span></span>
     return:
       type:
       - '@azure/cosmos.StoredProcedure'
@@ -204,9 +227,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="23b41-114">Операции для создания новых хранимых процедур и чтения/запроса все хранимые процедуры.</span><span class="sxs-lookup"><span data-stu-id="23b41-114">Operations for creating new stored procedures, and reading/querying all stored procedures.</span></span>
+    <span data-ttu-id="9e140-114">Операции для создания новых хранимых процедур и чтения/запроса все хранимые процедуры.</span><span class="sxs-lookup"><span data-stu-id="9e140-114">Operations for creating new stored procedures, and reading/querying all stored procedures.</span></span>
 
-    <span data-ttu-id="23b41-115">Для чтения, замены или удаления существующей хранимой процедуры, используйте `.storedProcedure(id)`.</span><span class="sxs-lookup"><span data-stu-id="23b41-115">For reading, replacing, or deleting an existing stored procedure, use `.storedProcedure(id)`.</span></span>
+    <span data-ttu-id="9e140-115">Для чтения, замены или удаления существующей хранимой процедуры, используйте `.storedProcedure(id)`.</span><span class="sxs-lookup"><span data-stu-id="9e140-115">For reading, replacing, or deleting an existing stored procedure, use `.storedProcedure(id)`.</span></span>
   syntax:
     content: 'storedProcedures: StoredProcedures'
     return:
@@ -219,7 +242,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="23b41-116">Используется для чтения, замены или удаления конкретного, существующие <xref:Trigger> по идентификатору. Используйте `.triggers` для создания новых триггеров или запросов/чтения всех триггеров.</span><span class="sxs-lookup"><span data-stu-id="23b41-116">Used to read, replace, or delete a specific, existing <xref:Trigger> by id. Use `.triggers` for creating new triggers, or querying/reading all triggers.</span></span>
+  summary: <span data-ttu-id="9e140-116">Используется для чтения, замены или удаления конкретного, существующие <xref:Trigger> по идентификатору. Используйте `.triggers` для создания новых триггеров или запросов/чтения всех триггеров.</span><span class="sxs-lookup"><span data-stu-id="9e140-116">Used to read, replace, or delete a specific, existing <xref:Trigger> by id. Use `.triggers` for creating new triggers, or querying/reading all triggers.</span></span>
   syntax:
     content: 'function trigger(id: string)'
     parameters:
@@ -227,7 +250,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="23b41-117">Идентификатор <xref:Trigger>.</span><span class="sxs-lookup"><span data-stu-id="23b41-117">The id of the <xref:Trigger>.</span></span>
+        <span data-ttu-id="9e140-117">Идентификатор <xref:Trigger>.</span><span class="sxs-lookup"><span data-stu-id="9e140-117">The id of the <xref:Trigger>.</span></span>
     return:
       type:
       - '@azure/cosmos.Trigger'
@@ -240,9 +263,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="23b41-118">Операции для создания новых триггеров и чтения/запроса всех триггеров.</span><span class="sxs-lookup"><span data-stu-id="23b41-118">Operations for creating new triggers, and reading/querying all triggers.</span></span>
+    <span data-ttu-id="9e140-118">Операции для создания новых триггеров и чтения/запроса всех триггеров.</span><span class="sxs-lookup"><span data-stu-id="9e140-118">Operations for creating new triggers, and reading/querying all triggers.</span></span>
 
-    <span data-ttu-id="23b41-119">Для чтения, замены или удаления существующего триггера, используйте `.trigger(id)`.</span><span class="sxs-lookup"><span data-stu-id="23b41-119">For reading, replacing, or deleting an existing trigger, use `.trigger(id)`.</span></span>
+    <span data-ttu-id="9e140-119">Для чтения, замены или удаления существующего триггера, используйте `.trigger(id)`.</span><span class="sxs-lookup"><span data-stu-id="9e140-119">For reading, replacing, or deleting an existing trigger, use `.trigger(id)`.</span></span>
   syntax:
     content: 'triggers: Triggers'
     return:
@@ -256,7 +279,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: <span data-ttu-id="23b41-120">Возвращает URL-адрес ссылки на ресурс.</span><span class="sxs-lookup"><span data-stu-id="23b41-120">Returns a reference URL to the resource.</span></span> <span data-ttu-id="23b41-121">Используется для связывания в разрешениях.</span><span class="sxs-lookup"><span data-stu-id="23b41-121">Used for linking in Permissions.</span></span>
+  summary: <span data-ttu-id="9e140-120">Возвращает URL-адрес ссылки на ресурс.</span><span class="sxs-lookup"><span data-stu-id="9e140-120">Returns a reference URL to the resource.</span></span> <span data-ttu-id="9e140-121">Используется для связывания в разрешениях.</span><span class="sxs-lookup"><span data-stu-id="9e140-121">Used for linking in Permissions.</span></span>
   syntax:
     content: 'url: string'
     return:
@@ -269,7 +292,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="23b41-122">Используется для чтения, замены или удаления конкретного, существующие <xref:UserDefinedFunction> по идентификатору. Используйте `.userDefinedFunctions` для создания новых определяемых пользователем функций или запросов/чтения все определяемые пользователем функции.</span><span class="sxs-lookup"><span data-stu-id="23b41-122">Used to read, replace, or delete a specific, existing <xref:UserDefinedFunction> by id. Use `.userDefinedFunctions` for creating new user defined functions, or querying/reading all user defined functions.</span></span>
+  summary: <span data-ttu-id="9e140-122">Используется для чтения, замены или удаления конкретного, существующие <xref:UserDefinedFunction> по идентификатору. Используйте `.userDefinedFunctions` для создания новых определяемых пользователем функций или запросов/чтения все определяемые пользователем функции.</span><span class="sxs-lookup"><span data-stu-id="9e140-122">Used to read, replace, or delete a specific, existing <xref:UserDefinedFunction> by id. Use `.userDefinedFunctions` for creating new user defined functions, or querying/reading all user defined functions.</span></span>
   syntax:
     content: 'function userDefinedFunction(id: string)'
     parameters:
@@ -277,7 +300,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="23b41-123">Идентификатор <xref:UserDefinedFunction>.</span><span class="sxs-lookup"><span data-stu-id="23b41-123">The id of the <xref:UserDefinedFunction>.</span></span>
+        <span data-ttu-id="9e140-123">Идентификатор <xref:UserDefinedFunction>.</span><span class="sxs-lookup"><span data-stu-id="9e140-123">The id of the <xref:UserDefinedFunction>.</span></span>
     return:
       type:
       - '@azure/cosmos.UserDefinedFunction'
@@ -290,9 +313,9 @@ items:
   - typeScript
   type: property
   summary: >
-    <span data-ttu-id="23b41-124">Функции определяются операции для создания нового пользователя и чтения/запросов всех пользователей определенные функции.</span><span class="sxs-lookup"><span data-stu-id="23b41-124">Operations for creating new user defined functions, and reading/querying all user defined functions.</span></span>
+    <span data-ttu-id="9e140-124">Функции определяются операции для создания нового пользователя и чтения/запросов всех пользователей определенные функции.</span><span class="sxs-lookup"><span data-stu-id="9e140-124">Operations for creating new user defined functions, and reading/querying all user defined functions.</span></span>
 
-    <span data-ttu-id="23b41-125">Для чтения, замены или удаления существующей определяемой пользователем функции, используйте `.userDefinedFunction(id)`.</span><span class="sxs-lookup"><span data-stu-id="23b41-125">For reading, replacing, or deleting an existing user defined function, use `.userDefinedFunction(id)`.</span></span>
+    <span data-ttu-id="9e140-125">Для чтения, замены или удаления существующей определяемой пользователем функции, используйте `.userDefinedFunction(id)`.</span><span class="sxs-lookup"><span data-stu-id="9e140-125">For reading, replacing, or deleting an existing user defined function, use `.userDefinedFunction(id)`.</span></span>
   syntax:
     content: 'userDefinedFunctions: UserDefinedFunctions'
     return:
@@ -344,6 +367,18 @@ references:
     uid: '@azure/cosmos.ContainerResponse'
   - name: '>'
     fullName: '>'
+- uid: '@azure/cosmos.PartitionKeyDefinition'
+  spec.typeScript:
+  - name: PartitionKeyDefinition
+    fullName: PartitionKeyDefinition
+    uid: '@azure/cosmos.PartitionKeyDefinition'
+- uid: '@azure/cosmos.PartitionKey[]'
+  spec.typeScript:
+  - name: PartitionKey
+    fullName: PartitionKey
+    uid: '@azure/cosmos.PartitionKey'
+  - name: '[]'
+    fullName: '[]'
 - uid: '@azure/cosmos.Item'
   spec.typeScript:
   - name: Item
