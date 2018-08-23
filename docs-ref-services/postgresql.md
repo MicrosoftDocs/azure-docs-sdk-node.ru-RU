@@ -6,16 +6,14 @@ ms.author: raagyema
 manager: sukamat
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: nodejs
 ms.service: postgresql
-ms.openlocfilehash: 706f636a89e5e89c1dbf760e01c684bcc9588f1f
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: ed9373b767684e4893ca84de1030d062178b7ea4
+ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34262058"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "41693728"
 ---
 # <a name="azure-postgresql-modules-for-nodejs"></a>Модули Azure PostgreSQL для Node.js
 
