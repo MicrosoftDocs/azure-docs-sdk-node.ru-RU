@@ -6,17 +6,17 @@ ms.author: routlaw
 manager: angerobe
 ms.date: 05/03/2018
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
+ms.prod: ''
+ms.technology: ''
 ms.devlang: nodejs
 ms.service: event-grid
 ms.custom: devcenter
-ms.openlocfilehash: 165845f0c94b4e6fd0f385f2262903e44845d09a
-ms.sourcegitcommit: b4cf45cb23da56718b482cf7fc240c592e15206b
+ms.openlocfilehash: bddf4efc1eda186aee92d30af24125823c7a8f7b
+ms.sourcegitcommit: f830f2f37429b32bbcfa856ad82a817ae2658341
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33849957"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46275725"
 ---
 # <a name="azure-event-grid-libraries-for-nodejs"></a>Библиотеки службы "Сетка событий Azure" для Node.js
 
