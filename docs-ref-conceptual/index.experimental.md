@@ -4,12 +4,12 @@ hide_bc: true
 title: Центр разработки для Node.js | Документация Майкрософт
 description: Узнайте, как разрабатывать и развертывать приложения Node.js в облаке с помощью служб Azure.
 ms.topic: hub-page
-ms.openlocfilehash: 589b5a19e8c659a58e42b765ba4ce48f6d82f1f8
-ms.sourcegitcommit: 99a36d08455760a0436fb6a8fffb542518e3cb2f
+ms.openlocfilehash: e2959c6ec20f07bc672cae05aebd7be039ca641e
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2018
-ms.locfileid: "39188980"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48488555"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -20,8 +20,6 @@ ms.locfileid: "39188980"
             <li style="
                     flex-basis: 180px;
                     text-align: center;
-                    background-color: black;
-                    font: white;
                     display: block;
                     margin-left: auto;
                     margin-top: 15px;
@@ -33,7 +31,7 @@ ms.locfileid: "39188980"
                     <br>
                         <div class="cardText">
                         <h3 style="
-                            color: white;
+                            font-weight: bold;
                             font-size: large;
                         ">Get started free &gt;</h3>
                     </div>
@@ -266,8 +264,6 @@ getTextAnalytics.write(body); getTextAnalytics.end();
             <li style="
                     flex-basis: 180px;
                     text-align: center;
-                    background-color: black;
-                    font: white;
                     display: block;
                     margin-left: auto;
                     margin-top: 15px;
@@ -279,7 +275,7 @@ getTextAnalytics.write(body); getTextAnalytics.end();
                     <br>
                         <div class="cardText">
                         <h3 style="
-                            color: white;
+                            font-weight: bold;
                             font-size: large;
                         ">Get started free &gt;</h3>
                     </div>
