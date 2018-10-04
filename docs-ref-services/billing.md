@@ -11,11 +11,11 @@ ms.service: billing
 ms.product: ''
 ms.technology: ''
 ms.openlocfilehash: 20df85ae5e504e460a501737aa07b6692a0da3c7
-ms.sourcegitcommit: da60ea91d4215d738b1e0df82066f0fc337ad85a
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47346683"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48571592"
 ---
 # <a name="azure-billing-modules-for-nodejs"></a>Модули выставления счетов Azure для Node.js
 
