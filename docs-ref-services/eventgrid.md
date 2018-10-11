@@ -12,11 +12,11 @@ ms.devlang: nodejs
 ms.service: event-grid
 ms.custom: devcenter
 ms.openlocfilehash: bddf4efc1eda186aee92d30af24125823c7a8f7b
-ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48425752"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "48979648"
 ---
 # <a name="azure-event-grid-libraries-for-nodejs"></a>Библиотеки службы "Сетка событий Azure" для Node.js
 
