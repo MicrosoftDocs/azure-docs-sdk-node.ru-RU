@@ -10,30 +10,30 @@ ms.devlang: nodejs
 ms.service: billing
 ms.product: ''
 ms.technology: ''
-ms.openlocfilehash: 20df85ae5e504e460a501737aa07b6692a0da3c7
-ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
+ms.openlocfilehash: 7be64d01c1bf8d247694735b8581f72678f55983
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49057648"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49772229"
 ---
-# <a name="azure-billing-modules-for-nodejs"></a><span data-ttu-id="978ca-103">Модули выставления счетов Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="978ca-103">Azure Billing modules for Node.js</span></span>
+# <a name="azure-billing-modules-for-nodejs"></a><span data-ttu-id="8c823-103">Модули выставления счетов Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="8c823-103">Azure Billing modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="978ca-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="978ca-104">Overview</span></span>
-<span data-ttu-id="978ca-105">API-интерфейсы выставления счетов Azure предоставляют доступ к счетам и сведениям об их выставлении в Azure.</span><span class="sxs-lookup"><span data-stu-id="978ca-105">The Azure Billing APIs provide access to your Azure billing information and invoices.</span></span>
+## <a name="overview"></a><span data-ttu-id="8c823-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="8c823-104">Overview</span></span>
+<span data-ttu-id="8c823-105">API-интерфейсы выставления счетов Azure предоставляют доступ к счетам и сведениям об их выставлении в Azure.</span><span class="sxs-lookup"><span data-stu-id="8c823-105">The Azure Billing APIs provide access to your Azure billing information and invoices.</span></span>
 
-<span data-ttu-id="978ca-106">Чтобы использовать этот API, администратор учетной записи должен дать согласие на портале Azure.</span><span class="sxs-lookup"><span data-stu-id="978ca-106">To use this API, the account admin must opt in via the Azure portal.</span></span> <span data-ttu-id="978ca-107">См. статью [Управление доступом к сведениям о счетах Azure с помощью управления доступом на основе ролей](https://docs.microsoft.com/azure/billing/billing-manage-access).</span><span class="sxs-lookup"><span data-stu-id="978ca-107">See [Manage access to Azure billing using roles](https://docs.microsoft.com/azure/billing/billing-manage-access).</span></span>
+<span data-ttu-id="8c823-106">Чтобы использовать этот API, администратор учетной записи должен дать согласие на портале Azure.</span><span class="sxs-lookup"><span data-stu-id="8c823-106">To use this API, the account admin must opt in via the Azure portal.</span></span> <span data-ttu-id="8c823-107">См. статью [Управление доступом к сведениям о счетах Azure с помощью управления доступом на основе ролей](https://docs.microsoft.com/azure/billing/billing-manage-access).</span><span class="sxs-lookup"><span data-stu-id="8c823-107">See [Manage access to Azure billing using roles](https://docs.microsoft.com/azure/billing/billing-manage-access).</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="978ca-108">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="978ca-108">Install the npm module</span></span> 
+### <a name="install-the-npm-module"></a><span data-ttu-id="8c823-108">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="8c823-108">Install the npm module</span></span> 
 
-<span data-ttu-id="978ca-109">Установите модуль npm выставления счетов Azure.</span><span class="sxs-lookup"><span data-stu-id="978ca-109">Install the Azure Billing npm module</span></span> 
+<span data-ttu-id="8c823-109">Установите модуль npm выставления счетов Azure.</span><span class="sxs-lookup"><span data-stu-id="8c823-109">Install the Azure Billing npm module</span></span> 
 
 ```bash
 npm install azure-arm-billing
 ```
-### <a name="example"></a><span data-ttu-id="978ca-110">Пример</span><span class="sxs-lookup"><span data-stu-id="978ca-110">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="8c823-110">Пример</span><span class="sxs-lookup"><span data-stu-id="8c823-110">Example</span></span> 
  
-<span data-ttu-id="978ca-111">Этот пример печатает список всех предыдущих накладных.</span><span class="sxs-lookup"><span data-stu-id="978ca-111">This example prints a list of all of your past invoices.</span></span>
+<span data-ttu-id="8c823-111">Этот пример печатает список всех предыдущих накладных.</span><span class="sxs-lookup"><span data-stu-id="8c823-111">This example prints a list of all of your past invoices.</span></span>
  
 ```javascript 
 const msRestAzure = require('ms-rest-azure');
@@ -54,6 +54,6 @@ msRestAzure
 ``` 
 
 
-## <a name="samples"></a><span data-ttu-id="978ca-112">Примеры</span><span class="sxs-lookup"><span data-stu-id="978ca-112">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="8c823-112">Примеры</span><span class="sxs-lookup"><span data-stu-id="8c823-112">Samples</span></span>
 
-<span data-ttu-id="978ca-113">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="978ca-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="8c823-113">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="8c823-113">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

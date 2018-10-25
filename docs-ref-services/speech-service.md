@@ -12,36 +12,36 @@ ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
 ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49027438"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49724419"
 ---
-# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="2e3e9-103">Пакет SDK службы "Речь" в Cognitive Services для JavaScript</span><span class="sxs-lookup"><span data-stu-id="2e3e9-103">Cognitive Services Speech SDK for JavaScript</span></span>
+# <a name="cognitive-services-speech-sdk-for-javascript"></a><span data-ttu-id="04c5c-103">Пакет SDK службы "Речь" в Cognitive Services для JavaScript</span><span class="sxs-lookup"><span data-stu-id="04c5c-103">Cognitive Services Speech SDK for JavaScript</span></span>
 
-## <a name="overview"></a><span data-ttu-id="2e3e9-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="2e3e9-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="04c5c-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="04c5c-104">Overview</span></span>
 
-<span data-ttu-id="2e3e9-105">Чтобы упростить разработку приложений с поддержкой речевых функций, корпорация Майкрософт предоставляет пакет SDK [службы "Речь"](https://aka.ms/csspeech).</span><span class="sxs-lookup"><span data-stu-id="2e3e9-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
-<span data-ttu-id="2e3e9-106">Пакет SDK службы "Речь" предоставляет согласованные собственные API для перевода речи и преобразования речи в текст.</span><span class="sxs-lookup"><span data-stu-id="2e3e9-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
+<span data-ttu-id="04c5c-105">Чтобы упростить разработку приложений с поддержкой речевых функций, корпорация Майкрософт предоставляет пакет SDK [службы "Речь"](https://aka.ms/csspeech).</span><span class="sxs-lookup"><span data-stu-id="04c5c-105">To simplify the development of speech-enabled applications, Microsoft provides the Speech SDK for use with the [Speech service](https://aka.ms/csspeech).</span></span>
+<span data-ttu-id="04c5c-106">Пакет SDK службы "Речь" предоставляет согласованные собственные API для перевода речи и преобразования речи в текст.</span><span class="sxs-lookup"><span data-stu-id="04c5c-106">The Speech SDK provides consistent native Speech-to-Text and Speech Translation APIs.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="2e3e9-107">Пакет SDK службы "Речь" сейчас доступен только в браузерной версии.</span><span class="sxs-lookup"><span data-stu-id="2e3e9-107">The Cognitive Services Speech SDK is currently available only for browsers.</span></span>
-> <span data-ttu-id="2e3e9-108">Пакет npm появится в ближайшее время.</span><span class="sxs-lookup"><span data-stu-id="2e3e9-108">An NPM package will follow soon.</span></span>
+> <span data-ttu-id="04c5c-107">Пакет SDK службы "Речь" сейчас доступен только в браузерной версии.</span><span class="sxs-lookup"><span data-stu-id="04c5c-107">The Cognitive Services Speech SDK is currently available only for browsers.</span></span>
+> <span data-ttu-id="04c5c-108">Пакет npm появится в ближайшее время.</span><span class="sxs-lookup"><span data-stu-id="04c5c-108">An NPM package will follow soon.</span></span>
 
-### <a name="install-the-speech-sdk"></a><span data-ttu-id="2e3e9-109">Установка пакета SDK службы "Речь"</span><span class="sxs-lookup"><span data-stu-id="2e3e9-109">Install the Speech SDK</span></span>
+### <a name="install-the-speech-sdk"></a><span data-ttu-id="04c5c-109">Установка пакета SDK службы "Речь"</span><span class="sxs-lookup"><span data-stu-id="04c5c-109">Install the Speech SDK</span></span>
 
-<span data-ttu-id="2e3e9-110">Скачайте пакет SDK службы "Речь" как [ZIP-файл](https://aka.ms/csspeech/jsbrowserpackage) и распакуйте его.</span><span class="sxs-lookup"><span data-stu-id="2e3e9-110">Download the Speech SDK as a [.zip package](https://aka.ms/csspeech/jsbrowserpackage) and unpack it.</span></span>
-<span data-ttu-id="2e3e9-111">Будет распаковано несколько файлов, включая файл с именем `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span><span class="sxs-lookup"><span data-stu-id="2e3e9-111">This should result in a number of files being unpacked including a file named `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span></span>
-<span data-ttu-id="2e3e9-112">Загрузите этот файл как ресурс скрипта на веб-страницу, чтобы начать использовать пакет SDK службы "Речь":</span><span class="sxs-lookup"><span data-stu-id="2e3e9-112">Load this file as a script resource in your web page to start using the Speech SDK:</span></span>
+<span data-ttu-id="04c5c-110">Скачайте пакет SDK службы "Речь" как [ZIP-файл](https://aka.ms/csspeech/jsbrowserpackage) и распакуйте его.</span><span class="sxs-lookup"><span data-stu-id="04c5c-110">Download the Speech SDK as a [.zip package](https://aka.ms/csspeech/jsbrowserpackage) and unpack it.</span></span>
+<span data-ttu-id="04c5c-111">Будет распаковано несколько файлов, включая файл с именем `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span><span class="sxs-lookup"><span data-stu-id="04c5c-111">This should result in a number of files being unpacked including a file named `microsoft.cognitiveservices.speech.sdk.bundle.js`.</span></span>
+<span data-ttu-id="04c5c-112">Загрузите этот файл как ресурс скрипта на веб-страницу, чтобы начать использовать пакет SDK службы "Речь":</span><span class="sxs-lookup"><span data-stu-id="04c5c-112">Load this file as a script resource in your web page to start using the Speech SDK:</span></span>
 
 ```html
 <script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
 ```
 
-### <a name="example"></a><span data-ttu-id="2e3e9-113">Пример</span><span class="sxs-lookup"><span data-stu-id="2e3e9-113">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="04c5c-113">Пример</span><span class="sxs-lookup"><span data-stu-id="04c5c-113">Example</span></span> 
 
-<span data-ttu-id="2e3e9-114">В следующих фрагментах кода показано, как выполнить простое распознавание речи в браузере:</span><span class="sxs-lookup"><span data-stu-id="2e3e9-114">The following code snippets illustrates how to do simple speech recognition from your browser:</span></span>
+<span data-ttu-id="04c5c-114">В следующих фрагментах кода показано, как выполнить простое распознавание речи в браузере:</span><span class="sxs-lookup"><span data-stu-id="04c5c-114">The following code snippets illustrates how to do simple speech recognition from your browser:</span></span>
 
 ```javascript 
 var SpeechSDK = window.SpeechSDK;
@@ -62,8 +62,8 @@ recognizer.recognizeOnceAsync(
 );
 ``` 
 
-<span data-ttu-id="2e3e9-115">Ознакомьтесь с нашим [пошаговым кратким руководством](/azure/cognitive-services/speech-service/quickstart-js-browser).</span><span class="sxs-lookup"><span data-stu-id="2e3e9-115">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
+<span data-ttu-id="04c5c-115">Ознакомьтесь с нашим [пошаговым кратким руководством](/azure/cognitive-services/speech-service/quickstart-js-browser).</span><span class="sxs-lookup"><span data-stu-id="04c5c-115">Check out our [step-by-step quickstart](/azure/cognitive-services/speech-service/quickstart-js-browser).</span></span>
 
-## <a name="samples"></a><span data-ttu-id="2e3e9-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="2e3e9-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="04c5c-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="04c5c-116">Samples</span></span>
 
-<span data-ttu-id="2e3e9-117">Другие примеры доступны в нашем [репозитории примеров для пакета SDK службы "Речь"](https://aka.ms/csspeech/samples).</span><span class="sxs-lookup"><span data-stu-id="2e3e9-117">Explore more samples in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>
+<span data-ttu-id="04c5c-117">Другие примеры доступны в нашем [репозитории примеров для пакета SDK службы "Речь"](https://aka.ms/csspeech/samples).</span><span class="sxs-lookup"><span data-stu-id="04c5c-117">Explore more samples in our [Speech SDK sample repository](https://aka.ms/csspeech/samples).</span></span>

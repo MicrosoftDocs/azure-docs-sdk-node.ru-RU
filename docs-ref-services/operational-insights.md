@@ -10,24 +10,24 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Operational Insights
-ms.openlocfilehash: 2cd948a57925954ecddc077ead727b1a7689ce0e
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: c8a137c4759982e0551d9048ac271780e6a68afe
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34261973"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49801234"
 ---
-# <a name="azure-operational-insights-modules-for-nodejs"></a><span data-ttu-id="6696c-103">Модули Operational Insights Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="6696c-103">Azure Operational Insights Modules for Node.js</span></span>
+# <a name="azure-operational-insights-modules-for-nodejs"></a><span data-ttu-id="538a3-103">Модули Operational Insights Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="538a3-103">Azure Operational Insights Modules for Node.js</span></span>
 
-<span data-ttu-id="6696c-104">Установите модуль Azure Operational Insights для Node.js с помощью npm.</span><span class="sxs-lookup"><span data-stu-id="6696c-104">Use npm to install the Azure Operational Insights module for Node.js</span></span>
+<span data-ttu-id="538a3-104">Установите модуль Azure Operational Insights для Node.js с помощью npm.</span><span class="sxs-lookup"><span data-stu-id="538a3-104">Use npm to install the Azure Operational Insights module for Node.js</span></span>
 
 ```bash
 npm install azure-arm-operationalinsights
 ```
 
-### <a name="example"></a><span data-ttu-id="6696c-105">Пример</span><span class="sxs-lookup"><span data-stu-id="6696c-105">Example</span></span> 
+### <a name="example"></a><span data-ttu-id="538a3-105">Пример</span><span class="sxs-lookup"><span data-stu-id="538a3-105">Example</span></span> 
 
-<span data-ttu-id="6696c-106">Этот пример создает клиент, подключается к Operational Insights и извлекает список рабочих областей для конкретной группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="6696c-106">This example creates a client, connects to Operational Insights and retreives a list of workspaces by a specified resource group.</span></span>
+<span data-ttu-id="538a3-106">Этот пример создает клиент, подключается к Operational Insights и извлекает список рабочих областей для конкретной группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="538a3-106">This example creates a client, connects to Operational Insights and retreives a list of workspaces by a specified resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -47,6 +47,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ``` 
 
-## <a name="samples"></a><span data-ttu-id="6696c-107">Примеры</span><span class="sxs-lookup"><span data-stu-id="6696c-107">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="538a3-107">Примеры</span><span class="sxs-lookup"><span data-stu-id="538a3-107">Samples</span></span>
 
-<span data-ttu-id="6696c-108">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="6696c-108">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="538a3-108">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="538a3-108">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

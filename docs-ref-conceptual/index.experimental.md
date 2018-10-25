@@ -4,12 +4,12 @@ hide_bc: true
 title: Центр разработки для Node.js | Документация Майкрософт
 description: Узнайте, как разрабатывать и развертывать приложения Node.js в облаке с помощью служб Azure.
 ms.topic: hub-page
-ms.openlocfilehash: e2959c6ec20f07bc672cae05aebd7be039ca641e
-ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
+ms.openlocfilehash: b26a2cc22167aade6322eeaf7bddc33a7415ffc0
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "48981778"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49726789"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -127,7 +127,7 @@ ms.locfileid: "48981778"
         <hr style="margin-top:80px; margin-bottom:50px;">
 
         <h2 style="text-align: left;">npm modules for every job</h2>
-        
+
         <ul class="pivots">
             <li>
                 <a href="#storage">Upload files to storage</a>
@@ -142,13 +142,13 @@ ms.locfileid: "48981778"
                                 </div>
                                 <pre><code class="lang-bash">
 brew install azure-cli az login az group create --name MyResourceGroup --location &quot;West US&quot; </code></pre>
-            
+
                                 <h4>2. Create a storage container.</h4> 
                                 <div class="codeHeader" data-bi-name="code-header"><span class="language">bash</span>
                                 </div>
                                 <pre><code class="lang-bash">
 az storage account create -n mystorageaccount12312 -g MyResourceGroup -l westus --sku Standard_LRS az storage account keys list -n mystorageaccount12312 -g MyResourceGroup --output table az storage container create --name my-container --public-access blob --account-name mystorageaccount12312 --account-key &lt;account-key-from-step-4&gt; </code></pre>
-            
+
                                 <h4>3. Upload files using the Azure storage npm package.</h4> 
                                 <div class="tabGroup" id="tabgroup_ErXr5hkbUU" data-bi-name="tab-group">
                                     <!-- <ul role="tablist">
@@ -196,8 +196,7 @@ az storage account create -n mystorageaccount12312 -g MyResourceGroup -l westus 
                             </div>
                         </div>
                     </li>
-                </ul>   
-            </li>
+                </ul><br/>            </li>
 
             <li>
                 <a href="#cogs">Sentiment analysis</a>
@@ -213,13 +212,13 @@ az storage account create -n mystorageaccount12312 -g MyResourceGroup -l westus 
                                 </div>
                                 <pre><code class="lang-bash">
 brew install azure-cli az login az group create --name MyResourceGroup --location &quot;West US&quot; </code></pre>
-            
+
                                 <h4>2. Create a cognitive services text analytics account and retrieve your account key.</h4> 
                                 <div class="codeHeader" data-bi-name="code-header"><span class="language">bash</span>
                                 </div>
                                 <pre><code class="lang-bash">
 az cognitiveservices account create -n cogstest -g MyResourceGroup --sku S0 --kind TextAnalytics -l westcentralus az cognitiveservices account keys list -g MyResourceGroup -n cogstest </code></pre>
-            
+
                                 <h4>3. Use the cognitive services API using your account key.</h4> 
                                 <div class="tabGroup" id="tabgroup_ErXr5hkbUU" data-bi-name="tab-group">
                                     <!-- <ul role="tablist">
@@ -258,18 +257,10 @@ getTextAnalytics.write(body); getTextAnalytics.end();
                     </li>
                 </ul>
             </li>
-        </ul>               
-        
+        </ul><br/>
         <ul class="cardsM cols cols2">
-            <li style="
-                    flex-basis: 180px;
-                    text-align: center;
-                    display: block;
-                    margin-left: auto;
-                    margin-top: 15px;
-                    margin-bottom: 25px;
-                    margin-right: 10px;
-    
+            <li style=" flex-basis: 180px; text-align: center; display: block; margin-left: auto; margin-top: 15px; margin-bottom: 25px; margin-right: 10px;
+
                 ">
                 <a class="card" href="https://azure.microsoft.com/try/app-service/web/?language=nodejs">
                     <br>
@@ -281,7 +272,7 @@ getTextAnalytics.write(body); getTextAnalytics.end();
                     </div>
                 </a>
             </li>
-    
+
             <li style="
                     flex-basis: 180px;
                     text-align: center;
