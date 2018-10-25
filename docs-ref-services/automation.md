@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Automation
-ms.openlocfilehash: 5efe0c0633313bcf489b05b8a54f71bba9a00da5
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: f364bb09c97c1262f640a4b48514c6abaee5f14a
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34264715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49779259"
 ---
 # <a name="azure-automation-modules-for-nodejs"></a>Модули службы автоматизации Azure для Node.js
 
@@ -54,7 +54,6 @@ msRestAzure
     console.dir(automationAccounts, { depth: null, colors: true })
   )
   .catch(err => console.log(err));
-
 ```
 
 ## <a name="samples"></a>Примеры

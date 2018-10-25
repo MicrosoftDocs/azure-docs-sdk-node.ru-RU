@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Relay
-ms.openlocfilehash: 1f9b4263b8ffae78fcf9f35b8ef0160095059693
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: e0bb24ac422d71bd8c957e94cceffd57bf121e48
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49671129"
 ---
 # <a name="azure-relay-modules-for-nodejs"></a>Модули ретранслятора Azure для Node.js
 

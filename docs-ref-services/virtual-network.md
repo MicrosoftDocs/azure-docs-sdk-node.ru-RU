@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Virtual Network
-ms.openlocfilehash: 456839dbecb9ddd1ad0d4b3f8aa7570a04c100b1
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 11341fdff5df3b7521319d841707493db1d07732
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49670859"
 ---
 # <a name="azure-virtual-network-modules-for-nodejs"></a>Модули виртуальной сети Azure для Node.js
 
@@ -56,7 +56,6 @@ msRestAzure
     console.log('List of virtual networks:');
     console.dir(networkList, { depth: null, colors: true });
   });
-
 ```
 
 ## <a name="samples"></a>Примеры

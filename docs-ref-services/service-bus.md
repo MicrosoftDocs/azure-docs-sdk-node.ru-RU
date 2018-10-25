@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Bus
-ms.openlocfilehash: fde02006fcf364071fcb866098dba7fcd3b1c07b
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 76d7c615cbe64fa38f9c28ea8dfc6d1c854bb0c9
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49761539"
 ---
 # <a name="azure-service-bus-modules-for-nodejs"></a>Модули служебной шины Azure для Node.js
 

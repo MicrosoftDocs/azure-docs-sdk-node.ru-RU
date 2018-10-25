@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: CDN
-ms.openlocfilehash: b330eeedc178f20064b4a6b1c3f4f7d266590f11
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 1117f8fabfe364d3e5602ee89f652fe98851fef4
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34266629"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49661089"
 ---
 # <a name="azure-cdn-modules-for-nodejs"></a>Модули Azure CDN для Node.js
 

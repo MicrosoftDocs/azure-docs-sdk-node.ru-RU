@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Analysis Services
-ms.openlocfilehash: 166d0450ac9b2d005f3ce4ecba5ce36e1786ae09
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 5214cd2f171074ba330bc639643dfba490540856
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34260367"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49702689"
 ---
 # <a name="azure-analysis-services-modules-for-nodejs"></a>Модули Azure Analysis Services для Node.js
 

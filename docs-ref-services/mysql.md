@@ -8,11 +8,11 @@ ms.topic: article
 ms.devlang: nodejs
 ms.service: mysql
 ms.openlocfilehash: 557645774ecb0ea5e774f99d03251a303ad19660
-ms.sourcegitcommit: 0d439a88f38a085e2be0616c8bdb0ffcca2e54ad
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49019088"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49659629"
 ---
 # <a name="azure-mysql-modules-for-nodejs"></a>Модули Azure MySQL для Node.js
 

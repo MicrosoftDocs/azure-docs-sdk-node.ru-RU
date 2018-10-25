@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Notification Hubs
-ms.openlocfilehash: 30b8caa07111f9ceb5fa58f92649e4670aa6bee6
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: 18eae632b41b71bc64b052852b677507da2678e9
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34261723"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49720689"
 ---
 # <a name="azure-notification-hubs-modules-for-nodejs"></a>Модули центров уведомлений Azure для Node.js
 

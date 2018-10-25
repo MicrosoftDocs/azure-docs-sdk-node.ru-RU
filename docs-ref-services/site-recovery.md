@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Site Recovery
-ms.openlocfilehash: 470124eb69a48486fa54be6628c028399f0c038e
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: f8cddf806b921d5445cd0757b64aeb0dc5df03cf
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259395"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49739679"
 ---
 # <a name="azure-site-recovery-modules-for-nodejs"></a>Модули Azure Site Recovery для Node.js
 
@@ -54,7 +54,6 @@ msRestAzure
     console.log('List of vaults:');
     console.dir(vaults, { depth: null, colors: true });
   });
-  
 ```
 
 ## <a name="samples"></a>Примеры

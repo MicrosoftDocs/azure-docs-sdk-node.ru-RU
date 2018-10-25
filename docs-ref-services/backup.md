@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Backup
-ms.openlocfilehash: 6daeb443c2f1d8560a6a455cb6d174462b483f79
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: bf3e66ac8341cebd28dee20b6370ed3e5fbfbfa0
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34264647"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49728287"
 ---
 # <a name="azure-backup-modules-for-nodejs"></a>Модули Azure Backup для Node.js
 

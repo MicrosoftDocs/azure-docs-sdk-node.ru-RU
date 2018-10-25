@@ -10,12 +10,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
-ms.openlocfilehash: 8a9411b7979f3130a1aa24fd2a0b294fc7f67718
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.openlocfilehash: fb2cc5ba927fe03fb5fe3114919ed1b0b6e969ae
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259307"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49670779"
 ---
 # <a name="azure-monitor-modules-for-nodejs"></a>Модули Azure Monitor для Node.js
 
@@ -49,7 +49,6 @@ msRestAzure
       console.dir(rules, { depth: null, colors: true });
     })
   });
-
 ```
 
 ### <a name="samples"></a>Примеры
