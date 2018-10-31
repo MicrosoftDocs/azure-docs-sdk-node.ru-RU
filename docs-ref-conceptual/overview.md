@@ -1,6 +1,6 @@
 ---
-title: Модули Azure для Node.js
-description: Обзор модулей служб и управления Azure для Node.js
+title: Модули Azure для JavaScript
+description: Обзор модулей служб и управления Azure для JavaScript
 author: rloutlaw
 ms.author: routlaw
 manager: routlaw
@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 165e1580e408b71b6147e51c41e22bc8fe7277a1
-ms.sourcegitcommit: c332a32a1a850aa62405776bfe0e14251f722888
+ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
+ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "49672999"
 ---
-# <a name="azure-modules-for-nodejs"></a>Модули Azure для Node.js
+# <a name="azure-modules-for-javascript"></a>Модули Azure для JavaScript
 
-Управляйте ресурсами Azure и подключайтесь к службам из приложений Node.js с помощью модулей Azure для Node.js. Код доступен в виде [модулей npm](node-sdk-azure-install.md) для использования в проектах. 
+Управляйте ресурсами Azure и подключайтесь к службам из приложений JavaScript с помощью модулей Azure для JavaScript. Код доступен в виде [модулей npm](node-sdk-azure-install.md) для использования в проектах. 
 
 ## <a name="manage-azure-resources"></a>Управление ресурсами Azure
 
@@ -85,7 +85,7 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 
 ## <a name="connect-to-azure-services"></a>Подключение к службам Azure
 
-Модули Azure можно использовать не только для создания ресурсов и управления ими в Azure, но и для подключения и использования облачных служб в приложениях. Например, для обновления табличной базы данных SQL или обновления файлов в службе хранилища Azure. Выберите пакет, который нужен для работы определенной службы, в [полном списке](node-sdk-azure-install.md) и ознакомьтесь с руководствами и примерами кода, которые помогут вам использовать модули в приложениях, в [центре разработчиков Node.js](https://azure.microsoft.com/develop/nodejs/).
+Модули Azure можно использовать не только для создания ресурсов и управления ими в Azure, но и для подключения и использования облачных служб в приложениях. Например, для обновления табличной базы данных SQL или обновления файлов в службе хранилища Azure. Выберите пакет, который нужен для работы определенной службы, в [полном списке](node-sdk-azure-install.md) и ознакомьтесь с руководствами и примерами кода, которые помогут вам использовать модули в приложениях, в [центре разработчиков JavaScript](https://azure.microsoft.com/develop/nodejs/).
 
 Например, чтобы вывести содержимое каждого большого двоичного объекта в контейнере хранилища Azure, используйте следующий код:
 
