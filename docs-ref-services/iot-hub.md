@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
 ms.openlocfilehash: 1f83e016023722f149384ac015726e9257a9f3af
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49702849"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50326621"
 ---
 # <a name="azure-iot-hub-modules-for-nodejs"></a>Модули Центра Интернета вещей Azure для Node.js
 

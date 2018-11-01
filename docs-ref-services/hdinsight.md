@@ -9,11 +9,11 @@ ms.topic: article
 ms.devlang: nodejs
 ms.date: 07/18/2017
 ms.openlocfilehash: e35e0d487efce2a591130403f8b72a43c638fdec
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49752289"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50264997"
 ---
 # <a name="azure-hdinsight-modules-for-nodejs"></a>Модули Azure HDInsight для Node.js
 

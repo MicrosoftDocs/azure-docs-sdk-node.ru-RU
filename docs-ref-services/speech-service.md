@@ -12,11 +12,11 @@ ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
 ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49724419"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50402390"
 ---
 # <a name="cognitive-services-speech-sdk-for-javascript"></a>Пакет SDK службы "Речь" в Cognitive Services для JavaScript
 
