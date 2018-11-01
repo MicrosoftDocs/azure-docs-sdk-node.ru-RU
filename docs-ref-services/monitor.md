@@ -11,27 +11,27 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
 ms.openlocfilehash: fb2cc5ba927fe03fb5fe3114919ed1b0b6e969ae
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49670779"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50346352"
 ---
-# <a name="azure-monitor-modules-for-nodejs"></a><span data-ttu-id="ce9b1-103">Модули Azure Monitor для Node.js</span><span class="sxs-lookup"><span data-stu-id="ce9b1-103">Azure Monitor modules for Node.js</span></span>
+# <a name="azure-monitor-modules-for-nodejs"></a><span data-ttu-id="fc466-103">Модули Azure Monitor для Node.js</span><span class="sxs-lookup"><span data-stu-id="fc466-103">Azure Monitor modules for Node.js</span></span>
 
-<span data-ttu-id="ce9b1-104">Облачные приложения являются сложными и содержат множество подвижных частей.</span><span class="sxs-lookup"><span data-stu-id="ce9b1-104">Cloud applications are complex with many moving parts.</span></span> <span data-ttu-id="ce9b1-105">Мониторинг дает возможность отслеживать данные, чтобы обеспечить работоспособность приложения,</span><span class="sxs-lookup"><span data-stu-id="ce9b1-105">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="ce9b1-106">а также позволяет предотвратить потенциальные проблемы или устранить неполадки.</span><span class="sxs-lookup"><span data-stu-id="ce9b1-106">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="ce9b1-107">Кроме того, данные мониторинга можно использовать для получения подробных сведений о приложении.</span><span class="sxs-lookup"><span data-stu-id="ce9b1-107">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="ce9b1-108">Эти знания могут помочь повысить его производительность и улучшить возможности обслуживания, а также автоматизировать действия, которые в противном случае выполнялись бы вручную.</span><span class="sxs-lookup"><span data-stu-id="ce9b1-108">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
+<span data-ttu-id="fc466-104">Облачные приложения являются сложными и содержат множество подвижных частей.</span><span class="sxs-lookup"><span data-stu-id="fc466-104">Cloud applications are complex with many moving parts.</span></span> <span data-ttu-id="fc466-105">Мониторинг дает возможность отслеживать данные, чтобы обеспечить работоспособность приложения,</span><span class="sxs-lookup"><span data-stu-id="fc466-105">Monitoring provides data to ensure that your application stays up and running in a healthy state.</span></span> <span data-ttu-id="fc466-106">а также позволяет предотвратить потенциальные проблемы или устранить неполадки.</span><span class="sxs-lookup"><span data-stu-id="fc466-106">It also helps you to stave off potential problems or troubleshoot past ones.</span></span> <span data-ttu-id="fc466-107">Кроме того, данные мониторинга можно использовать для получения подробных сведений о приложении.</span><span class="sxs-lookup"><span data-stu-id="fc466-107">In addition, you can use monitoring data to gain deep insights about your application.</span></span> <span data-ttu-id="fc466-108">Эти знания могут помочь повысить его производительность и улучшить возможности обслуживания, а также автоматизировать действия, которые в противном случае выполнялись бы вручную.</span><span class="sxs-lookup"><span data-stu-id="fc466-108">That knowledge can help you to improve application performance or maintainability, or automate actions that would otherwise require manual intervention.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="ce9b1-109">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="ce9b1-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="fc466-109">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="fc466-109">Management Package</span></span>
 
-### <a name="install-npm-module"></a><span data-ttu-id="ce9b1-110">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="ce9b1-110">Install npm module</span></span>
+### <a name="install-npm-module"></a><span data-ttu-id="fc466-110">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="fc466-110">Install npm module</span></span>
 
 ```bash
 npm install azure-arm-monitor
 ```
 
-### <a name="example"></a><span data-ttu-id="ce9b1-111">Пример</span><span class="sxs-lookup"><span data-stu-id="ce9b1-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="fc466-111">Пример</span><span class="sxs-lookup"><span data-stu-id="fc466-111">Example</span></span>
 
-<span data-ttu-id="ce9b1-112">Этот пример кода выводит все правила генерации оповещений, связанные с группой ресурсов.</span><span class="sxs-lookup"><span data-stu-id="ce9b1-112">This code example prints all the alerting rules associated with a resource group.</span></span>
+<span data-ttu-id="fc466-112">Этот пример кода выводит все правила генерации оповещений, связанные с группой ресурсов.</span><span class="sxs-lookup"><span data-stu-id="fc466-112">This code example prints all the alerting rules associated with a resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -51,6 +51,6 @@ msRestAzure
   });
 ```
 
-### <a name="samples"></a><span data-ttu-id="ce9b1-113">Примеры</span><span class="sxs-lookup"><span data-stu-id="ce9b1-113">Samples</span></span>
+### <a name="samples"></a><span data-ttu-id="fc466-113">Примеры</span><span class="sxs-lookup"><span data-stu-id="fc466-113">Samples</span></span>
 
-<span data-ttu-id="ce9b1-114">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="ce9b1-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="fc466-114">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="fc466-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

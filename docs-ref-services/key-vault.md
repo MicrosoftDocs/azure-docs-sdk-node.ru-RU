@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Key Vault
 ms.openlocfilehash: 36bc5e97a5eea6e821f66bff9b3e8f610baa2dd0
-ms.sourcegitcommit: 7cea63cdde5fcfb19271bf7a93b1eb0dabdddb31
+ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "49804424"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50327101"
 ---
-# <a name="azure-key-vault-modules-for-nodejs"></a><span data-ttu-id="0aeda-103">Модули Azure Key Vault для Node.js</span><span class="sxs-lookup"><span data-stu-id="0aeda-103">Azure Key Vault modules for Node.js</span></span>
+# <a name="azure-key-vault-modules-for-nodejs"></a><span data-ttu-id="b5092-103">Модули Azure Key Vault для Node.js</span><span class="sxs-lookup"><span data-stu-id="b5092-103">Azure Key Vault modules for Node.js</span></span>
 
-<span data-ttu-id="0aeda-104">Хранилище ключей Azure помогает защитить криптографические ключи и секреты, используемые облачными приложениями и службами.</span><span class="sxs-lookup"><span data-stu-id="0aeda-104">Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services.</span></span> <span data-ttu-id="0aeda-105">С помощью хранилища ключей можно шифровать ключи и секреты (например, ключи аутентификации, ключи учетных записей хранения, ключи шифрования данных, PFX-файлы и пароли), используя ключи, защищенные аппаратными модулями безопасности.</span><span class="sxs-lookup"><span data-stu-id="0aeda-105">By using Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs).</span></span> <span data-ttu-id="0aeda-106">Чтобы обеспечить более высокий уровень защиты, ключи можно импортировать или создать в аппаратных модулях безопасности.</span><span class="sxs-lookup"><span data-stu-id="0aeda-106">For added assurance, you can import or generate keys in HSMs.</span></span> <span data-ttu-id="0aeda-107">Если вы выберете этот вариант, корпорация Майкрософт будет обрабатывать ключи в аппаратных модулях безопасности (оборудование и встроенное ПО), сертифицированных по стандарту FIPS 140-2 уровня 2.</span><span class="sxs-lookup"><span data-stu-id="0aeda-107">If you choose to do this, Microsoft processes your keys in FIPS 140-2 Level 2 validated HSMs (hardware and firmware).</span></span>
+<span data-ttu-id="b5092-104">Хранилище ключей Azure помогает защитить криптографические ключи и секреты, используемые облачными приложениями и службами.</span><span class="sxs-lookup"><span data-stu-id="b5092-104">Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services.</span></span> <span data-ttu-id="b5092-105">С помощью хранилища ключей можно шифровать ключи и секреты (например, ключи аутентификации, ключи учетных записей хранения, ключи шифрования данных, PFX-файлы и пароли), используя ключи, защищенные аппаратными модулями безопасности.</span><span class="sxs-lookup"><span data-stu-id="b5092-105">By using Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs).</span></span> <span data-ttu-id="b5092-106">Чтобы обеспечить более высокий уровень защиты, ключи можно импортировать или создать в аппаратных модулях безопасности.</span><span class="sxs-lookup"><span data-stu-id="b5092-106">For added assurance, you can import or generate keys in HSMs.</span></span> <span data-ttu-id="b5092-107">Если вы выберете этот вариант, корпорация Майкрософт будет обрабатывать ключи в аппаратных модулях безопасности (оборудование и встроенное ПО), сертифицированных по стандарту FIPS 140-2 уровня 2.</span><span class="sxs-lookup"><span data-stu-id="b5092-107">If you choose to do this, Microsoft processes your keys in FIPS 140-2 Level 2 validated HSMs (hardware and firmware).</span></span>
 
-<span data-ttu-id="0aeda-108">Хранилище ключей упрощает управление ключами и позволяет поддерживать контроль над ключами, которые предоставляют доступ к вашим данным и шифруют их.</span><span class="sxs-lookup"><span data-stu-id="0aeda-108">Key Vault streamlines the key management process and enables you to maintain control of keys that access and encrypt your data.</span></span> <span data-ttu-id="0aeda-109">Разработчики могут за считанные минуты создавать ключи для разработки и тестирования, а затем с легкостью использовать их в рабочей среде.</span><span class="sxs-lookup"><span data-stu-id="0aeda-109">Developers can create keys for development and testing in minutes, and then seamlessly migrate them to production keys.</span></span> <span data-ttu-id="0aeda-110">По необходимости администраторы безопасности могут предоставлять (и отзывать) разрешения на использование ключей.</span><span class="sxs-lookup"><span data-stu-id="0aeda-110">Security administrators can grant (and revoke) permission to keys, as needed.</span></span>
+<span data-ttu-id="b5092-108">Хранилище ключей упрощает управление ключами и позволяет поддерживать контроль над ключами, которые предоставляют доступ к вашим данным и шифруют их.</span><span class="sxs-lookup"><span data-stu-id="b5092-108">Key Vault streamlines the key management process and enables you to maintain control of keys that access and encrypt your data.</span></span> <span data-ttu-id="b5092-109">Разработчики могут за считанные минуты создавать ключи для разработки и тестирования, а затем с легкостью использовать их в рабочей среде.</span><span class="sxs-lookup"><span data-stu-id="b5092-109">Developers can create keys for development and testing in minutes, and then seamlessly migrate them to production keys.</span></span> <span data-ttu-id="b5092-110">По необходимости администраторы безопасности могут предоставлять (и отзывать) разрешения на использование ключей.</span><span class="sxs-lookup"><span data-stu-id="b5092-110">Security administrators can grant (and revoke) permission to keys, as needed.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="0aeda-111">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="0aeda-111">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="b5092-111">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="b5092-111">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="0aeda-112">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="0aeda-112">Install the npm module</span></span> 
+### <a name="install-the-npm-module"></a><span data-ttu-id="b5092-112">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="b5092-112">Install the npm module</span></span> 
 
-<span data-ttu-id="0aeda-113">Установите модуль npm Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="0aeda-113">Install the Azure Key Vault npm module</span></span>
+<span data-ttu-id="b5092-113">Установите модуль npm Azure Key Vault.</span><span class="sxs-lookup"><span data-stu-id="b5092-113">Install the Azure Key Vault npm module</span></span>
 
 ```bash
 npm install azure-arm-keyvault
 ```
 
-### <a name="example"></a><span data-ttu-id="0aeda-114">Пример</span><span class="sxs-lookup"><span data-stu-id="0aeda-114">Example</span></span>
+### <a name="example"></a><span data-ttu-id="b5092-114">Пример</span><span class="sxs-lookup"><span data-stu-id="b5092-114">Example</span></span>
 
-<span data-ttu-id="0aeda-115">Этот пример создает новую службу Key Vault в Azure.</span><span class="sxs-lookup"><span data-stu-id="0aeda-115">This example creates a new Key Vault service in Azure.</span></span>
+<span data-ttu-id="b5092-115">Этот пример создает новую службу Key Vault в Azure.</span><span class="sxs-lookup"><span data-stu-id="b5092-115">This example creates a new Key Vault service in Azure.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -76,10 +76,10 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="0aeda-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="0aeda-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="b5092-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="b5092-116">Samples</span></span>
 
-- [<span data-ttu-id="0aeda-117">Приступая к работе с Key Vault в Node.js</span><span class="sxs-lookup"><span data-stu-id="0aeda-117">Getting started with Key Vault in Node.js</span></span>](https://azure.microsoft.com/resources/samples/key-vault-node-getting-started/)
-- [<span data-ttu-id="0aeda-118">Управление ресурсами и группами ресурсов Azure с помощью Node.js</span><span class="sxs-lookup"><span data-stu-id="0aeda-118">Manage Azure resources and resource groups with Node.js</span></span>](https://azure.microsoft.com/resources/samples/resource-manager-node-resources-and-groups/) 
-- [<span data-ttu-id="0aeda-119">Интеграция Azure AD в веб-приложение NodeJS</span><span class="sxs-lookup"><span data-stu-id="0aeda-119">Integrating Azure AD into a NodeJS web application</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) 
+- [<span data-ttu-id="b5092-117">Приступая к работе с Key Vault в Node.js</span><span class="sxs-lookup"><span data-stu-id="b5092-117">Getting started with Key Vault in Node.js</span></span>](https://azure.microsoft.com/resources/samples/key-vault-node-getting-started/)
+- [<span data-ttu-id="b5092-118">Управление ресурсами и группами ресурсов Azure с помощью Node.js</span><span class="sxs-lookup"><span data-stu-id="b5092-118">Manage Azure resources and resource groups with Node.js</span></span>](https://azure.microsoft.com/resources/samples/resource-manager-node-resources-and-groups/) 
+- [<span data-ttu-id="b5092-119">Интеграция Azure AD в веб-приложение NodeJS</span><span class="sxs-lookup"><span data-stu-id="b5092-119">Integrating Azure AD into a NodeJS web application</span></span>](https://azure.microsoft.com/resources/samples/active-directory-node-webapp-openidconnect/) 
 
-<span data-ttu-id="0aeda-120">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="0aeda-120">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="b5092-120">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="b5092-120">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
