@@ -11,37 +11,37 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: IoT Hub
 ms.openlocfilehash: 1f83e016023722f149384ac015726e9257a9f3af
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50326621"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51121883"
 ---
-# <a name="azure-iot-hub-modules-for-nodejs"></a><span data-ttu-id="a04bd-103">Модули Центра Интернета вещей Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="a04bd-103">Azure IoT Hub modules for Node.js</span></span>
+# <a name="azure-iot-hub-modules-for-nodejs"></a><span data-ttu-id="c2e9b-103">Модули Центра Интернета вещей Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="c2e9b-103">Azure IoT Hub modules for Node.js</span></span>
 
-<span data-ttu-id="a04bd-104">Центр Интернета вещей Azure — это полностью управляемая служба, которая обеспечивает надежный и защищенный двунаправленный обмен данными между миллионами устройств Интернета вещей и серверной частью решения.</span><span class="sxs-lookup"><span data-stu-id="a04bd-104">Azure IoT Hub is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a solution back end.</span></span> <span data-ttu-id="a04bd-105">Центр Интернета вещей Azure обеспечивает:</span><span class="sxs-lookup"><span data-stu-id="a04bd-105">Azure IoT Hub:</span></span>
-- <span data-ttu-id="a04bd-106">несколько вариантов взаимодействия между устройствами и облаком, в том числе одностороннюю передачу сообщений, передачу файлов и методы "запрос — ответ";</span><span class="sxs-lookup"><span data-stu-id="a04bd-106">Provides multiple device-to-cloud and cloud-to-device communication options, including one-way messaging, file transfer, and request-reply methods.</span></span>
-- <span data-ttu-id="a04bd-107">встроенную декларативную маршрутизацию сообщений к другим службам Azure;</span><span class="sxs-lookup"><span data-stu-id="a04bd-107">Provides built-in declarative message routing to other Azure services.</span></span>
-- <span data-ttu-id="a04bd-108">хранилище для метаданных устройств и информации о состоянии синхронизации с возможностью запрашивания данных;</span><span class="sxs-lookup"><span data-stu-id="a04bd-108">Provides a queryable store for device metadata and synchronized state information.</span></span>
-- <span data-ttu-id="a04bd-109">безопасную связь и контроль доступа с использованием отдельных ключей безопасности или сертификатов X.509 для каждого устройства;</span><span class="sxs-lookup"><span data-stu-id="a04bd-109">Enables secure communications and access control using per-device security keys or X.509 certificates.</span></span>
-- <span data-ttu-id="a04bd-110">комплексный мониторинг взаимодействия, а также событий управления идентификацией устройств;</span><span class="sxs-lookup"><span data-stu-id="a04bd-110">Provides extensive monitoring for device connectivity and device identity management events.</span></span>
-- <span data-ttu-id="a04bd-111">простое подключение устройств, так как используются библиотеки устройств для большинства популярных языков и платформ.</span><span class="sxs-lookup"><span data-stu-id="a04bd-111">Includes device libraries for the most popular languages and platforms.</span></span>
+<span data-ttu-id="c2e9b-104">Центр Интернета вещей Azure — это полностью управляемая служба, которая обеспечивает надежный и защищенный двунаправленный обмен данными между миллионами устройств Интернета вещей и серверной частью решения.</span><span class="sxs-lookup"><span data-stu-id="c2e9b-104">Azure IoT Hub is a fully managed service that enables reliable and secure bidirectional communications between millions of IoT devices and a solution back end.</span></span> <span data-ttu-id="c2e9b-105">Центр Интернета вещей Azure обеспечивает:</span><span class="sxs-lookup"><span data-stu-id="c2e9b-105">Azure IoT Hub:</span></span>
+- <span data-ttu-id="c2e9b-106">несколько вариантов взаимодействия между устройствами и облаком, в том числе одностороннюю передачу сообщений, передачу файлов и методы "запрос — ответ";</span><span class="sxs-lookup"><span data-stu-id="c2e9b-106">Provides multiple device-to-cloud and cloud-to-device communication options, including one-way messaging, file transfer, and request-reply methods.</span></span>
+- <span data-ttu-id="c2e9b-107">встроенную декларативную маршрутизацию сообщений к другим службам Azure;</span><span class="sxs-lookup"><span data-stu-id="c2e9b-107">Provides built-in declarative message routing to other Azure services.</span></span>
+- <span data-ttu-id="c2e9b-108">хранилище для метаданных устройств и информации о состоянии синхронизации с возможностью запрашивания данных;</span><span class="sxs-lookup"><span data-stu-id="c2e9b-108">Provides a queryable store for device metadata and synchronized state information.</span></span>
+- <span data-ttu-id="c2e9b-109">безопасную связь и контроль доступа с использованием отдельных ключей безопасности или сертификатов X.509 для каждого устройства;</span><span class="sxs-lookup"><span data-stu-id="c2e9b-109">Enables secure communications and access control using per-device security keys or X.509 certificates.</span></span>
+- <span data-ttu-id="c2e9b-110">комплексный мониторинг взаимодействия, а также событий управления идентификацией устройств;</span><span class="sxs-lookup"><span data-stu-id="c2e9b-110">Provides extensive monitoring for device connectivity and device identity management events.</span></span>
+- <span data-ttu-id="c2e9b-111">простое подключение устройств, так как используются библиотеки устройств для большинства популярных языков и платформ.</span><span class="sxs-lookup"><span data-stu-id="c2e9b-111">Includes device libraries for the most popular languages and platforms.</span></span>
 
-<span data-ttu-id="a04bd-112">Используйте npm для установки модулей Центра Интернета вещей Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="a04bd-112">Use npm to install the Azure IoT Hub modules for Node.js</span></span>
+<span data-ttu-id="c2e9b-112">Используйте npm для установки модулей Центра Интернета вещей Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="c2e9b-112">Use npm to install the Azure IoT Hub modules for Node.js</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="a04bd-113">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="a04bd-113">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="c2e9b-113">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="c2e9b-113">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="a04bd-114">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="a04bd-114">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="c2e9b-114">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="c2e9b-114">Install the npm module</span></span>
 
-<span data-ttu-id="a04bd-115">Установите модуль npm Центра Интернета вещей Azure.</span><span class="sxs-lookup"><span data-stu-id="a04bd-115">Install the Azure IoT Hub npm module</span></span>
+<span data-ttu-id="c2e9b-115">Установите модуль npm Центра Интернета вещей Azure.</span><span class="sxs-lookup"><span data-stu-id="c2e9b-115">Install the Azure IoT Hub npm module</span></span>
 
 ```bash
 npm install azure-arm-iothub
 ```
 
-### <a name="example"></a><span data-ttu-id="a04bd-116">Пример</span><span class="sxs-lookup"><span data-stu-id="a04bd-116">Example</span></span>
+### <a name="example"></a><span data-ttu-id="c2e9b-116">Пример</span><span class="sxs-lookup"><span data-stu-id="c2e9b-116">Example</span></span>
 
-<span data-ttu-id="a04bd-117">Этот пример создает и называет Центр Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="a04bd-117">This example creates and names an IoT hub.</span></span>
+<span data-ttu-id="c2e9b-117">Этот пример создает и называет Центр Интернета вещей.</span><span class="sxs-lookup"><span data-stu-id="c2e9b-117">This example creates and names an IoT hub.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -84,7 +84,7 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-<span data-ttu-id="a04bd-118">Этот пример получает существующий Центр Интернета вещей по имени.</span><span class="sxs-lookup"><span data-stu-id="a04bd-118">This example gets the existing IoT hub, by name.</span></span>
+<span data-ttu-id="c2e9b-118">Этот пример получает существующий Центр Интернета вещей по имени.</span><span class="sxs-lookup"><span data-stu-id="c2e9b-118">This example gets the existing IoT hub, by name.</span></span>
 
 ```javascript
 const subscriptionId = 'your-subscription-id';
@@ -101,9 +101,9 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="a04bd-119">Примеры</span><span class="sxs-lookup"><span data-stu-id="a04bd-119">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="c2e9b-119">Примеры</span><span class="sxs-lookup"><span data-stu-id="c2e9b-119">Samples</span></span>
 
-- [<span data-ttu-id="a04bd-120">Начальный набор Интернета вещей Microsoft Azure для Raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="a04bd-120">Get started with the Raspberry Pi Azure IoT Starter Kit</span></span>](https://azure.microsoft.com/resources/samples/iot-remote-monitoring-node-raspberrypi-getstartedkit/)
-- <span data-ttu-id="a04bd-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Отправка твита об аномальных вибрациях, обнаруженных службами Интернета вещей Azure на основе данных устройства Intel Edison с Node.js)</span><span class="sxs-lookup"><span data-stu-id="a04bd-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)</span></span>
+- [<span data-ttu-id="c2e9b-120">Начальный набор Интернета вещей Microsoft Azure для Raspberry Pi</span><span class="sxs-lookup"><span data-stu-id="c2e9b-120">Get started with the Raspberry Pi Azure IoT Starter Kit</span></span>](https://azure.microsoft.com/resources/samples/iot-remote-monitoring-node-raspberrypi-getstartedkit/)
+- <span data-ttu-id="c2e9b-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/) (Отправка твита об аномальных вибрациях, обнаруженных службами Интернета вещей Azure на основе данных устройства Intel Edison с Node.js)</span><span class="sxs-lookup"><span data-stu-id="c2e9b-121">[Tweet vibration anomalies detected by Azure IoT services on data from an Intel Edison running Node.js](https://azure.microsoft.com/resources/samples/iot-hub-nodejs-intel-edison-vibration-anomaly-detection/)</span></span>
 
-<span data-ttu-id="a04bd-122">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="a04bd-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="c2e9b-122">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="c2e9b-122">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

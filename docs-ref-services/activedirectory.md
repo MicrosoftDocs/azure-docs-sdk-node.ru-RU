@@ -10,34 +10,34 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.openlocfilehash: 1189bf084fc7d77a1e5eed7f01f2f9bee2295b45
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50406430"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51157893"
 ---
-# <a name="azure-active-directory-modules-for-nodejs"></a><span data-ttu-id="b2fde-103">Модули Azure Active Directory для Node.js</span><span class="sxs-lookup"><span data-stu-id="b2fde-103">Azure Active Directory modules for Node.js</span></span>
+# <a name="azure-active-directory-modules-for-nodejs"></a><span data-ttu-id="1f634-103">Модули Azure Active Directory для Node.js</span><span class="sxs-lookup"><span data-stu-id="1f634-103">Azure Active Directory modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="b2fde-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="b2fde-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="1f634-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="1f634-104">Overview</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="b2fde-105">Мы настоятельно рекомендуем использовать для доступа к ресурсам Azure Active Directory [Microsoft Graph](https://graph.microsoft.io/) вместо API Azure AD Graph.</span><span class="sxs-lookup"><span data-stu-id="b2fde-105">We strongly recommend that you use [Microsoft Graph](https://graph.microsoft.io/) instead of Azure AD Graph API to access Azure Active Directory resources.</span></span> <span data-ttu-id="b2fde-106">В настоящее время усилия наших разработчиков направлены на Microsoft Graph, и дальнейшие усовершенствования API Azure AD Graph не планируются.</span><span class="sxs-lookup"><span data-stu-id="b2fde-106">Our development efforts are now concentrated on Microsoft Graph and no further enhancements are planned for Azure AD Graph API.</span></span> <span data-ttu-id="b2fde-107">Существует совсем немного сценариев, в которых по-прежнему можно использовать API Azure AD Graph. Дополнительные сведения см. в записи блога [Microsoft Graph or the Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) (Microsoft Graph или Azure AD Graph) в Центре разработчика Office.</span><span class="sxs-lookup"><span data-stu-id="b2fde-107">There are a very limited number of scenarios for which Azure AD Graph API might still be appropriate; for more information, see the [Microsoft Graph or the Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) blog post in the Office Dev Center.</span></span>
+> <span data-ttu-id="1f634-105">Мы настоятельно рекомендуем использовать для доступа к ресурсам Azure Active Directory [Microsoft Graph](https://graph.microsoft.io/) вместо API Azure AD Graph.</span><span class="sxs-lookup"><span data-stu-id="1f634-105">We strongly recommend that you use [Microsoft Graph](https://graph.microsoft.io/) instead of Azure AD Graph API to access Azure Active Directory resources.</span></span> <span data-ttu-id="1f634-106">В настоящее время усилия наших разработчиков направлены на Microsoft Graph, и дальнейшие усовершенствования API Azure AD Graph не планируются.</span><span class="sxs-lookup"><span data-stu-id="1f634-106">Our development efforts are now concentrated on Microsoft Graph and no further enhancements are planned for Azure AD Graph API.</span></span> <span data-ttu-id="1f634-107">Существует совсем немного сценариев, в которых по-прежнему можно использовать API Azure AD Graph. Дополнительные сведения см. в записи блога [Microsoft Graph or the Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) (Microsoft Graph или Azure AD Graph) в Центре разработчика Office.</span><span class="sxs-lookup"><span data-stu-id="1f634-107">There are a very limited number of scenarios for which Azure AD Graph API might still be appropriate; for more information, see the [Microsoft Graph or the Azure AD Graph](https://dev.office.com/blogs/microsoft-graph-or-azure-ad-graph) blog post in the Office Dev Center.</span></span>
 
-<span data-ttu-id="b2fde-108">[Библиотека проверки подлинности Active Directory (ADAL) для Node.js](https://www.npmjs.com/package/adal-node) позволяет приложениям Node.js проходить проверку подлинности в AAD, чтобы получить доступ к защищенным веб-ресурсам.</span><span class="sxs-lookup"><span data-stu-id="b2fde-108">The [Azure Active Directory Authentication Library (ADAL) for Node.js](https://www.npmjs.com/package/adal-node) enables Node.js applications to authenticate to AAD in order to access AAD protected web resources.</span></span>
+<span data-ttu-id="1f634-108">[Библиотека проверки подлинности Active Directory (ADAL) для Node.js](https://www.npmjs.com/package/adal-node) позволяет приложениям Node.js проходить проверку подлинности в AAD, чтобы получить доступ к защищенным веб-ресурсам.</span><span class="sxs-lookup"><span data-stu-id="1f634-108">The [Azure Active Directory Authentication Library (ADAL) for Node.js](https://www.npmjs.com/package/adal-node) enables Node.js applications to authenticate to AAD in order to access AAD protected web resources.</span></span>
 
-## <a name="client-package"></a><span data-ttu-id="b2fde-109">Пакет клиента</span><span class="sxs-lookup"><span data-stu-id="b2fde-109">Client package</span></span>
+## <a name="client-package"></a><span data-ttu-id="1f634-109">Пакет клиента</span><span class="sxs-lookup"><span data-stu-id="1f634-109">Client package</span></span>
 
-### <a name="install-the-npm-modules"></a><span data-ttu-id="b2fde-110">Установка модулей npm</span><span class="sxs-lookup"><span data-stu-id="b2fde-110">Install the npm modules</span></span>
+### <a name="install-the-npm-modules"></a><span data-ttu-id="1f634-110">Установка модулей npm</span><span class="sxs-lookup"><span data-stu-id="1f634-110">Install the npm modules</span></span>
 
-<span data-ttu-id="b2fde-111">Установите модули клиента хранилища Azure или управления хранилищем Azure с помощью npm.</span><span class="sxs-lookup"><span data-stu-id="b2fde-111">Use npm to install the Azure storage client or management modules.</span></span>
+<span data-ttu-id="1f634-111">Установите модули клиента хранилища Azure или управления хранилищем Azure с помощью npm.</span><span class="sxs-lookup"><span data-stu-id="1f634-111">Use npm to install the Azure storage client or management modules.</span></span>
 
 ```bash
 npm install adal-node
 ```   
 
-### <a name="example"></a><span data-ttu-id="b2fde-112">Пример</span><span class="sxs-lookup"><span data-stu-id="b2fde-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="1f634-112">Пример</span><span class="sxs-lookup"><span data-stu-id="1f634-112">Example</span></span>
 
-<span data-ttu-id="b2fde-113">Этот пример из [примера учетных данных клиента](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) иллюстрирует проверку подлинности между серверами с помощью учетных данных клиента.</span><span class="sxs-lookup"><span data-stu-id="b2fde-113">This example from the [client credentials sample](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) illustrates server-to-server authentication via client credentials.</span></span>
+<span data-ttu-id="1f634-113">Этот пример из [примера учетных данных клиента](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) иллюстрирует проверку подлинности между серверами с помощью учетных данных клиента.</span><span class="sxs-lookup"><span data-stu-id="1f634-113">This example from the [client credentials sample](https://github.com/MSOpenTech/azure-activedirectory-library-for-nodejs/blob/master/sample/client-credentials-sample.js) illustrates server-to-server authentication via client credentials.</span></span>
 
 ```javascript
 const adal = require('adal-node').AuthenticationContext;
@@ -65,8 +65,8 @@ context.acquireTokenWithClientCredentials(
 );
 ```
 
-## <a name="samples"></a><span data-ttu-id="b2fde-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="b2fde-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="1f634-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="1f634-114">Samples</span></span>
 
 [!INCLUDE [node-activedirectory-samples](../docs-ref-conceptual/includes/activedirectory-samples.md)]
 
-<span data-ttu-id="b2fde-115">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="b2fde-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="1f634-115">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="1f634-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
