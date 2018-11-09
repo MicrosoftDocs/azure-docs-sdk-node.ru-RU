@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Data Lake Store
 ms.openlocfilehash: da7e71a9ee1f6936924b1ec966b441756e9b0dfe
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50354262"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51185143"
 ---
 # <a name="azure-data-lake-store-modules-for-nodejs"></a>Модули Azure Data Lake Store для Node.js
 

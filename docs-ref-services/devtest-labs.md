@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: DevTest Labs
 ms.openlocfilehash: 4528bf6a09bc86d23bfec982988added1aa3e257
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50325011"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51192377"
 ---
 # <a name="azure-devtest-labs-modules-for-nodejs"></a>Модули Azure DevTest Labs для Node.js
 

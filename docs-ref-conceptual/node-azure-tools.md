@@ -11,11 +11,11 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.author: routlaw
 ms.openlocfilehash: 1c676b1f31fde7b14a16031b78f767a2c59edd5a
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50316991"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51191143"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>Средства Azure для разработчиков JavaScript
 Рекомендуется использовать следующие средства для разработки на JavaScript в Azure.

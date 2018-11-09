@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Logic Apps
 ms.openlocfilehash: 021f57c7f4f1b86a3c0e97f345d2f934351669b8
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50281537"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51111173"
 ---
 # <a name="azure-logic-apps-modules-for-nodejs"></a>Модули Azure Logic Apps для Node.js
 

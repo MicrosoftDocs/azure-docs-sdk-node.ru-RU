@@ -10,11 +10,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.openlocfilehash: 1189bf084fc7d77a1e5eed7f01f2f9bee2295b45
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50406430"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51157893"
 ---
 # <a name="azure-active-directory-modules-for-nodejs"></a>Модули Azure Active Directory для Node.js
 

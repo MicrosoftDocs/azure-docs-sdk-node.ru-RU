@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Cognitive Services
 ms.openlocfilehash: fb0319965f7ea9d1bcab25e0e213998052b78ae0
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50272687"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51071870"
 ---
 # <a name="javascript-azure-cognitive-services-modules"></a>Модули Azure Cognitive Services для JavaScript
 

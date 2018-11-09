@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Traffic Manager
 ms.openlocfilehash: 2a32eed460c6076011fdcf31d77200502ef61a3d
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50310911"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51121823"
 ---
 # <a name="azure-traffic-manager-modules-for-nodejs"></a>Модули диспетчера трафика Azure для Node.js
 

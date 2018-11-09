@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Service Map
 ms.openlocfilehash: 494d948896d65dd67b06f455386f500346862beb
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50330022"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51190923"
 ---
 # <a name="azure-service-map-modules-for-nodejs"></a>Модули сопоставления служб Azure для Node.js
 

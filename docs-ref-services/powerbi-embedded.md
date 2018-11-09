@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: PowerBI Embedded
 ms.openlocfilehash: 58251dd1cd3a672a5167193f74d311952d70e84e
-ms.sourcegitcommit: 8c6935b6591175798b8e37ad0e511864fad3478e
+ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50405760"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51133993"
 ---
 # <a name="azure-powerbi-embedded-modules-for-nodejs"></a>Модули Azure PowerBI Embedded для Node.js
 
