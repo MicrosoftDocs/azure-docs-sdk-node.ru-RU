@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Monitor
 ms.openlocfilehash: fb2cc5ba927fe03fb5fe3114919ed1b0b6e969ae
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51141313"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51424748"
 ---
 # <a name="azure-monitor-modules-for-nodejs"></a>Модули Azure Monitor для Node.js
 

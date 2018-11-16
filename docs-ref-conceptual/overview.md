@@ -10,11 +10,11 @@ ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
 ms.openlocfilehash: 1d97df65f12c465cf6c790d1e3c016a9ff4aa5ba
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51173093"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51394918"
 ---
 # <a name="azure-modules-for-javascript"></a>Модули Azure для JavaScript
 

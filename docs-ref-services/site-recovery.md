@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Site Recovery
 ms.openlocfilehash: f8cddf806b921d5445cd0757b64aeb0dc5df03cf
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51053713"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51373958"
 ---
 # <a name="azure-site-recovery-modules-for-nodejs"></a>Модули Azure Site Recovery для Node.js
 

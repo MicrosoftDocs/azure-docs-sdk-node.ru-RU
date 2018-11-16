@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Container Registry
 ms.openlocfilehash: f24fa268f9c471925a1bdf0cbae8044d97bc7679
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51071603"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51477928"
 ---
 # <a name="azure-container-registry-modules-for-nodejs"></a>Модули реестра контейнеров Azure для Node.js
 

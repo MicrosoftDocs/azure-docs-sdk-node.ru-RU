@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: DNS
 ms.openlocfilehash: 93eec1890fc15d19c0545086a53b751d0886988a
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51062043"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51494868"
 ---
 # <a name="azure-dns-modules-for-nodejs"></a>Модули DNS Azure для Node.js
 

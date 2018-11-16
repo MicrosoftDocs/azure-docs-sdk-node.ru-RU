@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Search
 ms.openlocfilehash: a9c34a57d7964de1713ebf4d6c0f9c000df33042
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51173103"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51366548"
 ---
 # <a name="azure-search-modules-for-nodejs"></a>Модули Поиска Azure для Node.js
 

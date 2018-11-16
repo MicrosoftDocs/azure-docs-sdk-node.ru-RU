@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Scheduler
 ms.openlocfilehash: 9a842919fddb3d6448d5a4e951dc58dd0d3211e0
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51122083"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51399038"
 ---
 # <a name="azure-scheduler-modules-for-nodejs"></a>Модули планировщика Azure для Node.js
 

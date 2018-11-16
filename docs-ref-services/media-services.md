@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Media Services
 ms.openlocfilehash: bfd4402c215a81c9ed8753cfe9ad9dbfaa52bd6f
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51105723"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51374988"
 ---
 # <a name="azure-media-services-modules-for-nodejs"></a>Модули служб мультимедиа Azure для Node.js
 
