@@ -11,34 +11,34 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Media Services
 ms.openlocfilehash: bfd4402c215a81c9ed8753cfe9ad9dbfaa52bd6f
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51105723"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51374988"
 ---
-# <a name="azure-media-services-modules-for-nodejs"></a><span data-ttu-id="3921f-103">Модули служб мультимедиа Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="3921f-103">Azure Media Services modules for Node.js</span></span>
+# <a name="azure-media-services-modules-for-nodejs"></a><span data-ttu-id="bc015-103">Модули служб мультимедиа Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="bc015-103">Azure Media Services modules for Node.js</span></span>
 
-<span data-ttu-id="3921f-104">Службы мультимедиа Azure — это расширяемая облачная платформа, которая позволяет разработчикам создавать масштабируемые приложения для управления и доставки файлов мультимедиа.</span><span class="sxs-lookup"><span data-stu-id="3921f-104">Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications.</span></span> <span data-ttu-id="3921f-105">С помощью служб мультимедиа Azure можно безопасно передавать, сохранять, кодировать и упаковывать видео- или аудиосодержимое для потоковой трансляции разным клиентам (например, на ТВ, ПК и мобильные устройства) или для трансляции по требованию.</span><span class="sxs-lookup"><span data-stu-id="3921f-105">Media Services is based on REST APIs that enable you to securely upload, store, encode, and package video or audio content for both on-demand and live streaming delivery to various clients (for example, TV, PC, and mobile devices).</span></span>
+<span data-ttu-id="bc015-104">Службы мультимедиа Azure — это расширяемая облачная платформа, которая позволяет разработчикам создавать масштабируемые приложения для управления и доставки файлов мультимедиа.</span><span class="sxs-lookup"><span data-stu-id="bc015-104">Azure Media Services is an extensible cloud-based platform that enables developers to build scalable media management and delivery applications.</span></span> <span data-ttu-id="bc015-105">С помощью служб мультимедиа Azure можно безопасно передавать, сохранять, кодировать и упаковывать видео- или аудиосодержимое для потоковой трансляции разным клиентам (например, на ТВ, ПК и мобильные устройства) или для трансляции по требованию.</span><span class="sxs-lookup"><span data-stu-id="bc015-105">Media Services is based on REST APIs that enable you to securely upload, store, encode, and package video or audio content for both on-demand and live streaming delivery to various clients (for example, TV, PC, and mobile devices).</span></span>
 
-<span data-ttu-id="3921f-106">С помощью служб мультимедиа Azure вы можете:</span><span class="sxs-lookup"><span data-stu-id="3921f-106">With Azure Media Services, you can:</span></span>
-- <span data-ttu-id="3921f-107">Создавать сквозные рабочие процессы, полностью использующие службы мультимедиа.</span><span class="sxs-lookup"><span data-stu-id="3921f-107">Build end-to-end workflows using entirely Media Services.</span></span> 
-- <span data-ttu-id="3921f-108">Использовать сторонние компоненты в качестве некоторых частей рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="3921f-108">Use third-party components for some parts of your workflow.</span></span> <span data-ttu-id="3921f-109">Например, можно выполнять кодирование с помощью стороннего кодировщика.</span><span class="sxs-lookup"><span data-stu-id="3921f-109">For example, encode using a third-party encoder.</span></span> <span data-ttu-id="3921f-110">А затем отправить, защитить, упаковать и доставить содержимое с использованием служб мультимедиа.</span><span class="sxs-lookup"><span data-stu-id="3921f-110">Then, upload, protect, package, deliver using Media Services.</span></span>
-- <span data-ttu-id="3921f-111">Выполнять потоковую передачу содержимого динамически или доставлять содержимое по запросу.</span><span class="sxs-lookup"><span data-stu-id="3921f-111">Stream your content live or deliver content on-demand.</span></span> <span data-ttu-id="3921f-112">В этом разделе также есть ссылки на другие разделы.</span><span class="sxs-lookup"><span data-stu-id="3921f-112">The topic also links to other relevant topics.</span></span>
+<span data-ttu-id="bc015-106">С помощью служб мультимедиа Azure вы можете:</span><span class="sxs-lookup"><span data-stu-id="bc015-106">With Azure Media Services, you can:</span></span>
+- <span data-ttu-id="bc015-107">Создавать сквозные рабочие процессы, полностью использующие службы мультимедиа.</span><span class="sxs-lookup"><span data-stu-id="bc015-107">Build end-to-end workflows using entirely Media Services.</span></span> 
+- <span data-ttu-id="bc015-108">Использовать сторонние компоненты в качестве некоторых частей рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bc015-108">Use third-party components for some parts of your workflow.</span></span> <span data-ttu-id="bc015-109">Например, можно выполнять кодирование с помощью стороннего кодировщика.</span><span class="sxs-lookup"><span data-stu-id="bc015-109">For example, encode using a third-party encoder.</span></span> <span data-ttu-id="bc015-110">А затем отправить, защитить, упаковать и доставить содержимое с использованием служб мультимедиа.</span><span class="sxs-lookup"><span data-stu-id="bc015-110">Then, upload, protect, package, deliver using Media Services.</span></span>
+- <span data-ttu-id="bc015-111">Выполнять потоковую передачу содержимого динамически или доставлять содержимое по запросу.</span><span class="sxs-lookup"><span data-stu-id="bc015-111">Stream your content live or deliver content on-demand.</span></span> <span data-ttu-id="bc015-112">В этом разделе также есть ссылки на другие разделы.</span><span class="sxs-lookup"><span data-stu-id="bc015-112">The topic also links to other relevant topics.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="3921f-113">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="3921f-113">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="bc015-113">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="bc015-113">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="3921f-114">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="3921f-114">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="bc015-114">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="bc015-114">Install the npm module</span></span>
 
-<span data-ttu-id="3921f-115">Установка модуля npm служб мультимедиа Azure</span><span class="sxs-lookup"><span data-stu-id="3921f-115">Install the Azure media services npm module</span></span>
+<span data-ttu-id="bc015-115">Установка модуля npm служб мультимедиа Azure</span><span class="sxs-lookup"><span data-stu-id="bc015-115">Install the Azure media services npm module</span></span>
 
 ```bash
 npm install azure-arm-mediaservices
 ```
 
-### <a name="example"></a><span data-ttu-id="3921f-116">Пример</span><span class="sxs-lookup"><span data-stu-id="3921f-116">Example</span></span>
+### <a name="example"></a><span data-ttu-id="bc015-116">Пример</span><span class="sxs-lookup"><span data-stu-id="bc015-116">Example</span></span>
 
-<span data-ttu-id="3921f-117">Этот пример перечисляет все службы мультимедиа для группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="3921f-117">This example lists all media services for a resource group.</span></span>
+<span data-ttu-id="bc015-117">Этот пример перечисляет все службы мультимедиа для группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="bc015-117">This example lists all media services for a resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="3921f-118">Примеры</span><span class="sxs-lookup"><span data-stu-id="3921f-118">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="bc015-118">Примеры</span><span class="sxs-lookup"><span data-stu-id="bc015-118">Samples</span></span>
 
-<span data-ttu-id="3921f-119">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="3921f-119">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="bc015-119">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="bc015-119">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>

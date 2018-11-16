@@ -11,33 +11,33 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Traffic Manager
 ms.openlocfilehash: 2a32eed460c6076011fdcf31d77200502ef61a3d
-ms.sourcegitcommit: a748445fdd0dd7ead43d45fd4ad45009cfc439a6
+ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51121823"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51366458"
 ---
-# <a name="azure-traffic-manager-modules-for-nodejs"></a><span data-ttu-id="f9142-103">Модули диспетчера трафика Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="f9142-103">Azure Traffic Manager modules for Node.js</span></span>
+# <a name="azure-traffic-manager-modules-for-nodejs"></a><span data-ttu-id="c20c6-103">Модули диспетчера трафика Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="c20c6-103">Azure Traffic Manager modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="f9142-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="f9142-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="c20c6-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="c20c6-104">Overview</span></span>
 
-<span data-ttu-id="f9142-105">Диспетчер трафика Microsoft Azure позволяет управлять распределением пользовательского трафика между конечными точками службы в разных центрах обработки данных.</span><span class="sxs-lookup"><span data-stu-id="f9142-105">Microsoft Azure Traffic Manager allows you to control the distribution of user traffic for service endpoints in different datacenters.</span></span> <span data-ttu-id="f9142-106">К конечным точкам службы, поддерживаемым диспетчером трафика Azure, относятся виртуальные машины, веб-приложения и облачные службы Azure.</span><span class="sxs-lookup"><span data-stu-id="f9142-106">Service endpoints supported by Traffic Manager include Azure VMs, Web Apps, and cloud services.</span></span> <span data-ttu-id="f9142-107">Можно также использовать диспетчер трафика Azure для внешних конечных точек, не относящихся к среде Azure.</span><span class="sxs-lookup"><span data-stu-id="f9142-107">You can also use Traffic Manager with external, non-Azure endpoints.</span></span>
+<span data-ttu-id="c20c6-105">Диспетчер трафика Microsoft Azure позволяет управлять распределением пользовательского трафика между конечными точками службы в разных центрах обработки данных.</span><span class="sxs-lookup"><span data-stu-id="c20c6-105">Microsoft Azure Traffic Manager allows you to control the distribution of user traffic for service endpoints in different datacenters.</span></span> <span data-ttu-id="c20c6-106">К конечным точкам службы, поддерживаемым диспетчером трафика Azure, относятся виртуальные машины, веб-приложения и облачные службы Azure.</span><span class="sxs-lookup"><span data-stu-id="c20c6-106">Service endpoints supported by Traffic Manager include Azure VMs, Web Apps, and cloud services.</span></span> <span data-ttu-id="c20c6-107">Можно также использовать диспетчер трафика Azure для внешних конечных точек, не относящихся к среде Azure.</span><span class="sxs-lookup"><span data-stu-id="c20c6-107">You can also use Traffic Manager with external, non-Azure endpoints.</span></span>
 
-<span data-ttu-id="f9142-108">См. дополнительные сведения о [диспетчере трафика Azure](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).</span><span class="sxs-lookup"><span data-stu-id="f9142-108">Learn more about [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).</span></span>
+<span data-ttu-id="c20c6-108">См. дополнительные сведения о [диспетчере трафика Azure](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).</span><span class="sxs-lookup"><span data-stu-id="c20c6-108">Learn more about [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="f9142-109">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="f9142-109">Management Package</span></span>
+## <a name="management-package"></a><span data-ttu-id="c20c6-109">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="c20c6-109">Management Package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="f9142-110">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="f9142-110">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="c20c6-110">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="c20c6-110">Install the npm module</span></span>
 
-<span data-ttu-id="f9142-111">Установите модуль npm диспетчера трафика Azure.</span><span class="sxs-lookup"><span data-stu-id="f9142-111">Install the Azure traffic manager npm module</span></span>
+<span data-ttu-id="c20c6-111">Установите модуль npm диспетчера трафика Azure.</span><span class="sxs-lookup"><span data-stu-id="c20c6-111">Install the Azure traffic manager npm module</span></span>
 
 ```bash
 npm install azure-arm-trafficmanager
 ```
 
-### <a name="example"></a><span data-ttu-id="f9142-112">Пример</span><span class="sxs-lookup"><span data-stu-id="f9142-112">Example</span></span>
+### <a name="example"></a><span data-ttu-id="c20c6-112">Пример</span><span class="sxs-lookup"><span data-stu-id="c20c6-112">Example</span></span>
 
-<span data-ttu-id="f9142-113">Этот пример перечисляет все диспетчеры трафика для данной группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f9142-113">This example lists all Traffic Managers for a given resource group.</span></span>
+<span data-ttu-id="c20c6-113">Этот пример перечисляет все диспетчеры трафика для данной группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="c20c6-113">This example lists all Traffic Managers for a given resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure.interactiveLogin().then(credentials => {
 });
 ```
 
-## <a name="samples"></a><span data-ttu-id="f9142-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="f9142-114">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="c20c6-114">Примеры</span><span class="sxs-lookup"><span data-stu-id="c20c6-114">Samples</span></span>
 
-<span data-ttu-id="f9142-115">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="f9142-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="c20c6-115">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="c20c6-115">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
