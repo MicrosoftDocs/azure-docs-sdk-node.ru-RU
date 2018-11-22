@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Key Vault
 ms.openlocfilehash: 36bc5e97a5eea6e821f66bff9b3e8f610baa2dd0
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51388548"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52098869"
 ---
 # <a name="azure-key-vault-modules-for-nodejs"></a>Модули Azure Key Vault для Node.js
 
