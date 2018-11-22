@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Search
 ms.openlocfilehash: a9c34a57d7964de1713ebf4d6c0f9c000df33042
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51366548"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52005908"
 ---
-# <a name="azure-search-modules-for-nodejs"></a><span data-ttu-id="ff83a-103">Модули Поиска Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="ff83a-103">Azure Search modules for Node.js</span></span>
+# <a name="azure-search-modules-for-nodejs"></a><span data-ttu-id="158a8-103">Модули Поиска Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="158a8-103">Azure Search modules for Node.js</span></span>
 
-<span data-ttu-id="ff83a-104">Поиск Azure — это облачное решение (поиск как услуга), которое делегирует корпорации Майкрософт управление сервером и инфраструктурой. Вы получаете готовое к работе решение, которое можно заполнить своими данными и затем использовать для добавления поиска в свое приложение.</span><span class="sxs-lookup"><span data-stu-id="ff83a-104">Azure Search is a cloud search-as-a-service solution that delegates server and infrastructure management to Microsoft, leaving you with a ready-to-use service that you can populate with your data and then use to add search to your application.</span></span>
+<span data-ttu-id="158a8-104">Поиск Azure — это облачное решение (поиск как услуга), которое делегирует корпорации Майкрософт управление сервером и инфраструктурой. Вы получаете готовое к работе решение, которое можно заполнить своими данными и затем использовать для добавления поиска в свое приложение.</span><span class="sxs-lookup"><span data-stu-id="158a8-104">Azure Search is a cloud search-as-a-service solution that delegates server and infrastructure management to Microsoft, leaving you with a ready-to-use service that you can populate with your data and then use to add search to your application.</span></span>
 
-<span data-ttu-id="ff83a-105">Дополнительные сведения о [Поиске Azure](https://docs.microsoft.com/azure/search/search-what-is-azure-search).</span><span class="sxs-lookup"><span data-stu-id="ff83a-105">Learn more about [Azure Search](https://docs.microsoft.com/azure/search/search-what-is-azure-search).</span></span>
+<span data-ttu-id="158a8-105">Дополнительные сведения о [Поиске Azure](https://docs.microsoft.com/azure/search/search-what-is-azure-search).</span><span class="sxs-lookup"><span data-stu-id="158a8-105">Learn more about [Azure Search](https://docs.microsoft.com/azure/search/search-what-is-azure-search).</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="ff83a-106">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="ff83a-106">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="158a8-106">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="158a8-106">Management package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="ff83a-107">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="ff83a-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="158a8-107">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="158a8-107">Install the npm module</span></span>
 
-<span data-ttu-id="ff83a-108">Установите модуль npm Поиска Azure.</span><span class="sxs-lookup"><span data-stu-id="ff83a-108">Install the Azure Search npm module</span></span>
+<span data-ttu-id="158a8-108">Установите модуль npm Поиска Azure.</span><span class="sxs-lookup"><span data-stu-id="158a8-108">Install the Azure Search npm module</span></span>
 
 ```bash
 npm install azure-arm-search
 ```
 
-### <a name="example"></a><span data-ttu-id="ff83a-109">Пример</span><span class="sxs-lookup"><span data-stu-id="ff83a-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="158a8-109">Пример</span><span class="sxs-lookup"><span data-stu-id="158a8-109">Example</span></span>
 
-<span data-ttu-id="ff83a-110">Этот пример создает новую службу поиска в Azure, а также выводит список ресурсов в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="ff83a-110">This example creates a new Search service in Azure, and lists the resources in its resource group.</span></span>
+<span data-ttu-id="158a8-110">Этот пример создает новую службу поиска в Azure, а также выводит список ресурсов в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="158a8-110">This example creates a new Search service in Azure, and lists the resources in its resource group.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -57,6 +57,6 @@ msRestAzure
   });
 ```
 
-## <a name="samples"></a><span data-ttu-id="ff83a-111">Примеры</span><span class="sxs-lookup"><span data-stu-id="ff83a-111">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="158a8-111">Примеры</span><span class="sxs-lookup"><span data-stu-id="158a8-111">Samples</span></span>
 
-<span data-ttu-id="ff83a-112">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="ff83a-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="158a8-112">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="158a8-112">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
