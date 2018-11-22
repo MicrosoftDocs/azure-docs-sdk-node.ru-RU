@@ -11,11 +11,11 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Operational Insights
 ms.openlocfilehash: c8a137c4759982e0551d9048ac271780e6a68afe
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51497508"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52154269"
 ---
 # <a name="azure-operational-insights-modules-for-nodejs"></a>Модули Operational Insights Azure для Node.js
 
