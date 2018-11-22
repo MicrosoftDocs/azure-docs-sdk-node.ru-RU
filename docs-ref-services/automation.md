@@ -11,31 +11,31 @@ ms.technology: azure
 ms.devlang: nodejs
 ms.service: Automation
 ms.openlocfilehash: f364bb09c97c1262f640a4b48514c6abaee5f14a
-ms.sourcegitcommit: b1e29342a19524f43ed70f4bc961dcfdacffb14a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51410398"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52154899"
 ---
-# <a name="azure-automation-modules-for-nodejs"></a><span data-ttu-id="8c622-103">Модули службы автоматизации Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="8c622-103">Azure Automation Modules for Node.js</span></span>
+# <a name="azure-automation-modules-for-nodejs"></a><span data-ttu-id="e6557-103">Модули службы автоматизации Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="e6557-103">Azure Automation Modules for Node.js</span></span>
 
-## <a name="overview"></a><span data-ttu-id="8c622-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="8c622-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="e6557-104">Обзор</span><span class="sxs-lookup"><span data-stu-id="e6557-104">Overview</span></span>
 
-<span data-ttu-id="8c622-105">Служба автоматизации Azure позволяет пользователям автоматизировать стандартные задачи в облачной среде и среде предприятия. Такие задачи обычно выполняются вручную, занимают много времени, подвержены ошибкам и часто повторяются.</span><span class="sxs-lookup"><span data-stu-id="8c622-105">Azure Automation provides a way for users to automate the manual, long-running, error-prone, and frequently repeated tasks that are commonly performed in a cloud and enterprise environment.</span></span> <span data-ttu-id="8c622-106">Служба автоматизации экономит время и повышает надежность обычных административных задач и даже планирует их автоматическое выполнение через определенные интервалы.</span><span class="sxs-lookup"><span data-stu-id="8c622-106">Automation saves time and increases the reliability of regular administrative tasks and even schedules them to be automatically performed at regular intervals.</span></span> <span data-ttu-id="8c622-107">Можно автоматизировать процессы, используя модули Runbook, или автоматизировать управление конфигурацией, используя службу настройки требуемого состояния (DSC).</span><span class="sxs-lookup"><span data-stu-id="8c622-107">You can automate processes using runbooks or automate configuration management using Desired State Configuration.</span></span>
+<span data-ttu-id="e6557-105">Служба автоматизации Azure позволяет пользователям автоматизировать стандартные задачи в облачной среде и среде предприятия. Такие задачи обычно выполняются вручную, занимают много времени, подвержены ошибкам и часто повторяются.</span><span class="sxs-lookup"><span data-stu-id="e6557-105">Azure Automation provides a way for users to automate the manual, long-running, error-prone, and frequently repeated tasks that are commonly performed in a cloud and enterprise environment.</span></span> <span data-ttu-id="e6557-106">Служба автоматизации экономит время и повышает надежность обычных административных задач и даже планирует их автоматическое выполнение через определенные интервалы.</span><span class="sxs-lookup"><span data-stu-id="e6557-106">Automation saves time and increases the reliability of regular administrative tasks and even schedules them to be automatically performed at regular intervals.</span></span> <span data-ttu-id="e6557-107">Можно автоматизировать процессы, используя модули Runbook, или автоматизировать управление конфигурацией, используя службу настройки требуемого состояния (DSC).</span><span class="sxs-lookup"><span data-stu-id="e6557-107">You can automate processes using runbooks or automate configuration management using Desired State Configuration.</span></span>
 
-## <a name="management-package"></a><span data-ttu-id="8c622-108">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="8c622-108">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="e6557-108">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="e6557-108">Management package</span></span>
 
-### <a name="install-the-modules-with-npm"></a><span data-ttu-id="8c622-109">Установка модулей с помощью npm</span><span class="sxs-lookup"><span data-stu-id="8c622-109">Install the modules with npm</span></span>
+### <a name="install-the-modules-with-npm"></a><span data-ttu-id="e6557-109">Установка модулей с помощью npm</span><span class="sxs-lookup"><span data-stu-id="e6557-109">Install the modules with npm</span></span>
 
-<span data-ttu-id="8c622-110">Установите модули службы автоматизации Azure для Node.js. с помощью npm.</span><span class="sxs-lookup"><span data-stu-id="8c622-110">Use npm to install the Azure Automation modules for Node.js</span></span>
+<span data-ttu-id="e6557-110">Установите модули службы автоматизации Azure для Node.js. с помощью npm.</span><span class="sxs-lookup"><span data-stu-id="e6557-110">Use npm to install the Azure Automation modules for Node.js</span></span>
 
 ```bash
 npm install azure-arm-automation
 ```
 
-### <a name="example"></a><span data-ttu-id="8c622-111">Пример</span><span class="sxs-lookup"><span data-stu-id="8c622-111">Example</span></span>
+### <a name="example"></a><span data-ttu-id="e6557-111">Пример</span><span class="sxs-lookup"><span data-stu-id="e6557-111">Example</span></span>
 
-<span data-ttu-id="8c622-112">Этот пример перечисляет учетные записи службы автоматизации.</span><span class="sxs-lookup"><span data-stu-id="8c622-112">This example lists the automation accounts.</span></span>
+<span data-ttu-id="e6557-112">Этот пример перечисляет учетные записи службы автоматизации.</span><span class="sxs-lookup"><span data-stu-id="e6557-112">This example lists the automation accounts.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -56,6 +56,6 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="8c622-113">Примеры</span><span class="sxs-lookup"><span data-stu-id="8c622-113">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="e6557-113">Примеры</span><span class="sxs-lookup"><span data-stu-id="e6557-113">Samples</span></span>
 
-<span data-ttu-id="8c622-114">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="8c622-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="e6557-114">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="e6557-114">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
