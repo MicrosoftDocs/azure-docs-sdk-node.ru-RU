@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 35162845f4fce50237bfd26c5550c261a14156cd
+ms.sourcegitcommit: 094b6aa16c2ee9aa1418d36ce033f1d99151d913
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45957238"
+items:
+- uid: azure-event-processor-host.EventProcessorHostOptions
+  name: EventProcessorHostOptions
+  fullName: EventProcessorHostOptions
+  children:
+  - azure-event-processor-host.EventProcessorHostOptions.checkpointManager
+  - azure-event-processor-host.EventProcessorHostOptions.eventHubConnectionString
+  - azure-event-processor-host.EventProcessorHostOptions.leaseManager
+  - azure-event-processor-host.EventProcessorHostOptions.storageConnectionString
+  - azure-event-processor-host.EventProcessorHostOptions.storageContainerName
+  - azure-event-processor-host.EventProcessorHostOptions.tokenProvider
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="514a4-101">Описание необязательных параметров, которые можно указать для создания EventProcessorHost.</span><span class="sxs-lookup"><span data-stu-id="514a4-101">Describes the optional parameters that can be provided for creating an EventProcessorHost.</span></span>
+  extends:
+    name: azure-event-processor-host.FromConnectionStringOptions
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHostOptions.checkpointManager
+  name: checkpointManager
+  fullName: checkpointManager
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="514a4-102">{CheckpointManager} [checkpointManager] Диспетчер управления контрольными точками.</span><span class="sxs-lookup"><span data-stu-id="514a4-102">{CheckpointManager} [checkpointManager] A manager to manage checkpoints.</span></span>
+
+    <span data-ttu-id="514a4-103">Значение по умолчанию — \*\* `AzureStorageCheckpointLeaseManager` \*\*.</span><span class="sxs-lookup"><span data-stu-id="514a4-103">Default: **`AzureStorageCheckpointLeaseManager`**.</span></span>
+  optional: true
+  syntax:
+    content: 'checkpointManager?: CheckpointManager'
+    return:
+      type:
+      - azure-event-processor-host.CheckpointManager
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHostOptions.eventHubConnectionString
+  name: eventHubConnectionString
+  fullName: eventHubConnectionString
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="514a4-104">{Строка} значения [eventHubConnectionString] Строка подключения для концентратора событий для получения от.</span><span class="sxs-lookup"><span data-stu-id="514a4-104">{string} [eventHubConnectionString] Connection string for the Event Hub to receive from.</span></span> <span data-ttu-id="514a4-105">Пример: «Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-name; SharedAccessKey my-SA-key =».</span><span class="sxs-lookup"><span data-stu-id="514a4-105">Example: "Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key".</span></span>'
+  optional: true
+  syntax:
+    content: 'eventHubConnectionString?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHostOptions.leaseManager
+  name: leaseManager
+  fullName: leaseManager
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="514a4-106">{LeaseManager} [LeaseManager] Диспетчер для управления аренды.</span><span class="sxs-lookup"><span data-stu-id="514a4-106">{LeaseManager} [LeaseManager] A manager to manage leases.</span></span> <span data-ttu-id="514a4-107">Значение по умолчанию — \*\* `AzureStorageCheckpointLeaseManager` \*\*.</span><span class="sxs-lookup"><span data-stu-id="514a4-107">Default: **`AzureStorageCheckpointLeaseManager`**.</span></span>'
+  optional: true
+  syntax:
+    content: 'leaseManager?: LeaseManager'
+    return:
+      type:
+      - azure-event-processor-host.LeaseManager
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHostOptions.storageConnectionString
+  name: storageConnectionString
+  fullName: storageConnectionString
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="514a4-108">{Строка} [storageConnectionString] Строка подключения к учетной записи хранилища Azure, используемой для аренды и создание контрольных точек.</span><span class="sxs-lookup"><span data-stu-id="514a4-108">{string} [storageConnectionString] Connection string to Azure Storage account used for leases and checkpointing.</span></span> <span data-ttu-id="514a4-109">Пример «DefaultEndpointsProtocol = https; AccountName = < имя учетной записи >; AccountKey = < ключ учетной записи >; EndpointSuffix=core.windows.net»</span><span class="sxs-lookup"><span data-stu-id="514a4-109">Example "DefaultEndpointsProtocol=https;AccountName=<account-name>; AccountKey=<account-key>;EndpointSuffix=core.windows.net"</span></span>
+  optional: true
+  syntax:
+    content: 'storageConnectionString?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHostOptions.storageContainerName
+  name: storageContainerName
+  fullName: storageContainerName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="514a4-110">{Строка} [storageContainerName] Имя контейнера хранилища Azure для использования диспетчером встроенные аренды и контрольных точек.</span><span class="sxs-lookup"><span data-stu-id="514a4-110">{string} [storageContainerName] Azure Storage container name for use by built-in lease and checkpoint manager.</span></span>
+  optional: true
+  syntax:
+    content: 'storageContainerName?: string'
+    return:
+      type:
+      - string
+  package: azure-event-processor-host
+- uid: azure-event-processor-host.EventProcessorHostOptions.tokenProvider
+  name: tokenProvider
+  fullName: tokenProvider
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="514a4-111">{TokenProvider} [tokenProvider] Экземпляр интерфейса поставщик маркеров, который предоставляет маркер для проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="514a4-111">{TokenProvider} [tokenProvider] An instance of the token provider interface that provides the token for authentication.</span></span> <span data-ttu-id="514a4-112">Значение по умолчанию: \*\* `SasTokenProvider` \*\*.</span><span class="sxs-lookup"><span data-stu-id="514a4-112">Default value: **`SasTokenProvider`**.</span></span>'
+  optional: true
+  syntax:
+    content: 'tokenProvider?: TokenProvider'
+    return:
+      type:
+      - TokenProvider
+  package: azure-event-processor-host
+references:
+- uid: azure-event-processor-host.FromConnectionStringOptions
+  name: FromConnectionStringOptions
+  spec.typeScript:
+  - name: FromConnectionStringOptions
+    fullName: FromConnectionStringOptions
+    uid: azure-event-processor-host.FromConnectionStringOptions
+- uid: azure-event-processor-host.CheckpointManager
+  name: CheckpointManager
+  spec.typeScript:
+  - name: CheckpointManager
+    fullName: CheckpointManager
+    uid: azure-event-processor-host.CheckpointManager
+- uid: azure-event-processor-host.LeaseManager
+  name: LeaseManager
+  spec.typeScript:
+  - name: LeaseManager
+    fullName: LeaseManager
+    uid: azure-event-processor-host.LeaseManager

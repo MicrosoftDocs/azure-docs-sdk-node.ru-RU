@@ -1,0 +1,599 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 123d93a49cd2b4774f4e87edf8520b6f8fb5b8a4
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658908"
+items:
+- uid: azure-iothub.JobClient
+  name: JobClient
+  fullName: JobClient
+  children:
+  - azure-iothub.JobClient.cancelJob_1
+  - azure-iothub.JobClient.cancelJob
+  - azure-iothub.JobClient.createQuery
+  - azure-iothub.JobClient.fromConnectionString
+  - azure-iothub.JobClient.fromSharedAccessSignature
+  - azure-iothub.JobClient.getJob_1
+  - azure-iothub.JobClient.getJob
+  - azure-iothub.JobClient.JobCallback
+  - azure-iothub.JobClient.scheduleDeviceMethod_5
+  - azure-iothub.JobClient.scheduleDeviceMethod_4
+  - azure-iothub.JobClient.scheduleDeviceMethod_3
+  - azure-iothub.JobClient.scheduleDeviceMethod
+  - azure-iothub.JobClient.scheduleDeviceMethod_1
+  - azure-iothub.JobClient.scheduleDeviceMethod_2
+  - azure-iothub.JobClient.scheduleTwinUpdate_5
+  - azure-iothub.JobClient.scheduleTwinUpdate_4
+  - azure-iothub.JobClient.scheduleTwinUpdate_3
+  - azure-iothub.JobClient.scheduleTwinUpdate
+  - azure-iothub.JobClient.scheduleTwinUpdate_1
+  - azure-iothub.JobClient.scheduleTwinUpdate_2
+  langs:
+  - typeScript
+  type: class
+  summary: >
+    <span data-ttu-id="cb43a-101">Предоставляет методы для создания, обновления, отслеживать и отменить длительные задания в экземпляре центра Интернета вещей, а также существующие задания запроса.</span><span class="sxs-lookup"><span data-stu-id="cb43a-101">Provides methods to create, update, monitor and cancel long-running jobs on an IoT Hub instance, as well as query existing jobs.</span></span>
+
+    <span data-ttu-id="cb43a-102">API заданий в центре Интернета вещей Azure позволяет планировать вызовов прямого метода и обновления двойника на нескольких устройствах.</span><span class="sxs-lookup"><span data-stu-id="cb43a-102">The Jobs API in Azure IoT Hub allows to schedule direct method calls and twin updates on multiple devices.</span></span>
+
+    <span data-ttu-id="cb43a-103">Пакет SDK пользователи должны создавать <xref:azure-iothub.JobClient> экземпляры с помощью методов фабрики <xref:azure-iothub.JobClient.fromConnectionString> и <xref:azure-iothub.JobClient.fromSharedAccessSignature>.</span><span class="sxs-lookup"><span data-stu-id="cb43a-103">SDK users are expected to create <xref:azure-iothub.JobClient> instances using the factory methods <xref:azure-iothub.JobClient.fromConnectionString> and <xref:azure-iothub.JobClient.fromSharedAccessSignature>.</span></span>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.cancelJob_1
+  name: cancelJob(string | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-104">Отменяет существующее задание.</span><span class="sxs-lookup"><span data-stu-id="cb43a-104">Cancels an existing job.</span></span>
+  syntax:
+    content: 'function cancelJob(jobId: string | number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.cancelJob
+  name: cancelJob(string | number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-105">Отменяет существующее задание.</span><span class="sxs-lookup"><span data-stu-id="cb43a-105">Cancels an existing job.</span></span>
+  syntax:
+    content: 'function cancelJob(jobId: string | number, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="cb43a-106">Идентификатор существующего задания.</span><span class="sxs-lookup"><span data-stu-id="cb43a-106">The identifier of an existing job.</span></span>
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.createQuery
+  name: createQuery(JobType, JobStatus, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-107">Создает запрос, который может использоваться для возврата страницы существующее задание, в зависимости от типа и состояния.</span><span class="sxs-lookup"><span data-stu-id="cb43a-107">Creates a query that can be used to return pages of existing job based on type and status.</span></span>
+  syntax:
+    content: 'function createQuery(jobType?: JobType, jobStatus?: JobStatus, pageSize?: number)'
+    parameters:
+    - id: jobType
+      type:
+      - azure-iothub.JobType
+      description: <span data-ttu-id="cb43a-108">Тип, который должен использоваться для фильтрации результатов.</span><span class="sxs-lookup"><span data-stu-id="cb43a-108">The type that should be used to filter results.</span></span>
+      optional: true
+    - id: jobStatus
+      type:
+      - azure-iothub.JobStatus
+      description: <span data-ttu-id="cb43a-109">Состояние, которое следует использовать для фильтрации результатов.</span><span class="sxs-lookup"><span data-stu-id="cb43a-109">The status that should be used to filter results.</span></span>
+      optional: true
+    - id: pageSize
+      type:
+      - number
+      description: >
+        <span data-ttu-id="cb43a-110">Число элементов для возвращения на страницу.</span><span class="sxs-lookup"><span data-stu-id="cb43a-110">The number of elements to return per page.</span></span>
+      optional: true
+    return:
+      type:
+      - azure-iothub.Query
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromConnectionString
+  name: fromConnectionString(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-111">Создает объект JobClient в строке данного соединения.</span><span class="sxs-lookup"><span data-stu-id="cb43a-111">Constructs a JobClient object from the given connection string.</span></span>
+  syntax:
+    content: 'static function fromConnectionString(connectionString: string)'
+    parameters:
+    - id: connectionString
+      type:
+      - string
+      description: >
+        <span data-ttu-id="cb43a-112">Строка подключения, которая инкапсулирует соответствующий (считывают или записывают) разрешения для реестра.</span><span class="sxs-lookup"><span data-stu-id="cb43a-112">A connection string which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.fromSharedAccessSignature
+  name: fromSharedAccessSignature(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-113">Создает объект JobClient из заданного подписанные URL-адреса.</span><span class="sxs-lookup"><span data-stu-id="cb43a-113">Constructs a JobClient object from the given shared access signature.</span></span>
+  syntax:
+    content: 'static function fromSharedAccessSignature(sharedAccessSignature: string)'
+    parameters:
+    - id: sharedAccessSignature
+      type:
+      - string
+      description: >
+        <span data-ttu-id="cb43a-114">Подписанные URL-адреса, инкапсулирующий соответствующий (считывают или записывают) разрешения для реестра.</span><span class="sxs-lookup"><span data-stu-id="cb43a-114">A shared access signature which encapsulates the appropriate (read and/or write) Registry permissions.</span></span>
+    return:
+      type:
+      - azure-iothub.JobClient
+  package: azure-iothub
+- uid: azure-iothub.JobClient.getJob_1
+  name: getJob(string | number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-115">Запрашивает информацию о существующем задании.</span><span class="sxs-lookup"><span data-stu-id="cb43a-115">Requests information about an existing job.</span></span>
+  syntax:
+    content: 'function getJob(jobId: string | number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.getJob
+  name: getJob(string | number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-116">Запрашивает информацию о существующем задании.</span><span class="sxs-lookup"><span data-stu-id="cb43a-116">Requests information about an existing job.</span></span>
+  syntax:
+    content: 'function getJob(jobId: string | number, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="cb43a-117">Идентификатор существующего задания.</span><span class="sxs-lookup"><span data-stu-id="cb43a-117">The identifier of an existing job.</span></span>
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_5
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-118">Планирует задание, которое будет выполняться метода устройства в наборе устройств.</span><span class="sxs-lookup"><span data-stu-id="cb43a-118">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_4
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-119">Планирует задание, которое будет выполняться метода устройства в наборе устройств.</span><span class="sxs-lookup"><span data-stu-id="cb43a-119">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_3
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-120">Планирует задание, которое будет выполняться метода устройства в наборе устройств.</span><span class="sxs-lookup"><span data-stu-id="cb43a-120">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, maxExecutionTimeInSeconds: number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-121">Планирует задание, которое будет выполняться метода устройства в наборе устройств.</span><span class="sxs-lookup"><span data-stu-id="cb43a-121">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, maxExecutionTimeInSeconds: number, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="cb43a-122">Уникальный идентификатор, который должен использоваться для этого задания.</span><span class="sxs-lookup"><span data-stu-id="cb43a-122">The unique identifier that should be used for this job.</span></span>
+    - id: queryCondition
+      type:
+      - string
+      description: <span data-ttu-id="cb43a-123">SQL-запрос предложение WHERE, используемое для вычисления список устройств, на которых должно запускаться данное задание.</span><span class="sxs-lookup"><span data-stu-id="cb43a-123">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: >-
+        <span data-ttu-id="cb43a-124">Объект, описывающий метод и должен иметь следующие свойства:-имя_метода имя метода, который должен вызываться.</span><span class="sxs-lookup"><span data-stu-id="cb43a-124">An object describing the method and shall have the following properties: - methodName          The name of the method that shall be invoked.</span></span>
+
+        <span data-ttu-id="cb43a-125">-[необязательно] полезные данные полезной нагрузки, чтобы использовать для вызова метода.</span><span class="sxs-lookup"><span data-stu-id="cb43a-125">- payload             [optional] The payload to use for the method call.</span></span>
+
+        <span data-ttu-id="cb43a-126">-responseTimeoutInSeconds [optional] количество секунд, центр Интернета вещей должен ожидать устройства</span><span class="sxs-lookup"><span data-stu-id="cb43a-126">- responseTimeoutInSeconds [optional] The number of seconds IoT Hub shall wait for the device</span></span>
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_1
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-127">Планирует задание, которое будет выполняться метода устройства в наборе устройств.</span><span class="sxs-lookup"><span data-stu-id="cb43a-127">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_2
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-128">Планирует задание, которое будет выполняться метода устройства в наборе устройств.</span><span class="sxs-lookup"><span data-stu-id="cb43a-128">Schedules a job that will execute a device method on a set of devices.</span></span>
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_5
+  name: scheduleTwinUpdate(string | number, string, any)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-129">Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.</span><span class="sxs-lookup"><span data-stu-id="cb43a-129">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_4
+  name: scheduleTwinUpdate(string | number, string, any, Date)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-130">Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.</span><span class="sxs-lookup"><span data-stu-id="cb43a-130">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_3
+  name: scheduleTwinUpdate(string | number, string, any, Date, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-131">Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.</span><span class="sxs-lookup"><span data-stu-id="cb43a-131">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, maxExecutionTimeInSeconds?: number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate
+  name: scheduleTwinUpdate(string | number, string, any, Date, number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-132">Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.</span><span class="sxs-lookup"><span data-stu-id="cb43a-132">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, maxExecutionTimeInSeconds: number, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: <span data-ttu-id="cb43a-133">Уникальный идентификатор, который должен использоваться для этого задания.</span><span class="sxs-lookup"><span data-stu-id="cb43a-133">The unique identifier that should be used for this job.</span></span>
+    - id: queryCondition
+      type:
+      - string
+      description: <span data-ttu-id="cb43a-134">SQL-запрос предложение WHERE, используемое для вычисления список устройств, на которых должно запускаться данное задание.</span><span class="sxs-lookup"><span data-stu-id="cb43a-134">A SQL query WHERE clause used to compute the list of devices on which this job should be run.</span></span>
+    - id: patch
+      type:
+      - any
+      description: <span data-ttu-id="cb43a-135">Исправление двойника, должны быть применены к двойников.</span><span class="sxs-lookup"><span data-stu-id="cb43a-135">The twin patch that should be applied to the twins.</span></span>
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_1
+  name: scheduleTwinUpdate(string | number, string, any, Date, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-136">Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.</span><span class="sxs-lookup"><span data-stu-id="cb43a-136">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_2
+  name: scheduleTwinUpdate(string | number, string, any, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="cb43a-137">Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.</span><span class="sxs-lookup"><span data-stu-id="cb43a-137">Schedule a job that will update a set of twins with the patch provided as a parameter.</span></span>
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+references:
+- uid: Promise<azure-iothub.JobStatusResponse>
+  name: JobStatusResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: JobStatusResponse
+    fullName: JobStatusResponse
+    uid: azure-iothub.JobStatusResponse
+  - name: '>'
+    fullName: '>'
+- uid: azure-iothub.JobType
+  name: JobType
+  spec.typeScript:
+  - name: JobType
+    fullName: JobType
+    uid: azure-iothub.JobType
+- uid: azure-iothub.JobStatus
+  name: JobStatus
+  spec.typeScript:
+  - name: JobStatus
+    fullName: JobStatus
+    uid: azure-iothub.JobStatus
+- uid: azure-iothub.Query
+  name: Query
+  spec.typeScript:
+  - name: Query
+    fullName: Query
+    uid: azure-iothub.Query
+- uid: azure-iothub.DeviceMethodParams
+  name: DeviceMethodParams
+  spec.typeScript:
+  - name: DeviceMethodParams
+    fullName: DeviceMethodParams
+    uid: azure-iothub.DeviceMethodParams
+- uid: azure-iothub.JobClient
+  name: JobClient
+  spec.typeScript:
+  - name: JobClient
+    fullName: JobClient
+    uid: azure-iothub.JobClient
+- uid: azure-iothub.JobClient.JobCallback
+  name: JobCallback
