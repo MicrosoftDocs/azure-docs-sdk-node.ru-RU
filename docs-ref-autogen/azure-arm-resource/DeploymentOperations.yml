@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 1cc6c1aa8c5061c6789c7ca7b4dfecdc551b9e0e
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: f8085333a42954017f56ec0fc7bfde1b5c9745e3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41693543"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52012954"
 items:
 - uid: azure-arm-resource.DeploymentOperations
   name: DeploymentOperations
@@ -13,13 +13,25 @@ items:
   - azure-arm-resource.DeploymentOperations.get
   - azure-arm-resource.DeploymentOperations.get_2
   - azure-arm-resource.DeploymentOperations.get_1
+  - azure-arm-resource.DeploymentOperations.getAtSubscriptionScope
+  - azure-arm-resource.DeploymentOperations.getAtSubscriptionScope_2
+  - azure-arm-resource.DeploymentOperations.getAtSubscriptionScope_1
+  - azure-arm-resource.DeploymentOperations.getAtSubscriptionScopeWithHttpOperationResponse
   - azure-arm-resource.DeploymentOperations.getWithHttpOperationResponse
   - azure-arm-resource.DeploymentOperations.list
-  - azure-arm-resource.DeploymentOperations.list_1
   - azure-arm-resource.DeploymentOperations.list_2
+  - azure-arm-resource.DeploymentOperations.list_1
+  - azure-arm-resource.DeploymentOperations.listAtSubscriptionScope
+  - azure-arm-resource.DeploymentOperations.listAtSubscriptionScope_2
+  - azure-arm-resource.DeploymentOperations.listAtSubscriptionScope_1
+  - azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeNext
+  - azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeNext_2
+  - azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeNext_1
+  - azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeNextWithHttpOperationResponse
+  - azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeWithHttpOperationResponse
   - azure-arm-resource.DeploymentOperations.listNext
-  - azure-arm-resource.DeploymentOperations.listNext_1
   - azure-arm-resource.DeploymentOperations.listNext_2
+  - azure-arm-resource.DeploymentOperations.listNext_1
   - azure-arm-resource.DeploymentOperations.listNextWithHttpOperationResponse
   - azure-arm-resource.DeploymentOperations.listWithHttpOperationResponse
   langs:
@@ -28,7 +40,7 @@ items:
   summary: ''
   package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -62,7 +74,7 @@ items:
       - Promise<azure-arm-resource.DeploymentOperation>
   package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<DeploymentOperation>)
   children: []
   type: method
   langs:
@@ -96,7 +108,7 @@ items:
       - Promise<azure-arm-resource.DeploymentOperation>
   package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.get_1
-  name: get
+  name: get(string, string, string, ServiceCallback<DeploymentOperation>)
   children: []
   type: method
   langs:
@@ -125,8 +137,122 @@ items:
       type:
       - Promise<azure-arm-resource.DeploymentOperation>
   package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.getAtSubscriptionScope
+  name: getAtSubscriptionScope(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает операцию развертывания.
+  syntax:
+    content: 'function getAtSubscriptionScope(deploymentName: string, operationId: string, options?: Object)'
+    parameters:
+    - id: deploymentName
+      type:
+      - string
+      description: >
+        Имя развертывания.
+    - id: operationId
+      type:
+      - string
+      description: >
+        Идентификатор операции для получения.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperation>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.getAtSubscriptionScope_2
+  name: getAtSubscriptionScope(string, string, Object, ServiceCallback<DeploymentOperation>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает операцию развертывания.
+  syntax:
+    content: 'function getAtSubscriptionScope(deploymentName: string, operationId: string, options: Object, callback: ServiceCallback<DeploymentOperation>)'
+    parameters:
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.DeploymentOperation>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperation>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.getAtSubscriptionScope_1
+  name: getAtSubscriptionScope(string, string, ServiceCallback<DeploymentOperation>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает операцию развертывания.
+  syntax:
+    content: 'function getAtSubscriptionScope(deploymentName: string, operationId: string, callback: ServiceCallback<DeploymentOperation>)'
+    parameters:
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: operationId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.DeploymentOperation>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperation>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.getAtSubscriptionScopeWithHttpOperationResponse
+  name: getAtSubscriptionScopeWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает операцию развертывания.
+  syntax:
+    content: 'function getAtSubscriptionScopeWithHttpOperationResponse(deploymentName: string, operationId: string, options?: Object)'
+    parameters:
+    - id: deploymentName
+      type:
+      - string
+      description: >
+        Имя развертывания.
+    - id: operationId
+      type:
+      - string
+      description: >
+        Идентификатор операции для получения.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-resource.DeploymentOperation>>
+  package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -160,7 +286,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.DeploymentOperation>>
   package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.list
-  name: list
+  name: list(string, string, Object)
   children: []
   type: method
   langs:
@@ -188,34 +314,8 @@ items:
       type:
       - Promise<azure-arm-resource.DeploymentOperationsListResult>
   package: azure-arm-resource
-- uid: azure-arm-resource.DeploymentOperations.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает все операции развертывания для развертывания.
-  syntax:
-    content: 'function list(resourceGroupName: string, deploymentName: string, callback: ServiceCallback<DeploymentOperationsListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: deploymentName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.DeploymentOperationsListResult>
-  package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.list_2
-  name: list
+  name: list(string, string, Object, ServiceCallback<DeploymentOperationsListResult>)
   children: []
   type: method
   langs:
@@ -244,8 +344,226 @@ items:
       type:
       - Promise<azure-arm-resource.DeploymentOperationsListResult>
   package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.list_1
+  name: list(string, string, ServiceCallback<DeploymentOperationsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function list(resourceGroupName: string, deploymentName: string, callback: ServiceCallback<DeploymentOperationsListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperationsListResult>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listAtSubscriptionScope
+  name: listAtSubscriptionScope(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listAtSubscriptionScope(deploymentName: string, options?: Object)'
+    parameters:
+    - id: deploymentName
+      type:
+      - string
+      description: >
+        Имя развертывания с этой операцией получения.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperationsListResult>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listAtSubscriptionScope_2
+  name: listAtSubscriptionScope(string, Object, ServiceCallback<DeploymentOperationsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listAtSubscriptionScope(deploymentName: string, options: Object, callback: ServiceCallback<DeploymentOperationsListResult>)'
+    parameters:
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperationsListResult>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listAtSubscriptionScope_1
+  name: listAtSubscriptionScope(string, ServiceCallback<DeploymentOperationsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listAtSubscriptionScope(deploymentName: string, callback: ServiceCallback<DeploymentOperationsListResult>)'
+    parameters:
+    - id: deploymentName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperationsListResult>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeNext
+  name: listAtSubscriptionScopeNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listAtSubscriptionScopeNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperationsListResult>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeNext_2
+  name: listAtSubscriptionScopeNext(string, Object, ServiceCallback<DeploymentOperationsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listAtSubscriptionScopeNext(nextPageLink: string, options: Object, callback: ServiceCallback<DeploymentOperationsListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperationsListResult>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeNext_1
+  name: listAtSubscriptionScopeNext(string, ServiceCallback<DeploymentOperationsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listAtSubscriptionScopeNext(nextPageLink: string, callback: ServiceCallback<DeploymentOperationsListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperationsListResult>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeNextWithHttpOperationResponse
+  name: listAtSubscriptionScopeNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listAtSubscriptionScopeNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-resource.DeploymentOperationsListResult>>
+  package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listAtSubscriptionScopeWithHttpOperationResponse
+  name: listAtSubscriptionScopeWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listAtSubscriptionScopeWithHttpOperationResponse(deploymentName: string, options?: Object)'
+    parameters:
+    - id: deploymentName
+      type:
+      - string
+      description: >
+        Имя развертывания с этой операцией получения.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-resource.DeploymentOperationsListResult>>
+  package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -268,30 +586,8 @@ items:
       type:
       - Promise<azure-arm-resource.DeploymentOperationsListResult>
   package: azure-arm-resource
-- uid: azure-arm-resource.DeploymentOperations.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает все операции развертывания для развертывания.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<DeploymentOperationsListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.DeploymentOperationsListResult>
-  package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<DeploymentOperationsListResult>)
   children: []
   type: method
   langs:
@@ -316,8 +612,30 @@ items:
       type:
       - Promise<azure-arm-resource.DeploymentOperationsListResult>
   package: azure-arm-resource
+- uid: azure-arm-resource.DeploymentOperations.listNext_1
+  name: listNext(string, ServiceCallback<DeploymentOperationsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все операции развертывания для развертывания.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<DeploymentOperationsListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.DeploymentOperationsListResult>
+  package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -341,7 +659,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.DeploymentOperationsListResult>>
   package: azure-arm-resource
 - uid: azure-arm-resource.DeploymentOperations.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -371,6 +689,7 @@ items:
   package: azure-arm-resource
 references:
 - uid: Promise<azure-arm-resource.DeploymentOperation>
+  name: DeploymentOperation>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -380,6 +699,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-resource.DeploymentOperation>
+  name: DeploymentOperation>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -389,6 +709,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-resource.DeploymentOperation>>
+  name: DeploymentOperation>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -398,6 +719,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-resource.DeploymentOperationsListResult>
+  name: DeploymentOperationsListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -407,6 +729,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-resource.DeploymentOperationsListResult>
+  name: DeploymentOperationsListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -416,6 +739,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-resource.DeploymentOperationsListResult>>
+  name: DeploymentOperationsListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

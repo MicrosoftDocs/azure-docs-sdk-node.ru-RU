@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 7841c592ad6afc580c445ce09e12afdedd274858
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: ceb02cdea38b84eadc5000345b7fd3a85f297941
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41689728"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53710459"
 items:
 - uid: azure-iot-device.DeviceMethodResponse
   name: DeviceMethodResponse
@@ -14,7 +14,9 @@ items:
   - azure-iot-device.DeviceMethodResponse.isResponseComplete
   - azure-iot-device.DeviceMethodResponse.payload
   - azure-iot-device.DeviceMethodResponse.requestId
+  - azure-iot-device.DeviceMethodResponse.send_2
   - azure-iot-device.DeviceMethodResponse.send
+  - azure-iot-device.DeviceMethodResponse.send_1
   - azure-iot-device.DeviceMethodResponse.status
   langs:
   - typeScript
@@ -25,7 +27,7 @@ items:
     Экземпляр этого класса передается в качестве второго параметра в обратный вызов, зарегистрированные с помощью <xref:azure-iot-device.Client.onDeviceMethod>.
   package: azure-iot-device
 - uid: azure-iot-device.DeviceMethodResponse.constructor
-  name: DeviceMethodResponse
+  name: DeviceMethodResponse(string, DeviceTransport)
   children: []
   type: constructor
   langs:
@@ -85,15 +87,38 @@ items:
       type:
       - string
   package: azure-iot-device
-- uid: azure-iot-device.DeviceMethodResponse.send
-  name: send
+- uid: azure-iot-device.DeviceMethodResponse.send_2
+  name: send(number, any)
   children: []
   type: method
   langs:
   - typeScript
   summary: Отправляет ответ метода устройства в службе с помощью базового объекта транспорта с помощью параметра состояния как состояние вызова метода.
   syntax:
-    content: 'function send(status: number, payload?: any, done?: (err?: Error) => void)'
+    content: 'function send(status: number, payload?: any)'
+    parameters:
+    - id: status
+      type:
+      - number
+      description: ''
+    - id: payload
+      type:
+      - any
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceMethodResponse.send
+  name: send(number, any, ErrorCallback)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Отправляет ответ метода устройства в службе с помощью базового объекта транспорта с помощью параметра состояния как состояние вызова метода.
+  syntax:
+    content: 'function send(status: number, payload: any, done: ErrorCallback)'
     parameters:
     - id: status
       type:
@@ -102,14 +127,30 @@ items:
     - id: payload
       type:
       - any
-      description: Полезные данные ответа метода.
-      optional: true
+      description: ''
     - id: done
       type:
-      - '(err?: Error) => void'
-      description: >
-        Функция обратного вызова, который будет вызываться, когда ответ отправлен обратно к службе. Объект ошибки передается в качестве аргумента в функцию в случае, если возникает ошибка.
-      optional: true
+      - ErrorCallback
+      description: ''
+  package: azure-iot-device
+- uid: azure-iot-device.DeviceMethodResponse.send_1
+  name: send(number, ErrorCallback)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Отправляет ответ метода устройства в службе с помощью базового объекта транспорта с помощью параметра состояния как состояние вызова метода.
+  syntax:
+    content: 'function send(status: number, done: ErrorCallback)'
+    parameters:
+    - id: status
+      type:
+      - number
+      description: ''
+    - id: done
+      type:
+      - ErrorCallback
+      description: ''
   package: azure-iot-device
 - uid: azure-iot-device.DeviceMethodResponse.status
   name: status
@@ -127,6 +168,7 @@ items:
   package: azure-iot-device
 references:
 - uid: azure-iot-device.DeviceTransport
+  name: DeviceTransport
   spec.typeScript:
   - name: DeviceTransport
     fullName: DeviceTransport

@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 9272c86b1901be9f88966a7b23ae3d4c03012d41
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 6983668137625e82058dae2f8e8e986fd2bc101d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41697720"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52058939"
 items:
 - uid: azure-arm-postgresql.LogFiles
   name: LogFiles
   fullName: LogFiles
   children:
   - azure-arm-postgresql.LogFiles.listByServer
-  - azure-arm-postgresql.LogFiles.listByServer_1
   - azure-arm-postgresql.LogFiles.listByServer_2
+  - azure-arm-postgresql.LogFiles.listByServer_1
   - azure-arm-postgresql.LogFiles.listByServerWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-postgresql
 - uid: azure-arm-postgresql.LogFiles.listByServer
-  name: listByServer
+  name: listByServer(string, string, Object)
   children: []
   type: method
   langs:
@@ -33,7 +33,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -48,34 +48,8 @@ items:
       type:
       - Promise<azure-arm-postgresql.LogFileListResult>
   package: azure-arm-postgresql
-- uid: azure-arm-postgresql.LogFiles.listByServer_1
-  name: listByServer
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список всех файлов журнала на заданном сервере.
-  syntax:
-    content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<LogFileListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-postgresql.LogFileListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-postgresql.LogFileListResult>
-  package: azure-arm-postgresql
 - uid: azure-arm-postgresql.LogFiles.listByServer_2
-  name: listByServer
+  name: listByServer(string, string, Object, ServiceCallback<LogFileListResult>)
   children: []
   type: method
   langs:
@@ -104,8 +78,34 @@ items:
       type:
       - Promise<azure-arm-postgresql.LogFileListResult>
   package: azure-arm-postgresql
+- uid: azure-arm-postgresql.LogFiles.listByServer_1
+  name: listByServer(string, string, ServiceCallback<LogFileListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список всех файлов журнала на заданном сервере.
+  syntax:
+    content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<LogFileListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-postgresql.LogFileListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-postgresql.LogFileListResult>
+  package: azure-arm-postgresql
 - uid: azure-arm-postgresql.LogFiles.listByServerWithHttpOperationResponse
-  name: listByServerWithHttpOperationResponse
+  name: listByServerWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -118,7 +118,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -135,6 +135,7 @@ items:
   package: azure-arm-postgresql
 references:
 - uid: Promise<azure-arm-postgresql.LogFileListResult>
+  name: LogFileListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -144,6 +145,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-postgresql.LogFileListResult>
+  name: LogFileListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -153,6 +155,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-postgresql.LogFileListResult>>
+  name: LogFileListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

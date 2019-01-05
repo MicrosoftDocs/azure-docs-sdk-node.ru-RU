@@ -1,41 +1,41 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: bde906a0ea61734ac1dda62a51fd9f2c28bf6472
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 145b9df526530694392f6981c6e4c9b6d5f11424
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41695163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52055259"
 items:
 - uid: azure-arm-hdinsight.Applications
   name: Applications
   fullName: Applications
   children:
   - azure-arm-hdinsight.Applications.beginCreate
-  - azure-arm-hdinsight.Applications.beginCreate_1
   - azure-arm-hdinsight.Applications.beginCreate_2
+  - azure-arm-hdinsight.Applications.beginCreate_1
   - azure-arm-hdinsight.Applications.beginCreateWithHttpOperationResponse
   - azure-arm-hdinsight.Applications.beginDeleteMethod
-  - azure-arm-hdinsight.Applications.beginDeleteMethod_1
   - azure-arm-hdinsight.Applications.beginDeleteMethod_2
+  - azure-arm-hdinsight.Applications.beginDeleteMethod_1
   - azure-arm-hdinsight.Applications.beginDeleteMethodWithHttpOperationResponse
   - azure-arm-hdinsight.Applications.create
-  - azure-arm-hdinsight.Applications.create_1
   - azure-arm-hdinsight.Applications.create_2
+  - azure-arm-hdinsight.Applications.create_1
   - azure-arm-hdinsight.Applications.createWithHttpOperationResponse
   - azure-arm-hdinsight.Applications.deleteMethod
-  - azure-arm-hdinsight.Applications.deleteMethod_1
   - azure-arm-hdinsight.Applications.deleteMethod_2
+  - azure-arm-hdinsight.Applications.deleteMethod_1
   - azure-arm-hdinsight.Applications.deleteMethodWithHttpOperationResponse
-  - azure-arm-hdinsight.Applications.get_1
-  - azure-arm-hdinsight.Applications.get_2
   - azure-arm-hdinsight.Applications.get
+  - azure-arm-hdinsight.Applications.get_2
+  - azure-arm-hdinsight.Applications.get_1
   - azure-arm-hdinsight.Applications.getWithHttpOperationResponse
   - azure-arm-hdinsight.Applications.listByCluster
-  - azure-arm-hdinsight.Applications.listByCluster_1
   - azure-arm-hdinsight.Applications.listByCluster_2
+  - azure-arm-hdinsight.Applications.listByCluster_1
   - azure-arm-hdinsight.Applications.listByClusterNext
-  - azure-arm-hdinsight.Applications.listByClusterNext_1
   - azure-arm-hdinsight.Applications.listByClusterNext_2
+  - azure-arm-hdinsight.Applications.listByClusterNext_1
   - azure-arm-hdinsight.Applications.listByClusterNextWithHttpOperationResponse
   - azure-arm-hdinsight.Applications.listByClusterWithHttpOperationResponse
   langs:
@@ -44,14 +44,14 @@ items:
   summary: ''
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.beginCreate
-  name: beginCreate
+  name: beginCreate(string, string, string, Application, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Создает приложения для кластера HDInsight.
   syntax:
-    content: 'function beginCreate(resourceGroupName: string, clusterName: string, applicationName: string, parameters: ApplicationProperties, options?: Object)'
+    content: 'function beginCreate(resourceGroupName: string, clusterName: string, applicationName: string, parameters: Application, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -70,7 +70,7 @@ items:
         Постоянное значение для имени приложения.
     - id: parameters
       type:
-      - azure-arm-hdinsight.ApplicationProperties
+      - azure-arm-hdinsight.Application
       description: >
         Запрос на создание приложения.
     - id: options
@@ -82,49 +82,15 @@ items:
       type:
       - Promise<azure-arm-hdinsight.Application>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.beginCreate_1
-  name: beginCreate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Создает приложения для кластера HDInsight.
-  syntax:
-    content: 'function beginCreate(resourceGroupName: string, clusterName: string, applicationName: string, parameters: ApplicationProperties, callback: ServiceCallback<Application>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: clusterName
-      type:
-      - string
-      description: ''
-    - id: applicationName
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-hdinsight.ApplicationProperties
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-hdinsight.Application>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-hdinsight.Application>
-  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.beginCreate_2
-  name: beginCreate
+  name: beginCreate(string, string, string, Application, Object, ServiceCallback<Application>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Создает приложения для кластера HDInsight.
   syntax:
-    content: 'function beginCreate(resourceGroupName: string, clusterName: string, applicationName: string, parameters: ApplicationProperties, options: Object, callback: ServiceCallback<Application>)'
+    content: 'function beginCreate(resourceGroupName: string, clusterName: string, applicationName: string, parameters: Application, options: Object, callback: ServiceCallback<Application>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -140,7 +106,7 @@ items:
       description: ''
     - id: parameters
       type:
-      - azure-arm-hdinsight.ApplicationProperties
+      - azure-arm-hdinsight.Application
       description: ''
     - id: options
       type:
@@ -154,15 +120,49 @@ items:
       type:
       - Promise<azure-arm-hdinsight.Application>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.beginCreateWithHttpOperationResponse
-  name: beginCreateWithHttpOperationResponse
+- uid: azure-arm-hdinsight.Applications.beginCreate_1
+  name: beginCreate(string, string, string, Application, ServiceCallback<Application>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Создает приложения для кластера HDInsight.
   syntax:
-    content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, clusterName: string, applicationName: string, parameters: ApplicationProperties, options?: Object)'
+    content: 'function beginCreate(resourceGroupName: string, clusterName: string, applicationName: string, parameters: Application, callback: ServiceCallback<Application>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: clusterName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-hdinsight.Application
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-hdinsight.Application>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-hdinsight.Application>
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.Applications.beginCreateWithHttpOperationResponse
+  name: beginCreateWithHttpOperationResponse(string, string, string, Application, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает приложения для кластера HDInsight.
+  syntax:
+    content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, clusterName: string, applicationName: string, parameters: Application, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -181,7 +181,7 @@ items:
         Постоянное значение для имени приложения.
     - id: parameters
       type:
-      - azure-arm-hdinsight.ApplicationProperties
+      - azure-arm-hdinsight.Application
       description: >
         Запрос на создание приложения.
     - id: options
@@ -194,7 +194,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-hdinsight.Application>>
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.beginDeleteMethod
-  name: beginDeleteMethod
+  name: beginDeleteMethod(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -227,38 +227,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.beginDeleteMethod_1
-  name: beginDeleteMethod
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Удаляет указанное приложение в кластере HDInsight.
-  syntax:
-    content: 'function beginDeleteMethod(resourceGroupName: string, clusterName: string, applicationName: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: clusterName
-      type:
-      - string
-      description: ''
-    - id: applicationName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.beginDeleteMethod_2
-  name: beginDeleteMethod
+  name: beginDeleteMethod(string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -291,8 +261,38 @@ items:
       type:
       - Promise<void>
   package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.Applications.beginDeleteMethod_1
+  name: beginDeleteMethod(string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаляет указанное приложение в кластере HDInsight.
+  syntax:
+    content: 'function beginDeleteMethod(resourceGroupName: string, clusterName: string, applicationName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: clusterName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.beginDeleteMethodWithHttpOperationResponse
-  name: beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -326,14 +326,14 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.create
-  name: create
+  name: create(string, string, string, Application, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Создает приложения для кластера HDInsight.
   syntax:
-    content: 'function create(resourceGroupName: string, clusterName: string, applicationName: string, parameters: ApplicationProperties, options?: Object)'
+    content: 'function create(resourceGroupName: string, clusterName: string, applicationName: string, parameters: Application, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -352,7 +352,7 @@ items:
         Постоянное значение для имени приложения.
     - id: parameters
       type:
-      - azure-arm-hdinsight.ApplicationProperties
+      - azure-arm-hdinsight.Application
       description: >
         Запрос на создание приложения.
     - id: options
@@ -364,49 +364,15 @@ items:
       type:
       - Promise<azure-arm-hdinsight.Application>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.create_1
-  name: create
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Создает приложения для кластера HDInsight.
-  syntax:
-    content: 'function create(resourceGroupName: string, clusterName: string, applicationName: string, parameters: ApplicationProperties, callback: ServiceCallback<Application>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: clusterName
-      type:
-      - string
-      description: ''
-    - id: applicationName
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-hdinsight.ApplicationProperties
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-hdinsight.Application>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-hdinsight.Application>
-  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.create_2
-  name: create
+  name: create(string, string, string, Application, Object, ServiceCallback<Application>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Создает приложения для кластера HDInsight.
   syntax:
-    content: 'function create(resourceGroupName: string, clusterName: string, applicationName: string, parameters: ApplicationProperties, options: Object, callback: ServiceCallback<Application>)'
+    content: 'function create(resourceGroupName: string, clusterName: string, applicationName: string, parameters: Application, options: Object, callback: ServiceCallback<Application>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -422,7 +388,7 @@ items:
       description: ''
     - id: parameters
       type:
-      - azure-arm-hdinsight.ApplicationProperties
+      - azure-arm-hdinsight.Application
       description: ''
     - id: options
       type:
@@ -436,15 +402,49 @@ items:
       type:
       - Promise<azure-arm-hdinsight.Application>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.createWithHttpOperationResponse
-  name: createWithHttpOperationResponse
+- uid: azure-arm-hdinsight.Applications.create_1
+  name: create(string, string, string, Application, ServiceCallback<Application>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Создает приложения для кластера HDInsight.
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, clusterName: string, applicationName: string, parameters: ApplicationProperties, options?: Object)'
+    content: 'function create(resourceGroupName: string, clusterName: string, applicationName: string, parameters: Application, callback: ServiceCallback<Application>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: clusterName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-hdinsight.Application
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-hdinsight.Application>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-hdinsight.Application>
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.Applications.createWithHttpOperationResponse
+  name: createWithHttpOperationResponse(string, string, string, Application, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает приложения для кластера HDInsight.
+  syntax:
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, clusterName: string, applicationName: string, parameters: Application, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -463,7 +463,7 @@ items:
         Постоянное значение для имени приложения.
     - id: parameters
       type:
-      - azure-arm-hdinsight.ApplicationProperties
+      - azure-arm-hdinsight.Application
       description: >
         Запрос на создание приложения.
     - id: options
@@ -476,7 +476,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-hdinsight.Application>>
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -509,38 +509,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.deleteMethod_1
-  name: deleteMethod
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Удаляет указанное приложение в кластере HDInsight.
-  syntax:
-    content: 'function deleteMethod(resourceGroupName: string, clusterName: string, applicationName: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: clusterName
-      type:
-      - string
-      description: ''
-    - id: applicationName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -573,8 +543,38 @@ items:
       type:
       - Promise<void>
   package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.Applications.deleteMethod_1
+  name: deleteMethod(string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаляет указанное приложение в кластере HDInsight.
+  syntax:
+    content: 'function deleteMethod(resourceGroupName: string, clusterName: string, applicationName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: clusterName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -607,72 +607,8 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает свойства указанного приложения.
-  syntax:
-    content: 'function get(resourceGroupName: string, clusterName: string, applicationName: string, callback: ServiceCallback<Application>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: clusterName
-      type:
-      - string
-      description: ''
-    - id: applicationName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-hdinsight.Application>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-hdinsight.Application>
-  package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.get_2
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает свойства указанного приложения.
-  syntax:
-    content: 'function get(resourceGroupName: string, clusterName: string, applicationName: string, options: Object, callback: ServiceCallback<Application>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: clusterName
-      type:
-      - string
-      description: ''
-    - id: applicationName
-      type:
-      - string
-      description: ''
-    - id: options
-      type:
-      - Object
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-hdinsight.Application>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-hdinsight.Application>
-  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -705,8 +641,72 @@ items:
       type:
       - Promise<azure-arm-hdinsight.Application>
   package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.Applications.get_2
+  name: get(string, string, string, Object, ServiceCallback<Application>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает свойства указанного приложения.
+  syntax:
+    content: 'function get(resourceGroupName: string, clusterName: string, applicationName: string, options: Object, callback: ServiceCallback<Application>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: clusterName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-hdinsight.Application>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-hdinsight.Application>
+  package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.Applications.get_1
+  name: get(string, string, string, ServiceCallback<Application>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает свойства указанного приложения.
+  syntax:
+    content: 'function get(resourceGroupName: string, clusterName: string, applicationName: string, callback: ServiceCallback<Application>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: clusterName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-hdinsight.Application>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-hdinsight.Application>
+  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -740,7 +740,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-hdinsight.Application>>
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.listByCluster
-  name: listByCluster
+  name: listByCluster(string, string, Object)
   children: []
   type: method
   langs:
@@ -768,34 +768,8 @@ items:
       type:
       - Promise<azure-arm-hdinsight.ApplicationListResult>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.listByCluster_1
-  name: listByCluster
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список всех приложений, для кластера HDInsight.
-  syntax:
-    content: 'function listByCluster(resourceGroupName: string, clusterName: string, callback: ServiceCallback<ApplicationListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: clusterName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-hdinsight.ApplicationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-hdinsight.ApplicationListResult>
-  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.listByCluster_2
-  name: listByCluster
+  name: listByCluster(string, string, Object, ServiceCallback<ApplicationListResult>)
   children: []
   type: method
   langs:
@@ -824,8 +798,34 @@ items:
       type:
       - Promise<azure-arm-hdinsight.ApplicationListResult>
   package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.Applications.listByCluster_1
+  name: listByCluster(string, string, ServiceCallback<ApplicationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список всех приложений, для кластера HDInsight.
+  syntax:
+    content: 'function listByCluster(resourceGroupName: string, clusterName: string, callback: ServiceCallback<ApplicationListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: clusterName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-hdinsight.ApplicationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-hdinsight.ApplicationListResult>
+  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.listByClusterNext
-  name: listByClusterNext
+  name: listByClusterNext(string, Object)
   children: []
   type: method
   langs:
@@ -848,30 +848,8 @@ items:
       type:
       - Promise<azure-arm-hdinsight.ApplicationListResult>
   package: azure-arm-hdinsight
-- uid: azure-arm-hdinsight.Applications.listByClusterNext_1
-  name: listByClusterNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список всех приложений, для кластера HDInsight.
-  syntax:
-    content: 'function listByClusterNext(nextPageLink: string, callback: ServiceCallback<ApplicationListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-hdinsight.ApplicationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-hdinsight.ApplicationListResult>
-  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.listByClusterNext_2
-  name: listByClusterNext
+  name: listByClusterNext(string, Object, ServiceCallback<ApplicationListResult>)
   children: []
   type: method
   langs:
@@ -896,8 +874,30 @@ items:
       type:
       - Promise<azure-arm-hdinsight.ApplicationListResult>
   package: azure-arm-hdinsight
+- uid: azure-arm-hdinsight.Applications.listByClusterNext_1
+  name: listByClusterNext(string, ServiceCallback<ApplicationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список всех приложений, для кластера HDInsight.
+  syntax:
+    content: 'function listByClusterNext(nextPageLink: string, callback: ServiceCallback<ApplicationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-hdinsight.ApplicationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-hdinsight.ApplicationListResult>
+  package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.listByClusterNextWithHttpOperationResponse
-  name: listByClusterNextWithHttpOperationResponse
+  name: listByClusterNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -921,7 +921,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-hdinsight.ApplicationListResult>>
   package: azure-arm-hdinsight
 - uid: azure-arm-hdinsight.Applications.listByClusterWithHttpOperationResponse
-  name: listByClusterWithHttpOperationResponse
+  name: listByClusterWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -950,12 +950,14 @@ items:
       - Promise<HttpOperationResponse<azure-arm-hdinsight.ApplicationListResult>>
   package: azure-arm-hdinsight
 references:
-- uid: azure-arm-hdinsight.ApplicationProperties
+- uid: azure-arm-hdinsight.Application
+  name: Application
   spec.typeScript:
-  - name: ApplicationProperties
-    fullName: ApplicationProperties
-    uid: azure-arm-hdinsight.ApplicationProperties
+  - name: Application
+    fullName: Application
+    uid: azure-arm-hdinsight.Application
 - uid: Promise<azure-arm-hdinsight.Application>
+  name: Application>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -965,6 +967,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-hdinsight.Application>
+  name: Application>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -974,6 +977,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-hdinsight.Application>>
+  name: Application>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -983,6 +987,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-hdinsight.ApplicationListResult>
+  name: ApplicationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -992,6 +997,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-hdinsight.ApplicationListResult>
+  name: ApplicationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1001,6 +1007,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-hdinsight.ApplicationListResult>>
+  name: ApplicationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

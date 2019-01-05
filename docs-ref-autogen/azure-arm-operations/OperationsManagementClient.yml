@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 79b71f5909f1cab40f278b36af15f313708eecda
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: eabb70b86b91b5de78ace26f85cd4575c88a31cd
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41694552"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52063929"
 items:
 - uid: azure-arm-operations.OperationsManagementClient
   name: OperationsManagementClient
@@ -15,9 +15,13 @@ items:
   - azure-arm-operations.OperationsManagementClient.credentials
   - azure-arm-operations.OperationsManagementClient.generateClientRequestId
   - azure-arm-operations.OperationsManagementClient.longRunningOperationRetryTimeout
+  - azure-arm-operations.OperationsManagementClient.managementAssociations
+  - azure-arm-operations.OperationsManagementClient.managementConfigurations
   - azure-arm-operations.OperationsManagementClient.operations
   - azure-arm-operations.OperationsManagementClient.constructor
-  - azure-arm-operations.OperationsManagementClient.solutionName
+  - azure-arm-operations.OperationsManagementClient.providerName
+  - azure-arm-operations.OperationsManagementClient.resourceName
+  - azure-arm-operations.OperationsManagementClient.resourceType
   - azure-arm-operations.OperationsManagementClient.solutions
   - azure-arm-operations.OperationsManagementClient.subscriptionId
   langs:
@@ -97,6 +101,34 @@ items:
       type:
       - number
   package: azure-arm-operations
+- uid: azure-arm-operations.OperationsManagementClient.managementAssociations
+  name: managementAssociations
+  fullName: managementAssociations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'managementAssociations: ManagementAssociations'
+    return:
+      type:
+      - azure-arm-operations.ManagementAssociations
+  package: azure-arm-operations
+- uid: azure-arm-operations.OperationsManagementClient.managementConfigurations
+  name: managementConfigurations
+  fullName: managementConfigurations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'managementConfigurations: ManagementConfigurations'
+    return:
+      type:
+      - azure-arm-operations.ManagementConfigurations
+  package: azure-arm-operations
 - uid: azure-arm-operations.OperationsManagementClient.operations
   name: operations
   fullName: operations
@@ -112,14 +144,14 @@ items:
       - azure-arm-operations.Operations
   package: azure-arm-operations
 - uid: azure-arm-operations.OperationsManagementClient.constructor
-  name: OperationsManagementClient
+  name: OperationsManagementClient(ServiceClientCredentials, string, string, string, string, string, AzureServiceClientOptions)
   children: []
   type: constructor
   langs:
   - typeScript
   summary: Инициализирует новый экземпляр класса OperationsManagementClient.
   syntax:
-    content: 'new OperationsManagementClient(credentials: ServiceClientCredentials, subscriptionId: string, solutionName: string, baseUri?: string, options?: AzureServiceClientOptions)'
+    content: 'new OperationsManagementClient(credentials: ServiceClientCredentials, subscriptionId: string, providerName: string, resourceType: string, resourceName: string, baseUri?: string, options?: AzureServiceClientOptions)'
     parameters:
     - id: credentials
       type:
@@ -131,11 +163,21 @@ items:
       - string
       description: >
         Получает учетные данные подписки, которые однозначно идентифицируют подписку Microsoft Azure. Идентификатор подписки формирует часть URI для каждого вызова службы.
-    - id: solutionName
+    - id: providerName
       type:
       - string
       description: >
-        Имя решения пользователя.
+        Имя поставщика к родительскому ресурсу.
+    - id: resourceType
+      type:
+      - string
+      description: >
+        Тип ресурса, к родительскому ресурсу
+    - id: resourceName
+      type:
+      - string
+      description: >
+        Имя родительского ресурса.
     - id: baseUri
       type:
       - string
@@ -147,16 +189,44 @@ items:
       description: ''
       optional: true
   package: azure-arm-operations
-- uid: azure-arm-operations.OperationsManagementClient.solutionName
-  name: solutionName
-  fullName: solutionName
+- uid: azure-arm-operations.OperationsManagementClient.providerName
+  name: providerName
+  fullName: providerName
   children: []
   langs:
   - typeScript
   type: property
   summary: ''
   syntax:
-    content: 'solutionName: string'
+    content: 'providerName: string'
+    return:
+      type:
+      - string
+  package: azure-arm-operations
+- uid: azure-arm-operations.OperationsManagementClient.resourceName
+  name: resourceName
+  fullName: resourceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'resourceName: string'
+    return:
+      type:
+      - string
+  package: azure-arm-operations
+- uid: azure-arm-operations.OperationsManagementClient.resourceType
+  name: resourceType
+  fullName: resourceType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'resourceType: string'
     return:
       type:
       - string
@@ -190,12 +260,26 @@ items:
       - string
   package: azure-arm-operations
 references:
+- uid: azure-arm-operations.ManagementAssociations
+  name: ManagementAssociations
+  spec.typeScript:
+  - name: ManagementAssociations
+    fullName: ManagementAssociations
+    uid: azure-arm-operations.ManagementAssociations
+- uid: azure-arm-operations.ManagementConfigurations
+  name: ManagementConfigurations
+  spec.typeScript:
+  - name: ManagementConfigurations
+    fullName: ManagementConfigurations
+    uid: azure-arm-operations.ManagementConfigurations
 - uid: azure-arm-operations.Operations
+  name: Operations
   spec.typeScript:
   - name: Operations
     fullName: Operations
     uid: azure-arm-operations.Operations
 - uid: azure-arm-operations.Solutions
+  name: Solutions
   spec.typeScript:
   - name: Solutions
     fullName: Solutions

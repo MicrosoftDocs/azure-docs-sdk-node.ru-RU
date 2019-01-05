@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 344409e66863c322e5c8c48ee638239da4850bac
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52061089"
+items:
+- uid: azure-servicefabric.ReplicaEvent
+  name: ReplicaEvent
+  fullName: ReplicaEvent
+  children:
+  - azure-servicefabric.ReplicaEvent.partitionId
+  - azure-servicefabric.ReplicaEvent.replicaId
+  langs:
+  - typeScript
+  type: interface
+  summary: Представляет базовый класс для всех событий реплики.
+  extends:
+    name: azure-servicefabric.FabricEvent
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaEvent.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Внутренний идентификатор, используемый Service Fabric для уникальной идентификации секции. Это произвольно созданным GUID, если служба была создана. Идентификатор секции уникален и не изменяется в течение времени существования службы. Если же служба удалена и создана повторно идентификаторы секций будет отличаться.
+  syntax:
+    content: 'partitionId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaEvent.replicaId
+  name: replicaId
+  fullName: replicaId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Идентификатор реплики службы с отслеживанием состояния. ReplicaId используется Service Fabric для уникальной идентификации реплику секции. Он уникален в пределах секции и остается неизменным в течение жизненного цикла реплики. Если другая реплика создается на том же узле, для одной секции, удалении реплики, получите другое значение для идентификатора. Иногда идентификатор экземпляра службы без отслеживания состояния также называется идентификатором реплики.
+  syntax:
+    content: 'replicaId: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.FabricEvent
+  name: FabricEvent
+  spec.typeScript:
+  - name: FabricEvent
+    fullName: FabricEvent
+    uid: azure-servicefabric.FabricEvent

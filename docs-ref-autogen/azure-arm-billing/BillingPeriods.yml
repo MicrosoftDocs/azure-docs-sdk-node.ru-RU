@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 04575f7c292e08bd23ee51430edfd1c7587b38a5
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: f2ec5570dcc03310c199df3e7a1b48cc54744ede
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41700257"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52041179"
 items:
 - uid: azure-arm-billing.BillingPeriods
   name: BillingPeriods
@@ -15,11 +15,11 @@ items:
   - azure-arm-billing.BillingPeriods.get_1
   - azure-arm-billing.BillingPeriods.getWithHttpOperationResponse
   - azure-arm-billing.BillingPeriods.list
-  - azure-arm-billing.BillingPeriods.list_1
   - azure-arm-billing.BillingPeriods.list_2
+  - azure-arm-billing.BillingPeriods.list_1
   - azure-arm-billing.BillingPeriods.listNext
-  - azure-arm-billing.BillingPeriods.listNext_1
   - azure-arm-billing.BillingPeriods.listNext_2
+  - azure-arm-billing.BillingPeriods.listNext_1
   - azure-arm-billing.BillingPeriods.listNextWithHttpOperationResponse
   - azure-arm-billing.BillingPeriods.listWithHttpOperationResponse
   langs:
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.get
-  name: get
+  name: get(string, Object)
   children: []
   type: method
   langs:
@@ -52,7 +52,7 @@ items:
       - Promise<azure-arm-billing.BillingPeriod>
   package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.get_2
-  name: get
+  name: get(string, Object, ServiceCallback<BillingPeriod>)
   children: []
   type: method
   langs:
@@ -78,7 +78,7 @@ items:
       - Promise<azure-arm-billing.BillingPeriod>
   package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.get_1
-  name: get
+  name: get(string, ServiceCallback<BillingPeriod>)
   children: []
   type: method
   langs:
@@ -100,7 +100,7 @@ items:
       - Promise<azure-arm-billing.BillingPeriod>
   package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -124,7 +124,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-billing.BillingPeriod>>
   package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -142,26 +142,8 @@ items:
       type:
       - Promise<azure-arm-billing.BillingPeriodsListResult>
   package: azure-arm-billing
-- uid: azure-arm-billing.BillingPeriods.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список доступных интервалов выставления счетов для подписки в обратном хронологическом порядке. Поддерживается только для подписок Azure Web Direct. Других типов подписки, которые не были приобретены непосредственно через веб-портал Azure не поддерживаются в этой предварительной версии API.
-  syntax:
-    content: 'function list(callback: ServiceCallback<BillingPeriodsListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-billing.BillingPeriodsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-billing.BillingPeriodsListResult>
-  package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.list_2
-  name: list
+  name: list(Object, ServiceCallback<BillingPeriodsListResult>)
   children: []
   type: method
   langs:
@@ -182,8 +164,26 @@ items:
       type:
       - Promise<azure-arm-billing.BillingPeriodsListResult>
   package: azure-arm-billing
+- uid: azure-arm-billing.BillingPeriods.list_1
+  name: list(ServiceCallback<BillingPeriodsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список доступных интервалов выставления счетов для подписки в обратном хронологическом порядке. Поддерживается только для подписок Azure Web Direct. Других типов подписки, которые не были приобретены непосредственно через веб-портал Azure не поддерживаются в этой предварительной версии API.
+  syntax:
+    content: 'function list(callback: ServiceCallback<BillingPeriodsListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-billing.BillingPeriodsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-billing.BillingPeriodsListResult>
+  package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -206,30 +206,8 @@ items:
       type:
       - Promise<azure-arm-billing.BillingPeriodsListResult>
   package: azure-arm-billing
-- uid: azure-arm-billing.BillingPeriods.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список доступных интервалов выставления счетов для подписки в обратном хронологическом порядке. Поддерживается только для подписок Azure Web Direct. Других типов подписки, которые не были приобретены непосредственно через веб-портал Azure не поддерживаются в этой предварительной версии API.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<BillingPeriodsListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-billing.BillingPeriodsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-billing.BillingPeriodsListResult>
-  package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<BillingPeriodsListResult>)
   children: []
   type: method
   langs:
@@ -254,8 +232,30 @@ items:
       type:
       - Promise<azure-arm-billing.BillingPeriodsListResult>
   package: azure-arm-billing
+- uid: azure-arm-billing.BillingPeriods.listNext_1
+  name: listNext(string, ServiceCallback<BillingPeriodsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список доступных интервалов выставления счетов для подписки в обратном хронологическом порядке. Поддерживается только для подписок Azure Web Direct. Других типов подписки, которые не были приобретены непосредственно через веб-портал Azure не поддерживаются в этой предварительной версии API.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<BillingPeriodsListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-billing.BillingPeriodsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-billing.BillingPeriodsListResult>
+  package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -279,7 +279,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-billing.BillingPeriodsListResult>>
   package: azure-arm-billing
 - uid: azure-arm-billing.BillingPeriods.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -299,6 +299,7 @@ items:
   package: azure-arm-billing
 references:
 - uid: Promise<azure-arm-billing.BillingPeriod>
+  name: BillingPeriod>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -308,6 +309,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-billing.BillingPeriod>
+  name: BillingPeriod>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -317,6 +319,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-billing.BillingPeriod>>
+  name: BillingPeriod>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -326,6 +329,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-billing.BillingPeriodsListResult>
+  name: BillingPeriodsListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -335,6 +339,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-billing.BillingPeriodsListResult>
+  name: BillingPeriodsListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -344,6 +349,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-billing.BillingPeriodsListResult>>
+  name: BillingPeriodsListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

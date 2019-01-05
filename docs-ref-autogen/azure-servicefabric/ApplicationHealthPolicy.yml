@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b2ee765fa98421c66723698c9cbacdc36e969888
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52042619"
+items:
+- uid: azure-servicefabric.ApplicationHealthPolicy
+  name: ApplicationHealthPolicy
+  fullName: ApplicationHealthPolicy
+  children:
+  - azure-servicefabric.ApplicationHealthPolicy.considerWarningAsError
+  - azure-servicefabric.ApplicationHealthPolicy.defaultServiceTypeHealthPolicy
+  - azure-servicefabric.ApplicationHealthPolicy.maxPercentUnhealthyDeployedApplications
+  - azure-servicefabric.ApplicationHealthPolicy.serviceTypeHealthPolicyMap
+  langs:
+  - typeScript
+  type: interface
+  summary: Определяет политику работоспособности, используемые для оценки работоспособности приложения или одного из его дочерних сущностей.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthPolicy.considerWarningAsError
+  name: considerWarningAsError
+  fullName: considerWarningAsError
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Указывает, учитываются ли предупреждения с той же степенью серьезности, что и ошибки.
+  optional: true
+  syntax:
+    content: 'considerWarningAsError?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthPolicy.defaultServiceTypeHealthPolicy
+  name: defaultServiceTypeHealthPolicy
+  fullName: defaultServiceTypeHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Политики работоспособности, используемые по умолчанию для оценки работоспособности типа службы.
+  optional: true
+  syntax:
+    content: 'defaultServiceTypeHealthPolicy?: ServiceTypeHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ServiceTypeHealthPolicy
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthPolicy.maxPercentUnhealthyDeployedApplications
+  name: maxPercentUnhealthyDeployedApplications
+  fullName: maxPercentUnhealthyDeployedApplications
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Максимальный допустимый процент неработоспособных развернутых приложений. Допустимые значения: байтовых значений от 0 до 100.
+
+    Процент представляет максимальный процент неработоспособных развернутых приложений, которые могут быть признаны неработоспособными, прежде чем error при оценке приложения.
+
+    Это значение вычисляется путем деления числа неработоспособных развернутых приложений на количество узлов, где приложение в настоящее время развертывается на в кластере.
+
+    Расчет округляется: на небольшом количестве узлов допускается один сбой. Значение в процентах по умолчанию равняется нулю.
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyDeployedApplications?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ApplicationHealthPolicy.serviceTypeHealthPolicyMap
+  name: serviceTypeHealthPolicyMap
+  fullName: serviceTypeHealthPolicyMap
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Сопоставление политик работоспособности типа службы для имени типа службы. Сопоставление является пустым по умолчанию.
+  optional: true
+  syntax:
+    content: 'serviceTypeHealthPolicyMap?: ServiceTypeHealthPolicyMapItem[]'
+    return:
+      type:
+      - azure-servicefabric.ServiceTypeHealthPolicyMapItem[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServiceTypeHealthPolicy
+  name: ServiceTypeHealthPolicy
+  spec.typeScript:
+  - name: ServiceTypeHealthPolicy
+    fullName: ServiceTypeHealthPolicy
+    uid: azure-servicefabric.ServiceTypeHealthPolicy
+- uid: azure-servicefabric.ServiceTypeHealthPolicyMapItem[]
+  name: ServiceTypeHealthPolicyMapItem[]
+  spec.typeScript:
+  - name: ServiceTypeHealthPolicyMapItem
+    fullName: ServiceTypeHealthPolicyMapItem
+    uid: azure-servicefabric.ServiceTypeHealthPolicyMapItem
+  - name: '[]'
+    fullName: '[]'
