@@ -1,37 +1,37 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 0175ae573a7f8ada49531a7baf7192077f8b40ca
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: c4623f3af5c4af5aef5fffe2267dfd837cb1ced3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41695803"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52050889"
 items:
 - uid: azure-arm-resource.Tags
   name: Tags
   fullName: Tags
   children:
   - azure-arm-resource.Tags.createOrUpdate
-  - azure-arm-resource.Tags.createOrUpdate_1
   - azure-arm-resource.Tags.createOrUpdate_2
-  - azure-arm-resource.Tags.createOrUpdateValue_1
-  - azure-arm-resource.Tags.createOrUpdateValue_2
+  - azure-arm-resource.Tags.createOrUpdate_1
   - azure-arm-resource.Tags.createOrUpdateValue
+  - azure-arm-resource.Tags.createOrUpdateValue_2
+  - azure-arm-resource.Tags.createOrUpdateValue_1
   - azure-arm-resource.Tags.createOrUpdateValueWithHttpOperationResponse
   - azure-arm-resource.Tags.createOrUpdateWithHttpOperationResponse
   - azure-arm-resource.Tags.deleteMethod
-  - azure-arm-resource.Tags.deleteMethod_1
   - azure-arm-resource.Tags.deleteMethod_2
+  - azure-arm-resource.Tags.deleteMethod_1
   - azure-arm-resource.Tags.deleteMethodWithHttpOperationResponse
   - azure-arm-resource.Tags.deleteValue
-  - azure-arm-resource.Tags.deleteValue_1
   - azure-arm-resource.Tags.deleteValue_2
+  - azure-arm-resource.Tags.deleteValue_1
   - azure-arm-resource.Tags.deleteValueWithHttpOperationResponse
   - azure-arm-resource.Tags.list
-  - azure-arm-resource.Tags.list_1
   - azure-arm-resource.Tags.list_2
+  - azure-arm-resource.Tags.list_1
   - azure-arm-resource.Tags.listNext
-  - azure-arm-resource.Tags.listNext_1
   - azure-arm-resource.Tags.listNext_2
+  - azure-arm-resource.Tags.listNext_1
   - azure-arm-resource.Tags.listNextWithHttpOperationResponse
   - azure-arm-resource.Tags.listWithHttpOperationResponse
   langs:
@@ -40,7 +40,7 @@ items:
   summary: ''
   package: azure-arm-resource
 - uid: azure-arm-resource.Tags.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, Object)
   children: []
   type: method
   langs:
@@ -63,30 +63,8 @@ items:
       type:
       - Promise<azure-arm-resource.TagDetails>
   package: azure-arm-resource
-- uid: azure-arm-resource.Tags.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function createOrUpdate(tagName: string, callback: ServiceCallback<TagDetails>)'
-    parameters:
-    - id: tagName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.TagDetails>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.TagDetails>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, Object, ServiceCallback<TagDetails>)
   children: []
   type: method
   langs:
@@ -111,34 +89,59 @@ items:
       type:
       - Promise<azure-arm-resource.TagDetails>
   package: azure-arm-resource
-- uid: azure-arm-resource.Tags.createOrUpdateValue_1
-  name: createOrUpdateValue
+- uid: azure-arm-resource.Tags.createOrUpdate_1
+  name: createOrUpdate(string, ServiceCallback<TagDetails>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function createOrUpdate(tagName: string, callback: ServiceCallback<TagDetails>)'
+    parameters:
+    - id: tagName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.TagDetails>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.TagDetails>
+  package: azure-arm-resource
+- uid: azure-arm-resource.Tags.createOrUpdateValue
+  name: createOrUpdateValue(string, string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Создает значение тега. Имя тега уже должна существовать.
   syntax:
-    content: 'function createOrUpdateValue(tagName: string, tagValue: string, callback: ServiceCallback<TagValue>)'
+    content: 'function createOrUpdateValue(tagName: string, tagValue: string, options?: Object)'
     parameters:
     - id: tagName
       type:
       - string
-      description: ''
+      description: >
+        Имя тега.
     - id: tagValue
       type:
       - string
-      description: ''
-    - id: callback
+      description: >
+        Значение тега для создания.
+    - id: options
       type:
-      - ServiceCallback<azure-arm-resource.TagValue>
+      - Object
       description: ''
+      optional: true
     return:
       type:
       - Promise<azure-arm-resource.TagValue>
   package: azure-arm-resource
 - uid: azure-arm-resource.Tags.createOrUpdateValue_2
-  name: createOrUpdateValue
+  name: createOrUpdateValue(string, string, Object, ServiceCallback<TagValue>)
   children: []
   type: method
   langs:
@@ -167,37 +170,34 @@ items:
       type:
       - Promise<azure-arm-resource.TagValue>
   package: azure-arm-resource
-- uid: azure-arm-resource.Tags.createOrUpdateValue
-  name: createOrUpdateValue
+- uid: azure-arm-resource.Tags.createOrUpdateValue_1
+  name: createOrUpdateValue(string, string, ServiceCallback<TagValue>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Создает значение тега. Имя тега уже должна существовать.
   syntax:
-    content: 'function createOrUpdateValue(tagName: string, tagValue: string, options?: Object)'
+    content: 'function createOrUpdateValue(tagName: string, tagValue: string, callback: ServiceCallback<TagValue>)'
     parameters:
     - id: tagName
       type:
       - string
-      description: >
-        Имя тега.
+      description: ''
     - id: tagValue
       type:
       - string
-      description: >
-        Значение тега для создания.
-    - id: options
-      type:
-      - Object
       description: ''
-      optional: true
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.TagValue>
+      description: ''
     return:
       type:
       - Promise<azure-arm-resource.TagValue>
   package: azure-arm-resource
 - uid: azure-arm-resource.Tags.createOrUpdateValueWithHttpOperationResponse
-  name: createOrUpdateValueWithHttpOperationResponse
+  name: createOrUpdateValueWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -226,7 +226,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.TagValue>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Tags.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -250,7 +250,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.TagDetails>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Tags.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, Object)
   children: []
   type: method
   langs:
@@ -273,30 +273,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-resource
-- uid: azure-arm-resource.Tags.deleteMethod_1
-  name: deleteMethod
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function deleteMethod(tagName: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: tagName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -321,8 +299,30 @@ items:
       type:
       - Promise<void>
   package: azure-arm-resource
+- uid: azure-arm-resource.Tags.deleteMethod_1
+  name: deleteMethod(string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function deleteMethod(tagName: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: tagName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -346,7 +346,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Tags.deleteValue
-  name: deleteValue
+  name: deleteValue(string, string, Object)
   children: []
   type: method
   langs:
@@ -374,34 +374,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-resource
-- uid: azure-arm-resource.Tags.deleteValue_1
-  name: deleteValue
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Удаляет значение тега.
-  syntax:
-    content: 'function deleteValue(tagName: string, tagValue: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: tagName
-      type:
-      - string
-      description: ''
-    - id: tagValue
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.deleteValue_2
-  name: deleteValue
+  name: deleteValue(string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -430,8 +404,34 @@ items:
       type:
       - Promise<void>
   package: azure-arm-resource
+- uid: azure-arm-resource.Tags.deleteValue_1
+  name: deleteValue(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаляет значение тега.
+  syntax:
+    content: 'function deleteValue(tagName: string, tagValue: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: tagName
+      type:
+      - string
+      description: ''
+    - id: tagValue
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.deleteValueWithHttpOperationResponse
-  name: deleteValueWithHttpOperationResponse
+  name: deleteValueWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -460,7 +460,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Tags.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -478,26 +478,8 @@ items:
       type:
       - Promise<azure-arm-resource.TagsListResult>
   package: azure-arm-resource
-- uid: azure-arm-resource.Tags.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает имена и значения всех тегов ресурсов, которые определены в подписке.
-  syntax:
-    content: 'function list(callback: ServiceCallback<TagsListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.TagsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.TagsListResult>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.list_2
-  name: list
+  name: list(Object, ServiceCallback<TagsListResult>)
   children: []
   type: method
   langs:
@@ -518,8 +500,26 @@ items:
       type:
       - Promise<azure-arm-resource.TagsListResult>
   package: azure-arm-resource
+- uid: azure-arm-resource.Tags.list_1
+  name: list(ServiceCallback<TagsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает имена и значения всех тегов ресурсов, которые определены в подписке.
+  syntax:
+    content: 'function list(callback: ServiceCallback<TagsListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.TagsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.TagsListResult>
+  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -542,30 +542,8 @@ items:
       type:
       - Promise<azure-arm-resource.TagsListResult>
   package: azure-arm-resource
-- uid: azure-arm-resource.Tags.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает имена и значения всех тегов ресурсов, которые определены в подписке.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<TagsListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.TagsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.TagsListResult>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<TagsListResult>)
   children: []
   type: method
   langs:
@@ -590,8 +568,30 @@ items:
       type:
       - Promise<azure-arm-resource.TagsListResult>
   package: azure-arm-resource
+- uid: azure-arm-resource.Tags.listNext_1
+  name: listNext(string, ServiceCallback<TagsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает имена и значения всех тегов ресурсов, которые определены в подписке.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<TagsListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.TagsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.TagsListResult>
+  package: azure-arm-resource
 - uid: azure-arm-resource.Tags.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -615,7 +615,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.TagsListResult>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Tags.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -635,6 +635,7 @@ items:
   package: azure-arm-resource
 references:
 - uid: Promise<azure-arm-resource.TagDetails>
+  name: TagDetails>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -644,6 +645,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-resource.TagDetails>
+  name: TagDetails>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -653,6 +655,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<azure-arm-resource.TagValue>
+  name: TagValue>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -662,6 +665,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-resource.TagValue>
+  name: TagValue>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -671,6 +675,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-resource.TagValue>>
+  name: TagValue>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -680,6 +685,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<HttpOperationResponse<azure-arm-resource.TagDetails>>
+  name: TagDetails>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -689,6 +695,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-resource.TagsListResult>
+  name: TagsListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -698,6 +705,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-resource.TagsListResult>
+  name: TagsListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -707,6 +715,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-resource.TagsListResult>>
+  name: TagsListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 13cc7990a40bb6e1bf165ff4dfa5a45b88f82a93
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 1537cf261acb154cf0050091c8e74ccfa48d547f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41614292"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52067775"
 items:
 - uid: azure-arm-cosmosdb.DatabaseAccountRegion
   name: DatabaseAccountRegion
   fullName: DatabaseAccountRegion
   children:
   - azure-arm-cosmosdb.DatabaseAccountRegion.listMetrics
-  - azure-arm-cosmosdb.DatabaseAccountRegion.listMetrics_1
   - azure-arm-cosmosdb.DatabaseAccountRegion.listMetrics_2
+  - azure-arm-cosmosdb.DatabaseAccountRegion.listMetrics_1
   - azure-arm-cosmosdb.DatabaseAccountRegion.listMetricsWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.DatabaseAccountRegion.listMetrics
-  name: listMetrics
+  name: listMetrics(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -58,42 +58,8 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.MetricListResult>
   package: azure-arm-cosmosdb
-- uid: azure-arm-cosmosdb.DatabaseAccountRegion.listMetrics_1
-  name: listMetrics
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает метрики, определяется заданным фильтром для заданной базы данных учетной записи и региона.
-  syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, filter: string, callback: ServiceCallback<MetricListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: accountName
-      type:
-      - string
-      description: ''
-    - id: region
-      type:
-      - string
-      description: ''
-    - id: filter
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cosmosdb.MetricListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cosmosdb.MetricListResult>
-  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.DatabaseAccountRegion.listMetrics_2
-  name: listMetrics
+  name: listMetrics(string, string, string, string, Object, ServiceCallback<MetricListResult>)
   children: []
   type: method
   langs:
@@ -130,8 +96,42 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.MetricListResult>
   package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.DatabaseAccountRegion.listMetrics_1
+  name: listMetrics(string, string, string, string, ServiceCallback<MetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает метрики, определяется заданным фильтром для заданной базы данных учетной записи и региона.
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, region: string, filter: string, callback: ServiceCallback<MetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: region
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.MetricListResult>
+  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.DatabaseAccountRegion.listMetricsWithHttpOperationResponse
-  name: listMetricsWithHttpOperationResponse
+  name: listMetricsWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -171,6 +171,7 @@ items:
   package: azure-arm-cosmosdb
 references:
 - uid: Promise<azure-arm-cosmosdb.MetricListResult>
+  name: MetricListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -180,6 +181,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+  name: MetricListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -189,6 +191,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricListResult>>
+  name: MetricListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

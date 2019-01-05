@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 0f2a6b3bfdc142a8ed66f1b9140bfeaca0cbf8ac
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: c498376468484e0299280e5468ad24cdafd77fdd
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41547245"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53675013"
 items:
 - uid: azure-iothub.Twin
   name: Twin
@@ -12,12 +12,14 @@ items:
   children:
   - azure-iothub.Twin.deviceId
   - azure-iothub.Twin.etag
+  - azure-iothub.Twin.get_1
   - azure-iothub.Twin.get
   - azure-iothub.Twin.moduleId
   - azure-iothub.Twin.properties
   - azure-iothub.Twin.tags
   - azure-iothub.Twin.toJSON
   - azure-iothub.Twin.constructor
+  - azure-iothub.Twin.update_1
   - azure-iothub.Twin.update
   langs:
   - typeScript
@@ -65,21 +67,34 @@ items:
       type:
       - string
   package: azure-iothub
-- uid: azure-iothub.Twin.get
-  name: get
+- uid: azure-iothub.Twin.get_1
+  name: get()
   children: []
   type: method
   langs:
   - typeScript
   summary: Возвращает последнюю версию этого двойника устройства из службы центра Интернета вещей.
   syntax:
-    content: 'function get(done: Callback<Twin>)'
+    content: function get()
+    parameters: []
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin>>
+  package: azure-iothub
+- uid: azure-iothub.Twin.get
+  name: get(IncomingMessageCallback<Twin>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает последнюю версию этого двойника устройства из службы центра Интернета вещей.
+  syntax:
+    content: 'function get(done: IncomingMessageCallback<Twin>)'
     parameters:
     - id: done
       type:
-      - Callback<azure-iothub.Twin>
-      description: >
-        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: ошибка объекта (может иметь значение null), [Двойника](xref:azure-iothub.Twin) объект, представляющий созданного удостоверения устройства и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
+      - azure-iothub.IncomingMessageCallback<azure-iothub.Twin>
+      description: ''
   package: azure-iothub
 - uid: azure-iothub.Twin.moduleId
   name: moduleId
@@ -125,7 +140,7 @@ items:
       - '[key: string]: string'
   package: azure-iothub
 - uid: azure-iothub.Twin.toJSON
-  name: toJSON
+  name: toJSON()
   children: []
   type: method
   langs:
@@ -139,7 +154,7 @@ items:
       - object
   package: azure-iothub
 - uid: azure-iothub.Twin.constructor
-  name: Twin
+  name: Twin(DeviceIdentity | string, Registry)
   children: []
   type: constructor
   langs:
@@ -158,15 +173,33 @@ items:
       description: >
         Клиент реестра HTTP, используемый для выполнения вызовов REST API.
   package: azure-iothub
-- uid: azure-iothub.Twin.update
-  name: update
+- uid: azure-iothub.Twin.update_1
+  name: update(any)
   children: []
   type: method
   langs:
   - typeScript
   summary: Обновление двойников устройств с улучшением, предоставляется как аргумент.
   syntax:
-    content: 'function update(patch: any, done: Callback<Twin>)'
+    content: 'function update(patch: any)'
+    parameters:
+    - id: patch
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin>>
+  package: azure-iothub
+- uid: azure-iothub.Twin.update
+  name: update(any, IncomingMessageCallback<Twin>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновление двойников устройств с улучшением, предоставляется как аргумент.
+  syntax:
+    content: 'function update(patch: any, done: IncomingMessageCallback<Twin>)'
     parameters:
     - id: patch
       type:
@@ -174,22 +207,41 @@ items:
       description: Объект, содержащий новые значения для применения к двойнику этого устройства.
     - id: done
       type:
-      - Callback<azure-iothub.Twin>
-      description: >
-        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: ошибка объекта (может иметь значение null), [Двойника](xref:azure-iothub.Twin) объект, представляющий созданного удостоверения устройства и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
+      - azure-iothub.IncomingMessageCallback<azure-iothub.Twin>
+      description: ''
   package: azure-iothub
 references:
 - uid: azure-iothub.Registry
+  name: Registry
   spec.typeScript:
   - name: Registry
     fullName: Registry
     uid: azure-iothub.Registry
-- uid: Callback<azure-iothub.Twin>
+- uid: azure-iothub.IncomingMessageCallback<azure-iothub.Twin>
+  name: Twin>
   spec.typeScript:
-  - name: Callback<
-    fullName: Callback<
+  - name: IncomingMessageCallback
+    fullName: IncomingMessageCallback
+    uid: azure-iothub.IncomingMessageCallback
+  - name: <
+    fullName: <
   - name: Twin
     fullName: Twin
     uid: azure-iothub.Twin
   - name: '>'
     fullName: '>'
+- uid: Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin>>
+  name: Twin>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ResultWithIncomingMessage
+    fullName: ResultWithIncomingMessage
+    uid: azure-iothub.ResultWithIncomingMessage
+  - name: <
+    fullName: <
+  - name: Twin
+    fullName: Twin
+    uid: azure-iothub.Twin
+  - name: '>>'
+    fullName: '>>'

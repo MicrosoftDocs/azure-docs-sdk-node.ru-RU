@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: a973deb25b3fc4ed450d5ffef2aeb261e1b97bb4
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: e14ff406aa04f3bbac38b99d9b2b28ab44a663ec
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41685749"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53666651"
 items:
 - uid: azure-iothub.Query
   name: Query
@@ -12,7 +12,13 @@ items:
   children:
   - azure-iothub.Query.continuationToken
   - azure-iothub.Query.hasMoreResults
+  - azure-iothub.Query.next_3
+  - azure-iothub.Query.next_1
+  - azure-iothub.Query.next_2
   - azure-iothub.Query.next
+  - azure-iothub.Query.nextAsTwin_3
+  - azure-iothub.Query.nextAsTwin_1
+  - azure-iothub.Query.nextAsTwin_2
   - azure-iothub.Query.nextAsTwin
   langs:
   - typeScript
@@ -50,64 +56,182 @@ items:
       type:
       - boolean
   package: azure-iothub
-- uid: azure-iothub.Query.next
-  name: next
+- uid: azure-iothub.Query.next_3
+  name: next()
   children: []
   type: method
   langs:
   - typeScript
   summary: Возвращает следующую страницу результатов для этого запроса.
   syntax:
-    content: 'function next(continuationTokenOrCallback: string | Callback<any>, done?: Callback<any>)'
-    parameters:
-    - id: continuationTokenOrCallback
+    content: function next()
+    parameters: []
+    return:
       type:
-      - string | Callback<any>
-      description: ''
+      - Promise<azure-iothub.ResultWithIncomingMessage<any>>
+  package: azure-iothub
+- uid: azure-iothub.Query.next_1
+  name: next(IncomingMessageCallback<any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса.
+  syntax:
+    content: 'function next(done: IncomingMessageCallback<any>)'
+    parameters:
     - id: done
       type:
-      - Callback<any>
-      description: >
-        Обратный вызов, который будет вызываться с ошибка объекта или результаты запроса.
-      optional: true
+      - azure-iothub.IncomingMessageCallback<any>
+      description: ''
   package: azure-iothub
-- uid: azure-iothub.Query.nextAsTwin
-  name: nextAsTwin
+- uid: azure-iothub.Query.next_2
+  name: next(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса.
+  syntax:
+    content: 'function next(continuationToken: string)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<any>>
+  package: azure-iothub
+- uid: azure-iothub.Query.next
+  name: next(string, IncomingMessageCallback<any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса.
+  syntax:
+    content: 'function next(continuationToken: string, done: IncomingMessageCallback<any>)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
+      description: Токен продолжения для разбиения на страницы результатов (необязательно)
+    - id: done
+      type:
+      - azure-iothub.IncomingMessageCallback<any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin_3
+  name: nextAsTwin()
   children: []
   type: method
   langs:
   - typeScript
   summary: Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.
   syntax:
-    content: 'function nextAsTwin(continuationToken: string | Callback<Twin[]>, done?: Callback<Twin[]>)'
+    content: function nextAsTwin()
+    parameters: []
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin[]>>
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin_1
+  name: nextAsTwin(IncomingMessageCallback<Twin[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.
+  syntax:
+    content: 'function nextAsTwin(done: IncomingMessageCallback<Twin[]>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.IncomingMessageCallback<azure-iothub.Twin[]>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin_2
+  name: nextAsTwin(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.
+  syntax:
+    content: 'function nextAsTwin(continuationToken: string)'
     parameters:
     - id: continuationToken
       type:
-      - string | Callback<azure-iothub.Twin[]>
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin[]>>
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin
+  name: nextAsTwin(string, IncomingMessageCallback<Twin[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.
+  syntax:
+    content: 'function nextAsTwin(continuationToken: string, done: IncomingMessageCallback<Twin[]>)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
       description: Токен продолжения для разбиения на страницы результатов (необязательно)
     - id: done
       type:
-      - Callback<azure-iothub.Twin[]>
-      description: >
-        Обратный вызов, который будет вызываться с ошибка объекта или результаты запроса.
-      optional: true
+      - azure-iothub.IncomingMessageCallback<azure-iothub.Twin[]>
+      description: ''
   package: azure-iothub
 references:
-- uid: string | Callback<azure-iothub.Twin[]>
+- uid: azure-iothub.IncomingMessageCallback<any>
+  name: IncomingMessageCallback<any>
   spec.typeScript:
-  - name: string | Callback<
-    fullName: string | Callback<
+  - name: IncomingMessageCallback
+    fullName: IncomingMessageCallback
+    uid: azure-iothub.IncomingMessageCallback
+  - name: <any>
+    fullName: <any>
+- uid: Promise<azure-iothub.ResultWithIncomingMessage<any>>
+  name: ResultWithIncomingMessage<any>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ResultWithIncomingMessage
+    fullName: ResultWithIncomingMessage
+    uid: azure-iothub.ResultWithIncomingMessage
+  - name: <any>>
+    fullName: <any>>
+- uid: azure-iothub.IncomingMessageCallback<azure-iothub.Twin[]>
+  name: Twin[]>
+  spec.typeScript:
+  - name: IncomingMessageCallback
+    fullName: IncomingMessageCallback
+    uid: azure-iothub.IncomingMessageCallback
+  - name: <
+    fullName: <
   - name: Twin
     fullName: Twin
     uid: azure-iothub.Twin
   - name: '[]>'
     fullName: '[]>'
-- uid: Callback<azure-iothub.Twin[]>
+- uid: Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin[]>>
+  name: Twin[]>>
   spec.typeScript:
-  - name: Callback<
-    fullName: Callback<
+  - name: Promise<
+    fullName: Promise<
+  - name: ResultWithIncomingMessage
+    fullName: ResultWithIncomingMessage
+    uid: azure-iothub.ResultWithIncomingMessage
+  - name: <
+    fullName: <
   - name: Twin
     fullName: Twin
     uid: azure-iothub.Twin
-  - name: '[]>'
-    fullName: '[]>'
+  - name: '[]>>'
+    fullName: '[]>>'
