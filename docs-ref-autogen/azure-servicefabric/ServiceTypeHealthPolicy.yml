@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b5e677e6562e3636f6003ba382cb8461c02a87c9
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53678088"
+items:
+- uid: azure-servicefabric.ServiceTypeHealthPolicy
+  name: ServiceTypeHealthPolicy
+  fullName: ServiceTypeHealthPolicy
+  children:
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition
+  - azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="60023-101">Представляет политику работоспособности, используемую для оценки работоспособности служб, относящихся к типу службы.</span><span class="sxs-lookup"><span data-stu-id="60023-101">Represents the health policy used to evaluate the health of services belonging to a service type.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyPartitionsPerService
+  name: maxPercentUnhealthyPartitionsPerService
+  fullName: maxPercentUnhealthyPartitionsPerService
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="60023-102">Максимально допустимый процент неработоспособных разделов каждой службы.</span><span class="sxs-lookup"><span data-stu-id="60023-102">The maximum allowed percentage of unhealthy partitions per service.</span></span> <span data-ttu-id="60023-103">Допустимые значения: байтовых значений от 0 до 100, процент представляет максимальное допустимое процент секций, которые могут быть признаны неработоспособными, прежде чем служба считается ошибкой.</span><span class="sxs-lookup"><span data-stu-id="60023-103">Allowed values are Byte values from zero to 100 The percentage represents the maximum tolerated percentage of partitions that can be unhealthy before the service is considered in error.</span></span>
+
+    <span data-ttu-id="60023-104">Если процент учитывается, но имеется по крайней мере один неработоспособный раздел, то состояние работоспособности оценивается как предупреждение.</span><span class="sxs-lookup"><span data-stu-id="60023-104">If the percentage is respected but there is at least one unhealthy partition, the health is evaluated as Warning.</span></span>
+
+    <span data-ttu-id="60023-105">Процентное значение вычисляется путем деления числа неработоспособных разделов за общее число секций в службе.</span><span class="sxs-lookup"><span data-stu-id="60023-105">The percentage is calculated by dividing the number of unhealthy partitions over the total number of partitions in the service.</span></span>
+
+    <span data-ttu-id="60023-106">Расчет округляется допускается один сбой на небольшом количестве секций.</span><span class="sxs-lookup"><span data-stu-id="60023-106">The computation rounds up to tolerate one failure on small numbers of partitions.</span></span> <span data-ttu-id="60023-107">Значение в процентах по умолчанию равняется нулю.</span><span class="sxs-lookup"><span data-stu-id="60023-107">Default percentage is zero.</span></span>
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyPartitionsPerService?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyReplicasPerPartition
+  name: maxPercentUnhealthyReplicasPerPartition
+  fullName: maxPercentUnhealthyReplicasPerPartition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="60023-108">Максимально допустимый процент неработоспособных реплик каждого раздела.</span><span class="sxs-lookup"><span data-stu-id="60023-108">The maximum allowed percentage of unhealthy replicas per partition.</span></span> <span data-ttu-id="60023-109">Допустимые значения: байтовых значений от 0 до 100.</span><span class="sxs-lookup"><span data-stu-id="60023-109">Allowed values are Byte values from zero to 100.</span></span>
+
+    <span data-ttu-id="60023-110">Процент представляет максимальный процент неработоспособных реплик, которые могут быть признаны неработоспособными, прежде чем error при оценке секции.</span><span class="sxs-lookup"><span data-stu-id="60023-110">The percentage represents the maximum tolerated percentage of replicas that can be unhealthy before the partition is considered in error.</span></span>
+
+    <span data-ttu-id="60023-111">Если процент учитывается, но имеется по крайней мере один Неработоспособная реплика, то состояние работоспособности оценивается как предупреждение.</span><span class="sxs-lookup"><span data-stu-id="60023-111">If the percentage is respected but there is at least one unhealthy replica, the health is evaluated as Warning.</span></span>
+
+    <span data-ttu-id="60023-112">Процентное значение вычисляется путем деления числа неработоспособных реплик на общее число реплик в секции.</span><span class="sxs-lookup"><span data-stu-id="60023-112">The percentage is calculated by dividing the number of unhealthy replicas over the total number of replicas in the partition.</span></span>
+
+    <span data-ttu-id="60023-113">Расчет округляется допускается один сбой на небольшом количестве реплик.</span><span class="sxs-lookup"><span data-stu-id="60023-113">The computation rounds up to tolerate one failure on small numbers of replicas.</span></span> <span data-ttu-id="60023-114">Значение в процентах по умолчанию равняется нулю.</span><span class="sxs-lookup"><span data-stu-id="60023-114">Default percentage is zero.</span></span>
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyReplicasPerPartition?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceTypeHealthPolicy.maxPercentUnhealthyServices
+  name: maxPercentUnhealthyServices
+  fullName: maxPercentUnhealthyServices
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="60023-115">Максимально допустимый процент неработоспособных служб.</span><span class="sxs-lookup"><span data-stu-id="60023-115">The maximum allowed percentage of unhealthy services.</span></span> <span data-ttu-id="60023-116">Допустимые значения: байтовых значений от 0 до 100.</span><span class="sxs-lookup"><span data-stu-id="60023-116">Allowed values are Byte values from zero to 100.</span></span>
+
+    <span data-ttu-id="60023-117">Процент представляет максимальный процент неработоспособных служб, которые могут быть признаны неработоспособными, прежде чем error при оценке приложения.</span><span class="sxs-lookup"><span data-stu-id="60023-117">The percentage represents the maximum tolerated percentage of services that can be unhealthy before the application is considered in error.</span></span>
+
+    <span data-ttu-id="60023-118">Если процент учитывается, но имеется по крайней мере один неработоспособную службу, то состояние работоспособности оценивается как предупреждение.</span><span class="sxs-lookup"><span data-stu-id="60023-118">If the percentage is respected but there is at least one unhealthy service, the health is evaluated as Warning.</span></span>
+
+    <span data-ttu-id="60023-119">Это значение вычисляется путем деления числа неработоспособных служб типа службы, определенные за общее число служб типа конкретной службы.</span><span class="sxs-lookup"><span data-stu-id="60023-119">This is calculated by dividing the number of unhealthy services of the specific service type over the total number of services of the specific service type.</span></span>
+
+    <span data-ttu-id="60023-120">Расчет округляется допускается один сбой на небольшом количестве служб.</span><span class="sxs-lookup"><span data-stu-id="60023-120">The computation rounds up to tolerate one failure on small numbers of services.</span></span> <span data-ttu-id="60023-121">Значение в процентах по умолчанию равняется нулю.</span><span class="sxs-lookup"><span data-stu-id="60023-121">Default percentage is zero.</span></span>
+  optional: true
+  syntax:
+    content: 'maxPercentUnhealthyServices?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
