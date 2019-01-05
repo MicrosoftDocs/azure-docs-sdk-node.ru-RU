@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: adcef858bd14ae01101959fd1c927fe9740bcb92
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53668039"
+items:
+- uid: azure-servicefabric.StatefulServicePartitionInfo
+  name: StatefulServicePartitionInfo
+  fullName: StatefulServicePartitionInfo
+  children:
+  - azure-servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration
+  - azure-servicefabric.StatefulServicePartitionInfo.minReplicaSetSize
+  - azure-servicefabric.StatefulServicePartitionInfo.primaryEpoch
+  - azure-servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="f076a-101">Сведения о секции службы Service Fabric с отслеживанием состояния...</span><span class="sxs-lookup"><span data-stu-id="f076a-101">Information about a partition of a stateful Service Fabric service..</span></span>
+  extends:
+    name: azure-servicefabric.ServicePartitionInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServicePartitionInfo.lastQuorumLossDuration
+  name: lastQuorumLossDuration
+  fullName: lastQuorumLossDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f076a-102">Длительность, в течение которого данная секция была в состоянии потери кворума.</span><span class="sxs-lookup"><span data-stu-id="f076a-102">The duration for which this partition was in quorum loss.</span></span> <span data-ttu-id="f076a-103">Если секция в настоящее время находится в состоянии потери кворума, он возвращает длительность так, как это было в этом состоянии.</span><span class="sxs-lookup"><span data-stu-id="f076a-103">If the partition is currently in quorum loss, it returns the duration since it has been in that state.</span></span> <span data-ttu-id="f076a-104">Это поле использует для указания длительности в формате ISO8601.</span><span class="sxs-lookup"><span data-stu-id="f076a-104">This field is using ISO8601 format for specifying the duration.</span></span>
+  optional: true
+  syntax:
+    content: 'lastQuorumLossDuration?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServicePartitionInfo.minReplicaSetSize
+  name: minReplicaSetSize
+  fullName: minReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f076a-105">Минимальный размер набора реплик в виде числа.</span><span class="sxs-lookup"><span data-stu-id="f076a-105">The minimum replica set size as a number.</span></span>
+  optional: true
+  syntax:
+    content: 'minReplicaSetSize?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServicePartitionInfo.primaryEpoch
+  name: primaryEpoch
+  fullName: primaryEpoch
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '<span data-ttu-id="f076a-106">Состояние: номер конфигурации для раздела в целом.</span><span class="sxs-lookup"><span data-stu-id="f076a-106">An Epoch is a configuration number for the partition as a whole.</span></span> <span data-ttu-id="f076a-107">При конфигурации реплики набор изменений, например, при изменении первичной реплики, операции, которые реплицируются с новой первичной репликой, называются новой эпохи из тех, которые были отправлены в старое первичной репликой.</span><span class="sxs-lookup"><span data-stu-id="f076a-107">When the configuration of the replica set changes, for example when the Primary replica changes, the operations that are replicated from the new Primary replica are said to be a new Epoch from the ones which were sent by the old Primary replica.</span></span>'
+  optional: true
+  syntax:
+    content: 'primaryEpoch?: Epoch'
+    return:
+      type:
+      - azure-servicefabric.Epoch
+  package: azure-servicefabric
+- uid: azure-servicefabric.StatefulServicePartitionInfo.targetReplicaSetSize
+  name: targetReplicaSetSize
+  fullName: targetReplicaSetSize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f076a-108">Размер целевого набора реплик в виде числа.</span><span class="sxs-lookup"><span data-stu-id="f076a-108">The target replica set size as a number.</span></span>
+  optional: true
+  syntax:
+    content: 'targetReplicaSetSize?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ServicePartitionInfo
+  name: ServicePartitionInfo
+  spec.typeScript:
+  - name: ServicePartitionInfo
+    fullName: ServicePartitionInfo
+    uid: azure-servicefabric.ServicePartitionInfo
+- uid: azure-servicefabric.Epoch
+  name: Epoch
+  spec.typeScript:
+  - name: Epoch
+    fullName: Epoch
+    uid: azure-servicefabric.Epoch

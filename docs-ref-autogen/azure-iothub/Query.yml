@@ -1,0 +1,237 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e14ff406aa04f3bbac38b99d9b2b28ab44a663ec
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53666651"
+items:
+- uid: azure-iothub.Query
+  name: Query
+  fullName: Query
+  children:
+  - azure-iothub.Query.continuationToken
+  - azure-iothub.Query.hasMoreResults
+  - azure-iothub.Query.next_3
+  - azure-iothub.Query.next_1
+  - azure-iothub.Query.next_2
+  - azure-iothub.Query.next
+  - azure-iothub.Query.nextAsTwin_3
+  - azure-iothub.Query.nextAsTwin_1
+  - azure-iothub.Query.nextAsTwin_2
+  - azure-iothub.Query.nextAsTwin
+  langs:
+  - typeScript
+  type: class
+  summary: >-
+    <span data-ttu-id="21990-101">Создает объект запроса, который предоставляет API-интерфейсы для активации выполнения запроса устройства.</span><span class="sxs-lookup"><span data-stu-id="21990-101">Constructs a Query object that provides APIs to trigger the execution of a device query.</span></span>
+
+    <span data-ttu-id="21990-102">Пакет SDK пользователи должны создавать запросы с помощью <xref:azure-iothub.JobClient.createQuery> и <xref:azure-iothub.Registry.createQuery> API-интерфейсов и не следует пытаться создать экземпляр этого класса напрямую.</span><span class="sxs-lookup"><span data-stu-id="21990-102">SDK users should create queries using the <xref:azure-iothub.JobClient.createQuery> and <xref:azure-iothub.Registry.createQuery> APIs and should not try to instantiate this class directly.</span></span>
+  package: azure-iothub
+- uid: azure-iothub.Query.continuationToken
+  name: continuationToken
+  fullName: continuationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="21990-103">Токен, используемый для итерации по несколько страниц результатов.</span><span class="sxs-lookup"><span data-stu-id="21990-103">Token used to iterate over multiple pages of results.</span></span>
+  syntax:
+    content: 'continuationToken: string'
+    return:
+      type:
+      - string
+  package: azure-iothub
+- uid: azure-iothub.Query.hasMoreResults
+  name: hasMoreResults
+  fullName: hasMoreResults
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="21990-104">Логическое значение, указывающее, есть ли дополнительные страницы результатов.</span><span class="sxs-lookup"><span data-stu-id="21990-104">Boolean indicating whether there are more results pages.</span></span>
+  syntax:
+    content: 'hasMoreResults: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-iothub
+- uid: azure-iothub.Query.next_3
+  name: next()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="21990-105">Возвращает следующую страницу результатов для этого запроса.</span><span class="sxs-lookup"><span data-stu-id="21990-105">Gets the next page of results for this query.</span></span>
+  syntax:
+    content: function next()
+    parameters: []
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<any>>
+  package: azure-iothub
+- uid: azure-iothub.Query.next_1
+  name: next(IncomingMessageCallback<any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="21990-106">Возвращает следующую страницу результатов для этого запроса.</span><span class="sxs-lookup"><span data-stu-id="21990-106">Gets the next page of results for this query.</span></span>
+  syntax:
+    content: 'function next(done: IncomingMessageCallback<any>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.IncomingMessageCallback<any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.Query.next_2
+  name: next(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="21990-107">Возвращает следующую страницу результатов для этого запроса.</span><span class="sxs-lookup"><span data-stu-id="21990-107">Gets the next page of results for this query.</span></span>
+  syntax:
+    content: 'function next(continuationToken: string)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<any>>
+  package: azure-iothub
+- uid: azure-iothub.Query.next
+  name: next(string, IncomingMessageCallback<any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="21990-108">Возвращает следующую страницу результатов для этого запроса.</span><span class="sxs-lookup"><span data-stu-id="21990-108">Gets the next page of results for this query.</span></span>
+  syntax:
+    content: 'function next(continuationToken: string, done: IncomingMessageCallback<any>)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
+      description: <span data-ttu-id="21990-109">Токен продолжения для разбиения на страницы результатов (необязательно)</span><span class="sxs-lookup"><span data-stu-id="21990-109">Continuation Token used for paging through results (optional)</span></span>
+    - id: done
+      type:
+      - azure-iothub.IncomingMessageCallback<any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin_3
+  name: nextAsTwin()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="21990-110">Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.</span><span class="sxs-lookup"><span data-stu-id="21990-110">Gets the next page of results for this query and cast them as Twins.</span></span>
+  syntax:
+    content: function nextAsTwin()
+    parameters: []
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin[]>>
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin_1
+  name: nextAsTwin(IncomingMessageCallback<Twin[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="21990-111">Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.</span><span class="sxs-lookup"><span data-stu-id="21990-111">Gets the next page of results for this query and cast them as Twins.</span></span>
+  syntax:
+    content: 'function nextAsTwin(done: IncomingMessageCallback<Twin[]>)'
+    parameters:
+    - id: done
+      type:
+      - azure-iothub.IncomingMessageCallback<azure-iothub.Twin[]>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin_2
+  name: nextAsTwin(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="21990-112">Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.</span><span class="sxs-lookup"><span data-stu-id="21990-112">Gets the next page of results for this query and cast them as Twins.</span></span>
+  syntax:
+    content: 'function nextAsTwin(continuationToken: string)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin[]>>
+  package: azure-iothub
+- uid: azure-iothub.Query.nextAsTwin
+  name: nextAsTwin(string, IncomingMessageCallback<Twin[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="21990-113">Возвращает следующую страницу результатов для этого запроса и преобразовать их в Двойников.</span><span class="sxs-lookup"><span data-stu-id="21990-113">Gets the next page of results for this query and cast them as Twins.</span></span>
+  syntax:
+    content: 'function nextAsTwin(continuationToken: string, done: IncomingMessageCallback<Twin[]>)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
+      description: <span data-ttu-id="21990-114">Токен продолжения для разбиения на страницы результатов (необязательно)</span><span class="sxs-lookup"><span data-stu-id="21990-114">Continuation Token used for paging through results (optional)</span></span>
+    - id: done
+      type:
+      - azure-iothub.IncomingMessageCallback<azure-iothub.Twin[]>
+      description: ''
+  package: azure-iothub
+references:
+- uid: azure-iothub.IncomingMessageCallback<any>
+  name: IncomingMessageCallback<any>
+  spec.typeScript:
+  - name: IncomingMessageCallback
+    fullName: IncomingMessageCallback
+    uid: azure-iothub.IncomingMessageCallback
+  - name: <any>
+    fullName: <any>
+- uid: Promise<azure-iothub.ResultWithIncomingMessage<any>>
+  name: ResultWithIncomingMessage<any>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ResultWithIncomingMessage
+    fullName: ResultWithIncomingMessage
+    uid: azure-iothub.ResultWithIncomingMessage
+  - name: <any>>
+    fullName: <any>>
+- uid: azure-iothub.IncomingMessageCallback<azure-iothub.Twin[]>
+  name: Twin[]>
+  spec.typeScript:
+  - name: IncomingMessageCallback
+    fullName: IncomingMessageCallback
+    uid: azure-iothub.IncomingMessageCallback
+  - name: <
+    fullName: <
+  - name: Twin
+    fullName: Twin
+    uid: azure-iothub.Twin
+  - name: '[]>'
+    fullName: '[]>'
+- uid: Promise<azure-iothub.ResultWithIncomingMessage<azure-iothub.Twin[]>>
+  name: Twin[]>>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ResultWithIncomingMessage
+    fullName: ResultWithIncomingMessage
+    uid: azure-iothub.ResultWithIncomingMessage
+  - name: <
+    fullName: <
+  - name: Twin
+    fullName: Twin
+    uid: azure-iothub.Twin
+  - name: '[]>>'
+    fullName: '[]>>'

@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d36b30314b4f4fdefaecf924757a555ac54264c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52126009"
+items:
+- uid: ms-rest-azure.loginWithVmMSI_1
+  name: 'loginWithVmMSI(MSIVmOptions, (err: Error, credentials: MSIVmTokenCredentials) => void)'
+  children: []
+  type: function
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="4a6a7-101">Перед использованием этого метода установите cli az из https://github.com/Azure/azure-cli/releases.</span><span class="sxs-lookup"><span data-stu-id="4a6a7-101">Before using this method please install az cli from https://github.com/Azure/azure-cli/releases.</span></span>
+
+    <span data-ttu-id="4a6a7-102">Если у вас есть виртуальная машина Azure подготовлены с помощью az cli и включения MSI, можно затем использовать этот метод для получения маркеров проверки подлинности из виртуальной Машины.</span><span class="sxs-lookup"><span data-stu-id="4a6a7-102">If you have an Azure virtual machine provisioned with az cli and has MSI enabled, you can then use this method to get auth tokens from the VM.</span></span>
+
+    <span data-ttu-id="4a6a7-103">Чтобы создать новую виртуальную Машину, включить MSI, выполните эту команду: создание -g < имя_группы_ресурсов > - n < vm_name > — az vm assign-identity - изображение < os_image_name > Примечание: Приведенная выше команда включает конечную точку службы в хост-компьютере и порт по умолчанию 50342</span><span class="sxs-lookup"><span data-stu-id="4a6a7-103">To create a new VM, enable MSI, please execute this command: az vm create -g <resource_group_name> -n <vm_name> --assign-identity --image <os_image_name> Note: the above command enables a service endpoint on the host, with a default port 50342</span></span>
+
+
+    <span data-ttu-id="4a6a7-104">Чтобы включить MSI в уже подготовленной виртуальной Машины, выполните следующую команду: az vm--assign-identity - g < имя_группы_ресурсов > -n < vm_name > — порт < custom_port_number ></span><span class="sxs-lookup"><span data-stu-id="4a6a7-104">To enable MSI on a already provisioned VM, execute the following command: az vm --assign-identity -g <resource_group_name> -n <vm_name> --port <custom_port_number></span></span>
+
+
+    <span data-ttu-id="4a6a7-105">Дополнительные сведения об этой команде, выполните: az vm--assign-identity - h</span><span class="sxs-lookup"><span data-stu-id="4a6a7-105">To know more about this command, please execute: az vm --assign-identity -h</span></span>
+
+
+    <span data-ttu-id="4a6a7-106">Выполняет проверку подлинности с помощью удостоверений службы, запущенной на виртуальной машине Azure.</span><span class="sxs-lookup"><span data-stu-id="4a6a7-106">Authenticates using the identity service running on an Azure virtual machine.</span></span>
+
+    <span data-ttu-id="4a6a7-107">Этот метод выполняет запрос к службе проверки подлинности, размещенной на виртуальной Машине и снова получает маркер доступа.</span><span class="sxs-lookup"><span data-stu-id="4a6a7-107">This method makes a request to the authentication service hosted on the VM and gets back an access token.</span></span>
+  syntax:
+    content: 'function loginWithVmMSI(options: MSIVmOptions, callback: (err: Error, credentials: MSIVmTokenCredentials) => void)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest-azure.MSIVmOptions
+      description: ''
+    - id: callback
+      type:
+      - '(err: Error, credentials: MSIVmTokenCredentials) => void'
+      description: ''
+  package: ms-rest-azure
+references:
+- uid: ms-rest-azure.MSIVmOptions
+  name: MSIVmOptions
+  spec.typeScript:
+  - name: MSIVmOptions
+    fullName: MSIVmOptions
+    uid: ms-rest-azure.MSIVmOptions

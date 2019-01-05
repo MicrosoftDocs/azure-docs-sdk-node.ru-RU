@@ -1,0 +1,264 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ee71468dd02dea68dfda2595f76825b2ebcd6df2
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53675818"
+items:
+- uid: azure-arm-network.LoadBalancer
+  name: LoadBalancer
+  fullName: LoadBalancer
+  children:
+  - azure-arm-network.LoadBalancer.backendAddressPools
+  - azure-arm-network.LoadBalancer.etag
+  - azure-arm-network.LoadBalancer.frontendIPConfigurations
+  - azure-arm-network.LoadBalancer.inboundNatPools
+  - azure-arm-network.LoadBalancer.inboundNatRules
+  - azure-arm-network.LoadBalancer.loadBalancingRules
+  - azure-arm-network.LoadBalancer.outboundRules
+  - azure-arm-network.LoadBalancer.probes
+  - azure-arm-network.LoadBalancer.provisioningState
+  - azure-arm-network.LoadBalancer.resourceGuid
+  - azure-arm-network.LoadBalancer.sku
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="c85f9-101">Подсистема балансировки нагрузки ресурсов</span><span class="sxs-lookup"><span data-stu-id="c85f9-101">LoadBalancer resource</span></span>
+  extends:
+    name: azure-arm-network.Resource
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.backendAddressPools
+  name: backendAddressPools
+  fullName: backendAddressPools
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-102">Коллекция внутренние пулы адресов, используется подсистемой балансировки нагрузки</span><span class="sxs-lookup"><span data-stu-id="c85f9-102">Collection of backend address pools used by a load balancer</span></span>
+  optional: true
+  syntax:
+    content: 'backendAddressPools?: BackendAddressPool[]'
+    return:
+      type:
+      - azure-arm-network.BackendAddressPool[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.etag
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-103">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="c85f9-103">A unique read-only string that changes whenever the resource is updated.</span></span>
+  optional: true
+  syntax:
+    content: 'etag?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.frontendIPConfigurations
+  name: frontendIPConfigurations
+  fullName: frontendIPConfigurations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-104">Объект, представляющий интерфейсный IP-адресов для подсистемы балансировки нагрузки</span><span class="sxs-lookup"><span data-stu-id="c85f9-104">Object representing the frontend IPs to be used for the load balancer</span></span>
+  optional: true
+  syntax:
+    content: 'frontendIPConfigurations?: FrontendIPConfiguration[]'
+    return:
+      type:
+      - azure-arm-network.FrontendIPConfiguration[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.inboundNatPools
+  name: inboundNatPools
+  fullName: inboundNatPools
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-105">Определяет диапазон внешний порт для NAT для входящего трафика на один серверный порт сетевых адаптеров, связанных с балансировкой нагрузки.</span><span class="sxs-lookup"><span data-stu-id="c85f9-105">Defines an external port range for inbound NAT to a single backend port on NICs associated with a load balancer.</span></span> <span data-ttu-id="c85f9-106">Правила NAT для входящего трафика создается автоматически для каждого сетевого Адаптера, связанного с подсистемой балансировки нагрузки, используя внешний порт из данного диапазона.</span><span class="sxs-lookup"><span data-stu-id="c85f9-106">Inbound NAT rules are created automatically for each NIC associated with the Load Balancer using an external port from this range.</span></span> <span data-ttu-id="c85f9-107">Определение пула NAT для входящего трафика подсистемы балансировки нагрузки является взаимоисключающим с определением правила Nat для входящего трафика.</span><span class="sxs-lookup"><span data-stu-id="c85f9-107">Defining an Inbound NAT pool on your Load Balancer is mutually exclusive with defining inbound Nat rules.</span></span> <span data-ttu-id="c85f9-108">Масштабируемые наборы виртуальных машин ссылаются пулов NAT входящего трафика.</span><span class="sxs-lookup"><span data-stu-id="c85f9-108">Inbound NAT pools are referenced from virtual machine scale sets.</span></span> <span data-ttu-id="c85f9-109">Сетевые адаптеры, связанные с отдельным виртуальным машинам не может ссылаться на пул NAT входящего трафика.</span><span class="sxs-lookup"><span data-stu-id="c85f9-109">NICs that are associated with individual virtual machines cannot reference an inbound NAT pool.</span></span> <span data-ttu-id="c85f9-110">Они должны ссылаться на отдельные правила NAT для входящих подключений.</span><span class="sxs-lookup"><span data-stu-id="c85f9-110">They have to reference individual inbound NAT rules.</span></span>
+  optional: true
+  syntax:
+    content: 'inboundNatPools?: InboundNatPool[]'
+    return:
+      type:
+      - azure-arm-network.InboundNatPool[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.inboundNatRules
+  name: inboundNatRules
+  fullName: inboundNatRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-111">Коллекция правил для входящего трафика NAT используется подсистемой балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="c85f9-111">Collection of inbound NAT Rules used by a load balancer.</span></span> <span data-ttu-id="c85f9-112">Определение правила для входящих подключений NAT подсистемы балансировки нагрузки является взаимоисключающим с определением пул NAT входящего трафика.</span><span class="sxs-lookup"><span data-stu-id="c85f9-112">Defining inbound NAT rules on your load balancer is mutually exclusive with defining an inbound NAT pool.</span></span> <span data-ttu-id="c85f9-113">Масштабируемые наборы виртуальных машин ссылаются пулов NAT входящего трафика.</span><span class="sxs-lookup"><span data-stu-id="c85f9-113">Inbound NAT pools are referenced from virtual machine scale sets.</span></span> <span data-ttu-id="c85f9-114">Сетевые адаптеры, связанные с отдельным виртуальным машинам не может ссылаться на пул NAT для входящего Трафика.</span><span class="sxs-lookup"><span data-stu-id="c85f9-114">NICs that are associated with individual virtual machines cannot reference an Inbound NAT pool.</span></span> <span data-ttu-id="c85f9-115">Они должны ссылаться на отдельные правила NAT для входящих подключений.</span><span class="sxs-lookup"><span data-stu-id="c85f9-115">They have to reference individual inbound NAT rules.</span></span>
+  optional: true
+  syntax:
+    content: 'inboundNatRules?: InboundNatRule[]'
+    return:
+      type:
+      - azure-arm-network.InboundNatRule[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.loadBalancingRules
+  name: loadBalancingRules
+  fullName: loadBalancingRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-116">Коллекция объектов, представляющих правила балансировки нагрузки получает подготовки</span><span class="sxs-lookup"><span data-stu-id="c85f9-116">Object collection representing the load balancing rules Gets the provisioning</span></span>
+  optional: true
+  syntax:
+    content: 'loadBalancingRules?: LoadBalancingRule[]'
+    return:
+      type:
+      - azure-arm-network.LoadBalancingRule[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.outboundRules
+  name: outboundRules
+  fullName: outboundRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-117">Правила для исходящего трафика.</span><span class="sxs-lookup"><span data-stu-id="c85f9-117">The outbound rules.</span></span>
+  optional: true
+  syntax:
+    content: 'outboundRules?: OutboundRule[]'
+    return:
+      type:
+      - azure-arm-network.OutboundRule[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.probes
+  name: probes
+  fullName: probes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-118">Коллекция объектов зондов, используемых в подсистеме балансировки нагрузки</span><span class="sxs-lookup"><span data-stu-id="c85f9-118">Collection of probe objects used in the load balancer</span></span>
+  optional: true
+  syntax:
+    content: 'probes?: Probe[]'
+    return:
+      type:
+      - azure-arm-network.Probe[]
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.provisioningState
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"c85f9-119\">Получает состояние подготовки ресурса общедоступного IP-адреса.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c85f9-119\">Gets the provisioning state of the PublicIP resource.</span></span> <span data-ttu-id=\"c85f9-120\">Возможные значения: «Обновление», «Удаление» и «Failed».</span><span class=\"sxs-lookup\"><span data-stu-id=\"c85f9-120\">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>"
+  optional: true
+  syntax:
+    content: 'provisioningState?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.resourceGuid
+  name: resourceGuid
+  fullName: resourceGuid
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-121">Ресурс, свойство GUID ресурса подсистемы балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="c85f9-121">The resource GUID property of the load balancer resource.</span></span>
+  optional: true
+  syntax:
+    content: 'resourceGuid?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-network
+- uid: azure-arm-network.LoadBalancer.sku
+  name: sku
+  fullName: sku
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c85f9-122">Номер SKU балансировщика нагрузки.</span><span class="sxs-lookup"><span data-stu-id="c85f9-122">The load balancer SKU.</span></span>
+  optional: true
+  syntax:
+    content: 'sku?: LoadBalancerSku'
+    return:
+      type:
+      - azure-arm-network.LoadBalancerSku
+  package: azure-arm-network
+references:
+- uid: azure-arm-network.Resource
+  name: Resource
+  spec.typeScript:
+  - name: Resource
+    fullName: Resource
+    uid: azure-arm-network.Resource
+- uid: azure-arm-network.BackendAddressPool[]
+  name: BackendAddressPool[]
+  spec.typeScript:
+  - name: BackendAddressPool
+    fullName: BackendAddressPool
+    uid: azure-arm-network.BackendAddressPool
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.FrontendIPConfiguration[]
+  name: FrontendIPConfiguration[]
+  spec.typeScript:
+  - name: FrontendIPConfiguration
+    fullName: FrontendIPConfiguration
+    uid: azure-arm-network.FrontendIPConfiguration
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.InboundNatPool[]
+  name: InboundNatPool[]
+  spec.typeScript:
+  - name: InboundNatPool
+    fullName: InboundNatPool
+    uid: azure-arm-network.InboundNatPool
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.InboundNatRule[]
+  name: InboundNatRule[]
+  spec.typeScript:
+  - name: InboundNatRule
+    fullName: InboundNatRule
+    uid: azure-arm-network.InboundNatRule
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.LoadBalancingRule[]
+  name: LoadBalancingRule[]
+  spec.typeScript:
+  - name: LoadBalancingRule
+    fullName: LoadBalancingRule
+    uid: azure-arm-network.LoadBalancingRule
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.OutboundRule[]
+  name: OutboundRule[]
+  spec.typeScript:
+  - name: OutboundRule
+    fullName: OutboundRule
+    uid: azure-arm-network.OutboundRule
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.Probe[]
+  name: Probe[]
+  spec.typeScript:
+  - name: Probe
+    fullName: Probe
+    uid: azure-arm-network.Probe
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-arm-network.LoadBalancerSku
+  name: LoadBalancerSku
+  spec.typeScript:
+  - name: LoadBalancerSku
+    fullName: LoadBalancerSku
+    uid: azure-arm-network.LoadBalancerSku
