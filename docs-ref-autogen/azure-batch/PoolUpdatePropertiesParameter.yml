@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: cd1be7fe8008e2edd5e51647e50f0fce1fdab73f
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53673028"
+items:
+- uid: azure-batch.PoolUpdatePropertiesParameter
+  name: PoolUpdatePropertiesParameter
+  fullName: PoolUpdatePropertiesParameter
+  children:
+  - azure-batch.PoolUpdatePropertiesParameter.applicationPackageReferences
+  - azure-batch.PoolUpdatePropertiesParameter.certificateReferences
+  - azure-batch.PoolUpdatePropertiesParameter.metadata
+  - azure-batch.PoolUpdatePropertiesParameter.startTask
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.PoolUpdatePropertiesParameter.applicationPackageReferences
+  name: applicationPackageReferences
+  fullName: applicationPackageReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="77db8-101">Список заменяет любые существующие ссылки на пакет приложения в пуле.</span><span class="sxs-lookup"><span data-stu-id="77db8-101">The list replaces any existing application package references on the pool.</span></span>
+
+    <span data-ttu-id="77db8-102">Изменения ссылки на пакет приложения влияют на все вычислительные узлы объединения в пул, но не влияют на вычислительных узлах, которые уже находятся в пуле до перезагрузки или повторного создания образа.</span><span class="sxs-lookup"><span data-stu-id="77db8-102">Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged.</span></span>
+
+    <span data-ttu-id="77db8-103">Если этот параметр опущен или укажите пустую коллекцию, любые существующие ссылки на пакеты приложения удаляются из пула.</span><span class="sxs-lookup"><span data-stu-id="77db8-103">If omitted, or if you specify an empty collection, any existing application packages references are removed from the pool.</span></span>
+  syntax:
+    content: 'applicationPackageReferences: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-batch.ApplicationPackageReference[]
+  package: azure-batch
+- uid: azure-batch.PoolUpdatePropertiesParameter.certificateReferences
+  name: certificateReferences
+  fullName: certificateReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="77db8-104">Этот список заменяет любой существующий сертификат ссылки, настроенные в пуле.</span><span class="sxs-lookup"><span data-stu-id="77db8-104">This list replaces any existing certificate references configured on the pool.</span></span> <span data-ttu-id="77db8-105">Если указать пустую коллекцию, любые существующие ссылки на сертификаты удаляются из пула.</span><span class="sxs-lookup"><span data-stu-id="77db8-105">If you specify an empty collection, any existing certificate references are removed from the pool.</span></span> <span data-ttu-id="77db8-106">Для Windows вычислительных узлов, пакетная служба устанавливает сертификаты для хранилища сертификатов и расположение.</span><span class="sxs-lookup"><span data-stu-id="77db8-106">For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location.</span></span> <span data-ttu-id="77db8-107">Для вычислительных узлов Linux сертификаты, хранятся в каталог в рабочем каталоге задачи и среде, которую переменной AZ_BATCH_CERTIFICATES_DIR передается запрос для этого расположения.</span><span class="sxs-lookup"><span data-stu-id="77db8-107">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="77db8-108">Для сертификатов с видимостью «remoteUser» каталог «сертификаты» создается в домашнем каталоге пользователя (например, /home/ {имя_пользователя} / certs) и сертификаты помещаются в этот каталог.</span><span class="sxs-lookup"><span data-stu-id="77db8-108">For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>
+  syntax:
+    content: 'certificateReferences: CertificateReference[]'
+    return:
+      type:
+      - azure-batch.CertificateReference[]
+  package: azure-batch
+- uid: azure-batch.PoolUpdatePropertiesParameter.metadata
+  name: metadata
+  fullName: metadata
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="77db8-109">Этот список заменяет все существующие метаданные, которые настроены в пуле.</span><span class="sxs-lookup"><span data-stu-id="77db8-109">This list replaces any existing metadata configured on the pool.</span></span> <span data-ttu-id="77db8-110">Если этот параметр опущен или укажите пустую коллекцию, все существующие метаданные удаляется из пула.</span><span class="sxs-lookup"><span data-stu-id="77db8-110">If omitted, or if you specify an empty collection, any existing metadata is removed from the pool.</span></span>
+  syntax:
+    content: 'metadata: MetadataItem[]'
+    return:
+      type:
+      - azure-batch.MetadataItem[]
+  package: azure-batch
+- uid: azure-batch.PoolUpdatePropertiesParameter.startTask
+  name: startTask
+  fullName: startTask
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="77db8-111">Если этот элемент присутствует, он переопределяет любые существующие задачи запуска.</span><span class="sxs-lookup"><span data-stu-id="77db8-111">If this element is present, it overwrites any existing start task.</span></span> <span data-ttu-id="77db8-112">Если не указано, все существующие задачи запуска удаляется из пула.</span><span class="sxs-lookup"><span data-stu-id="77db8-112">If omitted, any existing start task is removed from the pool.</span></span>
+  optional: true
+  syntax:
+    content: 'startTask?: StartTask'
+    return:
+      type:
+      - azure-batch.StartTask
+  package: azure-batch
+references:
+- uid: azure-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.CertificateReference[]
+  name: CertificateReference[]
+  spec.typeScript:
+  - name: CertificateReference
+    fullName: CertificateReference
+    uid: azure-batch.CertificateReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.MetadataItem[]
+  name: MetadataItem[]
+  spec.typeScript:
+  - name: MetadataItem
+    fullName: MetadataItem
+    uid: azure-batch.MetadataItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.StartTask
+  name: StartTask
+  spec.typeScript:
+  - name: StartTask
+    fullName: StartTask
+    uid: azure-batch.StartTask

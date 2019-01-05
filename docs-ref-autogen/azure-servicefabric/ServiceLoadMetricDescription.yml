@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4d28cd447cc9b0c5edfabcf7f0cb6a801809f796
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52064939"
+items:
+- uid: azure-servicefabric.ServiceLoadMetricDescription
+  name: ServiceLoadMetricDescription
+  fullName: ServiceLoadMetricDescription
+  children:
+  - azure-servicefabric.ServiceLoadMetricDescription.defaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.name
+  - azure-servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad
+  - azure-servicefabric.ServiceLoadMetricDescription.weight
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="0c8ac-101">Указывает службу метрики для балансировки нагрузки во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-101">Specifies a metric to load balance a service during runtime.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.defaultLoad
+  name: defaultLoad
+  fullName: defaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0c8ac-102">Используется только для служб без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-102">Used only for Stateless services.</span></span> <span data-ttu-id="0c8ac-103">Объем нагрузки, как числа, который создает эта служба для этой метрики по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-103">The default amount of load, as a number, that this service creates for this metric.</span></span>
+  optional: true
+  syntax:
+    content: 'defaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0c8ac-104">Имя метрики.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-104">The name of the metric.</span></span> <span data-ttu-id="0c8ac-105">Если служба решает сообщить о нагрузке во время выполнения, имя метрики нагрузки должно соответствовать имени, указанный в имени, точно.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-105">If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly.</span></span> <span data-ttu-id="0c8ac-106">Обратите внимание на то, что имена метрик учитывают регистр.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-106">Note that metric names are case-sensitive.</span></span>
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.primaryDefaultLoad
+  name: primaryDefaultLoad
+  fullName: primaryDefaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0c8ac-107">Используется только для служб с отслеживанием состояния.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-107">Used only for Stateful services.</span></span> <span data-ttu-id="0c8ac-108">По умолчанию объем нагрузки, как числа, который создает эта служба для этой метрики, если это первичная реплика.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-108">The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.</span></span>
+  optional: true
+  syntax:
+    content: 'primaryDefaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.secondaryDefaultLoad
+  name: secondaryDefaultLoad
+  fullName: secondaryDefaultLoad
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="0c8ac-109">Используется только для служб с отслеживанием состояния.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-109">Used only for Stateful services.</span></span> <span data-ttu-id="0c8ac-110">По умолчанию объем нагрузки, как числа, который создает эта служба для этой метрики, если он является вторичной репликой.</span><span class="sxs-lookup"><span data-stu-id="0c8ac-110">The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.</span></span>
+  optional: true
+  syntax:
+    content: 'secondaryDefaultLoad?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.ServiceLoadMetricDescription.weight
+  name: weight
+  fullName: weight
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"0c8ac-111\">Служба относительный вес метрики нагрузки, по сравнению с другими метриками, настроенными для этой службы, как число.</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c8ac-111\">The service load metric relative weight, compared to other metrics configured for this service, as a number.</span></span> <span data-ttu-id=\"0c8ac-112\">Ниже перечислены возможные значения. «Zero», «Low», «Среднее», «High»</span><span class=\"sxs-lookup\"><span data-stu-id=\"0c8ac-112\">Possible values include: 'Zero', 'Low', 'Medium', 'High'</span></span>"
+  optional: true
+  syntax:
+    content: 'weight?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

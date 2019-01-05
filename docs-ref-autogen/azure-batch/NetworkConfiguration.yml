@@ -1,0 +1,77 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 5064c7ba42cdf7e585c62232e01311cde594e7af
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53710409"
+items:
+- uid: azure-batch.NetworkConfiguration
+  name: NetworkConfiguration
+  fullName: NetworkConfiguration
+  children:
+  - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+  - azure-batch.NetworkConfiguration.endpointConfiguration
+  - azure-batch.NetworkConfiguration.subnetId
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="cff9a-101">Конфигурация сети для пула.</span><span class="sxs-lookup"><span data-stu-id="cff9a-101">The network configuration for a pool.</span></span>
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+  name: dynamicVNetAssignmentScope
+  fullName: dynamicVNetAssignmentScope
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"cff9a-102\">Возможные значения: «none», «задания»</span><span class=\"sxs-lookup\"><span data-stu-id=\"cff9a-102\">Possible values include: 'none', 'job'</span></span>"
+  optional: true
+  syntax:
+    content: 'dynamicVNetAssignmentScope?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.endpointConfiguration
+  name: endpointConfiguration
+  fullName: endpointConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="cff9a-103">Конфигурация конечных точек пула поддерживается только в пулах со свойством virtualMachineConfiguration.</span><span class="sxs-lookup"><span data-stu-id="cff9a-103">Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.</span></span>
+  optional: true
+  syntax:
+    content: 'endpointConfiguration?: PoolEndpointConfiguration'
+    return:
+      type:
+      - azure-batch.PoolEndpointConfiguration
+  package: azure-batch
+- uid: azure-batch.NetworkConfiguration.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="cff9a-104">Это имеет /subnets/ /virtualNetworks/ {network} /providers/ {provider} формы /subscriptions/ {subscription} /resourceGroups/ {группа} {подсети}.</span><span class="sxs-lookup"><span data-stu-id="cff9a-104">This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/{provider}/virtualNetworks/{network}/subnets/{subnet}.</span></span>
+
+    <span data-ttu-id="cff9a-105">Виртуальная сеть должна находиться в том же регионе и подписке, что учетная запись пакетной службы Azure.</span><span class="sxs-lookup"><span data-stu-id="cff9a-105">The virtual network must be in the same region and subscription as the Azure Batch account.</span></span>
+
+    <span data-ttu-id="cff9a-106">Указанная подсеть должна иметь достаточно свободного IP-адресов, чтобы вместить количество узлов в пуле.</span><span class="sxs-lookup"><span data-stu-id="cff9a-106">The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool.</span></span> <span data-ttu-id="cff9a-107">Если подсеть не имеет достаточно свободного IP-адресов, пул выделит частично вычислительных узлов, и возникнет ошибка изменения размера.</span><span class="sxs-lookup"><span data-stu-id="cff9a-107">If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur.</span></span> <span data-ttu-id="cff9a-108">Для пулов, созданных с помощью virtualMachineConfiguration поддерживаются только ARM виртуальные сети («Microsoft.Network/virtualNetworks»), но для пулов, созданных с помощью cloudServiceConfiguration поддерживаются ARM и классических виртуальных сетей.</span><span class="sxs-lookup"><span data-stu-id="cff9a-108">For pools created with virtualMachineConfiguration only ARM virtual networks ('Microsoft.Network/virtualNetworks') are supported, but for pools created with cloudServiceConfiguration both ARM and classic virtual networks are supported.</span></span> <span data-ttu-id="cff9a-109">Дополнительные сведения см. в разделе: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="cff9a-109">For more details, see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>
+  optional: true
+  syntax:
+    content: 'subnetId?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.PoolEndpointConfiguration
+  name: PoolEndpointConfiguration
+  spec.typeScript:
+  - name: PoolEndpointConfiguration
+    fullName: PoolEndpointConfiguration
+    uid: azure-batch.PoolEndpointConfiguration
