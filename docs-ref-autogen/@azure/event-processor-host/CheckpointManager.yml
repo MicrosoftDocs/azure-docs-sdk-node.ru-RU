@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a00377b11a0a4f5c6d2453d40f079b28cb2f6aff
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52121122"
+items:
+- uid: '@azure/event-processor-host.CheckpointManager'
+  name: CheckpointManager
+  fullName: CheckpointManager
+  children:
+  - '@azure/event-processor-host.CheckpointManager.checkpointStoreExists'
+  - '@azure/event-processor-host.CheckpointManager.createAllCheckpointsIfNotExists'
+  - '@azure/event-processor-host.CheckpointManager.createCheckpointStoreIfNotExists'
+  - '@azure/event-processor-host.CheckpointManager.deleteCheckpoint'
+  - '@azure/event-processor-host.CheckpointManager.deleteCheckpointStore'
+  - '@azure/event-processor-host.CheckpointManager.getCheckpoint'
+  - '@azure/event-processor-host.CheckpointManager.updateCheckpoint'
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.checkpointStoreExists'
+  name: checkpointStoreExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Хранилище контрольных точек существует?
+  syntax:
+    content: function checkpointStoreExists()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.createAllCheckpointsIfNotExists'
+  name: createAllCheckpointsIfNotExists(string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Создает контрольную точку лиц для заданной секции. Не выполняет никаких действий для любой контрольной точки лиц, которые уже существуют.
+
+    Семантика этого, сложны, так как это можно использовать то же хранилище для аренды и контрольные точки (реализации хранилища Azure делает это) и необходимо иметь аренду для каждой секции, но не требуется иметь контрольную точку для секции.
+
+    Это недопустимый сценарий вообще никогда не использовать контрольные точки, поэтому очень важно для хранилища, чтобы различать Создание structure(s), который будет содержать контрольную точку и фактически создается контрольная точка (хранение пару смещение и порядковый номер в структуре).
+  syntax:
+    content: 'function createAllCheckpointsIfNotExists(partitionIds: string[])'
+    parameters:
+    - id: partitionIds
+      type:
+      - string[]
+      description: Список разделов, которые создаются держателей контрольной точки для.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.createCheckpointStoreIfNotExists'
+  name: createCheckpointStoreIfNotExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создайте хранилище контрольной точки, если он не существует. Не выполняет никаких действий, если он существует.
+  syntax:
+    content: function createCheckpointStoreIfNotExists()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.deleteCheckpoint'
+  name: deleteCheckpoint(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление сохраненной контрольной точки для заданной секции. Если нет сохраненной контрольной точки для заданной секции, которые воспринимается как успех. Удаление контрольной точки ДЕРЖАТЕЛЬ разрешено, но является не обязательным компонентом; Реализация может делать вам удобнее.
+  syntax:
+    content: 'function deleteCheckpoint(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: PartitionId, чтобы удалить контрольную точку в магазине.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.deleteCheckpointStore'
+  name: deleteCheckpointStore()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаляет хранилище контрольной точки.
+  syntax:
+    content: function deleteCheckpointStore()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.getCheckpoint'
+  name: getCheckpoint(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает сведения о контрольной точки, относящееся к заданной секции. Могут возвращать неопределенным, если никакая контрольная точка создана для этой секции.
+  syntax:
+    content: 'function getCheckpoint(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: Для получения сведений о контрольной точке для partitionId.
+    return:
+      type:
+      - Promise<@azure/event-processor-host.CheckpointInfo | undefined>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.updateCheckpoint'
+  name: updateCheckpoint(CompleteLease, CheckpointInfo)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновите контрольную точку в хранилище с offset/sequenceNumber в предоставленный контрольной точки.
+  syntax:
+    content: 'function updateCheckpoint(lease: CompleteLease, checkpoint: CheckpointInfo)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: Сведения о разделах, по которой следует произвести контрольную точку.
+    - id: checkpoint
+      type:
+      - '@azure/event-processor-host.CheckpointInfo'
+      description: Смещение/sequeceNumber для обновления в хранилище
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+references:
+- uid: Promise<@azure/event-processor-host.CheckpointInfo | undefined>
+  name: CheckpointInfo | undefined>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CheckpointInfo
+    fullName: CheckpointInfo
+    uid: '@azure/event-processor-host.CheckpointInfo'
+  - name: " | undefined>"
+    fullName: " | undefined>"
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+- uid: '@azure/event-processor-host.CheckpointInfo'
+  name: CheckpointInfo
+  spec.typeScript:
+  - name: CheckpointInfo
+    fullName: CheckpointInfo
+    uid: '@azure/event-processor-host.CheckpointInfo'

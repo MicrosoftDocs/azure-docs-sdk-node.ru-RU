@@ -1,22 +1,22 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 84faabc0a91c666d0d7c475afa5171cee8296a1c
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 6ea23e13bccefb459f8ee578701e2dad9af4d4af
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41614529"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52073429"
 items:
 - uid: azure-arm-batch.Location
   name: Location
   fullName: Location
   children:
   - azure-arm-batch.Location.checkNameAvailability
-  - azure-arm-batch.Location.checkNameAvailability_1
   - azure-arm-batch.Location.checkNameAvailability_2
+  - azure-arm-batch.Location.checkNameAvailability_1
   - azure-arm-batch.Location.checkNameAvailabilityWithHttpOperationResponse
   - azure-arm-batch.Location.getQuotas
-  - azure-arm-batch.Location.getQuotas_1
   - azure-arm-batch.Location.getQuotas_2
+  - azure-arm-batch.Location.getQuotas_1
   - azure-arm-batch.Location.getQuotasWithHttpOperationResponse
   langs:
   - typeScript
@@ -24,7 +24,7 @@ items:
   summary: ''
   package: azure-arm-batch
 - uid: azure-arm-batch.Location.checkNameAvailability
-  name: checkNameAvailability
+  name: checkNameAvailability(string, string, Object)
   children: []
   type: method
   langs:
@@ -52,34 +52,8 @@ items:
       type:
       - Promise<azure-arm-batch.CheckNameAvailabilityResult>
   package: azure-arm-batch
-- uid: azure-arm-batch.Location.checkNameAvailability_1
-  name: checkNameAvailability
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Проверяет, доступно ли имя учетной записи пакетной службы в указанном регионе.
-  syntax:
-    content: 'function checkNameAvailability(locationName: string, name: string, callback: ServiceCallback<CheckNameAvailabilityResult>)'
-    parameters:
-    - id: locationName
-      type:
-      - string
-      description: ''
-    - id: name
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-batch.CheckNameAvailabilityResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-batch.CheckNameAvailabilityResult>
-  package: azure-arm-batch
 - uid: azure-arm-batch.Location.checkNameAvailability_2
-  name: checkNameAvailability
+  name: checkNameAvailability(string, string, Object, ServiceCallback<CheckNameAvailabilityResult>)
   children: []
   type: method
   langs:
@@ -108,8 +82,34 @@ items:
       type:
       - Promise<azure-arm-batch.CheckNameAvailabilityResult>
   package: azure-arm-batch
+- uid: azure-arm-batch.Location.checkNameAvailability_1
+  name: checkNameAvailability(string, string, ServiceCallback<CheckNameAvailabilityResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Проверяет, доступно ли имя учетной записи пакетной службы в указанном регионе.
+  syntax:
+    content: 'function checkNameAvailability(locationName: string, name: string, callback: ServiceCallback<CheckNameAvailabilityResult>)'
+    parameters:
+    - id: locationName
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.CheckNameAvailabilityResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.CheckNameAvailabilityResult>
+  package: azure-arm-batch
 - uid: azure-arm-batch.Location.checkNameAvailabilityWithHttpOperationResponse
-  name: checkNameAvailabilityWithHttpOperationResponse
+  name: checkNameAvailabilityWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -138,7 +138,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-batch.CheckNameAvailabilityResult>>
   package: azure-arm-batch
 - uid: azure-arm-batch.Location.getQuotas
-  name: getQuotas
+  name: getQuotas(string, Object)
   children: []
   type: method
   langs:
@@ -161,30 +161,8 @@ items:
       type:
       - Promise<azure-arm-batch.BatchLocationQuota>
   package: azure-arm-batch
-- uid: azure-arm-batch.Location.getQuotas_1
-  name: getQuotas
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает квоты пакетной службы для указанной подписки в заданном расположении.
-  syntax:
-    content: 'function getQuotas(locationName: string, callback: ServiceCallback<BatchLocationQuota>)'
-    parameters:
-    - id: locationName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-batch.BatchLocationQuota>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-batch.BatchLocationQuota>
-  package: azure-arm-batch
 - uid: azure-arm-batch.Location.getQuotas_2
-  name: getQuotas
+  name: getQuotas(string, Object, ServiceCallback<BatchLocationQuota>)
   children: []
   type: method
   langs:
@@ -209,8 +187,30 @@ items:
       type:
       - Promise<azure-arm-batch.BatchLocationQuota>
   package: azure-arm-batch
+- uid: azure-arm-batch.Location.getQuotas_1
+  name: getQuotas(string, ServiceCallback<BatchLocationQuota>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает квоты пакетной службы для указанной подписки в заданном расположении.
+  syntax:
+    content: 'function getQuotas(locationName: string, callback: ServiceCallback<BatchLocationQuota>)'
+    parameters:
+    - id: locationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.BatchLocationQuota>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.BatchLocationQuota>
+  package: azure-arm-batch
 - uid: azure-arm-batch.Location.getQuotasWithHttpOperationResponse
-  name: getQuotasWithHttpOperationResponse
+  name: getQuotasWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -235,6 +235,7 @@ items:
   package: azure-arm-batch
 references:
 - uid: Promise<azure-arm-batch.CheckNameAvailabilityResult>
+  name: CheckNameAvailabilityResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -244,6 +245,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-batch.CheckNameAvailabilityResult>
+  name: CheckNameAvailabilityResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -253,6 +255,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-batch.CheckNameAvailabilityResult>>
+  name: CheckNameAvailabilityResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -262,6 +265,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-batch.BatchLocationQuota>
+  name: BatchLocationQuota>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -271,6 +275,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-batch.BatchLocationQuota>
+  name: BatchLocationQuota>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -280,6 +285,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-batch.BatchLocationQuota>>
+  name: BatchLocationQuota>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

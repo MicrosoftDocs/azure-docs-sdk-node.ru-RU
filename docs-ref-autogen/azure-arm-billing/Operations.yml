@@ -1,21 +1,21 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 17805728c4fef791b19dcf34b6ed6524facd18e5
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 5482a1b9a3bb7db99c87a5f15a76f1c025c86143
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41688112"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52077968"
 items:
 - uid: azure-arm-billing.Operations
   name: Operations
   fullName: Operations
   children:
   - azure-arm-billing.Operations.list
-  - azure-arm-billing.Operations.list_1
   - azure-arm-billing.Operations.list_2
+  - azure-arm-billing.Operations.list_1
   - azure-arm-billing.Operations.listNext
-  - azure-arm-billing.Operations.listNext_1
   - azure-arm-billing.Operations.listNext_2
+  - azure-arm-billing.Operations.listNext_1
   - azure-arm-billing.Operations.listNextWithHttpOperationResponse
   - azure-arm-billing.Operations.listWithHttpOperationResponse
   langs:
@@ -24,7 +24,7 @@ items:
   summary: ''
   package: azure-arm-billing
 - uid: azure-arm-billing.Operations.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -42,26 +42,8 @@ items:
       type:
       - Promise<azure-arm-billing.OperationListResult>
   package: azure-arm-billing
-- uid: azure-arm-billing.Operations.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список всех доступных операций REST API выставления счетов.
-  syntax:
-    content: 'function list(callback: ServiceCallback<OperationListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-billing.OperationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-billing.OperationListResult>
-  package: azure-arm-billing
 - uid: azure-arm-billing.Operations.list_2
-  name: list
+  name: list(Object, ServiceCallback<OperationListResult>)
   children: []
   type: method
   langs:
@@ -82,8 +64,26 @@ items:
       type:
       - Promise<azure-arm-billing.OperationListResult>
   package: azure-arm-billing
+- uid: azure-arm-billing.Operations.list_1
+  name: list(ServiceCallback<OperationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список всех доступных операций REST API выставления счетов.
+  syntax:
+    content: 'function list(callback: ServiceCallback<OperationListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-billing.OperationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-billing.OperationListResult>
+  package: azure-arm-billing
 - uid: azure-arm-billing.Operations.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -106,30 +106,8 @@ items:
       type:
       - Promise<azure-arm-billing.OperationListResult>
   package: azure-arm-billing
-- uid: azure-arm-billing.Operations.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список всех доступных операций REST API выставления счетов.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<OperationListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-billing.OperationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-billing.OperationListResult>
-  package: azure-arm-billing
 - uid: azure-arm-billing.Operations.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<OperationListResult>)
   children: []
   type: method
   langs:
@@ -154,8 +132,30 @@ items:
       type:
       - Promise<azure-arm-billing.OperationListResult>
   package: azure-arm-billing
+- uid: azure-arm-billing.Operations.listNext_1
+  name: listNext(string, ServiceCallback<OperationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список всех доступных операций REST API выставления счетов.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<OperationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-billing.OperationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-billing.OperationListResult>
+  package: azure-arm-billing
 - uid: azure-arm-billing.Operations.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -179,7 +179,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-billing.OperationListResult>>
   package: azure-arm-billing
 - uid: azure-arm-billing.Operations.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -199,6 +199,7 @@ items:
   package: azure-arm-billing
 references:
 - uid: Promise<azure-arm-billing.OperationListResult>
+  name: OperationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -208,6 +209,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-billing.OperationListResult>
+  name: OperationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -217,6 +219,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-billing.OperationListResult>>
+  name: OperationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

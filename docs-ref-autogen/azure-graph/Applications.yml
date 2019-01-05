@@ -1,62 +1,70 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: a74df29fc35397975f1e1e86c1d59dab73bdb7c0
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 5a71d9283d7baf4e04a31ed8dc720da2b55df30d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41689883"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52110048"
 items:
 - uid: azure-graph.Applications
   name: Applications
   fullName: Applications
   children:
   - azure-graph.Applications.addOwner
-  - azure-graph.Applications.addOwner_1
   - azure-graph.Applications.addOwner_2
+  - azure-graph.Applications.addOwner_1
   - azure-graph.Applications.addOwnerWithHttpOperationResponse
   - azure-graph.Applications.create
   - azure-graph.Applications.create_2
   - azure-graph.Applications.create_1
   - azure-graph.Applications.createWithHttpOperationResponse
   - azure-graph.Applications.deleteMethod
-  - azure-graph.Applications.deleteMethod_1
   - azure-graph.Applications.deleteMethod_2
+  - azure-graph.Applications.deleteMethod_1
   - azure-graph.Applications.deleteMethodWithHttpOperationResponse
-  - azure-graph.Applications.get_1
   - azure-graph.Applications.get
   - azure-graph.Applications.get_2
+  - azure-graph.Applications.get_1
   - azure-graph.Applications.getWithHttpOperationResponse
   - azure-graph.Applications.list
-  - azure-graph.Applications.list_1
   - azure-graph.Applications.list_2
+  - azure-graph.Applications.list_1
   - azure-graph.Applications.listKeyCredentials
-  - azure-graph.Applications.listKeyCredentials_1
   - azure-graph.Applications.listKeyCredentials_2
+  - azure-graph.Applications.listKeyCredentials_1
   - azure-graph.Applications.listKeyCredentialsWithHttpOperationResponse
   - azure-graph.Applications.listNext
-  - azure-graph.Applications.listNext_1
   - azure-graph.Applications.listNext_2
+  - azure-graph.Applications.listNext_1
   - azure-graph.Applications.listNextWithHttpOperationResponse
-  - azure-graph.Applications.listOwners_1
-  - azure-graph.Applications.listOwners_2
   - azure-graph.Applications.listOwners
+  - azure-graph.Applications.listOwners_2
+  - azure-graph.Applications.listOwners_1
+  - azure-graph.Applications.listOwnersNext
+  - azure-graph.Applications.listOwnersNext_2
+  - azure-graph.Applications.listOwnersNext_1
+  - azure-graph.Applications.listOwnersNextWithHttpOperationResponse
   - azure-graph.Applications.listOwnersWithHttpOperationResponse
   - azure-graph.Applications.listPasswordCredentials
-  - azure-graph.Applications.listPasswordCredentials_1
   - azure-graph.Applications.listPasswordCredentials_2
+  - azure-graph.Applications.listPasswordCredentials_1
   - azure-graph.Applications.listPasswordCredentialsWithHttpOperationResponse
   - azure-graph.Applications.listWithHttpOperationResponse
   - azure-graph.Applications.patch
-  - azure-graph.Applications.patch_1
   - azure-graph.Applications.patch_2
+  - azure-graph.Applications.patch_1
   - azure-graph.Applications.patchWithHttpOperationResponse
+  - azure-graph.Applications.removeOwner
+  - azure-graph.Applications.removeOwner_2
+  - azure-graph.Applications.removeOwner_1
+  - azure-graph.Applications.removeOwnerWithHttpOperationResponse
   - azure-graph.Applications.updateKeyCredentials
-  - azure-graph.Applications.updateKeyCredentials_1
   - azure-graph.Applications.updateKeyCredentials_2
+  - azure-graph.Applications.updateKeyCredentials_1
   - azure-graph.Applications.updateKeyCredentialsWithHttpOperationResponse
   - azure-graph.Applications.updatePasswordCredentials
-  - azure-graph.Applications.updatePasswordCredentials_1
   - azure-graph.Applications.updatePasswordCredentials_2
+  - azure-graph.Applications.updatePasswordCredentials_1
   - azure-graph.Applications.updatePasswordCredentialsWithHttpOperationResponse
   langs:
   - typeScript
@@ -64,14 +72,14 @@ items:
   summary: ''
   package: azure-graph
 - uid: azure-graph.Applications.addOwner
-  name: addOwner
+  name: addOwner(string, AddOwnerParameters, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Добавление владельца приложения.
   syntax:
-    content: 'function addOwner(applicationObjectId: string, parameters: ApplicationAddOwnerParameters, options?: Object)'
+    content: 'function addOwner(applicationObjectId: string, parameters: AddOwnerParameters, options?: Object)'
     parameters:
     - id: applicationObjectId
       type:
@@ -80,7 +88,7 @@ items:
         Идентификатор объекта, к которому необходимо добавить владельца приложения.
     - id: parameters
       type:
-      - azure-graph.ApplicationAddOwnerParameters
+      - azure-graph.AddOwnerParameters
       description: >
         URL-адрес владельца объекта, например https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
     - id: options
@@ -92,41 +100,15 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Applications.addOwner_1
-  name: addOwner
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Добавление владельца приложения.
-  syntax:
-    content: 'function addOwner(applicationObjectId: string, parameters: ApplicationAddOwnerParameters, callback: ServiceCallback<void>)'
-    parameters:
-    - id: applicationObjectId
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-graph.ApplicationAddOwnerParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-graph
 - uid: azure-graph.Applications.addOwner_2
-  name: addOwner
+  name: addOwner(string, AddOwnerParameters, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Добавление владельца приложения.
   syntax:
-    content: 'function addOwner(applicationObjectId: string, parameters: ApplicationAddOwnerParameters, options: Object, callback: ServiceCallback<void>)'
+    content: 'function addOwner(applicationObjectId: string, parameters: AddOwnerParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: applicationObjectId
       type:
@@ -134,7 +116,7 @@ items:
       description: ''
     - id: parameters
       type:
-      - azure-graph.ApplicationAddOwnerParameters
+      - azure-graph.AddOwnerParameters
       description: ''
     - id: options
       type:
@@ -148,15 +130,41 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Applications.addOwnerWithHttpOperationResponse
-  name: addOwnerWithHttpOperationResponse
+- uid: azure-graph.Applications.addOwner_1
+  name: addOwner(string, AddOwnerParameters, ServiceCallback<void>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Добавление владельца приложения.
   syntax:
-    content: 'function addOwnerWithHttpOperationResponse(applicationObjectId: string, parameters: ApplicationAddOwnerParameters, options?: Object)'
+    content: 'function addOwner(applicationObjectId: string, parameters: AddOwnerParameters, callback: ServiceCallback<void>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-graph.AddOwnerParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Applications.addOwnerWithHttpOperationResponse
+  name: addOwnerWithHttpOperationResponse(string, AddOwnerParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Добавление владельца приложения.
+  syntax:
+    content: 'function addOwnerWithHttpOperationResponse(applicationObjectId: string, parameters: AddOwnerParameters, options?: Object)'
     parameters:
     - id: applicationObjectId
       type:
@@ -165,7 +173,7 @@ items:
         Идентификатор объекта, к которому необходимо добавить владельца приложения.
     - id: parameters
       type:
-      - azure-graph.ApplicationAddOwnerParameters
+      - azure-graph.AddOwnerParameters
       description: >
         URL-адрес владельца объекта, например https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
     - id: options
@@ -178,7 +186,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-graph
 - uid: azure-graph.Applications.create
-  name: create
+  name: create(ApplicationCreateParameters, Object)
   children: []
   type: method
   langs:
@@ -202,7 +210,7 @@ items:
       - Promise<azure-graph.Application>
   package: azure-graph
 - uid: azure-graph.Applications.create_2
-  name: create
+  name: create(ApplicationCreateParameters, Object, ServiceCallback<Application>)
   children: []
   type: method
   langs:
@@ -228,7 +236,7 @@ items:
       - Promise<azure-graph.Application>
   package: azure-graph
 - uid: azure-graph.Applications.create_1
-  name: create
+  name: create(ApplicationCreateParameters, ServiceCallback<Application>)
   children: []
   type: method
   langs:
@@ -250,7 +258,7 @@ items:
       - Promise<azure-graph.Application>
   package: azure-graph
 - uid: azure-graph.Applications.createWithHttpOperationResponse
-  name: createWithHttpOperationResponse
+  name: createWithHttpOperationResponse(ApplicationCreateParameters, Object)
   children: []
   type: method
   langs:
@@ -274,7 +282,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.Application>>
   package: azure-graph
 - uid: azure-graph.Applications.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, Object)
   children: []
   type: method
   langs:
@@ -297,30 +305,8 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Applications.deleteMethod_1
-  name: deleteMethod
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Удалите приложение.
-  syntax:
-    content: 'function deleteMethod(applicationObjectId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: applicationObjectId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-graph
 - uid: azure-graph.Applications.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -345,8 +331,30 @@ items:
       type:
       - Promise<void>
   package: azure-graph
+- uid: azure-graph.Applications.deleteMethod_1
+  name: deleteMethod(string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удалите приложение.
+  syntax:
+    content: 'function deleteMethod(applicationObjectId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
 - uid: azure-graph.Applications.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -369,30 +377,8 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-graph
-- uid: azure-graph.Applications.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получить приложение по идентификатору объекта.
-  syntax:
-    content: 'function get(applicationObjectId: string, callback: ServiceCallback<Application>)'
-    parameters:
-    - id: applicationObjectId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.Application>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.Application>
-  package: azure-graph
 - uid: azure-graph.Applications.get
-  name: get
+  name: get(string, Object)
   children: []
   type: method
   langs:
@@ -416,7 +402,7 @@ items:
       - Promise<azure-graph.Application>
   package: azure-graph
 - uid: azure-graph.Applications.get_2
-  name: get
+  name: get(string, Object, ServiceCallback<Application>)
   children: []
   type: method
   langs:
@@ -441,8 +427,30 @@ items:
       type:
       - Promise<azure-graph.Application>
   package: azure-graph
+- uid: azure-graph.Applications.get_1
+  name: get(string, ServiceCallback<Application>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить приложение по идентификатору объекта.
+  syntax:
+    content: 'function get(applicationObjectId: string, callback: ServiceCallback<Application>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.Application>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.Application>
+  package: azure-graph
 - uid: azure-graph.Applications.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -466,7 +474,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.Application>>
   package: azure-graph
 - uid: azure-graph.Applications.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -484,26 +492,8 @@ items:
       type:
       - Promise<azure-graph.ApplicationListResult>
   package: azure-graph
-- uid: azure-graph.Applications.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список приложений, параметров фильтра.
-  syntax:
-    content: 'function list(callback: ServiceCallback<ApplicationListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.ApplicationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.ApplicationListResult>
-  package: azure-graph
 - uid: azure-graph.Applications.list_2
-  name: list
+  name: list(Object, ServiceCallback<ApplicationListResult>)
   children: []
   type: method
   langs:
@@ -524,8 +514,26 @@ items:
       type:
       - Promise<azure-graph.ApplicationListResult>
   package: azure-graph
+- uid: azure-graph.Applications.list_1
+  name: list(ServiceCallback<ApplicationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список приложений, параметров фильтра.
+  syntax:
+    content: 'function list(callback: ServiceCallback<ApplicationListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.ApplicationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.ApplicationListResult>
+  package: azure-graph
 - uid: azure-graph.Applications.listKeyCredentials
-  name: listKeyCredentials
+  name: listKeyCredentials(string, Object)
   children: []
   type: method
   langs:
@@ -548,30 +556,8 @@ items:
       type:
       - Promise<azure-graph.KeyCredentialListResult>
   package: azure-graph
-- uid: azure-graph.Applications.listKeyCredentials_1
-  name: listKeyCredentials
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получите keyCredentials, связанных с приложением.
-  syntax:
-    content: 'function listKeyCredentials(applicationObjectId: string, callback: ServiceCallback<KeyCredentialListResult>)'
-    parameters:
-    - id: applicationObjectId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.KeyCredentialListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.KeyCredentialListResult>
-  package: azure-graph
 - uid: azure-graph.Applications.listKeyCredentials_2
-  name: listKeyCredentials
+  name: listKeyCredentials(string, Object, ServiceCallback<KeyCredentialListResult>)
   children: []
   type: method
   langs:
@@ -596,8 +582,30 @@ items:
       type:
       - Promise<azure-graph.KeyCredentialListResult>
   package: azure-graph
+- uid: azure-graph.Applications.listKeyCredentials_1
+  name: listKeyCredentials(string, ServiceCallback<KeyCredentialListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получите keyCredentials, связанных с приложением.
+  syntax:
+    content: 'function listKeyCredentials(applicationObjectId: string, callback: ServiceCallback<KeyCredentialListResult>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.KeyCredentialListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.KeyCredentialListResult>
+  package: azure-graph
 - uid: azure-graph.Applications.listKeyCredentialsWithHttpOperationResponse
-  name: listKeyCredentialsWithHttpOperationResponse
+  name: listKeyCredentialsWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -621,7 +629,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.KeyCredentialListResult>>
   package: azure-graph
 - uid: azure-graph.Applications.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -644,30 +652,8 @@ items:
       type:
       - Promise<azure-graph.ApplicationListResult>
   package: azure-graph
-- uid: azure-graph.Applications.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает список приложений из текущего клиента.
-  syntax:
-    content: 'function listNext(nextLink: string, callback: ServiceCallback<ApplicationListResult>)'
-    parameters:
-    - id: nextLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.ApplicationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.ApplicationListResult>
-  package: azure-graph
 - uid: azure-graph.Applications.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<ApplicationListResult>)
   children: []
   type: method
   langs:
@@ -692,8 +678,30 @@ items:
       type:
       - Promise<azure-graph.ApplicationListResult>
   package: azure-graph
+- uid: azure-graph.Applications.listNext_1
+  name: listNext(string, ServiceCallback<ApplicationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает список приложений из текущего клиента.
+  syntax:
+    content: 'function listNext(nextLink: string, callback: ServiceCallback<ApplicationListResult>)'
+    parameters:
+    - id: nextLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.ApplicationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.ApplicationListResult>
+  package: azure-graph
 - uid: azure-graph.Applications.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -716,30 +724,32 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-graph.ApplicationListResult>>
   package: azure-graph
-- uid: azure-graph.Applications.listOwners_1
-  name: listOwners
+- uid: azure-graph.Applications.listOwners
+  name: listOwners(string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listOwners(applicationObjectId: string, callback: ServiceCallback<DirectoryObjectListResult>)'
+    content: 'function listOwners(applicationObjectId: string, options?: Object)'
     parameters:
     - id: applicationObjectId
       type:
       - string
-      description: ''
-    - id: callback
+      description: >
+        Идентификатор объекта приложения, для которого необходимо получить владельцев.
+    - id: options
       type:
-      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      - Object
       description: ''
+      optional: true
     return:
       type:
       - Promise<azure-graph.DirectoryObjectListResult>
   package: azure-graph
 - uid: azure-graph.Applications.listOwners_2
-  name: listOwners
+  name: listOwners(string, Object, ServiceCallback<DirectoryObjectListResult>)
   children: []
   type: method
   langs:
@@ -764,21 +774,43 @@ items:
       type:
       - Promise<azure-graph.DirectoryObjectListResult>
   package: azure-graph
-- uid: azure-graph.Applications.listOwners
-  name: listOwners
+- uid: azure-graph.Applications.listOwners_1
+  name: listOwners(string, ServiceCallback<DirectoryObjectListResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listOwners(applicationObjectId: string, options?: Object)'
+    content: 'function listOwners(applicationObjectId: string, callback: ServiceCallback<DirectoryObjectListResult>)'
     parameters:
     - id: applicationObjectId
       type:
       - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Applications.listOwnersNext
+  name: listOwnersNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
       description: >
-        Идентификатор объекта приложения, для которого необходимо получить владельцев.
+        NextLink из предыдущего успешного вызова операции List.
     - id: options
       type:
       - Object
@@ -788,8 +820,80 @@ items:
       type:
       - Promise<azure-graph.DirectoryObjectListResult>
   package: azure-graph
+- uid: azure-graph.Applications.listOwnersNext_2
+  name: listOwnersNext(string, Object, ServiceCallback<DirectoryObjectListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersNext(nextPageLink: string, options: Object, callback: ServiceCallback<DirectoryObjectListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Applications.listOwnersNext_1
+  name: listOwnersNext(string, ServiceCallback<DirectoryObjectListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersNext(nextPageLink: string, callback: ServiceCallback<DirectoryObjectListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Applications.listOwnersNextWithHttpOperationResponse
+  name: listOwnersNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-graph.DirectoryObjectListResult>>
+  package: azure-graph
 - uid: azure-graph.Applications.listOwnersWithHttpOperationResponse
-  name: listOwnersWithHttpOperationResponse
+  name: listOwnersWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -813,7 +917,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.DirectoryObjectListResult>>
   package: azure-graph
 - uid: azure-graph.Applications.listPasswordCredentials
-  name: listPasswordCredentials
+  name: listPasswordCredentials(string, Object)
   children: []
   type: method
   langs:
@@ -836,30 +940,8 @@ items:
       type:
       - Promise<azure-graph.PasswordCredentialListResult>
   package: azure-graph
-- uid: azure-graph.Applications.listPasswordCredentials_1
-  name: listPasswordCredentials
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получите passwordCredentials, связанных с приложением.
-  syntax:
-    content: 'function listPasswordCredentials(applicationObjectId: string, callback: ServiceCallback<PasswordCredentialListResult>)'
-    parameters:
-    - id: applicationObjectId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.PasswordCredentialListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.PasswordCredentialListResult>
-  package: azure-graph
 - uid: azure-graph.Applications.listPasswordCredentials_2
-  name: listPasswordCredentials
+  name: listPasswordCredentials(string, Object, ServiceCallback<PasswordCredentialListResult>)
   children: []
   type: method
   langs:
@@ -884,8 +966,30 @@ items:
       type:
       - Promise<azure-graph.PasswordCredentialListResult>
   package: azure-graph
+- uid: azure-graph.Applications.listPasswordCredentials_1
+  name: listPasswordCredentials(string, ServiceCallback<PasswordCredentialListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получите passwordCredentials, связанных с приложением.
+  syntax:
+    content: 'function listPasswordCredentials(applicationObjectId: string, callback: ServiceCallback<PasswordCredentialListResult>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.PasswordCredentialListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.PasswordCredentialListResult>
+  package: azure-graph
 - uid: azure-graph.Applications.listPasswordCredentialsWithHttpOperationResponse
-  name: listPasswordCredentialsWithHttpOperationResponse
+  name: listPasswordCredentialsWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -909,7 +1013,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.PasswordCredentialListResult>>
   package: azure-graph
 - uid: azure-graph.Applications.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -928,7 +1032,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.ApplicationListResult>>
   package: azure-graph
 - uid: azure-graph.Applications.patch
-  name: patch
+  name: patch(string, ApplicationUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -956,34 +1060,8 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Applications.patch_1
-  name: patch
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновление существующего приложения.
-  syntax:
-    content: 'function patch(applicationObjectId: string, parameters: ApplicationUpdateParameters, callback: ServiceCallback<void>)'
-    parameters:
-    - id: applicationObjectId
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-graph.ApplicationUpdateParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-graph
 - uid: azure-graph.Applications.patch_2
-  name: patch
+  name: patch(string, ApplicationUpdateParameters, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -1012,8 +1090,34 @@ items:
       type:
       - Promise<void>
   package: azure-graph
+- uid: azure-graph.Applications.patch_1
+  name: patch(string, ApplicationUpdateParameters, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновление существующего приложения.
+  syntax:
+    content: 'function patch(applicationObjectId: string, parameters: ApplicationUpdateParameters, callback: ServiceCallback<void>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-graph.ApplicationUpdateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
 - uid: azure-graph.Applications.patchWithHttpOperationResponse
-  name: patchWithHttpOperationResponse
+  name: patchWithHttpOperationResponse(string, ApplicationUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -1041,8 +1145,122 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-graph
+- uid: azure-graph.Applications.removeOwner
+  name: removeOwner(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из владельцев.
+  syntax:
+    content: 'function removeOwner(applicationObjectId: string, ownerObjectId: string, options?: Object)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: >
+        Идентификатор объекта, из которого нужно удалить владельца приложения.
+    - id: ownerObjectId
+      type:
+      - string
+      description: >
+        Идентификатор владельца объекта
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Applications.removeOwner_2
+  name: removeOwner(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из владельцев.
+  syntax:
+    content: 'function removeOwner(applicationObjectId: string, ownerObjectId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: ownerObjectId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Applications.removeOwner_1
+  name: removeOwner(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из владельцев.
+  syntax:
+    content: 'function removeOwner(applicationObjectId: string, ownerObjectId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: ownerObjectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Applications.removeOwnerWithHttpOperationResponse
+  name: removeOwnerWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из владельцев.
+  syntax:
+    content: 'function removeOwnerWithHttpOperationResponse(applicationObjectId: string, ownerObjectId: string, options?: Object)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: >
+        Идентификатор объекта, из которого нужно удалить владельца приложения.
+    - id: ownerObjectId
+      type:
+      - string
+      description: >
+        Идентификатор владельца объекта
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-graph
 - uid: azure-graph.Applications.updateKeyCredentials
-  name: updateKeyCredentials
+  name: updateKeyCredentials(string, KeyCredential[], Object)
   children: []
   type: method
   langs:
@@ -1070,34 +1288,8 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Applications.updateKeyCredentials_1
-  name: updateKeyCredentials
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновите keyCredentials, связанных с приложением.
-  syntax:
-    content: 'function updateKeyCredentials(applicationObjectId: string, value: KeyCredential[], callback: ServiceCallback<void>)'
-    parameters:
-    - id: applicationObjectId
-      type:
-      - string
-      description: ''
-    - id: value
-      type:
-      - azure-graph.KeyCredential[]
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-graph
 - uid: azure-graph.Applications.updateKeyCredentials_2
-  name: updateKeyCredentials
+  name: updateKeyCredentials(string, KeyCredential[], Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -1126,8 +1318,34 @@ items:
       type:
       - Promise<void>
   package: azure-graph
+- uid: azure-graph.Applications.updateKeyCredentials_1
+  name: updateKeyCredentials(string, KeyCredential[], ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновите keyCredentials, связанных с приложением.
+  syntax:
+    content: 'function updateKeyCredentials(applicationObjectId: string, value: KeyCredential[], callback: ServiceCallback<void>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: value
+      type:
+      - azure-graph.KeyCredential[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
 - uid: azure-graph.Applications.updateKeyCredentialsWithHttpOperationResponse
-  name: updateKeyCredentialsWithHttpOperationResponse
+  name: updateKeyCredentialsWithHttpOperationResponse(string, KeyCredential[], Object)
   children: []
   type: method
   langs:
@@ -1156,7 +1374,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-graph
 - uid: azure-graph.Applications.updatePasswordCredentials
-  name: updatePasswordCredentials
+  name: updatePasswordCredentials(string, PasswordCredential[], Object)
   children: []
   type: method
   langs:
@@ -1184,34 +1402,8 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Applications.updatePasswordCredentials_1
-  name: updatePasswordCredentials
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновите passwordCredentials, связанных с приложением.
-  syntax:
-    content: 'function updatePasswordCredentials(applicationObjectId: string, value: PasswordCredential[], callback: ServiceCallback<void>)'
-    parameters:
-    - id: applicationObjectId
-      type:
-      - string
-      description: ''
-    - id: value
-      type:
-      - azure-graph.PasswordCredential[]
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-graph
 - uid: azure-graph.Applications.updatePasswordCredentials_2
-  name: updatePasswordCredentials
+  name: updatePasswordCredentials(string, PasswordCredential[], Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -1240,8 +1432,34 @@ items:
       type:
       - Promise<void>
   package: azure-graph
+- uid: azure-graph.Applications.updatePasswordCredentials_1
+  name: updatePasswordCredentials(string, PasswordCredential[], ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновите passwordCredentials, связанных с приложением.
+  syntax:
+    content: 'function updatePasswordCredentials(applicationObjectId: string, value: PasswordCredential[], callback: ServiceCallback<void>)'
+    parameters:
+    - id: applicationObjectId
+      type:
+      - string
+      description: ''
+    - id: value
+      type:
+      - azure-graph.PasswordCredential[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
 - uid: azure-graph.Applications.updatePasswordCredentialsWithHttpOperationResponse
-  name: updatePasswordCredentialsWithHttpOperationResponse
+  name: updatePasswordCredentialsWithHttpOperationResponse(string, PasswordCredential[], Object)
   children: []
   type: method
   langs:
@@ -1270,17 +1488,20 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-graph
 references:
-- uid: azure-graph.ApplicationAddOwnerParameters
+- uid: azure-graph.AddOwnerParameters
+  name: AddOwnerParameters
   spec.typeScript:
-  - name: ApplicationAddOwnerParameters
-    fullName: ApplicationAddOwnerParameters
-    uid: azure-graph.ApplicationAddOwnerParameters
+  - name: AddOwnerParameters
+    fullName: AddOwnerParameters
+    uid: azure-graph.AddOwnerParameters
 - uid: azure-graph.ApplicationCreateParameters
+  name: ApplicationCreateParameters
   spec.typeScript:
   - name: ApplicationCreateParameters
     fullName: ApplicationCreateParameters
     uid: azure-graph.ApplicationCreateParameters
 - uid: Promise<azure-graph.Application>
+  name: Application>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1290,6 +1511,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.Application>
+  name: Application>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1299,6 +1521,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-graph.Application>>
+  name: Application>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1308,6 +1531,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-graph.ApplicationListResult>
+  name: ApplicationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1317,6 +1541,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.ApplicationListResult>
+  name: ApplicationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1326,6 +1551,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<azure-graph.KeyCredentialListResult>
+  name: KeyCredentialListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1335,6 +1561,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.KeyCredentialListResult>
+  name: KeyCredentialListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1344,6 +1571,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-graph.KeyCredentialListResult>>
+  name: KeyCredentialListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1353,6 +1581,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<HttpOperationResponse<azure-graph.ApplicationListResult>>
+  name: ApplicationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1362,6 +1591,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-graph.DirectoryObjectListResult>
+  name: DirectoryObjectListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1371,6 +1601,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.DirectoryObjectListResult>
+  name: DirectoryObjectListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1380,6 +1611,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-graph.DirectoryObjectListResult>>
+  name: DirectoryObjectListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1389,6 +1621,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-graph.PasswordCredentialListResult>
+  name: PasswordCredentialListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1398,6 +1631,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.PasswordCredentialListResult>
+  name: PasswordCredentialListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1407,6 +1641,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-graph.PasswordCredentialListResult>>
+  name: PasswordCredentialListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1416,11 +1651,13 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: azure-graph.ApplicationUpdateParameters
+  name: ApplicationUpdateParameters
   spec.typeScript:
   - name: ApplicationUpdateParameters
     fullName: ApplicationUpdateParameters
     uid: azure-graph.ApplicationUpdateParameters
 - uid: azure-graph.KeyCredential[]
+  name: KeyCredential[]
   spec.typeScript:
   - name: KeyCredential
     fullName: KeyCredential
@@ -1428,6 +1665,7 @@ references:
   - name: '[]'
     fullName: '[]'
 - uid: azure-graph.PasswordCredential[]
+  name: PasswordCredential[]
   spec.typeScript:
   - name: PasswordCredential
     fullName: PasswordCredential

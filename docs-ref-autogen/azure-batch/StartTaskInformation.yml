@@ -1,0 +1,174 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 872e1bab4e2ee49bd8475664ac0d6209e7f17111
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53669938"
+items:
+- uid: azure-batch.StartTaskInformation
+  name: StartTaskInformation
+  fullName: StartTaskInformation
+  children:
+  - azure-batch.StartTaskInformation.containerInfo
+  - azure-batch.StartTaskInformation.endTime
+  - azure-batch.StartTaskInformation.exitCode
+  - azure-batch.StartTaskInformation.failureInfo
+  - azure-batch.StartTaskInformation.lastRetryTime
+  - azure-batch.StartTaskInformation.result
+  - azure-batch.StartTaskInformation.retryCount
+  - azure-batch.StartTaskInformation.startTime
+  - azure-batch.StartTaskInformation.state
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.containerInfo
+  name: containerInfo
+  fullName: containerInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство имеет значение только в том случае, если задача выполняется в контексте контейнера.
+  optional: true
+  syntax:
+    content: 'containerInfo?: TaskContainerExecutionInformation'
+    return:
+      type:
+      - azure-batch.TaskContainerExecutionInformation
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это время окончания последнего запуска задачи запуска, если запуска завершена (даже если не удалось выполнить, и повторная попытка находится в состоянии ожидания). Этот элемент присутствует не в том случае, если задача запуска выполняется в данный момент.
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.exitCode
+  name: exitCode
+  fullName: exitCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Это свойство задается только в том случае, если она в завершенном состоянии. Как правило код выхода для процесса отражает конкретное соглашение, реализованные разработчиком приложения для этого процесса. При использовании значение кода выхода для принятия решений в коде, убедитесь, что вы знаете соглашения кода выхода, используемые в процессе приложения.
+
+    Тем не менее если пакетная служба завершит задачи запуска (из-за истечения времени ожидания, или завершение пользователя через API) может появиться код выхода, определяемый операционной системой.
+  optional: true
+  syntax:
+    content: 'exitCode?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.failureInfo
+  name: failureInfo
+  fullName: failureInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство задается только в том случае, если задача находится в завершенном состоянии и произошел сбой.
+  optional: true
+  syntax:
+    content: 'failureInfo?: TaskFailureInformation'
+    return:
+      type:
+      - azure-batch.TaskFailureInformation
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.lastRetryTime
+  name: lastRetryTime
+  fullName: lastRetryTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Этот элемент присутствует только в том случае, если задача была повторена (т. е. retryCount не равно нулю). Если он присутствует, это обычно является таким же, как startTime, но может отличаться, если задача перезапуска не после повторных попыток; Например если вычислительный узел был перезагружен во время повторной попытки, startTime обновляется, но не является lastRetryTime.
+  optional: true
+  syntax:
+    content: 'lastRetryTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.result
+  name: result
+  fullName: result
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Если значение — «сбой», сведения об ошибке можно найти в свойстве failureInfo. Возможные значения: «успех», «сбой»'
+  optional: true
+  syntax:
+    content: 'result?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.retryCount
+  name: retryCount
+  fullName: retryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Сбои задач приложения (код выхода ненулевой длины) выполняются повторные попытки предварительной обработки ошибок (задача не может быть выполнен) и ошибок при передаче файлов не производятся. Пакетная служба будет повторять выполнение задачи до предела, установленного с помощью ограничений.
+  syntax:
+    content: 'retryCount: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это значение сбрасывается каждый раз при перезапуске или повторить задачи (то есть это наиболее последнее время, по которому запуска задачи запуска).
+  syntax:
+    content: 'startTime: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.StartTaskInformation.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Возможные значения: «работает», «завершено»'
+  syntax:
+    content: 'state: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerExecutionInformation
+  name: TaskContainerExecutionInformation
+  spec.typeScript:
+  - name: TaskContainerExecutionInformation
+    fullName: TaskContainerExecutionInformation
+    uid: azure-batch.TaskContainerExecutionInformation
+- uid: azure-batch.TaskFailureInformation
+  name: TaskFailureInformation
+  spec.typeScript:
+  - name: TaskFailureInformation
+    fullName: TaskFailureInformation
+    uid: azure-batch.TaskFailureInformation

@@ -1,0 +1,226 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 4c6e65102cf738ac75210b581e9abb7af69ddf60
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53665198"
+items:
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  name: SpeechConfig
+  fullName: SpeechConfig
+  children:
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+  - microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+  langs:
+  - typeScript
+  type: class
+  summary: Конфигурация речи.
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+  name: authorizationToken
+  fullName: authorizationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Задает маркер авторизации.
+
+    Если это значение задано, ключ подписки учитывается.
+
+    Пользователь должен убедиться, что предоставленный авторизации маркер является допустимым и не истекшим сроком действия.
+  syntax:
+    content: 'public authorizationToken: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Закрывает конфигурации.
+  syntax:
+    content: function close()
+    parameters: []
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+  name: endpointId
+  fullName: endpointId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Получает идентификатор конечной точки, настроенные речи модели, которая используется для распознавания речи.
+  syntax:
+    content: 'public endpointId: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+  name: fromAuthorizationToken(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает экземпляр фабрики речи с заданными начальной маркером авторизации и регион.
+  syntax:
+    content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+    parameters:
+    - id: authorizationToken
+      type:
+      - string
+      description: Токен начальной авторизации.
+    - id: region
+      type:
+      - string
+      description: Имя региона (см. в разделе <a href="https://aka.ms/csspeech/region">область страницы</a>).
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+  name: fromEndpoint(URL, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Создает экземпляр фабрики речи с заданной конечной точки и ключ подписки.
+
+    Этот метод предназначен только для пользователей, которые используют нестандартные службы конечной точки или параметры.
+
+    приоритет имеет параметр языка в uri, и эффективный язык «de-DE».
+  syntax:
+    content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+    parameters:
+    - id: endpoint
+      type:
+      - URL
+      description: Для подключения к конечной точки службы.
+    - id: subscriptionKey
+      type:
+      - string
+      description: Ключ подписки.
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+  name: fromSubscription(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Статический экземпляр SpeechConfig, возвращаемых путем передачи регион subscriptionKey и службы.
+  syntax:
+    content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+    parameters:
+    - id: subscriptionKey
+      type:
+      - string
+      description: Ключ подписки.
+    - id: region
+      type:
+      - string
+      description: Имя региона (см. в разделе <a href="https://aka.ms/csspeech/region">область страницы</a>).
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+  name: getProperty(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает текущее значение произвольные свойства.
+  syntax:
+    content: 'function getProperty(name: string, def?: string)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: Имя свойства для запроса.
+    - id: def
+      type:
+      - string
+      description: Значение, возвращаемое в случае, если свойство не известен.
+      optional: true
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+  name: outputFormat
+  fullName: outputFormat
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Получает формат выходных данных.
+  syntax:
+    content: 'public outputFormat: OutputFormat'
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.OutputFormat
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+  name: setProperty(string, string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Задает произвольный свойство.
+  syntax:
+    content: 'function setProperty(name: string, value: string)'
+    parameters:
+    - id: name
+      type:
+      - string
+      description: Имя задаваемого свойства.
+    - id: value
+      type:
+      - string
+      description: >
+        Новое значение свойства.
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+  name: speechRecognitionLanguage
+  fullName: speechRecognitionLanguage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Задает язык ввода.
+  syntax:
+    content: 'public speechRecognitionLanguage: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+references:
+- uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+  name: OutputFormat
+  spec.typeScript:
+  - name: OutputFormat
+    fullName: OutputFormat
+    uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  name: SpeechConfig
+  spec.typeScript:
+  - name: SpeechConfig
+    fullName: SpeechConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig

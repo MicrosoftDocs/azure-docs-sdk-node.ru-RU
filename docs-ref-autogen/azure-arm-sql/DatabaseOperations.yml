@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: a00e9aa7cb3ad34da3aff1ff6faf5aa51710e228
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: d96da4a074f96b10bb8ce62668f2bb1822cc84d6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41681988"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52057659"
 items:
 - uid: azure-arm-sql.DatabaseOperations
   name: DatabaseOperations
@@ -15,11 +15,11 @@ items:
   - azure-arm-sql.DatabaseOperations.cancel_1
   - azure-arm-sql.DatabaseOperations.cancelWithHttpOperationResponse
   - azure-arm-sql.DatabaseOperations.listByDatabase
-  - azure-arm-sql.DatabaseOperations.listByDatabase_1
   - azure-arm-sql.DatabaseOperations.listByDatabase_2
+  - azure-arm-sql.DatabaseOperations.listByDatabase_1
   - azure-arm-sql.DatabaseOperations.listByDatabaseNext
-  - azure-arm-sql.DatabaseOperations.listByDatabaseNext_1
   - azure-arm-sql.DatabaseOperations.listByDatabaseNext_2
+  - azure-arm-sql.DatabaseOperations.listByDatabaseNext_1
   - azure-arm-sql.DatabaseOperations.listByDatabaseNextWithHttpOperationResponse
   - azure-arm-sql.DatabaseOperations.listByDatabaseWithHttpOperationResponse
   langs:
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.cancel
-  name: cancel
+  name: cancel(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -41,7 +41,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -67,7 +67,7 @@ items:
       - Promise<void>
   package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.cancel_2
-  name: cancel
+  name: cancel(string, string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -105,7 +105,7 @@ items:
       - Promise<void>
   package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.cancel_1
-  name: cancel
+  name: cancel(string, string, string, string, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -139,7 +139,7 @@ items:
       - Promise<void>
   package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.cancelWithHttpOperationResponse
-  name: cancelWithHttpOperationResponse
+  name: cancelWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -152,7 +152,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -178,7 +178,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.listByDatabase
-  name: listByDatabase
+  name: listByDatabase(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -191,7 +191,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -211,38 +211,8 @@ items:
       type:
       - Promise<azure-arm-sql.DatabaseOperationListResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.DatabaseOperations.listByDatabase_1
-  name: listByDatabase
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получение списка операций, выполняемых с базой данных.
-  syntax:
-    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<DatabaseOperationListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.DatabaseOperationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.DatabaseOperationListResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.listByDatabase_2
-  name: listByDatabase
+  name: listByDatabase(string, string, string, Object, ServiceCallback<DatabaseOperationListResult>)
   children: []
   type: method
   langs:
@@ -275,8 +245,38 @@ items:
       type:
       - Promise<azure-arm-sql.DatabaseOperationListResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.DatabaseOperations.listByDatabase_1
+  name: listByDatabase(string, string, string, ServiceCallback<DatabaseOperationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение списка операций, выполняемых с базой данных.
+  syntax:
+    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<DatabaseOperationListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.DatabaseOperationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.DatabaseOperationListResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.listByDatabaseNext
-  name: listByDatabaseNext
+  name: listByDatabaseNext(string, Object)
   children: []
   type: method
   langs:
@@ -299,30 +299,8 @@ items:
       type:
       - Promise<azure-arm-sql.DatabaseOperationListResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.DatabaseOperations.listByDatabaseNext_1
-  name: listByDatabaseNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получение списка операций, выполняемых с базой данных.
-  syntax:
-    content: 'function listByDatabaseNext(nextPageLink: string, callback: ServiceCallback<DatabaseOperationListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.DatabaseOperationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.DatabaseOperationListResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.listByDatabaseNext_2
-  name: listByDatabaseNext
+  name: listByDatabaseNext(string, Object, ServiceCallback<DatabaseOperationListResult>)
   children: []
   type: method
   langs:
@@ -347,8 +325,30 @@ items:
       type:
       - Promise<azure-arm-sql.DatabaseOperationListResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.DatabaseOperations.listByDatabaseNext_1
+  name: listByDatabaseNext(string, ServiceCallback<DatabaseOperationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение списка операций, выполняемых с базой данных.
+  syntax:
+    content: 'function listByDatabaseNext(nextPageLink: string, callback: ServiceCallback<DatabaseOperationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.DatabaseOperationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.DatabaseOperationListResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.listByDatabaseNextWithHttpOperationResponse
-  name: listByDatabaseNextWithHttpOperationResponse
+  name: listByDatabaseNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -372,7 +372,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.DatabaseOperationListResult>>
   package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseOperations.listByDatabaseWithHttpOperationResponse
-  name: listByDatabaseWithHttpOperationResponse
+  name: listByDatabaseWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -385,7 +385,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -407,6 +407,7 @@ items:
   package: azure-arm-sql
 references:
 - uid: Promise<azure-arm-sql.DatabaseOperationListResult>
+  name: DatabaseOperationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -416,6 +417,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.DatabaseOperationListResult>
+  name: DatabaseOperationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -425,6 +427,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.DatabaseOperationListResult>>
+  name: DatabaseOperationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
