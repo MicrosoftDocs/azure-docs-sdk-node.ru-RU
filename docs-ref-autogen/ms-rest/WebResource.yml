@@ -1,0 +1,206 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 779ee5e566ab6a1ff0f8ca534626ea75dc3211a9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52021768"
+items:
+- uid: ms-rest.WebResource
+  name: WebResource
+  fullName: WebResource
+  children:
+  - ms-rest.WebResource.body
+  - ms-rest.WebResource.formData
+  - ms-rest.WebResource.headers
+  - ms-rest.WebResource.method
+  - ms-rest.WebResource.pipeInput
+  - ms-rest.WebResource.prepare
+  - ms-rest.WebResource.query
+  - ms-rest.WebResource.rawResponse
+  - ms-rest.WebResource.url
+  - ms-rest.WebResource.validateRequestProperties
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="05fee-101">Этот класс предоставляет абстракцию вызов REST, когда библиотека / независимой от реализации и упаковки необходимые свойства для инициирования запроса.</span><span class="sxs-lookup"><span data-stu-id="05fee-101">This class provides an abstraction over a REST call by being library / implementation agnostic and wrapping the necessary properties to initiate a request.</span></span>
+  package: ms-rest
+- uid: ms-rest.WebResource.body
+  name: body
+  fullName: body
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05fee-102">{все} [текст] Текст запроса</span><span class="sxs-lookup"><span data-stu-id="05fee-102">{any} [body] The request body</span></span>
+  optional: true
+  syntax:
+    content: 'public body?: any'
+    return:
+      type:
+      - any
+  package: ms-rest
+- uid: ms-rest.WebResource.formData
+  name: formData
+  fullName: formData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05fee-103">{все} [formData] Параметры данных.</span><span class="sxs-lookup"><span data-stu-id="05fee-103">{any} [formData] Formdata parameters.</span></span>
+  optional: true
+  syntax:
+    content: 'public formData?: any'
+    return:
+      type:
+      - any
+  package: ms-rest
+- uid: ms-rest.WebResource.headers
+  name: headers
+  fullName: headers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05fee-104">Доступ к заголовкам необработанные запросы для запросов.</span><span class="sxs-lookup"><span data-stu-id="05fee-104">Access to raw request headers for requests.</span></span> <span data-ttu-id="05fee-105">Полезно, когда необходимо задать заголовок при каждом запросе (как в объект учетных данных), где метод подготовки не слишком много работы.</span><span class="sxs-lookup"><span data-stu-id="05fee-105">Useful when you need to set a header on every request (like in a credential object) where the prepare method does far too much work.</span></span>
+  syntax:
+    content: 'public headers: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: ms-rest
+- uid: ms-rest.WebResource.method
+  name: method
+  fullName: method
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05fee-106">метод {строка} метод запроса</span><span class="sxs-lookup"><span data-stu-id="05fee-106">{string} method The request method</span></span>
+  syntax:
+    content: 'public method: HttpMethods'
+    return:
+      type:
+      - ms-rest.HttpMethods
+  package: ms-rest
+- uid: ms-rest.WebResource.pipeInput
+  name: pipeInput(stream.Readable, stream.Writable)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="05fee-107">Подключите заданного входного потока в поток назначения, если метод WebResource требует текст запроса и уже не имеет тела.</span><span class="sxs-lookup"><span data-stu-id="05fee-107">Hook up the given input stream to a destination output stream if the WebResource method requires a request body and a body is not already set.</span></span>
+  syntax:
+    content: 'function pipeInput(inputStream: stream.Readable, destStream: stream.Writable)'
+    parameters:
+    - id: inputStream
+      type:
+      - stream.Readable
+      description: <span data-ttu-id="05fee-108">канал из потока</span><span class="sxs-lookup"><span data-stu-id="05fee-108">the stream to pipe from</span></span>
+    - id: destStream
+      type:
+      - stream.Writable
+      description: ''
+    return:
+      type:
+      - stream.Writable
+  package: ms-rest
+- uid: ms-rest.WebResource.prepare
+  name: prepare(PathTemplateBasedRequestPrepareOptions | UrlBasedRequestPrepareOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="05fee-109">Готовит запрос.</span><span class="sxs-lookup"><span data-stu-id="05fee-109">Prepares the request.</span></span>
+  syntax:
+    content: 'function prepare(options?: PathTemplateBasedRequestPrepareOptions | UrlBasedRequestPrepareOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest.PathTemplateBasedRequestPrepareOptions | ms-rest.UrlBasedRequestPrepareOptions
+      description: >
+        <span data-ttu-id="05fee-110">Параметры запроса, которые должны предоставляться для отправки запроса успешно</span><span class="sxs-lookup"><span data-stu-id="05fee-110">The request options that should be provided to send a request successfully</span></span>
+      optional: true
+    return:
+      type:
+      - ms-rest.WebResource
+  package: ms-rest
+- uid: ms-rest.WebResource.query
+  name: query
+  fullName: query
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05fee-111">{все} [запрос] Параметры запроса</span><span class="sxs-lookup"><span data-stu-id="05fee-111">{any} [query] Query parameters</span></span>
+  optional: true
+  syntax:
+    content: 'public query?: [key: string]: any'
+    return:
+      type:
+      - '[key: string]: any'
+  package: ms-rest
+- uid: ms-rest.WebResource.rawResponse
+  name: rawResponse
+  fullName: rawResponse
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05fee-112">{Логическое} rawResponse указывает ли клиент должен вернуть ответ в виде — является.</span><span class="sxs-lookup"><span data-stu-id="05fee-112">{boolean} rawResponse Indicates whether the client should give back the response as-is.</span></span> <span data-ttu-id="05fee-113">(Полезно для сценариев потоковой передачи).</span><span class="sxs-lookup"><span data-stu-id="05fee-113">(Useful for streaming scenarios).</span></span>
+  optional: true
+  syntax:
+    content: 'public rawResponse?: boolean'
+    return:
+      type:
+      - boolean
+  package: ms-rest
+- uid: ms-rest.WebResource.url
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05fee-114">{Строка} URL-адрес запроса URL-адрес</span><span class="sxs-lookup"><span data-stu-id="05fee-114">{string} url The request url</span></span>
+  syntax:
+    content: 'public url: string'
+    return:
+      type:
+      - string
+  package: ms-rest
+- uid: ms-rest.WebResource.validateRequestProperties
+  name: validateRequestProperties()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="05fee-115">Проверяет, что определенные обязательные свойства, такие как метод, URL-адрес, заголовки [«Content-Type»], [«принять язык»].</span><span class="sxs-lookup"><span data-stu-id="05fee-115">Validates that the required properties such as method, url, headers['Content-Type'], headers['accept-language'] are defined.</span></span> <span data-ttu-id="05fee-116">Он будет выдавать ошибку, если одно из свойств упомянутое выше не определены.</span><span class="sxs-lookup"><span data-stu-id="05fee-116">It will throw an error if one of the above mentioned properties are not defined.</span></span>
+  syntax:
+    content: function validateRequestProperties()
+    parameters: []
+  package: ms-rest
+references:
+- uid: ms-rest.HttpMethods
+  name: HttpMethods
+  spec.typeScript:
+  - name: HttpMethods
+    fullName: HttpMethods
+    uid: ms-rest.HttpMethods
+- uid: ms-rest.PathTemplateBasedRequestPrepareOptions | ms-rest.UrlBasedRequestPrepareOptions
+  name: UrlBasedRequestPrepareOptions
+  spec.typeScript:
+  - name: PathTemplateBasedRequestPrepareOptions
+    fullName: PathTemplateBasedRequestPrepareOptions
+    uid: ms-rest.PathTemplateBasedRequestPrepareOptions
+  - name: " | "
+    fullName: " | "
+  - name: UrlBasedRequestPrepareOptions
+    fullName: UrlBasedRequestPrepareOptions
+    uid: ms-rest.UrlBasedRequestPrepareOptions
+- uid: ms-rest.WebResource
+  name: WebResource
+  spec.typeScript:
+  - name: WebResource
+    fullName: WebResource
+    uid: ms-rest.WebResource
