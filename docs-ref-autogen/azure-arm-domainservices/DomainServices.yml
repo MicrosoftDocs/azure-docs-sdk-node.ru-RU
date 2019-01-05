@@ -1,50 +1,58 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: b799cb4a2fd1eb24963ddc1e0c64e1c38bfa9393
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 71fa8799b8ea9c91aadef08807b05d6cc1aeed9b
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41683978"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52023348"
 items:
 - uid: azure-arm-domainservices.DomainServices
   name: DomainServices
   fullName: DomainServices
   children:
   - azure-arm-domainservices.DomainServices.beginCreateOrUpdate
-  - azure-arm-domainservices.DomainServices.beginCreateOrUpdate_1
   - azure-arm-domainservices.DomainServices.beginCreateOrUpdate_2
+  - azure-arm-domainservices.DomainServices.beginCreateOrUpdate_1
   - azure-arm-domainservices.DomainServices.beginCreateOrUpdateWithHttpOperationResponse
   - azure-arm-domainservices.DomainServices.beginDeleteMethod
   - azure-arm-domainservices.DomainServices.beginDeleteMethod_2
   - azure-arm-domainservices.DomainServices.beginDeleteMethod_1
   - azure-arm-domainservices.DomainServices.beginDeleteMethodWithHttpOperationResponse
-  - azure-arm-domainservices.DomainServices.beginUpdate_1
   - azure-arm-domainservices.DomainServices.beginUpdate
   - azure-arm-domainservices.DomainServices.beginUpdate_2
+  - azure-arm-domainservices.DomainServices.beginUpdate_1
   - azure-arm-domainservices.DomainServices.beginUpdateWithHttpOperationResponse
   - azure-arm-domainservices.DomainServices.createOrUpdate
-  - azure-arm-domainservices.DomainServices.createOrUpdate_1
   - azure-arm-domainservices.DomainServices.createOrUpdate_2
+  - azure-arm-domainservices.DomainServices.createOrUpdate_1
   - azure-arm-domainservices.DomainServices.createOrUpdateWithHttpOperationResponse
   - azure-arm-domainservices.DomainServices.deleteMethod
-  - azure-arm-domainservices.DomainServices.deleteMethod_1
   - azure-arm-domainservices.DomainServices.deleteMethod_2
+  - azure-arm-domainservices.DomainServices.deleteMethod_1
   - azure-arm-domainservices.DomainServices.deleteMethodWithHttpOperationResponse
-  - azure-arm-domainservices.DomainServices.get_1
-  - azure-arm-domainservices.DomainServices.get_2
   - azure-arm-domainservices.DomainServices.get
+  - azure-arm-domainservices.DomainServices.get_2
+  - azure-arm-domainservices.DomainServices.get_1
   - azure-arm-domainservices.DomainServices.getWithHttpOperationResponse
   - azure-arm-domainservices.DomainServices.list
-  - azure-arm-domainservices.DomainServices.list_1
   - azure-arm-domainservices.DomainServices.list_2
+  - azure-arm-domainservices.DomainServices.list_1
   - azure-arm-domainservices.DomainServices.listByResourceGroup
-  - azure-arm-domainservices.DomainServices.listByResourceGroup_1
   - azure-arm-domainservices.DomainServices.listByResourceGroup_2
+  - azure-arm-domainservices.DomainServices.listByResourceGroup_1
+  - azure-arm-domainservices.DomainServices.listByResourceGroupNext
+  - azure-arm-domainservices.DomainServices.listByResourceGroupNext_2
+  - azure-arm-domainservices.DomainServices.listByResourceGroupNext_1
+  - azure-arm-domainservices.DomainServices.listByResourceGroupNextWithHttpOperationResponse
   - azure-arm-domainservices.DomainServices.listByResourceGroupWithHttpOperationResponse
+  - azure-arm-domainservices.DomainServices.listNext
+  - azure-arm-domainservices.DomainServices.listNext_2
+  - azure-arm-domainservices.DomainServices.listNext_1
+  - azure-arm-domainservices.DomainServices.listNextWithHttpOperationResponse
   - azure-arm-domainservices.DomainServices.listWithHttpOperationResponse
   - azure-arm-domainservices.DomainServices.update
-  - azure-arm-domainservices.DomainServices.update_1
   - azure-arm-domainservices.DomainServices.update_2
+  - azure-arm-domainservices.DomainServices.update_1
   - azure-arm-domainservices.DomainServices.updateWithHttpOperationResponse
   langs:
   - typeScript
@@ -52,14 +60,14 @@ items:
   summary: ''
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.beginCreateOrUpdate
-  name: beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, DomainService, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginCreateOrUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServiceProperties, options?: Object)'
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -70,10 +78,10 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: properties
+        Имя службы домена.
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServiceProperties
+      - azure-arm-domainservices.DomainService
       description: >
         Свойства, передаваемое создать или обновить операции службы домена.
     - id: options
@@ -85,45 +93,15 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.beginCreateOrUpdate_1
-  name: beginCreateOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function beginCreateOrUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServiceProperties, callback: ServiceCallback<DomainService>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: domainServiceName
-      type:
-      - string
-      description: ''
-    - id: properties
-      type:
-      - azure-arm-domainservices.DomainServiceProperties
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-domainservices.DomainService>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-domainservices.DomainService>
-  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.beginCreateOrUpdate_2
-  name: beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, DomainService, Object, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginCreateOrUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServiceProperties, options: Object, callback: ServiceCallback<DomainService>)'
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options: Object, callback: ServiceCallback<DomainService>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -133,9 +111,9 @@ items:
       type:
       - string
       description: ''
-    - id: properties
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServiceProperties
+      - azure-arm-domainservices.DomainService
       description: ''
     - id: options
       type:
@@ -149,15 +127,45 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.beginCreateOrUpdateWithHttpOperationResponse
-  name: beginCreateOrUpdateWithHttpOperationResponse
+- uid: azure-arm-domainservices.DomainServices.beginCreateOrUpdate_1
+  name: beginCreateOrUpdate(string, string, DomainService, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, properties: DomainServiceProperties, options?: Object)'
+    content: 'function beginCreateOrUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, callback: ServiceCallback<DomainService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: domainServiceName
+      type:
+      - string
+      description: ''
+    - id: domainService
+      type:
+      - azure-arm-domainservices.DomainService
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainService>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse(string, string, DomainService, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function beginCreateOrUpdateWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -168,10 +176,10 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: properties
+        Имя службы домена.
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServiceProperties
+      - azure-arm-domainservices.DomainService
       description: >
         Свойства, передаваемое создать или обновить операции службы домена.
     - id: options
@@ -184,7 +192,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.beginDeleteMethod
-  name: beginDeleteMethod
+  name: beginDeleteMethod(string, string, Object)
   children: []
   type: method
   langs:
@@ -202,7 +210,7 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
+        Имя службы домена.
     - id: options
       type:
       - Object
@@ -213,7 +221,7 @@ items:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.beginDeleteMethod_2
-  name: beginDeleteMethod
+  name: beginDeleteMethod(string, string, Object, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
@@ -243,7 +251,7 @@ items:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.beginDeleteMethod_1
-  name: beginDeleteMethod
+  name: beginDeleteMethod(string, string, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
@@ -269,7 +277,7 @@ items:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.beginDeleteMethodWithHttpOperationResponse
-  name: beginDeleteMethodWithHttpOperationResponse
+  name: beginDeleteMethodWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -287,7 +295,7 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
+        Имя службы домена.
     - id: options
       type:
       - Object
@@ -297,45 +305,15 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.beginUpdate_1
-  name: beginUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function beginUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServicePatchProperties, callback: ServiceCallback<DomainService>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: domainServiceName
-      type:
-      - string
-      description: ''
-    - id: properties
-      type:
-      - azure-arm-domainservices.DomainServicePatchProperties
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-domainservices.DomainService>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-domainservices.DomainService>
-  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.beginUpdate
-  name: beginUpdate
+  name: beginUpdate(string, string, DomainService, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServicePatchProperties, options?: Object)'
+    content: 'function beginUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -346,10 +324,10 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: properties
+        Имя службы домена.
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServicePatchProperties
+      - azure-arm-domainservices.DomainService
       description: >
         Свойства передаваемое обновление операции службы домена.
     - id: options
@@ -362,14 +340,14 @@ items:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.beginUpdate_2
-  name: beginUpdate
+  name: beginUpdate(string, string, DomainService, Object, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServicePatchProperties, options: Object, callback: ServiceCallback<DomainService>)'
+    content: 'function beginUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options: Object, callback: ServiceCallback<DomainService>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -379,9 +357,9 @@ items:
       type:
       - string
       description: ''
-    - id: properties
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServicePatchProperties
+      - azure-arm-domainservices.DomainService
       description: ''
     - id: options
       type:
@@ -395,15 +373,45 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.beginUpdateWithHttpOperationResponse
-  name: beginUpdateWithHttpOperationResponse
+- uid: azure-arm-domainservices.DomainServices.beginUpdate_1
+  name: beginUpdate(string, string, DomainService, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, properties: DomainServicePatchProperties, options?: Object)'
+    content: 'function beginUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, callback: ServiceCallback<DomainService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: domainServiceName
+      type:
+      - string
+      description: ''
+    - id: domainService
+      type:
+      - azure-arm-domainservices.DomainService
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainService>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.beginUpdateWithHttpOperationResponse
+  name: beginUpdateWithHttpOperationResponse(string, string, DomainService, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function beginUpdateWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -414,10 +422,10 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: properties
+        Имя службы домена.
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServicePatchProperties
+      - azure-arm-domainservices.DomainService
       description: >
         Свойства передаваемое обновление операции службы домена.
     - id: options
@@ -430,14 +438,14 @@ items:
       - Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, string, DomainService, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServiceProperties, options?: Object)'
+    content: 'function createOrUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -448,10 +456,10 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: properties
+        Имя службы домена.
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServiceProperties
+      - azure-arm-domainservices.DomainService
       description: >
         Свойства, передаваемое создать или обновить операции службы домена.
     - id: options
@@ -463,45 +471,15 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServiceProperties, callback: ServiceCallback<DomainService>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: domainServiceName
-      type:
-      - string
-      description: ''
-    - id: properties
-      type:
-      - azure-arm-domainservices.DomainServiceProperties
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-domainservices.DomainService>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-domainservices.DomainService>
-  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, string, DomainService, Object, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, domainServiceName: string, properties: DomainServiceProperties, options: Object, callback: ServiceCallback<DomainService>)'
+    content: 'function createOrUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options: Object, callback: ServiceCallback<DomainService>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -511,9 +489,9 @@ items:
       type:
       - string
       description: ''
-    - id: properties
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServiceProperties
+      - azure-arm-domainservices.DomainService
       description: ''
     - id: options
       type:
@@ -527,15 +505,45 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+- uid: azure-arm-domainservices.DomainServices.createOrUpdate_1
+  name: createOrUpdate(string, string, DomainService, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, properties: DomainServiceProperties, options?: Object)'
+    content: 'function createOrUpdate(resourceGroupName: string, domainServiceName: string, domainService: DomainService, callback: ServiceCallback<DomainService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: domainServiceName
+      type:
+      - string
+      description: ''
+    - id: domainService
+      type:
+      - azure-arm-domainservices.DomainService
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainService>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, DomainService, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function createOrUpdateWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -546,10 +554,10 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: properties
+        Имя службы домена.
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServiceProperties
+      - azure-arm-domainservices.DomainService
       description: >
         Свойства, передаваемое создать или обновить операции службы домена.
     - id: options
@@ -562,7 +570,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, string, Object)
   children: []
   type: method
   langs:
@@ -580,7 +588,7 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
+        Имя службы домена.
     - id: options
       type:
       - Object
@@ -590,34 +598,8 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.deleteMethod_1
-  name: deleteMethod
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function deleteMethod(resourceGroupName: string, domainServiceName: string, callback: ServiceCallback<DomainService>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: domainServiceName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-domainservices.DomainService>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-domainservices.DomainService>
-  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, string, Object, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
@@ -646,44 +628,15 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+- uid: azure-arm-domainservices.DomainServices.deleteMethod_1
+  name: deleteMethod(string, string, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, options?: Object)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: >
-        Имя группы ресурсов в подписке пользователя. Имя без учета регистра.
-    - id: domainServiceName
-      type:
-      - string
-      description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: options
-      type:
-      - Object
-      description: ''
-      optional: true
-    return:
-      type:
-      - Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
-  package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function get(resourceGroupName: string, domainServiceName: string, callback: ServiceCallback<DomainService>)'
+    content: 'function deleteMethod(resourceGroupName: string, domainServiceName: string, callback: ServiceCallback<DomainService>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -701,8 +654,66 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов в подписке пользователя. Имя без учета регистра.
+    - id: domainServiceName
+      type:
+      - string
+      description: >
+        Имя службы домена.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.get
+  name: get(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function get(resourceGroupName: string, domainServiceName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов в подписке пользователя. Имя без учета регистра.
+    - id: domainServiceName
+      type:
+      - string
+      description: >
+        Имя службы домена.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainService>
+  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.get_2
-  name: get
+  name: get(string, string, Object, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
@@ -731,37 +742,34 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.get
-  name: get
+- uid: azure-arm-domainservices.DomainServices.get_1
+  name: get(string, string, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function get(resourceGroupName: string, domainServiceName: string, options?: Object)'
+    content: 'function get(resourceGroupName: string, domainServiceName: string, callback: ServiceCallback<DomainService>)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: >
-        Имя группы ресурсов в подписке пользователя. Имя без учета регистра.
+      description: ''
     - id: domainServiceName
       type:
       - string
-      description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: options
-      type:
-      - Object
       description: ''
-      optional: true
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainService>
+      description: ''
     return:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -779,7 +787,7 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
+        Имя службы домена.
     - id: options
       type:
       - Object
@@ -790,7 +798,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -808,26 +816,8 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainServiceListResult>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function list(callback: ServiceCallback<DomainServiceListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-domainservices.DomainServiceListResult>
-  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.list_2
-  name: list
+  name: list(Object, ServiceCallback<DomainServiceListResult>)
   children: []
   type: method
   langs:
@@ -848,8 +838,26 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainServiceListResult>
   package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.list_1
+  name: list(ServiceCallback<DomainServiceListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(callback: ServiceCallback<DomainServiceListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainServiceListResult>
+  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.listByResourceGroup
-  name: listByResourceGroup
+  name: listByResourceGroup(string, Object)
   children: []
   type: method
   langs:
@@ -872,30 +880,8 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainServiceListResult>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.listByResourceGroup_1
-  name: listByResourceGroup
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<DomainServiceListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-domainservices.DomainServiceListResult>
-  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.listByResourceGroup_2
-  name: listByResourceGroup
+  name: listByResourceGroup(string, Object, ServiceCallback<DomainServiceListResult>)
   children: []
   type: method
   langs:
@@ -920,8 +906,126 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainServiceListResult>
   package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listByResourceGroup_1
+  name: listByResourceGroup(string, ServiceCallback<DomainServiceListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<DomainServiceListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainServiceListResult>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listByResourceGroupNext
+  name: listByResourceGroupNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainServiceListResult>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listByResourceGroupNext_2
+  name: listByResourceGroupNext(string, Object, ServiceCallback<DomainServiceListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<DomainServiceListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainServiceListResult>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listByResourceGroupNext_1
+  name: listByResourceGroupNext(string, ServiceCallback<DomainServiceListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<DomainServiceListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainServiceListResult>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listByResourceGroupNextWithHttpOperationResponse
+  name: listByResourceGroupNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-domainservices.DomainServiceListResult>>
+  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.listByResourceGroupWithHttpOperationResponse
-  name: listByResourceGroupWithHttpOperationResponse
+  name: listByResourceGroupWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -944,8 +1048,104 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-arm-domainservices.DomainServiceListResult>>
   package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listNext
+  name: listNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainServiceListResult>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listNext_2
+  name: listNext(string, Object, ServiceCallback<DomainServiceListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<DomainServiceListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainServiceListResult>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listNext_1
+  name: listNext(string, ServiceCallback<DomainServiceListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<DomainServiceListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainServiceListResult>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-domainservices.DomainServiceListResult>>
+  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -964,14 +1164,14 @@ items:
       - Promise<HttpOperationResponse<azure-arm-domainservices.DomainServiceListResult>>
   package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.update
-  name: update
+  name: update(string, string, DomainService, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function update(resourceGroupName: string, domainServiceName: string, properties: DomainServicePatchProperties, options?: Object)'
+    content: 'function update(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -982,10 +1182,10 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: properties
+        Имя службы домена.
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServicePatchProperties
+      - azure-arm-domainservices.DomainService
       description: >
         Свойства передаваемое обновление операции службы домена.
     - id: options
@@ -997,45 +1197,15 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.update_1
-  name: update
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function update(resourceGroupName: string, domainServiceName: string, properties: DomainServicePatchProperties, callback: ServiceCallback<DomainService>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: domainServiceName
-      type:
-      - string
-      description: ''
-    - id: properties
-      type:
-      - azure-arm-domainservices.DomainServicePatchProperties
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-domainservices.DomainService>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-domainservices.DomainService>
-  package: azure-arm-domainservices
 - uid: azure-arm-domainservices.DomainServices.update_2
-  name: update
+  name: update(string, string, DomainService, Object, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function update(resourceGroupName: string, domainServiceName: string, properties: DomainServicePatchProperties, options: Object, callback: ServiceCallback<DomainService>)'
+    content: 'function update(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options: Object, callback: ServiceCallback<DomainService>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1045,9 +1215,9 @@ items:
       type:
       - string
       description: ''
-    - id: properties
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServicePatchProperties
+      - azure-arm-domainservices.DomainService
       description: ''
     - id: options
       type:
@@ -1061,15 +1231,45 @@ items:
       type:
       - Promise<azure-arm-domainservices.DomainService>
   package: azure-arm-domainservices
-- uid: azure-arm-domainservices.DomainServices.updateWithHttpOperationResponse
-  name: updateWithHttpOperationResponse
+- uid: azure-arm-domainservices.DomainServices.update_1
+  name: update(string, string, DomainService, ServiceCallback<DomainService>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, properties: DomainServicePatchProperties, options?: Object)'
+    content: 'function update(resourceGroupName: string, domainServiceName: string, domainService: DomainService, callback: ServiceCallback<DomainService>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: domainServiceName
+      type:
+      - string
+      description: ''
+    - id: domainService
+      type:
+      - azure-arm-domainservices.DomainService
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-domainservices.DomainService>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-domainservices.DomainService>
+  package: azure-arm-domainservices
+- uid: azure-arm-domainservices.DomainServices.updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, DomainService, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, domainServiceName: string, domainService: DomainService, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -1080,10 +1280,10 @@ items:
       type:
       - string
       description: >
-        Имя домена службы в указанной подписке и группе ресурсов.
-    - id: properties
+        Имя службы домена.
+    - id: domainService
       type:
-      - azure-arm-domainservices.DomainServicePatchProperties
+      - azure-arm-domainservices.DomainService
       description: >
         Свойства передаваемое обновление операции службы домена.
     - id: options
@@ -1096,12 +1296,14 @@ items:
       - Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
   package: azure-arm-domainservices
 references:
-- uid: azure-arm-domainservices.DomainServiceProperties
+- uid: azure-arm-domainservices.DomainService
+  name: DomainService
   spec.typeScript:
-  - name: DomainServiceProperties
-    fullName: DomainServiceProperties
-    uid: azure-arm-domainservices.DomainServiceProperties
+  - name: DomainService
+    fullName: DomainService
+    uid: azure-arm-domainservices.DomainService
 - uid: Promise<azure-arm-domainservices.DomainService>
+  name: DomainService>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1111,6 +1313,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-domainservices.DomainService>
+  name: DomainService>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1120,6 +1323,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-domainservices.DomainService>>
+  name: DomainService>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1128,12 +1332,8 @@ references:
     uid: azure-arm-domainservices.DomainService
   - name: '>>'
     fullName: '>>'
-- uid: azure-arm-domainservices.DomainServicePatchProperties
-  spec.typeScript:
-  - name: DomainServicePatchProperties
-    fullName: DomainServicePatchProperties
-    uid: azure-arm-domainservices.DomainServicePatchProperties
 - uid: Promise<azure-arm-domainservices.DomainServiceListResult>
+  name: DomainServiceListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1143,6 +1343,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-domainservices.DomainServiceListResult>
+  name: DomainServiceListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1152,6 +1353,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-domainservices.DomainServiceListResult>>
+  name: DomainServiceListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

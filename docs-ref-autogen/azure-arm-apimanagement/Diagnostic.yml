@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8203e5bc41c548edaadabf51d14f43d3b0e186ef
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 103c31d9c0787b38b94d06fbe252940f428ac455
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41687973"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52026910"
 items:
 - uid: azure-arm-apimanagement.Diagnostic
   name: Diagnostic
   fullName: Diagnostic
   children:
   - azure-arm-apimanagement.Diagnostic.createOrUpdate
-  - azure-arm-apimanagement.Diagnostic.createOrUpdate_1
   - azure-arm-apimanagement.Diagnostic.createOrUpdate_2
+  - azure-arm-apimanagement.Diagnostic.createOrUpdate_1
   - azure-arm-apimanagement.Diagnostic.createOrUpdateWithHttpOperationResponse
   - azure-arm-apimanagement.Diagnostic.deleteMethod
   - azure-arm-apimanagement.Diagnostic.deleteMethod_2
@@ -22,21 +22,21 @@ items:
   - azure-arm-apimanagement.Diagnostic.get_2
   - azure-arm-apimanagement.Diagnostic.get_1
   - azure-arm-apimanagement.Diagnostic.getEntityTag
-  - azure-arm-apimanagement.Diagnostic.getEntityTag_1
   - azure-arm-apimanagement.Diagnostic.getEntityTag_2
+  - azure-arm-apimanagement.Diagnostic.getEntityTag_1
   - azure-arm-apimanagement.Diagnostic.getEntityTagWithHttpOperationResponse
   - azure-arm-apimanagement.Diagnostic.getWithHttpOperationResponse
-  - azure-arm-apimanagement.Diagnostic.listByService_1
-  - azure-arm-apimanagement.Diagnostic.listByService_2
   - azure-arm-apimanagement.Diagnostic.listByService
+  - azure-arm-apimanagement.Diagnostic.listByService_2
+  - azure-arm-apimanagement.Diagnostic.listByService_1
   - azure-arm-apimanagement.Diagnostic.listByServiceNext
-  - azure-arm-apimanagement.Diagnostic.listByServiceNext_1
   - azure-arm-apimanagement.Diagnostic.listByServiceNext_2
+  - azure-arm-apimanagement.Diagnostic.listByServiceNext_1
   - azure-arm-apimanagement.Diagnostic.listByServiceNextWithHttpOperationResponse
   - azure-arm-apimanagement.Diagnostic.listByServiceWithHttpOperationResponse
   - azure-arm-apimanagement.Diagnostic.update
-  - azure-arm-apimanagement.Diagnostic.update_1
   - azure-arm-apimanagement.Diagnostic.update_2
+  - azure-arm-apimanagement.Diagnostic.update_1
   - azure-arm-apimanagement.Diagnostic.updateWithHttpOperationResponse
   langs:
   - typeScript
@@ -44,7 +44,7 @@ items:
   summary: ''
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, DiagnosticContract, Object)
   children: []
   type: method
   langs:
@@ -82,42 +82,8 @@ items:
       type:
       - Promise<azure-arm-apimanagement.DiagnosticContract>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.Diagnostic.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Создает новый диагностики или обновляет существующий.
-  syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, diagnosticId: string, parameters: DiagnosticContract, callback: ServiceCallback<DiagnosticContract>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: diagnosticId
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-apimanagement.DiagnosticContract
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.DiagnosticContract>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.DiagnosticContract>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, DiagnosticContract, Object, ServiceCallback<DiagnosticContract>)
   children: []
   type: method
   langs:
@@ -154,8 +120,42 @@ items:
       type:
       - Promise<azure-arm-apimanagement.DiagnosticContract>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.Diagnostic.createOrUpdate_1
+  name: createOrUpdate(string, string, string, DiagnosticContract, ServiceCallback<DiagnosticContract>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает новый диагностики или обновляет существующий.
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, diagnosticId: string, parameters: DiagnosticContract, callback: ServiceCallback<DiagnosticContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: diagnosticId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.DiagnosticContract
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.DiagnosticContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.DiagnosticContract>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, string, DiagnosticContract, Object)
   children: []
   type: method
   langs:
@@ -194,7 +194,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.DiagnosticContract>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -233,7 +233,7 @@ items:
       - Promise<void>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -271,7 +271,7 @@ items:
       - Promise<void>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.deleteMethod_1
-  name: deleteMethod
+  name: deleteMethod(string, string, string, string, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -305,7 +305,7 @@ items:
       - Promise<void>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -344,7 +344,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -378,7 +378,7 @@ items:
       - Promise<azure-arm-apimanagement.DiagnosticContract>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<DiagnosticContract>)
   children: []
   type: method
   langs:
@@ -412,7 +412,7 @@ items:
       - Promise<azure-arm-apimanagement.DiagnosticContract>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.get_1
-  name: get
+  name: get(string, string, string, ServiceCallback<DiagnosticContract>)
   children: []
   type: method
   langs:
@@ -442,7 +442,7 @@ items:
       - Promise<azure-arm-apimanagement.DiagnosticContract>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.getEntityTag
-  name: getEntityTag
+  name: getEntityTag(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -475,38 +475,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.Diagnostic.getEntityTag_1
-  name: getEntityTag
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает версия состояния сущности (Etag) диагностики, указанного по его идентификатору.
-  syntax:
-    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, diagnosticId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: diagnosticId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.getEntityTag_2
-  name: getEntityTag
+  name: getEntityTag(string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -539,8 +509,38 @@ items:
       type:
       - Promise<void>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.Diagnostic.getEntityTag_1
+  name: getEntityTag(string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает версия состояния сущности (Etag) диагностики, указанного по его идентификатору.
+  syntax:
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, diagnosticId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: diagnosticId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.getEntityTagWithHttpOperationResponse
-  name: getEntityTagWithHttpOperationResponse
+  name: getEntityTagWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -574,7 +574,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -607,34 +607,37 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.DiagnosticContract>>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.Diagnostic.listByService_1
-  name: listByService
+- uid: azure-arm-apimanagement.Diagnostic.listByService
+  name: listByService(string, string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Перечислены все средства диагностики экземпляра службы управления API.
   syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, callback: ServiceCallback<DiagnosticCollection>)'
+    content: 'function listByService(resourceGroupName: string, serviceName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: ''
+      description: >
+        Имя группы ресурсов.
     - id: serviceName
       type:
       - string
-      description: ''
-    - id: callback
+      description: >
+        Имя службы управления API.
+    - id: options
       type:
-      - ServiceCallback<azure-arm-apimanagement.DiagnosticCollection>
+      - Object
       description: ''
+      optional: true
     return:
       type:
       - Promise<azure-arm-apimanagement.DiagnosticCollection>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.listByService_2
-  name: listByService
+  name: listByService(string, string, Object, ServiceCallback<DiagnosticCollection>)
   children: []
   type: method
   langs:
@@ -663,37 +666,34 @@ items:
       type:
       - Promise<azure-arm-apimanagement.DiagnosticCollection>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.Diagnostic.listByService
-  name: listByService
+- uid: azure-arm-apimanagement.Diagnostic.listByService_1
+  name: listByService(string, string, ServiceCallback<DiagnosticCollection>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Перечислены все средства диагностики экземпляра службы управления API.
   syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, options?: Object)'
+    content: 'function listByService(resourceGroupName: string, serviceName: string, callback: ServiceCallback<DiagnosticCollection>)'
     parameters:
     - id: resourceGroupName
       type:
       - string
-      description: >
-        Имя группы ресурсов.
+      description: ''
     - id: serviceName
       type:
       - string
-      description: >
-        Имя службы управления API.
-    - id: options
-      type:
-      - Object
       description: ''
-      optional: true
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.DiagnosticCollection>
+      description: ''
     return:
       type:
       - Promise<azure-arm-apimanagement.DiagnosticCollection>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.listByServiceNext
-  name: listByServiceNext
+  name: listByServiceNext(string, Object)
   children: []
   type: method
   langs:
@@ -716,30 +716,8 @@ items:
       type:
       - Promise<azure-arm-apimanagement.DiagnosticCollection>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.Diagnostic.listByServiceNext_1
-  name: listByServiceNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Перечислены все средства диагностики экземпляра службы управления API.
-  syntax:
-    content: 'function listByServiceNext(nextPageLink: string, callback: ServiceCallback<DiagnosticCollection>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.DiagnosticCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.DiagnosticCollection>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.listByServiceNext_2
-  name: listByServiceNext
+  name: listByServiceNext(string, Object, ServiceCallback<DiagnosticCollection>)
   children: []
   type: method
   langs:
@@ -764,8 +742,30 @@ items:
       type:
       - Promise<azure-arm-apimanagement.DiagnosticCollection>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.Diagnostic.listByServiceNext_1
+  name: listByServiceNext(string, ServiceCallback<DiagnosticCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечислены все средства диагностики экземпляра службы управления API.
+  syntax:
+    content: 'function listByServiceNext(nextPageLink: string, callback: ServiceCallback<DiagnosticCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.DiagnosticCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.DiagnosticCollection>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.listByServiceNextWithHttpOperationResponse
-  name: listByServiceNextWithHttpOperationResponse
+  name: listByServiceNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -789,7 +789,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.DiagnosticCollection>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.listByServiceWithHttpOperationResponse
-  name: listByServiceWithHttpOperationResponse
+  name: listByServiceWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -818,7 +818,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.DiagnosticCollection>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.update
-  name: update
+  name: update(string, string, string, DiagnosticContract, string, Object)
   children: []
   type: method
   langs:
@@ -861,46 +861,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.Diagnostic.update_1
-  name: update
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновляет данные диагностики, указанного по его идентификатору.
-  syntax:
-    content: 'function update(resourceGroupName: string, serviceName: string, diagnosticId: string, parameters: DiagnosticContract, ifMatch: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: diagnosticId
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-apimanagement.DiagnosticContract
-      description: ''
-    - id: ifMatch
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.update_2
-  name: update
+  name: update(string, string, string, DiagnosticContract, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -941,8 +903,46 @@ items:
       type:
       - Promise<void>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.Diagnostic.update_1
+  name: update(string, string, string, DiagnosticContract, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет данные диагностики, указанного по его идентификатору.
+  syntax:
+    content: 'function update(resourceGroupName: string, serviceName: string, diagnosticId: string, parameters: DiagnosticContract, ifMatch: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: diagnosticId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.DiagnosticContract
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.Diagnostic.updateWithHttpOperationResponse
-  name: updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, string, DiagnosticContract, string, Object)
   children: []
   type: method
   langs:
@@ -987,11 +987,13 @@ items:
   package: azure-arm-apimanagement
 references:
 - uid: azure-arm-apimanagement.DiagnosticContract
+  name: DiagnosticContract
   spec.typeScript:
   - name: DiagnosticContract
     fullName: DiagnosticContract
     uid: azure-arm-apimanagement.DiagnosticContract
 - uid: Promise<azure-arm-apimanagement.DiagnosticContract>
+  name: DiagnosticContract>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1001,6 +1003,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-apimanagement.DiagnosticContract>
+  name: DiagnosticContract>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1010,6 +1013,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.DiagnosticContract>>
+  name: DiagnosticContract>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1019,6 +1023,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-apimanagement.DiagnosticCollection>
+  name: DiagnosticCollection>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1028,6 +1033,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-apimanagement.DiagnosticCollection>
+  name: DiagnosticCollection>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1037,6 +1043,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.DiagnosticCollection>>
+  name: DiagnosticCollection>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

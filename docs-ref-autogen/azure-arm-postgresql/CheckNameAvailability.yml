@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 9719f0df47330d556d2127279e38f21b18215f59
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: a112eb12f3cdeb3f3d80dbb6b2eae36ba3b42891
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41547213"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52024278"
 items:
 - uid: azure-arm-postgresql.CheckNameAvailability
   name: CheckNameAvailability
   fullName: CheckNameAvailability
   children:
   - azure-arm-postgresql.CheckNameAvailability.execute
-  - azure-arm-postgresql.CheckNameAvailability.execute_1
   - azure-arm-postgresql.CheckNameAvailability.execute_2
+  - azure-arm-postgresql.CheckNameAvailability.execute_1
   - azure-arm-postgresql.CheckNameAvailability.executeWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-postgresql
 - uid: azure-arm-postgresql.CheckNameAvailability.execute
-  name: execute
+  name: execute(NameAvailabilityRequest, Object)
   children: []
   type: method
   langs:
@@ -43,30 +43,8 @@ items:
       type:
       - Promise<azure-arm-postgresql.NameAvailability>
   package: azure-arm-postgresql
-- uid: azure-arm-postgresql.CheckNameAvailability.execute_1
-  name: execute
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Проверьте доступность имени для ресурса
-  syntax:
-    content: 'function execute(nameAvailabilityRequest: NameAvailabilityRequest, callback: ServiceCallback<NameAvailability>)'
-    parameters:
-    - id: nameAvailabilityRequest
-      type:
-      - azure-arm-postgresql.NameAvailabilityRequest
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-postgresql.NameAvailability>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-postgresql.NameAvailability>
-  package: azure-arm-postgresql
 - uid: azure-arm-postgresql.CheckNameAvailability.execute_2
-  name: execute
+  name: execute(NameAvailabilityRequest, Object, ServiceCallback<NameAvailability>)
   children: []
   type: method
   langs:
@@ -91,8 +69,30 @@ items:
       type:
       - Promise<azure-arm-postgresql.NameAvailability>
   package: azure-arm-postgresql
+- uid: azure-arm-postgresql.CheckNameAvailability.execute_1
+  name: execute(NameAvailabilityRequest, ServiceCallback<NameAvailability>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Проверьте доступность имени для ресурса
+  syntax:
+    content: 'function execute(nameAvailabilityRequest: NameAvailabilityRequest, callback: ServiceCallback<NameAvailability>)'
+    parameters:
+    - id: nameAvailabilityRequest
+      type:
+      - azure-arm-postgresql.NameAvailabilityRequest
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-postgresql.NameAvailability>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-postgresql.NameAvailability>
+  package: azure-arm-postgresql
 - uid: azure-arm-postgresql.CheckNameAvailability.executeWithHttpOperationResponse
-  name: executeWithHttpOperationResponse
+  name: executeWithHttpOperationResponse(NameAvailabilityRequest, Object)
   children: []
   type: method
   langs:
@@ -117,11 +117,13 @@ items:
   package: azure-arm-postgresql
 references:
 - uid: azure-arm-postgresql.NameAvailabilityRequest
+  name: NameAvailabilityRequest
   spec.typeScript:
   - name: NameAvailabilityRequest
     fullName: NameAvailabilityRequest
     uid: azure-arm-postgresql.NameAvailabilityRequest
 - uid: Promise<azure-arm-postgresql.NameAvailability>
+  name: NameAvailability>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -131,6 +133,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-postgresql.NameAvailability>
+  name: NameAvailability>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -140,6 +143,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-postgresql.NameAvailability>>
+  name: NameAvailability>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

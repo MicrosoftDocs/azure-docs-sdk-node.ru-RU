@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: c17eaac041273c7992c54af19e22774ac456d946
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: fa74de508605821e8a8af0d580c335e7d7a622b0
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41689338"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52038986"
 items:
 - uid: azure-arm-sql.RecommendedElasticPools
   name: RecommendedElasticPools
@@ -15,12 +15,12 @@ items:
   - azure-arm-sql.RecommendedElasticPools.get_1
   - azure-arm-sql.RecommendedElasticPools.getWithHttpOperationResponse
   - azure-arm-sql.RecommendedElasticPools.listByServer
-  - azure-arm-sql.RecommendedElasticPools.listByServer_1
   - azure-arm-sql.RecommendedElasticPools.listByServer_2
+  - azure-arm-sql.RecommendedElasticPools.listByServer_1
   - azure-arm-sql.RecommendedElasticPools.listByServerWithHttpOperationResponse
   - azure-arm-sql.RecommendedElasticPools.listMetrics
-  - azure-arm-sql.RecommendedElasticPools.listMetrics_1
   - azure-arm-sql.RecommendedElasticPools.listMetrics_2
+  - azure-arm-sql.RecommendedElasticPools.listMetrics_1
   - azure-arm-sql.RecommendedElasticPools.listMetricsWithHttpOperationResponse
   langs:
   - typeScript
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -41,7 +41,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -62,7 +62,7 @@ items:
       - Promise<azure-arm-sql.RecommendedElasticPool>
   package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<RecommendedElasticPool>)
   children: []
   type: method
   langs:
@@ -96,7 +96,7 @@ items:
       - Promise<azure-arm-sql.RecommendedElasticPool>
   package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.get_1
-  name: get
+  name: get(string, string, string, ServiceCallback<RecommendedElasticPool>)
   children: []
   type: method
   langs:
@@ -126,7 +126,7 @@ items:
       - Promise<azure-arm-sql.RecommendedElasticPool>
   package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -139,7 +139,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -160,7 +160,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.RecommendedElasticPool>>
   package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.listByServer
-  name: listByServer
+  name: listByServer(string, string, Object)
   children: []
   type: method
   langs:
@@ -173,7 +173,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -188,34 +188,8 @@ items:
       type:
       - Promise<azure-arm-sql.RecommendedElasticPoolListResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.RecommendedElasticPools.listByServer_1
-  name: listByServer
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает рекомендуемые эластичные пулы.
-  syntax:
-    content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<RecommendedElasticPoolListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.RecommendedElasticPoolListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.RecommendedElasticPoolListResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.listByServer_2
-  name: listByServer
+  name: listByServer(string, string, Object, ServiceCallback<RecommendedElasticPoolListResult>)
   children: []
   type: method
   langs:
@@ -244,8 +218,34 @@ items:
       type:
       - Promise<azure-arm-sql.RecommendedElasticPoolListResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.RecommendedElasticPools.listByServer_1
+  name: listByServer(string, string, ServiceCallback<RecommendedElasticPoolListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает рекомендуемые эластичные пулы.
+  syntax:
+    content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<RecommendedElasticPoolListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.RecommendedElasticPoolListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.RecommendedElasticPoolListResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.listByServerWithHttpOperationResponse
-  name: listByServerWithHttpOperationResponse
+  name: listByServerWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -258,7 +258,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -274,7 +274,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.RecommendedElasticPoolListResult>>
   package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.listMetrics
-  name: listMetrics
+  name: listMetrics(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -287,7 +287,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -307,38 +307,8 @@ items:
       type:
       - Promise<azure-arm-sql.RecommendedElasticPoolListMetricsResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.RecommendedElasticPools.listMetrics_1
-  name: listMetrics
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает метрики рекомендуемых эластичных пулов.
-  syntax:
-    content: 'function listMetrics(resourceGroupName: string, serverName: string, recommendedElasticPoolName: string, callback: ServiceCallback<RecommendedElasticPoolListMetricsResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: recommendedElasticPoolName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.RecommendedElasticPoolListMetricsResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.RecommendedElasticPoolListMetricsResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.listMetrics_2
-  name: listMetrics
+  name: listMetrics(string, string, string, Object, ServiceCallback<RecommendedElasticPoolListMetricsResult>)
   children: []
   type: method
   langs:
@@ -371,8 +341,38 @@ items:
       type:
       - Promise<azure-arm-sql.RecommendedElasticPoolListMetricsResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.RecommendedElasticPools.listMetrics_1
+  name: listMetrics(string, string, string, ServiceCallback<RecommendedElasticPoolListMetricsResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает метрики рекомендуемых эластичных пулов.
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, serverName: string, recommendedElasticPoolName: string, callback: ServiceCallback<RecommendedElasticPoolListMetricsResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: recommendedElasticPoolName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.RecommendedElasticPoolListMetricsResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.RecommendedElasticPoolListMetricsResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.RecommendedElasticPools.listMetricsWithHttpOperationResponse
-  name: listMetricsWithHttpOperationResponse
+  name: listMetricsWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -385,7 +385,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -407,6 +407,7 @@ items:
   package: azure-arm-sql
 references:
 - uid: Promise<azure-arm-sql.RecommendedElasticPool>
+  name: RecommendedElasticPool>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -416,6 +417,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.RecommendedElasticPool>
+  name: RecommendedElasticPool>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -425,6 +427,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.RecommendedElasticPool>>
+  name: RecommendedElasticPool>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -434,6 +437,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-sql.RecommendedElasticPoolListResult>
+  name: RecommendedElasticPoolListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -443,6 +447,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.RecommendedElasticPoolListResult>
+  name: RecommendedElasticPoolListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -452,6 +457,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.RecommendedElasticPoolListResult>>
+  name: RecommendedElasticPoolListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -461,6 +467,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-sql.RecommendedElasticPoolListMetricsResult>
+  name: RecommendedElasticPoolListMetricsResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -470,6 +477,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.RecommendedElasticPoolListMetricsResult>
+  name: RecommendedElasticPoolListMetricsResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -479,6 +487,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.RecommendedElasticPoolListMetricsResult>>
+  name: RecommendedElasticPoolListMetricsResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

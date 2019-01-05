@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: a5a102d667b5b649a747ce5c83d92ca5f072f0ad
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 25868c44cd4a74e14f0097cf3e98cd0cf2c8bcd3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41688963"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52035089"
 items:
 - uid: azure-monitor.EventCategories
   name: EventCategories
   fullName: EventCategories
   children:
   - azure-monitor.EventCategories.list
-  - azure-monitor.EventCategories.list_1
   - azure-monitor.EventCategories.list_2
+  - azure-monitor.EventCategories.list_1
   - azure-monitor.EventCategories.listWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,12 +20,12 @@ items:
   summary: ''
   package: azure-monitor
 - uid: azure-monitor.EventCategories.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
   - typeScript
-  summary: 'Получение списка категорий доступных событий, которые поддерживаются в службе журналы действий.<br>Текущий список входят следующие: административные, Security, ServiceHealth, оповещения, рекомендации, политики.'
+  summary: 'Получение списка категорий доступных событий, которые поддерживаются в службе журналы действий.<br>Текущий список включает следующее: Административные, Security, ServiceHealth, оповещения, рекомендации, политики.'
   syntax:
     content: 'function list(options?: Object)'
     parameters:
@@ -38,31 +38,13 @@ items:
       type:
       - Promise<azure-monitor.EventCategoryCollection>
   package: azure-monitor
-- uid: azure-monitor.EventCategories.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: 'Получение списка категорий доступных событий, которые поддерживаются в службе журналы действий.<br>Текущий список входят следующие: административные, Security, ServiceHealth, оповещения, рекомендации, политики.'
-  syntax:
-    content: 'function list(callback: ServiceCallback<EventCategoryCollection>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-monitor.EventCategoryCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-monitor.EventCategoryCollection>
-  package: azure-monitor
 - uid: azure-monitor.EventCategories.list_2
-  name: list
+  name: list(Object, ServiceCallback<EventCategoryCollection>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: 'Получение списка категорий доступных событий, которые поддерживаются в службе журналы действий.<br>Текущий список входят следующие: административные, Security, ServiceHealth, оповещения, рекомендации, политики.'
+  summary: 'Получение списка категорий доступных событий, которые поддерживаются в службе журналы действий.<br>Текущий список включает следующее: Административные, Security, ServiceHealth, оповещения, рекомендации, политики.'
   syntax:
     content: 'function list(options: Object, callback: ServiceCallback<EventCategoryCollection>)'
     parameters:
@@ -78,13 +60,31 @@ items:
       type:
       - Promise<azure-monitor.EventCategoryCollection>
   package: azure-monitor
-- uid: azure-monitor.EventCategories.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+- uid: azure-monitor.EventCategories.list_1
+  name: list(ServiceCallback<EventCategoryCollection>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: 'Получение списка категорий доступных событий, которые поддерживаются в службе журналы действий.<br>Текущий список входят следующие: административные, Security, ServiceHealth, оповещения, рекомендации, политики.'
+  summary: 'Получение списка категорий доступных событий, которые поддерживаются в службе журналы действий.<br>Текущий список включает следующее: Административные, Security, ServiceHealth, оповещения, рекомендации, политики.'
+  syntax:
+    content: 'function list(callback: ServiceCallback<EventCategoryCollection>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-monitor.EventCategoryCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-monitor.EventCategoryCollection>
+  package: azure-monitor
+- uid: azure-monitor.EventCategories.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 'Получение списка категорий доступных событий, которые поддерживаются в службе журналы действий.<br>Текущий список включает следующее: Административные, Security, ServiceHealth, оповещения, рекомендации, политики.'
   syntax:
     content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
@@ -99,6 +99,7 @@ items:
   package: azure-monitor
 references:
 - uid: Promise<azure-monitor.EventCategoryCollection>
+  name: EventCategoryCollection>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -108,6 +109,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-monitor.EventCategoryCollection>
+  name: EventCategoryCollection>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -117,6 +119,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-monitor.EventCategoryCollection>>
+  name: EventCategoryCollection>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

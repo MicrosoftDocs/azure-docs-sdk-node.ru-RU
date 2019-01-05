@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: dd5e988aeb76415ae642313842ad0efd1d26f68e
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 799d3502b41839c58758bba043196e380c972281
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41646325"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52022708"
 items:
 - uid: azure-arm-datafactory.ActivityRuns
   name: ActivityRuns
   fullName: ActivityRuns
   children:
   - azure-arm-datafactory.ActivityRuns.queryByPipelineRun
-  - azure-arm-datafactory.ActivityRuns.queryByPipelineRun_1
   - azure-arm-datafactory.ActivityRuns.queryByPipelineRun_2
+  - azure-arm-datafactory.ActivityRuns.queryByPipelineRun_1
   - azure-arm-datafactory.ActivityRuns.queryByPipelineRunWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-datafactory
 - uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRun
-  name: queryByPipelineRun
+  name: queryByPipelineRun(string, string, string, RunFilterParameters, Object)
   children: []
   type: method
   langs:
@@ -58,42 +58,8 @@ items:
       type:
       - Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
   package: azure-arm-datafactory
-- uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRun_1
-  name: queryByPipelineRun
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Активность запросов срабатывает по условий входного фильтра.
-  syntax:
-    content: 'function queryByPipelineRun(resourceGroupName: string, factoryName: string, runId: string, filterParameters: RunFilterParameters, callback: ServiceCallback<ActivityRunsQueryResponse>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: factoryName
-      type:
-      - string
-      description: ''
-    - id: runId
-      type:
-      - string
-      description: ''
-    - id: filterParameters
-      type:
-      - azure-arm-datafactory.RunFilterParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-datafactory.ActivityRunsQueryResponse>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
-  package: azure-arm-datafactory
 - uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRun_2
-  name: queryByPipelineRun
+  name: queryByPipelineRun(string, string, string, RunFilterParameters, Object, ServiceCallback<ActivityRunsQueryResponse>)
   children: []
   type: method
   langs:
@@ -130,8 +96,42 @@ items:
       type:
       - Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
   package: azure-arm-datafactory
+- uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRun_1
+  name: queryByPipelineRun(string, string, string, RunFilterParameters, ServiceCallback<ActivityRunsQueryResponse>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Активность запросов срабатывает по условий входного фильтра.
+  syntax:
+    content: 'function queryByPipelineRun(resourceGroupName: string, factoryName: string, runId: string, filterParameters: RunFilterParameters, callback: ServiceCallback<ActivityRunsQueryResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: factoryName
+      type:
+      - string
+      description: ''
+    - id: runId
+      type:
+      - string
+      description: ''
+    - id: filterParameters
+      type:
+      - azure-arm-datafactory.RunFilterParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-datafactory.ActivityRunsQueryResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
+  package: azure-arm-datafactory
 - uid: azure-arm-datafactory.ActivityRuns.queryByPipelineRunWithHttpOperationResponse
-  name: queryByPipelineRunWithHttpOperationResponse
+  name: queryByPipelineRunWithHttpOperationResponse(string, string, string, RunFilterParameters, Object)
   children: []
   type: method
   langs:
@@ -171,11 +171,13 @@ items:
   package: azure-arm-datafactory
 references:
 - uid: azure-arm-datafactory.RunFilterParameters
+  name: RunFilterParameters
   spec.typeScript:
   - name: RunFilterParameters
     fullName: RunFilterParameters
     uid: azure-arm-datafactory.RunFilterParameters
 - uid: Promise<azure-arm-datafactory.ActivityRunsQueryResponse>
+  name: ActivityRunsQueryResponse>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -185,6 +187,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-datafactory.ActivityRunsQueryResponse>
+  name: ActivityRunsQueryResponse>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -194,6 +197,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-datafactory.ActivityRunsQueryResponse>>
+  name: ActivityRunsQueryResponse>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

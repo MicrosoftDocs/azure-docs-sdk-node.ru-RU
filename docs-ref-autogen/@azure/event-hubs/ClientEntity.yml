@@ -1,0 +1,172 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e61f19a4736cc7a09b4a6980d6773cbaa8f6ede9
+ms.sourcegitcommit: 42c41a3863e31111d98796f150878d4fa93463af
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48297841"
+items:
+- uid: '@azure/event-hubs.ClientEntity'
+  name: ClientEntity
+  fullName: ClientEntity
+  children:
+  - '@azure/event-hubs.ClientEntity.address'
+  - '@azure/event-hubs.ClientEntity.audience'
+  - '@azure/event-hubs.ClientEntity.constructor'
+  - '@azure/event-hubs.ClientEntity.name'
+  - '@azure/event-hubs.ClientEntity.partitionId'
+  - '@azure/event-hubs.ClientEntity.type'
+  - '@azure/event-hubs.ClientEntity.wasCloseCalled'
+  langs:
+  - typeScript
+  type: class
+  summary: Описывает базовый класс для сущностей, таких как клиент концентратора событий отправитель, получатель и управление.
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.address'
+  name: address
+  fullName: address
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {Строка} адрес адрес сущности клиента в одном из следующих форм:
+
+
+    **Отправитель**
+
+    - `"<hubName>"`
+
+    - `"<hubName>/Partitions/<partitionId>"`.
+
+
+    **Получатель**
+
+    - `"<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"`.
+
+
+    **ManagementClient**
+
+    -`"$management"`.
+  syntax:
+    content: 'address: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.audience'
+  name: audience
+  fullName: audience
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    аудитория {строка} аудитория токена сущности клиента в одном из следующих форм:
+
+
+    **Отправитель**
+
+    - `"sb://<yournamespace>.servicebus.windows.net/<hubName>"`
+
+    - `"sb://<yournamespace>.servicebus.windows.net/<hubName>/Partitions/<partitionId>"`.
+
+
+    **Получатель**
+
+    - `"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"`.
+
+
+    **ManagementClient**
+
+    - `"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/$management"`.
+  syntax:
+    content: 'audience: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.constructor'
+  name: ClientEntity
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Создает новый экземпляр ClientEntity.
+  syntax:
+    content: 'new ClientEntity(context: ConnectionContext, options?: ClientEntityOptions)'
+    parameters:
+    - id: context
+      type:
+      - ConnectionContext
+      description: Контекст соединения.
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientEntityOptions'
+      description: ''
+      optional: true
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.name'
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Строка} [имя] Уникальное имя для сущности (обычно guid).'
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.partitionId'
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Строка | Номер} [partitionId] PartitionId, связанный с объектом клиента.'
+  optional: true
+  syntax:
+    content: 'partitionId?: string | number'
+    return:
+      type:
+      - string | number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.type'
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Предоставляет текущий тип ClientEntity.
+  syntax:
+    content: 'type: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.wasCloseCalled'
+  name: wasCloseCalled
+  fullName: wasCloseCalled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Логическое} wasCloseCalled указывает, был ли метод close() вызван на себя в данном контексте.'
+  syntax:
+    content: 'wasCloseCalled: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.ClientEntityOptions'
+  name: ClientEntityOptions
+  spec.typeScript:
+  - name: ClientEntityOptions
+    fullName: ClientEntityOptions
+    uid: '@azure/event-hubs.ClientEntityOptions'
