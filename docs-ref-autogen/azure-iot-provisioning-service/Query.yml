@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 62e8f29f92fe302bcf251e210ebca68ab7dfede3
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 86dd4eb3370a0be599ccbb11dc7f91ff52e34891
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41692363"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53668918"
 items:
 - uid: azure-iot-provisioning-service.Query
   name: Query
@@ -12,7 +12,10 @@ items:
   children:
   - azure-iot-provisioning-service.Query.continuationToken
   - azure-iot-provisioning-service.Query.hasMoreResults
+  - azure-iot-provisioning-service.Query.next_2
   - azure-iot-provisioning-service.Query.next
+  - azure-iot-provisioning-service.Query.next_3
+  - azure-iot-provisioning-service.Query.next_1
   - azure-iot-provisioning-service.Query.constructor
   langs:
   - typeScript
@@ -47,29 +50,74 @@ items:
       type:
       - boolean
   package: azure-iot-provisioning-service
-- uid: azure-iot-provisioning-service.Query.next
-  name: next
+- uid: azure-iot-provisioning-service.Query.next_2
+  name: next()
   children: []
   type: method
   langs:
   - typeScript
   summary: Возвращает следующую страницу результатов для этого запроса.
   syntax:
-    content: 'function next(continuationTokenOrCallback: string | QueryCallback, done?: QueryCallback)'
-    parameters:
-    - id: continuationTokenOrCallback
+    content: function next()
+    parameters: []
+    return:
       type:
-      - string | azure-iot-provisioning-service.QueryCallback
+      - Promise<ResultWithHttpResponse<azure-iot-provisioning-service.QueryResult>>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.Query.next
+  name: next(QueryCallback)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса.
+  syntax:
+    content: 'function next(done: QueryCallback)'
+    parameters:
+    - id: done
+      type:
+      - azure-iot-provisioning-service.QueryCallback
+      description: ''
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.Query.next_3
+  name: next(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса.
+  syntax:
+    content: 'function next(continuationToken: string)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<ResultWithHttpResponse<azure-iot-provisioning-service.QueryResult>>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.Query.next_1
+  name: next(string, QueryCallback)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает следующую страницу результатов для этого запроса.
+  syntax:
+    content: 'function next(continuationToken: string, done: QueryCallback)'
+    parameters:
+    - id: continuationToken
+      type:
+      - string
       description: ''
     - id: done
       type:
       - azure-iot-provisioning-service.QueryCallback
-      description: >
-        Обратный вызов, который будет вызываться с ошибка объекта или результаты запроса.
-      optional: true
+      description: ''
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.Query.constructor
-  name: Query
+  name: 'Query((continuationToken: string, done: QueryCallback) => void)'
   children: []
   type: constructor
   langs:
@@ -84,15 +132,19 @@ items:
       description: ''
   package: azure-iot-provisioning-service
 references:
-- uid: string | azure-iot-provisioning-service.QueryCallback
-  spec.typeScript:
-  - name: 'string | '
-    fullName: 'string | '
-  - name: QueryCallback
-    fullName: QueryCallback
-    uid: azure-iot-provisioning-service.QueryCallback
 - uid: azure-iot-provisioning-service.QueryCallback
+  name: QueryCallback
   spec.typeScript:
   - name: QueryCallback
     fullName: QueryCallback
     uid: azure-iot-provisioning-service.QueryCallback
+- uid: Promise<ResultWithHttpResponse<azure-iot-provisioning-service.QueryResult>>
+  name: QueryResult>>
+  spec.typeScript:
+  - name: Promise<ResultWithHttpResponse<
+    fullName: Promise<ResultWithHttpResponse<
+  - name: QueryResult
+    fullName: QueryResult
+    uid: azure-iot-provisioning-service.QueryResult
+  - name: '>>'
+    fullName: '>>'
