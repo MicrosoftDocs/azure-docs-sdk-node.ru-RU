@@ -1,54 +1,54 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 9ccdf4537777be622414d11322befbe7666691a7
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: bfb5185454b9b754bf438ec41f8c75ac92ac0eaa
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41690003"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52143639"
 items:
 - uid: azure-batch.Task
   name: Task
   fullName: Task
   children:
   - azure-batch.Task.add
-  - azure-batch.Task.add_1
   - azure-batch.Task.add_2
-  - azure-batch.Task.addCollection_1
+  - azure-batch.Task.add_1
   - azure-batch.Task.addCollection
   - azure-batch.Task.addCollection_2
+  - azure-batch.Task.addCollection_1
   - azure-batch.Task.addCollectionWithHttpOperationResponse
   - azure-batch.Task.addWithHttpOperationResponse
-  - azure-batch.Task.deleteMethod_1
-  - azure-batch.Task.deleteMethod_2
   - azure-batch.Task.deleteMethod
+  - azure-batch.Task.deleteMethod_2
+  - azure-batch.Task.deleteMethod_1
   - azure-batch.Task.deleteMethodWithHttpOperationResponse
-  - azure-batch.Task.get_1
-  - azure-batch.Task.get_2
   - azure-batch.Task.get
+  - azure-batch.Task.get_2
+  - azure-batch.Task.get_1
   - azure-batch.Task.getWithHttpOperationResponse
   - azure-batch.Task.list
-  - azure-batch.Task.list_1
   - azure-batch.Task.list_2
+  - azure-batch.Task.list_1
   - azure-batch.Task.listNext
-  - azure-batch.Task.listNext_1
   - azure-batch.Task.listNext_2
+  - azure-batch.Task.listNext_1
   - azure-batch.Task.listNextWithHttpOperationResponse
-  - azure-batch.Task.listSubtasks_1
-  - azure-batch.Task.listSubtasks_2
   - azure-batch.Task.listSubtasks
+  - azure-batch.Task.listSubtasks_2
+  - azure-batch.Task.listSubtasks_1
   - azure-batch.Task.listSubtasksWithHttpOperationResponse
   - azure-batch.Task.listWithHttpOperationResponse
   - azure-batch.Task.reactivate
-  - azure-batch.Task.reactivate_1
   - azure-batch.Task.reactivate_2
+  - azure-batch.Task.reactivate_1
   - azure-batch.Task.reactivateWithHttpOperationResponse
   - azure-batch.Task.terminate
-  - azure-batch.Task.terminate_1
   - azure-batch.Task.terminate_2
+  - azure-batch.Task.terminate_1
   - azure-batch.Task.terminateWithHttpOperationResponse
   - azure-batch.Task.update
-  - azure-batch.Task.update_1
   - azure-batch.Task.update_2
+  - azure-batch.Task.update_1
   - azure-batch.Task.updateWithHttpOperationResponse
   langs:
   - typeScript
@@ -56,7 +56,7 @@ items:
   summary: ''
   package: azure-batch
 - uid: azure-batch.Task.add
-  name: add
+  name: add(string, TaskAddParameter, Object)
   children: []
   type: method
   langs:
@@ -84,34 +84,8 @@ items:
       type:
       - Promise<void>
   package: azure-batch
-- uid: azure-batch.Task.add_1
-  name: add
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function add(jobId: string, task: TaskAddParameter, callback: ServiceCallback<void>)'
-    parameters:
-    - id: jobId
-      type:
-      - string
-      description: ''
-    - id: task
-      type:
-      - azure-batch.TaskAddParameter
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-batch
 - uid: azure-batch.Task.add_2
-  name: add
+  name: add(string, TaskAddParameter, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -140,34 +114,34 @@ items:
       type:
       - Promise<void>
   package: azure-batch
-- uid: azure-batch.Task.addCollection_1
-  name: addCollection
+- uid: azure-batch.Task.add_1
+  name: add(string, TaskAddParameter, ServiceCallback<void>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function addCollection(jobId: string, value: TaskAddParameter[], callback: ServiceCallback<TaskAddCollectionResult>)'
+    content: 'function add(jobId: string, task: TaskAddParameter, callback: ServiceCallback<void>)'
     parameters:
     - id: jobId
       type:
       - string
       description: ''
-    - id: value
+    - id: task
       type:
-      - azure-batch.TaskAddParameter[]
+      - azure-batch.TaskAddParameter
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-batch.TaskAddCollectionResult>
+      - ServiceCallback<void>
       description: ''
     return:
       type:
-      - Promise<azure-batch.TaskAddCollectionResult>
+      - Promise<void>
   package: azure-batch
 - uid: azure-batch.Task.addCollection
-  name: addCollection
+  name: addCollection(string, TaskAddParameter[], Object)
   children: []
   type: method
   langs:
@@ -185,7 +159,7 @@ items:
       type:
       - azure-batch.TaskAddParameter[]
       description: >
-        Коллекция задач для добавления. Общий размер сериализованного этой коллекции должен быть менее 4 МБ. Если это значение превышает 4 МБ (например, если каждая задача имеет 100 в файлы ресурсов или переменных среды), запрос завершится ошибкой с кодом «RequestBodyTooLarge» и следует повторить попытку с меньшим числом задач.
+        Коллекция задач для добавления. Максимальное число задач — 100. Общий размер сериализованного этой коллекции должен быть меньше 1 МБ. Если значение больше 1 МБ (например, если каждая задача имеет 100 в файлы ресурсов или переменных среды), запрос завершится ошибкой с кодом «RequestBodyTooLarge» и следует повторить попытку с меньшим числом задач.
     - id: options
       type:
       - Object
@@ -196,7 +170,7 @@ items:
       - Promise<azure-batch.TaskAddCollectionResult>
   package: azure-batch
 - uid: azure-batch.Task.addCollection_2
-  name: addCollection
+  name: addCollection(string, TaskAddParameter[], Object, ServiceCallback<TaskAddCollectionResult>)
   children: []
   type: method
   langs:
@@ -225,8 +199,34 @@ items:
       type:
       - Promise<azure-batch.TaskAddCollectionResult>
   package: azure-batch
+- uid: azure-batch.Task.addCollection_1
+  name: addCollection(string, TaskAddParameter[], ServiceCallback<TaskAddCollectionResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function addCollection(jobId: string, value: TaskAddParameter[], callback: ServiceCallback<TaskAddCollectionResult>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: value
+      type:
+      - azure-batch.TaskAddParameter[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.TaskAddCollectionResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.TaskAddCollectionResult>
+  package: azure-batch
 - uid: azure-batch.Task.addCollectionWithHttpOperationResponse
-  name: addCollectionWithHttpOperationResponse
+  name: addCollectionWithHttpOperationResponse(string, TaskAddParameter[], Object)
   children: []
   type: method
   langs:
@@ -244,7 +244,7 @@ items:
       type:
       - azure-batch.TaskAddParameter[]
       description: >
-        Коллекция задач для добавления. Общий размер сериализованного этой коллекции должен быть менее 4 МБ. Если это значение превышает 4 МБ (например, если каждая задача имеет 100 в файлы ресурсов или переменных среды), запрос завершится ошибкой с кодом «RequestBodyTooLarge» и следует повторить попытку с меньшим числом задач.
+        Коллекция задач для добавления. Максимальное число задач — 100. Общий размер сериализованного этой коллекции должен быть меньше 1 МБ. Если значение больше 1 МБ (например, если каждая задача имеет 100 в файлы ресурсов или переменных среды), запрос завершится ошибкой с кодом «RequestBodyTooLarge» и следует повторить попытку с меньшим числом задач.
     - id: options
       type:
       - Object
@@ -255,7 +255,7 @@ items:
       - Promise<HttpOperationResponse<azure-batch.TaskAddCollectionResult>>
   package: azure-batch
 - uid: azure-batch.Task.addWithHttpOperationResponse
-  name: addWithHttpOperationResponse
+  name: addWithHttpOperationResponse(string, TaskAddParameter, Object)
   children: []
   type: method
   langs:
@@ -283,34 +283,37 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-batch
-- uid: azure-batch.Task.deleteMethod_1
-  name: deleteMethod
+- uid: azure-batch.Task.deleteMethod
+  name: deleteMethod(string, string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethod(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
-      description: ''
+      description: >
+        Идентификатор задания, из которой нужно удалить задачу.
     - id: taskId
       type:
       - string
-      description: ''
-    - id: callback
+      description: >
+        Идентификатор задачи, который требуется удалить.
+    - id: options
       type:
-      - ServiceCallback<void>
+      - Object
       description: ''
+      optional: true
     return:
       type:
       - Promise<void>
   package: azure-batch
 - uid: azure-batch.Task.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -339,37 +342,34 @@ items:
       type:
       - Promise<void>
   package: azure-batch
-- uid: azure-batch.Task.deleteMethod
-  name: deleteMethod
+- uid: azure-batch.Task.deleteMethod_1
+  name: deleteMethod(string, string, ServiceCallback<void>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function deleteMethod(jobId: string, taskId: string, options?: Object)'
+    content: 'function deleteMethod(jobId: string, taskId: string, callback: ServiceCallback<void>)'
     parameters:
     - id: jobId
       type:
       - string
-      description: >
-        Идентификатор задания, из которой нужно удалить задачу.
+      description: ''
     - id: taskId
       type:
       - string
-      description: >
-        Идентификатор задачи, который требуется удалить.
-    - id: options
-      type:
-      - Object
       description: ''
-      optional: true
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
     return:
       type:
       - Promise<void>
   package: azure-batch
 - uid: azure-batch.Task.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -397,34 +397,37 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-batch
-- uid: azure-batch.Task.get_1
-  name: get
+- uid: azure-batch.Task.get
+  name: get(string, string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function get(jobId: string, taskId: string, callback: ServiceCallback<CloudTask>)'
+    content: 'function get(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
-      description: ''
+      description: >
+        Идентификатор задания, который содержит задачу.
     - id: taskId
       type:
       - string
-      description: ''
-    - id: callback
+      description: >
+        Идентификатор задачи, который требуется получить сведения.
+    - id: options
       type:
-      - ServiceCallback<azure-batch.CloudTask>
+      - Object
       description: ''
+      optional: true
     return:
       type:
       - Promise<azure-batch.CloudTask>
   package: azure-batch
 - uid: azure-batch.Task.get_2
-  name: get
+  name: get(string, string, Object, ServiceCallback<CloudTask>)
   children: []
   type: method
   langs:
@@ -453,37 +456,34 @@ items:
       type:
       - Promise<azure-batch.CloudTask>
   package: azure-batch
-- uid: azure-batch.Task.get
-  name: get
+- uid: azure-batch.Task.get_1
+  name: get(string, string, ServiceCallback<CloudTask>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function get(jobId: string, taskId: string, options?: Object)'
+    content: 'function get(jobId: string, taskId: string, callback: ServiceCallback<CloudTask>)'
     parameters:
     - id: jobId
       type:
       - string
-      description: >
-        Идентификатор задания, который содержит задачу.
+      description: ''
     - id: taskId
       type:
       - string
-      description: >
-        Идентификатор задачи, который требуется получить сведения.
-    - id: options
-      type:
-      - Object
       description: ''
-      optional: true
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTask>
+      description: ''
     return:
       type:
       - Promise<azure-batch.CloudTask>
   package: azure-batch
 - uid: azure-batch.Task.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -512,7 +512,7 @@ items:
       - Promise<HttpOperationResponse<azure-batch.CloudTask>>
   package: azure-batch
 - uid: azure-batch.Task.list
-  name: list
+  name: list(string, Object)
   children: []
   type: method
   langs:
@@ -535,30 +535,8 @@ items:
       type:
       - Promise<azure-batch.CloudTaskListResult>
   package: azure-batch
-- uid: azure-batch.Task.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function list(jobId: string, callback: ServiceCallback<CloudTaskListResult>)'
-    parameters:
-    - id: jobId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-batch.CloudTaskListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-batch.CloudTaskListResult>
-  package: azure-batch
 - uid: azure-batch.Task.list_2
-  name: list
+  name: list(string, Object, ServiceCallback<CloudTaskListResult>)
   children: []
   type: method
   langs:
@@ -583,8 +561,30 @@ items:
       type:
       - Promise<azure-batch.CloudTaskListResult>
   package: azure-batch
+- uid: azure-batch.Task.list_1
+  name: list(string, ServiceCallback<CloudTaskListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(jobId: string, callback: ServiceCallback<CloudTaskListResult>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListResult>
+  package: azure-batch
 - uid: azure-batch.Task.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -607,30 +607,8 @@ items:
       type:
       - Promise<azure-batch.CloudTaskListResult>
   package: azure-batch
-- uid: azure-batch.Task.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudTaskListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-batch.CloudTaskListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-batch.CloudTaskListResult>
-  package: azure-batch
 - uid: azure-batch.Task.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<CloudTaskListResult>)
   children: []
   type: method
   langs:
@@ -655,8 +633,30 @@ items:
       type:
       - Promise<azure-batch.CloudTaskListResult>
   package: azure-batch
+- uid: azure-batch.Task.listNext_1
+  name: listNext(string, ServiceCallback<CloudTaskListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudTaskListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-batch.CloudTaskListResult>
+  package: azure-batch
 - uid: azure-batch.Task.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -679,34 +679,37 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-batch.CloudTaskListResult>>
   package: azure-batch
-- uid: azure-batch.Task.listSubtasks_1
-  name: listSubtasks
+- uid: azure-batch.Task.listSubtasks
+  name: listSubtasks(string, string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listSubtasks(jobId: string, taskId: string, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
+    content: 'function listSubtasks(jobId: string, taskId: string, options?: Object)'
     parameters:
     - id: jobId
       type:
       - string
-      description: ''
+      description: >
+        Идентификатор задания.
     - id: taskId
       type:
       - string
-      description: ''
-    - id: callback
+      description: >
+        Идентификатор задачи.
+    - id: options
       type:
-      - ServiceCallback<azure-batch.CloudTaskListSubtasksResult>
+      - Object
       description: ''
+      optional: true
     return:
       type:
       - Promise<azure-batch.CloudTaskListSubtasksResult>
   package: azure-batch
 - uid: azure-batch.Task.listSubtasks_2
-  name: listSubtasks
+  name: listSubtasks(string, string, Object, ServiceCallback<CloudTaskListSubtasksResult>)
   children: []
   type: method
   langs:
@@ -735,37 +738,34 @@ items:
       type:
       - Promise<azure-batch.CloudTaskListSubtasksResult>
   package: azure-batch
-- uid: azure-batch.Task.listSubtasks
-  name: listSubtasks
+- uid: azure-batch.Task.listSubtasks_1
+  name: listSubtasks(string, string, ServiceCallback<CloudTaskListSubtasksResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: ''
   syntax:
-    content: 'function listSubtasks(jobId: string, taskId: string, options?: Object)'
+    content: 'function listSubtasks(jobId: string, taskId: string, callback: ServiceCallback<CloudTaskListSubtasksResult>)'
     parameters:
     - id: jobId
       type:
       - string
-      description: >
-        Идентификатор задания.
+      description: ''
     - id: taskId
       type:
       - string
-      description: >
-        Идентификатор задачи.
-    - id: options
-      type:
-      - Object
       description: ''
-      optional: true
+    - id: callback
+      type:
+      - ServiceCallback<azure-batch.CloudTaskListSubtasksResult>
+      description: ''
     return:
       type:
       - Promise<azure-batch.CloudTaskListSubtasksResult>
   package: azure-batch
 - uid: azure-batch.Task.listSubtasksWithHttpOperationResponse
-  name: listSubtasksWithHttpOperationResponse
+  name: listSubtasksWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -794,7 +794,7 @@ items:
       - Promise<HttpOperationResponse<azure-batch.CloudTaskListSubtasksResult>>
   package: azure-batch
 - uid: azure-batch.Task.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -818,7 +818,7 @@ items:
       - Promise<HttpOperationResponse<azure-batch.CloudTaskListResult>>
   package: azure-batch
 - uid: azure-batch.Task.reactivate
-  name: reactivate
+  name: reactivate(string, string, Object)
   children: []
   type: method
   langs:
@@ -846,34 +846,8 @@ items:
       type:
       - Promise<void>
   package: azure-batch
-- uid: azure-batch.Task.reactivate_1
-  name: reactivate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function reactivate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: jobId
-      type:
-      - string
-      description: ''
-    - id: taskId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-batch
 - uid: azure-batch.Task.reactivate_2
-  name: reactivate
+  name: reactivate(string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -902,8 +876,34 @@ items:
       type:
       - Promise<void>
   package: azure-batch
+- uid: azure-batch.Task.reactivate_1
+  name: reactivate(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function reactivate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
 - uid: azure-batch.Task.reactivateWithHttpOperationResponse
-  name: reactivateWithHttpOperationResponse
+  name: reactivateWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -932,7 +932,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-batch
 - uid: azure-batch.Task.terminate
-  name: terminate
+  name: terminate(string, string, Object)
   children: []
   type: method
   langs:
@@ -960,34 +960,8 @@ items:
       type:
       - Promise<void>
   package: azure-batch
-- uid: azure-batch.Task.terminate_1
-  name: terminate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function terminate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: jobId
-      type:
-      - string
-      description: ''
-    - id: taskId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-batch
 - uid: azure-batch.Task.terminate_2
-  name: terminate
+  name: terminate(string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -1016,8 +990,34 @@ items:
       type:
       - Promise<void>
   package: azure-batch
+- uid: azure-batch.Task.terminate_1
+  name: terminate(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function terminate(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
 - uid: azure-batch.Task.terminateWithHttpOperationResponse
-  name: terminateWithHttpOperationResponse
+  name: terminateWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -1046,7 +1046,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-batch
 - uid: azure-batch.Task.update
-  name: update
+  name: update(string, string, Object)
   children: []
   type: method
   langs:
@@ -1074,34 +1074,8 @@ items:
       type:
       - Promise<void>
   package: azure-batch
-- uid: azure-batch.Task.update_1
-  name: update
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновляет свойства указанной задачи.
-  syntax:
-    content: 'function update(jobId: string, taskId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: jobId
-      type:
-      - string
-      description: ''
-    - id: taskId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-batch
 - uid: azure-batch.Task.update_2
-  name: update
+  name: update(string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -1130,8 +1104,34 @@ items:
       type:
       - Promise<void>
   package: azure-batch
+- uid: azure-batch.Task.update_1
+  name: update(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет свойства указанной задачи.
+  syntax:
+    content: 'function update(jobId: string, taskId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: jobId
+      type:
+      - string
+      description: ''
+    - id: taskId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-batch
 - uid: azure-batch.Task.updateWithHttpOperationResponse
-  name: updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -1161,11 +1161,13 @@ items:
   package: azure-batch
 references:
 - uid: azure-batch.TaskAddParameter
+  name: TaskAddParameter
   spec.typeScript:
   - name: TaskAddParameter
     fullName: TaskAddParameter
     uid: azure-batch.TaskAddParameter
 - uid: azure-batch.TaskAddParameter[]
+  name: TaskAddParameter[]
   spec.typeScript:
   - name: TaskAddParameter
     fullName: TaskAddParameter
@@ -1173,6 +1175,7 @@ references:
   - name: '[]'
     fullName: '[]'
 - uid: Promise<azure-batch.TaskAddCollectionResult>
+  name: TaskAddCollectionResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1182,6 +1185,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-batch.TaskAddCollectionResult>
+  name: TaskAddCollectionResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1191,6 +1195,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-batch.TaskAddCollectionResult>>
+  name: TaskAddCollectionResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1200,6 +1205,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-batch.CloudTask>
+  name: CloudTask>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1209,6 +1215,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-batch.CloudTask>
+  name: CloudTask>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1218,6 +1225,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-batch.CloudTask>>
+  name: CloudTask>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1227,6 +1235,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-batch.CloudTaskListResult>
+  name: CloudTaskListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1236,6 +1245,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-batch.CloudTaskListResult>
+  name: CloudTaskListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1245,6 +1255,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-batch.CloudTaskListResult>>
+  name: CloudTaskListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1254,6 +1265,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-batch.CloudTaskListSubtasksResult>
+  name: CloudTaskListSubtasksResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1263,6 +1275,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-batch.CloudTaskListSubtasksResult>
+  name: CloudTaskListSubtasksResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1272,6 +1285,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-batch.CloudTaskListSubtasksResult>>
+  name: CloudTaskListSubtasksResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

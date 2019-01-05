@@ -1,37 +1,37 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3e562b3dd1ce4d439263e9bda05c9d48516718b3
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 5a8d9628614595fd513d392d2c5a0afd54430d58
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41700663"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52137499"
 items:
 - uid: azure-arm-servicemap.Processes
   name: Processes
   fullName: Processes
   children:
   - azure-arm-servicemap.Processes.get
-  - azure-arm-servicemap.Processes.get_1
   - azure-arm-servicemap.Processes.get_2
-  - azure-arm-servicemap.Processes.getLiveness_1
-  - azure-arm-servicemap.Processes.getLiveness_2
+  - azure-arm-servicemap.Processes.get_1
   - azure-arm-servicemap.Processes.getLiveness
+  - azure-arm-servicemap.Processes.getLiveness_2
+  - azure-arm-servicemap.Processes.getLiveness_1
   - azure-arm-servicemap.Processes.getLivenessWithHttpOperationResponse
   - azure-arm-servicemap.Processes.getWithHttpOperationResponse
   - azure-arm-servicemap.Processes.listAcceptingPorts
-  - azure-arm-servicemap.Processes.listAcceptingPorts_1
   - azure-arm-servicemap.Processes.listAcceptingPorts_2
+  - azure-arm-servicemap.Processes.listAcceptingPorts_1
   - azure-arm-servicemap.Processes.listAcceptingPortsNext
-  - azure-arm-servicemap.Processes.listAcceptingPortsNext_1
   - azure-arm-servicemap.Processes.listAcceptingPortsNext_2
+  - azure-arm-servicemap.Processes.listAcceptingPortsNext_1
   - azure-arm-servicemap.Processes.listAcceptingPortsNextWithHttpOperationResponse
   - azure-arm-servicemap.Processes.listAcceptingPortsWithHttpOperationResponse
   - azure-arm-servicemap.Processes.listConnections
-  - azure-arm-servicemap.Processes.listConnections_1
   - azure-arm-servicemap.Processes.listConnections_2
+  - azure-arm-servicemap.Processes.listConnections_1
   - azure-arm-servicemap.Processes.listConnectionsNext
-  - azure-arm-servicemap.Processes.listConnectionsNext_1
   - azure-arm-servicemap.Processes.listConnectionsNext_2
+  - azure-arm-servicemap.Processes.listConnectionsNext_1
   - azure-arm-servicemap.Processes.listConnectionsNextWithHttpOperationResponse
   - azure-arm-servicemap.Processes.listConnectionsWithHttpOperationResponse
   langs:
@@ -40,7 +40,7 @@ items:
   summary: ''
   package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.get
-  name: get
+  name: get(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -78,42 +78,8 @@ items:
       type:
       - Promise<azure-arm-servicemap.Process>
   package: azure-arm-servicemap
-- uid: azure-arm-servicemap.Processes.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает указанный процесс.
-  syntax:
-    content: 'function get(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<Process>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: workspaceName
-      type:
-      - string
-      description: ''
-    - id: machineName
-      type:
-      - string
-      description: ''
-    - id: processName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicemap.Process>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicemap.Process>
-  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.get_2
-  name: get
+  name: get(string, string, string, string, Object, ServiceCallback<Process>)
   children: []
   type: method
   langs:
@@ -150,15 +116,15 @@ items:
       type:
       - Promise<azure-arm-servicemap.Process>
   package: azure-arm-servicemap
-- uid: azure-arm-servicemap.Processes.getLiveness_1
-  name: getLiveness
+- uid: azure-arm-servicemap.Processes.get_1
+  name: get(string, string, string, string, ServiceCallback<Process>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: Получает состояние активности процесса во время указанного интервала времени.
+  summary: Возвращает указанный процесс.
   syntax:
-    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<Liveness>)'
+    content: 'function get(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<Process>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -178,52 +144,14 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-arm-servicemap.Liveness>
+      - ServiceCallback<azure-arm-servicemap.Process>
       description: ''
     return:
       type:
-      - Promise<azure-arm-servicemap.Liveness>
-  package: azure-arm-servicemap
-- uid: azure-arm-servicemap.Processes.getLiveness_2
-  name: getLiveness
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает состояние активности процесса во время указанного интервала времени.
-  syntax:
-    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options: Object, callback: ServiceCallback<Liveness>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: workspaceName
-      type:
-      - string
-      description: ''
-    - id: machineName
-      type:
-      - string
-      description: ''
-    - id: processName
-      type:
-      - string
-      description: ''
-    - id: options
-      type:
-      - Object
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicemap.Liveness>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicemap.Liveness>
+      - Promise<azure-arm-servicemap.Process>
   package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.getLiveness
-  name: getLiveness
+  name: getLiveness(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -261,8 +189,80 @@ items:
       type:
       - Promise<azure-arm-servicemap.Liveness>
   package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.getLiveness_2
+  name: getLiveness(string, string, string, string, Object, ServiceCallback<Liveness>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает состояние активности процесса во время указанного интервала времени.
+  syntax:
+    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, options: Object, callback: ServiceCallback<Liveness>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Liveness>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Liveness>
+  package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.getLiveness_1
+  name: getLiveness(string, string, string, string, ServiceCallback<Liveness>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает состояние активности процесса во время указанного интервала времени.
+  syntax:
+    content: 'function getLiveness(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<Liveness>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.Liveness>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.Liveness>
+  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.getLivenessWithHttpOperationResponse
-  name: getLivenessWithHttpOperationResponse
+  name: getLivenessWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -301,7 +301,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-servicemap.Liveness>>
   package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -340,7 +340,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-servicemap.Process>>
   package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listAcceptingPorts
-  name: listAcceptingPorts
+  name: listAcceptingPorts(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -378,42 +378,8 @@ items:
       type:
       - Promise<azure-arm-servicemap.PortCollection>
   package: azure-arm-servicemap
-- uid: azure-arm-servicemap.Processes.listAcceptingPorts_1
-  name: listAcceptingPorts
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает коллекцию порты, на которых этот процесс принимает
-  syntax:
-    content: 'function listAcceptingPorts(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<PortCollection>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: workspaceName
-      type:
-      - string
-      description: ''
-    - id: machineName
-      type:
-      - string
-      description: ''
-    - id: processName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicemap.PortCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicemap.PortCollection>
-  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listAcceptingPorts_2
-  name: listAcceptingPorts
+  name: listAcceptingPorts(string, string, string, string, Object, ServiceCallback<PortCollection>)
   children: []
   type: method
   langs:
@@ -450,8 +416,42 @@ items:
       type:
       - Promise<azure-arm-servicemap.PortCollection>
   package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPorts_1
+  name: listAcceptingPorts(string, string, string, string, ServiceCallback<PortCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает коллекцию порты, на которых этот процесс принимает
+  syntax:
+    content: 'function listAcceptingPorts(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<PortCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.PortCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.PortCollection>
+  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listAcceptingPortsNext
-  name: listAcceptingPortsNext
+  name: listAcceptingPortsNext(string, Object)
   children: []
   type: method
   langs:
@@ -474,30 +474,8 @@ items:
       type:
       - Promise<azure-arm-servicemap.PortCollection>
   package: azure-arm-servicemap
-- uid: azure-arm-servicemap.Processes.listAcceptingPortsNext_1
-  name: listAcceptingPortsNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает коллекцию порты, на которых этот процесс принимает
-  syntax:
-    content: 'function listAcceptingPortsNext(nextPageLink: string, callback: ServiceCallback<PortCollection>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicemap.PortCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicemap.PortCollection>
-  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listAcceptingPortsNext_2
-  name: listAcceptingPortsNext
+  name: listAcceptingPortsNext(string, Object, ServiceCallback<PortCollection>)
   children: []
   type: method
   langs:
@@ -522,8 +500,30 @@ items:
       type:
       - Promise<azure-arm-servicemap.PortCollection>
   package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listAcceptingPortsNext_1
+  name: listAcceptingPortsNext(string, ServiceCallback<PortCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает коллекцию порты, на которых этот процесс принимает
+  syntax:
+    content: 'function listAcceptingPortsNext(nextPageLink: string, callback: ServiceCallback<PortCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.PortCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.PortCollection>
+  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listAcceptingPortsNextWithHttpOperationResponse
-  name: listAcceptingPortsNextWithHttpOperationResponse
+  name: listAcceptingPortsNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -547,7 +547,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-servicemap.PortCollection>>
   package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listAcceptingPortsWithHttpOperationResponse
-  name: listAcceptingPortsWithHttpOperationResponse
+  name: listAcceptingPortsWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -586,7 +586,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-servicemap.PortCollection>>
   package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listConnections
-  name: listConnections
+  name: listConnections(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -624,42 +624,8 @@ items:
       type:
       - Promise<azure-arm-servicemap.ConnectionCollection>
   package: azure-arm-servicemap
-- uid: azure-arm-servicemap.Processes.listConnections_1
-  name: listConnections
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает коллекцию связей завершение или на указанный процесс
-  syntax:
-    content: 'function listConnections(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<ConnectionCollection>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: workspaceName
-      type:
-      - string
-      description: ''
-    - id: machineName
-      type:
-      - string
-      description: ''
-    - id: processName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicemap.ConnectionCollection>
-  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listConnections_2
-  name: listConnections
+  name: listConnections(string, string, string, string, Object, ServiceCallback<ConnectionCollection>)
   children: []
   type: method
   langs:
@@ -696,8 +662,42 @@ items:
       type:
       - Promise<azure-arm-servicemap.ConnectionCollection>
   package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnections_1
+  name: listConnections(string, string, string, string, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает коллекцию связей завершение или на указанный процесс
+  syntax:
+    content: 'function listConnections(resourceGroupName: string, workspaceName: string, machineName: string, processName: string, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceName
+      type:
+      - string
+      description: ''
+    - id: machineName
+      type:
+      - string
+      description: ''
+    - id: processName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listConnectionsNext
-  name: listConnectionsNext
+  name: listConnectionsNext(string, Object)
   children: []
   type: method
   langs:
@@ -720,30 +720,8 @@ items:
       type:
       - Promise<azure-arm-servicemap.ConnectionCollection>
   package: azure-arm-servicemap
-- uid: azure-arm-servicemap.Processes.listConnectionsNext_1
-  name: listConnectionsNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает коллекцию связей завершение или на указанный процесс
-  syntax:
-    content: 'function listConnectionsNext(nextPageLink: string, callback: ServiceCallback<ConnectionCollection>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicemap.ConnectionCollection>
-  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listConnectionsNext_2
-  name: listConnectionsNext
+  name: listConnectionsNext(string, Object, ServiceCallback<ConnectionCollection>)
   children: []
   type: method
   langs:
@@ -768,8 +746,30 @@ items:
       type:
       - Promise<azure-arm-servicemap.ConnectionCollection>
   package: azure-arm-servicemap
+- uid: azure-arm-servicemap.Processes.listConnectionsNext_1
+  name: listConnectionsNext(string, ServiceCallback<ConnectionCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает коллекцию связей завершение или на указанный процесс
+  syntax:
+    content: 'function listConnectionsNext(nextPageLink: string, callback: ServiceCallback<ConnectionCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicemap.ConnectionCollection>
+  package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listConnectionsNextWithHttpOperationResponse
-  name: listConnectionsNextWithHttpOperationResponse
+  name: listConnectionsNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -793,7 +793,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-servicemap.ConnectionCollection>>
   package: azure-arm-servicemap
 - uid: azure-arm-servicemap.Processes.listConnectionsWithHttpOperationResponse
-  name: listConnectionsWithHttpOperationResponse
+  name: listConnectionsWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -833,6 +833,7 @@ items:
   package: azure-arm-servicemap
 references:
 - uid: Promise<azure-arm-servicemap.Process>
+  name: Process>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -842,6 +843,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-servicemap.Process>
+  name: Process>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -851,6 +853,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<azure-arm-servicemap.Liveness>
+  name: Liveness>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -860,6 +863,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-servicemap.Liveness>
+  name: Liveness>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -869,6 +873,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-servicemap.Liveness>>
+  name: Liveness>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -878,6 +883,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<HttpOperationResponse<azure-arm-servicemap.Process>>
+  name: Process>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -887,6 +893,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-servicemap.PortCollection>
+  name: PortCollection>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -896,6 +903,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-servicemap.PortCollection>
+  name: PortCollection>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -905,6 +913,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-servicemap.PortCollection>>
+  name: PortCollection>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -914,6 +923,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-servicemap.ConnectionCollection>
+  name: ConnectionCollection>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -923,6 +933,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-servicemap.ConnectionCollection>
+  name: ConnectionCollection>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -932,6 +943,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-servicemap.ConnectionCollection>>
+  name: ConnectionCollection>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
