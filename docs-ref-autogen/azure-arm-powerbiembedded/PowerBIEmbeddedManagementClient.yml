@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 0126fa6ae7b9f9074489111a4760f22c8d762c00
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 7663fbe29c6564de698c2b93a38b744609e77cd4
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40850819"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52038922"
 items:
 - uid: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient
   name: PowerBIEmbeddedManagementClient
@@ -14,9 +14,9 @@ items:
   - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.apiVersion
   - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.credentials
   - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.generateClientRequestId
+  - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperations
   - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperations_2
   - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperations_1
-  - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperations
   - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperationsWithHttpOperationResponse
   - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.longRunningOperationRetryTimeout
   - azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.constructor
@@ -86,8 +86,27 @@ items:
       type:
       - boolean
   package: azure-arm-powerbiembedded
+- uid: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperations
+  name: getAvailableOperations(Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Указывает, какие операции могут выполняться поставщик ресурсов Power BI.
+  syntax:
+    content: 'function getAvailableOperations(options?: Object)'
+    parameters:
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-powerbiembedded.OperationList>
+  package: azure-arm-powerbiembedded
 - uid: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperations_2
-  name: getAvailableOperations
+  name: getAvailableOperations(Object, ServiceCallback<OperationList>)
   children: []
   type: method
   langs:
@@ -109,7 +128,7 @@ items:
       - Promise<azure-arm-powerbiembedded.OperationList>
   package: azure-arm-powerbiembedded
 - uid: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperations_1
-  name: getAvailableOperations
+  name: getAvailableOperations(ServiceCallback<OperationList>)
   children: []
   type: method
   langs:
@@ -126,27 +145,8 @@ items:
       type:
       - Promise<azure-arm-powerbiembedded.OperationList>
   package: azure-arm-powerbiembedded
-- uid: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperations
-  name: getAvailableOperations
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Указывает, какие операции могут выполняться поставщик ресурсов Power BI.
-  syntax:
-    content: 'function getAvailableOperations(options?: Object)'
-    parameters:
-    - id: options
-      type:
-      - Object
-      description: ''
-      optional: true
-    return:
-      type:
-      - Promise<azure-arm-powerbiembedded.OperationList>
-  package: azure-arm-powerbiembedded
 - uid: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.getAvailableOperationsWithHttpOperationResponse
-  name: getAvailableOperationsWithHttpOperationResponse
+  name: getAvailableOperationsWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -179,7 +179,7 @@ items:
       - number
   package: azure-arm-powerbiembedded
 - uid: azure-arm-powerbiembedded.PowerBIEmbeddedManagementClient.constructor
-  name: PowerBIEmbeddedManagementClient
+  name: PowerBIEmbeddedManagementClient(ServiceClientCredentials, string, string, AzureServiceClientOptions)
   children: []
   type: constructor
   langs:
@@ -253,16 +253,19 @@ items:
   package: azure-arm-powerbiembedded
 references:
 - uid: azure-arm-powerbiembedded.WorkspaceCollections
+  name: WorkspaceCollections
   spec.typeScript:
   - name: WorkspaceCollections
     fullName: WorkspaceCollections
     uid: azure-arm-powerbiembedded.WorkspaceCollections
 - uid: azure-arm-powerbiembedded.Workspaces
+  name: Workspaces
   spec.typeScript:
   - name: Workspaces
     fullName: Workspaces
     uid: azure-arm-powerbiembedded.Workspaces
 - uid: Promise<azure-arm-powerbiembedded.OperationList>
+  name: OperationList>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -272,6 +275,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-powerbiembedded.OperationList>
+  name: OperationList>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -281,6 +285,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-powerbiembedded.OperationList>>
+  name: OperationList>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

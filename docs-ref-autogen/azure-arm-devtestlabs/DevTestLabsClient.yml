@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 9638d361196721dd28dd6e268e17f9acf656a262
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 6cdca42d294090b83acdce64d14a793817f61a54
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41690483"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52038539"
 items:
 - uid: azure-arm-devtestlabs.DevTestLabsClient
   name: DevTestLabsClient
@@ -34,6 +34,8 @@ items:
   - azure-arm-devtestlabs.DevTestLabsClient.providerOperations
   - azure-arm-devtestlabs.DevTestLabsClient.schedules
   - azure-arm-devtestlabs.DevTestLabsClient.secrets
+  - azure-arm-devtestlabs.DevTestLabsClient.serviceFabrics
+  - azure-arm-devtestlabs.DevTestLabsClient.serviceFabricSchedules
   - azure-arm-devtestlabs.DevTestLabsClient.serviceRunners
   - azure-arm-devtestlabs.DevTestLabsClient.subscriptionId
   - azure-arm-devtestlabs.DevTestLabsClient.users
@@ -160,7 +162,7 @@ items:
       - azure-arm-devtestlabs.CustomImages
   package: azure-arm-devtestlabs
 - uid: azure-arm-devtestlabs.DevTestLabsClient.constructor
-  name: DevTestLabsClient
+  name: DevTestLabsClient(ServiceClientCredentials, string, string, AzureServiceClientOptions)
   children: []
   type: constructor
   langs:
@@ -400,6 +402,34 @@ items:
       type:
       - azure-arm-devtestlabs.Secrets
   package: azure-arm-devtestlabs
+- uid: azure-arm-devtestlabs.DevTestLabsClient.serviceFabrics
+  name: serviceFabrics
+  fullName: serviceFabrics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'serviceFabrics: ServiceFabrics'
+    return:
+      type:
+      - azure-arm-devtestlabs.ServiceFabrics
+  package: azure-arm-devtestlabs
+- uid: azure-arm-devtestlabs.DevTestLabsClient.serviceFabricSchedules
+  name: serviceFabricSchedules
+  fullName: serviceFabricSchedules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'serviceFabricSchedules: ServiceFabricSchedules'
+    return:
+      type:
+      - azure-arm-devtestlabs.ServiceFabricSchedules
+  package: azure-arm-devtestlabs
 - uid: azure-arm-devtestlabs.DevTestLabsClient.serviceRunners
   name: serviceRunners
   fullName: serviceRunners
@@ -486,116 +516,151 @@ items:
   package: azure-arm-devtestlabs
 references:
 - uid: azure-arm-devtestlabs.ArmTemplates
+  name: ArmTemplates
   spec.typeScript:
   - name: ArmTemplates
     fullName: ArmTemplates
     uid: azure-arm-devtestlabs.ArmTemplates
 - uid: azure-arm-devtestlabs.ArtifactSources
+  name: ArtifactSources
   spec.typeScript:
   - name: ArtifactSources
     fullName: ArtifactSources
     uid: azure-arm-devtestlabs.ArtifactSources
 - uid: azure-arm-devtestlabs.Artifacts
+  name: Artifacts
   spec.typeScript:
   - name: Artifacts
     fullName: Artifacts
     uid: azure-arm-devtestlabs.Artifacts
 - uid: azure-arm-devtestlabs.Costs
+  name: Costs
   spec.typeScript:
   - name: Costs
     fullName: Costs
     uid: azure-arm-devtestlabs.Costs
 - uid: azure-arm-devtestlabs.CustomImages
+  name: CustomImages
   spec.typeScript:
   - name: CustomImages
     fullName: CustomImages
     uid: azure-arm-devtestlabs.CustomImages
 - uid: azure-arm-devtestlabs.Disks
+  name: Disks
   spec.typeScript:
   - name: Disks
     fullName: Disks
     uid: azure-arm-devtestlabs.Disks
 - uid: azure-arm-devtestlabs.Environments
+  name: Environments
   spec.typeScript:
   - name: Environments
     fullName: Environments
     uid: azure-arm-devtestlabs.Environments
 - uid: azure-arm-devtestlabs.Formulas
+  name: Formulas
   spec.typeScript:
   - name: Formulas
     fullName: Formulas
     uid: azure-arm-devtestlabs.Formulas
 - uid: azure-arm-devtestlabs.GalleryImages
+  name: GalleryImages
   spec.typeScript:
   - name: GalleryImages
     fullName: GalleryImages
     uid: azure-arm-devtestlabs.GalleryImages
 - uid: azure-arm-devtestlabs.GlobalSchedules
+  name: GlobalSchedules
   spec.typeScript:
   - name: GlobalSchedules
     fullName: GlobalSchedules
     uid: azure-arm-devtestlabs.GlobalSchedules
 - uid: azure-arm-devtestlabs.Labs
+  name: Labs
   spec.typeScript:
   - name: Labs
     fullName: Labs
     uid: azure-arm-devtestlabs.Labs
 - uid: azure-arm-devtestlabs.NotificationChannels
+  name: NotificationChannels
   spec.typeScript:
   - name: NotificationChannels
     fullName: NotificationChannels
     uid: azure-arm-devtestlabs.NotificationChannels
 - uid: azure-arm-devtestlabs.Operations
+  name: Operations
   spec.typeScript:
   - name: Operations
     fullName: Operations
     uid: azure-arm-devtestlabs.Operations
 - uid: azure-arm-devtestlabs.Policies
+  name: Policies
   spec.typeScript:
   - name: Policies
     fullName: Policies
     uid: azure-arm-devtestlabs.Policies
 - uid: azure-arm-devtestlabs.PolicySets
+  name: PolicySets
   spec.typeScript:
   - name: PolicySets
     fullName: PolicySets
     uid: azure-arm-devtestlabs.PolicySets
 - uid: azure-arm-devtestlabs.ProviderOperations
+  name: ProviderOperations
   spec.typeScript:
   - name: ProviderOperations
     fullName: ProviderOperations
     uid: azure-arm-devtestlabs.ProviderOperations
 - uid: azure-arm-devtestlabs.Schedules
+  name: Schedules
   spec.typeScript:
   - name: Schedules
     fullName: Schedules
     uid: azure-arm-devtestlabs.Schedules
 - uid: azure-arm-devtestlabs.Secrets
+  name: Secrets
   spec.typeScript:
   - name: Secrets
     fullName: Secrets
     uid: azure-arm-devtestlabs.Secrets
+- uid: azure-arm-devtestlabs.ServiceFabricSchedules
+  name: ServiceFabricSchedules
+  spec.typeScript:
+  - name: ServiceFabricSchedules
+    fullName: ServiceFabricSchedules
+    uid: azure-arm-devtestlabs.ServiceFabricSchedules
+- uid: azure-arm-devtestlabs.ServiceFabrics
+  name: ServiceFabrics
+  spec.typeScript:
+  - name: ServiceFabrics
+    fullName: ServiceFabrics
+    uid: azure-arm-devtestlabs.ServiceFabrics
 - uid: azure-arm-devtestlabs.ServiceRunners
+  name: ServiceRunners
   spec.typeScript:
   - name: ServiceRunners
     fullName: ServiceRunners
     uid: azure-arm-devtestlabs.ServiceRunners
 - uid: azure-arm-devtestlabs.Users
+  name: Users
   spec.typeScript:
   - name: Users
     fullName: Users
     uid: azure-arm-devtestlabs.Users
 - uid: azure-arm-devtestlabs.VirtualMachineSchedules
+  name: VirtualMachineSchedules
   spec.typeScript:
   - name: VirtualMachineSchedules
     fullName: VirtualMachineSchedules
     uid: azure-arm-devtestlabs.VirtualMachineSchedules
 - uid: azure-arm-devtestlabs.VirtualMachines
+  name: VirtualMachines
   spec.typeScript:
   - name: VirtualMachines
     fullName: VirtualMachines
     uid: azure-arm-devtestlabs.VirtualMachines
 - uid: azure-arm-devtestlabs.VirtualNetworks
+  name: VirtualNetworks
   spec.typeScript:
   - name: VirtualNetworks
     fullName: VirtualNetworks
