@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3e50f81272bb20ef63b00ba46c9a114c4a40c890
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53676268"
+items:
+- uid: azure-batch.UploadBatchServiceLogsConfiguration
+  name: UploadBatchServiceLogsConfiguration
+  fullName: UploadBatchServiceLogsConfiguration
+  children:
+  - azure-batch.UploadBatchServiceLogsConfiguration.containerUrl
+  - azure-batch.UploadBatchServiceLogsConfiguration.endTime
+  - azure-batch.UploadBatchServiceLogsConfiguration.startTime
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.UploadBatchServiceLogsConfiguration.containerUrl
+  name: containerUrl
+  fullName: containerUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="43cdb-101">URL-адрес должен включать (Подписанный) предоставление разрешения на запись в контейнер.</span><span class="sxs-lookup"><span data-stu-id="43cdb-101">The URL must include a Shared Access Signature (SAS) granting write permissions to the container.</span></span> <span data-ttu-id="43cdb-102">Длительность SAS должна оставлять достаточно времени для окончания загрузки.</span><span class="sxs-lookup"><span data-stu-id="43cdb-102">The SAS duration must allow enough time for the upload to finish.</span></span> <span data-ttu-id="43cdb-103">Время начала для SAS является необязательным и указывать его не рекомендуется.</span><span class="sxs-lookup"><span data-stu-id="43cdb-103">The start time for SAS is optional and recommended to not be specified.</span></span>
+  syntax:
+    content: 'containerUrl: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.UploadBatchServiceLogsConfiguration.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="43cdb-104">Любой файл журнала, содержащий сообщения журнала в диапазоне времени будет загружен.</span><span class="sxs-lookup"><span data-stu-id="43cdb-104">Any log file containing a log message in the time range will be uploaded.</span></span> <span data-ttu-id="43cdb-105">Это означает, что операция может получить дополнительные журналы не были запрошены, так как весь файл журнала всегда загружается, но операция не будет загружать журналы меньше запрошенного.</span><span class="sxs-lookup"><span data-stu-id="43cdb-105">This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested.</span></span> <span data-ttu-id="43cdb-106">Если этот параметр опущен, по умолчанию используется для передачи всех журналов, доступных после времени начала.</span><span class="sxs-lookup"><span data-stu-id="43cdb-106">If omitted, the default is to upload all logs available after the startTime.</span></span>
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.UploadBatchServiceLogsConfiguration.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="43cdb-107">Любой файл журнала, содержащий сообщения журнала в диапазоне времени будет загружен.</span><span class="sxs-lookup"><span data-stu-id="43cdb-107">Any log file containing a log message in the time range will be uploaded.</span></span> <span data-ttu-id="43cdb-108">Это означает, что операция может получить дополнительные журналы не были запрошены, так как весь файл журнала всегда загружается, но операция не будет загружать журналы меньше запрошенного.</span><span class="sxs-lookup"><span data-stu-id="43cdb-108">This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested.</span></span>
+  syntax:
+    content: 'startTime: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch

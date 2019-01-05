@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ad5f129d81b3fc22469a4be353eb8d7b5c9024fc
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53681504"
+items:
+- uid: azure-batch.InboundNATPool
+  name: InboundNATPool
+  fullName: InboundNATPool
+  children:
+  - azure-batch.InboundNATPool.backendPort
+  - azure-batch.InboundNATPool.frontendPortRangeEnd
+  - azure-batch.InboundNATPool.frontendPortRangeStart
+  - azure-batch.InboundNATPool.name
+  - azure-batch.InboundNATPool.networkSecurityGroupRules
+  - azure-batch.InboundNATPool.protocol
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.InboundNATPool.backendPort
+  name: backendPort
+  fullName: backendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="50e76-101">Это должно быть уникальным в пуле пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="50e76-101">This must be unique within a Batch pool.</span></span> <span data-ttu-id="50e76-102">Допустимые значения — от 1 до 65535, за исключением для 22, 3389, 29876 и 29877, как они зарезервированы.</span><span class="sxs-lookup"><span data-stu-id="50e76-102">Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved.</span></span> <span data-ttu-id="50e76-103">Если какие-либо зарезервированные значения предоставляются, запрос завершается ошибкой с кодом состояния HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="50e76-103">If any reserved values are provided the request fails with HTTP status code 400.</span></span>
+  syntax:
+    content: 'backendPort: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.InboundNATPool.frontendPortRangeEnd
+  name: frontendPortRangeEnd
+  fullName: frontendPortRangeEnd
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="50e76-104">Диапазон допустимых значений от 1 до 65534, за исключением портов из 50000 55000 которого зарезервированы пакетной службой.</span><span class="sxs-lookup"><span data-stu-id="50e76-104">Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved by the Batch service.</span></span> <span data-ttu-id="50e76-105">Все диапазоны в пуле должны быть уникальными и не должны перекрываться.</span><span class="sxs-lookup"><span data-stu-id="50e76-105">All ranges within a pool must be distinct and cannot overlap.</span></span> <span data-ttu-id="50e76-106">Каждый диапазон должен содержать по крайней мере 40 порты.</span><span class="sxs-lookup"><span data-stu-id="50e76-106">Each range must contain at least 40 ports.</span></span> <span data-ttu-id="50e76-107">Если все зарезервированные или перекрывающиеся значения указаны, запрос завершается ошибкой с кодом состояния HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="50e76-107">If any reserved or overlapping values are provided the request fails with HTTP status code 400.</span></span>
+  syntax:
+    content: 'frontendPortRangeEnd: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.InboundNATPool.frontendPortRangeStart
+  name: frontendPortRangeStart
+  fullName: frontendPortRangeStart
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="50e76-108">Диапазон допустимых значений от 1 до 65534, за исключением портов из 50000 55000 которого зарезервированы.</span><span class="sxs-lookup"><span data-stu-id="50e76-108">Acceptable values range between 1 and 65534 except ports from 50000 to 55000 which are reserved.</span></span> <span data-ttu-id="50e76-109">Все диапазоны в пуле должны быть уникальными и не должны перекрываться.</span><span class="sxs-lookup"><span data-stu-id="50e76-109">All ranges within a pool must be distinct and cannot overlap.</span></span> <span data-ttu-id="50e76-110">Каждый диапазон должен содержать по крайней мере 40 порты.</span><span class="sxs-lookup"><span data-stu-id="50e76-110">Each range must contain at least 40 ports.</span></span> <span data-ttu-id="50e76-111">Если все зарезервированные или перекрывающиеся значения указаны, запрос завершается ошибкой с кодом состояния HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="50e76-111">If any reserved or overlapping values are provided the request fails with HTTP status code 400.</span></span>
+  syntax:
+    content: 'frontendPortRangeStart: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.InboundNATPool.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="50e76-112">Имя должно быть уникальным в пуле пакетной службы, может содержать буквы, цифры, символы подчеркивания, точки и дефисы.</span><span class="sxs-lookup"><span data-stu-id="50e76-112">The name must be unique within a Batch pool, can contain letters, numbers, underscores, periods, and hyphens.</span></span> <span data-ttu-id="50e76-113">Имена должны начинаться с буквы или номер, заканчиваться буквой, цифрой или символом подчеркивания и не может превышать 77 символов.</span><span class="sxs-lookup"><span data-stu-id="50e76-113">Names must start with a letter or number, must end with a letter, number, or underscore, and cannot exceed 77 characters.</span></span>  <span data-ttu-id="50e76-114">Если запрос завершается ошибкой с кодом состояния HTTP 400, указаны недопустимые значения.</span><span class="sxs-lookup"><span data-stu-id="50e76-114">If any invalid values are provided the request fails with HTTP status code 400.</span></span>
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.InboundNATPool.networkSecurityGroupRules
+  name: networkSecurityGroupRules
+  fullName: networkSecurityGroupRules
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="50e76-115">Максимальное количество правил, которые могут быть указаны для всех конечных точек в пуле пакетной службы — 25.</span><span class="sxs-lookup"><span data-stu-id="50e76-115">The maximum number of rules that can be specified across all the endpoints on a Batch pool is 25.</span></span> <span data-ttu-id="50e76-116">Если указаны без правила группы безопасности сети, чтобы разрешить входящий доступ к указанным backendPort создается правило по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="50e76-116">If no network security group rules are specified, a default rule will be created to allow inbound access to the specified backendPort.</span></span> <span data-ttu-id="50e76-117">Максимальное число правил группы безопасности сети, превышает ли запрос завершается сбоем с кодом состояния HTTP 400.</span><span class="sxs-lookup"><span data-stu-id="50e76-117">If the maximum number of network security group rules is exceeded the request fails with HTTP status code 400.</span></span>
+  optional: true
+  syntax:
+    content: 'networkSecurityGroupRules?: NetworkSecurityGroupRule[]'
+    return:
+      type:
+      - azure-batch.NetworkSecurityGroupRule[]
+  package: azure-batch
+- uid: azure-batch.InboundNATPool.protocol
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"50e76-118\">Возможные значения: «tcp», «udp»</span><span class=\"sxs-lookup\"><span data-stu-id=\"50e76-118\">Possible values include: 'tcp', 'udp'</span></span>"
+  syntax:
+    content: 'protocol: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.NetworkSecurityGroupRule[]
+  name: NetworkSecurityGroupRule[]
+  spec.typeScript:
+  - name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    uid: azure-batch.NetworkSecurityGroupRule
+  - name: '[]'
+    fullName: '[]'

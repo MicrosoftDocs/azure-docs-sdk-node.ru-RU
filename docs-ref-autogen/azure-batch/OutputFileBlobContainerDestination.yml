@@ -1,0 +1,48 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 09ce6b03757f9d861118debfc5d0bc96d751ca62
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53674258"
+items:
+- uid: azure-batch.OutputFileBlobContainerDestination
+  name: OutputFileBlobContainerDestination
+  fullName: OutputFileBlobContainerDestination
+  children:
+  - azure-batch.OutputFileBlobContainerDestination.containerUrl
+  - azure-batch.OutputFileBlobContainerDestination.path
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.OutputFileBlobContainerDestination.containerUrl
+  name: containerUrl
+  fullName: containerUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b22f5-101">URL-адрес должен включать (Подписанный) предоставление разрешения на запись в контейнер.</span><span class="sxs-lookup"><span data-stu-id="b22f5-101">The URL must include a Shared Access Signature (SAS) granting write permissions to the container.</span></span>
+  syntax:
+    content: 'containerUrl: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.OutputFileBlobContainerDestination.path
+  name: path
+  fullName: path
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b22f5-102">Если filePattern относится к определенному файлу (т. е. содержит подстановочные знаки не), то путь — имя большого двоичного объекта, к которому необходимо отправить этот файл.</span><span class="sxs-lookup"><span data-stu-id="b22f5-102">If filePattern refers to a specific file (i.e. contains no wildcards), then path is the name of the blob to which to upload that file.</span></span> <span data-ttu-id="b22f5-103">Если filePattern содержит один или несколько подстановочных знаков (и поэтому может соответствовать несколько файлов), path является именем виртуального каталога больших двоичных объектов (который добавляется в начало каждого имени большого двоичного объекта) к которому необходимо передать файлы.</span><span class="sxs-lookup"><span data-stu-id="b22f5-103">If filePattern contains one or more wildcards (and therefore may match multiple files), then path is the name of the blob virtual directory (which is prepended to each blob name) to which to upload the file(s).</span></span> <span data-ttu-id="b22f5-104">Если этот параметр опущен, файлы передаются в корень контейнера с именем BLOB-объектов, соответствующим имени файла.</span><span class="sxs-lookup"><span data-stu-id="b22f5-104">If omitted, file(s) are uploaded to the root of the container with a blob name matching their file name.</span></span>
+  optional: true
+  syntax:
+    content: 'path?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
