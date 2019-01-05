@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b8c41bfe89c1c4cc827663b8c0d1876afe8470e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099709"
+items:
+- uid: azure-servicefabric.ClusterHealthChunk
+  name: ClusterHealthChunk
+  fullName: ClusterHealthChunk
+  children:
+  - azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  - azure-servicefabric.ClusterHealthChunk.healthState
+  - azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="19bbf-101">Представляет фрагмент данных о работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="19bbf-101">Represents the health chunk of the cluster.</span></span>
+
+    <span data-ttu-id="19bbf-102">Содержит состояние работоспособности кластера статистическая обработка и сущностей кластеров, с учетом фильтров входа.</span><span class="sxs-lookup"><span data-stu-id="19bbf-102">Contains the cluster aggregated health state, and the cluster entities that respect the input filter.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  name: applicationHealthStateChunks
+  fullName: applicationHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="19bbf-103">Список состояния работоспособности приложения фрагментов данных в кластере, которые поддерживают такие фильтры в описания запроса фрагмента данных о работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="19bbf-103">The list of application health state chunks in the cluster that respect the filters in the cluster health chunk query description.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationHealthStateChunks?: ApplicationHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthStateChunkList
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="19bbf-104">HealthState, представляющий общего состояния работоспособности кластера вычисляется диспетчером работоспособности.</span><span class="sxs-lookup"><span data-stu-id="19bbf-104">The HealthState representing the aggregated health state of the cluster computed by Health Manager.</span></span>
+
+    <span data-ttu-id="19bbf-105">Оценка работоспособности сущности отражает все события, указанное в отчетах для сущности и его дочерние элементы (если таковые имеются).</span><span class="sxs-lookup"><span data-stu-id="19bbf-105">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+
+    <span data-ttu-id="19bbf-106">Статистическая обработка выполняется путем применения политики работоспособности нужный кластер и политики работоспособности приложения.</span><span class="sxs-lookup"><span data-stu-id="19bbf-106">The aggregation is done by applying the desired cluster health policy and the application health policies.</span></span> <span data-ttu-id="19bbf-107">Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»</span><span class="sxs-lookup"><span data-stu-id="19bbf-107">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  name: nodeHealthStateChunks
+  fullName: nodeHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="19bbf-108">Список состояние работоспособности узла фрагментов данных в кластере, которые поддерживают такие фильтры в описания запроса фрагмента данных о работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="19bbf-108">The list of node health state chunks in the cluster that respect the filters in the cluster health chunk query description.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeHealthStateChunks?: NodeHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.NodeHealthStateChunkList
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthStateChunkList
+  name: ApplicationHealthStateChunkList
+  spec.typeScript:
+  - name: ApplicationHealthStateChunkList
+    fullName: ApplicationHealthStateChunkList
+    uid: azure-servicefabric.ApplicationHealthStateChunkList
+- uid: azure-servicefabric.NodeHealthStateChunkList
+  name: NodeHealthStateChunkList
+  spec.typeScript:
+  - name: NodeHealthStateChunkList
+    fullName: NodeHealthStateChunkList
+    uid: azure-servicefabric.NodeHealthStateChunkList
