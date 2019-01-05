@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 65f5fe2efae6e28f12e6e3afd16a04800a1414d0
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 03567387a3cb0652497f7436336181e85c460c39
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41685613"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52044947"
 items:
 - uid: azure-loganalytics.LogAnalyticsClient
   name: LogAnalyticsClient
@@ -13,8 +13,8 @@ items:
   - azure-loganalytics.LogAnalyticsClient.credentials
   - azure-loganalytics.LogAnalyticsClient.constructor
   - azure-loganalytics.LogAnalyticsClient.query
-  - azure-loganalytics.LogAnalyticsClient.query_1
   - azure-loganalytics.LogAnalyticsClient.query_2
+  - azure-loganalytics.LogAnalyticsClient.query_1
   - azure-loganalytics.LogAnalyticsClient.queryWithHttpOperationResponse
   langs:
   - typeScript
@@ -38,7 +38,7 @@ items:
       - ServiceClientCredentials
   package: azure-loganalytics
 - uid: azure-loganalytics.LogAnalyticsClient.constructor
-  name: LogAnalyticsClient
+  name: LogAnalyticsClient(ServiceClientCredentials, string, ServiceClientOptions)
   children: []
   type: constructor
   langs:
@@ -64,7 +64,7 @@ items:
       optional: true
   package: azure-loganalytics
 - uid: azure-loganalytics.LogAnalyticsClient.query
-  name: query
+  name: query(string, QueryBody, Object)
   children: []
   type: method
   langs:
@@ -92,34 +92,8 @@ items:
       type:
       - Promise<azure-loganalytics.QueryResults>
   package: azure-loganalytics
-- uid: azure-loganalytics.LogAnalyticsClient.query_1
-  name: query
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function query(workspaceId: string, body: QueryBody, callback: ServiceCallback<QueryResults>)'
-    parameters:
-    - id: workspaceId
-      type:
-      - string
-      description: ''
-    - id: body
-      type:
-      - azure-loganalytics.QueryBody
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-loganalytics.QueryResults>
-      description: ''
-    return:
-      type:
-      - Promise<azure-loganalytics.QueryResults>
-  package: azure-loganalytics
 - uid: azure-loganalytics.LogAnalyticsClient.query_2
-  name: query
+  name: query(string, QueryBody, Object, ServiceCallback<QueryResults>)
   children: []
   type: method
   langs:
@@ -148,8 +122,34 @@ items:
       type:
       - Promise<azure-loganalytics.QueryResults>
   package: azure-loganalytics
+- uid: azure-loganalytics.LogAnalyticsClient.query_1
+  name: query(string, QueryBody, ServiceCallback<QueryResults>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function query(workspaceId: string, body: QueryBody, callback: ServiceCallback<QueryResults>)'
+    parameters:
+    - id: workspaceId
+      type:
+      - string
+      description: ''
+    - id: body
+      type:
+      - azure-loganalytics.QueryBody
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-loganalytics.QueryResults>
+      description: ''
+    return:
+      type:
+      - Promise<azure-loganalytics.QueryResults>
+  package: azure-loganalytics
 - uid: azure-loganalytics.LogAnalyticsClient.queryWithHttpOperationResponse
-  name: queryWithHttpOperationResponse
+  name: queryWithHttpOperationResponse(string, QueryBody, Object)
   children: []
   type: method
   langs:
@@ -179,11 +179,13 @@ items:
   package: azure-loganalytics
 references:
 - uid: azure-loganalytics.QueryBody
+  name: QueryBody
   spec.typeScript:
   - name: QueryBody
     fullName: QueryBody
     uid: azure-loganalytics.QueryBody
 - uid: Promise<azure-loganalytics.QueryResults>
+  name: QueryResults>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -193,6 +195,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-loganalytics.QueryResults>
+  name: QueryResults>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -202,6 +205,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-loganalytics.QueryResults>>
+  name: QueryResults>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

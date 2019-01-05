@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 6380c902acdc4c76d353b26be53392b7f0ea93a4
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: b7f2ead1c88598c3bb186a99c74fb76db09db139
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41700732"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52145663"
 items:
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations
   name: LoadBalancerFrontendIPConfigurations
@@ -15,11 +15,11 @@ items:
   - azure-arm-network.LoadBalancerFrontendIPConfigurations.get_1
   - azure-arm-network.LoadBalancerFrontendIPConfigurations.getWithHttpOperationResponse
   - azure-arm-network.LoadBalancerFrontendIPConfigurations.list
-  - azure-arm-network.LoadBalancerFrontendIPConfigurations.list_1
   - azure-arm-network.LoadBalancerFrontendIPConfigurations.list_2
+  - azure-arm-network.LoadBalancerFrontendIPConfigurations.list_1
   - azure-arm-network.LoadBalancerFrontendIPConfigurations.listNext
-  - azure-arm-network.LoadBalancerFrontendIPConfigurations.listNext_1
   - azure-arm-network.LoadBalancerFrontendIPConfigurations.listNext_2
+  - azure-arm-network.LoadBalancerFrontendIPConfigurations.listNext_1
   - azure-arm-network.LoadBalancerFrontendIPConfigurations.listNextWithHttpOperationResponse
   - azure-arm-network.LoadBalancerFrontendIPConfigurations.listWithHttpOperationResponse
   langs:
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -62,7 +62,7 @@ items:
       - Promise<azure-arm-network.FrontendIPConfiguration>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<FrontendIPConfiguration>)
   children: []
   type: method
   langs:
@@ -96,7 +96,7 @@ items:
       - Promise<azure-arm-network.FrontendIPConfiguration>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.get_1
-  name: get
+  name: get(string, string, string, ServiceCallback<FrontendIPConfiguration>)
   children: []
   type: method
   langs:
@@ -126,7 +126,7 @@ items:
       - Promise<azure-arm-network.FrontendIPConfiguration>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -160,7 +160,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-network.FrontendIPConfiguration>>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.list
-  name: list
+  name: list(string, string, Object)
   children: []
   type: method
   langs:
@@ -188,34 +188,8 @@ items:
       type:
       - Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
   package: azure-arm-network
-- uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает IP-конфигурации внешнего интерфейса подсистемы балансировки нагрузки.
-  syntax:
-    content: 'function list(resourceGroupName: string, loadBalancerName: string, callback: ServiceCallback<LoadBalancerFrontendIPConfigurationListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: loadBalancerName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
-  package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.list_2
-  name: list
+  name: list(string, string, Object, ServiceCallback<LoadBalancerFrontendIPConfigurationListResult>)
   children: []
   type: method
   langs:
@@ -244,8 +218,34 @@ items:
       type:
       - Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
   package: azure-arm-network
+- uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.list_1
+  name: list(string, string, ServiceCallback<LoadBalancerFrontendIPConfigurationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает IP-конфигурации внешнего интерфейса подсистемы балансировки нагрузки.
+  syntax:
+    content: 'function list(resourceGroupName: string, loadBalancerName: string, callback: ServiceCallback<LoadBalancerFrontendIPConfigurationListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: loadBalancerName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
+  package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -268,30 +268,8 @@ items:
       type:
       - Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
   package: azure-arm-network
-- uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает IP-конфигурации внешнего интерфейса подсистемы балансировки нагрузки.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<LoadBalancerFrontendIPConfigurationListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
-  package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<LoadBalancerFrontendIPConfigurationListResult>)
   children: []
   type: method
   langs:
@@ -316,8 +294,30 @@ items:
       type:
       - Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
   package: azure-arm-network
+- uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.listNext_1
+  name: listNext(string, ServiceCallback<LoadBalancerFrontendIPConfigurationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает IP-конфигурации внешнего интерфейса подсистемы балансировки нагрузки.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<LoadBalancerFrontendIPConfigurationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
+  package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -341,7 +341,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerFrontendIPConfigurations.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -371,6 +371,7 @@ items:
   package: azure-arm-network
 references:
 - uid: Promise<azure-arm-network.FrontendIPConfiguration>
+  name: FrontendIPConfiguration>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -380,6 +381,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-network.FrontendIPConfiguration>
+  name: FrontendIPConfiguration>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -389,6 +391,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-network.FrontendIPConfiguration>>
+  name: FrontendIPConfiguration>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -398,6 +401,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
+  name: LoadBalancerFrontendIPConfigurationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -407,6 +411,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>
+  name: LoadBalancerFrontendIPConfigurationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -416,6 +421,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-network.LoadBalancerFrontendIPConfigurationListResult>>
+  name: LoadBalancerFrontendIPConfigurationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

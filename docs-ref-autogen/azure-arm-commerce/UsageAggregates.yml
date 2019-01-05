@@ -1,21 +1,21 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: df12a60b2931133f603755ad14d39be1ce645357
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 8167232679c1f3133e74b7b9dd7d32432e135529
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41699867"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52136679"
 items:
 - uid: azure-arm-commerce.UsageAggregates
   name: UsageAggregates
   fullName: UsageAggregates
   children:
   - azure-arm-commerce.UsageAggregates.list
-  - azure-arm-commerce.UsageAggregates.list_1
   - azure-arm-commerce.UsageAggregates.list_2
+  - azure-arm-commerce.UsageAggregates.list_1
   - azure-arm-commerce.UsageAggregates.listNext
-  - azure-arm-commerce.UsageAggregates.listNext_1
   - azure-arm-commerce.UsageAggregates.listNext_2
+  - azure-arm-commerce.UsageAggregates.listNext_1
   - azure-arm-commerce.UsageAggregates.listNextWithHttpOperationResponse
   - azure-arm-commerce.UsageAggregates.listWithHttpOperationResponse
   langs:
@@ -24,7 +24,7 @@ items:
   summary: ''
   package: azure-arm-commerce
 - uid: azure-arm-commerce.UsageAggregates.list
-  name: list
+  name: list(Date | string, Date | string, Object)
   children: []
   type: method
   langs:
@@ -52,34 +52,8 @@ items:
       type:
       - Promise<azure-arm-commerce.UsageAggregationListResult>
   package: azure-arm-commerce
-- uid: azure-arm-commerce.UsageAggregates.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Запрос объединенные данные потребления подписки Azure для диапазона дат.
-  syntax:
-    content: 'function list(reportedStartTime: Date | string, reportedEndTime: Date | string, callback: ServiceCallback<UsageAggregationListResult>)'
-    parameters:
-    - id: reportedStartTime
-      type:
-      - Date | string
-      description: ''
-    - id: reportedEndTime
-      type:
-      - Date | string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-commerce.UsageAggregationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-commerce.UsageAggregationListResult>
-  package: azure-arm-commerce
 - uid: azure-arm-commerce.UsageAggregates.list_2
-  name: list
+  name: list(Date | string, Date | string, Object, ServiceCallback<UsageAggregationListResult>)
   children: []
   type: method
   langs:
@@ -108,8 +82,34 @@ items:
       type:
       - Promise<azure-arm-commerce.UsageAggregationListResult>
   package: azure-arm-commerce
+- uid: azure-arm-commerce.UsageAggregates.list_1
+  name: list(Date | string, Date | string, ServiceCallback<UsageAggregationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запрос объединенные данные потребления подписки Azure для диапазона дат.
+  syntax:
+    content: 'function list(reportedStartTime: Date | string, reportedEndTime: Date | string, callback: ServiceCallback<UsageAggregationListResult>)'
+    parameters:
+    - id: reportedStartTime
+      type:
+      - Date | string
+      description: ''
+    - id: reportedEndTime
+      type:
+      - Date | string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-commerce.UsageAggregationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-commerce.UsageAggregationListResult>
+  package: azure-arm-commerce
 - uid: azure-arm-commerce.UsageAggregates.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -132,30 +132,8 @@ items:
       type:
       - Promise<azure-arm-commerce.UsageAggregationListResult>
   package: azure-arm-commerce
-- uid: azure-arm-commerce.UsageAggregates.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Запрос объединенные данные потребления подписки Azure для диапазона дат.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<UsageAggregationListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-commerce.UsageAggregationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-commerce.UsageAggregationListResult>
-  package: azure-arm-commerce
 - uid: azure-arm-commerce.UsageAggregates.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<UsageAggregationListResult>)
   children: []
   type: method
   langs:
@@ -180,8 +158,30 @@ items:
       type:
       - Promise<azure-arm-commerce.UsageAggregationListResult>
   package: azure-arm-commerce
+- uid: azure-arm-commerce.UsageAggregates.listNext_1
+  name: listNext(string, ServiceCallback<UsageAggregationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запрос объединенные данные потребления подписки Azure для диапазона дат.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<UsageAggregationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-commerce.UsageAggregationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-commerce.UsageAggregationListResult>
+  package: azure-arm-commerce
 - uid: azure-arm-commerce.UsageAggregates.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -205,7 +205,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-commerce.UsageAggregationListResult>>
   package: azure-arm-commerce
 - uid: azure-arm-commerce.UsageAggregates.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Date | string, Date | string, Object)
   children: []
   type: method
   langs:
@@ -235,6 +235,7 @@ items:
   package: azure-arm-commerce
 references:
 - uid: Promise<azure-arm-commerce.UsageAggregationListResult>
+  name: UsageAggregationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -244,6 +245,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-commerce.UsageAggregationListResult>
+  name: UsageAggregationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -253,6 +255,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-commerce.UsageAggregationListResult>>
+  name: UsageAggregationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

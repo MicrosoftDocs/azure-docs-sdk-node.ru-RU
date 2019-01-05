@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3404ad6c5e26f28931323e9958ed1a414bb62cf9
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 104776fd79c937ccabd01b07cd0f826268fad124
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41694263"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52134659"
 items:
 - uid: azure-arm-resource.Providers
   name: Providers
@@ -15,20 +15,20 @@ items:
   - azure-arm-resource.Providers.get_1
   - azure-arm-resource.Providers.getWithHttpOperationResponse
   - azure-arm-resource.Providers.list
-  - azure-arm-resource.Providers.list_1
   - azure-arm-resource.Providers.list_2
+  - azure-arm-resource.Providers.list_1
   - azure-arm-resource.Providers.listNext
-  - azure-arm-resource.Providers.listNext_1
   - azure-arm-resource.Providers.listNext_2
+  - azure-arm-resource.Providers.listNext_1
   - azure-arm-resource.Providers.listNextWithHttpOperationResponse
   - azure-arm-resource.Providers.listWithHttpOperationResponse
   - azure-arm-resource.Providers.register
-  - azure-arm-resource.Providers.register_1
   - azure-arm-resource.Providers.register_2
+  - azure-arm-resource.Providers.register_1
   - azure-arm-resource.Providers.registerWithHttpOperationResponse
   - azure-arm-resource.Providers.unregister
-  - azure-arm-resource.Providers.unregister_1
   - azure-arm-resource.Providers.unregister_2
+  - azure-arm-resource.Providers.unregister_1
   - azure-arm-resource.Providers.unregisterWithHttpOperationResponse
   langs:
   - typeScript
@@ -36,7 +36,7 @@ items:
   summary: ''
   package: azure-arm-resource
 - uid: azure-arm-resource.Providers.get
-  name: get
+  name: get(string, Object)
   children: []
   type: method
   langs:
@@ -60,7 +60,7 @@ items:
       - Promise<azure-arm-resource.Provider>
   package: azure-arm-resource
 - uid: azure-arm-resource.Providers.get_2
-  name: get
+  name: get(string, Object, ServiceCallback<Provider>)
   children: []
   type: method
   langs:
@@ -86,7 +86,7 @@ items:
       - Promise<azure-arm-resource.Provider>
   package: azure-arm-resource
 - uid: azure-arm-resource.Providers.get_1
-  name: get
+  name: get(string, ServiceCallback<Provider>)
   children: []
   type: method
   langs:
@@ -108,7 +108,7 @@ items:
       - Promise<azure-arm-resource.Provider>
   package: azure-arm-resource
 - uid: azure-arm-resource.Providers.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -132,7 +132,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.Provider>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Providers.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -150,26 +150,8 @@ items:
       type:
       - Promise<azure-arm-resource.ProviderListResult>
   package: azure-arm-resource
-- uid: azure-arm-resource.Providers.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает всех поставщиков ресурсов для подписки.
-  syntax:
-    content: 'function list(callback: ServiceCallback<ProviderListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.ProviderListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.ProviderListResult>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Providers.list_2
-  name: list
+  name: list(Object, ServiceCallback<ProviderListResult>)
   children: []
   type: method
   langs:
@@ -190,8 +172,26 @@ items:
       type:
       - Promise<azure-arm-resource.ProviderListResult>
   package: azure-arm-resource
+- uid: azure-arm-resource.Providers.list_1
+  name: list(ServiceCallback<ProviderListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает всех поставщиков ресурсов для подписки.
+  syntax:
+    content: 'function list(callback: ServiceCallback<ProviderListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.ProviderListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.ProviderListResult>
+  package: azure-arm-resource
 - uid: azure-arm-resource.Providers.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -214,30 +214,8 @@ items:
       type:
       - Promise<azure-arm-resource.ProviderListResult>
   package: azure-arm-resource
-- uid: azure-arm-resource.Providers.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает всех поставщиков ресурсов для подписки.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ProviderListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.ProviderListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.ProviderListResult>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Providers.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<ProviderListResult>)
   children: []
   type: method
   langs:
@@ -262,8 +240,30 @@ items:
       type:
       - Promise<azure-arm-resource.ProviderListResult>
   package: azure-arm-resource
+- uid: azure-arm-resource.Providers.listNext_1
+  name: listNext(string, ServiceCallback<ProviderListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает всех поставщиков ресурсов для подписки.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ProviderListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.ProviderListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.ProviderListResult>
+  package: azure-arm-resource
 - uid: azure-arm-resource.Providers.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -287,7 +287,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.ProviderListResult>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Providers.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -306,7 +306,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.ProviderListResult>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Providers.register
-  name: register
+  name: register(string, Object)
   children: []
   type: method
   langs:
@@ -329,30 +329,8 @@ items:
       type:
       - Promise<azure-arm-resource.Provider>
   package: azure-arm-resource
-- uid: azure-arm-resource.Providers.register_1
-  name: register
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Регистрирует подписку в поставщике ресурсов.
-  syntax:
-    content: 'function register(resourceProviderNamespace: string, callback: ServiceCallback<Provider>)'
-    parameters:
-    - id: resourceProviderNamespace
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.Provider>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.Provider>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Providers.register_2
-  name: register
+  name: register(string, Object, ServiceCallback<Provider>)
   children: []
   type: method
   langs:
@@ -377,8 +355,30 @@ items:
       type:
       - Promise<azure-arm-resource.Provider>
   package: azure-arm-resource
+- uid: azure-arm-resource.Providers.register_1
+  name: register(string, ServiceCallback<Provider>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Регистрирует подписку в поставщике ресурсов.
+  syntax:
+    content: 'function register(resourceProviderNamespace: string, callback: ServiceCallback<Provider>)'
+    parameters:
+    - id: resourceProviderNamespace
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.Provider>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.Provider>
+  package: azure-arm-resource
 - uid: azure-arm-resource.Providers.registerWithHttpOperationResponse
-  name: registerWithHttpOperationResponse
+  name: registerWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -402,7 +402,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-resource.Provider>>
   package: azure-arm-resource
 - uid: azure-arm-resource.Providers.unregister
-  name: unregister
+  name: unregister(string, Object)
   children: []
   type: method
   langs:
@@ -425,30 +425,8 @@ items:
       type:
       - Promise<azure-arm-resource.Provider>
   package: azure-arm-resource
-- uid: azure-arm-resource.Providers.unregister_1
-  name: unregister
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Отменяет регистрацию подписки из поставщика ресурсов.
-  syntax:
-    content: 'function unregister(resourceProviderNamespace: string, callback: ServiceCallback<Provider>)'
-    parameters:
-    - id: resourceProviderNamespace
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-resource.Provider>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-resource.Provider>
-  package: azure-arm-resource
 - uid: azure-arm-resource.Providers.unregister_2
-  name: unregister
+  name: unregister(string, Object, ServiceCallback<Provider>)
   children: []
   type: method
   langs:
@@ -473,8 +451,30 @@ items:
       type:
       - Promise<azure-arm-resource.Provider>
   package: azure-arm-resource
+- uid: azure-arm-resource.Providers.unregister_1
+  name: unregister(string, ServiceCallback<Provider>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Отменяет регистрацию подписки из поставщика ресурсов.
+  syntax:
+    content: 'function unregister(resourceProviderNamespace: string, callback: ServiceCallback<Provider>)'
+    parameters:
+    - id: resourceProviderNamespace
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-resource.Provider>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-resource.Provider>
+  package: azure-arm-resource
 - uid: azure-arm-resource.Providers.unregisterWithHttpOperationResponse
-  name: unregisterWithHttpOperationResponse
+  name: unregisterWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -499,6 +499,7 @@ items:
   package: azure-arm-resource
 references:
 - uid: Promise<azure-arm-resource.Provider>
+  name: Provider>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -508,6 +509,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-resource.Provider>
+  name: Provider>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -517,6 +519,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-resource.Provider>>
+  name: Provider>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -526,6 +529,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-resource.ProviderListResult>
+  name: ProviderListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -535,6 +539,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-resource.ProviderListResult>
+  name: ProviderListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -544,6 +549,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-resource.ProviderListResult>>
+  name: ProviderListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
