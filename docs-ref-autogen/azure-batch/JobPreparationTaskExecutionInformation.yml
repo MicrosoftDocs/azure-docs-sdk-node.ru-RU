@@ -1,0 +1,206 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 03fb8e5e95ef0b56ef5b2c6b220ba08a0489136a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53669418"
+items:
+- uid: azure-batch.JobPreparationTaskExecutionInformation
+  name: JobPreparationTaskExecutionInformation
+  fullName: JobPreparationTaskExecutionInformation
+  children:
+  - azure-batch.JobPreparationTaskExecutionInformation.containerInfo
+  - azure-batch.JobPreparationTaskExecutionInformation.endTime
+  - azure-batch.JobPreparationTaskExecutionInformation.exitCode
+  - azure-batch.JobPreparationTaskExecutionInformation.failureInfo
+  - azure-batch.JobPreparationTaskExecutionInformation.lastRetryTime
+  - azure-batch.JobPreparationTaskExecutionInformation.result
+  - azure-batch.JobPreparationTaskExecutionInformation.retryCount
+  - azure-batch.JobPreparationTaskExecutionInformation.startTime
+  - azure-batch.JobPreparationTaskExecutionInformation.state
+  - azure-batch.JobPreparationTaskExecutionInformation.taskRootDirectory
+  - azure-batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.containerInfo
+  name: containerInfo
+  fullName: containerInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство имеет значение только в том случае, если задача выполняется в контексте контейнера.
+  optional: true
+  syntax:
+    content: 'containerInfo?: TaskContainerExecutionInformation'
+    return:
+      type:
+      - azure-batch.TaskContainerExecutionInformation
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство задается только в том случае, если задача находится в завершенное состояние.
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.exitCode
+  name: exitCode
+  fullName: exitCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Этот параметр возвращается только в том случае, если задача находится в завершенном состоянии. Код выхода для процесса отражает конкретное соглашение, реализованные разработчиком приложения для этого процесса. При использовании значение кода выхода для принятия решений в коде, убедитесь, что вы знаете соглашения кода выхода, используемые в процессе приложения. Обратите внимание на то, что код выхода также может создаваться вычислительный узел операционной системой, например, если процесс принудительно завершен.
+  optional: true
+  syntax:
+    content: 'exitCode?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.failureInfo
+  name: failureInfo
+  fullName: failureInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство задается только в том случае, если задача находится в завершенном состоянии и произошел сбой.
+  optional: true
+  syntax:
+    content: 'failureInfo?: TaskFailureInformation'
+    return:
+      type:
+      - azure-batch.TaskFailureInformation
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.lastRetryTime
+  name: lastRetryTime
+  fullName: lastRetryTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Это свойство имеет значение только в том случае, если задача была повторена (т. е. retryCount не равно нулю).
+
+    Если он присутствует, это обычно является таким же, как startTime, но может отличаться, если задача перезапуска не после повторных попыток; Например если вычислительный узел был перезагружен во время повторной попытки, startTime обновляется, но не является lastRetryTime.
+  optional: true
+  syntax:
+    content: 'lastRetryTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.result
+  name: result
+  fullName: result
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Если значение — «сбой», сведения об ошибке можно найти в свойстве failureInfo. Возможные значения: «успех», «сбой»'
+  optional: true
+  syntax:
+    content: 'result?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.retryCount
+  name: retryCount
+  fullName: retryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Сбои задач приложения (код выхода ненулевой длины) выполняются повторные попытки предварительной обработки ошибок (задача не может быть выполнен) и ошибок при передаче файлов не производятся. Пакетная служба будет повторять выполнение задачи до предела, установленного с помощью ограничений.
+  syntax:
+    content: 'retryCount: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Если задача перезапускалась или предпринимались повторные попытки, это самое позднее время, когда задача запускалась.
+  syntax:
+    content: 'startTime: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.state
+  name: state
+  fullName: state
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Возможные значения: «работает», «завершено»'
+  syntax:
+    content: 'state: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.taskRootDirectory
+  name: taskRootDirectory
+  fullName: taskRootDirectory
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'taskRootDirectory?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobPreparationTaskExecutionInformation.taskRootDirectoryUrl
+  name: taskRootDirectoryUrl
+  fullName: taskRootDirectoryUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'taskRootDirectoryUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerExecutionInformation
+  name: TaskContainerExecutionInformation
+  spec.typeScript:
+  - name: TaskContainerExecutionInformation
+    fullName: TaskContainerExecutionInformation
+    uid: azure-batch.TaskContainerExecutionInformation
+- uid: azure-batch.TaskFailureInformation
+  name: TaskFailureInformation
+  spec.typeScript:
+  - name: TaskFailureInformation
+    fullName: TaskFailureInformation
+    uid: azure-batch.TaskFailureInformation

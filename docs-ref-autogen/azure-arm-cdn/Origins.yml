@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 67b5b52cefedeb0723fb255bf8bcfc494c5f912e
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 35694df6bf7775abae72b88109c2c5b461c7718d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41690879"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52151119"
 items:
 - uid: azure-arm-cdn.Origins
   name: Origins
@@ -15,20 +15,20 @@ items:
   - azure-arm-cdn.Origins.beginUpdate_1
   - azure-arm-cdn.Origins.beginUpdateWithHttpOperationResponse
   - azure-arm-cdn.Origins.get
-  - azure-arm-cdn.Origins.get_1
   - azure-arm-cdn.Origins.get_2
+  - azure-arm-cdn.Origins.get_1
   - azure-arm-cdn.Origins.getWithHttpOperationResponse
   - azure-arm-cdn.Origins.listByEndpoint
-  - azure-arm-cdn.Origins.listByEndpoint_1
   - azure-arm-cdn.Origins.listByEndpoint_2
+  - azure-arm-cdn.Origins.listByEndpoint_1
   - azure-arm-cdn.Origins.listByEndpointNext
-  - azure-arm-cdn.Origins.listByEndpointNext_1
   - azure-arm-cdn.Origins.listByEndpointNext_2
+  - azure-arm-cdn.Origins.listByEndpointNext_1
   - azure-arm-cdn.Origins.listByEndpointNextWithHttpOperationResponse
   - azure-arm-cdn.Origins.listByEndpointWithHttpOperationResponse
   - azure-arm-cdn.Origins.update
-  - azure-arm-cdn.Origins.update_1
   - azure-arm-cdn.Origins.update_2
+  - azure-arm-cdn.Origins.update_1
   - azure-arm-cdn.Origins.updateWithHttpOperationResponse
   langs:
   - typeScript
@@ -36,7 +36,7 @@ items:
   summary: ''
   package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.beginUpdate
-  name: beginUpdate
+  name: beginUpdate(string, string, string, string, OriginUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -80,7 +80,7 @@ items:
       - Promise<azure-arm-cdn.Origin>
   package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.beginUpdate_2
-  name: beginUpdate
+  name: beginUpdate(string, string, string, string, OriginUpdateParameters, Object, ServiceCallback<Origin>)
   children: []
   type: method
   langs:
@@ -122,7 +122,7 @@ items:
       - Promise<azure-arm-cdn.Origin>
   package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.beginUpdate_1
-  name: beginUpdate
+  name: beginUpdate(string, string, string, string, OriginUpdateParameters, ServiceCallback<Origin>)
   children: []
   type: method
   langs:
@@ -160,7 +160,7 @@ items:
       - Promise<azure-arm-cdn.Origin>
   package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.beginUpdateWithHttpOperationResponse
-  name: beginUpdateWithHttpOperationResponse
+  name: beginUpdateWithHttpOperationResponse(string, string, string, string, OriginUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -204,7 +204,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-cdn.Origin>>
   package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.get
-  name: get
+  name: get(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -242,42 +242,8 @@ items:
       type:
       - Promise<azure-arm-cdn.Origin>
   package: azure-arm-cdn
-- uid: azure-arm-cdn.Origins.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает существующий источник в конечную точку.
-  syntax:
-    content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, originName: string, callback: ServiceCallback<Origin>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: profileName
-      type:
-      - string
-      description: ''
-    - id: endpointName
-      type:
-      - string
-      description: ''
-    - id: originName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cdn.Origin>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cdn.Origin>
-  package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.get_2
-  name: get
+  name: get(string, string, string, string, Object, ServiceCallback<Origin>)
   children: []
   type: method
   langs:
@@ -314,8 +280,42 @@ items:
       type:
       - Promise<azure-arm-cdn.Origin>
   package: azure-arm-cdn
+- uid: azure-arm-cdn.Origins.get_1
+  name: get(string, string, string, string, ServiceCallback<Origin>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает существующий источник в конечную точку.
+  syntax:
+    content: 'function get(resourceGroupName: string, profileName: string, endpointName: string, originName: string, callback: ServiceCallback<Origin>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: profileName
+      type:
+      - string
+      description: ''
+    - id: endpointName
+      type:
+      - string
+      description: ''
+    - id: originName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cdn.Origin>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cdn.Origin>
+  package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -354,7 +354,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-cdn.Origin>>
   package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.listByEndpoint
-  name: listByEndpoint
+  name: listByEndpoint(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -387,38 +387,8 @@ items:
       type:
       - Promise<azure-arm-cdn.OriginListResult>
   package: azure-arm-cdn
-- uid: azure-arm-cdn.Origins.listByEndpoint_1
-  name: listByEndpoint
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Перечисляет все существующие источники в конечную точку.
-  syntax:
-    content: 'function listByEndpoint(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<OriginListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: profileName
-      type:
-      - string
-      description: ''
-    - id: endpointName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cdn.OriginListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cdn.OriginListResult>
-  package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.listByEndpoint_2
-  name: listByEndpoint
+  name: listByEndpoint(string, string, string, Object, ServiceCallback<OriginListResult>)
   children: []
   type: method
   langs:
@@ -451,8 +421,38 @@ items:
       type:
       - Promise<azure-arm-cdn.OriginListResult>
   package: azure-arm-cdn
+- uid: azure-arm-cdn.Origins.listByEndpoint_1
+  name: listByEndpoint(string, string, string, ServiceCallback<OriginListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все существующие источники в конечную точку.
+  syntax:
+    content: 'function listByEndpoint(resourceGroupName: string, profileName: string, endpointName: string, callback: ServiceCallback<OriginListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: profileName
+      type:
+      - string
+      description: ''
+    - id: endpointName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cdn.OriginListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cdn.OriginListResult>
+  package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.listByEndpointNext
-  name: listByEndpointNext
+  name: listByEndpointNext(string, Object)
   children: []
   type: method
   langs:
@@ -475,30 +475,8 @@ items:
       type:
       - Promise<azure-arm-cdn.OriginListResult>
   package: azure-arm-cdn
-- uid: azure-arm-cdn.Origins.listByEndpointNext_1
-  name: listByEndpointNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Перечисляет все существующие источники в конечную точку.
-  syntax:
-    content: 'function listByEndpointNext(nextPageLink: string, callback: ServiceCallback<OriginListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cdn.OriginListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cdn.OriginListResult>
-  package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.listByEndpointNext_2
-  name: listByEndpointNext
+  name: listByEndpointNext(string, Object, ServiceCallback<OriginListResult>)
   children: []
   type: method
   langs:
@@ -523,8 +501,30 @@ items:
       type:
       - Promise<azure-arm-cdn.OriginListResult>
   package: azure-arm-cdn
+- uid: azure-arm-cdn.Origins.listByEndpointNext_1
+  name: listByEndpointNext(string, ServiceCallback<OriginListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все существующие источники в конечную точку.
+  syntax:
+    content: 'function listByEndpointNext(nextPageLink: string, callback: ServiceCallback<OriginListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cdn.OriginListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cdn.OriginListResult>
+  package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.listByEndpointNextWithHttpOperationResponse
-  name: listByEndpointNextWithHttpOperationResponse
+  name: listByEndpointNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -548,7 +548,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-cdn.OriginListResult>>
   package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.listByEndpointWithHttpOperationResponse
-  name: listByEndpointWithHttpOperationResponse
+  name: listByEndpointWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -582,7 +582,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-cdn.OriginListResult>>
   package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.update
-  name: update
+  name: update(string, string, string, string, OriginUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -625,46 +625,8 @@ items:
       type:
       - Promise<azure-arm-cdn.Origin>
   package: azure-arm-cdn
-- uid: azure-arm-cdn.Origins.update_1
-  name: update
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновляет существующий источник в конечную точку.
-  syntax:
-    content: 'function update(resourceGroupName: string, profileName: string, endpointName: string, originName: string, originUpdateProperties: OriginUpdateParameters, callback: ServiceCallback<Origin>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: profileName
-      type:
-      - string
-      description: ''
-    - id: endpointName
-      type:
-      - string
-      description: ''
-    - id: originName
-      type:
-      - string
-      description: ''
-    - id: originUpdateProperties
-      type:
-      - azure-arm-cdn.OriginUpdateParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cdn.Origin>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cdn.Origin>
-  package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.update_2
-  name: update
+  name: update(string, string, string, string, OriginUpdateParameters, Object, ServiceCallback<Origin>)
   children: []
   type: method
   langs:
@@ -705,8 +667,46 @@ items:
       type:
       - Promise<azure-arm-cdn.Origin>
   package: azure-arm-cdn
+- uid: azure-arm-cdn.Origins.update_1
+  name: update(string, string, string, string, OriginUpdateParameters, ServiceCallback<Origin>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет существующий источник в конечную точку.
+  syntax:
+    content: 'function update(resourceGroupName: string, profileName: string, endpointName: string, originName: string, originUpdateProperties: OriginUpdateParameters, callback: ServiceCallback<Origin>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: profileName
+      type:
+      - string
+      description: ''
+    - id: endpointName
+      type:
+      - string
+      description: ''
+    - id: originName
+      type:
+      - string
+      description: ''
+    - id: originUpdateProperties
+      type:
+      - azure-arm-cdn.OriginUpdateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cdn.Origin>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cdn.Origin>
+  package: azure-arm-cdn
 - uid: azure-arm-cdn.Origins.updateWithHttpOperationResponse
-  name: updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, string, string, OriginUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -751,11 +751,13 @@ items:
   package: azure-arm-cdn
 references:
 - uid: azure-arm-cdn.OriginUpdateParameters
+  name: OriginUpdateParameters
   spec.typeScript:
   - name: OriginUpdateParameters
     fullName: OriginUpdateParameters
     uid: azure-arm-cdn.OriginUpdateParameters
 - uid: Promise<azure-arm-cdn.Origin>
+  name: Origin>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -765,6 +767,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-cdn.Origin>
+  name: Origin>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -774,6 +777,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-cdn.Origin>>
+  name: Origin>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -783,6 +787,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-cdn.OriginListResult>
+  name: OriginListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -792,6 +797,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-cdn.OriginListResult>
+  name: OriginListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -801,6 +807,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-cdn.OriginListResult>>
+  name: OriginListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

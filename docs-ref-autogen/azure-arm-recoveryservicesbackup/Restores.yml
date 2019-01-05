@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fd654a7ef7c14101413315b0dcaa809dd34d118c
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 638e54d98e2d45d79c19b5756c998eddab1b0c5c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41686693"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52152489"
 items:
 - uid: azure-arm-recoveryservicesbackup.Restores
   name: Restores
   fullName: Restores
   children:
   - azure-arm-recoveryservicesbackup.Restores.trigger
-  - azure-arm-recoveryservicesbackup.Restores.trigger_1
   - azure-arm-recoveryservicesbackup.Restores.trigger_2
+  - azure-arm-recoveryservicesbackup.Restores.trigger_1
   - azure-arm-recoveryservicesbackup.Restores.triggerWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-recoveryservicesbackup
 - uid: azure-arm-recoveryservicesbackup.Restores.trigger
-  name: trigger
+  name: trigger(string, string, string, string, string, string, RestoreRequestResource, Object)
   children: []
   type: method
   langs:
@@ -73,54 +73,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-recoveryservicesbackup
-- uid: azure-arm-recoveryservicesbackup.Restores.trigger_1
-  name: trigger
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Восстанавливает указанного резервных копий данных. Это асинхронная операция. Чтобы узнать состояние этот вызов API, используйте GetProtectedItemOperationResult API.
-  syntax:
-    content: 'function trigger(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: RestoreRequestResource, callback: ServiceCallback<void>)'
-    parameters:
-    - id: vaultName
-      type:
-      - string
-      description: ''
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: fabricName
-      type:
-      - string
-      description: ''
-    - id: containerName
-      type:
-      - string
-      description: ''
-    - id: protectedItemName
-      type:
-      - string
-      description: ''
-    - id: recoveryPointId
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-recoveryservicesbackup.RestoreRequestResource
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-recoveryservicesbackup
 - uid: azure-arm-recoveryservicesbackup.Restores.trigger_2
-  name: trigger
+  name: trigger(string, string, string, string, string, string, RestoreRequestResource, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -169,8 +123,54 @@ items:
       type:
       - Promise<void>
   package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.Restores.trigger_1
+  name: trigger(string, string, string, string, string, string, RestoreRequestResource, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Восстанавливает указанного резервных копий данных. Это асинхронная операция. Чтобы узнать состояние этот вызов API, используйте GetProtectedItemOperationResult API.
+  syntax:
+    content: 'function trigger(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: RestoreRequestResource, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.RestoreRequestResource
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
 - uid: azure-arm-recoveryservicesbackup.Restores.triggerWithHttpOperationResponse
-  name: triggerWithHttpOperationResponse
+  name: triggerWithHttpOperationResponse(string, string, string, string, string, string, RestoreRequestResource, Object)
   children: []
   type: method
   langs:
@@ -225,6 +225,7 @@ items:
   package: azure-arm-recoveryservicesbackup
 references:
 - uid: azure-arm-recoveryservicesbackup.RestoreRequestResource
+  name: RestoreRequestResource
   spec.typeScript:
   - name: RestoreRequestResource
     fullName: RestoreRequestResource

@@ -1,0 +1,366 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ceb44d5ddc1483317d5ed6a5f4da0a9097011656
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52155983"
+items:
+- uid: azure-asm-subscription.SubscriptionFactory
+  id: azure-asm-subscription.SubscriptionFactory
+  name: SubscriptionFactory
+  summary: Класс, представляющий SubscriptionFactory.
+  fullName: azure-asm-subscription.SubscriptionFactory
+  type: Class
+  children:
+  - azure-asm-subscription.SubscriptionFactory.#ctor
+  - azure-asm-subscription.SubscriptionFactory#createSubscriptionInEnrollmentAccountWithHttpOperationResponse
+  - azure-asm-subscription.SubscriptionFactory#createSubscriptionInEnrollmentAccount
+  - azure-asm-subscription.SubscriptionFactory#beginCreateSubscriptionInEnrollmentAccountWithHttpOperationResponse
+  - azure-asm-subscription.SubscriptionFactory#beginCreateSubscriptionInEnrollmentAccount
+  langs:
+  - js
+- id: azure-asm-subscription.SubscriptionFactory.#ctor
+  uid: azure-asm-subscription.SubscriptionFactory.#ctor
+  parent: azure-asm-subscription.SubscriptionFactory
+  name: SubscriptionFactory(client)
+  fullName: azure-asm-subscription.SubscriptionFactory.SubscriptionFactory(client)
+  summary: Создайте SubscriptionFactory.
+  type: Constructor
+  syntax:
+    parameters:
+    - id: client
+      type:
+      - undefinedSubscriptionClient
+      description: Ссылка на клиента службы.
+    content: new SubscriptionFactory(client)
+  langs:
+  - js
+- uid: azure-asm-subscription.SubscriptionFactory#createSubscriptionInEnrollmentAccountWithHttpOperationResponse
+  id: azure-asm-subscription.SubscriptionFactory#createSubscriptionInEnrollmentAccountWithHttpOperationResponse
+  parent: azure-asm-subscription.SubscriptionFactory
+  name: createSubscriptionInEnrollmentAccountWithHttpOperationResponse(enrollmentAccountName, body, options)
+  summary: Создает подписку на Azure
+  fullName: azure-asm-subscription.SubscriptionFactory.createSubscriptionInEnrollmentAccountWithHttpOperationResponse(enrollmentAccountName, body, options)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<SubscriptionCreationResult>} - The deserialized result object.'
+    value: '{HttpOperationResponse<SubscriptionCreationResult>} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error} - The error object.'
+    value: '{Error} - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: enrollmentAccountName
+      type:
+      - string
+      description: Имя учетной записи регистрации, к которому будет выставлен счет подписки.
+    - id: body
+      type:
+      - object
+      description: Параметры создания подписки.
+    - id: body.displayName
+      type:
+      - string
+      description: Отображаемое имя подписки.
+      optional: true
+    - id: body.owners
+      type:
+      - array
+      description: Список участников, которые следует предоставить доступ владельца подписки. Участники должны быть типа пользователя, субъекта-службы или группы безопасности.
+      optional: true
+    - id: body.offerType
+      type:
+      - string
+      description: Тип предложения подписки. Например MS-AZR - 0017P (EnterpriseAgreement) и MS-AZR - 0148P (EnterpriseAgreement devTest) доступны. Действительно только при создании подписки в области учетной записи регистрации. Ниже перечислены возможные значения. "MS-AZR - 0017P", "MS-AZR - 0148P"
+      optional: true
+    - id: body.additionalParameters
+      type:
+      - object
+      description: Дополнительные, нетипизированные параметры для поддержки сценариев создания пользовательские подписки.
+      optional: true
+    - id: options
+      type:
+      - object
+      description: Необязательные параметры.
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: Заголовки, которые будут добавлены в запрос
+      optional: true
+    return:
+      type:
+      - Promise
+      description: Обещание возвращается
+    content: function createSubscriptionInEnrollmentAccountWithHttpOperationResponse(enrollmentAccountName, body, options)
+  langs:
+  - js
+- uid: azure-asm-subscription.SubscriptionFactory#createSubscriptionInEnrollmentAccount
+  id: azure-asm-subscription.SubscriptionFactory#createSubscriptionInEnrollmentAccount
+  parent: azure-asm-subscription.SubscriptionFactory
+  name: createSubscriptionInEnrollmentAccount(enrollmentAccountName, body, options, optionalCallback)
+  summary: Создает подписку на Azure
+  fullName: azure-asm-subscription.SubscriptionFactory.createSubscriptionInEnrollmentAccount(enrollmentAccountName, body, options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{SubscriptionCreationResult} - The deserialized result object.'
+    value: '{SubscriptionCreationResult} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionCreationResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+    value: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionCreationResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+  type: Function
+  syntax:
+    parameters:
+    - id: enrollmentAccountName
+      type:
+      - string
+      description: Имя учетной записи регистрации, к которому будет выставлен счет подписки.
+    - id: body
+      type:
+      - object
+      description: Параметры создания подписки.
+    - id: body.displayName
+      type:
+      - string
+      description: Отображаемое имя подписки.
+      optional: true
+    - id: body.owners
+      type:
+      - array
+      description: Список участников, которые следует предоставить доступ владельца подписки. Участники должны быть типа пользователя, субъекта-службы или группы безопасности.
+      optional: true
+    - id: body.offerType
+      type:
+      - string
+      description: Тип предложения подписки. Например MS-AZR - 0017P (EnterpriseAgreement) и MS-AZR - 0148P (EnterpriseAgreement devTest) доступны. Действительно только при создании подписки в области учетной записи регистрации. Ниже перечислены возможные значения. "MS-AZR - 0017P", "MS-AZR - 0148P"
+      optional: true
+    - id: body.additionalParameters
+      type:
+      - object
+      description: Дополнительные, нетипизированные параметры для поддержки сценариев создания пользовательские подписки.
+      optional: true
+    - id: options
+      type:
+      - object
+      description: Необязательные параметры.
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: Заголовки, которые будут добавлены в запрос
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: Необязательный обратный вызов.
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        Если обратный вызов был передан в качестве последнего параметра затем он возвращает else обратный вызов возвращает обещание.
+
+
+        {Обещание} Обещание возвращается
+    content: function createSubscriptionInEnrollmentAccount(enrollmentAccountName, body, options, optionalCallback)
+  langs:
+  - js
+- uid: azure-asm-subscription.SubscriptionFactory#beginCreateSubscriptionInEnrollmentAccountWithHttpOperationResponse
+  id: azure-asm-subscription.SubscriptionFactory#beginCreateSubscriptionInEnrollmentAccountWithHttpOperationResponse
+  parent: azure-asm-subscription.SubscriptionFactory
+  name: beginCreateSubscriptionInEnrollmentAccountWithHttpOperationResponse(enrollmentAccountName, body, options)
+  summary: Создает подписку на Azure
+  fullName: azure-asm-subscription.SubscriptionFactory.beginCreateSubscriptionInEnrollmentAccountWithHttpOperationResponse(enrollmentAccountName, body, options)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{HttpOperationResponse<SubscriptionCreationResult>} - The deserialized result object.'
+    value: '{HttpOperationResponse<SubscriptionCreationResult>} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: '{Error} - The error object.'
+    value: '{Error} - The error object.'
+  type: Function
+  syntax:
+    parameters:
+    - id: enrollmentAccountName
+      type:
+      - string
+      description: Имя учетной записи регистрации, к которому будет выставлен счет подписки.
+    - id: body
+      type:
+      - object
+      description: Параметры создания подписки.
+    - id: body.displayName
+      type:
+      - string
+      description: Отображаемое имя подписки.
+      optional: true
+    - id: body.owners
+      type:
+      - array
+      description: Список участников, которые следует предоставить доступ владельца подписки. Участники должны быть типа пользователя, субъекта-службы или группы безопасности.
+      optional: true
+    - id: body.offerType
+      type:
+      - string
+      description: Тип предложения подписки. Например MS-AZR - 0017P (EnterpriseAgreement) и MS-AZR - 0148P (EnterpriseAgreement devTest) доступны. Действительно только при создании подписки в области учетной записи регистрации. Ниже перечислены возможные значения. "MS-AZR - 0017P", "MS-AZR - 0148P"
+      optional: true
+    - id: body.additionalParameters
+      type:
+      - object
+      description: Дополнительные, нетипизированные параметры для поддержки сценариев создания пользовательские подписки.
+      optional: true
+    - id: options
+      type:
+      - object
+      description: Необязательные параметры.
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: Заголовки, которые будут добавлены в запрос
+      optional: true
+    return:
+      type:
+      - Promise
+      description: Обещание возвращается
+    content: function beginCreateSubscriptionInEnrollmentAccountWithHttpOperationResponse(enrollmentAccountName, body, options)
+  langs:
+  - js
+- uid: azure-asm-subscription.SubscriptionFactory#beginCreateSubscriptionInEnrollmentAccount
+  id: azure-asm-subscription.SubscriptionFactory#beginCreateSubscriptionInEnrollmentAccount
+  parent: azure-asm-subscription.SubscriptionFactory
+  name: beginCreateSubscriptionInEnrollmentAccount(enrollmentAccountName, body, options, optionalCallback)
+  summary: Создает подписку на Azure
+  fullName: azure-asm-subscription.SubscriptionFactory.beginCreateSubscriptionInEnrollmentAccount(enrollmentAccountName, body, options, optionalCallback)
+  tags:
+  - originalTitle: resolve
+    title: resolve
+    text: '{SubscriptionCreationResult} - The deserialized result object.'
+    value: '{SubscriptionCreationResult} - The deserialized result object.'
+  - originalTitle: reject
+    title: reject
+    text: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionCreationResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+    value: >-
+      {Error} - The error object.
+
+
+      {function} optionalCallback(err, result, request, response)
+
+                           {Error}  err        - The Error object if an error occurred, null otherwise.
+
+                           {object} [result]   - The deserialized result object if an error did not occur.
+                           See {@link SubscriptionCreationResult} for more
+                           information.
+
+                           {object} [request]  - The HTTP Request object if an error did not occur.
+
+                           {stream} [response] - The HTTP Response stream if an error did not occur.
+  type: Function
+  syntax:
+    parameters:
+    - id: enrollmentAccountName
+      type:
+      - string
+      description: Имя учетной записи регистрации, к которому будет выставлен счет подписки.
+    - id: body
+      type:
+      - object
+      description: Параметры создания подписки.
+    - id: body.displayName
+      type:
+      - string
+      description: Отображаемое имя подписки.
+      optional: true
+    - id: body.owners
+      type:
+      - array
+      description: Список участников, которые следует предоставить доступ владельца подписки. Участники должны быть типа пользователя, субъекта-службы или группы безопасности.
+      optional: true
+    - id: body.offerType
+      type:
+      - string
+      description: Тип предложения подписки. Например MS-AZR - 0017P (EnterpriseAgreement) и MS-AZR - 0148P (EnterpriseAgreement devTest) доступны. Действительно только при создании подписки в области учетной записи регистрации. Ниже перечислены возможные значения. "MS-AZR - 0017P", "MS-AZR - 0148P"
+      optional: true
+    - id: body.additionalParameters
+      type:
+      - object
+      description: Дополнительные, нетипизированные параметры для поддержки сценариев создания пользовательские подписки.
+      optional: true
+    - id: options
+      type:
+      - object
+      description: Необязательные параметры.
+      optional: true
+    - id: options.customHeaders
+      type:
+      - object
+      description: Заголовки, которые будут добавлены в запрос
+      optional: true
+    - id: optionalCallback
+      type:
+      - function
+      description: Необязательный обратный вызов.
+      optional: true
+    return:
+      type:
+      - function
+      - Promise
+      description: >-
+        Если обратный вызов был передан в качестве последнего параметра затем он возвращает else обратный вызов возвращает обещание.
+
+
+        {Обещание} Обещание возвращается
+    content: function beginCreateSubscriptionInEnrollmentAccount(enrollmentAccountName, body, options, optionalCallback)
+  langs:
+  - js

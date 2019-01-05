@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 2fb561807c7ba5893769617c9bc9b00dd170821c
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: a2775f4e01bc18a61b5ef88cf92d4ea4b3c8091f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41685001"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52093739"
 items:
 - uid: azure-arm-consumption.ReservationsSummaries
   name: ReservationsSummaries
@@ -14,16 +14,16 @@ items:
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrder_2
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrder_1
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservation
-  - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservation_1
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservation_2
+  - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservation_1
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext
-  - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext_1
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext_2
+  - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext_1
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNextWithHttpOperationResponse
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationWithHttpOperationResponse
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderNext
-  - azure-arm-consumption.ReservationsSummaries.listByReservationOrderNext_1
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderNext_2
+  - azure-arm-consumption.ReservationsSummaries.listByReservationOrderNext_1
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderNextWithHttpOperationResponse
   - azure-arm-consumption.ReservationsSummaries.listByReservationOrderWithHttpOperationResponse
   langs:
@@ -32,7 +32,7 @@ items:
   summary: ''
   package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrder
-  name: listByReservationOrder
+  name: listByReservationOrder(string, string, Object)
   children: []
   type: method
   langs:
@@ -50,7 +50,7 @@ items:
       type:
       - string
       description: >
-        Может быть ежедневно или ежемесячно. Возможные значения: «DailyGrain», «MonthlyGrain»
+        Может быть ежедневно или ежемесячно. Ниже перечислены возможные значения. «DailyGrain», «MonthlyGrain»
     - id: options
       type:
       - Object
@@ -61,7 +61,7 @@ items:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrder_2
-  name: listByReservationOrder
+  name: listByReservationOrder(string, string, Object, ServiceCallback<ReservationSummariesListResult>)
   children: []
   type: method
   langs:
@@ -91,7 +91,7 @@ items:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrder_1
-  name: listByReservationOrder
+  name: listByReservationOrder(string, string, ServiceCallback<ReservationSummariesListResult>)
   children: []
   type: method
   langs:
@@ -117,7 +117,7 @@ items:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservation
-  name: listByReservationOrderAndReservation
+  name: listByReservationOrderAndReservation(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -140,7 +140,7 @@ items:
       type:
       - string
       description: >
-        Может быть ежедневно или ежемесячно. Возможные значения: «DailyGrain», «MonthlyGrain»
+        Может быть ежедневно или ежемесячно. Ниже перечислены возможные значения. «DailyGrain», «MonthlyGrain»
     - id: options
       type:
       - Object
@@ -150,38 +150,8 @@ items:
       type:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
-- uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservation_1
-  name: listByReservationOrderAndReservation
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список сводки резервирования для детализации ежедневно или ежемесячно.
-  syntax:
-    content: 'function listByReservationOrderAndReservation(reservationOrderId: string, reservationId: string, grain: string, callback: ServiceCallback<ReservationSummariesListResult>)'
-    parameters:
-    - id: reservationOrderId
-      type:
-      - string
-      description: ''
-    - id: reservationId
-      type:
-      - string
-      description: ''
-    - id: grain
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-consumption.ReservationSummariesListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-consumption.ReservationSummariesListResult>
-  package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservation_2
-  name: listByReservationOrderAndReservation
+  name: listByReservationOrderAndReservation(string, string, string, Object, ServiceCallback<ReservationSummariesListResult>)
   children: []
   type: method
   langs:
@@ -214,8 +184,38 @@ items:
       type:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
+- uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservation_1
+  name: listByReservationOrderAndReservation(string, string, string, ServiceCallback<ReservationSummariesListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список сводки резервирования для детализации ежедневно или ежемесячно.
+  syntax:
+    content: 'function listByReservationOrderAndReservation(reservationOrderId: string, reservationId: string, grain: string, callback: ServiceCallback<ReservationSummariesListResult>)'
+    parameters:
+    - id: reservationOrderId
+      type:
+      - string
+      description: ''
+    - id: reservationId
+      type:
+      - string
+      description: ''
+    - id: grain
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-consumption.ReservationSummariesListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-consumption.ReservationSummariesListResult>
+  package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext
-  name: listByReservationOrderAndReservationNext
+  name: listByReservationOrderAndReservationNext(string, Object)
   children: []
   type: method
   langs:
@@ -238,30 +238,8 @@ items:
       type:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
-- uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext_1
-  name: listByReservationOrderAndReservationNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список сводки резервирования для детализации ежедневно или ежемесячно.
-  syntax:
-    content: 'function listByReservationOrderAndReservationNext(nextPageLink: string, callback: ServiceCallback<ReservationSummariesListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-consumption.ReservationSummariesListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-consumption.ReservationSummariesListResult>
-  package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext_2
-  name: listByReservationOrderAndReservationNext
+  name: listByReservationOrderAndReservationNext(string, Object, ServiceCallback<ReservationSummariesListResult>)
   children: []
   type: method
   langs:
@@ -286,8 +264,30 @@ items:
       type:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
+- uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNext_1
+  name: listByReservationOrderAndReservationNext(string, ServiceCallback<ReservationSummariesListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список сводки резервирования для детализации ежедневно или ежемесячно.
+  syntax:
+    content: 'function listByReservationOrderAndReservationNext(nextPageLink: string, callback: ServiceCallback<ReservationSummariesListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-consumption.ReservationSummariesListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-consumption.ReservationSummariesListResult>
+  package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationNextWithHttpOperationResponse
-  name: listByReservationOrderAndReservationNextWithHttpOperationResponse
+  name: listByReservationOrderAndReservationNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -311,7 +311,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-consumption.ReservationSummariesListResult>>
   package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderAndReservationWithHttpOperationResponse
-  name: listByReservationOrderAndReservationWithHttpOperationResponse
+  name: listByReservationOrderAndReservationWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -334,7 +334,7 @@ items:
       type:
       - string
       description: >
-        Может быть ежедневно или ежемесячно. Возможные значения: «DailyGrain», «MonthlyGrain»
+        Может быть ежедневно или ежемесячно. Ниже перечислены возможные значения. «DailyGrain», «MonthlyGrain»
     - id: options
       type:
       - Object
@@ -345,7 +345,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-consumption.ReservationSummariesListResult>>
   package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderNext
-  name: listByReservationOrderNext
+  name: listByReservationOrderNext(string, Object)
   children: []
   type: method
   langs:
@@ -368,30 +368,8 @@ items:
       type:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
-- uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderNext_1
-  name: listByReservationOrderNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список сводки резервирования для детализации ежедневно или ежемесячно.
-  syntax:
-    content: 'function listByReservationOrderNext(nextPageLink: string, callback: ServiceCallback<ReservationSummariesListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-consumption.ReservationSummariesListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-consumption.ReservationSummariesListResult>
-  package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderNext_2
-  name: listByReservationOrderNext
+  name: listByReservationOrderNext(string, Object, ServiceCallback<ReservationSummariesListResult>)
   children: []
   type: method
   langs:
@@ -416,8 +394,30 @@ items:
       type:
       - Promise<azure-arm-consumption.ReservationSummariesListResult>
   package: azure-arm-consumption
+- uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderNext_1
+  name: listByReservationOrderNext(string, ServiceCallback<ReservationSummariesListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список сводки резервирования для детализации ежедневно или ежемесячно.
+  syntax:
+    content: 'function listByReservationOrderNext(nextPageLink: string, callback: ServiceCallback<ReservationSummariesListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-consumption.ReservationSummariesListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-consumption.ReservationSummariesListResult>
+  package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderNextWithHttpOperationResponse
-  name: listByReservationOrderNextWithHttpOperationResponse
+  name: listByReservationOrderNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -441,7 +441,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-consumption.ReservationSummariesListResult>>
   package: azure-arm-consumption
 - uid: azure-arm-consumption.ReservationsSummaries.listByReservationOrderWithHttpOperationResponse
-  name: listByReservationOrderWithHttpOperationResponse
+  name: listByReservationOrderWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -459,7 +459,7 @@ items:
       type:
       - string
       description: >
-        Может быть ежедневно или ежемесячно. Возможные значения: «DailyGrain», «MonthlyGrain»
+        Может быть ежедневно или ежемесячно. Ниже перечислены возможные значения. «DailyGrain», «MonthlyGrain»
     - id: options
       type:
       - Object
@@ -471,6 +471,7 @@ items:
   package: azure-arm-consumption
 references:
 - uid: Promise<azure-arm-consumption.ReservationSummariesListResult>
+  name: ReservationSummariesListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -480,6 +481,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-consumption.ReservationSummariesListResult>
+  name: ReservationSummariesListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -489,6 +491,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-consumption.ReservationSummariesListResult>>
+  name: ReservationSummariesListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 7cfa6c93f47756f2ca02217849d1083336f867f2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52007819"
+items:
+- uid: azure-servicefabric.NodeHealthStateFilter
+  name: NodeHealthStateFilter
+  fullName: NodeHealthStateFilter
+  children:
+  - azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  - azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Определяет условия соответствия, чтобы определить, следует ли включать в фрагмент данных о работоспособности кластера возвращенного узла.
+
+    Один фильтр может соответствовать нуля, одной или нескольких узлов в зависимости от его свойства.
+
+    Можно указать в описания запроса фрагмента данных о работоспособности кластера.
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.healthStateFilter
+  name: healthStateFilter
+  fullName: healthStateFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    Фильтр состояния работоспособности узлов. Он позволяет, выбора узлов, в том случае, если они совпадают, данные о состоянии работоспособности нужное.
+
+    Возможные значения — целочисленное значение одного из приведенных ниже состояний работоспособности. Возвращаются только те узлы, которые соответствуют заданному фильтру. Все узлы используются для оценки состояния работоспособности кластера статистическая обработка.
+
+    Если не указан, значение по умолчанию — None, если не указано имя узла. Если фильтр имеет значение по умолчанию и имя узла указано, возвращается соответствующего узла.
+
+    Значения состояния представляют собой перечисление на основе флага, поэтому значение может представлять собой сочетание этих значений, полученное с помощью битового оператора "ИЛИ".
+
+    Например если указано значение 6, она соответствует узлов со значениями healthstate из ОК (2) "и" Warning "(4).
+
+    - По умолчанию — значение по умолчанию. Соответствует любому значению HealthState. Значение равно нулю.
+
+    - None — фильтр, который не совпадает с любым значением HealthState. Используется для возвращения нуля результатов для определенной коллекции состояний. Значение равно 1.
+
+    - ОК — фильтр, извлекающий входные данные с HealthState со значением ОК. Значение равно 2.
+
+    - Warning — фильтр, извлекающий входные данные с HealthState со значением предупреждение. Значение равно 4.
+
+    - Error — фильтр, извлекающий входные данные с HealthState со значением ошибки. Значение равно 8.
+
+    - ALL — фильтр, извлекающий входные данные с любым значением HealthState. Значение равно 65 535.
+  optional: true
+  syntax:
+    content: 'healthStateFilter?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeHealthStateFilter.nodeNameFilter
+  name: nodeNameFilter
+  fullName: nodeNameFilter
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Имя узла, который соответствует фильтру. Фильтр применяется только к указанному узлу, если он существует.
+
+    Если узел не существует, узел не возвращается в фрагмент данных о работоспособности кластера, на основе этого фильтра.
+
+    Если узел существует, он включается в фрагмент данных о работоспособности кластера, если состояние работоспособности соответствует другие свойства фильтра.
+
+    Если не указан, все узлы, соответствующие родительские фильтры (если таковые имеются) принимать во внимание и противопоставляется других элементов фильтра, как фильтр состояния работоспособности.
+  optional: true
+  syntax:
+    content: 'nodeNameFilter?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

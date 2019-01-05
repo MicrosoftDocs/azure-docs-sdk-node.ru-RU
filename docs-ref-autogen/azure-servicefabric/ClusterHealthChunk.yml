@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b8c41bfe89c1c4cc827663b8c0d1876afe8470e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099709"
+items:
+- uid: azure-servicefabric.ClusterHealthChunk
+  name: ClusterHealthChunk
+  fullName: ClusterHealthChunk
+  children:
+  - azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  - azure-servicefabric.ClusterHealthChunk.healthState
+  - azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Представляет фрагмент данных о работоспособности кластера.
+
+    Содержит состояние работоспособности кластера статистическая обработка и сущностей кластеров, с учетом фильтров входа.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.applicationHealthStateChunks
+  name: applicationHealthStateChunks
+  fullName: applicationHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Список состояния работоспособности приложения фрагментов данных в кластере, которые поддерживают такие фильтры в описания запроса фрагмента данных о работоспособности кластера.
+  optional: true
+  syntax:
+    content: 'applicationHealthStateChunks?: ApplicationHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthStateChunkList
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.healthState
+  name: healthState
+  fullName: healthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    HealthState, представляющий общего состояния работоспособности кластера вычисляется диспетчером работоспособности.
+
+    Оценка работоспособности сущности отражает все события, указанное в отчетах для сущности и его дочерние элементы (если таковые имеются).
+
+    Статистическая обработка выполняется путем применения политики работоспособности нужный кластер и политики работоспособности приложения. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»
+  optional: true
+  syntax:
+    content: 'healthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthChunk.nodeHealthStateChunks
+  name: nodeHealthStateChunks
+  fullName: nodeHealthStateChunks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Список состояние работоспособности узла фрагментов данных в кластере, которые поддерживают такие фильтры в описания запроса фрагмента данных о работоспособности кластера.
+  optional: true
+  syntax:
+    content: 'nodeHealthStateChunks?: NodeHealthStateChunkList'
+    return:
+      type:
+      - azure-servicefabric.NodeHealthStateChunkList
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthStateChunkList
+  name: ApplicationHealthStateChunkList
+  spec.typeScript:
+  - name: ApplicationHealthStateChunkList
+    fullName: ApplicationHealthStateChunkList
+    uid: azure-servicefabric.ApplicationHealthStateChunkList
+- uid: azure-servicefabric.NodeHealthStateChunkList
+  name: NodeHealthStateChunkList
+  spec.typeScript:
+  - name: NodeHealthStateChunkList
+    fullName: NodeHealthStateChunkList
+    uid: azure-servicefabric.NodeHealthStateChunkList
