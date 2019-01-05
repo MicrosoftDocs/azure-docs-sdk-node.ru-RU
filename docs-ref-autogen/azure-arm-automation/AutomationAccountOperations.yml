@@ -1,46 +1,46 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: d5c24a4b62e45c6796292c055232502cf3fb8c1b
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: f41100d3704c0a2a3ea29f919e677caf4c864bf6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41613364"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52138059"
 items:
 - uid: azure-arm-automation.AutomationAccountOperations
   name: AutomationAccountOperations
   fullName: AutomationAccountOperations
   children:
   - azure-arm-automation.AutomationAccountOperations.createOrUpdate
-  - azure-arm-automation.AutomationAccountOperations.createOrUpdate_1
   - azure-arm-automation.AutomationAccountOperations.createOrUpdate_2
+  - azure-arm-automation.AutomationAccountOperations.createOrUpdate_1
   - azure-arm-automation.AutomationAccountOperations.createOrUpdateWithHttpOperationResponse
   - azure-arm-automation.AutomationAccountOperations.deleteMethod
   - azure-arm-automation.AutomationAccountOperations.deleteMethod_2
   - azure-arm-automation.AutomationAccountOperations.deleteMethod_1
   - azure-arm-automation.AutomationAccountOperations.deleteMethodWithHttpOperationResponse
-  - azure-arm-automation.AutomationAccountOperations.get_1
   - azure-arm-automation.AutomationAccountOperations.get
   - azure-arm-automation.AutomationAccountOperations.get_2
+  - azure-arm-automation.AutomationAccountOperations.get_1
   - azure-arm-automation.AutomationAccountOperations.getWithHttpOperationResponse
   - azure-arm-automation.AutomationAccountOperations.list
-  - azure-arm-automation.AutomationAccountOperations.list_1
   - azure-arm-automation.AutomationAccountOperations.list_2
+  - azure-arm-automation.AutomationAccountOperations.list_1
   - azure-arm-automation.AutomationAccountOperations.listByResourceGroup
-  - azure-arm-automation.AutomationAccountOperations.listByResourceGroup_1
   - azure-arm-automation.AutomationAccountOperations.listByResourceGroup_2
+  - azure-arm-automation.AutomationAccountOperations.listByResourceGroup_1
   - azure-arm-automation.AutomationAccountOperations.listByResourceGroupNext
   - azure-arm-automation.AutomationAccountOperations.listByResourceGroupNext_2
   - azure-arm-automation.AutomationAccountOperations.listByResourceGroupNext_1
   - azure-arm-automation.AutomationAccountOperations.listByResourceGroupNextWithHttpOperationResponse
   - azure-arm-automation.AutomationAccountOperations.listByResourceGroupWithHttpOperationResponse
   - azure-arm-automation.AutomationAccountOperations.listNext
-  - azure-arm-automation.AutomationAccountOperations.listNext_1
   - azure-arm-automation.AutomationAccountOperations.listNext_2
+  - azure-arm-automation.AutomationAccountOperations.listNext_1
   - azure-arm-automation.AutomationAccountOperations.listNextWithHttpOperationResponse
   - azure-arm-automation.AutomationAccountOperations.listWithHttpOperationResponse
   - azure-arm-automation.AutomationAccountOperations.update
-  - azure-arm-automation.AutomationAccountOperations.update_1
   - azure-arm-automation.AutomationAccountOperations.update_2
+  - azure-arm-automation.AutomationAccountOperations.update_1
   - azure-arm-automation.AutomationAccountOperations.updateWithHttpOperationResponse
   langs:
   - typeScript
@@ -48,7 +48,7 @@ items:
   summary: ''
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, string, AutomationAccountCreateOrUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -61,12 +61,12 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: automationAccountName
       type:
       - string
       description: >
-        Параметры для создания или обновления учетной записи службы автоматизации.
+        Имя учетной записи службы автоматизации.
     - id: parameters
       type:
       - azure-arm-automation.AutomationAccountCreateOrUpdateParameters
@@ -81,38 +81,8 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccount>
   package: azure-arm-automation
-- uid: azure-arm-automation.AutomationAccountOperations.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Создание или обновление учетной записи службы автоматизации.
-  syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, automationAccountName: string, parameters: AutomationAccountCreateOrUpdateParameters, callback: ServiceCallback<AutomationAccount>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: automationAccountName
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-automation.AutomationAccountCreateOrUpdateParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.AutomationAccount>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.AutomationAccount>
-  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, string, AutomationAccountCreateOrUpdateParameters, Object, ServiceCallback<AutomationAccount>)
   children: []
   type: method
   langs:
@@ -145,8 +115,38 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccount>
   package: azure-arm-automation
+- uid: azure-arm-automation.AutomationAccountOperations.createOrUpdate_1
+  name: createOrUpdate(string, string, AutomationAccountCreateOrUpdateParameters, ServiceCallback<AutomationAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создание или обновление учетной записи службы автоматизации.
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, automationAccountName: string, parameters: AutomationAccountCreateOrUpdateParameters, callback: ServiceCallback<AutomationAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: automationAccountName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-automation.AutomationAccountCreateOrUpdateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.AutomationAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.AutomationAccount>
+  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, AutomationAccountCreateOrUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -159,12 +159,12 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: automationAccountName
       type:
       - string
       description: >
-        Параметры для создания или обновления учетной записи службы автоматизации.
+        Имя учетной записи службы автоматизации.
     - id: parameters
       type:
       - azure-arm-automation.AutomationAccountCreateOrUpdateParameters
@@ -180,7 +180,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.AutomationAccount>>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, string, Object)
   children: []
   type: method
   langs:
@@ -193,7 +193,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: automationAccountName
       type:
       - string
@@ -209,7 +209,7 @@ items:
       - Promise<void>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -239,7 +239,7 @@ items:
       - Promise<void>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.deleteMethod_1
-  name: deleteMethod
+  name: deleteMethod(string, string, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -265,7 +265,7 @@ items:
       - Promise<void>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -278,7 +278,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: automationAccountName
       type:
       - string
@@ -293,34 +293,8 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-automation
-- uid: azure-arm-automation.AutomationAccountOperations.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получение сведений об учетной записи службы автоматизации.
-  syntax:
-    content: 'function get(resourceGroupName: string, automationAccountName: string, callback: ServiceCallback<AutomationAccount>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: automationAccountName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.AutomationAccount>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.AutomationAccount>
-  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.get
-  name: get
+  name: get(string, string, Object)
   children: []
   type: method
   langs:
@@ -333,7 +307,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: automationAccountName
       type:
       - string
@@ -349,7 +323,7 @@ items:
       - Promise<azure-arm-automation.AutomationAccount>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.get_2
-  name: get
+  name: get(string, string, Object, ServiceCallback<AutomationAccount>)
   children: []
   type: method
   langs:
@@ -378,8 +352,34 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccount>
   package: azure-arm-automation
+- uid: azure-arm-automation.AutomationAccountOperations.get_1
+  name: get(string, string, ServiceCallback<AutomationAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение сведений об учетной записи службы автоматизации.
+  syntax:
+    content: 'function get(resourceGroupName: string, automationAccountName: string, callback: ServiceCallback<AutomationAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: automationAccountName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.AutomationAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.AutomationAccount>
+  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -392,7 +392,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: automationAccountName
       type:
       - string
@@ -408,7 +408,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.AutomationAccount>>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -426,26 +426,8 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
-- uid: azure-arm-automation.AutomationAccountOperations.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function list(callback: ServiceCallback<AutomationAccountListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.AutomationAccountListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.AutomationAccountListResult>
-  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.list_2
-  name: list
+  name: list(Object, ServiceCallback<AutomationAccountListResult>)
   children: []
   type: method
   langs:
@@ -466,8 +448,26 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
+- uid: azure-arm-automation.AutomationAccountOperations.list_1
+  name: list(ServiceCallback<AutomationAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(callback: ServiceCallback<AutomationAccountListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.AutomationAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.AutomationAccountListResult>
+  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroup
-  name: listByResourceGroup
+  name: listByResourceGroup(string, Object)
   children: []
   type: method
   langs:
@@ -480,7 +480,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: options
       type:
       - Object
@@ -490,30 +490,8 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
-- uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroup_1
-  name: listByResourceGroup
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получить список учетных записей в пределах указанной группы ресурсов.
-  syntax:
-    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<AutomationAccountListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.AutomationAccountListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.AutomationAccountListResult>
-  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroup_2
-  name: listByResourceGroup
+  name: listByResourceGroup(string, Object, ServiceCallback<AutomationAccountListResult>)
   children: []
   type: method
   langs:
@@ -538,8 +516,30 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
+- uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroup_1
+  name: listByResourceGroup(string, ServiceCallback<AutomationAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить список учетных записей в пределах указанной группы ресурсов.
+  syntax:
+    content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<AutomationAccountListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.AutomationAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.AutomationAccountListResult>
+  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroupNext
-  name: listByResourceGroupNext
+  name: listByResourceGroupNext(string, Object)
   children: []
   type: method
   langs:
@@ -563,7 +563,7 @@ items:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroupNext_2
-  name: listByResourceGroupNext
+  name: listByResourceGroupNext(string, Object, ServiceCallback<AutomationAccountListResult>)
   children: []
   type: method
   langs:
@@ -589,7 +589,7 @@ items:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroupNext_1
-  name: listByResourceGroupNext
+  name: listByResourceGroupNext(string, ServiceCallback<AutomationAccountListResult>)
   children: []
   type: method
   langs:
@@ -611,7 +611,7 @@ items:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroupNextWithHttpOperationResponse
-  name: listByResourceGroupNextWithHttpOperationResponse
+  name: listByResourceGroupNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -635,7 +635,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.AutomationAccountListResult>>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listByResourceGroupWithHttpOperationResponse
-  name: listByResourceGroupWithHttpOperationResponse
+  name: listByResourceGroupWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -648,7 +648,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: options
       type:
       - Object
@@ -659,7 +659,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.AutomationAccountListResult>>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -682,30 +682,8 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
-- uid: azure-arm-automation.AutomationAccountOperations.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<AutomationAccountListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.AutomationAccountListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.AutomationAccountListResult>
-  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<AutomationAccountListResult>)
   children: []
   type: method
   langs:
@@ -730,8 +708,30 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccountListResult>
   package: azure-arm-automation
+- uid: azure-arm-automation.AutomationAccountOperations.listNext_1
+  name: listNext(string, ServiceCallback<AutomationAccountListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<AutomationAccountListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.AutomationAccountListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.AutomationAccountListResult>
+  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -755,7 +755,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.AutomationAccountListResult>>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -774,7 +774,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.AutomationAccountListResult>>
   package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.update
-  name: update
+  name: update(string, string, AutomationAccountUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -787,7 +787,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: automationAccountName
       type:
       - string
@@ -807,38 +807,8 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccount>
   package: azure-arm-automation
-- uid: azure-arm-automation.AutomationAccountOperations.update_1
-  name: update
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновите учетную запись службы автоматизации.
-  syntax:
-    content: 'function update(resourceGroupName: string, automationAccountName: string, parameters: AutomationAccountUpdateParameters, callback: ServiceCallback<AutomationAccount>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: automationAccountName
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-automation.AutomationAccountUpdateParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.AutomationAccount>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.AutomationAccount>
-  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.update_2
-  name: update
+  name: update(string, string, AutomationAccountUpdateParameters, Object, ServiceCallback<AutomationAccount>)
   children: []
   type: method
   langs:
@@ -871,8 +841,38 @@ items:
       type:
       - Promise<azure-arm-automation.AutomationAccount>
   package: azure-arm-automation
+- uid: azure-arm-automation.AutomationAccountOperations.update_1
+  name: update(string, string, AutomationAccountUpdateParameters, ServiceCallback<AutomationAccount>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновите учетную запись службы автоматизации.
+  syntax:
+    content: 'function update(resourceGroupName: string, automationAccountName: string, parameters: AutomationAccountUpdateParameters, callback: ServiceCallback<AutomationAccount>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: automationAccountName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-automation.AutomationAccountUpdateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.AutomationAccount>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.AutomationAccount>
+  package: azure-arm-automation
 - uid: azure-arm-automation.AutomationAccountOperations.updateWithHttpOperationResponse
-  name: updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, AutomationAccountUpdateParameters, Object)
   children: []
   type: method
   langs:
@@ -885,7 +885,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов.
+        Имя группы ресурсов Azure.
     - id: automationAccountName
       type:
       - string
@@ -907,11 +907,13 @@ items:
   package: azure-arm-automation
 references:
 - uid: azure-arm-automation.AutomationAccountCreateOrUpdateParameters
+  name: AutomationAccountCreateOrUpdateParameters
   spec.typeScript:
   - name: AutomationAccountCreateOrUpdateParameters
     fullName: AutomationAccountCreateOrUpdateParameters
     uid: azure-arm-automation.AutomationAccountCreateOrUpdateParameters
 - uid: Promise<azure-arm-automation.AutomationAccount>
+  name: AutomationAccount>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -921,6 +923,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-automation.AutomationAccount>
+  name: AutomationAccount>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -930,6 +933,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-automation.AutomationAccount>>
+  name: AutomationAccount>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -939,6 +943,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-automation.AutomationAccountListResult>
+  name: AutomationAccountListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -948,6 +953,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-automation.AutomationAccountListResult>
+  name: AutomationAccountListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -957,6 +963,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-automation.AutomationAccountListResult>>
+  name: AutomationAccountListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -966,6 +973,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: azure-arm-automation.AutomationAccountUpdateParameters
+  name: AutomationAccountUpdateParameters
   spec.typeScript:
   - name: AutomationAccountUpdateParameters
     fullName: AutomationAccountUpdateParameters
