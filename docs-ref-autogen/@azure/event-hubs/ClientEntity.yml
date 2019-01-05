@@ -1,0 +1,174 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e61f19a4736cc7a09b4a6980d6773cbaa8f6ede9
+ms.sourcegitcommit: 42c41a3863e31111d98796f150878d4fa93463af
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48297841"
+items:
+- uid: '@azure/event-hubs.ClientEntity'
+  name: ClientEntity
+  fullName: ClientEntity
+  children:
+  - '@azure/event-hubs.ClientEntity.address'
+  - '@azure/event-hubs.ClientEntity.audience'
+  - '@azure/event-hubs.ClientEntity.constructor'
+  - '@azure/event-hubs.ClientEntity.name'
+  - '@azure/event-hubs.ClientEntity.partitionId'
+  - '@azure/event-hubs.ClientEntity.type'
+  - '@azure/event-hubs.ClientEntity.wasCloseCalled'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="305d0-101">Описывает базовый класс для сущностей, таких как клиент концентратора событий отправитель, получатель и управление.</span><span class="sxs-lookup"><span data-stu-id="305d0-101">Describes the base class for entities like EventHub Sender, Receiver and Management client.</span></span>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.address'
+  name: address
+  fullName: address
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="305d0-102">{Строка} адрес адрес сущности клиента в одном из следующих форм:</span><span class="sxs-lookup"><span data-stu-id="305d0-102">{string} address The client entity address in one of the following forms:</span></span>
+
+
+    <span data-ttu-id="305d0-103">**Отправитель**</span><span class="sxs-lookup"><span data-stu-id="305d0-103">**Sender**</span></span>
+
+    - `"<hubName>"`
+
+    - <span data-ttu-id="305d0-104">`"<hubName>/Partitions/<partitionId>"`.</span><span class="sxs-lookup"><span data-stu-id="305d0-104">`"<hubName>/Partitions/<partitionId>"`.</span></span>
+
+
+    <span data-ttu-id="305d0-105">**Получатель**</span><span class="sxs-lookup"><span data-stu-id="305d0-105">**Receiver**</span></span>
+
+    - <span data-ttu-id="305d0-106">`"<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"`.</span><span class="sxs-lookup"><span data-stu-id="305d0-106">`"<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"`.</span></span>
+
+
+    <span data-ttu-id="305d0-107">**ManagementClient**
+
+    -`"$management"`.</span><span class="sxs-lookup"><span data-stu-id="305d0-107">**ManagementClient**
+
+    -`"$management"`.</span></span>
+  syntax:
+    content: 'address: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.audience'
+  name: audience
+  fullName: audience
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="305d0-108">аудитория {строка} аудитория токена сущности клиента в одном из следующих форм:</span><span class="sxs-lookup"><span data-stu-id="305d0-108">{string} audience The client entity token audience in one of the following forms:</span></span>
+
+
+    <span data-ttu-id="305d0-109">**Отправитель**</span><span class="sxs-lookup"><span data-stu-id="305d0-109">**Sender**</span></span>
+
+    - `"sb://<yournamespace>.servicebus.windows.net/<hubName>"`
+
+    - <span data-ttu-id="305d0-110">`"sb://<yournamespace>.servicebus.windows.net/<hubName>/Partitions/<partitionId>"`.</span><span class="sxs-lookup"><span data-stu-id="305d0-110">`"sb://<yournamespace>.servicebus.windows.net/<hubName>/Partitions/<partitionId>"`.</span></span>
+
+
+    <span data-ttu-id="305d0-111">**Получатель**</span><span class="sxs-lookup"><span data-stu-id="305d0-111">**Receiver**</span></span>
+
+    - <span data-ttu-id="305d0-112">`"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"`.</span><span class="sxs-lookup"><span data-stu-id="305d0-112">`"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/ConsumerGroups/<consumer-group-name>/Partitions/<partition-id>"`.</span></span>
+
+
+    <span data-ttu-id="305d0-113">**ManagementClient**</span><span class="sxs-lookup"><span data-stu-id="305d0-113">**ManagementClient**</span></span>
+
+    - <span data-ttu-id="305d0-114">`"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/$management"`.</span><span class="sxs-lookup"><span data-stu-id="305d0-114">`"sb://<your-namespace>.servicebus.windows.net/<event-hub-name>/$management"`.</span></span>
+  syntax:
+    content: 'audience: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.constructor'
+  name: ClientEntity
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="305d0-115">Создает новый экземпляр ClientEntity.</span><span class="sxs-lookup"><span data-stu-id="305d0-115">Creates a new ClientEntity instance.</span></span>
+  syntax:
+    content: 'new ClientEntity(context: ConnectionContext, options?: ClientEntityOptions)'
+    parameters:
+    - id: context
+      type:
+      - ConnectionContext
+      description: <span data-ttu-id="305d0-116">Контекст соединения.</span><span class="sxs-lookup"><span data-stu-id="305d0-116">The connection context.</span></span>
+    - id: options
+      type:
+      - '@azure/event-hubs.ClientEntityOptions'
+      description: ''
+      optional: true
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.name'
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="305d0-117">{Строка} [имя] Уникальное имя для сущности (обычно guid).</span><span class="sxs-lookup"><span data-stu-id="305d0-117">{string} [name] The unique name for the entity (mostly a guid).</span></span>
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.partitionId'
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="305d0-118">{Строка | Номер} [partitionId] PartitionId, связанный с объектом клиента.</span><span class="sxs-lookup"><span data-stu-id="305d0-118">{string | number} [partitionId] The partitionId associated with the client entity.</span></span>
+  optional: true
+  syntax:
+    content: 'partitionId?: string | number'
+    return:
+      type:
+      - string | number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.type'
+  name: type
+  fullName: type
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="305d0-119">Предоставляет текущий тип ClientEntity.</span><span class="sxs-lookup"><span data-stu-id="305d0-119">Provides the current type of the ClientEntity.</span></span>
+  syntax:
+    content: 'type: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.ClientEntity.wasCloseCalled'
+  name: wasCloseCalled
+  fullName: wasCloseCalled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="305d0-120">{Логическое} wasCloseCalled указывает, был ли метод close() вызван на себя в данном контексте.</span><span class="sxs-lookup"><span data-stu-id="305d0-120">{boolean} wasCloseCalled Indicates whether the close() method was called on itself in a given context.</span></span>
+  syntax:
+    content: 'wasCloseCalled: boolean'
+    return:
+      type:
+      - boolean
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.ClientEntityOptions'
+  name: ClientEntityOptions
+  spec.typeScript:
+  - name: ClientEntityOptions
+    fullName: ClientEntityOptions
+    uid: '@azure/event-hubs.ClientEntityOptions'

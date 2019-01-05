@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ca6a5ed7cef6e507762013051fc5200706872cde
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52019058"
+items:
+- uid: azure-servicefabric.ReplicaHealthEvaluation
+  name: ReplicaHealthEvaluation
+  fullName: ReplicaHealthEvaluation
+  children:
+  - azure-servicefabric.ReplicaHealthEvaluation.partitionId
+  - azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+  - azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="074f7-101">Представляет оценки работоспособности для реплики, содержащий сведения о данных и алгоритма, используемого в хранилище данных о работоспособности для оценки работоспособности.</span><span class="sxs-lookup"><span data-stu-id="074f7-101">Represents health evaluation for a replica, containing information about the data and the algorithm used by health store to evaluate health.</span></span> <span data-ttu-id="074f7-102">Вычисления возвращается только в том случае, когда сводное состояние работоспособности — ошибки или предупреждения.</span><span class="sxs-lookup"><span data-stu-id="074f7-102">The evaluation is returned only when the aggregated health state is either Error or Warning.</span></span>
+  extends:
+    name: azure-servicefabric.HealthEvaluation
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthEvaluation.partitionId
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="074f7-103">Идентификатор секции, к которой принадлежит реплика.</span><span class="sxs-lookup"><span data-stu-id="074f7-103">Id of the partition to which the replica belongs.</span></span>
+  optional: true
+  syntax:
+    content: 'partitionId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthEvaluation.replicaOrInstanceId
+  name: replicaOrInstanceId
+  fullName: replicaOrInstanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="074f7-104">Идентификатор реплики службы с отслеживанием состояния или экземпляра службы без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="074f7-104">Id of a stateful service replica or a stateless service instance.</span></span> <span data-ttu-id="074f7-105">Этот идентификатор используется в запросах, которые применяются к службам с отслеживанием состояния и без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="074f7-105">This ID is used in the queries that apply to both stateful and stateless services.</span></span> <span data-ttu-id="074f7-106">Используется Service Fabric для уникальной идентификации реплике секции службы с отслеживанием состояния или экземпляру службы без отслеживания состояния секции.</span><span class="sxs-lookup"><span data-stu-id="074f7-106">It is used by Service Fabric to uniquely identify a replica of a partition of a stateful service or an instance of a stateless service partition.</span></span> <span data-ttu-id="074f7-107">Он уникален в пределах секции и остается неизменным в течение жизненного цикла реплики или экземпляра.</span><span class="sxs-lookup"><span data-stu-id="074f7-107">It is unique within a partition and does not change for the lifetime of the replica or the instance.</span></span> <span data-ttu-id="074f7-108">Если другая реплика создается на том же узле, для одной секции удалении реплики с отслеживанием состояния, он получит другое значение для идентификатора.</span><span class="sxs-lookup"><span data-stu-id="074f7-108">If a stateful replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the ID.</span></span> <span data-ttu-id="074f7-109">Если экземпляр без отслеживания состояния выполняется отработка отказа на том же или другом узле он получит другое значение для идентификатора.</span><span class="sxs-lookup"><span data-stu-id="074f7-109">If a stateless instance is failed over on the same or different node it will get a different value for the ID.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaOrInstanceId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicaHealthEvaluation.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="074f7-110">Список оценки неработоспособности, ставших причиной текущего общего состояния работоспособности реплики.</span><span class="sxs-lookup"><span data-stu-id="074f7-110">List of unhealthy evaluations that led to the current aggregated health state of the replica.</span></span>
+
+    <span data-ttu-id="074f7-111">Типы оценки неработоспособности может быть EventHealthEvaluation.</span><span class="sxs-lookup"><span data-stu-id="074f7-111">The types of the unhealthy evaluations can be EventHealthEvaluation.</span></span>
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvaluation
+  name: HealthEvaluation
+  spec.typeScript:
+  - name: HealthEvaluation
+    fullName: HealthEvaluation
+    uid: azure-servicefabric.HealthEvaluation
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'
