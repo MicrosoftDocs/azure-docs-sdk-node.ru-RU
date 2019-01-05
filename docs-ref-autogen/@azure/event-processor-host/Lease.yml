@@ -1,0 +1,191 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: e0aebf7fffe43a828b27045f2542923a75b24852
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48575545"
+items:
+- uid: '@azure/event-processor-host.Lease'
+  name: Lease
+  fullName: Lease
+  children:
+  - '@azure/event-processor-host.Lease.epoch'
+  - '@azure/event-processor-host.Lease.getInfo'
+  - '@azure/event-processor-host.Lease.incrementEpoch'
+  - '@azure/event-processor-host.Lease.isExpired'
+  - '@azure/event-processor-host.Lease.constructor'
+  - '@azure/event-processor-host.Lease.offset'
+  - '@azure/event-processor-host.Lease.owner'
+  - '@azure/event-processor-host.Lease.partitionId'
+  - '@azure/event-processor-host.Lease.sequenceNumber'
+  - '@azure/event-processor-host.Lease.serialize'
+  - '@azure/event-processor-host.Lease.token'
+  langs:
+  - typeScript
+  type: class
+  summary: Описывает создание аренды.
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.epoch'
+  name: epoch
+  fullName: epoch
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} эпохи epoch(time) аренды, который является значением, можно использовать для определения владельца самой последней секции между узлами конкурирующих.'
+  syntax:
+    content: 'epoch: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.getInfo'
+  name: getInfo
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает сведения об аренде.
+  syntax:
+    content: function getInfo()
+    parameters: []
+    return:
+      type:
+      - '@azure/event-processor-host.LeaseInfo'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.incrementEpoch'
+  name: incrementEpoch
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Увеличивает значение эпохи на 1.
+  syntax:
+    content: function incrementEpoch()
+    parameters: []
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.isExpired'
+  name: isExpired
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Определяет, истек ли срок аренды.
+  syntax:
+    content: function isExpired()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.constructor'
+  name: Lease
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Создает экземпляр аренды.
+  syntax:
+    content: 'new Lease(info: LeaseInfo)'
+    parameters:
+    - id: info
+      type:
+      - '@azure/event-processor-host.LeaseInfo'
+      description: >
+        Сведения аренды.
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.offset'
+  name: offset
+  fullName: offset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Строка} смещения смещение события возврата.'
+  syntax:
+    content: 'offset: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.owner'
+  name: owner
+  fullName: owner
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Владелец {строка} владельце узла для секции.
+  syntax:
+    content: 'owner: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.partitionId'
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Строка} partitionId связанные partitionId для которого удерживается аренды.'
+  syntax:
+    content: 'partitionId: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.sequenceNumber'
+  name: sequenceNumber
+  fullName: sequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: sequenceNumber {строка} порядковый номер события возврата.
+  syntax:
+    content: 'sequenceNumber: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.serialize'
+  name: serialize
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Выполняет сериализацию данных аренды.
+  syntax:
+    content: function serialize()
+    parameters: []
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.Lease.token'
+  name: token
+  fullName: token
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: токен {строка} токен, аренды, который осуществляет управление параллелизмом между узлами. Этот маркер можно использовать для обеспечения единого доступа к любому ресурсу, необходимые для EPH.
+  syntax:
+    content: 'token: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.LeaseInfo'
+  name: LeaseInfo
+  spec.typeScript:
+  - name: LeaseInfo
+    fullName: LeaseInfo
+    uid: '@azure/event-processor-host.LeaseInfo'

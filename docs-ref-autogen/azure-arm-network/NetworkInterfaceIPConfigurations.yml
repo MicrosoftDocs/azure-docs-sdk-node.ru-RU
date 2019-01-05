@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 2af0fb6954d1cb2d1e475df1c067a9223b6b9093
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: e619d1ca767106c3578e5ba23a3a3ff22490fc8f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41698058"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52031808"
 items:
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations
   name: NetworkInterfaceIPConfigurations
@@ -15,11 +15,11 @@ items:
   - azure-arm-network.NetworkInterfaceIPConfigurations.get_1
   - azure-arm-network.NetworkInterfaceIPConfigurations.getWithHttpOperationResponse
   - azure-arm-network.NetworkInterfaceIPConfigurations.list
-  - azure-arm-network.NetworkInterfaceIPConfigurations.list_1
   - azure-arm-network.NetworkInterfaceIPConfigurations.list_2
+  - azure-arm-network.NetworkInterfaceIPConfigurations.list_1
   - azure-arm-network.NetworkInterfaceIPConfigurations.listNext
-  - azure-arm-network.NetworkInterfaceIPConfigurations.listNext_1
   - azure-arm-network.NetworkInterfaceIPConfigurations.listNext_2
+  - azure-arm-network.NetworkInterfaceIPConfigurations.listNext_1
   - azure-arm-network.NetworkInterfaceIPConfigurations.listNextWithHttpOperationResponse
   - azure-arm-network.NetworkInterfaceIPConfigurations.listWithHttpOperationResponse
   langs:
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -62,7 +62,7 @@ items:
       - Promise<azure-arm-network.NetworkInterfaceIPConfiguration>
   package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<NetworkInterfaceIPConfiguration>)
   children: []
   type: method
   langs:
@@ -96,7 +96,7 @@ items:
       - Promise<azure-arm-network.NetworkInterfaceIPConfiguration>
   package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.get_1
-  name: get
+  name: get(string, string, string, ServiceCallback<NetworkInterfaceIPConfiguration>)
   children: []
   type: method
   langs:
@@ -126,7 +126,7 @@ items:
       - Promise<azure-arm-network.NetworkInterfaceIPConfiguration>
   package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -160,7 +160,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-network.NetworkInterfaceIPConfiguration>>
   package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.list
-  name: list
+  name: list(string, string, Object)
   children: []
   type: method
   langs:
@@ -188,34 +188,8 @@ items:
       type:
       - Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
   package: azure-arm-network
-- uid: azure-arm-network.NetworkInterfaceIPConfigurations.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получить все IP-конфигурации сетевого интерфейса
-  syntax:
-    content: 'function list(resourceGroupName: string, networkInterfaceName: string, callback: ServiceCallback<NetworkInterfaceIPConfigurationListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: networkInterfaceName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
-  package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.list_2
-  name: list
+  name: list(string, string, Object, ServiceCallback<NetworkInterfaceIPConfigurationListResult>)
   children: []
   type: method
   langs:
@@ -244,8 +218,34 @@ items:
       type:
       - Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
   package: azure-arm-network
+- uid: azure-arm-network.NetworkInterfaceIPConfigurations.list_1
+  name: list(string, string, ServiceCallback<NetworkInterfaceIPConfigurationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить все IP-конфигурации сетевого интерфейса
+  syntax:
+    content: 'function list(resourceGroupName: string, networkInterfaceName: string, callback: ServiceCallback<NetworkInterfaceIPConfigurationListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: networkInterfaceName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
+  package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -268,30 +268,8 @@ items:
       type:
       - Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
   package: azure-arm-network
-- uid: azure-arm-network.NetworkInterfaceIPConfigurations.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получить все IP-конфигурации сетевого интерфейса
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<NetworkInterfaceIPConfigurationListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
-  package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<NetworkInterfaceIPConfigurationListResult>)
   children: []
   type: method
   langs:
@@ -316,8 +294,30 @@ items:
       type:
       - Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
   package: azure-arm-network
+- uid: azure-arm-network.NetworkInterfaceIPConfigurations.listNext_1
+  name: listNext(string, ServiceCallback<NetworkInterfaceIPConfigurationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить все IP-конфигурации сетевого интерфейса
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<NetworkInterfaceIPConfigurationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
+  package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -341,7 +341,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-network.NetworkInterfaceIPConfigurationListResult>>
   package: azure-arm-network
 - uid: azure-arm-network.NetworkInterfaceIPConfigurations.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -371,6 +371,7 @@ items:
   package: azure-arm-network
 references:
 - uid: Promise<azure-arm-network.NetworkInterfaceIPConfiguration>
+  name: NetworkInterfaceIPConfiguration>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -380,6 +381,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-network.NetworkInterfaceIPConfiguration>
+  name: NetworkInterfaceIPConfiguration>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -389,6 +391,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-network.NetworkInterfaceIPConfiguration>>
+  name: NetworkInterfaceIPConfiguration>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -398,6 +401,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
+  name: NetworkInterfaceIPConfigurationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -407,6 +411,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-network.NetworkInterfaceIPConfigurationListResult>
+  name: NetworkInterfaceIPConfigurationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -416,6 +421,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-network.NetworkInterfaceIPConfigurationListResult>>
+  name: NetworkInterfaceIPConfigurationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

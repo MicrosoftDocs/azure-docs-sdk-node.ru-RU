@@ -1,27 +1,42 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 56789ebeca7ab18b9af71b968096cbb2061fddb9
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 4ae6f55ce908dd8b74a39abdec8f6936dcb4ced1
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41691163"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52029488"
 items:
 - uid: '@azure/cosmos.Databases'
   name: Databases
   fullName: Databases
   children:
+  - '@azure/cosmos.Databases.client'
   - '@azure/cosmos.Databases.create'
   - '@azure/cosmos.Databases.createIfNotExists'
-  - '@azure/cosmos.Databases.constructor'
   - '@azure/cosmos.Databases.query'
+  - '@azure/cosmos.Databases.query_1'
   - '@azure/cosmos.Databases.readAll'
   langs:
   - typeScript
   type: class
   summary: Операции для создания новых баз данных и чтения/запроса всех баз данных
   package: '@azure/cosmos'
+- uid: '@azure/cosmos.Databases.client'
+  name: client
+  fullName: client
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  syntax:
+    content: 'client: CosmosClient'
+    return:
+      type:
+      - '@azure/cosmos.CosmosClient'
+  package: '@azure/cosmos'
 - uid: '@azure/cosmos.Databases.create'
-  name: create
+  name: create(DatabaseDefinition, RequestOptions)
   children: []
   type: method
   langs:
@@ -34,7 +49,7 @@ items:
     Каждая учетная запись базы данных Azure Cosmos DB поддерживает несколько независимых именованных баз данных, база данных находится логический контейнер для данных.
 
 
-    Каждая база данных состоит из одного или нескольких контейнеров, в свою очередь, каждая из которых содержит один или несколько документов. Так как базы данных являются ресурс администратора главного ключа службы потребуется для получения доступа и успешно выполнить любое действие, с помощью API-интерфейсы пользователя.
+    Каждая база данных состоит из одного или нескольких контейнеров, в свою очередь, каждая из которых содержит один или несколько документов. Так как административные подходят базы данных, главного ключа службы потребуется для получения доступа и успешно выполнить любое действие, с помощью API-интерфейсы пользователя.
   syntax:
     content: 'function create(body: DatabaseDefinition, options?: RequestOptions)'
     parameters:
@@ -53,7 +68,7 @@ items:
       - Promise<@azure/cosmos.DatabaseResponse>
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Databases.createIfNotExists'
-  name: createIfNotExists
+  name: createIfNotExists(DatabaseDefinition, RequestOptions)
   children: []
   type: method
   langs:
@@ -85,27 +100,8 @@ items:
       type:
       - Promise<@azure/cosmos.DatabaseResponse>
   package: '@azure/cosmos'
-- uid: '@azure/cosmos.Databases.constructor'
-  name: Databases
-  children: []
-  type: constructor
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'new Databases(client: CosmosClient, clientContext: ClientContext)'
-    parameters:
-    - id: client
-      type:
-      - '@azure/cosmos.CosmosClient'
-      description: ''
-    - id: clientContext
-      type:
-      - ClientContext
-      description: ''
-  package: '@azure/cosmos'
 - uid: '@azure/cosmos.Databases.query'
-  name: query
+  name: query(string | SqlQuerySpec, FeedOptions)
   children: []
   type: method
   langs:
@@ -125,10 +121,33 @@ items:
       optional: true
     return:
       type:
-      - '@azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition>'
+      - '@azure/cosmos.QueryIterator<any>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Databases.query_1'
+  name: query(string | SqlQuerySpec, FeedOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запрос всех баз данных.
+  syntax:
+    content: 'function query<T>(query: string | SqlQuerySpec, options?: FeedOptions)'
+    parameters:
+    - id: query
+      type:
+      - string | @azure/cosmos.SqlQuerySpec
+      description: Настройка запроса для операции. См. в разделе <xref:SqlQuerySpec> Дополнительные сведения о том, как настроить запрос.
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: Используйте, чтобы задать параметры, такие как размер страницы ответов, маркеры продолжения и т. д.
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<T>'
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Databases.readAll'
-  name: readAll
+  name: readAll(FeedOptions)
   children: []
   type: method
   langs:
@@ -144,25 +163,29 @@ items:
       optional: true
     return:
       type:
-      - '@azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition>'
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition & @azure/cosmos.Resource>'
   package: '@azure/cosmos'
 references:
 - uid: '@azure/cosmos.CosmosClient'
+  name: CosmosClient
   spec.typeScript:
   - name: CosmosClient
     fullName: CosmosClient
     uid: '@azure/cosmos.CosmosClient'
 - uid: '@azure/cosmos.DatabaseDefinition'
+  name: DatabaseDefinition
   spec.typeScript:
   - name: DatabaseDefinition
     fullName: DatabaseDefinition
     uid: '@azure/cosmos.DatabaseDefinition'
 - uid: '@azure/cosmos.RequestOptions'
+  name: RequestOptions
   spec.typeScript:
   - name: RequestOptions
     fullName: RequestOptions
     uid: '@azure/cosmos.RequestOptions'
 - uid: Promise<@azure/cosmos.DatabaseResponse>
+  name: DatabaseResponse>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -172,6 +195,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: string | @azure/cosmos.SqlQuerySpec
+  name: SqlQuerySpec
   spec.typeScript:
   - name: 'string | '
     fullName: 'string | '
@@ -179,11 +203,29 @@ references:
     fullName: SqlQuerySpec
     uid: '@azure/cosmos.SqlQuerySpec'
 - uid: '@azure/cosmos.FeedOptions'
+  name: FeedOptions
   spec.typeScript:
   - name: FeedOptions
     fullName: FeedOptions
     uid: '@azure/cosmos.FeedOptions'
-- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition>'
+- uid: '@azure/cosmos.QueryIterator<any>'
+  name: QueryIterator<any>
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <any>
+    fullName: <any>
+- uid: '@azure/cosmos.QueryIterator<T>'
+  name: QueryIterator<T>
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <T>
+    fullName: <T>
+- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.DatabaseDefinition & @azure/cosmos.Resource>'
+  name: Resource>
   spec.typeScript:
   - name: QueryIterator
     fullName: QueryIterator
@@ -193,5 +235,10 @@ references:
   - name: DatabaseDefinition
     fullName: DatabaseDefinition
     uid: '@azure/cosmos.DatabaseDefinition'
+  - name: " & "
+    fullName: " & "
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/cosmos.Resource'
   - name: '>'
     fullName: '>'

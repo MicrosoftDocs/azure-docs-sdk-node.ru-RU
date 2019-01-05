@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: e0461e54c30b1b75920c45423741d49a6181c55a
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: a4acdfc30c1484d6a01be24da8718c074a27c7e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41701605"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52029288"
 items:
 - uid: '@azure/cosmos.Triggers'
   name: Triggers
@@ -13,6 +13,7 @@ items:
   - '@azure/cosmos.Triggers.container'
   - '@azure/cosmos.Triggers.create'
   - '@azure/cosmos.Triggers.query'
+  - '@azure/cosmos.Triggers.query_1'
   - '@azure/cosmos.Triggers.readAll'
   - '@azure/cosmos.Triggers.upsert'
   langs:
@@ -38,7 +39,7 @@ items:
       - '@azure/cosmos.Container'
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Triggers.create'
-  name: create
+  name: create(TriggerDefinition, RequestOptions)
   children: []
   type: method
   langs:
@@ -67,7 +68,7 @@ items:
       - Promise<@azure/cosmos.TriggerResponse>
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Triggers.query'
-  name: query
+  name: query(SqlQuerySpec, FeedOptions)
   children: []
   type: method
   langs:
@@ -87,10 +88,33 @@ items:
       optional: true
     return:
       type:
-      - '@azure/cosmos.QueryIterator<@azure/cosmos.TriggerDefinition>'
+      - '@azure/cosmos.QueryIterator<any>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Triggers.query_1'
+  name: query(SqlQuerySpec, FeedOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запрос всех триггеров.
+  syntax:
+    content: 'function query<T>(query: SqlQuerySpec, options?: FeedOptions)'
+    parameters:
+    - id: query
+      type:
+      - '@azure/cosmos.SqlQuerySpec'
+      description: Настройка запроса для операции. См. в разделе <xref:SqlQuerySpec> Дополнительные сведения о том, как настроить запрос.
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: "\n"
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<T>'
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Triggers.readAll'
-  name: readAll
+  name: readAll(FeedOptions)
   children: []
   type: method
   langs:
@@ -106,10 +130,10 @@ items:
       optional: true
     return:
       type:
-      - '@azure/cosmos.QueryIterator<@azure/cosmos.TriggerDefinition>'
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.TriggerDefinition & @azure/cosmos.Resource>'
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Triggers.upsert'
-  name: upsert
+  name: upsert(TriggerDefinition, RequestOptions)
   children: []
   type: method
   langs:
@@ -139,21 +163,25 @@ items:
   package: '@azure/cosmos'
 references:
 - uid: '@azure/cosmos.Container'
+  name: Container
   spec.typeScript:
   - name: Container
     fullName: Container
     uid: '@azure/cosmos.Container'
 - uid: '@azure/cosmos.TriggerDefinition'
+  name: TriggerDefinition
   spec.typeScript:
   - name: TriggerDefinition
     fullName: TriggerDefinition
     uid: '@azure/cosmos.TriggerDefinition'
 - uid: '@azure/cosmos.RequestOptions'
+  name: RequestOptions
   spec.typeScript:
   - name: RequestOptions
     fullName: RequestOptions
     uid: '@azure/cosmos.RequestOptions'
 - uid: Promise<@azure/cosmos.TriggerResponse>
+  name: TriggerResponse>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -163,16 +191,35 @@ references:
   - name: '>'
     fullName: '>'
 - uid: '@azure/cosmos.SqlQuerySpec'
+  name: SqlQuerySpec
   spec.typeScript:
   - name: SqlQuerySpec
     fullName: SqlQuerySpec
     uid: '@azure/cosmos.SqlQuerySpec'
 - uid: '@azure/cosmos.FeedOptions'
+  name: FeedOptions
   spec.typeScript:
   - name: FeedOptions
     fullName: FeedOptions
     uid: '@azure/cosmos.FeedOptions'
-- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.TriggerDefinition>'
+- uid: '@azure/cosmos.QueryIterator<any>'
+  name: QueryIterator<any>
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <any>
+    fullName: <any>
+- uid: '@azure/cosmos.QueryIterator<T>'
+  name: QueryIterator<T>
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <T>
+    fullName: <T>
+- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.TriggerDefinition & @azure/cosmos.Resource>'
+  name: Resource>
   spec.typeScript:
   - name: QueryIterator
     fullName: QueryIterator
@@ -182,5 +229,10 @@ references:
   - name: TriggerDefinition
     fullName: TriggerDefinition
     uid: '@azure/cosmos.TriggerDefinition'
+  - name: " & "
+    fullName: " & "
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/cosmos.Resource'
   - name: '>'
     fullName: '>'

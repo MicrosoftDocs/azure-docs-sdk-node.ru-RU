@@ -1,0 +1,206 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 779ee5e566ab6a1ff0f8ca534626ea75dc3211a9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52021768"
+items:
+- uid: ms-rest.WebResource
+  name: WebResource
+  fullName: WebResource
+  children:
+  - ms-rest.WebResource.body
+  - ms-rest.WebResource.formData
+  - ms-rest.WebResource.headers
+  - ms-rest.WebResource.method
+  - ms-rest.WebResource.pipeInput
+  - ms-rest.WebResource.prepare
+  - ms-rest.WebResource.query
+  - ms-rest.WebResource.rawResponse
+  - ms-rest.WebResource.url
+  - ms-rest.WebResource.validateRequestProperties
+  langs:
+  - typeScript
+  type: class
+  summary: Этот класс предоставляет абстракцию вызов REST, когда библиотека / независимой от реализации и упаковки необходимые свойства для инициирования запроса.
+  package: ms-rest
+- uid: ms-rest.WebResource.body
+  name: body
+  fullName: body
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{все} [текст] Текст запроса'
+  optional: true
+  syntax:
+    content: 'public body?: any'
+    return:
+      type:
+      - any
+  package: ms-rest
+- uid: ms-rest.WebResource.formData
+  name: formData
+  fullName: formData
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{все} [formData] Параметры данных.'
+  optional: true
+  syntax:
+    content: 'public formData?: any'
+    return:
+      type:
+      - any
+  package: ms-rest
+- uid: ms-rest.WebResource.headers
+  name: headers
+  fullName: headers
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Доступ к заголовкам необработанные запросы для запросов. Полезно, когда необходимо задать заголовок при каждом запросе (как в объект учетных данных), где метод подготовки не слишком много работы.
+  syntax:
+    content: 'public headers: [key: string]: string'
+    return:
+      type:
+      - '[key: string]: string'
+  package: ms-rest
+- uid: ms-rest.WebResource.method
+  name: method
+  fullName: method
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: метод {строка} метод запроса
+  syntax:
+    content: 'public method: HttpMethods'
+    return:
+      type:
+      - ms-rest.HttpMethods
+  package: ms-rest
+- uid: ms-rest.WebResource.pipeInput
+  name: pipeInput(stream.Readable, stream.Writable)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Подключите заданного входного потока в поток назначения, если метод WebResource требует текст запроса и уже не имеет тела.
+  syntax:
+    content: 'function pipeInput(inputStream: stream.Readable, destStream: stream.Writable)'
+    parameters:
+    - id: inputStream
+      type:
+      - stream.Readable
+      description: канал из потока
+    - id: destStream
+      type:
+      - stream.Writable
+      description: ''
+    return:
+      type:
+      - stream.Writable
+  package: ms-rest
+- uid: ms-rest.WebResource.prepare
+  name: prepare(PathTemplateBasedRequestPrepareOptions | UrlBasedRequestPrepareOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Готовит запрос.
+  syntax:
+    content: 'function prepare(options?: PathTemplateBasedRequestPrepareOptions | UrlBasedRequestPrepareOptions)'
+    parameters:
+    - id: options
+      type:
+      - ms-rest.PathTemplateBasedRequestPrepareOptions | ms-rest.UrlBasedRequestPrepareOptions
+      description: >
+        Параметры запроса, которые должны предоставляться для отправки запроса успешно
+      optional: true
+    return:
+      type:
+      - ms-rest.WebResource
+  package: ms-rest
+- uid: ms-rest.WebResource.query
+  name: query
+  fullName: query
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{все} [запрос] Параметры запроса'
+  optional: true
+  syntax:
+    content: 'public query?: [key: string]: any'
+    return:
+      type:
+      - '[key: string]: any'
+  package: ms-rest
+- uid: ms-rest.WebResource.rawResponse
+  name: rawResponse
+  fullName: rawResponse
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Логическое} rawResponse указывает ли клиент должен вернуть ответ в виде — является. (Полезно для сценариев потоковой передачи).'
+  optional: true
+  syntax:
+    content: 'public rawResponse?: boolean'
+    return:
+      type:
+      - boolean
+  package: ms-rest
+- uid: ms-rest.WebResource.url
+  name: url
+  fullName: url
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Строка} URL-адрес запроса URL-адрес'
+  syntax:
+    content: 'public url: string'
+    return:
+      type:
+      - string
+  package: ms-rest
+- uid: ms-rest.WebResource.validateRequestProperties
+  name: validateRequestProperties()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Проверяет, что определенные обязательные свойства, такие как метод, URL-адрес, заголовки [«Content-Type»], [«принять язык»]. Он будет выдавать ошибку, если одно из свойств упомянутое выше не определены.
+  syntax:
+    content: function validateRequestProperties()
+    parameters: []
+  package: ms-rest
+references:
+- uid: ms-rest.HttpMethods
+  name: HttpMethods
+  spec.typeScript:
+  - name: HttpMethods
+    fullName: HttpMethods
+    uid: ms-rest.HttpMethods
+- uid: ms-rest.PathTemplateBasedRequestPrepareOptions | ms-rest.UrlBasedRequestPrepareOptions
+  name: UrlBasedRequestPrepareOptions
+  spec.typeScript:
+  - name: PathTemplateBasedRequestPrepareOptions
+    fullName: PathTemplateBasedRequestPrepareOptions
+    uid: ms-rest.PathTemplateBasedRequestPrepareOptions
+  - name: " | "
+    fullName: " | "
+  - name: UrlBasedRequestPrepareOptions
+    fullName: UrlBasedRequestPrepareOptions
+    uid: ms-rest.UrlBasedRequestPrepareOptions
+- uid: ms-rest.WebResource
+  name: WebResource
+  spec.typeScript:
+  - name: WebResource
+    fullName: WebResource
+    uid: ms-rest.WebResource

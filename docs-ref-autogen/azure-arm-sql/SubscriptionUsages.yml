@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 7492c657554d08ee1236f448a68a675c3c78a0d4
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: abc75f4ac9f7fdfec8d8800b5104bc1f5efc20e6
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41689293"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52169079"
 items:
 - uid: azure-arm-sql.SubscriptionUsages
   name: SubscriptionUsages
@@ -15,11 +15,11 @@ items:
   - azure-arm-sql.SubscriptionUsages.get_1
   - azure-arm-sql.SubscriptionUsages.getWithHttpOperationResponse
   - azure-arm-sql.SubscriptionUsages.listByLocation
-  - azure-arm-sql.SubscriptionUsages.listByLocation_1
   - azure-arm-sql.SubscriptionUsages.listByLocation_2
+  - azure-arm-sql.SubscriptionUsages.listByLocation_1
   - azure-arm-sql.SubscriptionUsages.listByLocationNext
-  - azure-arm-sql.SubscriptionUsages.listByLocationNext_1
   - azure-arm-sql.SubscriptionUsages.listByLocationNext_2
+  - azure-arm-sql.SubscriptionUsages.listByLocationNext_1
   - azure-arm-sql.SubscriptionUsages.listByLocationNextWithHttpOperationResponse
   - azure-arm-sql.SubscriptionUsages.listByLocationWithHttpOperationResponse
   langs:
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.get
-  name: get
+  name: get(string, string, Object)
   children: []
   type: method
   langs:
@@ -57,7 +57,7 @@ items:
       - Promise<azure-arm-sql.SubscriptionUsage>
   package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.get_2
-  name: get
+  name: get(string, string, Object, ServiceCallback<SubscriptionUsage>)
   children: []
   type: method
   langs:
@@ -87,7 +87,7 @@ items:
       - Promise<azure-arm-sql.SubscriptionUsage>
   package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.get_1
-  name: get
+  name: get(string, string, ServiceCallback<SubscriptionUsage>)
   children: []
   type: method
   langs:
@@ -113,7 +113,7 @@ items:
       - Promise<azure-arm-sql.SubscriptionUsage>
   package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -142,7 +142,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.SubscriptionUsage>>
   package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.listByLocation
-  name: listByLocation
+  name: listByLocation(string, Object)
   children: []
   type: method
   langs:
@@ -165,30 +165,8 @@ items:
       type:
       - Promise<azure-arm-sql.SubscriptionUsageListResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.SubscriptionUsages.listByLocation_1
-  name: listByLocation
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает все показатели использования подписки в заданном расположении.
-  syntax:
-    content: 'function listByLocation(locationName: string, callback: ServiceCallback<SubscriptionUsageListResult>)'
-    parameters:
-    - id: locationName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.SubscriptionUsageListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.SubscriptionUsageListResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.listByLocation_2
-  name: listByLocation
+  name: listByLocation(string, Object, ServiceCallback<SubscriptionUsageListResult>)
   children: []
   type: method
   langs:
@@ -213,8 +191,30 @@ items:
       type:
       - Promise<azure-arm-sql.SubscriptionUsageListResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.SubscriptionUsages.listByLocation_1
+  name: listByLocation(string, ServiceCallback<SubscriptionUsageListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все показатели использования подписки в заданном расположении.
+  syntax:
+    content: 'function listByLocation(locationName: string, callback: ServiceCallback<SubscriptionUsageListResult>)'
+    parameters:
+    - id: locationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.SubscriptionUsageListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.SubscriptionUsageListResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.listByLocationNext
-  name: listByLocationNext
+  name: listByLocationNext(string, Object)
   children: []
   type: method
   langs:
@@ -237,30 +237,8 @@ items:
       type:
       - Promise<azure-arm-sql.SubscriptionUsageListResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.SubscriptionUsages.listByLocationNext_1
-  name: listByLocationNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает все показатели использования подписки в заданном расположении.
-  syntax:
-    content: 'function listByLocationNext(nextPageLink: string, callback: ServiceCallback<SubscriptionUsageListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.SubscriptionUsageListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.SubscriptionUsageListResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.listByLocationNext_2
-  name: listByLocationNext
+  name: listByLocationNext(string, Object, ServiceCallback<SubscriptionUsageListResult>)
   children: []
   type: method
   langs:
@@ -285,8 +263,30 @@ items:
       type:
       - Promise<azure-arm-sql.SubscriptionUsageListResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.SubscriptionUsages.listByLocationNext_1
+  name: listByLocationNext(string, ServiceCallback<SubscriptionUsageListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все показатели использования подписки в заданном расположении.
+  syntax:
+    content: 'function listByLocationNext(nextPageLink: string, callback: ServiceCallback<SubscriptionUsageListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.SubscriptionUsageListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.SubscriptionUsageListResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.listByLocationNextWithHttpOperationResponse
-  name: listByLocationNextWithHttpOperationResponse
+  name: listByLocationNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -310,7 +310,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.SubscriptionUsageListResult>>
   package: azure-arm-sql
 - uid: azure-arm-sql.SubscriptionUsages.listByLocationWithHttpOperationResponse
-  name: listByLocationWithHttpOperationResponse
+  name: listByLocationWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -335,6 +335,7 @@ items:
   package: azure-arm-sql
 references:
 - uid: Promise<azure-arm-sql.SubscriptionUsage>
+  name: SubscriptionUsage>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -344,6 +345,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.SubscriptionUsage>
+  name: SubscriptionUsage>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -353,6 +355,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.SubscriptionUsage>>
+  name: SubscriptionUsage>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -362,6 +365,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-sql.SubscriptionUsageListResult>
+  name: SubscriptionUsageListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -371,6 +375,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.SubscriptionUsageListResult>
+  name: SubscriptionUsageListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -380,6 +385,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.SubscriptionUsageListResult>>
+  name: SubscriptionUsageListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
