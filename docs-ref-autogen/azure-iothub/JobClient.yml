@@ -1,23 +1,35 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 7cb17321fac415a5f2a5a07d198cddac0ebcfde8
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 123d93a49cd2b4774f4e87edf8520b6f8fb5b8a4
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41685737"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53658908"
 items:
 - uid: azure-iothub.JobClient
   name: JobClient
   fullName: JobClient
   children:
+  - azure-iothub.JobClient.cancelJob_1
   - azure-iothub.JobClient.cancelJob
   - azure-iothub.JobClient.createQuery
   - azure-iothub.JobClient.fromConnectionString
   - azure-iothub.JobClient.fromSharedAccessSignature
+  - azure-iothub.JobClient.getJob_1
   - azure-iothub.JobClient.getJob
   - azure-iothub.JobClient.JobCallback
+  - azure-iothub.JobClient.scheduleDeviceMethod_5
+  - azure-iothub.JobClient.scheduleDeviceMethod_4
+  - azure-iothub.JobClient.scheduleDeviceMethod_3
   - azure-iothub.JobClient.scheduleDeviceMethod
+  - azure-iothub.JobClient.scheduleDeviceMethod_1
+  - azure-iothub.JobClient.scheduleDeviceMethod_2
+  - azure-iothub.JobClient.scheduleTwinUpdate_5
+  - azure-iothub.JobClient.scheduleTwinUpdate_4
+  - azure-iothub.JobClient.scheduleTwinUpdate_3
   - azure-iothub.JobClient.scheduleTwinUpdate
+  - azure-iothub.JobClient.scheduleTwinUpdate_1
+  - azure-iothub.JobClient.scheduleTwinUpdate_2
   langs:
   - typeScript
   type: class
@@ -28,15 +40,33 @@ items:
 
     Пакет SDK пользователи должны создавать <xref:azure-iothub.JobClient> экземпляры с помощью методов фабрики <xref:azure-iothub.JobClient.fromConnectionString> и <xref:azure-iothub.JobClient.fromSharedAccessSignature>.
   package: azure-iothub
-- uid: azure-iothub.JobClient.cancelJob
-  name: cancelJob
+- uid: azure-iothub.JobClient.cancelJob_1
+  name: cancelJob(string | number)
   children: []
   type: method
   langs:
   - typeScript
   summary: Отменяет существующее задание.
   syntax:
-    content: 'function cancelJob(jobId: string | number, done: JobClient.JobCallback)'
+    content: 'function cancelJob(jobId: string | number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.cancelJob
+  name: cancelJob(string | number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Отменяет существующее задание.
+  syntax:
+    content: 'function cancelJob(jobId: string | number, done: TripleValueCallback<any, any>)'
     parameters:
     - id: jobId
       type:
@@ -44,12 +74,11 @@ items:
       description: Идентификатор существующего задания.
     - id: done
       type:
-      - azure-iothub.JobClient.JobCallback
-      description: >
-        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: объект ошибки (может иметь значение null), объект задания и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
+      - TripleValueCallback<any, any>
+      description: ''
   package: azure-iothub
 - uid: azure-iothub.JobClient.createQuery
-  name: createQuery
+  name: createQuery(JobType, JobStatus, number)
   children: []
   type: method
   langs:
@@ -79,7 +108,7 @@ items:
       - azure-iothub.Query
   package: azure-iothub
 - uid: azure-iothub.JobClient.fromConnectionString
-  name: fromConnectionString
+  name: fromConnectionString(string)
   children: []
   type: method
   langs:
@@ -98,7 +127,7 @@ items:
       - azure-iothub.JobClient
   package: azure-iothub
 - uid: azure-iothub.JobClient.fromSharedAccessSignature
-  name: fromSharedAccessSignature
+  name: fromSharedAccessSignature(string)
   children: []
   type: method
   langs:
@@ -116,15 +145,33 @@ items:
       type:
       - azure-iothub.JobClient
   package: azure-iothub
-- uid: azure-iothub.JobClient.getJob
-  name: getJob
+- uid: azure-iothub.JobClient.getJob_1
+  name: getJob(string | number)
   children: []
   type: method
   langs:
   - typeScript
   summary: Запрашивает информацию о существующем задании.
   syntax:
-    content: 'function getJob(jobId: string | number, done: JobClient.JobCallback)'
+    content: 'function getJob(jobId: string | number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.getJob
+  name: getJob(string | number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запрашивает информацию о существующем задании.
+  syntax:
+    content: 'function getJob(jobId: string | number, done: TripleValueCallback<any, any>)'
     parameters:
     - id: jobId
       type:
@@ -132,28 +179,108 @@ items:
       description: Идентификатор существующего задания.
     - id: done
       type:
-      - azure-iothub.JobClient.JobCallback
-      description: >
-        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: объект ошибки (может иметь значение null), объект задания и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
+      - TripleValueCallback<any, any>
+      description: ''
   package: azure-iothub
-- uid: azure-iothub.JobClient.JobCallback
-  name: JobCallback
-  fullName: JobCallback
-  children: []
-  langs:
-  - typeScript
-  type: class
-  summary: "\n"
-  package: azure-iothub
-- uid: azure-iothub.JobClient.scheduleDeviceMethod
-  name: scheduleDeviceMethod
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_5
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams)
   children: []
   type: method
   langs:
   - typeScript
   summary: Планирует задание, которое будет выполняться метода устройства в наборе устройств.
   syntax:
-    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_4
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Планирует задание, которое будет выполняться метода устройства в наборе устройств.
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_3
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Планирует задание, которое будет выполняться метода устройства в наборе устройств.
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, maxExecutionTimeInSeconds: number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Планирует задание, которое будет выполняться метода устройства в наборе устройств.
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, maxExecutionTimeInSeconds: number, done: TripleValueCallback<any, any>)'
     parameters:
     - id: jobId
       type:
@@ -174,30 +301,175 @@ items:
         -responseTimeoutInSeconds [optional] количество секунд, центр Интернета вещей должен ожидать устройства
     - id: jobStartTime
       type:
-      - Date | azure-iothub.JobClient.JobCallback
-      description: Время, по которому должно запуститься задание
-      optional: true
+      - Date
+      description: ''
     - id: maxExecutionTimeInSeconds
       type:
-      - number | azure-iothub.JobClient.JobCallback
-      description: Задано максимальное время для этого задания для выполнения в секундах.
-      optional: true
+      - number
+      description: ''
     - id: done
       type:
-      - azure-iothub.JobClient.JobCallback
-      description: >
-        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: объект ошибки (может иметь значение null), объект задания и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
-      optional: true
+      - TripleValueCallback<any, any>
+      description: ''
   package: azure-iothub
-- uid: azure-iothub.JobClient.scheduleTwinUpdate
-  name: scheduleTwinUpdate
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_1
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, Date, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Планирует задание, которое будет выполняться метода устройства в наборе устройств.
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, jobStartTime: Date, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleDeviceMethod_2
+  name: scheduleDeviceMethod(string | number, string, DeviceMethodParams, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Планирует задание, которое будет выполняться метода устройства в наборе устройств.
+  syntax:
+    content: 'function scheduleDeviceMethod(jobId: string | number, queryCondition: string, methodParams: DeviceMethodParams, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: methodParams
+      type:
+      - azure-iothub.DeviceMethodParams
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_5
+  name: scheduleTwinUpdate(string | number, string, any)
   children: []
   type: method
   langs:
   - typeScript
   summary: Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.
   syntax:
-    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime?: Date | JobClient.JobCallback, maxExecutionTimeInSeconds?: number | JobClient.JobCallback, done?: JobClient.JobCallback)'
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_4
+  name: scheduleTwinUpdate(string | number, string, any, Date)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_3
+  name: scheduleTwinUpdate(string | number, string, any, Date, number)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, maxExecutionTimeInSeconds?: number)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: maxExecutionTimeInSeconds
+      type:
+      - number
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-iothub.JobStatusResponse>
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate
+  name: scheduleTwinUpdate(string | number, string, any, Date, number, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, maxExecutionTimeInSeconds: number, done: TripleValueCallback<any, any>)'
     parameters:
     - id: jobId
       type:
@@ -213,63 +485,115 @@ items:
       description: Исправление двойника, должны быть применены к двойников.
     - id: jobStartTime
       type:
-      - Date | azure-iothub.JobClient.JobCallback
-      description: Время, по которому должно запуститься задание
-      optional: true
+      - Date
+      description: ''
     - id: maxExecutionTimeInSeconds
       type:
-      - number | azure-iothub.JobClient.JobCallback
-      description: Задано максимальное время для этого задания для выполнения в секундах.
-      optional: true
+      - number
+      description: ''
     - id: done
       type:
-      - azure-iothub.JobClient.JobCallback
-      description: >
-        Функция, вызываемая при завершении операции. `done` будет вызван с тремя аргументами: объект ошибки (может иметь значение null), объект задания и объект ответа на уровне транспорта, полезно для отладки или ведения журнала.
-      optional: true
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_1
+  name: scheduleTwinUpdate(string | number, string, any, Date, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, jobStartTime: Date, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: jobStartTime
+      type:
+      - Date
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
+  package: azure-iothub
+- uid: azure-iothub.JobClient.scheduleTwinUpdate_2
+  name: scheduleTwinUpdate(string | number, string, any, TripleValueCallback<any, any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запланируйте задание, которое обновит набор двойников с улучшением, предоставлены в качестве параметра.
+  syntax:
+    content: 'function scheduleTwinUpdate(jobId: string | number, queryCondition: string, patch: any, done: TripleValueCallback<any, any>)'
+    parameters:
+    - id: jobId
+      type:
+      - string | number
+      description: ''
+    - id: queryCondition
+      type:
+      - string
+      description: ''
+    - id: patch
+      type:
+      - any
+      description: ''
+    - id: done
+      type:
+      - TripleValueCallback<any, any>
+      description: ''
   package: azure-iothub
 references:
-- uid: azure-iothub.JobClient.JobCallback
+- uid: Promise<azure-iothub.JobStatusResponse>
+  name: JobStatusResponse>
   spec.typeScript:
-  - name: JobCallback
-    fullName: JobCallback
-    uid: azure-iothub.JobClient.JobCallback
+  - name: Promise<
+    fullName: Promise<
+  - name: JobStatusResponse
+    fullName: JobStatusResponse
+    uid: azure-iothub.JobStatusResponse
+  - name: '>'
+    fullName: '>'
 - uid: azure-iothub.JobType
+  name: JobType
   spec.typeScript:
   - name: JobType
     fullName: JobType
     uid: azure-iothub.JobType
 - uid: azure-iothub.JobStatus
+  name: JobStatus
   spec.typeScript:
   - name: JobStatus
     fullName: JobStatus
     uid: azure-iothub.JobStatus
 - uid: azure-iothub.Query
+  name: Query
   spec.typeScript:
   - name: Query
     fullName: Query
     uid: azure-iothub.Query
 - uid: azure-iothub.DeviceMethodParams
+  name: DeviceMethodParams
   spec.typeScript:
   - name: DeviceMethodParams
     fullName: DeviceMethodParams
     uid: azure-iothub.DeviceMethodParams
-- uid: Date | azure-iothub.JobClient.JobCallback
-  spec.typeScript:
-  - name: 'Date | '
-    fullName: 'Date | '
-  - name: JobCallback
-    fullName: JobCallback
-    uid: azure-iothub.JobClient.JobCallback
-- uid: number | azure-iothub.JobClient.JobCallback
-  spec.typeScript:
-  - name: 'number | '
-    fullName: 'number | '
-  - name: JobCallback
-    fullName: JobCallback
-    uid: azure-iothub.JobClient.JobCallback
 - uid: azure-iothub.JobClient
+  name: JobClient
   spec.typeScript:
   - name: JobClient
     fullName: JobClient
     uid: azure-iothub.JobClient
+- uid: azure-iothub.JobClient.JobCallback
+  name: JobCallback

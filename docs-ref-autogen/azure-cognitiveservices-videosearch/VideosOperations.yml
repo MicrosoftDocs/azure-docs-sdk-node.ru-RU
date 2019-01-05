@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 566041363e79b77c3c72f59f7587354442763438
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: b73cf65fda78d39d87d4f806b98e3d43b64d1e24
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41687363"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52169669"
 items:
 - uid: azure-cognitiveservices-videosearch.VideosOperations
   name: VideosOperations
@@ -15,12 +15,12 @@ items:
   - azure-cognitiveservices-videosearch.VideosOperations.details_1
   - azure-cognitiveservices-videosearch.VideosOperations.detailsWithHttpOperationResponse
   - azure-cognitiveservices-videosearch.VideosOperations.search
-  - azure-cognitiveservices-videosearch.VideosOperations.search_1
   - azure-cognitiveservices-videosearch.VideosOperations.search_2
+  - azure-cognitiveservices-videosearch.VideosOperations.search_1
   - azure-cognitiveservices-videosearch.VideosOperations.searchWithHttpOperationResponse
   - azure-cognitiveservices-videosearch.VideosOperations.trending
-  - azure-cognitiveservices-videosearch.VideosOperations.trending_1
   - azure-cognitiveservices-videosearch.VideosOperations.trending_2
+  - azure-cognitiveservices-videosearch.VideosOperations.trending_1
   - azure-cognitiveservices-videosearch.VideosOperations.trendingWithHttpOperationResponse
   langs:
   - typeScript
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.details
-  name: details
+  name: details(string, Object)
   children: []
   type: method
   langs:
@@ -52,7 +52,7 @@ items:
       - Promise<azure-cognitiveservices-videosearch.VideoDetails>
   package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.details_2
-  name: details
+  name: details(string, Object, ServiceCallback<VideoDetails>)
   children: []
   type: method
   langs:
@@ -78,7 +78,7 @@ items:
       - Promise<azure-cognitiveservices-videosearch.VideoDetails>
   package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.details_1
-  name: details
+  name: details(string, ServiceCallback<VideoDetails>)
   children: []
   type: method
   langs:
@@ -100,7 +100,7 @@ items:
       - Promise<azure-cognitiveservices-videosearch.VideoDetails>
   package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.detailsWithHttpOperationResponse
-  name: detailsWithHttpOperationResponse
+  name: detailsWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -124,7 +124,7 @@ items:
       - Promise<HttpOperationResponse<azure-cognitiveservices-videosearch.VideoDetails>>
   package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.search
-  name: search
+  name: search(string, Object)
   children: []
   type: method
   langs:
@@ -147,30 +147,8 @@ items:
       type:
       - Promise<azure-cognitiveservices-videosearch.Videos>
   package: azure-cognitiveservices-videosearch
-- uid: azure-cognitiveservices-videosearch.VideosOperations.search_1
-  name: search
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function search(query: string, callback: ServiceCallback<Videos>)'
-    parameters:
-    - id: query
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-videosearch.Videos>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-videosearch.Videos>
-  package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.search_2
-  name: search
+  name: search(string, Object, ServiceCallback<Videos>)
   children: []
   type: method
   langs:
@@ -195,8 +173,30 @@ items:
       type:
       - Promise<azure-cognitiveservices-videosearch.Videos>
   package: azure-cognitiveservices-videosearch
+- uid: azure-cognitiveservices-videosearch.VideosOperations.search_1
+  name: search(string, ServiceCallback<Videos>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function search(query: string, callback: ServiceCallback<Videos>)'
+    parameters:
+    - id: query
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-videosearch.Videos>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-videosearch.Videos>
+  package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.searchWithHttpOperationResponse
-  name: searchWithHttpOperationResponse
+  name: searchWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -220,7 +220,7 @@ items:
       - Promise<HttpOperationResponse<azure-cognitiveservices-videosearch.Videos>>
   package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.trending
-  name: trending
+  name: trending(Object)
   children: []
   type: method
   langs:
@@ -238,26 +238,8 @@ items:
       type:
       - Promise<azure-cognitiveservices-videosearch.TrendingVideos>
   package: azure-cognitiveservices-videosearch
-- uid: azure-cognitiveservices-videosearch.VideosOperations.trending_1
-  name: trending
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function trending(callback: ServiceCallback<TrendingVideos>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-videosearch.TrendingVideos>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-videosearch.TrendingVideos>
-  package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.trending_2
-  name: trending
+  name: trending(Object, ServiceCallback<TrendingVideos>)
   children: []
   type: method
   langs:
@@ -278,8 +260,26 @@ items:
       type:
       - Promise<azure-cognitiveservices-videosearch.TrendingVideos>
   package: azure-cognitiveservices-videosearch
+- uid: azure-cognitiveservices-videosearch.VideosOperations.trending_1
+  name: trending(ServiceCallback<TrendingVideos>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function trending(callback: ServiceCallback<TrendingVideos>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-videosearch.TrendingVideos>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-videosearch.TrendingVideos>
+  package: azure-cognitiveservices-videosearch
 - uid: azure-cognitiveservices-videosearch.VideosOperations.trendingWithHttpOperationResponse
-  name: trendingWithHttpOperationResponse
+  name: trendingWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -299,6 +299,7 @@ items:
   package: azure-cognitiveservices-videosearch
 references:
 - uid: Promise<azure-cognitiveservices-videosearch.VideoDetails>
+  name: VideoDetails>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -308,6 +309,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-cognitiveservices-videosearch.VideoDetails>
+  name: VideoDetails>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -317,6 +319,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-cognitiveservices-videosearch.VideoDetails>>
+  name: VideoDetails>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -326,6 +329,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-cognitiveservices-videosearch.Videos>
+  name: Videos>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -335,6 +339,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-cognitiveservices-videosearch.Videos>
+  name: Videos>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -344,6 +349,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-cognitiveservices-videosearch.Videos>>
+  name: Videos>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -353,6 +359,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-cognitiveservices-videosearch.TrendingVideos>
+  name: TrendingVideos>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -362,6 +369,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-cognitiveservices-videosearch.TrendingVideos>
+  name: TrendingVideos>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -371,6 +379,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-cognitiveservices-videosearch.TrendingVideos>>
+  name: TrendingVideos>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

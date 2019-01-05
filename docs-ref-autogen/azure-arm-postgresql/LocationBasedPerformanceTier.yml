@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: ab56fc128f6f7bab51e1b4fadfaf7e88f99d5980
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 28a3e692e01029150b650466ec0158333b476821
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41698261"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52154039"
 items:
 - uid: azure-arm-postgresql.LocationBasedPerformanceTier
   name: LocationBasedPerformanceTier
   fullName: LocationBasedPerformanceTier
   children:
   - azure-arm-postgresql.LocationBasedPerformanceTier.list
-  - azure-arm-postgresql.LocationBasedPerformanceTier.list_1
   - azure-arm-postgresql.LocationBasedPerformanceTier.list_2
+  - azure-arm-postgresql.LocationBasedPerformanceTier.list_1
   - azure-arm-postgresql.LocationBasedPerformanceTier.listWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-postgresql
 - uid: azure-arm-postgresql.LocationBasedPerformanceTier.list
-  name: list
+  name: list(string, Object)
   children: []
   type: method
   langs:
@@ -43,30 +43,8 @@ items:
       type:
       - Promise<azure-arm-postgresql.PerformanceTierListResult>
   package: azure-arm-postgresql
-- uid: azure-arm-postgresql.LocationBasedPerformanceTier.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Вывод списка всех уровнях производительности в указанном расположении в рамках данной подписки.
-  syntax:
-    content: 'function list(locationName: string, callback: ServiceCallback<PerformanceTierListResult>)'
-    parameters:
-    - id: locationName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-postgresql.PerformanceTierListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-postgresql.PerformanceTierListResult>
-  package: azure-arm-postgresql
 - uid: azure-arm-postgresql.LocationBasedPerformanceTier.list_2
-  name: list
+  name: list(string, Object, ServiceCallback<PerformanceTierListResult>)
   children: []
   type: method
   langs:
@@ -91,8 +69,30 @@ items:
       type:
       - Promise<azure-arm-postgresql.PerformanceTierListResult>
   package: azure-arm-postgresql
+- uid: azure-arm-postgresql.LocationBasedPerformanceTier.list_1
+  name: list(string, ServiceCallback<PerformanceTierListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Вывод списка всех уровнях производительности в указанном расположении в рамках данной подписки.
+  syntax:
+    content: 'function list(locationName: string, callback: ServiceCallback<PerformanceTierListResult>)'
+    parameters:
+    - id: locationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-postgresql.PerformanceTierListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-postgresql.PerformanceTierListResult>
+  package: azure-arm-postgresql
 - uid: azure-arm-postgresql.LocationBasedPerformanceTier.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -117,6 +117,7 @@ items:
   package: azure-arm-postgresql
 references:
 - uid: Promise<azure-arm-postgresql.PerformanceTierListResult>
+  name: PerformanceTierListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -126,6 +127,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-postgresql.PerformanceTierListResult>
+  name: PerformanceTierListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -135,6 +137,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-postgresql.PerformanceTierListResult>>
+  name: PerformanceTierListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

@@ -1,0 +1,293 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 446c9b90175cf1963ec14f6f23a4852439598867
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53659569"
+items:
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer
+  name: TranslationRecognizer
+  fullName: TranslationRecognizer
+  children:
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.authorizationToken
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.canceled
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.properties
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognized
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizeOnceAsync
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizing
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechRecognitionLanguage
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.stopContinuousRecognitionAsync
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.synthesizing
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.targetLanguages
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.constructor
+  - microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.voiceName
+  langs:
+  - typeScript
+  type: class
+  summary: Распознаватель перевода
+  extends:
+    name: microsoft-cognitiveservices-speech-sdk.Recognizer
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.authorizationToken
+  name: authorizationToken
+  fullName: authorizationToken
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Задает токен авторизации, используемый для взаимодействия со службой.
+  syntax:
+    content: 'public authorizationToken: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.canceled
+  name: canceled
+  fullName: canceled
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Отменить событие сигнализирует произошла ошибка во время распознавания.
+  syntax:
+    content: 'public canceled: (sender: TranslationRecognizer, event: TranslationRecognitionCanceledEventArgs) => void'
+    return:
+      type:
+      - '(sender: TranslationRecognizer, event: TranslationRecognitionCanceledEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.close
+  name: close()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Закрывает все внешние ресурсы, занятые экземплярами этого класса.
+  syntax:
+    content: function close()
+    parameters: []
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.properties
+  name: properties
+  fullName: properties
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Коллекция свойств и их значений, определенных для этого TranslationRecognizer.
+  syntax:
+    content: 'public properties: PropertyCollection'
+    return:
+      type:
+      - microsoft-cognitiveservices-speech-sdk.PropertyCollection
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognized
+  name: recognized
+  fullName: recognized
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Сообщает, что получен результат распознавания окончательный удалось распознать событие.
+  syntax:
+    content: 'public recognized: (sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+    return:
+      type:
+      - '(sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizeOnceAsync
+  name: 'recognizeOnceAsync((e: TranslationRecognitionResult) => void, (e: string) => void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Запускает распознавания и перевода, а останавливается после первого utterance распознается.
+
+    Задача возвращает переведенный текст как результат.
+
+    Примечание: recognizeOnceAsync возвращает при первом utterance был распознан, так что это suitableonly для распознавания единый однократного выполнения как команды или запроса. Для распознавания выполняющейся длительное время используйте startContinuousRecognitionAsync().
+  syntax:
+    content: 'function recognizeOnceAsync(cb?: (e: TranslationRecognitionResult) => void, err?: (e: string) => void)'
+    parameters:
+    - id: cb
+      type:
+      - '(e: TranslationRecognitionResult) => void'
+      description: Обратный вызов, который получен результат, после завершения перевода.
+      optional: true
+    - id: err
+      type:
+      - '(e: string) => void'
+      description: >
+        Обратный вызов вызывается в случае возникновения ошибки.
+      optional: true
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.recognizing
+  name: recognizing
+  fullName: recognizing
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Событие, распознавая сигналов, что получен результат промежуточного распознавания.
+  syntax:
+    content: 'public recognizing: (sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+    return:
+      type:
+      - '(sender: TranslationRecognizer, event: TranslationRecognitionEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.speechRecognitionLanguage
+  name: speechRecognitionLanguage
+  fullName: speechRecognitionLanguage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Получает имя языка, который был задан при создании распознавателя.
+  syntax:
+    content: 'public speechRecognitionLanguage: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.startContinuousRecognitionAsync
+  name: 'startContinuousRecognitionAsync(() => void, (e: string) => void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    Запускает распознавания и перевода, пока не будет вызван stopContinuousRecognitionAsync().
+
+    Пользователю необходимо подписаться на события для получения результатов перевода.
+  syntax:
+    content: 'function startContinuousRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+    parameters:
+    - id: cb
+      type:
+      - () => void
+      description: Обратный вызов, который получен перевод начата.
+      optional: true
+    - id: err
+      type:
+      - '(e: string) => void'
+      description: >
+        Обратный вызов вызывается в случае возникновения ошибки.
+      optional: true
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.stopContinuousRecognitionAsync
+  name: 'stopContinuousRecognitionAsync(() => void, (e: string) => void)'
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Останавливает непрерывные распознавания и перевода.
+  syntax:
+    content: 'function stopContinuousRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+    parameters:
+    - id: cb
+      type:
+      - () => void
+      description: Обратный вызов, который получен перевод был остановлен.
+      optional: true
+    - id: err
+      type:
+      - '(e: string) => void'
+      description: >
+        Обратный вызов вызывается в случае возникновения ошибки.
+      optional: true
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.synthesizing
+  name: synthesizing
+  fullName: synthesizing
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Событие, создав сигналов, что получен результат перевода синтеза.
+  syntax:
+    content: 'public synthesizing: (sender: TranslationRecognizer, event: TranslationSynthesisEventArgs) => void'
+    return:
+      type:
+      - '(sender: TranslationRecognizer, event: TranslationSynthesisEventArgs) => void'
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.targetLanguages
+  name: targetLanguages
+  fullName: targetLanguages
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Возвращает целевой язык для перевода, который были заданы при создании распознавателя.
+
+    Язык указывается в формате BCP-47. Перевод будет содержат переведенный текст для каждого языка.
+  syntax:
+    content: 'public targetLanguages: string[]'
+    return:
+      type:
+      - string[]
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.constructor
+  name: TranslationRecognizer(SpeechTranslationConfig, AudioConfig)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Инициализирует новый экземпляр класса TranslationRecognizer.
+  syntax:
+    content: 'new TranslationRecognizer(speechConfig: SpeechTranslationConfig, audioConfig?: AudioConfig)'
+    parameters:
+    - id: speechConfig
+      type:
+      - microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+      description: Набор свойств, чтобы настроить этот распознаватель.
+    - id: audioConfig
+      type:
+      - microsoft-cognitiveservices-speech-sdk.AudioConfig
+      description: >
+        Необязательная конфигурация аудио, связанный с распознавателя
+      optional: true
+  package: microsoft-cognitiveservices-speech-sdk
+- uid: microsoft-cognitiveservices-speech-sdk.TranslationRecognizer.voiceName
+  name: voiceName
+  fullName: voiceName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Получает имя голоса выходных данных.
+  syntax:
+    content: 'public voiceName: string'
+    return:
+      type:
+      - string
+  package: microsoft-cognitiveservices-speech-sdk
+references:
+- uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+  name: Recognizer
+  spec.typeScript:
+  - name: Recognizer
+    fullName: Recognizer
+    uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+- uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+  name: SpeechTranslationConfig
+  spec.typeScript:
+  - name: SpeechTranslationConfig
+    fullName: SpeechTranslationConfig
+    uid: microsoft-cognitiveservices-speech-sdk.SpeechTranslationConfig
+- uid: microsoft-cognitiveservices-speech-sdk.AudioConfig
+  name: AudioConfig
+  spec.typeScript:
+  - name: AudioConfig
+    fullName: AudioConfig
+    uid: microsoft-cognitiveservices-speech-sdk.AudioConfig
+- uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection
+  name: PropertyCollection
+  spec.typeScript:
+  - name: PropertyCollection
+    fullName: PropertyCollection
+    uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection

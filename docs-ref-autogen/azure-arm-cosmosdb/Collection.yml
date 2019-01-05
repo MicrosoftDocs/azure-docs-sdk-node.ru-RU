@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: cc1b4bedad612032f5bf91ff758fc651eb544a28
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: ba5f3e4ab4a1942af468bedb92c55c2c04b6c591
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41685623"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52155079"
 items:
 - uid: azure-arm-cosmosdb.Collection
   name: Collection
@@ -15,12 +15,12 @@ items:
   - azure-arm-cosmosdb.Collection.listMetricDefinitions_1
   - azure-arm-cosmosdb.Collection.listMetricDefinitionsWithHttpOperationResponse
   - azure-arm-cosmosdb.Collection.listMetrics
-  - azure-arm-cosmosdb.Collection.listMetrics_1
   - azure-arm-cosmosdb.Collection.listMetrics_2
+  - azure-arm-cosmosdb.Collection.listMetrics_1
   - azure-arm-cosmosdb.Collection.listMetricsWithHttpOperationResponse
   - azure-arm-cosmosdb.Collection.listUsages
-  - azure-arm-cosmosdb.Collection.listUsages_1
   - azure-arm-cosmosdb.Collection.listUsages_2
+  - azure-arm-cosmosdb.Collection.listUsages_1
   - azure-arm-cosmosdb.Collection.listUsagesWithHttpOperationResponse
   langs:
   - typeScript
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listMetricDefinitions
-  name: listMetricDefinitions
+  name: listMetricDefinitions(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -67,7 +67,7 @@ items:
       - Promise<azure-arm-cosmosdb.MetricDefinitionsListResult>
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listMetricDefinitions_2
-  name: listMetricDefinitions
+  name: listMetricDefinitions(string, string, string, string, Object, ServiceCallback<MetricDefinitionsListResult>)
   children: []
   type: method
   langs:
@@ -105,7 +105,7 @@ items:
       - Promise<azure-arm-cosmosdb.MetricDefinitionsListResult>
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listMetricDefinitions_1
-  name: listMetricDefinitions
+  name: listMetricDefinitions(string, string, string, string, ServiceCallback<MetricDefinitionsListResult>)
   children: []
   type: method
   langs:
@@ -139,7 +139,7 @@ items:
       - Promise<azure-arm-cosmosdb.MetricDefinitionsListResult>
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listMetricDefinitionsWithHttpOperationResponse
-  name: listMetricDefinitionsWithHttpOperationResponse
+  name: listMetricDefinitionsWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -178,7 +178,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricDefinitionsListResult>>
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listMetrics
-  name: listMetrics
+  name: listMetrics(string, string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -221,46 +221,8 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.MetricListResult>
   package: azure-arm-cosmosdb
-- uid: azure-arm-cosmosdb.Collection.listMetrics_1
-  name: listMetrics
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает метрики, определяется заданным фильтром для заданной базы данных учетной записи и коллекции.
-  syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, callback: ServiceCallback<MetricListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: accountName
-      type:
-      - string
-      description: ''
-    - id: databaseRid
-      type:
-      - string
-      description: ''
-    - id: collectionRid
-      type:
-      - string
-      description: ''
-    - id: filter
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cosmosdb.MetricListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cosmosdb.MetricListResult>
-  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listMetrics_2
-  name: listMetrics
+  name: listMetrics(string, string, string, string, string, Object, ServiceCallback<MetricListResult>)
   children: []
   type: method
   langs:
@@ -301,8 +263,46 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.MetricListResult>
   package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.Collection.listMetrics_1
+  name: listMetrics(string, string, string, string, string, ServiceCallback<MetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает метрики, определяется заданным фильтром для заданной базы данных учетной записи и коллекции.
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, callback: ServiceCallback<MetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.MetricListResult>
+  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listMetricsWithHttpOperationResponse
-  name: listMetricsWithHttpOperationResponse
+  name: listMetricsWithHttpOperationResponse(string, string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -346,7 +346,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricListResult>>
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listUsages
-  name: listUsages
+  name: listUsages(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -384,42 +384,8 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.UsagesResult>
   package: azure-arm-cosmosdb
-- uid: azure-arm-cosmosdb.Collection.listUsages_1
-  name: listUsages
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает варианты использования (самые последние данные в хранилище) для данной коллекции.
-  syntax:
-    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, callback: ServiceCallback<UsagesResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: accountName
-      type:
-      - string
-      description: ''
-    - id: databaseRid
-      type:
-      - string
-      description: ''
-    - id: collectionRid
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cosmosdb.UsagesResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cosmosdb.UsagesResult>
-  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listUsages_2
-  name: listUsages
+  name: listUsages(string, string, string, string, Object, ServiceCallback<UsagesResult>)
   children: []
   type: method
   langs:
@@ -456,8 +422,42 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.UsagesResult>
   package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.Collection.listUsages_1
+  name: listUsages(string, string, string, string, ServiceCallback<UsagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает варианты использования (самые последние данные в хранилище) для данной коллекции.
+  syntax:
+    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, callback: ServiceCallback<UsagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.UsagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.UsagesResult>
+  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.Collection.listUsagesWithHttpOperationResponse
-  name: listUsagesWithHttpOperationResponse
+  name: listUsagesWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -497,6 +497,7 @@ items:
   package: azure-arm-cosmosdb
 references:
 - uid: Promise<azure-arm-cosmosdb.MetricDefinitionsListResult>
+  name: MetricDefinitionsListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -506,6 +507,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-cosmosdb.MetricDefinitionsListResult>
+  name: MetricDefinitionsListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -515,6 +517,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricDefinitionsListResult>>
+  name: MetricDefinitionsListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -524,6 +527,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-cosmosdb.MetricListResult>
+  name: MetricListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -533,6 +537,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-cosmosdb.MetricListResult>
+  name: MetricListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -542,6 +547,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.MetricListResult>>
+  name: MetricListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -551,6 +557,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-cosmosdb.UsagesResult>
+  name: UsagesResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -560,6 +567,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-cosmosdb.UsagesResult>
+  name: UsagesResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -569,6 +577,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.UsagesResult>>
+  name: UsagesResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

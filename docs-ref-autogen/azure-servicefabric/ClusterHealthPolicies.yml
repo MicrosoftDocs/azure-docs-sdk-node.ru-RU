@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 2863767b51e05b4f83f88c017ce9104bf03a4a5b
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52035400"
+items:
+- uid: azure-servicefabric.ClusterHealthPolicies
+  name: ClusterHealthPolicies
+  fullName: ClusterHealthPolicies
+  children:
+  - azure-servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap
+  - azure-servicefabric.ClusterHealthPolicies.clusterHealthPolicy
+  langs:
+  - typeScript
+  type: interface
+  summary: Политики работоспособности для оценки работоспособности кластера.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap
+  name: applicationHealthPolicyMap
+  fullName: applicationHealthPolicyMap
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Определяет сопоставление, содержащее политики работоспособности конкретного приложения для разных приложений.
+
+    Каждая запись содержит ключ имя приложения и как значение, которое ApplicationHealthPolicy используемых для оценки работоспособности приложения.
+
+    Если приложение не указан в сопоставлении, оценка работоспособности приложения использует ApplicationHealthPolicy, найти в манифесте приложения или политики работоспособности приложения по умолчанию (если нет политики работоспособности, определенная в манифесте).
+
+    Сопоставление является пустым по умолчанию.
+  optional: true
+  syntax:
+    content: 'applicationHealthPolicyMap?: ApplicationHealthPolicyMapItem[]'
+    return:
+      type:
+      - azure-servicefabric.ApplicationHealthPolicyMapItem[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ClusterHealthPolicies.clusterHealthPolicy
+  name: clusterHealthPolicy
+  fullName: clusterHealthPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Определяет политику работоспособности, используемые для оценки работоспособности кластера или узла кластера.
+  optional: true
+  syntax:
+    content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+    return:
+      type:
+      - azure-servicefabric.ClusterHealthPolicy
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.ApplicationHealthPolicyMapItem[]
+  name: ApplicationHealthPolicyMapItem[]
+  spec.typeScript:
+  - name: ApplicationHealthPolicyMapItem
+    fullName: ApplicationHealthPolicyMapItem
+    uid: azure-servicefabric.ApplicationHealthPolicyMapItem
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.ClusterHealthPolicy
+  name: ClusterHealthPolicy
+  spec.typeScript:
+  - name: ClusterHealthPolicy
+    fullName: ClusterHealthPolicy
+    uid: azure-servicefabric.ClusterHealthPolicy

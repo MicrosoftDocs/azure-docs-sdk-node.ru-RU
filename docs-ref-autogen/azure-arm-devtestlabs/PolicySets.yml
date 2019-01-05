@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: cf0343055b78f98f0fb20d909f1e37341f26fc12
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: ca909b0e368eeeb9cef6c17f514195d78ef89f77
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41699043"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52167979"
 items:
 - uid: azure-arm-devtestlabs.PolicySets
   name: PolicySets
   fullName: PolicySets
   children:
   - azure-arm-devtestlabs.PolicySets.evaluatePolicies
-  - azure-arm-devtestlabs.PolicySets.evaluatePolicies_1
   - azure-arm-devtestlabs.PolicySets.evaluatePolicies_2
+  - azure-arm-devtestlabs.PolicySets.evaluatePolicies_1
   - azure-arm-devtestlabs.PolicySets.evaluatePoliciesWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-devtestlabs
 - uid: azure-arm-devtestlabs.PolicySets.evaluatePolicies
-  name: evaluatePolicies
+  name: evaluatePolicies(string, string, string, EvaluatePoliciesRequest, Object)
   children: []
   type: method
   langs:
@@ -58,42 +58,8 @@ items:
       type:
       - Promise<azure-arm-devtestlabs.EvaluatePoliciesResponse>
   package: azure-arm-devtestlabs
-- uid: azure-arm-devtestlabs.PolicySets.evaluatePolicies_1
-  name: evaluatePolicies
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Оценивает политику лаборатории.
-  syntax:
-    content: 'function evaluatePolicies(resourceGroupName: string, labName: string, name: string, evaluatePoliciesRequest: EvaluatePoliciesRequest, callback: ServiceCallback<EvaluatePoliciesResponse>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: labName
-      type:
-      - string
-      description: ''
-    - id: name
-      type:
-      - string
-      description: ''
-    - id: evaluatePoliciesRequest
-      type:
-      - azure-arm-devtestlabs.EvaluatePoliciesRequest
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-devtestlabs.EvaluatePoliciesResponse>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-devtestlabs.EvaluatePoliciesResponse>
-  package: azure-arm-devtestlabs
 - uid: azure-arm-devtestlabs.PolicySets.evaluatePolicies_2
-  name: evaluatePolicies
+  name: evaluatePolicies(string, string, string, EvaluatePoliciesRequest, Object, ServiceCallback<EvaluatePoliciesResponse>)
   children: []
   type: method
   langs:
@@ -130,8 +96,42 @@ items:
       type:
       - Promise<azure-arm-devtestlabs.EvaluatePoliciesResponse>
   package: azure-arm-devtestlabs
+- uid: azure-arm-devtestlabs.PolicySets.evaluatePolicies_1
+  name: evaluatePolicies(string, string, string, EvaluatePoliciesRequest, ServiceCallback<EvaluatePoliciesResponse>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Оценивает политику лаборатории.
+  syntax:
+    content: 'function evaluatePolicies(resourceGroupName: string, labName: string, name: string, evaluatePoliciesRequest: EvaluatePoliciesRequest, callback: ServiceCallback<EvaluatePoliciesResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: labName
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: evaluatePoliciesRequest
+      type:
+      - azure-arm-devtestlabs.EvaluatePoliciesRequest
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-devtestlabs.EvaluatePoliciesResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-devtestlabs.EvaluatePoliciesResponse>
+  package: azure-arm-devtestlabs
 - uid: azure-arm-devtestlabs.PolicySets.evaluatePoliciesWithHttpOperationResponse
-  name: evaluatePoliciesWithHttpOperationResponse
+  name: evaluatePoliciesWithHttpOperationResponse(string, string, string, EvaluatePoliciesRequest, Object)
   children: []
   type: method
   langs:
@@ -171,11 +171,13 @@ items:
   package: azure-arm-devtestlabs
 references:
 - uid: azure-arm-devtestlabs.EvaluatePoliciesRequest
+  name: EvaluatePoliciesRequest
   spec.typeScript:
   - name: EvaluatePoliciesRequest
     fullName: EvaluatePoliciesRequest
     uid: azure-arm-devtestlabs.EvaluatePoliciesRequest
 - uid: Promise<azure-arm-devtestlabs.EvaluatePoliciesResponse>
+  name: EvaluatePoliciesResponse>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -185,6 +187,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-devtestlabs.EvaluatePoliciesResponse>
+  name: EvaluatePoliciesResponse>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -194,6 +197,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-devtestlabs.EvaluatePoliciesResponse>>
+  name: EvaluatePoliciesResponse>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
