@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: bac43ca8b93eac8ecb874ccc4f3461175cc233c8
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 53d0b07d5ff0e9cda3bc4e776af85235b9fcd41c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41676377"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52098759"
 items:
 - uid: '@azure/cosmos.ContainerResponse'
   name: ContainerResponse
@@ -16,7 +16,7 @@ items:
   type: interface
   summary: Объект ответа для операций с контейнером
   extends:
-    name: '@azure/cosmos.CosmosResponse<@azure/cosmos.ContainerDefinition, @azure/cosmos.Container>'
+    name: '@azure/cosmos.CosmosResponse<@azure/cosmos.ContainerDefinition & @azure/cosmos.Resource, @azure/cosmos.Container>'
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.ContainerResponse.container'
   name: container
@@ -33,7 +33,8 @@ items:
       - '@azure/cosmos.Container'
   package: '@azure/cosmos'
 references:
-- uid: '@azure/cosmos.CosmosResponse<@azure/cosmos.ContainerDefinition, @azure/cosmos.Container>'
+- uid: '@azure/cosmos.CosmosResponse<@azure/cosmos.ContainerDefinition & @azure/cosmos.Resource, @azure/cosmos.Container>'
+  name: Container>
   spec.typeScript:
   - name: CosmosResponse
     fullName: CosmosResponse
@@ -43,6 +44,11 @@ references:
   - name: ContainerDefinition
     fullName: ContainerDefinition
     uid: '@azure/cosmos.ContainerDefinition'
+  - name: " & "
+    fullName: " & "
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/cosmos.Resource'
   - name: ', '
     fullName: ', '
   - name: Container
@@ -51,6 +57,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: '@azure/cosmos.Container'
+  name: Container
   spec.typeScript:
   - name: Container
     fullName: Container

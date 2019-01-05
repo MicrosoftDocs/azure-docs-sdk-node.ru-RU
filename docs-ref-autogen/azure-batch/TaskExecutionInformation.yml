@@ -1,0 +1,188 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3562d0ae5e734584e77d51e8c4b4fdf4d095345a
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53674328"
+items:
+- uid: azure-batch.TaskExecutionInformation
+  name: TaskExecutionInformation
+  fullName: TaskExecutionInformation
+  children:
+  - azure-batch.TaskExecutionInformation.containerInfo
+  - azure-batch.TaskExecutionInformation.endTime
+  - azure-batch.TaskExecutionInformation.exitCode
+  - azure-batch.TaskExecutionInformation.failureInfo
+  - azure-batch.TaskExecutionInformation.lastRequeueTime
+  - azure-batch.TaskExecutionInformation.lastRetryTime
+  - azure-batch.TaskExecutionInformation.requeueCount
+  - azure-batch.TaskExecutionInformation.result
+  - azure-batch.TaskExecutionInformation.retryCount
+  - azure-batch.TaskExecutionInformation.startTime
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.containerInfo
+  name: containerInfo
+  fullName: containerInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство имеет значение только в том случае, если задача выполняется в контексте контейнера.
+  optional: true
+  syntax:
+    content: 'containerInfo?: TaskContainerExecutionInformation'
+    return:
+      type:
+      - azure-batch.TaskContainerExecutionInformation
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.endTime
+  name: endTime
+  fullName: endTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство задается только в том случае, если задача находится в завершенное состояние.
+  optional: true
+  syntax:
+    content: 'endTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.exitCode
+  name: exitCode
+  fullName: exitCode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство задается только в том случае, если задача находится в завершенном состоянии. Как правило код выхода для процесса отражает конкретное соглашение, реализованные разработчиком приложения для этого процесса. При использовании значение кода выхода для принятия решений в коде, убедитесь, что вы знаете соглашения кода выхода, используемые в процессе приложения. Тем не менее если пакетная служба завершит задачу (из-за истечения времени ожидания, или завершение пользователя через API) может появиться код выхода, определяемый операционной системой.
+  optional: true
+  syntax:
+    content: 'exitCode?: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.failureInfo
+  name: failureInfo
+  fullName: failureInfo
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство задается только в том случае, если задача находится в завершенном состоянии и произошел сбой.
+  optional: true
+  syntax:
+    content: 'failureInfo?: TaskFailureInformation'
+    return:
+      type:
+      - azure-batch.TaskFailureInformation
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.lastRequeueTime
+  name: lastRequeueTime
+  fullName: lastRequeueTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство задается только в том случае, если значение requeueCount не равно нулю.
+  optional: true
+  syntax:
+    content: 'lastRequeueTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.lastRetryTime
+  name: lastRetryTime
+  fullName: lastRetryTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Этот элемент присутствует только в том случае, если задача была повторена (т. е. retryCount не равно нулю). Если он присутствует, это обычно является таким же, как startTime, но может отличаться, если задача перезапуска не после повторных попыток; Например если вычислительный узел был перезагружен во время повторной попытки, startTime обновляется, но не является lastRetryTime.
+  optional: true
+  syntax:
+    content: 'lastRetryTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.requeueCount
+  name: requeueCount
+  fullName: requeueCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Когда пользователь удаляет узлы из пула (путем изменения размера или уменьшения пула) или когда задание отключено, пользователь может указать, что выполнение задачи на узлах постановки в очередь для выполнения. Этот счетчик отслеживает, сколько раз задача была повторно поставлена в очередь в описанной ситуации.
+  syntax:
+    content: 'requeueCount: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.result
+  name: result
+  fullName: result
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Если значение — «сбой», сведения об ошибке можно найти в свойстве failureInfo. Возможные значения: «успех», «сбой»'
+  optional: true
+  syntax:
+    content: 'result?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.retryCount
+  name: retryCount
+  fullName: retryCount
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Сбои задач приложения (код выхода ненулевой длины) выполняются повторные попытки предварительной обработки ошибок (задача не может быть выполнен) и ошибок при передаче файлов не производятся. Пакетная служба будет повторять выполнение задачи до предела, установленного с помощью ограничений.
+  syntax:
+    content: 'retryCount: number'
+    return:
+      type:
+      - number
+  package: azure-batch
+- uid: azure-batch.TaskExecutionInformation.startTime
+  name: startTime
+  fullName: startTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: «Выполнение» соответствует рабочее состояние, поэтому, если задача указывает файлы ресурсов или пакеты приложений, а затем время начала отражает время начала задачи скачивать или развертывать их. Если задача перезапускалась или предпринимались повторные попытки, это самое позднее время, когда задача запускалась. Это свойство предназначено только для задач, которые имеют состояние выполняющегося или завершенного.
+  optional: true
+  syntax:
+    content: 'startTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerExecutionInformation
+  name: TaskContainerExecutionInformation
+  spec.typeScript:
+  - name: TaskContainerExecutionInformation
+    fullName: TaskContainerExecutionInformation
+    uid: azure-batch.TaskContainerExecutionInformation
+- uid: azure-batch.TaskFailureInformation
+  name: TaskFailureInformation
+  spec.typeScript:
+  - name: TaskFailureInformation
+    fullName: TaskFailureInformation
+    uid: azure-batch.TaskFailureInformation

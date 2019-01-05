@@ -1,0 +1,299 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: b689168bdbe39b7bbe6c1af6f526770fde446576
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53663018"
+items:
+- uid: azure-batch.JobManagerTask
+  name: JobManagerTask
+  fullName: JobManagerTask
+  children:
+  - azure-batch.JobManagerTask.allowLowPriorityNode
+  - azure-batch.JobManagerTask.applicationPackageReferences
+  - azure-batch.JobManagerTask.authenticationTokenSettings
+  - azure-batch.JobManagerTask.commandLine
+  - azure-batch.JobManagerTask.constraints
+  - azure-batch.JobManagerTask.containerSettings
+  - azure-batch.JobManagerTask.displayName
+  - azure-batch.JobManagerTask.environmentSettings
+  - azure-batch.JobManagerTask.id
+  - azure-batch.JobManagerTask.killJobOnCompletion
+  - azure-batch.JobManagerTask.outputFiles
+  - azure-batch.JobManagerTask.resourceFiles
+  - azure-batch.JobManagerTask.runExclusive
+  - azure-batch.JobManagerTask.userIdentity
+  langs:
+  - typeScript
+  type: interface
+  summary: Задача диспетчера заданий запускается автоматически при создании задания. Пакетная служба пытается запланировать задачу диспетчера заданий перед выполнением других задач в задании. При сжатии пула, пакетная служба пытается сохранить вычислительных узлов, где выполняются задачи диспетчера заданий для максимально (то есть узлы, которые работает «нормальному» задачи удаляются перед узлами под управлением задачи диспетчера заданий) долго. При сбое задачи диспетчера заданий и должна быть перезапущена, система пытается запланировать его с наивысшим приоритетом. Если нет доступных простоя узлов, система может завершить одну из выполняющихся задач в пуле и вернуть его в очередь, чтобы освободить место для задачи диспетчера заданий для перезапуска. Обратите внимание на то, что задачу диспетчера заданий в одно задание имеет приоритет над задачами в других заданиях. Для заданий только задания уровня являются приоритеты. Например если диспетчера заданий в задании приоритет 0 должен быть перезапущен, он не заменит задачи задания приоритета 1. Пакет повторит задачи, когда операция восстановления запускается на вычислительном узле. Примеры операций восстановления причинами (но не ограничиваются) при перезагрузке неработоспособное вычислительном узле или вычислительного узла не отображается из-за сбоя узла. Повторно из-за восстановления операций независимы и не учитываются для maxTaskRetryCount. Даже если maxTaskRetryCount равно 0, может возникнуть внутренних повторных попыток из-за операции восстановления. По этой причине все задачи должны быть идемпотентными. Это означает, что задачи должны допускать прервана и перезапущена без возникновения любые повреждения или повторяющиеся данные. Лучшие практики для долго выполняющихся задач является использование определенные виды создания контрольных точек.
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.allowLowPriorityNode
+  name: allowLowPriorityNode
+  fullName: allowLowPriorityNode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: По умолчанию используется значение true.
+  optional: true
+  syntax:
+    content: 'allowLowPriorityNode?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.applicationPackageReferences
+  name: applicationPackageReferences
+  fullName: applicationPackageReferences
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Пакеты приложений загрузку и развертывание в общий каталог, не рабочем каталоге задачи. Таким образом Если указанный по ссылке пакет уже находится на вычислительном узле и в актуальном состоянии, то оно не повторно загружается; используется имеющуюся копию на вычислительном узле. Если в пакет приложения, на который указывает ссылка невозможно установить, например потому, что пакет был удален, или из-за сбоя загрузки, задача завершается с ошибкой.
+  optional: true
+  syntax:
+    content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+    return:
+      type:
+      - azure-batch.ApplicationPackageReference[]
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.authenticationTokenSettings
+  name: authenticationTokenSettings
+  fullName: authenticationTokenSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Если это свойство имеет значение, пакетная служба предоставляет задачи с помощью маркера проверки подлинности, который может использоваться для проверки подлинности операций пакетной службы, не требуя ключ доступа учетной записи. Маркер предоставляется через переменную среды AZ_BATCH_AUTHENTICATION_TOKEN. Операции, которые можно выполнять с помощью токена задачи зависят от параметров. Например задача может запрашивать разрешения задание для добавления других задач в задание, или проверить состояние задания или других задач в задании.
+  optional: true
+  syntax:
+    content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+    return:
+      type:
+      - azure-batch.AuthenticationTokenSettings
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: В командной строке не выполняются в оболочке и таким образом, не может воспользоваться преимуществами функции оболочки, например расширение переменных среды. Если вы хотите воспользоваться преимуществами таких функций, необходимо вызвать оболочку в командной строке, например с помощью «cmd /c MyCommand» в Windows или «/ bin/sh - c MyCommand» в Linux. Если командной строке ссылается на пути к файлам, она должна использовать относительный путь (по отношению к рабочему каталогу задачи), или пакетное указанной переменной среды (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.constraints
+  name: constraints
+  fullName: constraints
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'constraints?: TaskConstraints'
+    return:
+      type:
+      - azure-batch.TaskConstraints
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Если в пуле, который будет выполняться эта задача значение containerConfiguration, это необходимо также задать. Если пул, который будет выполняться эта задача не имеет значение containerConfiguration, это не должно быть задано. Если этот параметр указан, все каталоги рекурсивно ниже AZ_BATCH_NODE_ROOT_DIR (корень каталогов пакетной службы Azure на узле) сопоставляются в контейнере, все переменные среды задач сопоставляются в контейнере и Командная строка задачи выполняется в контейнере.
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.displayName
+  name: displayName
+  fullName: displayName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Оно не обязано быть уникальным и может содержать любые символы Юникода, максимум — 1024.
+  optional: true
+  syntax:
+    content: 'displayName?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов.
+  syntax:
+    content: 'id: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.killJobOnCompletion
+  name: killJobOnCompletion
+  fullName: killJobOnCompletion
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Если значение равно true, при завершении задачи диспетчера заданий, знаков обслуживания пакета как завершить задание. Если все задачи по-прежнему выполняются в данный момент (кроме прекращения задания), эти задачи завершаются. Если значение равно false, завершения задачи диспетчера заданий не влияет на состояние задания. В этом случае вам следует использовать атрибут onAllTasksComplete для завершения задания, или клиента или пользователя, которые явно завершить задание. Примером этого является, если диспетчер заданий создает набор задач, но затем принимает роль не дальнейшей их выполнение. По умолчанию используется значение true. Если вы используете атрибуты onAllTasksComplete и onTaskFailure, время существования задания элемента управления и с помощью задачи диспетчера заданий только для создания задачи для задания (не для отслеживания хода выполнения), затем важно задавать killJobOnCompletion значение false.
+  optional: true
+  syntax:
+    content: 'killJobOnCompletion?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.outputFiles
+  name: outputFiles
+  fullName: outputFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Для задач с несколькими экземплярами файлы будут отправлены только в вычислительном узле, на котором выполняется основная задача.
+  optional: true
+  syntax:
+    content: 'outputFiles?: OutputFile[]'
+    return:
+      type:
+      - azure-batch.OutputFile[]
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Файлы, перечисленные в этом элементе, находятся в рабочем каталоге задачи.
+
+    Максимальный размер для список файлов ресурсов установлен.  При превышении максимального размера, запрос завершится ошибкой, и код ошибки ответа будет RequestEntityTooLarge. В этом случае коллекция ResourceFiles необходимо уменьшить размер. Это можно сделать с помощью ZIP-файлы, пакеты приложений или контейнеров Docker.
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.runExclusive
+  name: runExclusive
+  fullName: runExclusive
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Значение true, если никакие другие задачи будет выполняться на том же вычислительном узле для до тех пор, пока выполняется диспетчера заданий. Если значение равно false, другие задачи могут одновременно работать с помощью диспетчера заданий на вычислительном узле. Задача диспетчера заданий обычно учитывается предел одновременных задач на узле, поэтому это относится только если узел разрешает несколько параллельных задач. По умолчанию используется значение true.
+  optional: true
+  syntax:
+    content: 'runExclusive?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-batch
+- uid: azure-batch.JobManagerTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Если не указано, задача выполняется как пользователь без прав администратора уникальные задачи.
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+references:
+- uid: azure-batch.ApplicationPackageReference[]
+  name: ApplicationPackageReference[]
+  spec.typeScript:
+  - name: ApplicationPackageReference
+    fullName: ApplicationPackageReference
+    uid: azure-batch.ApplicationPackageReference
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.AuthenticationTokenSettings
+  name: AuthenticationTokenSettings
+  spec.typeScript:
+  - name: AuthenticationTokenSettings
+    fullName: AuthenticationTokenSettings
+    uid: azure-batch.AuthenticationTokenSettings
+- uid: azure-batch.TaskConstraints
+  name: TaskConstraints
+  spec.typeScript:
+  - name: TaskConstraints
+    fullName: TaskConstraints
+    uid: azure-batch.TaskConstraints
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.OutputFile[]
+  name: OutputFile[]
+  spec.typeScript:
+  - name: OutputFile
+    fullName: OutputFile
+    uid: azure-batch.OutputFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity

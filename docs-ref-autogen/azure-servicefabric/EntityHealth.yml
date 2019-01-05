@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a30966c4a9d5bd74dfbbaf5c2b4d3e189b3b5d9e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52106372"
+items:
+- uid: azure-servicefabric.EntityHealth
+  name: EntityHealth
+  fullName: EntityHealth
+  children:
+  - azure-servicefabric.EntityHealth.aggregatedHealthState
+  - azure-servicefabric.EntityHealth.healthEvents
+  - azure-servicefabric.EntityHealth.healthStatistics
+  - azure-servicefabric.EntityHealth.unhealthyEvaluations
+  langs:
+  - typeScript
+  type: interface
+  summary: Сведения о работоспособности общими для всех сущностей в кластере. Он содержит сводное состояние работоспособности, события работоспособности и оценки неработоспособности.
+  package: azure-servicefabric
+- uid: azure-servicefabric.EntityHealth.aggregatedHealthState
+  name: aggregatedHealthState
+  fullName: aggregatedHealthState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    HealthState, представляющий общего состояния работоспособности сущности, вычисляемые диспетчером работоспособности.
+
+    Оценка работоспособности сущности отражает все события, указанное в отчетах для сущности и его дочерние элементы (если таковые имеются).
+
+    Статистическая обработка выполняется путем применения политики нужного работоспособности. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»
+  optional: true
+  syntax:
+    content: 'aggregatedHealthState?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.EntityHealth.healthEvents
+  name: healthEvents
+  fullName: healthEvents
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Список событий работоспособности сущности.
+  optional: true
+  syntax:
+    content: 'healthEvents?: HealthEvent[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvent[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.EntityHealth.healthStatistics
+  name: healthStatistics
+  fullName: healthStatistics
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Показывает статистику работоспособности для всех типов дочерние элементы запрошенного объекта.
+  optional: true
+  syntax:
+    content: 'healthStatistics?: HealthStatistics'
+    return:
+      type:
+      - azure-servicefabric.HealthStatistics
+  package: azure-servicefabric
+- uid: azure-servicefabric.EntityHealth.unhealthyEvaluations
+  name: unhealthyEvaluations
+  fullName: unhealthyEvaluations
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Оценки неработоспособности, в которых показано, почему текущего общего состояния работоспособности был возвращен диспетчером работоспособности.
+  optional: true
+  syntax:
+    content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.HealthEvaluationWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthEvent[]
+  name: HealthEvent[]
+  spec.typeScript:
+  - name: HealthEvent
+    fullName: HealthEvent
+    uid: azure-servicefabric.HealthEvent
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.HealthStatistics
+  name: HealthStatistics
+  spec.typeScript:
+  - name: HealthStatistics
+    fullName: HealthStatistics
+    uid: azure-servicefabric.HealthStatistics
+- uid: azure-servicefabric.HealthEvaluationWrapper[]
+  name: HealthEvaluationWrapper[]
+  spec.typeScript:
+  - name: HealthEvaluationWrapper
+    fullName: HealthEvaluationWrapper
+    uid: azure-servicefabric.HealthEvaluationWrapper
+  - name: '[]'
+    fullName: '[]'
