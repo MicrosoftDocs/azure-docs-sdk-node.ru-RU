@@ -1,0 +1,176 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8b21fb219132789baabfe63cf35d4ae01db0eea6
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53675578"
+items:
+- uid: azure-batch.JobReleaseTask
+  name: JobReleaseTask
+  fullName: JobReleaseTask
+  children:
+  - azure-batch.JobReleaseTask.commandLine
+  - azure-batch.JobReleaseTask.containerSettings
+  - azure-batch.JobReleaseTask.environmentSettings
+  - azure-batch.JobReleaseTask.id
+  - azure-batch.JobReleaseTask.maxWallClockTime
+  - azure-batch.JobReleaseTask.resourceFiles
+  - azure-batch.JobReleaseTask.retentionTime
+  - azure-batch.JobReleaseTask.userIdentity
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="66173-101">Задача снятия задания выполняется при завершении задания, из-за следующего вида: Пользователь вызывает API завершения задания или API задания Удалить задания по-прежнему активна, достигается ограничение времени часов максимальное стены задания и это по-прежнему активный или задача диспетчера заданий задания завершена, а также для задания настроена для завершения при па задания ER завершается.</span><span class="sxs-lookup"><span data-stu-id="66173-101">The Job Release task runs when the job ends, because of one of the following: The user calls the Terminate Job API, or the Delete Job API while the job is still active, the job's maximum wall clock time constraint is reached, and the job is still active, or the job's Job Manager task completed, and the job is configured to terminate when the Job Manager completes.</span></span>
+
+    <span data-ttu-id="66173-102">Задача прекращения задания выполняется на каждом вычислительном узле, где задачи задания выполнялись и выполнили задачу подготовки задания и завершения.</span><span class="sxs-lookup"><span data-stu-id="66173-102">The Job Release task runs on each compute node where tasks of the job have run and the Job Preparation task ran and completed.</span></span> <span data-ttu-id="66173-103">Если вы пересоздать образ вычислительного узла после выполнения задачи подготовки задания и завершает задание без все последующие задачи задания на данном вычислительном узле (и следовательно задачу подготовки задания не перезапустите), задача снятия задания не выполняет на этом узле.</span><span class="sxs-lookup"><span data-stu-id="66173-103">If you reimage a compute node after it has run the Job Preparation task, and the job ends without any further tasks of the job running on that compute node (and hence the Job Preparation task does not re-run), then the Job Release task does not run on that node.</span></span> <span data-ttu-id="66173-104">Если вычислительный узел перезагружается, пока задача снятия задания по-прежнему работает, задача снятия задания снова выполняется при запуске вычислительных узлов.</span><span class="sxs-lookup"><span data-stu-id="66173-104">If a compute node reboots while the Job Release task is still running, the Job Release task runs again when the compute node starts up.</span></span> <span data-ttu-id="66173-105">Задание не помечен как завершенный, пока не завершатся все задачи прекращения задания.</span><span class="sxs-lookup"><span data-stu-id="66173-105">The job is not marked as complete until all Job Release tasks have completed.</span></span> <span data-ttu-id="66173-106">Задача прекращения задания выполняется в фоновом режиме.</span><span class="sxs-lookup"><span data-stu-id="66173-106">The Job Release task runs in the background.</span></span> <span data-ttu-id="66173-107">Не занимает слот планирования; то есть он не учитываются maxTasksPerNode предела, указанного в пуле.</span><span class="sxs-lookup"><span data-stu-id="66173-107">It does not occupy a scheduling slot; that is, it does not count towards the maxTasksPerNode limit specified on the pool.</span></span>
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66173-108">В командной строке не выполняются в оболочке и таким образом, не может воспользоваться преимуществами функции оболочки, например расширение переменных среды.</span><span class="sxs-lookup"><span data-stu-id="66173-108">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="66173-109">Если вы хотите воспользоваться преимуществами таких функций, необходимо вызвать оболочку в командной строке, например с помощью «cmd /c MyCommand» в Windows или «/ bin/sh - c MyCommand» в Linux.</span><span class="sxs-lookup"><span data-stu-id="66173-109">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="66173-110">Если командной строке ссылается на пути к файлам, она должна использовать относительный путь (по отношению к рабочему каталогу задачи), или пакетное указанной переменной среды (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="66173-110">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66173-111">Если этот параметр указан, все каталоги рекурсивно ниже AZ_BATCH_NODE_ROOT_DIR (корень каталогов пакетной службы Azure на узле) сопоставляются в контейнере, все переменные среды задач сопоставляются в контейнере и Командная строка задачи выполняется в контейнере.</span><span class="sxs-lookup"><span data-stu-id="66173-111">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"66173-112\">Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов.</span><span class=\"sxs-lookup\"><span data-stu-id=\"66173-112\">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span> <span data-ttu-id=\"66173-113\">Если это свойство не задано, пакетная служба назначает значение по умолчанию «jobrelease».</span><span class=\"sxs-lookup\"><span data-stu-id=\"66173-113\">If you do not specify this property, the Batch service assigns a default value of 'jobrelease'.</span></span> <span data-ttu-id=\"66173-114\">Другие задачи в задании может иметь один и тот же идентификатор задачи прекращения задания.</span><span class=\"sxs-lookup\"><span data-stu-id=\"66173-114\">No other task in the job can have the same ID as the Job Release task.</span></span> <span data-ttu-id=\"66173-115\">Если вы пытаетесь передать задачу с одинаковым идентификатором, пакетная служба отклоняет запрос с кодом ошибки TaskIdSameAsJobReleaseTask; При вызове REST API напрямую, код состояния HTTP: 409 (конфликт).</span><span class=\"sxs-lookup\"><span data-stu-id=\"66173-115\">If you try to submit a task with the same id, the Batch service rejects the request with error code TaskIdSameAsJobReleaseTask; if you are calling the REST API directly, the HTTP status code is 409 (Conflict).</span></span>"
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.maxWallClockTime
+  name: maxWallClockTime
+  fullName: maxWallClockTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'maxWallClockTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66173-116">Файлы, перечисленные в этом элементе, находятся в рабочем каталоге задачи.</span><span class="sxs-lookup"><span data-stu-id="66173-116">Files listed under this element are located in the task's working directory.</span></span>
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.retentionTime
+  name: retentionTime
+  fullName: retentionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66173-117">По умолчанию — 7 дней, т. е. каталогу задачи будут храниться в течение 7 дней, если задание удаляется или удалении вычислительных узлов.</span><span class="sxs-lookup"><span data-stu-id="66173-117">The default is 7 days, i.e. the task directory will be retained for 7 days unless the compute node is removed or the job is deleted.</span></span>
+  optional: true
+  syntax:
+    content: 'retentionTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="66173-118">Если не указано, задача выполняется как пользователь без прав администратора уникальные задачи.</span><span class="sxs-lookup"><span data-stu-id="66173-118">If omitted, the task runs as a non-administrative user unique to the task.</span></span>
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity
