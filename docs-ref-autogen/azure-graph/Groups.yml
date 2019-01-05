@@ -1,36 +1,40 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f5ba97b5b787d9e95531fcbd3b8ae7ff4a5c62d3
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 51a5108a461cee1f78d408a3cecd5ef5d63e35e2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41687827"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52085759"
 items:
 - uid: azure-graph.Groups
   name: Groups
   fullName: Groups
   children:
   - azure-graph.Groups.addMember
-  - azure-graph.Groups.addMember_1
   - azure-graph.Groups.addMember_2
+  - azure-graph.Groups.addMember_1
   - azure-graph.Groups.addMemberWithHttpOperationResponse
+  - azure-graph.Groups.addOwner
+  - azure-graph.Groups.addOwner_2
+  - azure-graph.Groups.addOwner_1
+  - azure-graph.Groups.addOwnerWithHttpOperationResponse
   - azure-graph.Groups.create
   - azure-graph.Groups.create_2
   - azure-graph.Groups.create_1
   - azure-graph.Groups.createWithHttpOperationResponse
   - azure-graph.Groups.deleteMethod
-  - azure-graph.Groups.deleteMethod_1
   - azure-graph.Groups.deleteMethod_2
+  - azure-graph.Groups.deleteMethod_1
   - azure-graph.Groups.deleteMethodWithHttpOperationResponse
   - azure-graph.Groups.get
   - azure-graph.Groups.get_2
   - azure-graph.Groups.get_1
   - azure-graph.Groups.getGroupMembers
-  - azure-graph.Groups.getGroupMembers_1
   - azure-graph.Groups.getGroupMembers_2
+  - azure-graph.Groups.getGroupMembers_1
   - azure-graph.Groups.getGroupMembersNext
-  - azure-graph.Groups.getGroupMembersNext_1
   - azure-graph.Groups.getGroupMembersNext_2
+  - azure-graph.Groups.getGroupMembersNext_1
   - azure-graph.Groups.getGroupMembersNextWithHttpOperationResponse
   - azure-graph.Groups.getGroupMembersWithHttpOperationResponse
   - azure-graph.Groups.getMemberGroups
@@ -39,28 +43,40 @@ items:
   - azure-graph.Groups.getMemberGroupsWithHttpOperationResponse
   - azure-graph.Groups.getWithHttpOperationResponse
   - azure-graph.Groups.isMemberOf
-  - azure-graph.Groups.isMemberOf_1
   - azure-graph.Groups.isMemberOf_2
+  - azure-graph.Groups.isMemberOf_1
   - azure-graph.Groups.isMemberOfWithHttpOperationResponse
   - azure-graph.Groups.list
-  - azure-graph.Groups.list_1
   - azure-graph.Groups.list_2
+  - azure-graph.Groups.list_1
   - azure-graph.Groups.listNext
-  - azure-graph.Groups.listNext_1
   - azure-graph.Groups.listNext_2
+  - azure-graph.Groups.listNext_1
   - azure-graph.Groups.listNextWithHttpOperationResponse
+  - azure-graph.Groups.listOwners
+  - azure-graph.Groups.listOwners_2
+  - azure-graph.Groups.listOwners_1
+  - azure-graph.Groups.listOwnersNext
+  - azure-graph.Groups.listOwnersNext_2
+  - azure-graph.Groups.listOwnersNext_1
+  - azure-graph.Groups.listOwnersNextWithHttpOperationResponse
+  - azure-graph.Groups.listOwnersWithHttpOperationResponse
   - azure-graph.Groups.listWithHttpOperationResponse
   - azure-graph.Groups.removeMember
-  - azure-graph.Groups.removeMember_1
   - azure-graph.Groups.removeMember_2
+  - azure-graph.Groups.removeMember_1
   - azure-graph.Groups.removeMemberWithHttpOperationResponse
+  - azure-graph.Groups.removeOwner
+  - azure-graph.Groups.removeOwner_2
+  - azure-graph.Groups.removeOwner_1
+  - azure-graph.Groups.removeOwnerWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
   summary: ''
   package: azure-graph
 - uid: azure-graph.Groups.addMember
-  name: addMember
+  name: addMember(string, GroupAddMemberParameters, Object)
   children: []
   type: method
   langs:
@@ -88,34 +104,8 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Groups.addMember_1
-  name: addMember
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Добавление члена в группу.
-  syntax:
-    content: 'function addMember(groupObjectId: string, parameters: GroupAddMemberParameters, callback: ServiceCallback<void>)'
-    parameters:
-    - id: groupObjectId
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-graph.GroupAddMemberParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-graph
 - uid: azure-graph.Groups.addMember_2
-  name: addMember
+  name: addMember(string, GroupAddMemberParameters, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -144,8 +134,34 @@ items:
       type:
       - Promise<void>
   package: azure-graph
+- uid: azure-graph.Groups.addMember_1
+  name: addMember(string, GroupAddMemberParameters, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Добавление члена в группу.
+  syntax:
+    content: 'function addMember(groupObjectId: string, parameters: GroupAddMemberParameters, callback: ServiceCallback<void>)'
+    parameters:
+    - id: groupObjectId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-graph.GroupAddMemberParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
 - uid: azure-graph.Groups.addMemberWithHttpOperationResponse
-  name: addMemberWithHttpOperationResponse
+  name: addMemberWithHttpOperationResponse(string, GroupAddMemberParameters, Object)
   children: []
   type: method
   langs:
@@ -173,8 +189,122 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-graph
+- uid: azure-graph.Groups.addOwner
+  name: addOwner(string, AddOwnerParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Добавление владельца группы.
+  syntax:
+    content: 'function addOwner(objectId: string, parameters: AddOwnerParameters, options?: Object)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: >
+        Идентификатор объекта, к которому необходимо добавить владельца приложения.
+    - id: parameters
+      type:
+      - azure-graph.AddOwnerParameters
+      description: >
+        URL-адрес владельца объекта, например https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Groups.addOwner_2
+  name: addOwner(string, AddOwnerParameters, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Добавление владельца группы.
+  syntax:
+    content: 'function addOwner(objectId: string, parameters: AddOwnerParameters, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-graph.AddOwnerParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Groups.addOwner_1
+  name: addOwner(string, AddOwnerParameters, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Добавление владельца группы.
+  syntax:
+    content: 'function addOwner(objectId: string, parameters: AddOwnerParameters, callback: ServiceCallback<void>)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-graph.AddOwnerParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Groups.addOwnerWithHttpOperationResponse
+  name: addOwnerWithHttpOperationResponse(string, AddOwnerParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Добавление владельца группы.
+  syntax:
+    content: 'function addOwnerWithHttpOperationResponse(objectId: string, parameters: AddOwnerParameters, options?: Object)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: >
+        Идентификатор объекта, к которому необходимо добавить владельца приложения.
+    - id: parameters
+      type:
+      - azure-graph.AddOwnerParameters
+      description: >
+        URL-адрес владельца объекта, например https://graph.windows.net/0b1f9851-1bf0-433f-aec3-cb9272f093dc/directoryObjects/f260bbc4-c254-447b-94cf-293b5ec434dd.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-graph
 - uid: azure-graph.Groups.create
-  name: create
+  name: create(GroupCreateParameters, Object)
   children: []
   type: method
   langs:
@@ -198,7 +328,7 @@ items:
       - Promise<azure-graph.ADGroup>
   package: azure-graph
 - uid: azure-graph.Groups.create_2
-  name: create
+  name: create(GroupCreateParameters, Object, ServiceCallback<ADGroup>)
   children: []
   type: method
   langs:
@@ -224,7 +354,7 @@ items:
       - Promise<azure-graph.ADGroup>
   package: azure-graph
 - uid: azure-graph.Groups.create_1
-  name: create
+  name: create(GroupCreateParameters, ServiceCallback<ADGroup>)
   children: []
   type: method
   langs:
@@ -246,7 +376,7 @@ items:
       - Promise<azure-graph.ADGroup>
   package: azure-graph
 - uid: azure-graph.Groups.createWithHttpOperationResponse
-  name: createWithHttpOperationResponse
+  name: createWithHttpOperationResponse(GroupCreateParameters, Object)
   children: []
   type: method
   langs:
@@ -270,7 +400,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.ADGroup>>
   package: azure-graph
 - uid: azure-graph.Groups.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, Object)
   children: []
   type: method
   langs:
@@ -293,30 +423,8 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Groups.deleteMethod_1
-  name: deleteMethod
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Удалите группу из каталога.
-  syntax:
-    content: 'function deleteMethod(objectId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: objectId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-graph
 - uid: azure-graph.Groups.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -341,8 +449,30 @@ items:
       type:
       - Promise<void>
   package: azure-graph
+- uid: azure-graph.Groups.deleteMethod_1
+  name: deleteMethod(string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удалите группу из каталога.
+  syntax:
+    content: 'function deleteMethod(objectId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
 - uid: azure-graph.Groups.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -366,7 +496,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-graph
 - uid: azure-graph.Groups.get
-  name: get
+  name: get(string, Object)
   children: []
   type: method
   langs:
@@ -390,7 +520,7 @@ items:
       - Promise<azure-graph.ADGroup>
   package: azure-graph
 - uid: azure-graph.Groups.get_2
-  name: get
+  name: get(string, Object, ServiceCallback<ADGroup>)
   children: []
   type: method
   langs:
@@ -416,7 +546,7 @@ items:
       - Promise<azure-graph.ADGroup>
   package: azure-graph
 - uid: azure-graph.Groups.get_1
-  name: get
+  name: get(string, ServiceCallback<ADGroup>)
   children: []
   type: method
   langs:
@@ -438,7 +568,7 @@ items:
       - Promise<azure-graph.ADGroup>
   package: azure-graph
 - uid: azure-graph.Groups.getGroupMembers
-  name: getGroupMembers
+  name: getGroupMembers(string, Object)
   children: []
   type: method
   langs:
@@ -459,39 +589,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<azure-graph.GetObjectsResult>
-  package: azure-graph
-- uid: azure-graph.Groups.getGroupMembers_1
-  name: getGroupMembers
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает члены группы.
-  syntax:
-    content: 'function getGroupMembers(objectId: string, callback: ServiceCallback<GetObjectsResult>)'
-    parameters:
-    - id: objectId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.GetObjectsResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.GetObjectsResult>
+      - Promise<azure-graph.DirectoryObjectListResult>
   package: azure-graph
 - uid: azure-graph.Groups.getGroupMembers_2
-  name: getGroupMembers
+  name: getGroupMembers(string, Object, ServiceCallback<DirectoryObjectListResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Получает члены группы.
   syntax:
-    content: 'function getGroupMembers(objectId: string, options: Object, callback: ServiceCallback<GetObjectsResult>)'
+    content: 'function getGroupMembers(objectId: string, options: Object, callback: ServiceCallback<DirectoryObjectListResult>)'
     parameters:
     - id: objectId
       type:
@@ -503,14 +611,36 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-graph.GetObjectsResult>
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
       description: ''
     return:
       type:
-      - Promise<azure-graph.GetObjectsResult>
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Groups.getGroupMembers_1
+  name: getGroupMembers(string, ServiceCallback<DirectoryObjectListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает члены группы.
+  syntax:
+    content: 'function getGroupMembers(objectId: string, callback: ServiceCallback<DirectoryObjectListResult>)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
   package: azure-graph
 - uid: azure-graph.Groups.getGroupMembersNext
-  name: getGroupMembersNext
+  name: getGroupMembersNext(string, Object)
   children: []
   type: method
   langs:
@@ -531,39 +661,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<azure-graph.GetObjectsResult>
-  package: azure-graph
-- uid: azure-graph.Groups.getGroupMembersNext_1
-  name: getGroupMembersNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает члены группы.
-  syntax:
-    content: 'function getGroupMembersNext(nextLink: string, callback: ServiceCallback<GetObjectsResult>)'
-    parameters:
-    - id: nextLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.GetObjectsResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.GetObjectsResult>
+      - Promise<azure-graph.DirectoryObjectListResult>
   package: azure-graph
 - uid: azure-graph.Groups.getGroupMembersNext_2
-  name: getGroupMembersNext
+  name: getGroupMembersNext(string, Object, ServiceCallback<DirectoryObjectListResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Получает члены группы.
   syntax:
-    content: 'function getGroupMembersNext(nextLink: string, options: Object, callback: ServiceCallback<GetObjectsResult>)'
+    content: 'function getGroupMembersNext(nextLink: string, options: Object, callback: ServiceCallback<DirectoryObjectListResult>)'
     parameters:
     - id: nextLink
       type:
@@ -575,14 +683,36 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-graph.GetObjectsResult>
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
       description: ''
     return:
       type:
-      - Promise<azure-graph.GetObjectsResult>
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Groups.getGroupMembersNext_1
+  name: getGroupMembersNext(string, ServiceCallback<DirectoryObjectListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает члены группы.
+  syntax:
+    content: 'function getGroupMembersNext(nextLink: string, callback: ServiceCallback<DirectoryObjectListResult>)'
+    parameters:
+    - id: nextLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
   package: azure-graph
 - uid: azure-graph.Groups.getGroupMembersNextWithHttpOperationResponse
-  name: getGroupMembersNextWithHttpOperationResponse
+  name: getGroupMembersNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -603,10 +733,10 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-graph.GetObjectsResult>>
+      - Promise<HttpOperationResponse<azure-graph.DirectoryObjectListResult>>
   package: azure-graph
 - uid: azure-graph.Groups.getGroupMembersWithHttpOperationResponse
-  name: getGroupMembersWithHttpOperationResponse
+  name: getGroupMembersWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -627,10 +757,10 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-graph.GetObjectsResult>>
+      - Promise<HttpOperationResponse<azure-graph.DirectoryObjectListResult>>
   package: azure-graph
 - uid: azure-graph.Groups.getMemberGroups
-  name: getMemberGroups
+  name: getMemberGroups(string, GroupGetMemberGroupsParameters, Object)
   children: []
   type: method
   langs:
@@ -659,7 +789,7 @@ items:
       - Promise<azure-graph.GroupGetMemberGroupsResult>
   package: azure-graph
 - uid: azure-graph.Groups.getMemberGroups_2
-  name: getMemberGroups
+  name: getMemberGroups(string, GroupGetMemberGroupsParameters, Object, ServiceCallback<GroupGetMemberGroupsResult>)
   children: []
   type: method
   langs:
@@ -689,7 +819,7 @@ items:
       - Promise<azure-graph.GroupGetMemberGroupsResult>
   package: azure-graph
 - uid: azure-graph.Groups.getMemberGroups_1
-  name: getMemberGroups
+  name: getMemberGroups(string, GroupGetMemberGroupsParameters, ServiceCallback<GroupGetMemberGroupsResult>)
   children: []
   type: method
   langs:
@@ -715,7 +845,7 @@ items:
       - Promise<azure-graph.GroupGetMemberGroupsResult>
   package: azure-graph
 - uid: azure-graph.Groups.getMemberGroupsWithHttpOperationResponse
-  name: getMemberGroupsWithHttpOperationResponse
+  name: getMemberGroupsWithHttpOperationResponse(string, GroupGetMemberGroupsParameters, Object)
   children: []
   type: method
   langs:
@@ -744,7 +874,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.GroupGetMemberGroupsResult>>
   package: azure-graph
 - uid: azure-graph.Groups.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -768,7 +898,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.ADGroup>>
   package: azure-graph
 - uid: azure-graph.Groups.isMemberOf
-  name: isMemberOf
+  name: isMemberOf(CheckGroupMembershipParameters, Object)
   children: []
   type: method
   langs:
@@ -791,30 +921,8 @@ items:
       type:
       - Promise<azure-graph.CheckGroupMembershipResult>
   package: azure-graph
-- uid: azure-graph.Groups.isMemberOf_1
-  name: isMemberOf
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Проверяет, является ли указанный пользователь, группы, контакта или субъекта-службы является непосредственным или транзитивным членом указанной группы.
-  syntax:
-    content: 'function isMemberOf(parameters: CheckGroupMembershipParameters, callback: ServiceCallback<CheckGroupMembershipResult>)'
-    parameters:
-    - id: parameters
-      type:
-      - azure-graph.CheckGroupMembershipParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.CheckGroupMembershipResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.CheckGroupMembershipResult>
-  package: azure-graph
 - uid: azure-graph.Groups.isMemberOf_2
-  name: isMemberOf
+  name: isMemberOf(CheckGroupMembershipParameters, Object, ServiceCallback<CheckGroupMembershipResult>)
   children: []
   type: method
   langs:
@@ -839,8 +947,30 @@ items:
       type:
       - Promise<azure-graph.CheckGroupMembershipResult>
   package: azure-graph
+- uid: azure-graph.Groups.isMemberOf_1
+  name: isMemberOf(CheckGroupMembershipParameters, ServiceCallback<CheckGroupMembershipResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Проверяет, является ли указанный пользователь, группы, контакта или субъекта-службы является непосредственным или транзитивным членом указанной группы.
+  syntax:
+    content: 'function isMemberOf(parameters: CheckGroupMembershipParameters, callback: ServiceCallback<CheckGroupMembershipResult>)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-graph.CheckGroupMembershipParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.CheckGroupMembershipResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.CheckGroupMembershipResult>
+  package: azure-graph
 - uid: azure-graph.Groups.isMemberOfWithHttpOperationResponse
-  name: isMemberOfWithHttpOperationResponse
+  name: isMemberOfWithHttpOperationResponse(CheckGroupMembershipParameters, Object)
   children: []
   type: method
   langs:
@@ -864,7 +994,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.CheckGroupMembershipResult>>
   package: azure-graph
 - uid: azure-graph.Groups.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -882,26 +1012,8 @@ items:
       type:
       - Promise<azure-graph.GroupListResult>
   package: azure-graph
-- uid: azure-graph.Groups.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает список групп для текущего клиента.
-  syntax:
-    content: 'function list(callback: ServiceCallback<GroupListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.GroupListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.GroupListResult>
-  package: azure-graph
 - uid: azure-graph.Groups.list_2
-  name: list
+  name: list(Object, ServiceCallback<GroupListResult>)
   children: []
   type: method
   langs:
@@ -922,8 +1034,26 @@ items:
       type:
       - Promise<azure-graph.GroupListResult>
   package: azure-graph
+- uid: azure-graph.Groups.list_1
+  name: list(ServiceCallback<GroupListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает список групп для текущего клиента.
+  syntax:
+    content: 'function list(callback: ServiceCallback<GroupListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.GroupListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.GroupListResult>
+  package: azure-graph
 - uid: azure-graph.Groups.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -946,30 +1076,8 @@ items:
       type:
       - Promise<azure-graph.GroupListResult>
   package: azure-graph
-- uid: azure-graph.Groups.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает список групп для текущего клиента.
-  syntax:
-    content: 'function listNext(nextLink: string, callback: ServiceCallback<GroupListResult>)'
-    parameters:
-    - id: nextLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-graph.GroupListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-graph.GroupListResult>
-  package: azure-graph
 - uid: azure-graph.Groups.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<GroupListResult>)
   children: []
   type: method
   langs:
@@ -994,8 +1102,30 @@ items:
       type:
       - Promise<azure-graph.GroupListResult>
   package: azure-graph
+- uid: azure-graph.Groups.listNext_1
+  name: listNext(string, ServiceCallback<GroupListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает список групп для текущего клиента.
+  syntax:
+    content: 'function listNext(nextLink: string, callback: ServiceCallback<GroupListResult>)'
+    parameters:
+    - id: nextLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.GroupListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.GroupListResult>
+  package: azure-graph
 - uid: azure-graph.Groups.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -1018,8 +1148,200 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-graph.GroupListResult>>
   package: azure-graph
+- uid: azure-graph.Groups.listOwners
+  name: listOwners(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwners(objectId: string, options?: Object)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: >
+        Идентификатор объекта группы, для которого необходимо получить владельцев.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Groups.listOwners_2
+  name: listOwners(string, Object, ServiceCallback<DirectoryObjectListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwners(objectId: string, options: Object, callback: ServiceCallback<DirectoryObjectListResult>)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Groups.listOwners_1
+  name: listOwners(string, ServiceCallback<DirectoryObjectListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwners(objectId: string, callback: ServiceCallback<DirectoryObjectListResult>)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Groups.listOwnersNext
+  name: listOwnersNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Groups.listOwnersNext_2
+  name: listOwnersNext(string, Object, ServiceCallback<DirectoryObjectListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersNext(nextPageLink: string, options: Object, callback: ServiceCallback<DirectoryObjectListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Groups.listOwnersNext_1
+  name: listOwnersNext(string, ServiceCallback<DirectoryObjectListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersNext(nextPageLink: string, callback: ServiceCallback<DirectoryObjectListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-graph.DirectoryObjectListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-graph.DirectoryObjectListResult>
+  package: azure-graph
+- uid: azure-graph.Groups.listOwnersNextWithHttpOperationResponse
+  name: listOwnersNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-graph.DirectoryObjectListResult>>
+  package: azure-graph
+- uid: azure-graph.Groups.listOwnersWithHttpOperationResponse
+  name: listOwnersWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listOwnersWithHttpOperationResponse(objectId: string, options?: Object)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: >
+        Идентификатор объекта группы, для которого необходимо получить владельцев.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-graph.DirectoryObjectListResult>>
+  package: azure-graph
 - uid: azure-graph.Groups.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -1038,7 +1360,7 @@ items:
       - Promise<HttpOperationResponse<azure-graph.GroupListResult>>
   package: azure-graph
 - uid: azure-graph.Groups.removeMember
-  name: removeMember
+  name: removeMember(string, string, Object)
   children: []
   type: method
   langs:
@@ -1066,34 +1388,8 @@ items:
       type:
       - Promise<void>
   package: azure-graph
-- uid: azure-graph.Groups.removeMember_1
-  name: removeMember
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Удаление члена из группы.
-  syntax:
-    content: 'function removeMember(groupObjectId: string, memberObjectId: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: groupObjectId
-      type:
-      - string
-      description: ''
-    - id: memberObjectId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-graph
 - uid: azure-graph.Groups.removeMember_2
-  name: removeMember
+  name: removeMember(string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -1122,8 +1418,34 @@ items:
       type:
       - Promise<void>
   package: azure-graph
+- uid: azure-graph.Groups.removeMember_1
+  name: removeMember(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из группы.
+  syntax:
+    content: 'function removeMember(groupObjectId: string, memberObjectId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: groupObjectId
+      type:
+      - string
+      description: ''
+    - id: memberObjectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
 - uid: azure-graph.Groups.removeMemberWithHttpOperationResponse
-  name: removeMemberWithHttpOperationResponse
+  name: removeMemberWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -1151,18 +1473,141 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-graph
+- uid: azure-graph.Groups.removeOwner
+  name: removeOwner(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из владельцев.
+  syntax:
+    content: 'function removeOwner(objectId: string, ownerObjectId: string, options?: Object)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: >
+        Идентификатор объекта группы, из которого нужно удалить владельца.
+    - id: ownerObjectId
+      type:
+      - string
+      description: >
+        Идентификатор владельца объекта
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Groups.removeOwner_2
+  name: removeOwner(string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из владельцев.
+  syntax:
+    content: 'function removeOwner(objectId: string, ownerObjectId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: ''
+    - id: ownerObjectId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Groups.removeOwner_1
+  name: removeOwner(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из владельцев.
+  syntax:
+    content: 'function removeOwner(objectId: string, ownerObjectId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: ''
+    - id: ownerObjectId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-graph
+- uid: azure-graph.Groups.removeOwnerWithHttpOperationResponse
+  name: removeOwnerWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаление члена из владельцев.
+  syntax:
+    content: 'function removeOwnerWithHttpOperationResponse(objectId: string, ownerObjectId: string, options?: Object)'
+    parameters:
+    - id: objectId
+      type:
+      - string
+      description: >
+        Идентификатор объекта группы, из которого нужно удалить владельца.
+    - id: ownerObjectId
+      type:
+      - string
+      description: >
+        Идентификатор владельца объекта
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-graph
 references:
 - uid: azure-graph.GroupAddMemberParameters
+  name: GroupAddMemberParameters
   spec.typeScript:
   - name: GroupAddMemberParameters
     fullName: GroupAddMemberParameters
     uid: azure-graph.GroupAddMemberParameters
+- uid: azure-graph.AddOwnerParameters
+  name: AddOwnerParameters
+  spec.typeScript:
+  - name: AddOwnerParameters
+    fullName: AddOwnerParameters
+    uid: azure-graph.AddOwnerParameters
 - uid: azure-graph.GroupCreateParameters
+  name: GroupCreateParameters
   spec.typeScript:
   - name: GroupCreateParameters
     fullName: GroupCreateParameters
     uid: azure-graph.GroupCreateParameters
 - uid: Promise<azure-graph.ADGroup>
+  name: ADGroup>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1172,6 +1617,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.ADGroup>
+  name: ADGroup>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1181,6 +1627,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-graph.ADGroup>>
+  name: ADGroup>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1189,39 +1636,44 @@ references:
     uid: azure-graph.ADGroup
   - name: '>>'
     fullName: '>>'
-- uid: Promise<azure-graph.GetObjectsResult>
+- uid: Promise<azure-graph.DirectoryObjectListResult>
+  name: DirectoryObjectListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
-  - name: GetObjectsResult
-    fullName: GetObjectsResult
-    uid: azure-graph.GetObjectsResult
+  - name: DirectoryObjectListResult
+    fullName: DirectoryObjectListResult
+    uid: azure-graph.DirectoryObjectListResult
   - name: '>'
     fullName: '>'
-- uid: ServiceCallback<azure-graph.GetObjectsResult>
+- uid: ServiceCallback<azure-graph.DirectoryObjectListResult>
+  name: DirectoryObjectListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
-  - name: GetObjectsResult
-    fullName: GetObjectsResult
-    uid: azure-graph.GetObjectsResult
+  - name: DirectoryObjectListResult
+    fullName: DirectoryObjectListResult
+    uid: azure-graph.DirectoryObjectListResult
   - name: '>'
     fullName: '>'
-- uid: Promise<HttpOperationResponse<azure-graph.GetObjectsResult>>
+- uid: Promise<HttpOperationResponse<azure-graph.DirectoryObjectListResult>>
+  name: DirectoryObjectListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
-  - name: GetObjectsResult
-    fullName: GetObjectsResult
-    uid: azure-graph.GetObjectsResult
+  - name: DirectoryObjectListResult
+    fullName: DirectoryObjectListResult
+    uid: azure-graph.DirectoryObjectListResult
   - name: '>>'
     fullName: '>>'
 - uid: azure-graph.GroupGetMemberGroupsParameters
+  name: GroupGetMemberGroupsParameters
   spec.typeScript:
   - name: GroupGetMemberGroupsParameters
     fullName: GroupGetMemberGroupsParameters
     uid: azure-graph.GroupGetMemberGroupsParameters
 - uid: Promise<azure-graph.GroupGetMemberGroupsResult>
+  name: GroupGetMemberGroupsResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1231,6 +1683,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.GroupGetMemberGroupsResult>
+  name: GroupGetMemberGroupsResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1240,6 +1693,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-graph.GroupGetMemberGroupsResult>>
+  name: GroupGetMemberGroupsResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1249,11 +1703,13 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: azure-graph.CheckGroupMembershipParameters
+  name: CheckGroupMembershipParameters
   spec.typeScript:
   - name: CheckGroupMembershipParameters
     fullName: CheckGroupMembershipParameters
     uid: azure-graph.CheckGroupMembershipParameters
 - uid: Promise<azure-graph.CheckGroupMembershipResult>
+  name: CheckGroupMembershipResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1263,6 +1719,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.CheckGroupMembershipResult>
+  name: CheckGroupMembershipResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1272,6 +1729,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-graph.CheckGroupMembershipResult>>
+  name: CheckGroupMembershipResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1281,6 +1739,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-graph.GroupListResult>
+  name: GroupListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1290,6 +1749,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-graph.GroupListResult>
+  name: GroupListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1299,6 +1759,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-graph.GroupListResult>>
+  name: GroupListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
