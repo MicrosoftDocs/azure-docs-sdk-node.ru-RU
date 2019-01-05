@@ -1,0 +1,288 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ed7f92526f273477e153fad3fe0ab03db0704f34
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52104229"
+items:
+- uid: '@azure/event-processor-host.LeaseManager'
+  name: LeaseManager
+  fullName: LeaseManager
+  children:
+  - '@azure/event-processor-host.LeaseManager.acquireLease'
+  - '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  - '@azure/event-processor-host.LeaseManager.deleteLease'
+  - '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  - '@azure/event-processor-host.LeaseManager.getAllLeases'
+  - '@azure/event-processor-host.LeaseManager.getLease'
+  - '@azure/event-processor-host.LeaseManager.leaseDuration'
+  - '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  - '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  - '@azure/event-processor-host.LeaseManager.releaseLease'
+  - '@azure/event-processor-host.LeaseManager.renewLease'
+  - '@azure/event-processor-host.LeaseManager.updateLease'
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.acquireLease'
+  name: acquireLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="b9f59-101">Приобрести аренду на нужный раздел для этого EventProcessorHost.</span><span class="sxs-lookup"><span data-stu-id="b9f59-101">Acquire the lease on the desired partition for this EventProcessorHost.</span></span>
+
+    <span data-ttu-id="b9f59-102">Обратите внимание, что можно получить аренду, который уже принадлежит другой узел.</span><span class="sxs-lookup"><span data-stu-id="b9f59-102">Note that it is legal to acquire a lease that is already owned by another host.</span></span>
+
+    <span data-ttu-id="b9f59-103">Аренду кражи — как перераспределяются секций при запуске дополнительные узлы.</span><span class="sxs-lookup"><span data-stu-id="b9f59-103">Lease-stealing is how partitions are redistributed when additional hosts are started.</span></span>
+
+
+    <span data-ttu-id="b9f59-104">Существующие реализации хранилища Azure могут возникать состояния гонки между двумя экземплярами узла, попытка получить или похитить в то же время аренды.</span><span class="sxs-lookup"><span data-stu-id="b9f59-104">The existing Azure Storage implementation can experience races between two host instances attempting to acquire or steal the lease at the same time.</span></span> <span data-ttu-id="b9f59-105">Чтобы избежать ситуаций, где два размещены экземпляры оба считаем, что они владеют аренды, приобретения может завершиться ошибкой без ошибок, вернув значение false и необходимо выполнить, поэтому при наличии сомнений--худшее, что может произойти, является то, что ни один экземпляр узла, которому принадлежит Аренда на короткое время.</span><span class="sxs-lookup"><span data-stu-id="b9f59-105">To avoid situations where two host instances both believe that they own the lease, acquisition can fail without errors by returning false and should do so when there is any doubt -- the worst that can happen is that no host instance owns the lease for a short time.</span></span> <span data-ttu-id="b9f59-106">Это отличается количественно, например, хранилище, создает исключение доступа, который является ошибкой.</span><span class="sxs-lookup"><span data-stu-id="b9f59-106">This is qualitatively different from, for example, the underlying store throwing an access exception, which is an error.</span></span>
+  syntax:
+    content: 'function acquireLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: <span data-ttu-id="b9f59-107">Аренда сведения для нужного раздела, как ранее получены из `getLease()`.</span><span class="sxs-lookup"><span data-stu-id="b9f59-107">Lease info for the desired partition as previously obtained from `getLease()`.</span></span>
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createAllLeasesIfNotExists'
+  name: createAllLeasesIfNotExists(string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b9f59-108">Создайте в хранилище info аренды для данного раздела, если он не существует.</span><span class="sxs-lookup"><span data-stu-id="b9f59-108">Create in the store the lease info for the given partition, if it does not exist.</span></span> <span data-ttu-id="b9f59-109">Ничего не делать, если объект уже существует в хранилище.</span><span class="sxs-lookup"><span data-stu-id="b9f59-109">Do nothing if it does exist in the store already.</span></span>
+  syntax:
+    content: 'function createAllLeasesIfNotExists(partitionIds: string[])'
+    parameters:
+    - id: partitionIds
+      type:
+      - string[]
+      description: <span data-ttu-id="b9f59-110">идентификаторы секций, создаваемых info аренды для</span><span class="sxs-lookup"><span data-stu-id="b9f59-110">ids of partitions to create lease info for</span></span>
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.createLeaseStoreIfNotExists'
+  name: createLeaseStoreIfNotExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b9f59-111">Создайте хранилище аренды, если он не существует.</span><span class="sxs-lookup"><span data-stu-id="b9f59-111">Create the lease store if it doesn't exist.</span></span> <span data-ttu-id="b9f59-112">Ничего не делать, если он существует.</span><span class="sxs-lookup"><span data-stu-id="b9f59-112">Do nothing if it does exist.</span></span>
+  syntax:
+    content: function createLeaseStoreIfNotExists()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLease'
+  name: deleteLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b9f59-113">Удалите сведения аренды в определенном разделе из хранилища.</span><span class="sxs-lookup"><span data-stu-id="b9f59-113">Delete the lease info for the given partition from the store.</span></span> <span data-ttu-id="b9f59-114">Если аренда не хранимых в определенном разделе, который рассматривается как успех.</span><span class="sxs-lookup"><span data-stu-id="b9f59-114">If there is no stored lease for the given partition, that is treated as success.</span></span>
+  syntax:
+    content: 'function deleteLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: <span data-ttu-id="b9f59-115">Аренда сведения для нужного раздела, как ранее получены из `getLease()`.</span><span class="sxs-lookup"><span data-stu-id="b9f59-115">Lease info for the desired partition as previously obtained from `getLease()`.</span></span>
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.deleteLeaseStore'
+  name: deleteLeaseStore()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b9f59-116">Удаление аренды хранилища.</span><span class="sxs-lookup"><span data-stu-id="b9f59-116">Delete lease store.</span></span>
+  syntax:
+    content: function deleteLeaseStore()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getAllLeases'
+  name: getAllLeases()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b9f59-117">Возвращает упрощенных BaseLease для всех аренд, который включает в себя имя объекта-владельца узла и ли срока аренды.</span><span class="sxs-lookup"><span data-stu-id="b9f59-117">Returns lightweight BaseLease for all leases, which includes name of owning host and whether lease is expired.</span></span> <span data-ttu-id="b9f59-118">Реализация может возвращать CompleteLease или свой собственный класс, производный от CompleteLease, но очень важно, что getAllLeases выполняться максимально быстро.</span><span class="sxs-lookup"><span data-stu-id="b9f59-118">An implementation is free to return CompleteLease or its own class derived from CompleteLease, but it is important that getAllLeases run as fast as possible.</span></span> <span data-ttu-id="b9f59-119">Если это быстрее, чтобы получить только данные, необходимые для BaseLease сильно рекомендуется это сделать.</span><span class="sxs-lookup"><span data-stu-id="b9f59-119">If it is faster to obtain only the information required for a BaseLease, we heavily recommend doing that.</span></span>
+  syntax:
+    content: function getAllLeases()
+    parameters: []
+    return:
+      type:
+      - Promise<@azure/event-processor-host.BaseLease[]>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.getLease'
+  name: getLease(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b9f59-120">Возвращает сведения о аренды для указанной секции.</span><span class="sxs-lookup"><span data-stu-id="b9f59-120">Gets the lease info for the specified partition.</span></span> <span data-ttu-id="b9f59-121">Может возвращать `undefined` если аренда не был создан в хранилище для указанной секции.</span><span class="sxs-lookup"><span data-stu-id="b9f59-121">Can return `undefined` if no lease has been created in the store for the specified partition.</span></span>
+  syntax:
+    content: 'function getLease(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: <span data-ttu-id="b9f59-122">Идентификатор секции для получения аренды.</span><span class="sxs-lookup"><span data-stu-id="b9f59-122">Partition id to get the lease for.</span></span>
+    return:
+      type:
+      - Promise<@azure/event-processor-host.CompleteLease | undefined>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseDuration'
+  name: leaseDuration
+  fullName: leaseDuration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="b9f59-123">{number} leaseDuration продолжительность аренды **в секундах** до истечения срока его действия, если не обновлен.</span><span class="sxs-lookup"><span data-stu-id="b9f59-123">{number} leaseDuration Duration of a lease **in seconds** before it expires unless renewed.</span></span>
+  syntax:
+    content: 'leaseDuration: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseRenewInterval'
+  name: leaseRenewInterval
+  fullName: leaseRenewInterval
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="b9f59-124">leaseRenewInterval {number} в течение заданного интервала **в секундах** между операциями сканирования.</span><span class="sxs-lookup"><span data-stu-id="b9f59-124">{number} leaseRenewInterval The sleep interval **in seconds** between scans.</span></span>
+
+
+    <span data-ttu-id="b9f59-125">Позволяет указать PartitionManager, как часто следует проверять аренды и обновлять их реализации диспетчера аренды.</span><span class="sxs-lookup"><span data-stu-id="b9f59-125">Allows a lease manager implementation to specify to PartitionManager how often it should scan leases and renew them.</span></span> <span data-ttu-id="b9f59-126">Чтобы перераспределить аренды за отведенное время, после узла прекращает операционной, мы рекомендуем относительно короткий интервал времени, например через десять секунд.</span><span class="sxs-lookup"><span data-stu-id="b9f59-126">In order to redistribute leases in a timely fashion after a host ceases operating, we recommend a relatively short interval, such as ten seconds.</span></span> <span data-ttu-id="b9f59-127">Очевидно, что она должна быть меньше половины продолжительность аренды, чтобы предотвратить случайное истечения срока действия.</span><span class="sxs-lookup"><span data-stu-id="b9f59-127">Obviously it should be less than half of the lease length, to prevent accidental expiration.</span></span>
+  syntax:
+    content: 'leaseRenewInterval: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.leaseStoreExists'
+  name: leaseStoreExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="b9f59-128">Существует ли хранилище аренды?</span><span class="sxs-lookup"><span data-stu-id="b9f59-128">Does the lease store exist?</span></span>
+  syntax:
+    content: function leaseStoreExists()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.releaseLease'
+  name: releaseLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="b9f59-129">Освободить аренду, содержащийся в этом узле.</span><span class="sxs-lookup"><span data-stu-id="b9f59-129">Give up a lease currently held by this host.</span></span>
+
+    <span data-ttu-id="b9f59-130">Если украдены, или истек срок действия аренды, ее освобождение является необязательным и при попытке это сделать не удастся.</span><span class="sxs-lookup"><span data-stu-id="b9f59-130">If the lease has been stolen, or expired, releasing it is unnecessary, and will fail if attempted.</span></span>
+  syntax:
+    content: 'function releaseLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: <span data-ttu-id="b9f59-131">Аренда сведения для нужного раздела, как ранее получены из `getLease()`.</span><span class="sxs-lookup"><span data-stu-id="b9f59-131">Lease info for the desired partition as previously obtained from `getLease()`.</span></span>
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.renewLease'
+  name: renewLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="b9f59-132">Обновление аренды, содержащийся в этом узле.</span><span class="sxs-lookup"><span data-stu-id="b9f59-132">Renew a lease currently held by this host.</span></span>
+
+    <span data-ttu-id="b9f59-133">Если срок аренды был занят другой экземпляр узла (заимствованных или после истечения срока действия) или явно освобожден, renewLease должен возвращать значение false.</span><span class="sxs-lookup"><span data-stu-id="b9f59-133">If the lease has been taken by another host instance (either stolen or after expiration) or explicitly released, renewLease must return false.</span></span> <span data-ttu-id="b9f59-134">С реализацией на основе хранилища Azure, можно продлить аренду с истекшим сроком действия, не был занят другой узел, поэтому реализация можно разрешить, или нет, какая дата наступит удобным.</span><span class="sxs-lookup"><span data-stu-id="b9f59-134">With the Azure Storage-based implementation, it IS possible to renew an expired lease that has not been taken by another host, so your implementation can allow that or not, whichever is convenient.</span></span> <span data-ttu-id="b9f59-135">Если этого не произошло, renewLease должна возвратить значение false.</span><span class="sxs-lookup"><span data-stu-id="b9f59-135">If it does not, renewLease should return false.</span></span>
+  syntax:
+    content: 'function renewLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: <span data-ttu-id="b9f59-136">Продление аренды.</span><span class="sxs-lookup"><span data-stu-id="b9f59-136">lease to be renewed.</span></span>
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.LeaseManager.updateLease'
+  name: updateLease(CompleteLease)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="b9f59-137">Обновите хранилище с информацией в предоставленный аренды.</span><span class="sxs-lookup"><span data-stu-id="b9f59-137">Update the store with the information in the provided lease.</span></span>
+
+    <span data-ttu-id="b9f59-138">Это необходимо для в настоящее время хранения аренды для его обновления.</span><span class="sxs-lookup"><span data-stu-id="b9f59-138">It is necessary to currently hold a lease in order to update it.</span></span> <span data-ttu-id="b9f59-139">Если срок аренды был украден или просроченные или выпущенные, ее нельзя обновить.</span><span class="sxs-lookup"><span data-stu-id="b9f59-139">If the lease has been stolen, or expired, or released, it cannot be updated.</span></span> <span data-ttu-id="b9f59-140">Реализации диспетчера аренды следует возобновить аренду, прежде чем выполнять обновление, чтобы предотвратить истечение срока действия аренды во время процесса.</span><span class="sxs-lookup"><span data-stu-id="b9f59-140">Lease manager implementations should renew the lease before performing the update to avoid lease expiration during the process.</span></span>
+  syntax:
+    content: 'function updateLease(lease: CompleteLease)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: <span data-ttu-id="b9f59-141">Новые сведения об аренде для сохранения.</span><span class="sxs-lookup"><span data-stu-id="b9f59-141">New lease information to be stored.</span></span>
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+- uid: Promise<@azure/event-processor-host.BaseLease[]>
+  name: BaseLease[]>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: BaseLease
+    fullName: BaseLease
+    uid: '@azure/event-processor-host.BaseLease'
+  - name: '[]>'
+    fullName: '[]>'
+- uid: Promise<@azure/event-processor-host.CompleteLease | undefined>
+  name: CompleteLease | undefined>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+  - name: " | undefined>"
+    fullName: " | undefined>"

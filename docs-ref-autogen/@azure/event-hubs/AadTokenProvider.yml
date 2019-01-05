@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 3d038775fa692375bd20b50760068367a55dc1b0
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48543782"
+items:
+- uid: '@azure/event-hubs.AadTokenProvider'
+  name: AadTokenProvider
+  fullName: AadTokenProvider
+  children:
+  - '@azure/event-hubs.AadTokenProvider.constructor'
+  - '@azure/event-hubs.AadTokenProvider.credentials'
+  - '@azure/event-hubs.AadTokenProvider.getToken'
+  - '@azure/event-hubs.AadTokenProvider.tokenRenewalMarginInSeconds'
+  - '@azure/event-hubs.AadTokenProvider.tokenValidTimeInSeconds'
+  langs:
+  - typeScript
+  type: class
+  summary: <span data-ttu-id="11c33-101">Определяет TokenProvider AAD (Azure ActiveDirectory).</span><span class="sxs-lookup"><span data-stu-id="11c33-101">Defines the AAD (Azure ActiveDirectory) TokenProvider.</span></span>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.AadTokenProvider.constructor'
+  name: AadTokenProvider
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'new AadTokenProvider(credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials)'
+    parameters:
+    - id: credentials
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+      description: ''
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.AadTokenProvider.credentials'
+  name: credentials
+  fullName: credentials
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="11c33-102">{(ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | Учетные данные MSITokenCredentials)} — учетные данные объекта после успешной проверки подлинности в AAD.</span><span class="sxs-lookup"><span data-stu-id="11c33-102">{(ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials)} credentials - The credentials object after successful authentication with AAD.</span></span>
+  syntax:
+    content: 'credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials'
+    return:
+      type:
+      - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.AadTokenProvider.getToken'
+  name: getToken
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="11c33-103">Получает маркер jwt для указанной аудитории</span><span class="sxs-lookup"><span data-stu-id="11c33-103">Gets the jwt token for the specified audience</span></span>
+  syntax:
+    content: 'function getToken(audience?: string)'
+    parameters:
+    - id: audience
+      type:
+      - string
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<@azure/event-hubs.TokenInfo>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.AadTokenProvider.tokenRenewalMarginInSeconds'
+  name: tokenRenewalMarginInSeconds
+  fullName: tokenRenewalMarginInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="11c33-104">{number} tokenRenewalMarginInSeconds - количество секунд, в течение которых он хорошо подходит для продления токена.</span><span class="sxs-lookup"><span data-stu-id="11c33-104">{number} tokenRenewalMarginInSeconds - The number of seconds within which it is good to renew the token.</span></span> <span data-ttu-id="11c33-105">Константа значение 270 секунд (4,5 минут).</span><span class="sxs-lookup"><span data-stu-id="11c33-105">A constant set to 270 seconds (4.5 minutes).</span></span> <span data-ttu-id="11c33-106">Adal имеет набор окна 5 минут, когда она обновляет маркер из кэша маркера.</span><span class="sxs-lookup"><span data-stu-id="11c33-106">Adal has a set window of 5 minutes when it refreshes the token from its token cache.</span></span>
+  syntax:
+    content: 'tokenRenewalMarginInSeconds: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.AadTokenProvider.tokenValidTimeInSeconds'
+  name: tokenValidTimeInSeconds
+  fullName: tokenValidTimeInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="11c33-107">{number} tokenValidTimeInSeconds - количество секунд, для которых маркер является допустимым.</span><span class="sxs-lookup"><span data-stu-id="11c33-107">{number} tokenValidTimeInSeconds - The number of seconds for which the token is valid.</span></span> <span data-ttu-id="11c33-108">Константа значение 3599 секунд (примерно 1 час).</span><span class="sxs-lookup"><span data-stu-id="11c33-108">A constant set to 3599 seconds (~1 hour).</span></span> <span data-ttu-id="11c33-109">Adal имеет задано допустимое время составляет 1 час (3600 секунд), когда она обновляет токен доступа.</span><span class="sxs-lookup"><span data-stu-id="11c33-109">Adal has a set valid time of 1 hour (3600 seconds) when it refreshes the access token.</span></span>
+  syntax:
+    content: 'tokenValidTimeInSeconds: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+references:
+- uid: Promise<@azure/event-hubs.TokenInfo>
+  name: TokenInfo>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: TokenInfo
+    fullName: TokenInfo
+    uid: '@azure/event-hubs.TokenInfo'
+  - name: '>'
+    fullName: '>'

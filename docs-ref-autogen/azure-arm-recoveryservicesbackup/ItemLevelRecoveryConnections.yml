@@ -1,0 +1,446 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: f421b5bdf7a913d501c4c1b11aa369c76f4e4f99
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52149629"
+items:
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections
+  name: ItemLevelRecoveryConnections
+  fullName: ItemLevelRecoveryConnections
+  children:
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_2
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_1
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provisionWithHttpOperationResponse
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_2
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_1
+  - azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revokeWithHttpOperationResponse
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision
+  name: provision(string, string, string, string, string, string, ILRRequestResource, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="54546-101">Подготавливает сценарий, который вызывает подключение iSCSI для резервного копирования данных.</span><span class="sxs-lookup"><span data-stu-id="54546-101">Provisions a script which invokes an iSCSI connection to the backup data.</span></span>
+
+    <span data-ttu-id="54546-102">Выполнение этого сценария открывает проводник, отображение всех восстанавливаемых файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="54546-102">Executing this script opens a file explorer displaying all the recoverable files and folders.</span></span> <span data-ttu-id="54546-103">Это асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="54546-103">This is an asynchronous operation.</span></span> <span data-ttu-id="54546-104">Чтобы узнать состояние подготовки, вызовите GetProtectedItemOperationResult API.</span><span class="sxs-lookup"><span data-stu-id="54546-104">To know the status of provisioning, call GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, options?: Object)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-105">Имя хранилища служб восстановления.</span><span class="sxs-lookup"><span data-stu-id="54546-105">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-106">Имя группы ресурсов, где хранилище служб восстановления нет.</span><span class="sxs-lookup"><span data-stu-id="54546-106">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-107">Имя структуры, связанные с элементами резервных копий.</span><span class="sxs-lookup"><span data-stu-id="54546-107">Fabric name associated with the backed up items.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-108">Имя контейнера, связанные с элементами резервных копий.</span><span class="sxs-lookup"><span data-stu-id="54546-108">Container name associated with the backed up items.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-109">Резервные копии имя элемента, файлы и папки будут восстановлены.</span><span class="sxs-lookup"><span data-stu-id="54546-109">Backed up item name whose files/folders are to be restored.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-110">Идентификатор точки восстановления, который представляет резервные копии данных.</span><span class="sxs-lookup"><span data-stu-id="54546-110">Recovery point ID which represents backed up data.</span></span> <span data-ttu-id="54546-111">подключение iSCSI будет подготовлена для этих резервных копий данных.</span><span class="sxs-lookup"><span data-stu-id="54546-111">iSCSI connection will be provisioned for this backed up data.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ILRRequestResource
+      description: >
+        <span data-ttu-id="54546-112">запрос ресурса на уровне Элементов</span><span class="sxs-lookup"><span data-stu-id="54546-112">resource ILR request</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_2
+  name: provision(string, string, string, string, string, string, ILRRequestResource, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="54546-113">Подготавливает сценарий, который вызывает подключение iSCSI для резервного копирования данных.</span><span class="sxs-lookup"><span data-stu-id="54546-113">Provisions a script which invokes an iSCSI connection to the backup data.</span></span>
+
+    <span data-ttu-id="54546-114">Выполнение этого сценария открывает проводник, отображение всех восстанавливаемых файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="54546-114">Executing this script opens a file explorer displaying all the recoverable files and folders.</span></span> <span data-ttu-id="54546-115">Это асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="54546-115">This is an asynchronous operation.</span></span> <span data-ttu-id="54546-116">Чтобы узнать состояние подготовки, вызовите GetProtectedItemOperationResult API.</span><span class="sxs-lookup"><span data-stu-id="54546-116">To know the status of provisioning, call GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ILRRequestResource
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provision_1
+  name: provision(string, string, string, string, string, string, ILRRequestResource, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="54546-117">Подготавливает сценарий, который вызывает подключение iSCSI для резервного копирования данных.</span><span class="sxs-lookup"><span data-stu-id="54546-117">Provisions a script which invokes an iSCSI connection to the backup data.</span></span>
+
+    <span data-ttu-id="54546-118">Выполнение этого сценария открывает проводник, отображение всех восстанавливаемых файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="54546-118">Executing this script opens a file explorer displaying all the recoverable files and folders.</span></span> <span data-ttu-id="54546-119">Это асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="54546-119">This is an asynchronous operation.</span></span> <span data-ttu-id="54546-120">Чтобы узнать состояние подготовки, вызовите GetProtectedItemOperationResult API.</span><span class="sxs-lookup"><span data-stu-id="54546-120">To know the status of provisioning, call GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function provision(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ILRRequestResource
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.provisionWithHttpOperationResponse
+  name: provisionWithHttpOperationResponse(string, string, string, string, string, string, ILRRequestResource, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="54546-121">Подготавливает сценарий, который вызывает подключение iSCSI для резервного копирования данных.</span><span class="sxs-lookup"><span data-stu-id="54546-121">Provisions a script which invokes an iSCSI connection to the backup data.</span></span>
+
+    <span data-ttu-id="54546-122">Выполнение этого сценария открывает проводник, отображение всех восстанавливаемых файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="54546-122">Executing this script opens a file explorer displaying all the recoverable files and folders.</span></span> <span data-ttu-id="54546-123">Это асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="54546-123">This is an asynchronous operation.</span></span> <span data-ttu-id="54546-124">Чтобы узнать состояние подготовки, вызовите GetProtectedItemOperationResult API.</span><span class="sxs-lookup"><span data-stu-id="54546-124">To know the status of provisioning, call GetProtectedItemOperationResult API.</span></span>
+  syntax:
+    content: 'function provisionWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, parameters: ILRRequestResource, options?: Object)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-125">Имя хранилища служб восстановления.</span><span class="sxs-lookup"><span data-stu-id="54546-125">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-126">Имя группы ресурсов, где хранилище служб восстановления нет.</span><span class="sxs-lookup"><span data-stu-id="54546-126">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-127">Имя структуры, связанные с элементами резервных копий.</span><span class="sxs-lookup"><span data-stu-id="54546-127">Fabric name associated with the backed up items.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-128">Имя контейнера, связанные с элементами резервных копий.</span><span class="sxs-lookup"><span data-stu-id="54546-128">Container name associated with the backed up items.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-129">Резервные копии имя элемента, файлы и папки будут восстановлены.</span><span class="sxs-lookup"><span data-stu-id="54546-129">Backed up item name whose files/folders are to be restored.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-130">Идентификатор точки восстановления, который представляет резервные копии данных.</span><span class="sxs-lookup"><span data-stu-id="54546-130">Recovery point ID which represents backed up data.</span></span> <span data-ttu-id="54546-131">подключение iSCSI будет подготовлена для этих резервных копий данных.</span><span class="sxs-lookup"><span data-stu-id="54546-131">iSCSI connection will be provisioned for this backed up data.</span></span>
+    - id: parameters
+      type:
+      - azure-arm-recoveryservicesbackup.ILRRequestResource
+      description: >
+        <span data-ttu-id="54546-132">запрос ресурса на уровне Элементов</span><span class="sxs-lookup"><span data-stu-id="54546-132">resource ILR request</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke
+  name: revoke(string, string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="54546-133">Отменяет подключение iSCSI, который может использоваться для загрузки скрипта.</span><span class="sxs-lookup"><span data-stu-id="54546-133">Revokes an iSCSI connection which can be used to download a script.</span></span>
+
+    <span data-ttu-id="54546-134">Выполнение этого сценария открывает проводник, отображение всех восстанавливаемых файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="54546-134">Executing this script opens a file explorer displaying all recoverable files and folders.</span></span> <span data-ttu-id="54546-135">Это асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="54546-135">This is an asynchronous operation.</span></span>
+  syntax:
+    content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: Object)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-136">Имя хранилища служб восстановления.</span><span class="sxs-lookup"><span data-stu-id="54546-136">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-137">Имя группы ресурсов, где хранилище служб восстановления нет.</span><span class="sxs-lookup"><span data-stu-id="54546-137">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-138">Имя структуры, связанные с элементами резервных копий.</span><span class="sxs-lookup"><span data-stu-id="54546-138">Fabric name associated with the backed up items.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-139">Имя контейнера, связанные с элементами резервных копий.</span><span class="sxs-lookup"><span data-stu-id="54546-139">Container name associated with the backed up items.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-140">Резервные копии имя элемента, файлы и папки будут восстановлены.</span><span class="sxs-lookup"><span data-stu-id="54546-140">Backed up item name whose files/folders are to be restored.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-141">Идентификатор точки восстановления, который представляет резервные копии данных.</span><span class="sxs-lookup"><span data-stu-id="54546-141">Recovery point ID which represents backed up data.</span></span> <span data-ttu-id="54546-142">подключение iSCSI будет отозвано для этих резервных копий данных.</span><span class="sxs-lookup"><span data-stu-id="54546-142">iSCSI connection will be revoked for this backed up data.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_2
+  name: revoke(string, string, string, string, string, string, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="54546-143">Отменяет подключение iSCSI, который может использоваться для загрузки скрипта.</span><span class="sxs-lookup"><span data-stu-id="54546-143">Revokes an iSCSI connection which can be used to download a script.</span></span>
+
+    <span data-ttu-id="54546-144">Выполнение этого сценария открывает проводник, отображение всех восстанавливаемых файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="54546-144">Executing this script opens a file explorer displaying all recoverable files and folders.</span></span> <span data-ttu-id="54546-145">Это асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="54546-145">This is an asynchronous operation.</span></span>
+  syntax:
+    content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revoke_1
+  name: revoke(string, string, string, string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="54546-146">Отменяет подключение iSCSI, который может использоваться для загрузки скрипта.</span><span class="sxs-lookup"><span data-stu-id="54546-146">Revokes an iSCSI connection which can be used to download a script.</span></span>
+
+    <span data-ttu-id="54546-147">Выполнение этого сценария открывает проводник, отображение всех восстанавливаемых файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="54546-147">Executing this script opens a file explorer displaying all recoverable files and folders.</span></span> <span data-ttu-id="54546-148">Это асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="54546-148">This is an asynchronous operation.</span></span>
+  syntax:
+    content: 'function revoke(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: ''
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: fabricName
+      type:
+      - string
+      description: ''
+    - id: containerName
+      type:
+      - string
+      description: ''
+    - id: protectedItemName
+      type:
+      - string
+      description: ''
+    - id: recoveryPointId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-recoveryservicesbackup
+- uid: azure-arm-recoveryservicesbackup.ItemLevelRecoveryConnections.revokeWithHttpOperationResponse
+  name: revokeWithHttpOperationResponse(string, string, string, string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="54546-149">Отменяет подключение iSCSI, который может использоваться для загрузки скрипта.</span><span class="sxs-lookup"><span data-stu-id="54546-149">Revokes an iSCSI connection which can be used to download a script.</span></span>
+
+    <span data-ttu-id="54546-150">Выполнение этого сценария открывает проводник, отображение всех восстанавливаемых файлов и папок.</span><span class="sxs-lookup"><span data-stu-id="54546-150">Executing this script opens a file explorer displaying all recoverable files and folders.</span></span> <span data-ttu-id="54546-151">Это асинхронная операция.</span><span class="sxs-lookup"><span data-stu-id="54546-151">This is an asynchronous operation.</span></span>
+  syntax:
+    content: 'function revokeWithHttpOperationResponse(vaultName: string, resourceGroupName: string, fabricName: string, containerName: string, protectedItemName: string, recoveryPointId: string, options?: Object)'
+    parameters:
+    - id: vaultName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-152">Имя хранилища служб восстановления.</span><span class="sxs-lookup"><span data-stu-id="54546-152">The name of the recovery services vault.</span></span>
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-153">Имя группы ресурсов, где хранилище служб восстановления нет.</span><span class="sxs-lookup"><span data-stu-id="54546-153">The name of the resource group where the recovery services vault is present.</span></span>
+    - id: fabricName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-154">Имя структуры, связанные с элементами резервных копий.</span><span class="sxs-lookup"><span data-stu-id="54546-154">Fabric name associated with the backed up items.</span></span>
+    - id: containerName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-155">Имя контейнера, связанные с элементами резервных копий.</span><span class="sxs-lookup"><span data-stu-id="54546-155">Container name associated with the backed up items.</span></span>
+    - id: protectedItemName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-156">Резервные копии имя элемента, файлы и папки будут восстановлены.</span><span class="sxs-lookup"><span data-stu-id="54546-156">Backed up item name whose files/folders are to be restored.</span></span>
+    - id: recoveryPointId
+      type:
+      - string
+      description: >
+        <span data-ttu-id="54546-157">Идентификатор точки восстановления, который представляет резервные копии данных.</span><span class="sxs-lookup"><span data-stu-id="54546-157">Recovery point ID which represents backed up data.</span></span> <span data-ttu-id="54546-158">подключение iSCSI будет отозвано для этих резервных копий данных.</span><span class="sxs-lookup"><span data-stu-id="54546-158">iSCSI connection will be revoked for this backed up data.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-recoveryservicesbackup
+references:
+- uid: azure-arm-recoveryservicesbackup.ILRRequestResource
+  name: ILRRequestResource
+  spec.typeScript:
+  - name: ILRRequestResource
+    fullName: ILRRequestResource
+    uid: azure-arm-recoveryservicesbackup.ILRRequestResource

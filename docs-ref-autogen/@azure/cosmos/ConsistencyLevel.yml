@@ -1,0 +1,86 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 345d4aba2a62e1299bfbc896e1d6304120aa5fc2
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52098862"
+items:
+- uid: '@azure/cosmos.ConsistencyLevel'
+  name: ConsistencyLevel
+  fullName: ConsistencyLevel
+  children:
+  - '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  - '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  - '@azure/cosmos.ConsistencyLevel.Eventual'
+  - '@azure/cosmos.ConsistencyLevel.Session'
+  - '@azure/cosmos.ConsistencyLevel.Strong'
+  langs:
+  - typeScript
+  type: enum
+  summary: >
+    <span data-ttu-id="44c74-101">Представляет уровней согласованности, поддерживаемых для операций клиента Azure Cosmos DB.</span><span class="sxs-lookup"><span data-stu-id="44c74-101">Represents the consistency levels supported for Azure Cosmos DB client operations.</span></span><br>
+
+    <span data-ttu-id="44c74-102">Запрошенный ConsistencyLevel должен совпадать или иметь менее, подготовленных для учетной записи базы данных.</span><span class="sxs-lookup"><span data-stu-id="44c74-102">The requested ConsistencyLevel must match or be weaker than that provisioned for the database account.</span></span>
+
+    <span data-ttu-id="44c74-103">Уровни согласованности.</span><span class="sxs-lookup"><span data-stu-id="44c74-103">Consistency levels.</span></span>
+
+    <span data-ttu-id="44c74-104">Уровни согласованности по порядку стойкость являются строгим, BoundedStaleness, сеанса, согласованность префиксов и Eventual.</span><span class="sxs-lookup"><span data-stu-id="44c74-104">Consistency levels by order of strength are Strong, BoundedStaleness, Session, Consistent Prefix, and Eventual.</span></span>
+
+
+    <span data-ttu-id="44c74-105">См. в разделе https://aka.ms/cosmos-consistency Дополнительные сведения об уровнях согласованности.</span><span class="sxs-lookup"><span data-stu-id="44c74-105">See https://aka.ms/cosmos-consistency for more detailed documentation on Consistency Levels.</span></span>
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.BoundedStaleness'
+  name: BoundedStaleness
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="44c74-106">С ограниченным устареванием гарантирует, что операции чтения не слишком устарел.</span><span class="sxs-lookup"><span data-stu-id="44c74-106">Bounded Staleness guarantees that reads are not too out-of-date.</span></span>
+
+    <span data-ttu-id="44c74-107">Это может быть настроено на основе числа операций (MaxStalenessPrefix) или время (MaxStalenessIntervalInSeconds).</span><span class="sxs-lookup"><span data-stu-id="44c74-107">This can be configured based on number of operations (MaxStalenessPrefix) or time (MaxStalenessIntervalInSeconds).</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.ConsistentPrefix'
+  name: ConsistentPrefix
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="44c74-108">ConsistentPrefix согласованности гарантирует, что операции чтения будут возвращать часть префиксов все операции записи без разрывов.</span><span class="sxs-lookup"><span data-stu-id="44c74-108">ConsistentPrefix Consistency guarantees that reads will return some prefix of all writes with no gaps.</span></span>
+
+    <span data-ttu-id="44c74-109">Все операции записи быть со временем будут доступны для операций чтения. "</span><span class="sxs-lookup"><span data-stu-id="44c74-109">All writes will be eventually be available for reads.\`</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Eventual'
+  name: Eventual
+  children: []
+  langs:
+  - typeScript
+  summary: >-
+    <span data-ttu-id="44c74-110">Согласованность гарантирует, что чтение будет возвращать подмножество записей.</span><span class="sxs-lookup"><span data-stu-id="44c74-110">Eventual Consistency guarantees that reads will return a subset of writes.</span></span>
+
+    <span data-ttu-id="44c74-111">Все операции записи быть со временем будут доступны для операций чтения.</span><span class="sxs-lookup"><span data-stu-id="44c74-111">All writes will be eventually be available for reads.</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Session'
+  name: Session
+  children: []
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="44c74-112">Согласованность уровня сеанса гарантирует монотонное чтение (было прочитано старые данные нового, а затем старый еще раз), монотонная запись (порядок операций записи) "и" чтение ваших записей, (ваши операции записи немедленно отражаются на чтение), в любой единственному сеансу.</span><span class="sxs-lookup"><span data-stu-id="44c74-112">Session Consistency guarantees monotonic reads (you never read old data, then new, then old again), monotonic writes (writes are ordered) and read your writes (your writes are immediately visible to your reads) within any single session.</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.ConsistencyLevel.Strong'
+  name: Strong
+  children: []
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="44c74-113">Гарантии согласованности strong, операции чтения всегда возвращают значение последней операции записи.</span><span class="sxs-lookup"><span data-stu-id="44c74-113">Strong Consistency guarantees that read operations always return the value that was last written.</span></span>
+  type: field
+  numericValue: 
+  package: '@azure/cosmos'

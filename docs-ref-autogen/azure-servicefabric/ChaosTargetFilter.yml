@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 33550dceefa3b059bcd7907c0d88c79aa98b4b0a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52090489"
+items:
+- uid: azure-servicefabric.ChaosTargetFilter
+  name: ChaosTargetFilter
+  fullName: ChaosTargetFilter
+  children:
+  - azure-servicefabric.ChaosTargetFilter.applicationInclusionList
+  - azure-servicefabric.ChaosTargetFilter.nodeTypeInclusionList
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    <span data-ttu-id="7ba68-101">Определяет все фильтры для целевых ошибки Chaos, например, сбой только определенных типов узлов или сбой только определенных приложений.</span><span class="sxs-lookup"><span data-stu-id="7ba68-101">Defines all filters for targeted Chaos faults, for example, faulting only certain node types or faulting only certain applications.</span></span>
+
+    <span data-ttu-id="7ba68-102">Если фильтр ChaosTargetFilter не используется, Chaos создает ошибки во всех сущностях кластера.</span><span class="sxs-lookup"><span data-stu-id="7ba68-102">If ChaosTargetFilter is not used, Chaos faults all cluster entities.</span></span> <span data-ttu-id="7ba68-103">Если фильтр ChaosTargetFilter используется, Chaos создает ошибки только в тех сущностях, которые соответствуют параметрам ChaosTargetFilter.</span><span class="sxs-lookup"><span data-stu-id="7ba68-103">If ChaosTargetFilter is used, Chaos faults only the entities that meet the ChaosTargetFilter specification.</span></span> <span data-ttu-id="7ba68-104">NodeTypeInclusionList и ApplicationInclusionList допускают только семантику объединения.</span><span class="sxs-lookup"><span data-stu-id="7ba68-104">NodeTypeInclusionList and ApplicationInclusionList allow a union semantics only.</span></span>
+
+    <span data-ttu-id="7ba68-105">Вы не сможете использовать пересечение условий NodeTypeInclusionList и ApplicationInclusionList.</span><span class="sxs-lookup"><span data-stu-id="7ba68-105">It is not possible to specify an intersection of NodeTypeInclusionList and ApplicationInclusionList.</span></span> <span data-ttu-id="7ba68-106">Например, нельзя создать правило "создавать ошибки в этом приложении, только если оно размещено в узле этого типа".</span><span class="sxs-lookup"><span data-stu-id="7ba68-106">For example, it is not possible to specify "fault this application only when it is on that node type."</span></span>
+
+    <span data-ttu-id="7ba68-107">Если правило NodeTypeInclusionList или ApplicationInclusionList включают определенную сущность, ее нельзя исключить с помощью ChaosTargetFilter.</span><span class="sxs-lookup"><span data-stu-id="7ba68-107">Once an entity is included in either NodeTypeInclusionList or ApplicationInclusionList, that entity cannot be excluded using ChaosTargetFilter.</span></span> <span data-ttu-id="7ba68-108">В приложении X могут создаваться ошибки Chaos, даже если оно не входит в список ApplicationInclusionList, если в определенный момент это приложение будет выполняться в узле типа Y, включенного в список NodeTypeInclusionList.</span><span class="sxs-lookup"><span data-stu-id="7ba68-108">Even if applicationX does not appear in ApplicationInclusionList, in some Chaos iteration applicationX can be faulted because it happens to be on a node of nodeTypeY that is included in NodeTypeInclusionList.</span></span> <span data-ttu-id="7ba68-109">Если NodeTypeInclusionList и ApplicationInclusionList одновременно не указаны или имеют значение NULL, создается исключение ArgumentException.</span><span class="sxs-lookup"><span data-stu-id="7ba68-109">If both NodeTypeInclusionList and ApplicationInclusionList are null or empty, an ArgumentException is thrown.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.ChaosTargetFilter.applicationInclusionList
+  name: applicationInclusionList
+  fullName: applicationInclusionList
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="7ba68-110">Список приложений URI, чтобы включать в ошибки Chaos.</span><span class="sxs-lookup"><span data-stu-id="7ba68-110">A list of application URI's to include in Chaos faults.</span></span>
+
+    <span data-ttu-id="7ba68-111">Все реплики, относящиеся к службам этих приложений, становятся доступными для ошибок реплики Chaos (перезапуск реплики, удаление реплики, перемещения первичной или вторичной реплики).</span><span class="sxs-lookup"><span data-stu-id="7ba68-111">All replicas belonging to services of these applications are amenable to replica faults (restart replica, remove replica, move primary, and move secondary) by Chaos.</span></span>
+
+    <span data-ttu-id="7ba68-112">Chaos может перезапустить пакет кода, только если в нем размещены реплики указанных приложений.</span><span class="sxs-lookup"><span data-stu-id="7ba68-112">Chaos may restart a code package only if the code package hosts replicas of these applications only.</span></span>
+
+    <span data-ttu-id="7ba68-113">Если приложение не включено в этот список, для него иногда могут создаваться ошибки Chaos, если в определенный момент это приложение будет выполняться в узле определенного типа, включенного в список NodeTypeInclusionList.</span><span class="sxs-lookup"><span data-stu-id="7ba68-113">If an application does not appear in this list, it can still be faulted in some Chaos iteration if the application ends up on a node of a node type that is included in NodeTypeInclusionList.</span></span>
+
+    <span data-ttu-id="7ba68-114">Тем не менее, при этом приложение x привязано к типу узла y посредством ограничений размещения и этом приложение x отсутствует списке ApplicationInclusionList и тип узла y отсутствует списке NodeTypeInclusionList, затем в приложении x будет никогда не находится в состоянии сбоя.</span><span class="sxs-lookup"><span data-stu-id="7ba68-114">However, if applicationX is tied to nodeTypeY through placement constraints and applicationX is absent from ApplicationInclusionList and nodeTypeY is absent from NodeTypeInclusionList, then applicationX will never be faulted.</span></span>
+
+    <span data-ttu-id="7ba68-115">В этот список можно включить не более 1000 имен приложений. Чтобы увеличить это число, измените параметр конфигурации MaxNumberOfApplicationsInChaosEntityFilter.</span><span class="sxs-lookup"><span data-stu-id="7ba68-115">At most 1000 application names can be included in this list, to increase this number, a config upgrade is required for MaxNumberOfApplicationsInChaosEntityFilter configuration.</span></span>
+  optional: true
+  syntax:
+    content: 'applicationInclusionList?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.ChaosTargetFilter.nodeTypeInclusionList
+  name: nodeTypeInclusionList
+  fullName: nodeTypeInclusionList
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="7ba68-116">Список типов узлов, чтобы включать в ошибки Chaos.</span><span class="sxs-lookup"><span data-stu-id="7ba68-116">A list of node types to include in Chaos faults.</span></span>
+
+    <span data-ttu-id="7ba68-117">Для узлов этого типа применяются все типы ошибок (перезапуск узла, перезапуск пакета кода, удаление реплики, перезапуск реплики, перемещение первичной и вторичной реплик).</span><span class="sxs-lookup"><span data-stu-id="7ba68-117">All types of faults (restart node, restart code package, remove replica, restart replica, move primary, and move secondary) are enabled for the nodes of these node types.</span></span>
+
+    <span data-ttu-id="7ba68-118">Если тип узла (скажем, списка Applicationinclusionlist) не отображается в список NodeTypeInclusionList, то сбоев на уровне узла (например, типа) никогда не следует включать для список ошибок кода пакета и реплики по-прежнему может использоваться для списка Applicationinclusionlist, если приложение в ApplicationInclusionList.</span><span class="sxs-lookup"><span data-stu-id="7ba68-118">If a nodetype (say NodeTypeX) does not appear in the NodeTypeInclusionList, then node level faults (like NodeRestart) will never be enabled for the nodes of NodeTypeX, but code package and replica faults can still be enabled for NodeTypeX if an application in the ApplicationInclusionList.</span></span>
+
+    <span data-ttu-id="7ba68-119">Происходит, находиться на узле из списка Applicationinclusionlist.</span><span class="sxs-lookup"><span data-stu-id="7ba68-119">happens to reside on a node of NodeTypeX.</span></span>
+
+    <span data-ttu-id="7ba68-120">В этот список можно включить не более 100 имен типов узлов. Чтобы увеличить это число, измените параметр конфигурации MaxNumberOfNodeTypesInChaosEntityFilter.</span><span class="sxs-lookup"><span data-stu-id="7ba68-120">At most 100 node type names can be included in this list, to increase this number, a config upgrade is required for MaxNumberOfNodeTypesInChaosEntityFilter configuration.</span></span>
+  optional: true
+  syntax:
+    content: 'nodeTypeInclusionList?: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-servicefabric

@@ -1,0 +1,134 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bdf8b9d6f20bb58738823313a5ead68b8aca7d61
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661458"
+items:
+- uid: azure-servicefabric.BackupPolicyDescription
+  name: BackupPolicyDescription
+  fullName: BackupPolicyDescription
+  children:
+  - azure-servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss
+  - azure-servicefabric.BackupPolicyDescription.maxIncrementalBackups
+  - azure-servicefabric.BackupPolicyDescription.name
+  - azure-servicefabric.BackupPolicyDescription.retentionPolicy
+  - azure-servicefabric.BackupPolicyDescription.schedule
+  - azure-servicefabric.BackupPolicyDescription.storage
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="05171-101">Описывает политику резервного копирования для настройки периодического резервного копирования.</span><span class="sxs-lookup"><span data-stu-id="05171-101">Describes a backup policy for configuring periodic backup.</span></span>
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss
+  name: autoRestoreOnDataLoss
+  fullName: autoRestoreOnDataLoss
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05171-102">Указывает, следует ли активировать автоматическое восстановление с использованием последней доступной резервной копии в случае потери данных в разделе.</span><span class="sxs-lookup"><span data-stu-id="05171-102">Specifies whether to trigger restore automatically using the latest available backup in case the partition experiences a data loss event.</span></span>
+  syntax:
+    content: 'autoRestoreOnDataLoss: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.maxIncrementalBackups
+  name: maxIncrementalBackups
+  fullName: maxIncrementalBackups
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="05171-103">Определяет максимальное число добавочных резервных копий, которые должны создаваться в интервале между созданием двух полных резервных копий.</span><span class="sxs-lookup"><span data-stu-id="05171-103">Defines the maximum number of incremental backups to be taken between two full backups.</span></span> <span data-ttu-id="05171-104">Это просто верхний предел.</span><span class="sxs-lookup"><span data-stu-id="05171-104">This is just the upper limit.</span></span> <span data-ttu-id="05171-105">Полное резервное копирование можно выполнить до создания указанного числа добавочных резервных копий при одном из следующих условий:</span><span class="sxs-lookup"><span data-stu-id="05171-105">A full backup may be taken before specified number of incremental backups are completed in one of the following conditions</span></span>
+
+    - <span data-ttu-id="05171-106">Для реплики никогда не создавалась полной резервной копии, так как она стала первичной,</span><span class="sxs-lookup"><span data-stu-id="05171-106">The replica has never taken a full backup since it has become primary,</span></span>
+
+    - <span data-ttu-id="05171-107">Некоторые записи журнала с момента последнего резервного копирования был усечен, или</span><span class="sxs-lookup"><span data-stu-id="05171-107">Some of the log records since the last backup has been truncated, or</span></span>
+
+    - <span data-ttu-id="05171-108">Размер реплики превысил ограничение MaxAccumulatedBackupLogSizeInMB.</span><span class="sxs-lookup"><span data-stu-id="05171-108">Replica passed the MaxAccumulatedBackupLogSizeInMB limit.</span></span>
+  syntax:
+    content: 'maxIncrementalBackups: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05171-109">Уникальное имя, идентифицирующее эту политику резервного копирования.</span><span class="sxs-lookup"><span data-stu-id="05171-109">The unique name identifying this backup policy.</span></span>
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.retentionPolicy
+  name: retentionPolicy
+  fullName: retentionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05171-110">Описывает политику хранения резервных копий в хранилище.</span><span class="sxs-lookup"><span data-stu-id="05171-110">Describes the policy to retain backups in storage.</span></span>
+  optional: true
+  syntax:
+    content: 'retentionPolicy?: RetentionPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.RetentionPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.schedule
+  name: schedule
+  fullName: schedule
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05171-111">Описывает параметры расписания резервного копирования.</span><span class="sxs-lookup"><span data-stu-id="05171-111">Describes the backup schedule parameters.</span></span>
+  syntax:
+    content: 'schedule: BackupScheduleDescription'
+    return:
+      type:
+      - azure-servicefabric.BackupScheduleDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.storage
+  name: storage
+  fullName: storage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="05171-112">Описывается расположение для сохранения периодического резервного копирования хранилища резервных копий.</span><span class="sxs-lookup"><span data-stu-id="05171-112">Describes the details of backup storage where to store the periodic backups.</span></span>
+  syntax:
+    content: 'storage: BackupStorageDescription'
+    return:
+      type:
+      - azure-servicefabric.BackupStorageDescription
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RetentionPolicyDescription
+  name: RetentionPolicyDescription
+  spec.typeScript:
+  - name: RetentionPolicyDescription
+    fullName: RetentionPolicyDescription
+    uid: azure-servicefabric.RetentionPolicyDescription
+- uid: azure-servicefabric.BackupScheduleDescription
+  name: BackupScheduleDescription
+  spec.typeScript:
+  - name: BackupScheduleDescription
+    fullName: BackupScheduleDescription
+    uid: azure-servicefabric.BackupScheduleDescription
+- uid: azure-servicefabric.BackupStorageDescription
+  name: BackupStorageDescription
+  spec.typeScript:
+  - name: BackupStorageDescription
+    fullName: BackupStorageDescription
+    uid: azure-servicefabric.BackupStorageDescription
