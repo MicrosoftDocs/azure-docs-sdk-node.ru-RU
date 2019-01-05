@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 7e44222a1a270211770c926532e537f25a19177e
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 303ce4983fc430f8ccfb89f8f4ca80f011da2266
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41695513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52137469"
 items:
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies
   name: BackupLongTermRetentionPolicies
@@ -15,16 +15,16 @@ items:
   - azure-arm-sql.BackupLongTermRetentionPolicies.beginCreateOrUpdate_1
   - azure-arm-sql.BackupLongTermRetentionPolicies.beginCreateOrUpdateWithHttpOperationResponse
   - azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdate
-  - azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdate_1
   - azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdate_2
+  - azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdate_1
   - azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdateWithHttpOperationResponse
   - azure-arm-sql.BackupLongTermRetentionPolicies.get
-  - azure-arm-sql.BackupLongTermRetentionPolicies.get_1
   - azure-arm-sql.BackupLongTermRetentionPolicies.get_2
+  - azure-arm-sql.BackupLongTermRetentionPolicies.get_1
   - azure-arm-sql.BackupLongTermRetentionPolicies.getWithHttpOperationResponse
   - azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase
-  - azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase_1
   - azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase_2
+  - azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase_1
   - azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabaseWithHttpOperationResponse
   langs:
   - typeScript
@@ -32,7 +32,7 @@ items:
   summary: ''
   package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.beginCreateOrUpdate
-  name: beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, string, BackupLongTermRetentionPolicy, Object)
   children: []
   type: method
   langs:
@@ -45,7 +45,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -71,7 +71,7 @@ items:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.beginCreateOrUpdate_2
-  name: beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, string, BackupLongTermRetentionPolicy, Object, ServiceCallback<BackupLongTermRetentionPolicy>)
   children: []
   type: method
   langs:
@@ -109,7 +109,7 @@ items:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.beginCreateOrUpdate_1
-  name: beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, string, BackupLongTermRetentionPolicy, ServiceCallback<BackupLongTermRetentionPolicy>)
   children: []
   type: method
   langs:
@@ -143,7 +143,7 @@ items:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.beginCreateOrUpdateWithHttpOperationResponse
-  name: beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse(string, string, string, BackupLongTermRetentionPolicy, Object)
   children: []
   type: method
   langs:
@@ -156,7 +156,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -182,7 +182,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.BackupLongTermRetentionPolicy>>
   package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, BackupLongTermRetentionPolicy, Object)
   children: []
   type: method
   langs:
@@ -195,7 +195,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -220,42 +220,8 @@ items:
       type:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
-- uid: azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Задает политики долгосрочного хранения базы данных.
-  syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: BackupLongTermRetentionPolicy, callback: ServiceCallback<BackupLongTermRetentionPolicy>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-sql.BackupLongTermRetentionPolicy
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.BackupLongTermRetentionPolicy>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
-  package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, BackupLongTermRetentionPolicy, Object, ServiceCallback<BackupLongTermRetentionPolicy>)
   children: []
   type: method
   langs:
@@ -292,8 +258,42 @@ items:
       type:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
+- uid: azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdate_1
+  name: createOrUpdate(string, string, string, BackupLongTermRetentionPolicy, ServiceCallback<BackupLongTermRetentionPolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Задает политики долгосрочного хранения базы данных.
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: BackupLongTermRetentionPolicy, callback: ServiceCallback<BackupLongTermRetentionPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.BackupLongTermRetentionPolicy
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.BackupLongTermRetentionPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
+  package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, string, BackupLongTermRetentionPolicy, Object)
   children: []
   type: method
   langs:
@@ -306,7 +306,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -332,7 +332,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.BackupLongTermRetentionPolicy>>
   package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -345,7 +345,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -365,38 +365,8 @@ items:
       type:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
-- uid: azure-arm-sql.BackupLongTermRetentionPolicies.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает политики долгосрочного хранения базы данных.
-  syntax:
-    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<BackupLongTermRetentionPolicy>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.BackupLongTermRetentionPolicy>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
-  package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<BackupLongTermRetentionPolicy>)
   children: []
   type: method
   langs:
@@ -429,83 +399,15 @@ items:
       type:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
-- uid: azure-arm-sql.BackupLongTermRetentionPolicies.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+- uid: azure-arm-sql.BackupLongTermRetentionPolicies.get_1
+  name: get(string, string, string, ServiceCallback<BackupLongTermRetentionPolicy>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Получает политики долгосрочного хранения базы данных.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, options?: Object)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
-    - id: serverName
-      type:
-      - string
-      description: >
-        Имени сервера.
-    - id: databaseName
-      type:
-      - string
-      description: >
-        Имя базы данных.
-    - id: options
-      type:
-      - Object
-      description: ''
-      optional: true
-    return:
-      type:
-      - Promise<HttpOperationResponse<azure-arm-sql.BackupLongTermRetentionPolicy>>
-  package: azure-arm-sql
-- uid: azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase
-  name: listByDatabase
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает политики долгосрочного хранения базы данных.
-  syntax:
-    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options?: Object)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
-    - id: serverName
-      type:
-      - string
-      description: >
-        Имени сервера.
-    - id: databaseName
-      type:
-      - string
-      description: >
-        Имя базы данных.
-    - id: options
-      type:
-      - Object
-      description: ''
-      optional: true
-    return:
-      type:
-      - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
-  package: azure-arm-sql
-- uid: azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase_1
-  name: listByDatabase
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает политики долгосрочного хранения базы данных.
-  syntax:
-    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<BackupLongTermRetentionPolicy>)'
+    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<BackupLongTermRetentionPolicy>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -527,8 +429,76 @@ items:
       type:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
+- uid: azure-arm-sql.BackupLongTermRetentionPolicies.getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает политики долгосрочного хранения базы данных.
+  syntax:
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, serverName: string, databaseName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+    - id: serverName
+      type:
+      - string
+      description: >
+        Имени сервера.
+    - id: databaseName
+      type:
+      - string
+      description: >
+        Имя базы данных.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-sql.BackupLongTermRetentionPolicy>>
+  package: azure-arm-sql
+- uid: azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase
+  name: listByDatabase(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает политики долгосрочного хранения базы данных.
+  syntax:
+    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+    - id: serverName
+      type:
+      - string
+      description: >
+        Имени сервера.
+    - id: databaseName
+      type:
+      - string
+      description: >
+        Имя базы данных.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
+  package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase_2
-  name: listByDatabase
+  name: listByDatabase(string, string, string, Object, ServiceCallback<BackupLongTermRetentionPolicy>)
   children: []
   type: method
   langs:
@@ -561,8 +531,38 @@ items:
       type:
       - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
   package: azure-arm-sql
+- uid: azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabase_1
+  name: listByDatabase(string, string, string, ServiceCallback<BackupLongTermRetentionPolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает политики долгосрочного хранения базы данных.
+  syntax:
+    content: 'function listByDatabase(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<BackupLongTermRetentionPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.BackupLongTermRetentionPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
+  package: azure-arm-sql
 - uid: azure-arm-sql.BackupLongTermRetentionPolicies.listByDatabaseWithHttpOperationResponse
-  name: listByDatabaseWithHttpOperationResponse
+  name: listByDatabaseWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -575,7 +575,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -597,11 +597,13 @@ items:
   package: azure-arm-sql
 references:
 - uid: azure-arm-sql.BackupLongTermRetentionPolicy
+  name: BackupLongTermRetentionPolicy
   spec.typeScript:
   - name: BackupLongTermRetentionPolicy
     fullName: BackupLongTermRetentionPolicy
     uid: azure-arm-sql.BackupLongTermRetentionPolicy
 - uid: Promise<azure-arm-sql.BackupLongTermRetentionPolicy>
+  name: BackupLongTermRetentionPolicy>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -611,6 +613,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.BackupLongTermRetentionPolicy>
+  name: BackupLongTermRetentionPolicy>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -620,6 +623,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.BackupLongTermRetentionPolicy>>
+  name: BackupLongTermRetentionPolicy>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

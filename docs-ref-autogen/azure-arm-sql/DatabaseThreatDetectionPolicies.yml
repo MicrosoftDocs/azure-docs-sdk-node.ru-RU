@@ -1,22 +1,22 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: eb47af844019ec3fc7a72e0bc4ed8b83c607421a
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 417f86660baf851bfd2e366d635fe9af025c2dd8
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41684637"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52134899"
 items:
 - uid: azure-arm-sql.DatabaseThreatDetectionPolicies
   name: DatabaseThreatDetectionPolicies
   fullName: DatabaseThreatDetectionPolicies
   children:
   - azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdate
-  - azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdate_1
   - azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdate_2
+  - azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdate_1
   - azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdateWithHttpOperationResponse
   - azure-arm-sql.DatabaseThreatDetectionPolicies.get
-  - azure-arm-sql.DatabaseThreatDetectionPolicies.get_1
   - azure-arm-sql.DatabaseThreatDetectionPolicies.get_2
+  - azure-arm-sql.DatabaseThreatDetectionPolicies.get_1
   - azure-arm-sql.DatabaseThreatDetectionPolicies.getWithHttpOperationResponse
   langs:
   - typeScript
@@ -24,7 +24,7 @@ items:
   summary: ''
   package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, DatabaseSecurityAlertPolicy, Object)
   children: []
   type: method
   langs:
@@ -37,7 +37,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -62,42 +62,8 @@ items:
       type:
       - Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
   package: azure-arm-sql
-- uid: azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Создает или обновляет политики обнаружения угроз базы данных.
-  syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: DatabaseSecurityAlertPolicy, callback: ServiceCallback<DatabaseSecurityAlertPolicy>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-sql.DatabaseSecurityAlertPolicy
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.DatabaseSecurityAlertPolicy>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
-  package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, DatabaseSecurityAlertPolicy, Object, ServiceCallback<DatabaseSecurityAlertPolicy>)
   children: []
   type: method
   langs:
@@ -134,8 +100,42 @@ items:
       type:
       - Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
   package: azure-arm-sql
+- uid: azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdate_1
+  name: createOrUpdate(string, string, string, DatabaseSecurityAlertPolicy, ServiceCallback<DatabaseSecurityAlertPolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает или обновляет политики обнаружения угроз базы данных.
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: DatabaseSecurityAlertPolicy, callback: ServiceCallback<DatabaseSecurityAlertPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.DatabaseSecurityAlertPolicy
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.DatabaseSecurityAlertPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
+  package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseThreatDetectionPolicies.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, string, DatabaseSecurityAlertPolicy, Object)
   children: []
   type: method
   langs:
@@ -148,7 +148,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -174,7 +174,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.DatabaseSecurityAlertPolicy>>
   package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseThreatDetectionPolicies.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -187,7 +187,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -207,38 +207,8 @@ items:
       type:
       - Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
   package: azure-arm-sql
-- uid: azure-arm-sql.DatabaseThreatDetectionPolicies.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает политику обнаружения угроз базы данных.
-  syntax:
-    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<DatabaseSecurityAlertPolicy>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.DatabaseSecurityAlertPolicy>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
-  package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseThreatDetectionPolicies.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<DatabaseSecurityAlertPolicy>)
   children: []
   type: method
   langs:
@@ -271,8 +241,38 @@ items:
       type:
       - Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
   package: azure-arm-sql
+- uid: azure-arm-sql.DatabaseThreatDetectionPolicies.get_1
+  name: get(string, string, string, ServiceCallback<DatabaseSecurityAlertPolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает политику обнаружения угроз базы данных.
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<DatabaseSecurityAlertPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.DatabaseSecurityAlertPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
+  package: azure-arm-sql
 - uid: azure-arm-sql.DatabaseThreatDetectionPolicies.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -285,7 +285,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -307,11 +307,13 @@ items:
   package: azure-arm-sql
 references:
 - uid: azure-arm-sql.DatabaseSecurityAlertPolicy
+  name: DatabaseSecurityAlertPolicy
   spec.typeScript:
   - name: DatabaseSecurityAlertPolicy
     fullName: DatabaseSecurityAlertPolicy
     uid: azure-arm-sql.DatabaseSecurityAlertPolicy
 - uid: Promise<azure-arm-sql.DatabaseSecurityAlertPolicy>
+  name: DatabaseSecurityAlertPolicy>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -321,6 +323,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.DatabaseSecurityAlertPolicy>
+  name: DatabaseSecurityAlertPolicy>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -330,6 +333,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.DatabaseSecurityAlertPolicy>>
+  name: DatabaseSecurityAlertPolicy>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
