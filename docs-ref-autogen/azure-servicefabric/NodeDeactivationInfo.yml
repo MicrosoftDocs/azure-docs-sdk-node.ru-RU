@@ -1,0 +1,101 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a3f03d5af3c4ae25c60f33dbed8b343c09354fd9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52141709"
+items:
+- uid: azure-servicefabric.NodeDeactivationInfo
+  name: NodeDeactivationInfo
+  fullName: NodeDeactivationInfo
+  children:
+  - azure-servicefabric.NodeDeactivationInfo.nodeDeactivationIntent
+  - azure-servicefabric.NodeDeactivationInfo.nodeDeactivationStatus
+  - azure-servicefabric.NodeDeactivationInfo.nodeDeactivationTask
+  - azure-servicefabric.NodeDeactivationInfo.pendingSafetyChecks
+  langs:
+  - typeScript
+  type: interface
+  summary: Сведения о деактивации узла. Эта информация является допустимым для узла, который находится в режиме деактивации или уже отключено.
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeDeactivationInfo.nodeDeactivationIntent
+  name: nodeDeactivationIntent
+  fullName: nodeDeactivationIntent
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Цель или причину деактивация узла. Ниже приведены возможные значения для него.
+
+    Ниже перечислены возможные значения. «Invalid», «Приостановить», «Перезапустить», «RemoveData», «RemoveNode»
+  optional: true
+  syntax:
+    content: 'nodeDeactivationIntent?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeDeactivationInfo.nodeDeactivationStatus
+  name: nodeDeactivationStatus
+  fullName: nodeDeactivationStatus
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Состояние операции деактивации узла. Ниже приведены возможные значения. Ниже перечислены возможные значения. «None», «SafetyCheckInProgress», «SafetyCheckComplete», «завершено»
+  optional: true
+  syntax:
+    content: 'nodeDeactivationStatus?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeDeactivationInfo.nodeDeactivationTask
+  name: nodeDeactivationTask
+  fullName: nodeDeactivationTask
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Список задач, представляющий операцию отключения на узле.
+  optional: true
+  syntax:
+    content: 'nodeDeactivationTask?: NodeDeactivationTask[]'
+    return:
+      type:
+      - azure-servicefabric.NodeDeactivationTask[]
+  package: azure-servicefabric
+- uid: azure-servicefabric.NodeDeactivationInfo.pendingSafetyChecks
+  name: pendingSafetyChecks
+  fullName: pendingSafetyChecks
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Список ожидающих проверки безопасности
+  optional: true
+  syntax:
+    content: 'pendingSafetyChecks?: SafetyCheckWrapper[]'
+    return:
+      type:
+      - azure-servicefabric.SafetyCheckWrapper[]
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.NodeDeactivationTask[]
+  name: NodeDeactivationTask[]
+  spec.typeScript:
+  - name: NodeDeactivationTask
+    fullName: NodeDeactivationTask
+    uid: azure-servicefabric.NodeDeactivationTask
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-servicefabric.SafetyCheckWrapper[]
+  name: SafetyCheckWrapper[]
+  spec.typeScript:
+  - name: SafetyCheckWrapper
+    fullName: SafetyCheckWrapper
+    uid: azure-servicefabric.SafetyCheckWrapper
+  - name: '[]'
+    fullName: '[]'

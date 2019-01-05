@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 84f91362d37d1baa0bd8d2c4c00df91b05e881dc
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 41cce435854831b5530ce9cd40b3ac7693c8e8c3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41683261"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52014923"
 items:
 - uid: azure-arm-powerbiembedded.Workspaces
   name: Workspaces
   fullName: Workspaces
   children:
   - azure-arm-powerbiembedded.Workspaces.list
-  - azure-arm-powerbiembedded.Workspaces.list_1
   - azure-arm-powerbiembedded.Workspaces.list_2
+  - azure-arm-powerbiembedded.Workspaces.list_1
   - azure-arm-powerbiembedded.Workspaces.listWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-powerbiembedded
 - uid: azure-arm-powerbiembedded.Workspaces.list
-  name: list
+  name: list(string, string, Object)
   children: []
   type: method
   langs:
@@ -48,34 +48,8 @@ items:
       type:
       - Promise<azure-arm-powerbiembedded.WorkspaceList>
   package: azure-arm-powerbiembedded
-- uid: azure-arm-powerbiembedded.Workspaces.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Извлекает всех имеющихся рабочих областей Power BI в коллекции указанной рабочей области.
-  syntax:
-    content: 'function list(resourceGroupName: string, workspaceCollectionName: string, callback: ServiceCallback<WorkspaceList>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: workspaceCollectionName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-powerbiembedded.WorkspaceList>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-powerbiembedded.WorkspaceList>
-  package: azure-arm-powerbiembedded
 - uid: azure-arm-powerbiembedded.Workspaces.list_2
-  name: list
+  name: list(string, string, Object, ServiceCallback<WorkspaceList>)
   children: []
   type: method
   langs:
@@ -104,8 +78,34 @@ items:
       type:
       - Promise<azure-arm-powerbiembedded.WorkspaceList>
   package: azure-arm-powerbiembedded
+- uid: azure-arm-powerbiembedded.Workspaces.list_1
+  name: list(string, string, ServiceCallback<WorkspaceList>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Извлекает всех имеющихся рабочих областей Power BI в коллекции указанной рабочей области.
+  syntax:
+    content: 'function list(resourceGroupName: string, workspaceCollectionName: string, callback: ServiceCallback<WorkspaceList>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workspaceCollectionName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-powerbiembedded.WorkspaceList>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-powerbiembedded.WorkspaceList>
+  package: azure-arm-powerbiembedded
 - uid: azure-arm-powerbiembedded.Workspaces.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -135,6 +135,7 @@ items:
   package: azure-arm-powerbiembedded
 references:
 - uid: Promise<azure-arm-powerbiembedded.WorkspaceList>
+  name: WorkspaceList>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -144,6 +145,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-powerbiembedded.WorkspaceList>
+  name: WorkspaceList>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -153,6 +155,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-powerbiembedded.WorkspaceList>>
+  name: WorkspaceList>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

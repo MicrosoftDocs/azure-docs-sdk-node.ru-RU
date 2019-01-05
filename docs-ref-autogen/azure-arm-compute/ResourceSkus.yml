@@ -1,21 +1,21 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 14053d1d897103a8f9e4966d516504c6573c7d37
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 64ea96765782257f94dda66124912755d9acb0ac
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41614513"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52011551"
 items:
 - uid: azure-arm-compute.ResourceSkus
   name: ResourceSkus
   fullName: ResourceSkus
   children:
   - azure-arm-compute.ResourceSkus.list
-  - azure-arm-compute.ResourceSkus.list_1
   - azure-arm-compute.ResourceSkus.list_2
+  - azure-arm-compute.ResourceSkus.list_1
   - azure-arm-compute.ResourceSkus.listNext
-  - azure-arm-compute.ResourceSkus.listNext_1
   - azure-arm-compute.ResourceSkus.listNext_2
+  - azure-arm-compute.ResourceSkus.listNext_1
   - azure-arm-compute.ResourceSkus.listNextWithHttpOperationResponse
   - azure-arm-compute.ResourceSkus.listWithHttpOperationResponse
   langs:
@@ -24,7 +24,7 @@ items:
   summary: ''
   package: azure-arm-compute
 - uid: azure-arm-compute.ResourceSkus.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -42,26 +42,8 @@ items:
       type:
       - Promise<azure-arm-compute.ResourceSkusResult>
   package: azure-arm-compute
-- uid: azure-arm-compute.ResourceSkus.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает список номеров SKU Microsoft.Compute для вашей подписки.
-  syntax:
-    content: 'function list(callback: ServiceCallback<ResourceSkusResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-compute.ResourceSkusResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-compute.ResourceSkusResult>
-  package: azure-arm-compute
 - uid: azure-arm-compute.ResourceSkus.list_2
-  name: list
+  name: list(Object, ServiceCallback<ResourceSkusResult>)
   children: []
   type: method
   langs:
@@ -82,8 +64,26 @@ items:
       type:
       - Promise<azure-arm-compute.ResourceSkusResult>
   package: azure-arm-compute
+- uid: azure-arm-compute.ResourceSkus.list_1
+  name: list(ServiceCallback<ResourceSkusResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает список номеров SKU Microsoft.Compute для вашей подписки.
+  syntax:
+    content: 'function list(callback: ServiceCallback<ResourceSkusResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.ResourceSkusResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.ResourceSkusResult>
+  package: azure-arm-compute
 - uid: azure-arm-compute.ResourceSkus.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -106,30 +106,8 @@ items:
       type:
       - Promise<azure-arm-compute.ResourceSkusResult>
   package: azure-arm-compute
-- uid: azure-arm-compute.ResourceSkus.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает список номеров SKU Microsoft.Compute для вашей подписки.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ResourceSkusResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-compute.ResourceSkusResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-compute.ResourceSkusResult>
-  package: azure-arm-compute
 - uid: azure-arm-compute.ResourceSkus.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<ResourceSkusResult>)
   children: []
   type: method
   langs:
@@ -154,8 +132,30 @@ items:
       type:
       - Promise<azure-arm-compute.ResourceSkusResult>
   package: azure-arm-compute
+- uid: azure-arm-compute.ResourceSkus.listNext_1
+  name: listNext(string, ServiceCallback<ResourceSkusResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает список номеров SKU Microsoft.Compute для вашей подписки.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ResourceSkusResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-compute.ResourceSkusResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-compute.ResourceSkusResult>
+  package: azure-arm-compute
 - uid: azure-arm-compute.ResourceSkus.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -179,7 +179,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-compute.ResourceSkusResult>>
   package: azure-arm-compute
 - uid: azure-arm-compute.ResourceSkus.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -199,6 +199,7 @@ items:
   package: azure-arm-compute
 references:
 - uid: Promise<azure-arm-compute.ResourceSkusResult>
+  name: ResourceSkusResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -208,6 +209,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-compute.ResourceSkusResult>
+  name: ResourceSkusResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -217,6 +219,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-compute.ResourceSkusResult>>
+  name: ResourceSkusResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

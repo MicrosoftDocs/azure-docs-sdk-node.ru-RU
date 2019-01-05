@@ -1,176 +1,57 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 470cfbc0b4033164719779f553927946a2544cde
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 5b2dcbac70d3d42b4477c37100171c12991de94f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41692613"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52150929"
 items:
 - uid: azure-cognitiveservices-face.Face
   name: Face
   fullName: Face
   children:
-  - azure-cognitiveservices-face.Face.detect
-  - azure-cognitiveservices-face.Face.detect_1
-  - azure-cognitiveservices-face.Face.detect_2
-  - azure-cognitiveservices-face.Face.detectInStream_1
-  - azure-cognitiveservices-face.Face.detectInStream_2
-  - azure-cognitiveservices-face.Face.detectInStream
-  - azure-cognitiveservices-face.Face.detectInStreamWithHttpOperationResponse
-  - azure-cognitiveservices-face.Face.detectWithHttpOperationResponse
+  - azure-cognitiveservices-face.Face.detectWithStream
+  - azure-cognitiveservices-face.Face.detectWithStream_2
+  - azure-cognitiveservices-face.Face.detectWithStream_1
+  - azure-cognitiveservices-face.Face.detectWithStreamWithHttpOperationResponse
+  - azure-cognitiveservices-face.Face.detectWithUrl
+  - azure-cognitiveservices-face.Face.detectWithUrl_2
+  - azure-cognitiveservices-face.Face.detectWithUrl_1
+  - azure-cognitiveservices-face.Face.detectWithUrlWithHttpOperationResponse
   - azure-cognitiveservices-face.Face.findSimilar
-  - azure-cognitiveservices-face.Face.findSimilar_1
   - azure-cognitiveservices-face.Face.findSimilar_2
+  - azure-cognitiveservices-face.Face.findSimilar_1
   - azure-cognitiveservices-face.Face.findSimilarWithHttpOperationResponse
   - azure-cognitiveservices-face.Face.group
-  - azure-cognitiveservices-face.Face.group_1
   - azure-cognitiveservices-face.Face.group_2
+  - azure-cognitiveservices-face.Face.group_1
   - azure-cognitiveservices-face.Face.groupWithHttpOperationResponse
-  - azure-cognitiveservices-face.Face.identify_1
-  - azure-cognitiveservices-face.Face.identify_2
   - azure-cognitiveservices-face.Face.identify
+  - azure-cognitiveservices-face.Face.identify_2
+  - azure-cognitiveservices-face.Face.identify_1
   - azure-cognitiveservices-face.Face.identifyWithHttpOperationResponse
-  - azure-cognitiveservices-face.Face.verify
-  - azure-cognitiveservices-face.Face.verify_1
-  - azure-cognitiveservices-face.Face.verify_2
-  - azure-cognitiveservices-face.Face.verifyWithHttpOperationResponse
-  - azure-cognitiveservices-face.Face.verifyWithPersonGroup
-  - azure-cognitiveservices-face.Face.verifyWithPersonGroup_1
-  - azure-cognitiveservices-face.Face.verifyWithPersonGroup_2
-  - azure-cognitiveservices-face.Face.verifyWithPersonGroupWithHttpOperationResponse
+  - azure-cognitiveservices-face.Face.verifyFaceToFace
+  - azure-cognitiveservices-face.Face.verifyFaceToFace_2
+  - azure-cognitiveservices-face.Face.verifyFaceToFace_1
+  - azure-cognitiveservices-face.Face.verifyFaceToFaceWithHttpOperationResponse
+  - azure-cognitiveservices-face.Face.verifyFaceToPerson
+  - azure-cognitiveservices-face.Face.verifyFaceToPerson_2
+  - azure-cognitiveservices-face.Face.verifyFaceToPerson_1
+  - azure-cognitiveservices-face.Face.verifyFaceToPersonWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
   summary: ''
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.detect
-  name: detect
+- uid: azure-cognitiveservices-face.Face.detectWithStream
+  name: detectWithStream(stream.Readable, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
   syntax:
-    content: 'function detect(url: string, options?: Object)'
-    parameters:
-    - id: url
-      type:
-      - string
-      description: "\n"
-    - id: options
-      type:
-      - Object
-      description: ''
-      optional: true
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.DetectedFace[]>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.detect_1
-  name: detect
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
-  syntax:
-    content: 'function detect(url: string, callback: ServiceCallback<DetectedFace[]>)'
-    parameters:
-    - id: url
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.DetectedFace[]>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.detect_2
-  name: detect
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
-  syntax:
-    content: 'function detect(url: string, options: Object, callback: ServiceCallback<DetectedFace[]>)'
-    parameters:
-    - id: url
-      type:
-      - string
-      description: ''
-    - id: options
-      type:
-      - Object
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.DetectedFace[]>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.detectInStream_1
-  name: detectInStream
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
-  syntax:
-    content: 'function detectInStream(image: stream.Readable, callback: ServiceCallback<DetectedFace[]>)'
-    parameters:
-    - id: image
-      type:
-      - stream.Readable
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.DetectedFace[]>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.detectInStream_2
-  name: detectInStream
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
-  syntax:
-    content: 'function detectInStream(image: stream.Readable, options: Object, callback: ServiceCallback<DetectedFace[]>)'
-    parameters:
-    - id: image
-      type:
-      - stream.Readable
-      description: ''
-    - id: options
-      type:
-      - Object
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.DetectedFace[]>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.detectInStream
-  name: detectInStream
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
-  syntax:
-    content: 'function detectInStream(image: stream.Readable, options?: Object)'
+    content: 'function detectWithStream(image: stream.Readable, options?: Object)'
     parameters:
     - id: image
       type:
@@ -186,15 +67,63 @@ items:
       type:
       - Promise<azure-cognitiveservices-face.DetectedFace[]>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.detectInStreamWithHttpOperationResponse
-  name: detectInStreamWithHttpOperationResponse
+- uid: azure-cognitiveservices-face.Face.detectWithStream_2
+  name: detectWithStream(stream.Readable, Object, ServiceCallback<DetectedFace[]>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
   syntax:
-    content: 'function detectInStreamWithHttpOperationResponse(image: stream.Readable, options?: Object)'
+    content: 'function detectWithStream(image: stream.Readable, options: Object, callback: ServiceCallback<DetectedFace[]>)'
+    parameters:
+    - id: image
+      type:
+      - stream.Readable
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.DetectedFace[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.detectWithStream_1
+  name: detectWithStream(stream.Readable, ServiceCallback<DetectedFace[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
+  syntax:
+    content: 'function detectWithStream(image: stream.Readable, callback: ServiceCallback<DetectedFace[]>)'
+    parameters:
+    - id: image
+      type:
+      - stream.Readable
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.DetectedFace[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.detectWithStreamWithHttpOperationResponse
+  name: detectWithStreamWithHttpOperationResponse(stream.Readable, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
+  syntax:
+    content: 'function detectWithStreamWithHttpOperationResponse(image: stream.Readable, options?: Object)'
     parameters:
     - id: image
       type:
@@ -210,20 +139,93 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-cognitiveservices-face.DetectedFace[]>>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.detectWithHttpOperationResponse
-  name: detectWithHttpOperationResponse
+- uid: azure-cognitiveservices-face.Face.detectWithUrl
+  name: detectWithUrl(string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
   syntax:
-    content: 'function detectWithHttpOperationResponse(url: string, options?: Object)'
+    content: 'function detectWithUrl(url: string, options?: Object)'
     parameters:
     - id: url
       type:
       - string
-      description: "\n"
+      description: >
+        Публично доступную URL-адрес изображения
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.DetectedFace[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.detectWithUrl_2
+  name: detectWithUrl(string, Object, ServiceCallback<DetectedFace[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
+  syntax:
+    content: 'function detectWithUrl(url: string, options: Object, callback: ServiceCallback<DetectedFace[]>)'
+    parameters:
+    - id: url
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.DetectedFace[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.detectWithUrl_1
+  name: detectWithUrl(string, ServiceCallback<DetectedFace[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
+  syntax:
+    content: 'function detectWithUrl(url: string, callback: ServiceCallback<DetectedFace[]>)'
+    parameters:
+    - id: url
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.DetectedFace[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.detectWithUrlWithHttpOperationResponse
+  name: detectWithUrlWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Определения человеческих лиц в образ и возвращает расположения лиц и при необходимости с faceIds ориентиров и атрибуты.
+  syntax:
+    content: 'function detectWithUrlWithHttpOperationResponse(url: string, options?: Object)'
+    parameters:
+    - id: url
+      type:
+      - string
+      description: >
+        Публично доступную URL-адрес изображения
     - id: options
       type:
       - Object
@@ -234,12 +236,12 @@ items:
       - Promise<HttpOperationResponse<azure-cognitiveservices-face.DetectedFace[]>>
   package: azure-cognitiveservices-face
 - uid: azure-cognitiveservices-face.Face.findSimilar
-  name: findSimilar
+  name: findSimilar(string, Object)
   children: []
   type: method
   langs:
   - typeScript
-  summary: Получив запрос лиц faceId, находит похожие лица из массива faceId или faceListId.
+  summary: Получив запрос лиц faceId, находит похожие лица из массива faceId, список лиц или списка больших лиц.
   syntax:
     content: 'function findSimilar(faceId: string, options?: Object)'
     parameters:
@@ -255,39 +257,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<azure-cognitiveservices-face.SimilarFaceResult[]>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.findSimilar_1
-  name: findSimilar
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получив запрос лиц faceId, находит похожие лица из массива faceId или faceListId.
-  syntax:
-    content: 'function findSimilar(faceId: string, callback: ServiceCallback<SimilarFaceResult[]>)'
-    parameters:
-    - id: faceId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.SimilarFaceResult[]>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.SimilarFaceResult[]>
+      - Promise<azure-cognitiveservices-face.SimilarFace[]>
   package: azure-cognitiveservices-face
 - uid: azure-cognitiveservices-face.Face.findSimilar_2
-  name: findSimilar
+  name: findSimilar(string, Object, ServiceCallback<SimilarFace[]>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: Получив запрос лиц faceId, находит похожие лица из массива faceId или faceListId.
+  summary: Получив запрос лиц faceId, находит похожие лица из массива faceId, список лиц или списка больших лиц.
   syntax:
-    content: 'function findSimilar(faceId: string, options: Object, callback: ServiceCallback<SimilarFaceResult[]>)'
+    content: 'function findSimilar(faceId: string, options: Object, callback: ServiceCallback<SimilarFace[]>)'
     parameters:
     - id: faceId
       type:
@@ -299,19 +279,41 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-cognitiveservices-face.SimilarFaceResult[]>
+      - ServiceCallback<azure-cognitiveservices-face.SimilarFace[]>
       description: ''
     return:
       type:
-      - Promise<azure-cognitiveservices-face.SimilarFaceResult[]>
+      - Promise<azure-cognitiveservices-face.SimilarFace[]>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.findSimilarWithHttpOperationResponse
-  name: findSimilarWithHttpOperationResponse
+- uid: azure-cognitiveservices-face.Face.findSimilar_1
+  name: findSimilar(string, ServiceCallback<SimilarFace[]>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: Получив запрос лиц faceId, находит похожие лица из массива faceId или faceListId.
+  summary: Получив запрос лиц faceId, находит похожие лица из массива faceId, список лиц или списка больших лиц.
+  syntax:
+    content: 'function findSimilar(faceId: string, callback: ServiceCallback<SimilarFace[]>)'
+    parameters:
+    - id: faceId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.SimilarFace[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.SimilarFace[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.findSimilarWithHttpOperationResponse
+  name: findSimilarWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получив запрос лиц faceId, находит похожие лица из массива faceId, список лиц или списка больших лиц.
   syntax:
     content: 'function findSimilarWithHttpOperationResponse(faceId: string, options?: Object)'
     parameters:
@@ -327,10 +329,10 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-cognitiveservices-face.SimilarFaceResult[]>>
+      - Promise<HttpOperationResponse<azure-cognitiveservices-face.SimilarFace[]>>
   package: azure-cognitiveservices-face
 - uid: azure-cognitiveservices-face.Face.group
-  name: group
+  name: group(string[], Object)
   children: []
   type: method
   langs:
@@ -353,39 +355,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<azure-cognitiveservices-face.GroupResponse>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.group_1
-  name: group
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Разделите по сходству лиц кандидата лиц.
-  syntax:
-    content: 'function group(faceIds: string[], callback: ServiceCallback<GroupResponse>)'
-    parameters:
-    - id: faceIds
-      type:
-      - string[]
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.GroupResponse>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.GroupResponse>
+      - Promise<azure-cognitiveservices-face.GroupResult>
   package: azure-cognitiveservices-face
 - uid: azure-cognitiveservices-face.Face.group_2
-  name: group
+  name: group(string[], Object, ServiceCallback<GroupResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Разделите по сходству лиц кандидата лиц.
   syntax:
-    content: 'function group(faceIds: string[], options: Object, callback: ServiceCallback<GroupResponse>)'
+    content: 'function group(faceIds: string[], options: Object, callback: ServiceCallback<GroupResult>)'
     parameters:
     - id: faceIds
       type:
@@ -397,14 +377,36 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<azure-cognitiveservices-face.GroupResponse>
+      - ServiceCallback<azure-cognitiveservices-face.GroupResult>
       description: ''
     return:
       type:
-      - Promise<azure-cognitiveservices-face.GroupResponse>
+      - Promise<azure-cognitiveservices-face.GroupResult>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.group_1
+  name: group(string[], ServiceCallback<GroupResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Разделите по сходству лиц кандидата лиц.
+  syntax:
+    content: 'function group(faceIds: string[], callback: ServiceCallback<GroupResult>)'
+    parameters:
+    - id: faceIds
+      type:
+      - string[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.GroupResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.GroupResult>
   package: azure-cognitiveservices-face
 - uid: azure-cognitiveservices-face.Face.groupWithHttpOperationResponse
-  name: groupWithHttpOperationResponse
+  name: groupWithHttpOperationResponse(string[], Object)
   children: []
   type: method
   langs:
@@ -427,84 +429,23 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-cognitiveservices-face.GroupResponse>>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.identify_1
-  name: identify
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Идентификация Неизвестный лиц из группы пользователя.
-  syntax:
-    content: 'function identify(personGroupId: string, faceIds: string[], callback: ServiceCallback<IdentifyResultItem[]>)'
-    parameters:
-    - id: personGroupId
-      type:
-      - string
-      description: ''
-    - id: faceIds
-      type:
-      - string[]
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.IdentifyResultItem[]>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.IdentifyResultItem[]>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.identify_2
-  name: identify
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Идентификация Неизвестный лиц из группы пользователя.
-  syntax:
-    content: 'function identify(personGroupId: string, faceIds: string[], options: Object, callback: ServiceCallback<IdentifyResultItem[]>)'
-    parameters:
-    - id: personGroupId
-      type:
-      - string
-      description: ''
-    - id: faceIds
-      type:
-      - string[]
-      description: ''
-    - id: options
-      type:
-      - Object
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.IdentifyResultItem[]>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.IdentifyResultItem[]>
+      - Promise<HttpOperationResponse<azure-cognitiveservices-face.GroupResult>>
   package: azure-cognitiveservices-face
 - uid: azure-cognitiveservices-face.Face.identify
-  name: identify
+  name: identify(string[], Object)
   children: []
   type: method
   langs:
   - typeScript
-  summary: Идентификация Неизвестный лиц из группы пользователя.
+  summary: 1-ко многим код для поиска ближайшего поверхности конкретного запроса пользователя из группы пользователя или группы больших person.
   syntax:
-    content: 'function identify(personGroupId: string, faceIds: string[], options?: Object)'
+    content: 'function identify(faceIds: string[], options?: Object)'
     parameters:
-    - id: personGroupId
-      type:
-      - string
-      description: >
-        personGroupId person целевой группы, созданные PersonGroups.Create
     - id: faceIds
       type:
       - string[]
       description: >
-        Массив faceId кандидата созданные лиц - обнаружения.
+        Массив запросов сталкивается faceIds, созданные поверхности - обнаружения. Каждая из сторон, определяются независимо друг от друга. Допустимый диапазон faceIds — от [1, 10].
     - id: options
       type:
       - Object
@@ -512,28 +453,71 @@ items:
       optional: true
     return:
       type:
-      - Promise<azure-cognitiveservices-face.IdentifyResultItem[]>
+      - Promise<azure-cognitiveservices-face.IdentifyResult[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.identify_2
+  name: identify(string[], Object, ServiceCallback<IdentifyResult[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 1-ко многим код для поиска ближайшего поверхности конкретного запроса пользователя из группы пользователя или группы больших person.
+  syntax:
+    content: 'function identify(faceIds: string[], options: Object, callback: ServiceCallback<IdentifyResult[]>)'
+    parameters:
+    - id: faceIds
+      type:
+      - string[]
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.IdentifyResult[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.IdentifyResult[]>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.identify_1
+  name: identify(string[], ServiceCallback<IdentifyResult[]>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: 1-ко многим код для поиска ближайшего поверхности конкретного запроса пользователя из группы пользователя или группы больших person.
+  syntax:
+    content: 'function identify(faceIds: string[], callback: ServiceCallback<IdentifyResult[]>)'
+    parameters:
+    - id: faceIds
+      type:
+      - string[]
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.IdentifyResult[]>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.IdentifyResult[]>
   package: azure-cognitiveservices-face
 - uid: azure-cognitiveservices-face.Face.identifyWithHttpOperationResponse
-  name: identifyWithHttpOperationResponse
+  name: identifyWithHttpOperationResponse(string[], Object)
   children: []
   type: method
   langs:
   - typeScript
-  summary: Идентификация Неизвестный лиц из группы пользователя.
+  summary: 1-ко многим код для поиска ближайшего поверхности конкретного запроса пользователя из группы пользователя или группы больших person.
   syntax:
-    content: 'function identifyWithHttpOperationResponse(personGroupId: string, faceIds: string[], options?: Object)'
+    content: 'function identifyWithHttpOperationResponse(faceIds: string[], options?: Object)'
     parameters:
-    - id: personGroupId
-      type:
-      - string
-      description: >
-        personGroupId person целевой группы, созданные PersonGroups.Create
     - id: faceIds
       type:
       - string[]
       description: >
-        Массив faceId кандидата созданные лиц - обнаружения.
+        Массив запросов сталкивается faceIds, созданные поверхности - обнаружения. Каждая из сторон, определяются независимо друг от друга. Допустимый диапазон faceIds — от [1, 10].
     - id: options
       type:
       - Object
@@ -541,17 +525,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<azure-cognitiveservices-face.IdentifyResultItem[]>>
+      - Promise<HttpOperationResponse<azure-cognitiveservices-face.IdentifyResult[]>>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.verify
-  name: verify
+- uid: azure-cognitiveservices-face.Face.verifyFaceToFace
+  name: verifyFaceToFace(string, string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Проверьте ли два портрета принадлежат одному человеку или от того, принадлежит ли одной грани пользователю.
   syntax:
-    content: 'function verify(faceId1: string, faceId2: string, options?: Object)'
+    content: 'function verifyFaceToFace(faceId1: string, faceId2: string, options?: Object)'
     parameters:
     - id: faceId1
       type:
@@ -572,41 +556,15 @@ items:
       type:
       - Promise<azure-cognitiveservices-face.VerifyResult>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.verify_1
-  name: verify
+- uid: azure-cognitiveservices-face.Face.verifyFaceToFace_2
+  name: verifyFaceToFace(string, string, Object, ServiceCallback<VerifyResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Проверьте ли два портрета принадлежат одному человеку или от того, принадлежит ли одной грани пользователю.
   syntax:
-    content: 'function verify(faceId1: string, faceId2: string, callback: ServiceCallback<VerifyResult>)'
-    parameters:
-    - id: faceId1
-      type:
-      - string
-      description: ''
-    - id: faceId2
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.VerifyResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.VerifyResult>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.verify_2
-  name: verify
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Проверьте ли два портрета принадлежат одному человеку или от того, принадлежит ли одной грани пользователю.
-  syntax:
-    content: 'function verify(faceId1: string, faceId2: string, options: Object, callback: ServiceCallback<VerifyResult>)'
+    content: 'function verifyFaceToFace(faceId1: string, faceId2: string, options: Object, callback: ServiceCallback<VerifyResult>)'
     parameters:
     - id: faceId1
       type:
@@ -628,15 +586,41 @@ items:
       type:
       - Promise<azure-cognitiveservices-face.VerifyResult>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.verifyWithHttpOperationResponse
-  name: verifyWithHttpOperationResponse
+- uid: azure-cognitiveservices-face.Face.verifyFaceToFace_1
+  name: verifyFaceToFace(string, string, ServiceCallback<VerifyResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Проверьте ли два портрета принадлежат одному человеку или от того, принадлежит ли одной грани пользователю.
   syntax:
-    content: 'function verifyWithHttpOperationResponse(faceId1: string, faceId2: string, options?: Object)'
+    content: 'function verifyFaceToFace(faceId1: string, faceId2: string, callback: ServiceCallback<VerifyResult>)'
+    parameters:
+    - id: faceId1
+      type:
+      - string
+      description: ''
+    - id: faceId2
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.VerifyResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.VerifyResult>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.verifyFaceToFaceWithHttpOperationResponse
+  name: verifyFaceToFaceWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Проверьте ли два портрета принадлежат одному человеку или от того, принадлежит ли одной грани пользователю.
+  syntax:
+    content: 'function verifyFaceToFaceWithHttpOperationResponse(faceId1: string, faceId2: string, options?: Object)'
     parameters:
     - id: faceId1
       type:
@@ -657,33 +641,26 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-cognitiveservices-face.VerifyResult>>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.verifyWithPersonGroup
-  name: verifyWithPersonGroup
+- uid: azure-cognitiveservices-face.Face.verifyFaceToPerson
+  name: verifyFaceToPerson(string, string, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Проверьте, принадлежат ли два портрета одному человеку. Сравнивает грани идентификатор с идентификатором пользователя
   syntax:
-    content: 'function verifyWithPersonGroup(faceId: string, personId: string, personGroupId: string, options?: Object)'
+    content: 'function verifyFaceToPerson(faceId: string, personId: string, options?: Object)'
     parameters:
     - id: faceId
       type:
       - string
       description: >
-        faceId лица поступает из лиц — обнаружения
+        FaceId поверхности, поступает из лиц — обнаружения
     - id: personId
       type:
       - string
       description: >
-        Укажите конкретным лицом person группы.
-
-        personId создается в Persons.Create.
-    - id: personGroupId
-      type:
-      - string
-      description: >
-        С помощью существующих personGroupId и personId быстрой загрузки указанного лица. personGroupId создается в Person Groups.Create.
+        Укажите конкретным лицом в группу пользователя или группы больших person. personId создается в каждой группе людей человека — создать или LargePersonGroup Person.
     - id: options
       type:
       - Object
@@ -693,55 +670,21 @@ items:
       type:
       - Promise<azure-cognitiveservices-face.VerifyResult>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.verifyWithPersonGroup_1
-  name: verifyWithPersonGroup
+- uid: azure-cognitiveservices-face.Face.verifyFaceToPerson_2
+  name: verifyFaceToPerson(string, string, Object, ServiceCallback<VerifyResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Проверьте, принадлежат ли два портрета одному человеку. Сравнивает грани идентификатор с идентификатором пользователя
   syntax:
-    content: 'function verifyWithPersonGroup(faceId: string, personId: string, personGroupId: string, callback: ServiceCallback<VerifyResult>)'
+    content: 'function verifyFaceToPerson(faceId: string, personId: string, options: Object, callback: ServiceCallback<VerifyResult>)'
     parameters:
     - id: faceId
       type:
       - string
       description: ''
     - id: personId
-      type:
-      - string
-      description: ''
-    - id: personGroupId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-face.VerifyResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-face.VerifyResult>
-  package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.verifyWithPersonGroup_2
-  name: verifyWithPersonGroup
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Проверьте, принадлежат ли два портрета одному человеку. Сравнивает грани идентификатор с идентификатором пользователя
-  syntax:
-    content: 'function verifyWithPersonGroup(faceId: string, personId: string, personGroupId: string, options: Object, callback: ServiceCallback<VerifyResult>)'
-    parameters:
-    - id: faceId
-      type:
-      - string
-      description: ''
-    - id: personId
-      type:
-      - string
-      description: ''
-    - id: personGroupId
       type:
       - string
       description: ''
@@ -757,33 +700,52 @@ items:
       type:
       - Promise<azure-cognitiveservices-face.VerifyResult>
   package: azure-cognitiveservices-face
-- uid: azure-cognitiveservices-face.Face.verifyWithPersonGroupWithHttpOperationResponse
-  name: verifyWithPersonGroupWithHttpOperationResponse
+- uid: azure-cognitiveservices-face.Face.verifyFaceToPerson_1
+  name: verifyFaceToPerson(string, string, ServiceCallback<VerifyResult>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Проверьте, принадлежат ли два портрета одному человеку. Сравнивает грани идентификатор с идентификатором пользователя
   syntax:
-    content: 'function verifyWithPersonGroupWithHttpOperationResponse(faceId: string, personId: string, personGroupId: string, options?: Object)'
+    content: 'function verifyFaceToPerson(faceId: string, personId: string, callback: ServiceCallback<VerifyResult>)'
+    parameters:
+    - id: faceId
+      type:
+      - string
+      description: ''
+    - id: personId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-face.VerifyResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-face.VerifyResult>
+  package: azure-cognitiveservices-face
+- uid: azure-cognitiveservices-face.Face.verifyFaceToPersonWithHttpOperationResponse
+  name: verifyFaceToPersonWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Проверьте, принадлежат ли два портрета одному человеку. Сравнивает грани идентификатор с идентификатором пользователя
+  syntax:
+    content: 'function verifyFaceToPersonWithHttpOperationResponse(faceId: string, personId: string, options?: Object)'
     parameters:
     - id: faceId
       type:
       - string
       description: >
-        faceId лица поступает из лиц — обнаружения
+        FaceId поверхности, поступает из лиц — обнаружения
     - id: personId
       type:
       - string
       description: >
-        Укажите конкретным лицом person группы.
-
-        personId создается в Persons.Create.
-    - id: personGroupId
-      type:
-      - string
-      description: >
-        С помощью существующих personGroupId и personId быстрой загрузки указанного лица. personGroupId создается в Person Groups.Create.
+        Укажите конкретным лицом в группу пользователя или группы больших person. personId создается в каждой группе людей человека — создать или LargePersonGroup Person.
     - id: options
       type:
       - Object
@@ -795,6 +757,7 @@ items:
   package: azure-cognitiveservices-face
 references:
 - uid: Promise<azure-cognitiveservices-face.DetectedFace[]>
+  name: DetectedFace[]>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -804,6 +767,7 @@ references:
   - name: '[]>'
     fullName: '[]>'
 - uid: ServiceCallback<azure-cognitiveservices-face.DetectedFace[]>
+  name: DetectedFace[]>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -813,6 +777,7 @@ references:
   - name: '[]>'
     fullName: '[]>'
 - uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.DetectedFace[]>>
+  name: DetectedFace[]>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -821,88 +786,98 @@ references:
     uid: azure-cognitiveservices-face.DetectedFace
   - name: '[]>>'
     fullName: '[]>>'
-- uid: Promise<azure-cognitiveservices-face.SimilarFaceResult[]>
+- uid: Promise<azure-cognitiveservices-face.SimilarFace[]>
+  name: SimilarFace[]>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
-  - name: SimilarFaceResult
-    fullName: SimilarFaceResult
-    uid: azure-cognitiveservices-face.SimilarFaceResult
+  - name: SimilarFace
+    fullName: SimilarFace
+    uid: azure-cognitiveservices-face.SimilarFace
   - name: '[]>'
     fullName: '[]>'
-- uid: ServiceCallback<azure-cognitiveservices-face.SimilarFaceResult[]>
+- uid: ServiceCallback<azure-cognitiveservices-face.SimilarFace[]>
+  name: SimilarFace[]>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
-  - name: SimilarFaceResult
-    fullName: SimilarFaceResult
-    uid: azure-cognitiveservices-face.SimilarFaceResult
+  - name: SimilarFace
+    fullName: SimilarFace
+    uid: azure-cognitiveservices-face.SimilarFace
   - name: '[]>'
     fullName: '[]>'
-- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.SimilarFaceResult[]>>
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.SimilarFace[]>>
+  name: SimilarFace[]>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
-  - name: SimilarFaceResult
-    fullName: SimilarFaceResult
-    uid: azure-cognitiveservices-face.SimilarFaceResult
+  - name: SimilarFace
+    fullName: SimilarFace
+    uid: azure-cognitiveservices-face.SimilarFace
   - name: '[]>>'
     fullName: '[]>>'
-- uid: Promise<azure-cognitiveservices-face.GroupResponse>
+- uid: Promise<azure-cognitiveservices-face.GroupResult>
+  name: GroupResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
-  - name: GroupResponse
-    fullName: GroupResponse
-    uid: azure-cognitiveservices-face.GroupResponse
+  - name: GroupResult
+    fullName: GroupResult
+    uid: azure-cognitiveservices-face.GroupResult
   - name: '>'
     fullName: '>'
-- uid: ServiceCallback<azure-cognitiveservices-face.GroupResponse>
+- uid: ServiceCallback<azure-cognitiveservices-face.GroupResult>
+  name: GroupResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
-  - name: GroupResponse
-    fullName: GroupResponse
-    uid: azure-cognitiveservices-face.GroupResponse
+  - name: GroupResult
+    fullName: GroupResult
+    uid: azure-cognitiveservices-face.GroupResult
   - name: '>'
     fullName: '>'
-- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.GroupResponse>>
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.GroupResult>>
+  name: GroupResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
-  - name: GroupResponse
-    fullName: GroupResponse
-    uid: azure-cognitiveservices-face.GroupResponse
+  - name: GroupResult
+    fullName: GroupResult
+    uid: azure-cognitiveservices-face.GroupResult
   - name: '>>'
     fullName: '>>'
-- uid: Promise<azure-cognitiveservices-face.IdentifyResultItem[]>
+- uid: Promise<azure-cognitiveservices-face.IdentifyResult[]>
+  name: IdentifyResult[]>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
-  - name: IdentifyResultItem
-    fullName: IdentifyResultItem
-    uid: azure-cognitiveservices-face.IdentifyResultItem
+  - name: IdentifyResult
+    fullName: IdentifyResult
+    uid: azure-cognitiveservices-face.IdentifyResult
   - name: '[]>'
     fullName: '[]>'
-- uid: ServiceCallback<azure-cognitiveservices-face.IdentifyResultItem[]>
+- uid: ServiceCallback<azure-cognitiveservices-face.IdentifyResult[]>
+  name: IdentifyResult[]>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
-  - name: IdentifyResultItem
-    fullName: IdentifyResultItem
-    uid: azure-cognitiveservices-face.IdentifyResultItem
+  - name: IdentifyResult
+    fullName: IdentifyResult
+    uid: azure-cognitiveservices-face.IdentifyResult
   - name: '[]>'
     fullName: '[]>'
-- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.IdentifyResultItem[]>>
+- uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.IdentifyResult[]>>
+  name: IdentifyResult[]>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
-  - name: IdentifyResultItem
-    fullName: IdentifyResultItem
-    uid: azure-cognitiveservices-face.IdentifyResultItem
+  - name: IdentifyResult
+    fullName: IdentifyResult
+    uid: azure-cognitiveservices-face.IdentifyResult
   - name: '[]>>'
     fullName: '[]>>'
 - uid: Promise<azure-cognitiveservices-face.VerifyResult>
+  name: VerifyResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -912,6 +887,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-cognitiveservices-face.VerifyResult>
+  name: VerifyResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -921,6 +897,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-cognitiveservices-face.VerifyResult>>
+  name: VerifyResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 400f7881d8e7e47311d33408d997eb4e6c09edc8
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52089063"
+items:
+- uid: azure-servicefabric.ReplicatorQueueStatus
+  name: ReplicatorQueueStatus
+  fullName: ReplicatorQueueStatus
+  children:
+  - azure-servicefabric.ReplicatorQueueStatus.committedSequenceNumber
+  - azure-servicefabric.ReplicatorQueueStatus.completedSequenceNumber
+  - azure-servicefabric.ReplicatorQueueStatus.firstSequenceNumber
+  - azure-servicefabric.ReplicatorQueueStatus.lastSequenceNumber
+  - azure-servicefabric.ReplicatorQueueStatus.queueMemorySize
+  - azure-servicefabric.ReplicatorQueueStatus.queueUtilizationPercentage
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Предоставляет различные статистические данные очереди, используемой в Репликатор service fabric.
+
+    Содержит сведения о Репликатор service fabric, таких как использование очереди репликации или копирования, метка времени последнего подтверждения получения, и т.д. В зависимости от роли replicator свойства в этом типе означает разные значения.
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.committedSequenceNumber
+  name: committedSequenceNumber
+  fullName: committedSequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    На основной Репликатор это семантически наибольшим порядковым номером операции, для которого отправил подтверждение кворум записи из вторичных реплик.
+
+    В дополнительном репликаторе это семантически наибольшим порядковым номером операции в порядке, полученных с сервера-источника.
+  optional: true
+  syntax:
+    content: 'committedSequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.completedSequenceNumber
+  name: completedSequenceNumber
+  fullName: completedSequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    На основной Репликатор это семантически наибольший порядковый номер, операции, для которых все вторичные реплики отправил подтверждение.
+
+    В дополнительном репликаторе это семантически наибольший порядковый номер, примененное постоянного состояния.
+  optional: true
+  syntax:
+    content: 'completedSequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.firstSequenceNumber
+  name: firstSequenceNumber
+  fullName: firstSequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    На основной Репликатор это семантически порядковый номер, операции, для которых все вторичные реплики отправил подтверждение.
+
+    В дополнительном репликаторе это наименьший порядковый номер операции, которая присутствует в очереди.
+  optional: true
+  syntax:
+    content: 'firstSequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.lastSequenceNumber
+  name: lastSequenceNumber
+  fullName: lastSequenceNumber
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Представляет порядковый номер последней операции, доступные в очереди.
+  optional: true
+  syntax:
+    content: 'lastSequenceNumber?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.queueMemorySize
+  name: queueMemorySize
+  fullName: queueMemorySize
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Представляет виртуальную память, потребляемая очередью, в байтах.
+  optional: true
+  syntax:
+    content: 'queueMemorySize?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.ReplicatorQueueStatus.queueUtilizationPercentage
+  name: queueUtilizationPercentage
+  fullName: queueUtilizationPercentage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Представляет использование очереди. Значение 0 указывает, что очередь пуста, и значение 100 означает, что очередь заполнена.
+  optional: true
+  syntax:
+    content: 'queueUtilizationPercentage?: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric

@@ -1,21 +1,21 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 0a95a80ef7e9ff0ab9dba4e2118809789f57d952
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 1f245bee2f9e4121bcb2604025f1f0406892cade
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41681719"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52098800"
 items:
 - uid: azure-arm-apimanagement.ApiManagementOperations
   name: ApiManagementOperations
   fullName: ApiManagementOperations
   children:
   - azure-arm-apimanagement.ApiManagementOperations.list
-  - azure-arm-apimanagement.ApiManagementOperations.list_1
   - azure-arm-apimanagement.ApiManagementOperations.list_2
+  - azure-arm-apimanagement.ApiManagementOperations.list_1
   - azure-arm-apimanagement.ApiManagementOperations.listNext
-  - azure-arm-apimanagement.ApiManagementOperations.listNext_1
   - azure-arm-apimanagement.ApiManagementOperations.listNext_2
+  - azure-arm-apimanagement.ApiManagementOperations.listNext_1
   - azure-arm-apimanagement.ApiManagementOperations.listNextWithHttpOperationResponse
   - azure-arm-apimanagement.ApiManagementOperations.listWithHttpOperationResponse
   langs:
@@ -24,7 +24,7 @@ items:
   summary: ''
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.ApiManagementOperations.list
-  name: list
+  name: list(Object)
   children: []
   type: method
   langs:
@@ -42,26 +42,8 @@ items:
       type:
       - Promise<azure-arm-apimanagement.OperationListResult>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.ApiManagementOperations.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список всех доступных операций REST API поставщика Microsoft.ApiManagement.
-  syntax:
-    content: 'function list(callback: ServiceCallback<OperationListResult>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.OperationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.OperationListResult>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.ApiManagementOperations.list_2
-  name: list
+  name: list(Object, ServiceCallback<OperationListResult>)
   children: []
   type: method
   langs:
@@ -82,8 +64,26 @@ items:
       type:
       - Promise<azure-arm-apimanagement.OperationListResult>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiManagementOperations.list_1
+  name: list(ServiceCallback<OperationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список всех доступных операций REST API поставщика Microsoft.ApiManagement.
+  syntax:
+    content: 'function list(callback: ServiceCallback<OperationListResult>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.OperationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.OperationListResult>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.ApiManagementOperations.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -106,30 +106,8 @@ items:
       type:
       - Promise<azure-arm-apimanagement.OperationListResult>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.ApiManagementOperations.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список всех доступных операций REST API поставщика Microsoft.ApiManagement.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<OperationListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.OperationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.OperationListResult>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.ApiManagementOperations.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<OperationListResult>)
   children: []
   type: method
   langs:
@@ -154,8 +132,30 @@ items:
       type:
       - Promise<azure-arm-apimanagement.OperationListResult>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.ApiManagementOperations.listNext_1
+  name: listNext(string, ServiceCallback<OperationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список всех доступных операций REST API поставщика Microsoft.ApiManagement.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<OperationListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.OperationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.OperationListResult>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.ApiManagementOperations.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -179,7 +179,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.OperationListResult>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.ApiManagementOperations.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -199,6 +199,7 @@ items:
   package: azure-arm-apimanagement
 references:
 - uid: Promise<azure-arm-apimanagement.OperationListResult>
+  name: OperationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -208,6 +209,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-apimanagement.OperationListResult>
+  name: OperationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -217,6 +219,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.OperationListResult>>
+  name: OperationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

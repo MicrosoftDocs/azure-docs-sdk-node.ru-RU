@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: dbfbc4ce57e0d3074723e2ab590dbfa383612c6d
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: df4d5b6bd66bd47bf5f62f4279e527b3c5dbbff9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41695073"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52011439"
 items:
 - uid: azure-arm-logic.WorkflowRunActions
   name: WorkflowRunActions
@@ -15,15 +15,15 @@ items:
   - azure-arm-logic.WorkflowRunActions.get_1
   - azure-arm-logic.WorkflowRunActions.getWithHttpOperationResponse
   - azure-arm-logic.WorkflowRunActions.list
-  - azure-arm-logic.WorkflowRunActions.list_1
   - azure-arm-logic.WorkflowRunActions.list_2
+  - azure-arm-logic.WorkflowRunActions.list_1
   - azure-arm-logic.WorkflowRunActions.listExpressionTraces
-  - azure-arm-logic.WorkflowRunActions.listExpressionTraces_1
   - azure-arm-logic.WorkflowRunActions.listExpressionTraces_2
+  - azure-arm-logic.WorkflowRunActions.listExpressionTraces_1
   - azure-arm-logic.WorkflowRunActions.listExpressionTracesWithHttpOperationResponse
   - azure-arm-logic.WorkflowRunActions.listNext
-  - azure-arm-logic.WorkflowRunActions.listNext_1
   - azure-arm-logic.WorkflowRunActions.listNext_2
+  - azure-arm-logic.WorkflowRunActions.listNext_1
   - azure-arm-logic.WorkflowRunActions.listNextWithHttpOperationResponse
   - azure-arm-logic.WorkflowRunActions.listWithHttpOperationResponse
   langs:
@@ -32,7 +32,7 @@ items:
   summary: ''
   package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.get
-  name: get
+  name: get(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -71,7 +71,7 @@ items:
       - Promise<azure-arm-logic.WorkflowRunAction>
   package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.get_2
-  name: get
+  name: get(string, string, string, string, Object, ServiceCallback<WorkflowRunAction>)
   children: []
   type: method
   langs:
@@ -109,7 +109,7 @@ items:
       - Promise<azure-arm-logic.WorkflowRunAction>
   package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.get_1
-  name: get
+  name: get(string, string, string, string, ServiceCallback<WorkflowRunAction>)
   children: []
   type: method
   langs:
@@ -143,7 +143,7 @@ items:
       - Promise<azure-arm-logic.WorkflowRunAction>
   package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -182,7 +182,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-logic.WorkflowRunAction>>
   package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.list
-  name: list
+  name: list(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -215,38 +215,8 @@ items:
       type:
       - Promise<azure-arm-logic.WorkflowRunActionListResult>
   package: azure-arm-logic
-- uid: azure-arm-logic.WorkflowRunActions.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает список действий для запуска рабочего процесса.
-  syntax:
-    content: 'function list(resourceGroupName: string, workflowName: string, runName: string, callback: ServiceCallback<WorkflowRunActionListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: workflowName
-      type:
-      - string
-      description: ''
-    - id: runName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-logic.WorkflowRunActionListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-logic.WorkflowRunActionListResult>
-  package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.list_2
-  name: list
+  name: list(string, string, string, Object, ServiceCallback<WorkflowRunActionListResult>)
   children: []
   type: method
   langs:
@@ -279,8 +249,38 @@ items:
       type:
       - Promise<azure-arm-logic.WorkflowRunActionListResult>
   package: azure-arm-logic
+- uid: azure-arm-logic.WorkflowRunActions.list_1
+  name: list(string, string, string, ServiceCallback<WorkflowRunActionListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает список действий для запуска рабочего процесса.
+  syntax:
+    content: 'function list(resourceGroupName: string, workflowName: string, runName: string, callback: ServiceCallback<WorkflowRunActionListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workflowName
+      type:
+      - string
+      description: ''
+    - id: runName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-logic.WorkflowRunActionListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-logic.WorkflowRunActionListResult>
+  package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.listExpressionTraces
-  name: listExpressionTraces
+  name: listExpressionTraces(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -318,42 +318,8 @@ items:
       type:
       - Promise<azure-arm-logic.ExpressionTraces>
   package: azure-arm-logic
-- uid: azure-arm-logic.WorkflowRunActions.listExpressionTraces_1
-  name: listExpressionTraces
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список запуска трассировка выражений рабочего процесса.
-  syntax:
-    content: 'function listExpressionTraces(resourceGroupName: string, workflowName: string, runName: string, actionName: string, callback: ServiceCallback<ExpressionTraces>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: workflowName
-      type:
-      - string
-      description: ''
-    - id: runName
-      type:
-      - string
-      description: ''
-    - id: actionName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-logic.ExpressionTraces>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-logic.ExpressionTraces>
-  package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.listExpressionTraces_2
-  name: listExpressionTraces
+  name: listExpressionTraces(string, string, string, string, Object, ServiceCallback<ExpressionTraces>)
   children: []
   type: method
   langs:
@@ -390,8 +356,42 @@ items:
       type:
       - Promise<azure-arm-logic.ExpressionTraces>
   package: azure-arm-logic
+- uid: azure-arm-logic.WorkflowRunActions.listExpressionTraces_1
+  name: listExpressionTraces(string, string, string, string, ServiceCallback<ExpressionTraces>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список запуска трассировка выражений рабочего процесса.
+  syntax:
+    content: 'function listExpressionTraces(resourceGroupName: string, workflowName: string, runName: string, actionName: string, callback: ServiceCallback<ExpressionTraces>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: workflowName
+      type:
+      - string
+      description: ''
+    - id: runName
+      type:
+      - string
+      description: ''
+    - id: actionName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-logic.ExpressionTraces>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-logic.ExpressionTraces>
+  package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.listExpressionTracesWithHttpOperationResponse
-  name: listExpressionTracesWithHttpOperationResponse
+  name: listExpressionTracesWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -430,7 +430,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-logic.ExpressionTraces>>
   package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -453,30 +453,8 @@ items:
       type:
       - Promise<azure-arm-logic.WorkflowRunActionListResult>
   package: azure-arm-logic
-- uid: azure-arm-logic.WorkflowRunActions.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает список действий для запуска рабочего процесса.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<WorkflowRunActionListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-logic.WorkflowRunActionListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-logic.WorkflowRunActionListResult>
-  package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<WorkflowRunActionListResult>)
   children: []
   type: method
   langs:
@@ -501,8 +479,30 @@ items:
       type:
       - Promise<azure-arm-logic.WorkflowRunActionListResult>
   package: azure-arm-logic
+- uid: azure-arm-logic.WorkflowRunActions.listNext_1
+  name: listNext(string, ServiceCallback<WorkflowRunActionListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает список действий для запуска рабочего процесса.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<WorkflowRunActionListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-logic.WorkflowRunActionListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-logic.WorkflowRunActionListResult>
+  package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -526,7 +526,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-logic.WorkflowRunActionListResult>>
   package: azure-arm-logic
 - uid: azure-arm-logic.WorkflowRunActions.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -561,6 +561,7 @@ items:
   package: azure-arm-logic
 references:
 - uid: Promise<azure-arm-logic.WorkflowRunAction>
+  name: WorkflowRunAction>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -570,6 +571,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-logic.WorkflowRunAction>
+  name: WorkflowRunAction>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -579,6 +581,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-logic.WorkflowRunAction>>
+  name: WorkflowRunAction>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -588,6 +591,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-logic.WorkflowRunActionListResult>
+  name: WorkflowRunActionListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -597,6 +601,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-logic.WorkflowRunActionListResult>
+  name: WorkflowRunActionListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -606,6 +611,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<azure-arm-logic.ExpressionTraces>
+  name: ExpressionTraces>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -615,6 +621,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-logic.ExpressionTraces>
+  name: ExpressionTraces>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -624,6 +631,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-logic.ExpressionTraces>>
+  name: ExpressionTraces>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -633,6 +641,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<HttpOperationResponse<azure-arm-logic.WorkflowRunActionListResult>>
+  name: WorkflowRunActionListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

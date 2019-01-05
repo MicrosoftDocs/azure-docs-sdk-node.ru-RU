@@ -1,22 +1,22 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 0f5ee04971ee7e7f0b7dc35ad26d9fdd2644256a
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 503edcf9529c92153e76183d0f0c8b78beaf210d
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41686393"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52009571"
 items:
 - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies
   name: ExtendedDatabaseBlobAuditingPolicies
   fullName: ExtendedDatabaseBlobAuditingPolicies
   children:
   - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdate
-  - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdate_1
   - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdate_2
+  - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdate_1
   - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdateWithHttpOperationResponse
   - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.get
-  - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.get_1
   - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.get_2
+  - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.get_1
   - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.getWithHttpOperationResponse
   langs:
   - typeScript
@@ -24,7 +24,7 @@ items:
   summary: ''
   package: azure-arm-sql
 - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, ExtendedDatabaseBlobAuditingPolicy, Object)
   children: []
   type: method
   langs:
@@ -37,7 +37,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -62,42 +62,8 @@ items:
       type:
       - Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
   package: azure-arm-sql
-- uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Создает или обновляет политики аудита blob расширенной базы данных.
-  syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: ExtendedDatabaseBlobAuditingPolicy, callback: ServiceCallback<ExtendedDatabaseBlobAuditingPolicy>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
-  package: azure-arm-sql
 - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, ExtendedDatabaseBlobAuditingPolicy, Object, ServiceCallback<ExtendedDatabaseBlobAuditingPolicy>)
   children: []
   type: method
   langs:
@@ -134,8 +100,42 @@ items:
       type:
       - Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
   package: azure-arm-sql
+- uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdate_1
+  name: createOrUpdate(string, string, string, ExtendedDatabaseBlobAuditingPolicy, ServiceCallback<ExtendedDatabaseBlobAuditingPolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает или обновляет политики аудита blob расширенной базы данных.
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, databaseName: string, parameters: ExtendedDatabaseBlobAuditingPolicy, callback: ServiceCallback<ExtendedDatabaseBlobAuditingPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
+  package: azure-arm-sql
 - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, string, ExtendedDatabaseBlobAuditingPolicy, Object)
   children: []
   type: method
   langs:
@@ -148,7 +148,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -174,7 +174,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>>
   package: azure-arm-sql
 - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -187,7 +187,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -207,38 +207,8 @@ items:
       type:
       - Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
   package: azure-arm-sql
-- uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает расширенные базы данных больших двоичных объектов, политики аудита.
-  syntax:
-    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ExtendedDatabaseBlobAuditingPolicy>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: databaseName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
-  package: azure-arm-sql
 - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<ExtendedDatabaseBlobAuditingPolicy>)
   children: []
   type: method
   langs:
@@ -271,8 +241,38 @@ items:
       type:
       - Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
   package: azure-arm-sql
+- uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.get_1
+  name: get(string, string, string, ServiceCallback<ExtendedDatabaseBlobAuditingPolicy>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает расширенные базы данных больших двоичных объектов, политики аудита.
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, databaseName: string, callback: ServiceCallback<ExtendedDatabaseBlobAuditingPolicy>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: databaseName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
+  package: azure-arm-sql
 - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicies.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -285,7 +285,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -307,11 +307,13 @@ items:
   package: azure-arm-sql
 references:
 - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy
+  name: ExtendedDatabaseBlobAuditingPolicy
   spec.typeScript:
   - name: ExtendedDatabaseBlobAuditingPolicy
     fullName: ExtendedDatabaseBlobAuditingPolicy
     uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy
 - uid: Promise<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
+  name: ExtendedDatabaseBlobAuditingPolicy>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -321,6 +323,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>
+  name: ExtendedDatabaseBlobAuditingPolicy>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -330,6 +333,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy>>
+  name: ExtendedDatabaseBlobAuditingPolicy>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

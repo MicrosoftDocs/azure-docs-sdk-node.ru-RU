@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: a7edf3813b6489818944b18aba51ad39a445adcf
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: ef921e7a5d280c6250a1e5f1b867b4c315eaeb11
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41686503"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52006968"
 items:
 - uid: azure-arm-network.LoadBalancerProbes
   name: LoadBalancerProbes
@@ -15,11 +15,11 @@ items:
   - azure-arm-network.LoadBalancerProbes.get_1
   - azure-arm-network.LoadBalancerProbes.getWithHttpOperationResponse
   - azure-arm-network.LoadBalancerProbes.list
-  - azure-arm-network.LoadBalancerProbes.list_1
   - azure-arm-network.LoadBalancerProbes.list_2
+  - azure-arm-network.LoadBalancerProbes.list_1
   - azure-arm-network.LoadBalancerProbes.listNext
-  - azure-arm-network.LoadBalancerProbes.listNext_1
   - azure-arm-network.LoadBalancerProbes.listNext_2
+  - azure-arm-network.LoadBalancerProbes.listNext_1
   - azure-arm-network.LoadBalancerProbes.listNextWithHttpOperationResponse
   - azure-arm-network.LoadBalancerProbes.listWithHttpOperationResponse
   langs:
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -62,7 +62,7 @@ items:
       - Promise<azure-arm-network.Probe>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<Probe>)
   children: []
   type: method
   langs:
@@ -96,7 +96,7 @@ items:
       - Promise<azure-arm-network.Probe>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.get_1
-  name: get
+  name: get(string, string, string, ServiceCallback<Probe>)
   children: []
   type: method
   langs:
@@ -126,7 +126,7 @@ items:
       - Promise<azure-arm-network.Probe>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -160,7 +160,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-network.Probe>>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.list
-  name: list
+  name: list(string, string, Object)
   children: []
   type: method
   langs:
@@ -188,34 +188,8 @@ items:
       type:
       - Promise<azure-arm-network.LoadBalancerProbeListResult>
   package: azure-arm-network
-- uid: azure-arm-network.LoadBalancerProbes.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает всех проверок подсистемы балансировки нагрузки.
-  syntax:
-    content: 'function list(resourceGroupName: string, loadBalancerName: string, callback: ServiceCallback<LoadBalancerProbeListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: loadBalancerName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-network.LoadBalancerProbeListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-network.LoadBalancerProbeListResult>
-  package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.list_2
-  name: list
+  name: list(string, string, Object, ServiceCallback<LoadBalancerProbeListResult>)
   children: []
   type: method
   langs:
@@ -244,8 +218,34 @@ items:
       type:
       - Promise<azure-arm-network.LoadBalancerProbeListResult>
   package: azure-arm-network
+- uid: azure-arm-network.LoadBalancerProbes.list_1
+  name: list(string, string, ServiceCallback<LoadBalancerProbeListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает всех проверок подсистемы балансировки нагрузки.
+  syntax:
+    content: 'function list(resourceGroupName: string, loadBalancerName: string, callback: ServiceCallback<LoadBalancerProbeListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: loadBalancerName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.LoadBalancerProbeListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.LoadBalancerProbeListResult>
+  package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.listNext
-  name: listNext
+  name: listNext(string, Object)
   children: []
   type: method
   langs:
@@ -268,30 +268,8 @@ items:
       type:
       - Promise<azure-arm-network.LoadBalancerProbeListResult>
   package: azure-arm-network
-- uid: azure-arm-network.LoadBalancerProbes.listNext_1
-  name: listNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает всех проверок подсистемы балансировки нагрузки.
-  syntax:
-    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<LoadBalancerProbeListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-network.LoadBalancerProbeListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-network.LoadBalancerProbeListResult>
-  package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.listNext_2
-  name: listNext
+  name: listNext(string, Object, ServiceCallback<LoadBalancerProbeListResult>)
   children: []
   type: method
   langs:
@@ -316,8 +294,30 @@ items:
       type:
       - Promise<azure-arm-network.LoadBalancerProbeListResult>
   package: azure-arm-network
+- uid: azure-arm-network.LoadBalancerProbes.listNext_1
+  name: listNext(string, ServiceCallback<LoadBalancerProbeListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает всех проверок подсистемы балансировки нагрузки.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<LoadBalancerProbeListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.LoadBalancerProbeListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.LoadBalancerProbeListResult>
+  package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.listNextWithHttpOperationResponse
-  name: listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -341,7 +341,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-network.LoadBalancerProbeListResult>>
   package: azure-arm-network
 - uid: azure-arm-network.LoadBalancerProbes.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -371,6 +371,7 @@ items:
   package: azure-arm-network
 references:
 - uid: Promise<azure-arm-network.Probe>
+  name: Probe>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -380,6 +381,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-network.Probe>
+  name: Probe>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -389,6 +391,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-network.Probe>>
+  name: Probe>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -398,6 +401,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-network.LoadBalancerProbeListResult>
+  name: LoadBalancerProbeListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -407,6 +411,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-network.LoadBalancerProbeListResult>
+  name: LoadBalancerProbeListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -416,6 +421,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-network.LoadBalancerProbeListResult>>
+  name: LoadBalancerProbeListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

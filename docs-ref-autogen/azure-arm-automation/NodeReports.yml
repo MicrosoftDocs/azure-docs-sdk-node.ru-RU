@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: a49a8e70ad870a2283a8c0bfb999467a796d4fe7
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 27e4eccb4f98b13b6ad7af3db1a0dbbe8465a48e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41696553"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52017698"
 items:
 - uid: azure-arm-automation.NodeReports
   name: NodeReports
@@ -14,16 +14,16 @@ items:
   - azure-arm-automation.NodeReports.get_2
   - azure-arm-automation.NodeReports.get_1
   - azure-arm-automation.NodeReports.getContent
-  - azure-arm-automation.NodeReports.getContent_1
   - azure-arm-automation.NodeReports.getContent_2
+  - azure-arm-automation.NodeReports.getContent_1
   - azure-arm-automation.NodeReports.getContentWithHttpOperationResponse
   - azure-arm-automation.NodeReports.getWithHttpOperationResponse
   - azure-arm-automation.NodeReports.listByNode
-  - azure-arm-automation.NodeReports.listByNode_1
   - azure-arm-automation.NodeReports.listByNode_2
+  - azure-arm-automation.NodeReports.listByNode_1
   - azure-arm-automation.NodeReports.listByNodeNext
-  - azure-arm-automation.NodeReports.listByNodeNext_1
   - azure-arm-automation.NodeReports.listByNodeNext_2
+  - azure-arm-automation.NodeReports.listByNodeNext_1
   - azure-arm-automation.NodeReports.listByNodeNextWithHttpOperationResponse
   - azure-arm-automation.NodeReports.listByNodeWithHttpOperationResponse
   langs:
@@ -32,7 +32,7 @@ items:
   summary: ''
   package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.get
-  name: get
+  name: get(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -71,7 +71,7 @@ items:
       - Promise<azure-arm-automation.DscNodeReport>
   package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.get_2
-  name: get
+  name: get(string, string, string, string, Object, ServiceCallback<DscNodeReport>)
   children: []
   type: method
   langs:
@@ -109,7 +109,7 @@ items:
       - Promise<azure-arm-automation.DscNodeReport>
   package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.get_1
-  name: get
+  name: get(string, string, string, string, ServiceCallback<DscNodeReport>)
   children: []
   type: method
   langs:
@@ -143,7 +143,7 @@ items:
       - Promise<azure-arm-automation.DscNodeReport>
   package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.getContent
-  name: getContent
+  name: getContent(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -181,42 +181,8 @@ items:
       type:
       - Promise<any>
   package: azure-arm-automation
-- uid: azure-arm-automation.NodeReports.getContent_1
-  name: getContent
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Извлекать отчеты узлов Dsc по идентификатору узла и идентификатор отчета.
-  syntax:
-    content: 'function getContent(resourceGroupName: string, automationAccountName: string, nodeId: string, reportId: string, callback: ServiceCallback<any>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: automationAccountName
-      type:
-      - string
-      description: ''
-    - id: nodeId
-      type:
-      - string
-      description: ''
-    - id: reportId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<any>
-      description: ''
-    return:
-      type:
-      - Promise<any>
-  package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.getContent_2
-  name: getContent
+  name: getContent(string, string, string, string, Object, ServiceCallback<any>)
   children: []
   type: method
   langs:
@@ -253,8 +219,42 @@ items:
       type:
       - Promise<any>
   package: azure-arm-automation
+- uid: azure-arm-automation.NodeReports.getContent_1
+  name: getContent(string, string, string, string, ServiceCallback<any>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Извлекать отчеты узлов Dsc по идентификатору узла и идентификатор отчета.
+  syntax:
+    content: 'function getContent(resourceGroupName: string, automationAccountName: string, nodeId: string, reportId: string, callback: ServiceCallback<any>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: automationAccountName
+      type:
+      - string
+      description: ''
+    - id: nodeId
+      type:
+      - string
+      description: ''
+    - id: reportId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<any>
+      description: ''
+    return:
+      type:
+      - Promise<any>
+  package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.getContentWithHttpOperationResponse
-  name: getContentWithHttpOperationResponse
+  name: getContentWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -293,7 +293,7 @@ items:
       - Promise<HttpOperationResponse<any>>
   package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -332,7 +332,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.DscNodeReport>>
   package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.listByNode
-  name: listByNode
+  name: listByNode(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -365,38 +365,8 @@ items:
       type:
       - Promise<azure-arm-automation.DscNodeReportListResult>
   package: azure-arm-automation
-- uid: azure-arm-automation.NodeReports.listByNode_1
-  name: listByNode
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получить список отчет узла Dsc по идентификатору узла.
-  syntax:
-    content: 'function listByNode(resourceGroupName: string, automationAccountName: string, nodeId: string, callback: ServiceCallback<DscNodeReportListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: automationAccountName
-      type:
-      - string
-      description: ''
-    - id: nodeId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.DscNodeReportListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.DscNodeReportListResult>
-  package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.listByNode_2
-  name: listByNode
+  name: listByNode(string, string, string, Object, ServiceCallback<DscNodeReportListResult>)
   children: []
   type: method
   langs:
@@ -429,8 +399,38 @@ items:
       type:
       - Promise<azure-arm-automation.DscNodeReportListResult>
   package: azure-arm-automation
+- uid: azure-arm-automation.NodeReports.listByNode_1
+  name: listByNode(string, string, string, ServiceCallback<DscNodeReportListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить список отчет узла Dsc по идентификатору узла.
+  syntax:
+    content: 'function listByNode(resourceGroupName: string, automationAccountName: string, nodeId: string, callback: ServiceCallback<DscNodeReportListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: automationAccountName
+      type:
+      - string
+      description: ''
+    - id: nodeId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.DscNodeReportListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.DscNodeReportListResult>
+  package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.listByNodeNext
-  name: listByNodeNext
+  name: listByNodeNext(string, Object)
   children: []
   type: method
   langs:
@@ -453,30 +453,8 @@ items:
       type:
       - Promise<azure-arm-automation.DscNodeReportListResult>
   package: azure-arm-automation
-- uid: azure-arm-automation.NodeReports.listByNodeNext_1
-  name: listByNodeNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получить список отчет узла Dsc по идентификатору узла.
-  syntax:
-    content: 'function listByNodeNext(nextPageLink: string, callback: ServiceCallback<DscNodeReportListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.DscNodeReportListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.DscNodeReportListResult>
-  package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.listByNodeNext_2
-  name: listByNodeNext
+  name: listByNodeNext(string, Object, ServiceCallback<DscNodeReportListResult>)
   children: []
   type: method
   langs:
@@ -501,8 +479,30 @@ items:
       type:
       - Promise<azure-arm-automation.DscNodeReportListResult>
   package: azure-arm-automation
+- uid: azure-arm-automation.NodeReports.listByNodeNext_1
+  name: listByNodeNext(string, ServiceCallback<DscNodeReportListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить список отчет узла Dsc по идентификатору узла.
+  syntax:
+    content: 'function listByNodeNext(nextPageLink: string, callback: ServiceCallback<DscNodeReportListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.DscNodeReportListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.DscNodeReportListResult>
+  package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.listByNodeNextWithHttpOperationResponse
-  name: listByNodeNextWithHttpOperationResponse
+  name: listByNodeNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -526,7 +526,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.DscNodeReportListResult>>
   package: azure-arm-automation
 - uid: azure-arm-automation.NodeReports.listByNodeWithHttpOperationResponse
-  name: listByNodeWithHttpOperationResponse
+  name: listByNodeWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -561,6 +561,7 @@ items:
   package: azure-arm-automation
 references:
 - uid: Promise<azure-arm-automation.DscNodeReport>
+  name: DscNodeReport>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -570,6 +571,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-automation.DscNodeReport>
+  name: DscNodeReport>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -579,6 +581,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-automation.DscNodeReport>>
+  name: DscNodeReport>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -588,6 +591,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-automation.DscNodeReportListResult>
+  name: DscNodeReportListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -597,6 +601,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-automation.DscNodeReportListResult>
+  name: DscNodeReportListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -606,6 +611,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-automation.DscNodeReportListResult>>
+  name: DscNodeReportListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

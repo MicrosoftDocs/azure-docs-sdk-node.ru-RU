@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 5d47c03481e7c07a7f3ad9a6b9437189390d45bc
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 3560829fa8eb4603f34abb756b8ec9620fffc5c9
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41685021"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52054392"
 items:
 - uid: '@azure/cosmos.Offers'
   name: Offers
@@ -12,6 +12,7 @@ items:
   children:
   - '@azure/cosmos.Offers.client'
   - '@azure/cosmos.Offers.query'
+  - '@azure/cosmos.Offers.query_1'
   - '@azure/cosmos.Offers.readAll'
   langs:
   - typeScript
@@ -33,7 +34,7 @@ items:
       - '@azure/cosmos.CosmosClient'
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Offers.query'
-  name: query
+  name: query(SqlQuerySpec, FeedOptions)
   children: []
   type: method
   langs:
@@ -53,10 +54,33 @@ items:
       optional: true
     return:
       type:
-      - '@azure/cosmos.QueryIterator<@azure/cosmos.OfferDefinition>'
+      - '@azure/cosmos.QueryIterator<any>'
+  package: '@azure/cosmos'
+- uid: '@azure/cosmos.Offers.query_1'
+  name: query(SqlQuerySpec, FeedOptions)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Запрос всех предложений.
+  syntax:
+    content: 'function query<T>(query: SqlQuerySpec, options?: FeedOptions)'
+    parameters:
+    - id: query
+      type:
+      - '@azure/cosmos.SqlQuerySpec'
+      description: Настройка запроса для операции. См. в разделе <xref:SqlQuerySpec> Дополнительные сведения о том, как настроить запрос.
+    - id: options
+      type:
+      - '@azure/cosmos.FeedOptions'
+      description: "\n"
+      optional: true
+    return:
+      type:
+      - '@azure/cosmos.QueryIterator<T>'
   package: '@azure/cosmos'
 - uid: '@azure/cosmos.Offers.readAll'
-  name: readAll
+  name: readAll(FeedOptions)
   children: []
   type: method
   langs:
@@ -72,25 +96,45 @@ items:
       optional: true
     return:
       type:
-      - '@azure/cosmos.QueryIterator<@azure/cosmos.OfferDefinition>'
+      - '@azure/cosmos.QueryIterator<@azure/cosmos.OfferDefinition & @azure/cosmos.Resource>'
   package: '@azure/cosmos'
 references:
 - uid: '@azure/cosmos.CosmosClient'
+  name: CosmosClient
   spec.typeScript:
   - name: CosmosClient
     fullName: CosmosClient
     uid: '@azure/cosmos.CosmosClient'
 - uid: '@azure/cosmos.SqlQuerySpec'
+  name: SqlQuerySpec
   spec.typeScript:
   - name: SqlQuerySpec
     fullName: SqlQuerySpec
     uid: '@azure/cosmos.SqlQuerySpec'
 - uid: '@azure/cosmos.FeedOptions'
+  name: FeedOptions
   spec.typeScript:
   - name: FeedOptions
     fullName: FeedOptions
     uid: '@azure/cosmos.FeedOptions'
-- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.OfferDefinition>'
+- uid: '@azure/cosmos.QueryIterator<any>'
+  name: QueryIterator<any>
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <any>
+    fullName: <any>
+- uid: '@azure/cosmos.QueryIterator<T>'
+  name: QueryIterator<T>
+  spec.typeScript:
+  - name: QueryIterator
+    fullName: QueryIterator
+    uid: '@azure/cosmos.QueryIterator'
+  - name: <T>
+    fullName: <T>
+- uid: '@azure/cosmos.QueryIterator<@azure/cosmos.OfferDefinition & @azure/cosmos.Resource>'
+  name: Resource>
   spec.typeScript:
   - name: QueryIterator
     fullName: QueryIterator
@@ -100,5 +144,10 @@ references:
   - name: OfferDefinition
     fullName: OfferDefinition
     uid: '@azure/cosmos.OfferDefinition'
+  - name: " & "
+    fullName: " & "
+  - name: Resource
+    fullName: Resource
+    uid: '@azure/cosmos.Resource'
   - name: '>'
     fullName: '>'
