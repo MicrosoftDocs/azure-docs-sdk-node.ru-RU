@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a00377b11a0a4f5c6d2453d40f079b28cb2f6aff
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52121122"
+items:
+- uid: '@azure/event-processor-host.CheckpointManager'
+  name: CheckpointManager
+  fullName: CheckpointManager
+  children:
+  - '@azure/event-processor-host.CheckpointManager.checkpointStoreExists'
+  - '@azure/event-processor-host.CheckpointManager.createAllCheckpointsIfNotExists'
+  - '@azure/event-processor-host.CheckpointManager.createCheckpointStoreIfNotExists'
+  - '@azure/event-processor-host.CheckpointManager.deleteCheckpoint'
+  - '@azure/event-processor-host.CheckpointManager.deleteCheckpointStore'
+  - '@azure/event-processor-host.CheckpointManager.getCheckpoint'
+  - '@azure/event-processor-host.CheckpointManager.updateCheckpoint'
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.checkpointStoreExists'
+  name: checkpointStoreExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f20d8-101">Хранилище контрольных точек существует?</span><span class="sxs-lookup"><span data-stu-id="f20d8-101">Does the checkpoint store exist?</span></span>
+  syntax:
+    content: function checkpointStoreExists()
+    parameters: []
+    return:
+      type:
+      - Promise<boolean>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.createAllCheckpointsIfNotExists'
+  name: createAllCheckpointsIfNotExists(string[])
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    <span data-ttu-id="f20d8-102">Создает контрольную точку лиц для заданной секции.</span><span class="sxs-lookup"><span data-stu-id="f20d8-102">Creates the checkpoint HOLDERs for the given partitions.</span></span> <span data-ttu-id="f20d8-103">Не выполняет никаких действий для любой контрольной точки лиц, которые уже существуют.</span><span class="sxs-lookup"><span data-stu-id="f20d8-103">Does nothing for any checkpoint HOLDERs that already exist.</span></span>
+
+    <span data-ttu-id="f20d8-104">Семантика этого, сложны, так как это можно использовать то же хранилище для аренды и контрольные точки (реализации хранилища Azure делает это) и необходимо иметь аренду для каждой секции, но не требуется иметь контрольную точку для секции.</span><span class="sxs-lookup"><span data-stu-id="f20d8-104">The semantics of this are complicated because it is possible to use the same store for both leases and checkpoints (the Azure Storage implementation does so) and it is required to have a lease for every partition but it is not required to have a checkpoint for a partition.</span></span>
+
+    <span data-ttu-id="f20d8-105">Это недопустимый сценарий вообще никогда не использовать контрольные точки, поэтому очень важно для хранилища, чтобы различать Создание structure(s), который будет содержать контрольную точку и фактически создается контрольная точка (хранение пару смещение и порядковый номер в структуре).</span><span class="sxs-lookup"><span data-stu-id="f20d8-105">It is a valid scenario to never use checkpoints at all, so it is important for the store to distinguish between creating the structure(s) that will hold a checkpoint and actually creating a checkpoint (storing an offset/sequence number pair in the structure).</span></span>
+  syntax:
+    content: 'function createAllCheckpointsIfNotExists(partitionIds: string[])'
+    parameters:
+    - id: partitionIds
+      type:
+      - string[]
+      description: <span data-ttu-id="f20d8-106">Список разделов, которые создаются держателей контрольной точки для.</span><span class="sxs-lookup"><span data-stu-id="f20d8-106">List of partitions to create checkpoint HOLDERs for.</span></span>
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.createCheckpointStoreIfNotExists'
+  name: createCheckpointStoreIfNotExists()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f20d8-107">Создайте хранилище контрольной точки, если он не существует.</span><span class="sxs-lookup"><span data-stu-id="f20d8-107">Create the checkpoint store if it doesn't exist.</span></span> <span data-ttu-id="f20d8-108">Не выполняет никаких действий, если он существует.</span><span class="sxs-lookup"><span data-stu-id="f20d8-108">Does nothing if it exists.</span></span>
+  syntax:
+    content: function createCheckpointStoreIfNotExists()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.deleteCheckpoint'
+  name: deleteCheckpoint(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f20d8-109">Удаление сохраненной контрольной точки для заданной секции.</span><span class="sxs-lookup"><span data-stu-id="f20d8-109">Delete the stored checkpoint for the given partition.</span></span> <span data-ttu-id="f20d8-110">Если нет сохраненной контрольной точки для заданной секции, которые воспринимается как успех.</span><span class="sxs-lookup"><span data-stu-id="f20d8-110">If there is no stored checkpoint for the given partition, that is treated as success.</span></span> <span data-ttu-id="f20d8-111">Удаление контрольной точки ДЕРЖАТЕЛЬ разрешено, но является не обязательным компонентом; Реализация может делать вам удобнее.</span><span class="sxs-lookup"><span data-stu-id="f20d8-111">Deleting the checkpoint HOLDER is allowed but not required; your implementation is free to do whichever is more convenient.</span></span>
+  syntax:
+    content: 'function deleteCheckpoint(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: <span data-ttu-id="f20d8-112">PartitionId, чтобы удалить контрольную точку в магазине.</span><span class="sxs-lookup"><span data-stu-id="f20d8-112">The partitionId to delete the checkpoint from the store.</span></span>
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.deleteCheckpointStore'
+  name: deleteCheckpointStore()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f20d8-113">Удаляет хранилище контрольной точки.</span><span class="sxs-lookup"><span data-stu-id="f20d8-113">Deletes the checkpoint store.</span></span>
+  syntax:
+    content: function deleteCheckpointStore()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.getCheckpoint'
+  name: getCheckpoint(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f20d8-114">Возвращает сведения о контрольной точки, относящееся к заданной секции.</span><span class="sxs-lookup"><span data-stu-id="f20d8-114">Gets the checkpoint info associated with the given partition.</span></span> <span data-ttu-id="f20d8-115">Могут возвращать неопределенным, если никакая контрольная точка создана для этой секции.</span><span class="sxs-lookup"><span data-stu-id="f20d8-115">Could return undefined if no checkpoint has been created for that partition.</span></span>
+  syntax:
+    content: 'function getCheckpoint(partitionId: string)'
+    parameters:
+    - id: partitionId
+      type:
+      - string
+      description: <span data-ttu-id="f20d8-116">Для получения сведений о контрольной точке для partitionId.</span><span class="sxs-lookup"><span data-stu-id="f20d8-116">The partitionId to get the checkpoint info for.</span></span>
+    return:
+      type:
+      - Promise<@azure/event-processor-host.CheckpointInfo | undefined>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.CheckpointManager.updateCheckpoint'
+  name: updateCheckpoint(CompleteLease, CheckpointInfo)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f20d8-117">Обновите контрольную точку в хранилище с offset/sequenceNumber в предоставленный контрольной точки.</span><span class="sxs-lookup"><span data-stu-id="f20d8-117">Update the checkpoint in the store with the offset/sequenceNumber in the provided checkpoint.</span></span>
+  syntax:
+    content: 'function updateCheckpoint(lease: CompleteLease, checkpoint: CheckpointInfo)'
+    parameters:
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: <span data-ttu-id="f20d8-118">Сведения о разделах, по которой следует произвести контрольную точку.</span><span class="sxs-lookup"><span data-stu-id="f20d8-118">Partition information against which to perform a checkpoint.</span></span>
+    - id: checkpoint
+      type:
+      - '@azure/event-processor-host.CheckpointInfo'
+      description: <span data-ttu-id="f20d8-119">Смещение/sequeceNumber для обновления в хранилище</span><span class="sxs-lookup"><span data-stu-id="f20d8-119">offset/sequeceNumber to update the store with</span></span>
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+references:
+- uid: Promise<@azure/event-processor-host.CheckpointInfo | undefined>
+  name: CheckpointInfo | undefined>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CheckpointInfo
+    fullName: CheckpointInfo
+    uid: '@azure/event-processor-host.CheckpointInfo'
+  - name: " | undefined>"
+    fullName: " | undefined>"
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'
+- uid: '@azure/event-processor-host.CheckpointInfo'
+  name: CheckpointInfo
+  spec.typeScript:
+  - name: CheckpointInfo
+    fullName: CheckpointInfo
+    uid: '@azure/event-processor-host.CheckpointInfo'
