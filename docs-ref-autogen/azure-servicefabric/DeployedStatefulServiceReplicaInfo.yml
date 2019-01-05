@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c8a0b3dd37f77da0d9b10681c4945f5e6d375ff3
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52057309"
+items:
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+  name: DeployedStatefulServiceReplicaInfo
+  fullName: DeployedStatefulServiceReplicaInfo
+  children:
+  - azure-servicefabric.DeployedStatefulServiceReplicaInfo.reconfigurationInformation
+  - azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaId
+  - azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaRole
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="c038b-101">Сведения о реплике службы с отслеживанием состояния, развернутых на узле.</span><span class="sxs-lookup"><span data-stu-id="c038b-101">Information about a stateful service replica deployed on a node.</span></span>
+  extends:
+    name: azure-servicefabric.DeployedServiceReplicaInfo
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.reconfigurationInformation
+  name: reconfigurationInformation
+  fullName: reconfigurationInformation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c038b-102">Сведения о текущей перенастройки как этап "," тип "," роль в предыдущей конфигурации реплики и перенастройки дату и время начала.</span><span class="sxs-lookup"><span data-stu-id="c038b-102">Information about current reconfiguration like phase, type, previous configuration role of replica and reconfiguration start date time.</span></span>
+  optional: true
+  syntax:
+    content: 'reconfigurationInformation?: ReconfigurationInformation'
+    return:
+      type:
+      - azure-servicefabric.ReconfigurationInformation
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaId
+  name: replicaId
+  fullName: replicaId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="c038b-103">Идентификатор реплики службы с отслеживанием состояния.</span><span class="sxs-lookup"><span data-stu-id="c038b-103">Id of a stateful service replica.</span></span> <span data-ttu-id="c038b-104">ReplicaId используется Service Fabric для уникальной идентификации реплику секции.</span><span class="sxs-lookup"><span data-stu-id="c038b-104">ReplicaId is used by Service Fabric to uniquely identify a replica of a partition.</span></span> <span data-ttu-id="c038b-105">Он уникален в пределах секции и остается неизменным в течение жизненного цикла реплики.</span><span class="sxs-lookup"><span data-stu-id="c038b-105">It is unique within a partition and does not change for the lifetime of the replica.</span></span> <span data-ttu-id="c038b-106">Если другая реплика создается на том же узле, для одной секции, удалении реплики, получите другое значение для идентификатора. Иногда идентификатор экземпляра службы без отслеживания состояния также называется идентификатором реплики.</span><span class="sxs-lookup"><span data-stu-id="c038b-106">If a replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the id. Sometimes the id of a stateless service instance is also referred as a replica id.</span></span>
+  optional: true
+  syntax:
+    content: 'replicaId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaRole
+  name: replicaRole
+  fullName: replicaRole
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"c038b-107\">Роль реплики службы с отслеживанием состояния.</span><span class=\"sxs-lookup\"><span data-stu-id=\"c038b-107\">The role of a replica of a stateful service.</span></span> <span data-ttu-id=\"c038b-108\">Ниже перечислены возможные значения. «Неизвестный», «None», «Основной», «Неактивные», «Активные»</span><span class=\"sxs-lookup\"><span data-stu-id=\"c038b-108\">Possible values include: 'Unknown', 'None', 'Primary', 'IdleSecondary', 'ActiveSecondary'</span></span>"
+  optional: true
+  syntax:
+    content: 'replicaRole?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.DeployedServiceReplicaInfo
+  name: DeployedServiceReplicaInfo
+  spec.typeScript:
+  - name: DeployedServiceReplicaInfo
+    fullName: DeployedServiceReplicaInfo
+    uid: azure-servicefabric.DeployedServiceReplicaInfo
+- uid: azure-servicefabric.ReconfigurationInformation
+  name: ReconfigurationInformation
+  spec.typeScript:
+  - name: ReconfigurationInformation
+    fullName: ReconfigurationInformation
+    uid: azure-servicefabric.ReconfigurationInformation

@@ -1,0 +1,144 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c83147093121e6d6da6f78ed362246e879f6c40f
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52083919"
+items:
+- uid: azure-servicefabric.HealthEvent
+  name: HealthEvent
+  fullName: HealthEvent
+  children:
+  - azure-servicefabric.HealthEvent.isExpired
+  - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+  - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+  - azure-servicefabric.HealthEvent.lastOkTransitionAt
+  - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+  - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="71ff4-101">Представляет сведения о работоспособности о работоспособности сущности, такими как кластер, приложения или узла, с дополнительными метаданными, добавлены диспетчером работоспособности.</span><span class="sxs-lookup"><span data-stu-id="71ff4-101">Represents health information reported on a health entity, such as cluster, application or node, with additional metadata added by the Health Manager.</span></span>
+  extends:
+    name: azure-servicefabric.HealthInformation
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.isExpired
+  name: isExpired
+  fullName: isExpired
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="71ff4-102">Возвращает значение true, если событие работоспособности истекшим сроком действия, в противном случае — значение false.</span><span class="sxs-lookup"><span data-stu-id="71ff4-102">Returns true if the health event is expired, otherwise false.</span></span>
+  optional: true
+  syntax:
+    content: 'isExpired?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+  name: lastErrorTransitionAt
+  fullName: lastErrorTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="71ff4-103">Если текущее состояние работоспособности «Ошибка», это свойство Возвращает время, по которому отчет о работоспособности сначала этот отчет «Error».</span><span class="sxs-lookup"><span data-stu-id="71ff4-103">If the current health state is 'Error', this property returns the time at which the health report was first reported with 'Error'.</span></span> <span data-ttu-id="71ff4-104">Для периодической отчетности много отчетов с тем же состоянием мог быть создан тем не менее, это свойство возвращает только дату и время, после первой «ошибки» был получен отчет о работоспособности.</span><span class="sxs-lookup"><span data-stu-id="71ff4-104">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Error' health report was received.</span></span>
+
+    <span data-ttu-id="71ff4-105">Если текущее состояние работоспособности «ОК» или «Предупреждение», возвращает дату и время, по которому состояние работоспособности был последним в «Error», перед переходом в другое состояние.</span><span class="sxs-lookup"><span data-stu-id="71ff4-105">If the current health state is 'Ok' or 'Warning', returns the date and time at which the health state was last in 'Error', before transitioning to a different state.</span></span>
+
+
+    <span data-ttu-id="71ff4-106">Если состояние работоспособности никогда не была «Ошибка», значение будет нулевой даты и времени.</span><span class="sxs-lookup"><span data-stu-id="71ff4-106">If the health state was never 'Error', the value will be zero date-time.</span></span>
+  optional: true
+  syntax:
+    content: 'lastErrorTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+  name: lastModifiedUtcTimestamp
+  fullName: lastModifiedUtcTimestamp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="71ff4-107">Дата и время последнего изменения отчета о работоспособности хранилище данных о работоспособности.</span><span class="sxs-lookup"><span data-stu-id="71ff4-107">The date and time when the health report was last modified by the health store.</span></span>
+  optional: true
+  syntax:
+    content: 'lastModifiedUtcTimestamp?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+  name: lastOkTransitionAt
+  fullName: lastOkTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="71ff4-108">Если текущее состояние работоспособности «ОК», это свойство Возвращает время, по которому отчет о работоспособности сначала этот отчет «Ok».</span><span class="sxs-lookup"><span data-stu-id="71ff4-108">If the current health state is 'Ok', this property returns the time at which the health report was first reported with 'Ok'.</span></span>
+
+    <span data-ttu-id="71ff4-109">Для периодической отчетности много отчетов с тем же состоянием мог быть создан.</span><span class="sxs-lookup"><span data-stu-id="71ff4-109">For periodic reporting, many reports with the same state may have been generated.</span></span>
+
+    <span data-ttu-id="71ff4-110">Это свойство возвращает дату и время, когда был получен первый отчет о работоспособности «ОК».</span><span class="sxs-lookup"><span data-stu-id="71ff4-110">This property returns the date and time when the first 'Ok' health report was received.</span></span>
+
+    <span data-ttu-id="71ff4-111">Если текущее состояние работоспособности «Ошибка» или «Предупреждение», возвращает дату и время, по которому последнего состояния работоспособности в «Ok», перед переходом в другое состояние.</span><span class="sxs-lookup"><span data-stu-id="71ff4-111">If the current health state is 'Error' or 'Warning', returns the date and time at which the health state was last in 'Ok', before transitioning to a different state.</span></span>
+
+
+    <span data-ttu-id="71ff4-112">Если состояние работоспособности не «ОК», значение будет нулевой даты и времени.</span><span class="sxs-lookup"><span data-stu-id="71ff4-112">If the health state was never 'Ok', the value will be zero date-time.</span></span>
+  optional: true
+  syntax:
+    content: 'lastOkTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+  name: lastWarningTransitionAt
+  fullName: lastWarningTransitionAt
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >
+    <span data-ttu-id="71ff4-113">Если текущее состояние работоспособности «предупреждение», это свойство Возвращает время, по которому отчет о работоспособности сначала была обнаружена с «Предупреждение».</span><span class="sxs-lookup"><span data-stu-id="71ff4-113">If the current health state is 'Warning', this property returns the time at which the health report was first reported with 'Warning'.</span></span> <span data-ttu-id="71ff4-114">Для периодической отчетности много отчетов с тем же состоянием мог быть создан тем не менее, это свойство возвращает только дату и время первого отчета о работоспособности «Предупреждение» было получено.</span><span class="sxs-lookup"><span data-stu-id="71ff4-114">For periodic reporting, many reports with the same state may have been generated however, this property returns only the date and time at the first 'Warning' health report was received.</span></span>
+
+    <span data-ttu-id="71ff4-115">Если текущее состояние работоспособности «ОК» или «Ошибка», возвращает дату и время, по которому последнего состояния работоспособности «Предупреждение», перед переходом в другое состояние.</span><span class="sxs-lookup"><span data-stu-id="71ff4-115">If the current health state is 'Ok' or 'Error', returns the date and time at which the health state was last in 'Warning', before transitioning to a different state.</span></span>
+
+
+    <span data-ttu-id="71ff4-116">Если состояние работоспособности было никогда не «предупреждение», значение будет нулевой даты и времени.</span><span class="sxs-lookup"><span data-stu-id="71ff4-116">If the health state was never 'Warning', the value will be zero date-time.</span></span>
+  optional: true
+  syntax:
+    content: 'lastWarningTransitionAt?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+- uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+  name: sourceUtcTimestamp
+  fullName: sourceUtcTimestamp
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="71ff4-117">Дата и время отправки отчета о работоспособности в источнике.</span><span class="sxs-lookup"><span data-stu-id="71ff4-117">The date and time when the health report was sent by the source.</span></span>
+  optional: true
+  syntax:
+    content: 'sourceUtcTimestamp?: Date'
+    return:
+      type:
+      - Date
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.HealthInformation
+  name: HealthInformation
+  spec.typeScript:
+  - name: HealthInformation
+    fullName: HealthInformation
+    uid: azure-servicefabric.HealthInformation
