@@ -1,0 +1,185 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 21f210c813372698536df44230040a4089b09700
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52169469"
+items:
+- uid: '@azure/event-processor-host.PartitionContext'
+  name: PartitionContext
+  fullName: PartitionContext
+  children:
+  - '@azure/event-processor-host.PartitionContext.checkpoint'
+  - '@azure/event-processor-host.PartitionContext.checkpointFromEventData'
+  - '@azure/event-processor-host.PartitionContext.consumerGroup'
+  - '@azure/event-processor-host.PartitionContext.eventhubPath'
+  - '@azure/event-processor-host.PartitionContext.lease'
+  - '@azure/event-processor-host.PartitionContext.owner'
+  - '@azure/event-processor-host.PartitionContext.constructor'
+  - '@azure/event-processor-host.PartitionContext.partitionId'
+  - '@azure/event-processor-host.PartitionContext.setOffsetAndSequenceNumber'
+  langs:
+  - typeScript
+  type: class
+  summary: Описывает контекст секции.
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.checkpoint'
+  name: checkpoint()
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Записывает текущее смещение и sequenceNumber хранилище контрольную точку через диспетчер контрольной точки.
+
+    Данные контрольных точек оформлен в виде полезных данных JSON (пример): `{ "partitionId":"0","owner":"ephtest","token":"48e209e3-55f0-41b8-a8dd-d9c09ff6c35a",
+
+    "epoch":1,"offset":"","SequenceNumber":0 }`.
+  syntax:
+    content: function checkpoint()
+    parameters: []
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.checkpointFromEventData'
+  name: checkpointFromEventData(EventData)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: >
+    Записывает текущее смещение и sequenceNumber хранилище контрольную точку через диспетчер контрольной точки.
+
+    Данные контрольных точек оформлен в виде полезных данных JSON (пример): `{ "partitionId":"0","owner":"ephtest","token":"48e209e3-55f0-41b8-a8dd-d9c09ff6c35a",
+
+    "epoch":1,"offset":"","SequenceNumber":0 }`.
+  syntax:
+    content: 'function checkpointFromEventData(eventData: EventData)'
+    parameters:
+    - id: eventData
+      type:
+      - EventData
+      description: Данные события, полученные от EventHubReceiver.
+    return:
+      type:
+      - Promise<void>
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.consumerGroup'
+  name: consumerGroup
+  fullName: consumerGroup
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: группы потребителей {строка} имя группы потребителей.
+  syntax:
+    content: 'consumerGroup: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.eventhubPath'
+  name: eventhubPath
+  fullName: eventhubPath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Строка} eventhubPath путь концентратора событий'
+  syntax:
+    content: 'eventhubPath: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.lease'
+  name: lease
+  fullName: lease
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Аренда {аренды} большинство recdent контрольными точками аренды с partitionId.
+  syntax:
+    content: 'lease: CompleteLease'
+    return:
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.owner'
+  name: owner
+  fullName: owner
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Строка} владелец узла или владельца секции.'
+  syntax:
+    content: 'owner: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.constructor'
+  name: PartitionContext(HostContextWithCheckpointLeaseManager, string, CompleteLease)
+  children: []
+  type: constructor
+  langs:
+  - typeScript
+  summary: Создает новый PartitionContext.
+  syntax:
+    content: 'new PartitionContext(context: HostContextWithCheckpointLeaseManager, partitionId: string, lease: CompleteLease)'
+    parameters:
+    - id: context
+      type:
+      - HostContextWithCheckpointLeaseManager
+      description: ''
+    - id: partitionId
+      type:
+      - string
+      description: Идентификатор раздела концентратора событий.
+    - id: lease
+      type:
+      - '@azure/event-processor-host.CompleteLease'
+      description: >
+        Объект аренды.
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.partitionId'
+  name: partitionId
+  fullName: partitionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: partitionId {строка} идентификатор раздела концентратора событий.
+  syntax:
+    content: 'partitionId: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-processor-host'
+- uid: '@azure/event-processor-host.PartitionContext.setOffsetAndSequenceNumber'
+  name: setOffsetAndSequenceNumber(EventData)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Задает смещение и порядковый номер секции контекста из предоставленного EventData.
+  syntax:
+    content: 'function setOffsetAndSequenceNumber(eventData: EventData)'
+    parameters:
+    - id: eventData
+      type:
+      - EventData
+      description: >
+        Данные события `received` из EventHubReceiver.
+  package: '@azure/event-processor-host'
+references:
+- uid: '@azure/event-processor-host.CompleteLease'
+  name: CompleteLease
+  spec.typeScript:
+  - name: CompleteLease
+    fullName: CompleteLease
+    uid: '@azure/event-processor-host.CompleteLease'

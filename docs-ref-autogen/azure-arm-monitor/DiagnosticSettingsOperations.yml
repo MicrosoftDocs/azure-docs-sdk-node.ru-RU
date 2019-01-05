@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 37f699175f12b16070a0e07e85d9c604f5ce6afa
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 9d7103253b3fd65756d39eb521bc970cfa154acb
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41696943"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52084089"
 items:
 - uid: azure-arm-monitor.DiagnosticSettingsOperations
   name: DiagnosticSettingsOperations
@@ -15,16 +15,16 @@ items:
   - azure-arm-monitor.DiagnosticSettingsOperations.createOrUpdate_1
   - azure-arm-monitor.DiagnosticSettingsOperations.createOrUpdateWithHttpOperationResponse
   - azure-arm-monitor.DiagnosticSettingsOperations.deleteMethod
-  - azure-arm-monitor.DiagnosticSettingsOperations.deleteMethod_1
   - azure-arm-monitor.DiagnosticSettingsOperations.deleteMethod_2
+  - azure-arm-monitor.DiagnosticSettingsOperations.deleteMethod_1
   - azure-arm-monitor.DiagnosticSettingsOperations.deleteMethodWithHttpOperationResponse
   - azure-arm-monitor.DiagnosticSettingsOperations.get
-  - azure-arm-monitor.DiagnosticSettingsOperations.get_1
   - azure-arm-monitor.DiagnosticSettingsOperations.get_2
+  - azure-arm-monitor.DiagnosticSettingsOperations.get_1
   - azure-arm-monitor.DiagnosticSettingsOperations.getWithHttpOperationResponse
   - azure-arm-monitor.DiagnosticSettingsOperations.list
-  - azure-arm-monitor.DiagnosticSettingsOperations.list_1
   - azure-arm-monitor.DiagnosticSettingsOperations.list_2
+  - azure-arm-monitor.DiagnosticSettingsOperations.list_1
   - azure-arm-monitor.DiagnosticSettingsOperations.listWithHttpOperationResponse
   langs:
   - typeScript
@@ -32,7 +32,7 @@ items:
   summary: ''
   package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, DiagnosticSettingsResource, string, Object)
   children: []
   type: method
   langs:
@@ -66,7 +66,7 @@ items:
       - Promise<azure-arm-monitor.DiagnosticSettingsResource>
   package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, DiagnosticSettingsResource, string, Object, ServiceCallback<DiagnosticSettingsResource>)
   children: []
   type: method
   langs:
@@ -100,7 +100,7 @@ items:
       - Promise<azure-arm-monitor.DiagnosticSettingsResource>
   package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.createOrUpdate_1
-  name: createOrUpdate
+  name: createOrUpdate(string, DiagnosticSettingsResource, string, ServiceCallback<DiagnosticSettingsResource>)
   children: []
   type: method
   langs:
@@ -130,7 +130,7 @@ items:
       - Promise<azure-arm-monitor.DiagnosticSettingsResource>
   package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, DiagnosticSettingsResource, string, Object)
   children: []
   type: method
   langs:
@@ -164,7 +164,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-monitor.DiagnosticSettingsResource>>
   package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, string, Object)
   children: []
   type: method
   langs:
@@ -192,34 +192,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-monitor
-- uid: azure-arm-monitor.DiagnosticSettingsOperations.deleteMethod_1
-  name: deleteMethod
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Удаляет существующие параметры диагностики для указанного ресурса.
-  syntax:
-    content: 'function deleteMethod(resourceUri: string, name: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceUri
-      type:
-      - string
-      description: ''
-    - id: name
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -248,8 +222,34 @@ items:
       type:
       - Promise<void>
   package: azure-arm-monitor
+- uid: azure-arm-monitor.DiagnosticSettingsOperations.deleteMethod_1
+  name: deleteMethod(string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Удаляет существующие параметры диагностики для указанного ресурса.
+  syntax:
+    content: 'function deleteMethod(resourceUri: string, name: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceUri
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -278,7 +278,7 @@ items:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.get
-  name: get
+  name: get(string, string, Object)
   children: []
   type: method
   langs:
@@ -306,34 +306,8 @@ items:
       type:
       - Promise<azure-arm-monitor.DiagnosticSettingsResource>
   package: azure-arm-monitor
-- uid: azure-arm-monitor.DiagnosticSettingsOperations.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает активные параметры диагностики для указанного ресурса.
-  syntax:
-    content: 'function get(resourceUri: string, name: string, callback: ServiceCallback<DiagnosticSettingsResource>)'
-    parameters:
-    - id: resourceUri
-      type:
-      - string
-      description: ''
-    - id: name
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-monitor.DiagnosticSettingsResource>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-monitor.DiagnosticSettingsResource>
-  package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.get_2
-  name: get
+  name: get(string, string, Object, ServiceCallback<DiagnosticSettingsResource>)
   children: []
   type: method
   langs:
@@ -362,8 +336,34 @@ items:
       type:
       - Promise<azure-arm-monitor.DiagnosticSettingsResource>
   package: azure-arm-monitor
+- uid: azure-arm-monitor.DiagnosticSettingsOperations.get_1
+  name: get(string, string, ServiceCallback<DiagnosticSettingsResource>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает активные параметры диагностики для указанного ресурса.
+  syntax:
+    content: 'function get(resourceUri: string, name: string, callback: ServiceCallback<DiagnosticSettingsResource>)'
+    parameters:
+    - id: resourceUri
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-monitor.DiagnosticSettingsResource>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-monitor.DiagnosticSettingsResource>
+  package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -392,7 +392,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-monitor.DiagnosticSettingsResource>>
   package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.list
-  name: list
+  name: list(string, Object)
   children: []
   type: method
   langs:
@@ -415,30 +415,8 @@ items:
       type:
       - Promise<azure-arm-monitor.DiagnosticSettingsResourceCollection>
   package: azure-arm-monitor
-- uid: azure-arm-monitor.DiagnosticSettingsOperations.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает список активных параметров диагностики для указанного ресурса.
-  syntax:
-    content: 'function list(resourceUri: string, callback: ServiceCallback<DiagnosticSettingsResourceCollection>)'
-    parameters:
-    - id: resourceUri
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-monitor.DiagnosticSettingsResourceCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-monitor.DiagnosticSettingsResourceCollection>
-  package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.list_2
-  name: list
+  name: list(string, Object, ServiceCallback<DiagnosticSettingsResourceCollection>)
   children: []
   type: method
   langs:
@@ -463,8 +441,30 @@ items:
       type:
       - Promise<azure-arm-monitor.DiagnosticSettingsResourceCollection>
   package: azure-arm-monitor
+- uid: azure-arm-monitor.DiagnosticSettingsOperations.list_1
+  name: list(string, ServiceCallback<DiagnosticSettingsResourceCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает список активных параметров диагностики для указанного ресурса.
+  syntax:
+    content: 'function list(resourceUri: string, callback: ServiceCallback<DiagnosticSettingsResourceCollection>)'
+    parameters:
+    - id: resourceUri
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-monitor.DiagnosticSettingsResourceCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-monitor.DiagnosticSettingsResourceCollection>
+  package: azure-arm-monitor
 - uid: azure-arm-monitor.DiagnosticSettingsOperations.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -489,11 +489,13 @@ items:
   package: azure-arm-monitor
 references:
 - uid: azure-arm-monitor.DiagnosticSettingsResource
+  name: DiagnosticSettingsResource
   spec.typeScript:
   - name: DiagnosticSettingsResource
     fullName: DiagnosticSettingsResource
     uid: azure-arm-monitor.DiagnosticSettingsResource
 - uid: Promise<azure-arm-monitor.DiagnosticSettingsResource>
+  name: DiagnosticSettingsResource>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -503,6 +505,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-monitor.DiagnosticSettingsResource>
+  name: DiagnosticSettingsResource>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -512,6 +515,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-monitor.DiagnosticSettingsResource>>
+  name: DiagnosticSettingsResource>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -521,6 +525,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-monitor.DiagnosticSettingsResourceCollection>
+  name: DiagnosticSettingsResourceCollection>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -530,6 +535,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-monitor.DiagnosticSettingsResourceCollection>
+  name: DiagnosticSettingsResourceCollection>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -539,6 +545,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-monitor.DiagnosticSettingsResourceCollection>>
+  name: DiagnosticSettingsResourceCollection>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

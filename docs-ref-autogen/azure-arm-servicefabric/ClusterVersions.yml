@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: ebfb5d4396f8e1e86c336f7deedbfa37e5765897
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: ca95d4919ff682ab0e2413a05bcedf4e781d5fad
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41682543"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52099079"
 items:
 - uid: azure-arm-servicefabric.ClusterVersions
   name: ClusterVersions
@@ -14,16 +14,16 @@ items:
   - azure-arm-servicefabric.ClusterVersions.get_2
   - azure-arm-servicefabric.ClusterVersions.get_1
   - azure-arm-servicefabric.ClusterVersions.getByEnvironment
-  - azure-arm-servicefabric.ClusterVersions.getByEnvironment_1
   - azure-arm-servicefabric.ClusterVersions.getByEnvironment_2
+  - azure-arm-servicefabric.ClusterVersions.getByEnvironment_1
   - azure-arm-servicefabric.ClusterVersions.getByEnvironmentWithHttpOperationResponse
   - azure-arm-servicefabric.ClusterVersions.getWithHttpOperationResponse
   - azure-arm-servicefabric.ClusterVersions.list
-  - azure-arm-servicefabric.ClusterVersions.list_1
   - azure-arm-servicefabric.ClusterVersions.list_2
+  - azure-arm-servicefabric.ClusterVersions.list_1
   - azure-arm-servicefabric.ClusterVersions.listByEnvironment
-  - azure-arm-servicefabric.ClusterVersions.listByEnvironment_1
   - azure-arm-servicefabric.ClusterVersions.listByEnvironment_2
+  - azure-arm-servicefabric.ClusterVersions.listByEnvironment_1
   - azure-arm-servicefabric.ClusterVersions.listByEnvironmentWithHttpOperationResponse
   - azure-arm-servicefabric.ClusterVersions.listWithHttpOperationResponse
   langs:
@@ -32,7 +32,7 @@ items:
   summary: ''
   package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.get
-  name: get
+  name: get(string, string, Object)
   children: []
   type: method
   langs:
@@ -61,7 +61,7 @@ items:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.get_2
-  name: get
+  name: get(string, string, Object, ServiceCallback<ClusterCodeVersionsListResult>)
   children: []
   type: method
   langs:
@@ -91,7 +91,7 @@ items:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.get_1
-  name: get
+  name: get(string, string, ServiceCallback<ClusterCodeVersionsListResult>)
   children: []
   type: method
   langs:
@@ -117,7 +117,7 @@ items:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.getByEnvironment
-  name: getByEnvironment
+  name: getByEnvironment(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -137,7 +137,7 @@ items:
       description: >
         Операционная система, по умолчанию кластера означает, что все.
 
-        Возможные значения: «Windows», «Linux»
+        Ниже перечислены возможные значения. «Windows», «Linux»
     - id: clusterVersion
       type:
       - string
@@ -152,38 +152,8 @@ items:
       type:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
-- uid: azure-arm-servicefabric.ClusterVersions.getByEnvironment_1
-  name: getByEnvironment
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function getByEnvironment(location: string, environment: string, clusterVersion: string, callback: ServiceCallback<ClusterCodeVersionsListResult>)'
-    parameters:
-    - id: location
-      type:
-      - string
-      description: ''
-    - id: environment
-      type:
-      - string
-      description: ''
-    - id: clusterVersion
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicefabric.ClusterCodeVersionsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
-  package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.getByEnvironment_2
-  name: getByEnvironment
+  name: getByEnvironment(string, string, string, Object, ServiceCallback<ClusterCodeVersionsListResult>)
   children: []
   type: method
   langs:
@@ -216,8 +186,38 @@ items:
       type:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
+- uid: azure-arm-servicefabric.ClusterVersions.getByEnvironment_1
+  name: getByEnvironment(string, string, string, ServiceCallback<ClusterCodeVersionsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function getByEnvironment(location: string, environment: string, clusterVersion: string, callback: ServiceCallback<ClusterCodeVersionsListResult>)'
+    parameters:
+    - id: location
+      type:
+      - string
+      description: ''
+    - id: environment
+      type:
+      - string
+      description: ''
+    - id: clusterVersion
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicefabric.ClusterCodeVersionsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
+  package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.getByEnvironmentWithHttpOperationResponse
-  name: getByEnvironmentWithHttpOperationResponse
+  name: getByEnvironmentWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -237,7 +237,7 @@ items:
       description: >
         Операционная система, по умолчанию кластера означает, что все.
 
-        Возможные значения: «Windows», «Linux»
+        Ниже перечислены возможные значения. «Windows», «Linux»
     - id: clusterVersion
       type:
       - string
@@ -253,7 +253,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-servicefabric.ClusterCodeVersionsListResult>>
   package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -282,7 +282,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-servicefabric.ClusterCodeVersionsListResult>>
   package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.list
-  name: list
+  name: list(string, Object)
   children: []
   type: method
   langs:
@@ -305,30 +305,8 @@ items:
       type:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
-- uid: azure-arm-servicefabric.ClusterVersions.list_1
-  name: list
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function list(location: string, callback: ServiceCallback<ClusterCodeVersionsListResult>)'
-    parameters:
-    - id: location
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicefabric.ClusterCodeVersionsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
-  package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.list_2
-  name: list
+  name: list(string, Object, ServiceCallback<ClusterCodeVersionsListResult>)
   children: []
   type: method
   langs:
@@ -353,8 +331,30 @@ items:
       type:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
+- uid: azure-arm-servicefabric.ClusterVersions.list_1
+  name: list(string, ServiceCallback<ClusterCodeVersionsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function list(location: string, callback: ServiceCallback<ClusterCodeVersionsListResult>)'
+    parameters:
+    - id: location
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicefabric.ClusterCodeVersionsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
+  package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.listByEnvironment
-  name: listByEnvironment
+  name: listByEnvironment(string, string, Object)
   children: []
   type: method
   langs:
@@ -374,7 +374,7 @@ items:
       description: >
         Операционная система, по умолчанию кластера означает, что все.
 
-        Возможные значения: «Windows», «Linux»
+        Ниже перечислены возможные значения. «Windows», «Linux»
     - id: options
       type:
       - Object
@@ -384,34 +384,8 @@ items:
       type:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
-- uid: azure-arm-servicefabric.ClusterVersions.listByEnvironment_1
-  name: listByEnvironment
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function listByEnvironment(location: string, environment: string, callback: ServiceCallback<ClusterCodeVersionsListResult>)'
-    parameters:
-    - id: location
-      type:
-      - string
-      description: ''
-    - id: environment
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-servicefabric.ClusterCodeVersionsListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
-  package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.listByEnvironment_2
-  name: listByEnvironment
+  name: listByEnvironment(string, string, Object, ServiceCallback<ClusterCodeVersionsListResult>)
   children: []
   type: method
   langs:
@@ -440,8 +414,34 @@ items:
       type:
       - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
   package: azure-arm-servicefabric
+- uid: azure-arm-servicefabric.ClusterVersions.listByEnvironment_1
+  name: listByEnvironment(string, string, ServiceCallback<ClusterCodeVersionsListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function listByEnvironment(location: string, environment: string, callback: ServiceCallback<ClusterCodeVersionsListResult>)'
+    parameters:
+    - id: location
+      type:
+      - string
+      description: ''
+    - id: environment
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-servicefabric.ClusterCodeVersionsListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
+  package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.listByEnvironmentWithHttpOperationResponse
-  name: listByEnvironmentWithHttpOperationResponse
+  name: listByEnvironmentWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -461,7 +461,7 @@ items:
       description: >
         Операционная система, по умолчанию кластера означает, что все.
 
-        Возможные значения: «Windows», «Linux»
+        Ниже перечислены возможные значения. «Windows», «Linux»
     - id: options
       type:
       - Object
@@ -472,7 +472,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-servicefabric.ClusterCodeVersionsListResult>>
   package: azure-arm-servicefabric
 - uid: azure-arm-servicefabric.ClusterVersions.listWithHttpOperationResponse
-  name: listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -497,6 +497,7 @@ items:
   package: azure-arm-servicefabric
 references:
 - uid: Promise<azure-arm-servicefabric.ClusterCodeVersionsListResult>
+  name: ClusterCodeVersionsListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -506,6 +507,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-servicefabric.ClusterCodeVersionsListResult>
+  name: ClusterCodeVersionsListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -515,6 +517,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-servicefabric.ClusterCodeVersionsListResult>>
+  name: ClusterCodeVersionsListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

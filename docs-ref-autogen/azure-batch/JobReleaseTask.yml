@@ -1,0 +1,176 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: 8b21fb219132789baabfe63cf35d4ae01db0eea6
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53675578"
+items:
+- uid: azure-batch.JobReleaseTask
+  name: JobReleaseTask
+  fullName: JobReleaseTask
+  children:
+  - azure-batch.JobReleaseTask.commandLine
+  - azure-batch.JobReleaseTask.containerSettings
+  - azure-batch.JobReleaseTask.environmentSettings
+  - azure-batch.JobReleaseTask.id
+  - azure-batch.JobReleaseTask.maxWallClockTime
+  - azure-batch.JobReleaseTask.resourceFiles
+  - azure-batch.JobReleaseTask.retentionTime
+  - azure-batch.JobReleaseTask.userIdentity
+  langs:
+  - typeScript
+  type: interface
+  summary: >-
+    Задача снятия задания выполняется при завершении задания, из-за следующего вида: Пользователь вызывает API завершения задания или API задания Удалить задания по-прежнему активна, достигается ограничение времени часов максимальное стены задания и это по-прежнему активный или задача диспетчера заданий задания завершена, а также для задания настроена для завершения при па задания ER завершается.
+
+    Задача прекращения задания выполняется на каждом вычислительном узле, где задачи задания выполнялись и выполнили задачу подготовки задания и завершения. Если вы пересоздать образ вычислительного узла после выполнения задачи подготовки задания и завершает задание без все последующие задачи задания на данном вычислительном узле (и следовательно задачу подготовки задания не перезапустите), задача снятия задания не выполняет на этом узле. Если вычислительный узел перезагружается, пока задача снятия задания по-прежнему работает, задача снятия задания снова выполняется при запуске вычислительных узлов. Задание не помечен как завершенный, пока не завершатся все задачи прекращения задания. Задача прекращения задания выполняется в фоновом режиме. Не занимает слот планирования; то есть он не учитываются maxTasksPerNode предела, указанного в пуле.
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.commandLine
+  name: commandLine
+  fullName: commandLine
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: В командной строке не выполняются в оболочке и таким образом, не может воспользоваться преимуществами функции оболочки, например расширение переменных среды. Если вы хотите воспользоваться преимуществами таких функций, необходимо вызвать оболочку в командной строке, например с помощью «cmd /c MyCommand» в Windows или «/ bin/sh - c MyCommand» в Linux. Если командной строке ссылается на пути к файлам, она должна использовать относительный путь (по отношению к рабочему каталогу задачи), или пакетное указанной переменной среды (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).
+  syntax:
+    content: 'commandLine: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.containerSettings
+  name: containerSettings
+  fullName: containerSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Если этот параметр указан, все каталоги рекурсивно ниже AZ_BATCH_NODE_ROOT_DIR (корень каталогов пакетной службы Azure на узле) сопоставляются в контейнере, все переменные среды задач сопоставляются в контейнере и Командная строка задачи выполняется в контейнере.
+  optional: true
+  syntax:
+    content: 'containerSettings?: TaskContainerSettings'
+    return:
+      type:
+      - azure-batch.TaskContainerSettings
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.environmentSettings
+  name: environmentSettings
+  fullName: environmentSettings
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'environmentSettings?: EnvironmentSetting[]'
+    return:
+      type:
+      - azure-batch.EnvironmentSetting[]
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.id
+  name: id
+  fullName: id
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов. Если это свойство не задано, пакетная служба назначает значение по умолчанию «jobrelease». Другие задачи в задании может иметь один и тот же идентификатор задачи прекращения задания. Если вы пытаетесь передать задачу с одинаковым идентификатором, пакетная служба отклоняет запрос с кодом ошибки TaskIdSameAsJobReleaseTask; При вызове REST API напрямую, код состояния HTTP: 409 (конфликт).'
+  optional: true
+  syntax:
+    content: 'id?: string'
+    return:
+      type:
+      - string
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.maxWallClockTime
+  name: maxWallClockTime
+  fullName: maxWallClockTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ''
+  optional: true
+  syntax:
+    content: 'maxWallClockTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.resourceFiles
+  name: resourceFiles
+  fullName: resourceFiles
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Файлы, перечисленные в этом элементе, находятся в рабочем каталоге задачи.
+  optional: true
+  syntax:
+    content: 'resourceFiles?: ResourceFile[]'
+    return:
+      type:
+      - azure-batch.ResourceFile[]
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.retentionTime
+  name: retentionTime
+  fullName: retentionTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: По умолчанию — 7 дней, т. е. каталогу задачи будут храниться в течение 7 дней, если задание удаляется или удалении вычислительных узлов.
+  optional: true
+  syntax:
+    content: 'retentionTime?: Duration'
+    return:
+      type:
+      - Duration
+  package: azure-batch
+- uid: azure-batch.JobReleaseTask.userIdentity
+  name: userIdentity
+  fullName: userIdentity
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Если не указано, задача выполняется как пользователь без прав администратора уникальные задачи.
+  optional: true
+  syntax:
+    content: 'userIdentity?: UserIdentity'
+    return:
+      type:
+      - azure-batch.UserIdentity
+  package: azure-batch
+references:
+- uid: azure-batch.TaskContainerSettings
+  name: TaskContainerSettings
+  spec.typeScript:
+  - name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    uid: azure-batch.TaskContainerSettings
+- uid: azure-batch.EnvironmentSetting[]
+  name: EnvironmentSetting[]
+  spec.typeScript:
+  - name: EnvironmentSetting
+    fullName: EnvironmentSetting
+    uid: azure-batch.EnvironmentSetting
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.ResourceFile[]
+  name: ResourceFile[]
+  spec.typeScript:
+  - name: ResourceFile
+    fullName: ResourceFile
+    uid: azure-batch.ResourceFile
+  - name: '[]'
+    fullName: '[]'
+- uid: azure-batch.UserIdentity
+  name: UserIdentity
+  spec.typeScript:
+  - name: UserIdentity
+    fullName: UserIdentity
+    uid: azure-batch.UserIdentity
