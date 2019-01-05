@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 6e47bdc4fd2aaba5dd8f809c540d79d2d6321123
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: e7da9c0398444d644efaf9ac817b399ab6e0737c
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41691097"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52008888"
 items:
 - uid: azure-arm-automation.JobStreamOperations
   name: JobStreamOperations
@@ -15,11 +15,11 @@ items:
   - azure-arm-automation.JobStreamOperations.get_1
   - azure-arm-automation.JobStreamOperations.getWithHttpOperationResponse
   - azure-arm-automation.JobStreamOperations.listByJob
-  - azure-arm-automation.JobStreamOperations.listByJob_1
   - azure-arm-automation.JobStreamOperations.listByJob_2
+  - azure-arm-automation.JobStreamOperations.listByJob_1
   - azure-arm-automation.JobStreamOperations.listByJobNext
-  - azure-arm-automation.JobStreamOperations.listByJobNext_1
   - azure-arm-automation.JobStreamOperations.listByJobNext_2
+  - azure-arm-automation.JobStreamOperations.listByJobNext_1
   - azure-arm-automation.JobStreamOperations.listByJobNextWithHttpOperationResponse
   - azure-arm-automation.JobStreamOperations.listByJobWithHttpOperationResponse
   langs:
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.get
-  name: get
+  name: get(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -67,7 +67,7 @@ items:
       - Promise<azure-arm-automation.JobStream>
   package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.get_2
-  name: get
+  name: get(string, string, string, string, Object, ServiceCallback<JobStream>)
   children: []
   type: method
   langs:
@@ -105,7 +105,7 @@ items:
       - Promise<azure-arm-automation.JobStream>
   package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.get_1
-  name: get
+  name: get(string, string, string, string, ServiceCallback<JobStream>)
   children: []
   type: method
   langs:
@@ -139,7 +139,7 @@ items:
       - Promise<azure-arm-automation.JobStream>
   package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -178,7 +178,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.JobStream>>
   package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.listByJob
-  name: listByJob
+  name: listByJob(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -211,38 +211,8 @@ items:
       type:
       - Promise<azure-arm-automation.JobStreamListResult>
   package: azure-arm-automation
-- uid: azure-arm-automation.JobStreamOperations.listByJob_1
-  name: listByJob
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получить список потоков заданий, идентифицируемое по его имени задания.
-  syntax:
-    content: 'function listByJob(resourceGroupName: string, automationAccountName: string, jobName: string, callback: ServiceCallback<JobStreamListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: automationAccountName
-      type:
-      - string
-      description: ''
-    - id: jobName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.JobStreamListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.JobStreamListResult>
-  package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.listByJob_2
-  name: listByJob
+  name: listByJob(string, string, string, Object, ServiceCallback<JobStreamListResult>)
   children: []
   type: method
   langs:
@@ -275,8 +245,38 @@ items:
       type:
       - Promise<azure-arm-automation.JobStreamListResult>
   package: azure-arm-automation
+- uid: azure-arm-automation.JobStreamOperations.listByJob_1
+  name: listByJob(string, string, string, ServiceCallback<JobStreamListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить список потоков заданий, идентифицируемое по его имени задания.
+  syntax:
+    content: 'function listByJob(resourceGroupName: string, automationAccountName: string, jobName: string, callback: ServiceCallback<JobStreamListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: automationAccountName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.JobStreamListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.JobStreamListResult>
+  package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.listByJobNext
-  name: listByJobNext
+  name: listByJobNext(string, Object)
   children: []
   type: method
   langs:
@@ -299,30 +299,8 @@ items:
       type:
       - Promise<azure-arm-automation.JobStreamListResult>
   package: azure-arm-automation
-- uid: azure-arm-automation.JobStreamOperations.listByJobNext_1
-  name: listByJobNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получить список потоков заданий, идентифицируемое по его имени задания.
-  syntax:
-    content: 'function listByJobNext(nextPageLink: string, callback: ServiceCallback<JobStreamListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-automation.JobStreamListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-automation.JobStreamListResult>
-  package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.listByJobNext_2
-  name: listByJobNext
+  name: listByJobNext(string, Object, ServiceCallback<JobStreamListResult>)
   children: []
   type: method
   langs:
@@ -347,8 +325,30 @@ items:
       type:
       - Promise<azure-arm-automation.JobStreamListResult>
   package: azure-arm-automation
+- uid: azure-arm-automation.JobStreamOperations.listByJobNext_1
+  name: listByJobNext(string, ServiceCallback<JobStreamListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получить список потоков заданий, идентифицируемое по его имени задания.
+  syntax:
+    content: 'function listByJobNext(nextPageLink: string, callback: ServiceCallback<JobStreamListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-automation.JobStreamListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-automation.JobStreamListResult>
+  package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.listByJobNextWithHttpOperationResponse
-  name: listByJobNextWithHttpOperationResponse
+  name: listByJobNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -372,7 +372,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-automation.JobStreamListResult>>
   package: azure-arm-automation
 - uid: azure-arm-automation.JobStreamOperations.listByJobWithHttpOperationResponse
-  name: listByJobWithHttpOperationResponse
+  name: listByJobWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -407,6 +407,7 @@ items:
   package: azure-arm-automation
 references:
 - uid: Promise<azure-arm-automation.JobStream>
+  name: JobStream>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -416,6 +417,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-automation.JobStream>
+  name: JobStream>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -425,6 +427,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-automation.JobStream>>
+  name: JobStream>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -434,6 +437,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-automation.JobStreamListResult>
+  name: JobStreamListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -443,6 +447,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-automation.JobStreamListResult>
+  name: JobStreamListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -452,6 +457,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-automation.JobStreamListResult>>
+  name: JobStreamListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

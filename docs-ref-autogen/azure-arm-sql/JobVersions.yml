@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 5f0710d78601c9420f2ae9ef494b0ff2301a6329
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: b1e64a7a9b46f8068dc5e13fdaad56922330ac5a
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41696134"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52009127"
 items:
 - uid: azure-arm-sql.JobVersions
   name: JobVersions
@@ -15,11 +15,11 @@ items:
   - azure-arm-sql.JobVersions.get_1
   - azure-arm-sql.JobVersions.getWithHttpOperationResponse
   - azure-arm-sql.JobVersions.listByJob
-  - azure-arm-sql.JobVersions.listByJob_1
   - azure-arm-sql.JobVersions.listByJob_2
+  - azure-arm-sql.JobVersions.listByJob_1
   - azure-arm-sql.JobVersions.listByJobNext
-  - azure-arm-sql.JobVersions.listByJobNext_1
   - azure-arm-sql.JobVersions.listByJobNext_2
+  - azure-arm-sql.JobVersions.listByJobNext_1
   - azure-arm-sql.JobVersions.listByJobNextWithHttpOperationResponse
   - azure-arm-sql.JobVersions.listByJobWithHttpOperationResponse
   langs:
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.get
-  name: get
+  name: get(string, string, string, string, number, Object)
   children: []
   type: method
   langs:
@@ -41,7 +41,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -72,7 +72,7 @@ items:
       - Promise<azure-arm-sql.JobVersion>
   package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.get_2
-  name: get
+  name: get(string, string, string, string, number, Object, ServiceCallback<JobVersion>)
   children: []
   type: method
   langs:
@@ -114,7 +114,7 @@ items:
       - Promise<azure-arm-sql.JobVersion>
   package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.get_1
-  name: get
+  name: get(string, string, string, string, number, ServiceCallback<JobVersion>)
   children: []
   type: method
   langs:
@@ -152,7 +152,7 @@ items:
       - Promise<azure-arm-sql.JobVersion>
   package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, string, number, Object)
   children: []
   type: method
   langs:
@@ -165,7 +165,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -196,7 +196,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.JobVersion>>
   package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.listByJob
-  name: listByJob
+  name: listByJob(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -209,7 +209,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -234,42 +234,8 @@ items:
       type:
       - Promise<azure-arm-sql.JobVersionListResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.JobVersions.listByJob_1
-  name: listByJob
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает все версии задания.
-  syntax:
-    content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, callback: ServiceCallback<JobVersionListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: jobAgentName
-      type:
-      - string
-      description: ''
-    - id: jobName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.JobVersionListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.JobVersionListResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.listByJob_2
-  name: listByJob
+  name: listByJob(string, string, string, string, Object, ServiceCallback<JobVersionListResult>)
   children: []
   type: method
   langs:
@@ -306,8 +272,42 @@ items:
       type:
       - Promise<azure-arm-sql.JobVersionListResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.JobVersions.listByJob_1
+  name: listByJob(string, string, string, string, ServiceCallback<JobVersionListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все версии задания.
+  syntax:
+    content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, callback: ServiceCallback<JobVersionListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: jobAgentName
+      type:
+      - string
+      description: ''
+    - id: jobName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.JobVersionListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.JobVersionListResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.listByJobNext
-  name: listByJobNext
+  name: listByJobNext(string, Object)
   children: []
   type: method
   langs:
@@ -330,30 +330,8 @@ items:
       type:
       - Promise<azure-arm-sql.JobVersionListResult>
   package: azure-arm-sql
-- uid: azure-arm-sql.JobVersions.listByJobNext_1
-  name: listByJobNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Возвращает все версии задания.
-  syntax:
-    content: 'function listByJobNext(nextPageLink: string, callback: ServiceCallback<JobVersionListResult>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-sql.JobVersionListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-sql.JobVersionListResult>
-  package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.listByJobNext_2
-  name: listByJobNext
+  name: listByJobNext(string, Object, ServiceCallback<JobVersionListResult>)
   children: []
   type: method
   langs:
@@ -378,8 +356,30 @@ items:
       type:
       - Promise<azure-arm-sql.JobVersionListResult>
   package: azure-arm-sql
+- uid: azure-arm-sql.JobVersions.listByJobNext_1
+  name: listByJobNext(string, ServiceCallback<JobVersionListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает все версии задания.
+  syntax:
+    content: 'function listByJobNext(nextPageLink: string, callback: ServiceCallback<JobVersionListResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-sql.JobVersionListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-sql.JobVersionListResult>
+  package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.listByJobNextWithHttpOperationResponse
-  name: listByJobNextWithHttpOperationResponse
+  name: listByJobNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -403,7 +403,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-sql.JobVersionListResult>>
   package: azure-arm-sql
 - uid: azure-arm-sql.JobVersions.listByJobWithHttpOperationResponse
-  name: listByJobWithHttpOperationResponse
+  name: listByJobWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -416,7 +416,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -443,6 +443,7 @@ items:
   package: azure-arm-sql
 references:
 - uid: Promise<azure-arm-sql.JobVersion>
+  name: JobVersion>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -452,6 +453,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.JobVersion>
+  name: JobVersion>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -461,6 +463,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.JobVersion>>
+  name: JobVersion>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -470,6 +473,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-sql.JobVersionListResult>
+  name: JobVersionListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -479,6 +483,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-sql.JobVersionListResult>
+  name: JobVersionListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -488,6 +493,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-sql.JobVersionListResult>>
+  name: JobVersionListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

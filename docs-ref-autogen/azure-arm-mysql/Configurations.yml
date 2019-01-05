@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f48f4ba328403fee5e6b9f33e76f45e85e5132a4
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 02c4c8d181e3d299b61e007fd55118cd7d2b365b
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41687242"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52082099"
 items:
 - uid: azure-arm-mysql.Configurations
   name: Configurations
@@ -15,16 +15,16 @@ items:
   - azure-arm-mysql.Configurations.beginCreateOrUpdate_1
   - azure-arm-mysql.Configurations.beginCreateOrUpdateWithHttpOperationResponse
   - azure-arm-mysql.Configurations.createOrUpdate
-  - azure-arm-mysql.Configurations.createOrUpdate_1
   - azure-arm-mysql.Configurations.createOrUpdate_2
+  - azure-arm-mysql.Configurations.createOrUpdate_1
   - azure-arm-mysql.Configurations.createOrUpdateWithHttpOperationResponse
   - azure-arm-mysql.Configurations.get
-  - azure-arm-mysql.Configurations.get_1
   - azure-arm-mysql.Configurations.get_2
+  - azure-arm-mysql.Configurations.get_1
   - azure-arm-mysql.Configurations.getWithHttpOperationResponse
   - azure-arm-mysql.Configurations.listByServer
-  - azure-arm-mysql.Configurations.listByServer_1
   - azure-arm-mysql.Configurations.listByServer_2
+  - azure-arm-mysql.Configurations.listByServer_1
   - azure-arm-mysql.Configurations.listByServerWithHttpOperationResponse
   langs:
   - typeScript
@@ -32,7 +32,7 @@ items:
   summary: ''
   package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.beginCreateOrUpdate
-  name: beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, string, Configuration, Object)
   children: []
   type: method
   langs:
@@ -45,7 +45,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -71,7 +71,7 @@ items:
       - Promise<azure-arm-mysql.Configuration>
   package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.beginCreateOrUpdate_2
-  name: beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, string, Configuration, Object, ServiceCallback<Configuration>)
   children: []
   type: method
   langs:
@@ -109,7 +109,7 @@ items:
       - Promise<azure-arm-mysql.Configuration>
   package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.beginCreateOrUpdate_1
-  name: beginCreateOrUpdate
+  name: beginCreateOrUpdate(string, string, string, Configuration, ServiceCallback<Configuration>)
   children: []
   type: method
   langs:
@@ -143,7 +143,7 @@ items:
       - Promise<azure-arm-mysql.Configuration>
   package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.beginCreateOrUpdateWithHttpOperationResponse
-  name: beginCreateOrUpdateWithHttpOperationResponse
+  name: beginCreateOrUpdateWithHttpOperationResponse(string, string, string, Configuration, Object)
   children: []
   type: method
   langs:
@@ -156,7 +156,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -182,7 +182,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-mysql.Configuration>>
   package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, Configuration, Object)
   children: []
   type: method
   langs:
@@ -195,7 +195,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -220,42 +220,8 @@ items:
       type:
       - Promise<azure-arm-mysql.Configuration>
   package: azure-arm-mysql
-- uid: azure-arm-mysql.Configurations.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновляет конфигурацию сервера.
-  syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, configurationName: string, parameters: Configuration, callback: ServiceCallback<Configuration>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: configurationName
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-mysql.Configuration
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-mysql.Configuration>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-mysql.Configuration>
-  package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, Configuration, Object, ServiceCallback<Configuration>)
   children: []
   type: method
   langs:
@@ -292,8 +258,42 @@ items:
       type:
       - Promise<azure-arm-mysql.Configuration>
   package: azure-arm-mysql
+- uid: azure-arm-mysql.Configurations.createOrUpdate_1
+  name: createOrUpdate(string, string, string, Configuration, ServiceCallback<Configuration>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет конфигурацию сервера.
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serverName: string, configurationName: string, parameters: Configuration, callback: ServiceCallback<Configuration>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: configurationName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-mysql.Configuration
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-mysql.Configuration>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-mysql.Configuration>
+  package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, string, Configuration, Object)
   children: []
   type: method
   langs:
@@ -306,7 +306,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -332,7 +332,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-mysql.Configuration>>
   package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -345,7 +345,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -365,38 +365,8 @@ items:
       type:
       - Promise<azure-arm-mysql.Configuration>
   package: azure-arm-mysql
-- uid: azure-arm-mysql.Configurations.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает сведения о конфигурации сервера.
-  syntax:
-    content: 'function get(resourceGroupName: string, serverName: string, configurationName: string, callback: ServiceCallback<Configuration>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: configurationName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-mysql.Configuration>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-mysql.Configuration>
-  package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<Configuration>)
   children: []
   type: method
   langs:
@@ -429,8 +399,38 @@ items:
       type:
       - Promise<azure-arm-mysql.Configuration>
   package: azure-arm-mysql
+- uid: azure-arm-mysql.Configurations.get_1
+  name: get(string, string, string, ServiceCallback<Configuration>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает сведения о конфигурации сервера.
+  syntax:
+    content: 'function get(resourceGroupName: string, serverName: string, configurationName: string, callback: ServiceCallback<Configuration>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: configurationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-mysql.Configuration>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-mysql.Configuration>
+  package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -443,7 +443,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -464,7 +464,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-mysql.Configuration>>
   package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.listByServer
-  name: listByServer
+  name: listByServer(string, string, Object)
   children: []
   type: method
   langs:
@@ -477,7 +477,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -492,34 +492,8 @@ items:
       type:
       - Promise<azure-arm-mysql.ConfigurationListResult>
   package: azure-arm-mysql
-- uid: azure-arm-mysql.Configurations.listByServer_1
-  name: listByServer
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Список всех конфигураций в данном сервере.
-  syntax:
-    content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<ConfigurationListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serverName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-mysql.ConfigurationListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-mysql.ConfigurationListResult>
-  package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.listByServer_2
-  name: listByServer
+  name: listByServer(string, string, Object, ServiceCallback<ConfigurationListResult>)
   children: []
   type: method
   langs:
@@ -548,8 +522,34 @@ items:
       type:
       - Promise<azure-arm-mysql.ConfigurationListResult>
   package: azure-arm-mysql
+- uid: azure-arm-mysql.Configurations.listByServer_1
+  name: listByServer(string, string, ServiceCallback<ConfigurationListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Список всех конфигураций в данном сервере.
+  syntax:
+    content: 'function listByServer(resourceGroupName: string, serverName: string, callback: ServiceCallback<ConfigurationListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serverName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-mysql.ConfigurationListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-mysql.ConfigurationListResult>
+  package: azure-arm-mysql
 - uid: azure-arm-mysql.Configurations.listByServerWithHttpOperationResponse
-  name: listByServerWithHttpOperationResponse
+  name: listByServerWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -562,7 +562,7 @@ items:
       type:
       - string
       description: >
-        Имя группы ресурсов, содержащий ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
+        Имя группы ресурсов, к которой относится ресурс. Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.
     - id: serverName
       type:
       - string
@@ -579,11 +579,13 @@ items:
   package: azure-arm-mysql
 references:
 - uid: azure-arm-mysql.Configuration
+  name: Configuration
   spec.typeScript:
   - name: Configuration
     fullName: Configuration
     uid: azure-arm-mysql.Configuration
 - uid: Promise<azure-arm-mysql.Configuration>
+  name: Configuration>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -593,6 +595,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-mysql.Configuration>
+  name: Configuration>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -602,6 +605,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-mysql.Configuration>>
+  name: Configuration>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -611,6 +615,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-mysql.ConfigurationListResult>
+  name: ConfigurationListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -620,6 +625,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-mysql.ConfigurationListResult>
+  name: ConfigurationListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -629,6 +635,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-mysql.ConfigurationListResult>>
+  name: ConfigurationListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

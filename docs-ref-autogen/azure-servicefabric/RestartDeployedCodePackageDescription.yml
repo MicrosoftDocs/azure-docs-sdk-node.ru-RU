@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: d4c3989de659fb33ad86da10926024b136dc539e
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52092679"
+items:
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription
+  name: RestartDeployedCodePackageDescription
+  fullName: RestartDeployedCodePackageDescription
+  children:
+  - azure-servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId
+  - azure-servicefabric.RestartDeployedCodePackageDescription.codePackageName
+  - azure-servicefabric.RestartDeployedCodePackageDescription.serviceManifestName
+  - azure-servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId
+  langs:
+  - typeScript
+  type: interface
+  summary: Определяет описание для перезапуска пакета кода развернутого на узле Service Fabric.
+  package: azure-servicefabric
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription.codePackageInstanceId
+  name: codePackageInstanceId
+  fullName: codePackageInstanceId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Идентификатор экземпляра для работающих точки входа. Для записи кода пакета установки точка (Если указано) выполняется первым, и запускается после его завершения главной точки входа.
+
+    Запустите исполняемый файл точки входа каждый раз, приведет к изменению его идентификатор экземпляра. Если 0 передается в качестве идентификатора экземпляра пакета кода, API будет перезапущена с любой идентификатор экземпляра, она выполняется в данный момент пакет кода.
+
+    Если экземпляр ID другой, чем 0 передается в, API будет перезапущен пакет кода только в том случае, если идентификатор текущего экземпляра соответствует переданного идентификатора экземпляра.
+
+    Обратите внимание, передав идентификатор конкретный экземпляр (не 0) в API безопаснее, поскольку если гарантирует максимум один перезапуск пакета кода.
+  syntax:
+    content: 'codePackageInstanceId: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription.codePackageName
+  name: codePackageName
+  fullName: codePackageName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Имя пакета кода, определенная в манифесте службы.
+  syntax:
+    content: 'codePackageName: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription.serviceManifestName
+  name: serviceManifestName
+  fullName: serviceManifestName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Имя манифеста службы, который указан этого пакета кода.
+  syntax:
+    content: 'serviceManifestName: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.RestartDeployedCodePackageDescription.servicePackageActivationId
+  name: servicePackageActivationId
+  fullName: servicePackageActivationId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: ActivationId из развернутого пакета службы. Если ServicePackageActivationMode, указанные во время создания службы является «SharedProcess» (или если он не указан, в этом случае по умолчанию используется «SharedProcess»), значением ServicePackageActivationId всегда является пустой строкой.
+  optional: true
+  syntax:
+    content: 'servicePackageActivationId?: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric

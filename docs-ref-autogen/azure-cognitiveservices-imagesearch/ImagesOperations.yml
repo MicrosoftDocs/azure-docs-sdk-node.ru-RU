@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3eb02540709d57851e75c76ea7edad071a77f7a2
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 904b55f6794146511c072cae19bfd96cf9a7a463
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41696884"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52153539"
 items:
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations
   name: ImagesOperations
@@ -15,12 +15,12 @@ items:
   - azure-cognitiveservices-imagesearch.ImagesOperations.details_1
   - azure-cognitiveservices-imagesearch.ImagesOperations.detailsWithHttpOperationResponse
   - azure-cognitiveservices-imagesearch.ImagesOperations.search
-  - azure-cognitiveservices-imagesearch.ImagesOperations.search_1
   - azure-cognitiveservices-imagesearch.ImagesOperations.search_2
+  - azure-cognitiveservices-imagesearch.ImagesOperations.search_1
   - azure-cognitiveservices-imagesearch.ImagesOperations.searchWithHttpOperationResponse
   - azure-cognitiveservices-imagesearch.ImagesOperations.trending
-  - azure-cognitiveservices-imagesearch.ImagesOperations.trending_1
   - azure-cognitiveservices-imagesearch.ImagesOperations.trending_2
+  - azure-cognitiveservices-imagesearch.ImagesOperations.trending_1
   - azure-cognitiveservices-imagesearch.ImagesOperations.trendingWithHttpOperationResponse
   langs:
   - typeScript
@@ -28,7 +28,7 @@ items:
   summary: ''
   package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.details
-  name: details
+  name: details(string, Object)
   children: []
   type: method
   langs:
@@ -52,7 +52,7 @@ items:
       - Promise<azure-cognitiveservices-imagesearch.ImageInsights>
   package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.details_2
-  name: details
+  name: details(string, Object, ServiceCallback<ImageInsights>)
   children: []
   type: method
   langs:
@@ -78,7 +78,7 @@ items:
       - Promise<azure-cognitiveservices-imagesearch.ImageInsights>
   package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.details_1
-  name: details
+  name: details(string, ServiceCallback<ImageInsights>)
   children: []
   type: method
   langs:
@@ -100,7 +100,7 @@ items:
       - Promise<azure-cognitiveservices-imagesearch.ImageInsights>
   package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.detailsWithHttpOperationResponse
-  name: detailsWithHttpOperationResponse
+  name: detailsWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -124,7 +124,7 @@ items:
       - Promise<HttpOperationResponse<azure-cognitiveservices-imagesearch.ImageInsights>>
   package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.search
-  name: search
+  name: search(string, Object)
   children: []
   type: method
   langs:
@@ -147,30 +147,8 @@ items:
       type:
       - Promise<azure-cognitiveservices-imagesearch.Images>
   package: azure-cognitiveservices-imagesearch
-- uid: azure-cognitiveservices-imagesearch.ImagesOperations.search_1
-  name: search
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function search(query: string, callback: ServiceCallback<Images>)'
-    parameters:
-    - id: query
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-imagesearch.Images>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-imagesearch.Images>
-  package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.search_2
-  name: search
+  name: search(string, Object, ServiceCallback<Images>)
   children: []
   type: method
   langs:
@@ -195,8 +173,30 @@ items:
       type:
       - Promise<azure-cognitiveservices-imagesearch.Images>
   package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImagesOperations.search_1
+  name: search(string, ServiceCallback<Images>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function search(query: string, callback: ServiceCallback<Images>)'
+    parameters:
+    - id: query
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-imagesearch.Images>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-imagesearch.Images>
+  package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.searchWithHttpOperationResponse
-  name: searchWithHttpOperationResponse
+  name: searchWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -220,7 +220,7 @@ items:
       - Promise<HttpOperationResponse<azure-cognitiveservices-imagesearch.Images>>
   package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.trending
-  name: trending
+  name: trending(Object)
   children: []
   type: method
   langs:
@@ -238,26 +238,8 @@ items:
       type:
       - Promise<azure-cognitiveservices-imagesearch.TrendingImages>
   package: azure-cognitiveservices-imagesearch
-- uid: azure-cognitiveservices-imagesearch.ImagesOperations.trending_1
-  name: trending
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: ''
-  syntax:
-    content: 'function trending(callback: ServiceCallback<TrendingImages>)'
-    parameters:
-    - id: callback
-      type:
-      - ServiceCallback<azure-cognitiveservices-imagesearch.TrendingImages>
-      description: ''
-    return:
-      type:
-      - Promise<azure-cognitiveservices-imagesearch.TrendingImages>
-  package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.trending_2
-  name: trending
+  name: trending(Object, ServiceCallback<TrendingImages>)
   children: []
   type: method
   langs:
@@ -278,8 +260,26 @@ items:
       type:
       - Promise<azure-cognitiveservices-imagesearch.TrendingImages>
   package: azure-cognitiveservices-imagesearch
+- uid: azure-cognitiveservices-imagesearch.ImagesOperations.trending_1
+  name: trending(ServiceCallback<TrendingImages>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: ''
+  syntax:
+    content: 'function trending(callback: ServiceCallback<TrendingImages>)'
+    parameters:
+    - id: callback
+      type:
+      - ServiceCallback<azure-cognitiveservices-imagesearch.TrendingImages>
+      description: ''
+    return:
+      type:
+      - Promise<azure-cognitiveservices-imagesearch.TrendingImages>
+  package: azure-cognitiveservices-imagesearch
 - uid: azure-cognitiveservices-imagesearch.ImagesOperations.trendingWithHttpOperationResponse
-  name: trendingWithHttpOperationResponse
+  name: trendingWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
@@ -299,6 +299,7 @@ items:
   package: azure-cognitiveservices-imagesearch
 references:
 - uid: Promise<azure-cognitiveservices-imagesearch.ImageInsights>
+  name: ImageInsights>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -308,6 +309,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-cognitiveservices-imagesearch.ImageInsights>
+  name: ImageInsights>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -317,6 +319,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-cognitiveservices-imagesearch.ImageInsights>>
+  name: ImageInsights>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -326,6 +329,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-cognitiveservices-imagesearch.Images>
+  name: Images>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -335,6 +339,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-cognitiveservices-imagesearch.Images>
+  name: Images>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -344,6 +349,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-cognitiveservices-imagesearch.Images>>
+  name: Images>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -353,6 +359,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-cognitiveservices-imagesearch.TrendingImages>
+  name: TrendingImages>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -362,6 +369,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-cognitiveservices-imagesearch.TrendingImages>
+  name: TrendingImages>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -371,6 +379,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-cognitiveservices-imagesearch.TrendingImages>>
+  name: TrendingImages>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

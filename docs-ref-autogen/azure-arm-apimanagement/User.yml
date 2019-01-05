@@ -1,50 +1,54 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: be2b7d56543f30dc2231c5f5bb0dc167da5842f8
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 226ac33ae9b04e085cfda223f4602cefee4327fc
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41684553"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52103099"
 items:
 - uid: azure-arm-apimanagement.User
   name: User
   fullName: User
   children:
   - azure-arm-apimanagement.User.createOrUpdate
-  - azure-arm-apimanagement.User.createOrUpdate_1
   - azure-arm-apimanagement.User.createOrUpdate_2
+  - azure-arm-apimanagement.User.createOrUpdate_1
   - azure-arm-apimanagement.User.createOrUpdateWithHttpOperationResponse
   - azure-arm-apimanagement.User.deleteMethod
   - azure-arm-apimanagement.User.deleteMethod_2
   - azure-arm-apimanagement.User.deleteMethod_1
   - azure-arm-apimanagement.User.deleteMethodWithHttpOperationResponse
-  - azure-arm-apimanagement.User.generateSsoUrl_1
-  - azure-arm-apimanagement.User.generateSsoUrl_2
   - azure-arm-apimanagement.User.generateSsoUrl
+  - azure-arm-apimanagement.User.generateSsoUrl_2
+  - azure-arm-apimanagement.User.generateSsoUrl_1
   - azure-arm-apimanagement.User.generateSsoUrlWithHttpOperationResponse
   - azure-arm-apimanagement.User.get
-  - azure-arm-apimanagement.User.get_1
   - azure-arm-apimanagement.User.get_2
+  - azure-arm-apimanagement.User.get_1
   - azure-arm-apimanagement.User.getEntityTag
-  - azure-arm-apimanagement.User.getEntityTag_1
   - azure-arm-apimanagement.User.getEntityTag_2
+  - azure-arm-apimanagement.User.getEntityTag_1
   - azure-arm-apimanagement.User.getEntityTagWithHttpOperationResponse
+  - azure-arm-apimanagement.User.getIdentity
+  - azure-arm-apimanagement.User.getIdentity_2
+  - azure-arm-apimanagement.User.getIdentity_1
+  - azure-arm-apimanagement.User.getIdentityWithHttpOperationResponse
   - azure-arm-apimanagement.User.getSharedAccessToken
   - azure-arm-apimanagement.User.getSharedAccessToken_2
   - azure-arm-apimanagement.User.getSharedAccessToken_1
   - azure-arm-apimanagement.User.getSharedAccessTokenWithHttpOperationResponse
   - azure-arm-apimanagement.User.getWithHttpOperationResponse
   - azure-arm-apimanagement.User.listByService
-  - azure-arm-apimanagement.User.listByService_1
   - azure-arm-apimanagement.User.listByService_2
+  - azure-arm-apimanagement.User.listByService_1
   - azure-arm-apimanagement.User.listByServiceNext
-  - azure-arm-apimanagement.User.listByServiceNext_1
   - azure-arm-apimanagement.User.listByServiceNext_2
+  - azure-arm-apimanagement.User.listByServiceNext_1
   - azure-arm-apimanagement.User.listByServiceNextWithHttpOperationResponse
   - azure-arm-apimanagement.User.listByServiceWithHttpOperationResponse
   - azure-arm-apimanagement.User.update
-  - azure-arm-apimanagement.User.update_1
   - azure-arm-apimanagement.User.update_2
+  - azure-arm-apimanagement.User.update_1
   - azure-arm-apimanagement.User.updateWithHttpOperationResponse
   langs:
   - typeScript
@@ -52,7 +56,7 @@ items:
   summary: ''
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.createOrUpdate
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, UserCreateParameters, Object)
   children: []
   type: method
   langs:
@@ -90,42 +94,8 @@ items:
       type:
       - Promise<azure-arm-apimanagement.UserContract>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.User.createOrUpdate_1
-  name: createOrUpdate
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Создает или обновляет пользователя.
-  syntax:
-    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, uid: string, parameters: UserCreateParameters, callback: ServiceCallback<UserContract>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: uid
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-apimanagement.UserCreateParameters
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.UserContract>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.UserContract>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.createOrUpdate_2
-  name: createOrUpdate
+  name: createOrUpdate(string, string, string, UserCreateParameters, Object, ServiceCallback<UserContract>)
   children: []
   type: method
   langs:
@@ -162,8 +132,42 @@ items:
       type:
       - Promise<azure-arm-apimanagement.UserContract>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.createOrUpdate_1
+  name: createOrUpdate(string, string, string, UserCreateParameters, ServiceCallback<UserContract>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Создает или обновляет пользователя.
+  syntax:
+    content: 'function createOrUpdate(resourceGroupName: string, serviceName: string, uid: string, parameters: UserCreateParameters, callback: ServiceCallback<UserContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.UserCreateParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.UserContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.UserContract>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.createOrUpdateWithHttpOperationResponse
-  name: createOrUpdateWithHttpOperationResponse
+  name: createOrUpdateWithHttpOperationResponse(string, string, string, UserCreateParameters, Object)
   children: []
   type: method
   langs:
@@ -202,7 +206,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.UserContract>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.deleteMethod
-  name: deleteMethod
+  name: deleteMethod(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -241,7 +245,7 @@ items:
       - Promise<void>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.deleteMethod_2
-  name: deleteMethod
+  name: deleteMethod(string, string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -279,7 +283,7 @@ items:
       - Promise<void>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.deleteMethod_1
-  name: deleteMethod
+  name: deleteMethod(string, string, string, string, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -313,7 +317,7 @@ items:
       - Promise<void>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.deleteMethodWithHttpOperationResponse
-  name: deleteMethodWithHttpOperationResponse
+  name: deleteMethodWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -351,72 +355,8 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.User.generateSsoUrl_1
-  name: generateSsoUrl
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Извлекает URL-адрес перенаправления, содержащий маркер проверки подлинности для входа данного пользователя на портал разработчика.
-  syntax:
-    content: 'function generateSsoUrl(resourceGroupName: string, serviceName: string, uid: string, callback: ServiceCallback<GenerateSsoUrlResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: uid
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.GenerateSsoUrlResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.GenerateSsoUrlResult>
-  package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.User.generateSsoUrl_2
-  name: generateSsoUrl
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Извлекает URL-адрес перенаправления, содержащий маркер проверки подлинности для входа данного пользователя на портал разработчика.
-  syntax:
-    content: 'function generateSsoUrl(resourceGroupName: string, serviceName: string, uid: string, options: Object, callback: ServiceCallback<GenerateSsoUrlResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: uid
-      type:
-      - string
-      description: ''
-    - id: options
-      type:
-      - Object
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.GenerateSsoUrlResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.GenerateSsoUrlResult>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.generateSsoUrl
-  name: generateSsoUrl
+  name: generateSsoUrl(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -449,8 +389,72 @@ items:
       type:
       - Promise<azure-arm-apimanagement.GenerateSsoUrlResult>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.generateSsoUrl_2
+  name: generateSsoUrl(string, string, string, Object, ServiceCallback<GenerateSsoUrlResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Извлекает URL-адрес перенаправления, содержащий маркер проверки подлинности для входа данного пользователя на портал разработчика.
+  syntax:
+    content: 'function generateSsoUrl(resourceGroupName: string, serviceName: string, uid: string, options: Object, callback: ServiceCallback<GenerateSsoUrlResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.GenerateSsoUrlResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.GenerateSsoUrlResult>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.generateSsoUrl_1
+  name: generateSsoUrl(string, string, string, ServiceCallback<GenerateSsoUrlResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Извлекает URL-адрес перенаправления, содержащий маркер проверки подлинности для входа данного пользователя на портал разработчика.
+  syntax:
+    content: 'function generateSsoUrl(resourceGroupName: string, serviceName: string, uid: string, callback: ServiceCallback<GenerateSsoUrlResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.GenerateSsoUrlResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.GenerateSsoUrlResult>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.generateSsoUrlWithHttpOperationResponse
-  name: generateSsoUrlWithHttpOperationResponse
+  name: generateSsoUrlWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -484,7 +488,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.GenerateSsoUrlResult>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.get
-  name: get
+  name: get(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -517,38 +521,8 @@ items:
       type:
       - Promise<azure-arm-apimanagement.UserContract>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.User.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает данные пользователя, указанного по его идентификатору.
-  syntax:
-    content: 'function get(resourceGroupName: string, serviceName: string, uid: string, callback: ServiceCallback<UserContract>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: uid
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.UserContract>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.UserContract>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.get_2
-  name: get
+  name: get(string, string, string, Object, ServiceCallback<UserContract>)
   children: []
   type: method
   langs:
@@ -581,8 +555,38 @@ items:
       type:
       - Promise<azure-arm-apimanagement.UserContract>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.get_1
+  name: get(string, string, string, ServiceCallback<UserContract>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает данные пользователя, указанного по его идентификатору.
+  syntax:
+    content: 'function get(resourceGroupName: string, serviceName: string, uid: string, callback: ServiceCallback<UserContract>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.UserContract>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.UserContract>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.getEntityTag
-  name: getEntityTag
+  name: getEntityTag(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -615,38 +619,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.User.getEntityTag_1
-  name: getEntityTag
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает версия состояния сущности (Etag) пользователя, указанного по его идентификатору.
-  syntax:
-    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, uid: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: uid
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.getEntityTag_2
-  name: getEntityTag
+  name: getEntityTag(string, string, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -679,8 +653,38 @@ items:
       type:
       - Promise<void>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.getEntityTag_1
+  name: getEntityTag(string, string, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает версия состояния сущности (Etag) пользователя, указанного по его идентификатору.
+  syntax:
+    content: 'function getEntityTag(resourceGroupName: string, serviceName: string, uid: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.getEntityTagWithHttpOperationResponse
-  name: getEntityTagWithHttpOperationResponse
+  name: getEntityTagWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -713,8 +717,122 @@ items:
       type:
       - Promise<HttpOperationResponse<void>>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.getIdentity
+  name: getIdentity(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возврат вызова сведения об удостоверении пользователя.
+  syntax:
+    content: 'function getIdentity(resourceGroupName: string, serviceName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов.
+    - id: serviceName
+      type:
+      - string
+      description: >
+        Имя службы управления API.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.CurrentUserIdentity>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.getIdentity_2
+  name: getIdentity(string, string, Object, ServiceCallback<CurrentUserIdentity>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возврат вызова сведения об удостоверении пользователя.
+  syntax:
+    content: 'function getIdentity(resourceGroupName: string, serviceName: string, options: Object, callback: ServiceCallback<CurrentUserIdentity>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.CurrentUserIdentity>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.CurrentUserIdentity>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.getIdentity_1
+  name: getIdentity(string, string, ServiceCallback<CurrentUserIdentity>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возврат вызова сведения об удостоверении пользователя.
+  syntax:
+    content: 'function getIdentity(resourceGroupName: string, serviceName: string, callback: ServiceCallback<CurrentUserIdentity>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.CurrentUserIdentity>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.CurrentUserIdentity>
+  package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.getIdentityWithHttpOperationResponse
+  name: getIdentityWithHttpOperationResponse(string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возврат вызова сведения об удостоверении пользователя.
+  syntax:
+    content: 'function getIdentityWithHttpOperationResponse(resourceGroupName: string, serviceName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов.
+    - id: serviceName
+      type:
+      - string
+      description: >
+        Имя службы управления API.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-apimanagement.CurrentUserIdentity>>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.getSharedAccessToken
-  name: getSharedAccessToken
+  name: getSharedAccessToken(string, string, string, UserTokenParameters, Object)
   children: []
   type: method
   langs:
@@ -753,7 +871,7 @@ items:
       - Promise<azure-arm-apimanagement.UserTokenResult>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.getSharedAccessToken_2
-  name: getSharedAccessToken
+  name: getSharedAccessToken(string, string, string, UserTokenParameters, Object, ServiceCallback<UserTokenResult>)
   children: []
   type: method
   langs:
@@ -791,7 +909,7 @@ items:
       - Promise<azure-arm-apimanagement.UserTokenResult>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.getSharedAccessToken_1
-  name: getSharedAccessToken
+  name: getSharedAccessToken(string, string, string, UserTokenParameters, ServiceCallback<UserTokenResult>)
   children: []
   type: method
   langs:
@@ -825,7 +943,7 @@ items:
       - Promise<azure-arm-apimanagement.UserTokenResult>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.getSharedAccessTokenWithHttpOperationResponse
-  name: getSharedAccessTokenWithHttpOperationResponse
+  name: getSharedAccessTokenWithHttpOperationResponse(string, string, string, UserTokenParameters, Object)
   children: []
   type: method
   langs:
@@ -864,7 +982,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.UserTokenResult>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, string, string, Object)
   children: []
   type: method
   langs:
@@ -898,7 +1016,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.UserContract>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.listByService
-  name: listByService
+  name: listByService(string, string, Object)
   children: []
   type: method
   langs:
@@ -926,34 +1044,8 @@ items:
       type:
       - Promise<azure-arm-apimanagement.UserCollection>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.User.listByService_1
-  name: listByService
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Перечисляет коллекцию пользователей, зарегистрированных в указанном экземпляре службы.
-  syntax:
-    content: 'function listByService(resourceGroupName: string, serviceName: string, callback: ServiceCallback<UserCollection>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.UserCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.UserCollection>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.listByService_2
-  name: listByService
+  name: listByService(string, string, Object, ServiceCallback<UserCollection>)
   children: []
   type: method
   langs:
@@ -982,8 +1074,34 @@ items:
       type:
       - Promise<azure-arm-apimanagement.UserCollection>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.listByService_1
+  name: listByService(string, string, ServiceCallback<UserCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет коллекцию пользователей, зарегистрированных в указанном экземпляре службы.
+  syntax:
+    content: 'function listByService(resourceGroupName: string, serviceName: string, callback: ServiceCallback<UserCollection>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.UserCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.UserCollection>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.listByServiceNext
-  name: listByServiceNext
+  name: listByServiceNext(string, Object)
   children: []
   type: method
   langs:
@@ -1006,30 +1124,8 @@ items:
       type:
       - Promise<azure-arm-apimanagement.UserCollection>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.User.listByServiceNext_1
-  name: listByServiceNext
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Перечисляет коллекцию пользователей, зарегистрированных в указанном экземпляре службы.
-  syntax:
-    content: 'function listByServiceNext(nextPageLink: string, callback: ServiceCallback<UserCollection>)'
-    parameters:
-    - id: nextPageLink
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-apimanagement.UserCollection>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-apimanagement.UserCollection>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.listByServiceNext_2
-  name: listByServiceNext
+  name: listByServiceNext(string, Object, ServiceCallback<UserCollection>)
   children: []
   type: method
   langs:
@@ -1054,8 +1150,30 @@ items:
       type:
       - Promise<azure-arm-apimanagement.UserCollection>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.listByServiceNext_1
+  name: listByServiceNext(string, ServiceCallback<UserCollection>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет коллекцию пользователей, зарегистрированных в указанном экземпляре службы.
+  syntax:
+    content: 'function listByServiceNext(nextPageLink: string, callback: ServiceCallback<UserCollection>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-apimanagement.UserCollection>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-apimanagement.UserCollection>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.listByServiceNextWithHttpOperationResponse
-  name: listByServiceNextWithHttpOperationResponse
+  name: listByServiceNextWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -1079,7 +1197,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.UserCollection>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.listByServiceWithHttpOperationResponse
-  name: listByServiceWithHttpOperationResponse
+  name: listByServiceWithHttpOperationResponse(string, string, Object)
   children: []
   type: method
   langs:
@@ -1108,7 +1226,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-apimanagement.UserCollection>>
   package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.update
-  name: update
+  name: update(string, string, string, UserUpdateParameters, string, Object)
   children: []
   type: method
   langs:
@@ -1151,46 +1269,8 @@ items:
       type:
       - Promise<void>
   package: azure-arm-apimanagement
-- uid: azure-arm-apimanagement.User.update_1
-  name: update
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Обновляет данные пользователя, указанного по его идентификатору.
-  syntax:
-    content: 'function update(resourceGroupName: string, serviceName: string, uid: string, parameters: UserUpdateParameters, ifMatch: string, callback: ServiceCallback<void>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: serviceName
-      type:
-      - string
-      description: ''
-    - id: uid
-      type:
-      - string
-      description: ''
-    - id: parameters
-      type:
-      - azure-arm-apimanagement.UserUpdateParameters
-      description: ''
-    - id: ifMatch
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<void>
-      description: ''
-    return:
-      type:
-      - Promise<void>
-  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.update_2
-  name: update
+  name: update(string, string, string, UserUpdateParameters, string, Object, ServiceCallback<void>)
   children: []
   type: method
   langs:
@@ -1231,8 +1311,46 @@ items:
       type:
       - Promise<void>
   package: azure-arm-apimanagement
+- uid: azure-arm-apimanagement.User.update_1
+  name: update(string, string, string, UserUpdateParameters, string, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет данные пользователя, указанного по его идентификатору.
+  syntax:
+    content: 'function update(resourceGroupName: string, serviceName: string, uid: string, parameters: UserUpdateParameters, ifMatch: string, callback: ServiceCallback<void>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: serviceName
+      type:
+      - string
+      description: ''
+    - id: uid
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-apimanagement.UserUpdateParameters
+      description: ''
+    - id: ifMatch
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-apimanagement
 - uid: azure-arm-apimanagement.User.updateWithHttpOperationResponse
-  name: updateWithHttpOperationResponse
+  name: updateWithHttpOperationResponse(string, string, string, UserUpdateParameters, string, Object)
   children: []
   type: method
   langs:
@@ -1277,11 +1395,13 @@ items:
   package: azure-arm-apimanagement
 references:
 - uid: azure-arm-apimanagement.UserCreateParameters
+  name: UserCreateParameters
   spec.typeScript:
   - name: UserCreateParameters
     fullName: UserCreateParameters
     uid: azure-arm-apimanagement.UserCreateParameters
 - uid: Promise<azure-arm-apimanagement.UserContract>
+  name: UserContract>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1291,6 +1411,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-apimanagement.UserContract>
+  name: UserContract>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1300,6 +1421,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.UserContract>>
+  name: UserContract>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1309,6 +1431,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-apimanagement.GenerateSsoUrlResult>
+  name: GenerateSsoUrlResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1318,6 +1441,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-apimanagement.GenerateSsoUrlResult>
+  name: GenerateSsoUrlResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1327,6 +1451,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.GenerateSsoUrlResult>>
+  name: GenerateSsoUrlResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1335,12 +1460,44 @@ references:
     uid: azure-arm-apimanagement.GenerateSsoUrlResult
   - name: '>>'
     fullName: '>>'
+- uid: Promise<azure-arm-apimanagement.CurrentUserIdentity>
+  name: CurrentUserIdentity>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: CurrentUserIdentity
+    fullName: CurrentUserIdentity
+    uid: azure-arm-apimanagement.CurrentUserIdentity
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-apimanagement.CurrentUserIdentity>
+  name: CurrentUserIdentity>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: CurrentUserIdentity
+    fullName: CurrentUserIdentity
+    uid: azure-arm-apimanagement.CurrentUserIdentity
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-apimanagement.CurrentUserIdentity>>
+  name: CurrentUserIdentity>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: CurrentUserIdentity
+    fullName: CurrentUserIdentity
+    uid: azure-arm-apimanagement.CurrentUserIdentity
+  - name: '>>'
+    fullName: '>>'
 - uid: azure-arm-apimanagement.UserTokenParameters
+  name: UserTokenParameters
   spec.typeScript:
   - name: UserTokenParameters
     fullName: UserTokenParameters
     uid: azure-arm-apimanagement.UserTokenParameters
 - uid: Promise<azure-arm-apimanagement.UserTokenResult>
+  name: UserTokenResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1350,6 +1507,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-apimanagement.UserTokenResult>
+  name: UserTokenResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1359,6 +1517,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.UserTokenResult>>
+  name: UserTokenResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1368,6 +1527,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-apimanagement.UserCollection>
+  name: UserCollection>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -1377,6 +1537,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-apimanagement.UserCollection>
+  name: UserCollection>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -1386,6 +1547,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-apimanagement.UserCollection>>
+  name: UserCollection>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -1395,6 +1557,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: azure-arm-apimanagement.UserUpdateParameters
+  name: UserUpdateParameters
   spec.typeScript:
   - name: UserUpdateParameters
     fullName: UserUpdateParameters

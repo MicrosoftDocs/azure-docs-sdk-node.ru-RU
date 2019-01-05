@@ -1,0 +1,134 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bdf8b9d6f20bb58738823313a5ead68b8aca7d61
+ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53661458"
+items:
+- uid: azure-servicefabric.BackupPolicyDescription
+  name: BackupPolicyDescription
+  fullName: BackupPolicyDescription
+  children:
+  - azure-servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss
+  - azure-servicefabric.BackupPolicyDescription.maxIncrementalBackups
+  - azure-servicefabric.BackupPolicyDescription.name
+  - azure-servicefabric.BackupPolicyDescription.retentionPolicy
+  - azure-servicefabric.BackupPolicyDescription.schedule
+  - azure-servicefabric.BackupPolicyDescription.storage
+  langs:
+  - typeScript
+  type: interface
+  summary: Описывает политику резервного копирования для настройки периодического резервного копирования.
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.autoRestoreOnDataLoss
+  name: autoRestoreOnDataLoss
+  fullName: autoRestoreOnDataLoss
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Указывает, следует ли активировать автоматическое восстановление с использованием последней доступной резервной копии в случае потери данных в разделе.
+  syntax:
+    content: 'autoRestoreOnDataLoss: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.maxIncrementalBackups
+  name: maxIncrementalBackups
+  fullName: maxIncrementalBackups
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Определяет максимальное число добавочных резервных копий, которые должны создаваться в интервале между созданием двух полных резервных копий. Это просто верхний предел. Полное резервное копирование можно выполнить до создания указанного числа добавочных резервных копий при одном из следующих условий:
+
+    - Для реплики никогда не создавалась полной резервной копии, так как она стала первичной,
+
+    - Некоторые записи журнала с момента последнего резервного копирования был усечен, или
+
+    - Размер реплики превысил ограничение MaxAccumulatedBackupLogSizeInMB.
+  syntax:
+    content: 'maxIncrementalBackups: number'
+    return:
+      type:
+      - number
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.name
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Уникальное имя, идентифицирующее эту политику резервного копирования.
+  syntax:
+    content: 'name: string'
+    return:
+      type:
+      - string
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.retentionPolicy
+  name: retentionPolicy
+  fullName: retentionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Описывает политику хранения резервных копий в хранилище.
+  optional: true
+  syntax:
+    content: 'retentionPolicy?: RetentionPolicyDescription'
+    return:
+      type:
+      - azure-servicefabric.RetentionPolicyDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.schedule
+  name: schedule
+  fullName: schedule
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Описывает параметры расписания резервного копирования.
+  syntax:
+    content: 'schedule: BackupScheduleDescription'
+    return:
+      type:
+      - azure-servicefabric.BackupScheduleDescription
+  package: azure-servicefabric
+- uid: azure-servicefabric.BackupPolicyDescription.storage
+  name: storage
+  fullName: storage
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Описывается расположение для сохранения периодического резервного копирования хранилища резервных копий.
+  syntax:
+    content: 'storage: BackupStorageDescription'
+    return:
+      type:
+      - azure-servicefabric.BackupStorageDescription
+  package: azure-servicefabric
+references:
+- uid: azure-servicefabric.RetentionPolicyDescription
+  name: RetentionPolicyDescription
+  spec.typeScript:
+  - name: RetentionPolicyDescription
+    fullName: RetentionPolicyDescription
+    uid: azure-servicefabric.RetentionPolicyDescription
+- uid: azure-servicefabric.BackupScheduleDescription
+  name: BackupScheduleDescription
+  spec.typeScript:
+  - name: BackupScheduleDescription
+    fullName: BackupScheduleDescription
+    uid: azure-servicefabric.BackupScheduleDescription
+- uid: azure-servicefabric.BackupStorageDescription
+  name: BackupStorageDescription
+  spec.typeScript:
+  - name: BackupStorageDescription
+    fullName: BackupStorageDescription
+    uid: azure-servicefabric.BackupStorageDescription

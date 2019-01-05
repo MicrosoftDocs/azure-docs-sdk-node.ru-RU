@@ -1,22 +1,22 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: ab106b4cabe183b378ffae873d15e198770308c1
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 36ec78b7a4517e47ca2cdc6b14a04d114674ef56
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41691870"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52106109"
 items:
 - uid: azure-arm-cosmosdb.CollectionPartition
   name: CollectionPartition
   fullName: CollectionPartition
   children:
   - azure-arm-cosmosdb.CollectionPartition.listMetrics
-  - azure-arm-cosmosdb.CollectionPartition.listMetrics_1
   - azure-arm-cosmosdb.CollectionPartition.listMetrics_2
+  - azure-arm-cosmosdb.CollectionPartition.listMetrics_1
   - azure-arm-cosmosdb.CollectionPartition.listMetricsWithHttpOperationResponse
   - azure-arm-cosmosdb.CollectionPartition.listUsages
-  - azure-arm-cosmosdb.CollectionPartition.listUsages_1
   - azure-arm-cosmosdb.CollectionPartition.listUsages_2
+  - azure-arm-cosmosdb.CollectionPartition.listUsages_1
   - azure-arm-cosmosdb.CollectionPartition.listUsagesWithHttpOperationResponse
   langs:
   - typeScript
@@ -24,7 +24,7 @@ items:
   summary: ''
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.CollectionPartition.listMetrics
-  name: listMetrics
+  name: listMetrics(string, string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -67,46 +67,8 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.PartitionMetricListResult>
   package: azure-arm-cosmosdb
-- uid: azure-arm-cosmosdb.CollectionPartition.listMetrics_1
-  name: listMetrics
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получает метрики, определяется заданным фильтром для данной коллекции, разбиение по секциям.
-  syntax:
-    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, callback: ServiceCallback<PartitionMetricListResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: accountName
-      type:
-      - string
-      description: ''
-    - id: databaseRid
-      type:
-      - string
-      description: ''
-    - id: collectionRid
-      type:
-      - string
-      description: ''
-    - id: filter
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cosmosdb.PartitionMetricListResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cosmosdb.PartitionMetricListResult>
-  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.CollectionPartition.listMetrics_2
-  name: listMetrics
+  name: listMetrics(string, string, string, string, string, Object, ServiceCallback<PartitionMetricListResult>)
   children: []
   type: method
   langs:
@@ -147,8 +109,46 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.PartitionMetricListResult>
   package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listMetrics_1
+  name: listMetrics(string, string, string, string, string, ServiceCallback<PartitionMetricListResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получает метрики, определяется заданным фильтром для данной коллекции, разбиение по секциям.
+  syntax:
+    content: 'function listMetrics(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, filter: string, callback: ServiceCallback<PartitionMetricListResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: filter
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.PartitionMetricListResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PartitionMetricListResult>
+  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.CollectionPartition.listMetricsWithHttpOperationResponse
-  name: listMetricsWithHttpOperationResponse
+  name: listMetricsWithHttpOperationResponse(string, string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -192,7 +192,7 @@ items:
       - Promise<HttpOperationResponse<azure-arm-cosmosdb.PartitionMetricListResult>>
   package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.CollectionPartition.listUsages
-  name: listUsages
+  name: listUsages(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -230,42 +230,8 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.PartitionUsagesResult>
   package: azure-arm-cosmosdb
-- uid: azure-arm-cosmosdb.CollectionPartition.listUsages_1
-  name: listUsages
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Извлекает данные об использовании (самые последние данные в хранилище) для данной коллекции, разбиение по секциям.
-  syntax:
-    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, callback: ServiceCallback<PartitionUsagesResult>)'
-    parameters:
-    - id: resourceGroupName
-      type:
-      - string
-      description: ''
-    - id: accountName
-      type:
-      - string
-      description: ''
-    - id: databaseRid
-      type:
-      - string
-      description: ''
-    - id: collectionRid
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-cosmosdb.PartitionUsagesResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-cosmosdb.PartitionUsagesResult>
-  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.CollectionPartition.listUsages_2
-  name: listUsages
+  name: listUsages(string, string, string, string, Object, ServiceCallback<PartitionUsagesResult>)
   children: []
   type: method
   langs:
@@ -302,8 +268,42 @@ items:
       type:
       - Promise<azure-arm-cosmosdb.PartitionUsagesResult>
   package: azure-arm-cosmosdb
+- uid: azure-arm-cosmosdb.CollectionPartition.listUsages_1
+  name: listUsages(string, string, string, string, ServiceCallback<PartitionUsagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Извлекает данные об использовании (самые последние данные в хранилище) для данной коллекции, разбиение по секциям.
+  syntax:
+    content: 'function listUsages(resourceGroupName: string, accountName: string, databaseRid: string, collectionRid: string, callback: ServiceCallback<PartitionUsagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: databaseRid
+      type:
+      - string
+      description: ''
+    - id: collectionRid
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-cosmosdb.PartitionUsagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-cosmosdb.PartitionUsagesResult>
+  package: azure-arm-cosmosdb
 - uid: azure-arm-cosmosdb.CollectionPartition.listUsagesWithHttpOperationResponse
-  name: listUsagesWithHttpOperationResponse
+  name: listUsagesWithHttpOperationResponse(string, string, string, string, Object)
   children: []
   type: method
   langs:
@@ -343,6 +343,7 @@ items:
   package: azure-arm-cosmosdb
 references:
 - uid: Promise<azure-arm-cosmosdb.PartitionMetricListResult>
+  name: PartitionMetricListResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -352,6 +353,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-cosmosdb.PartitionMetricListResult>
+  name: PartitionMetricListResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -361,6 +363,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.PartitionMetricListResult>>
+  name: PartitionMetricListResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<
@@ -370,6 +373,7 @@ references:
   - name: '>>'
     fullName: '>>'
 - uid: Promise<azure-arm-cosmosdb.PartitionUsagesResult>
+  name: PartitionUsagesResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -379,6 +383,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-cosmosdb.PartitionUsagesResult>
+  name: PartitionUsagesResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -388,6 +393,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-cosmosdb.PartitionUsagesResult>>
+  name: PartitionUsagesResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

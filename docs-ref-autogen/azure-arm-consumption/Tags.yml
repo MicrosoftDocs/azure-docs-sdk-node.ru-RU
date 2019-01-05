@@ -1,18 +1,18 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: cb38ac966b8e5b8a06e6d5ddb68084b6d941a955
-ms.sourcegitcommit: 286f52ea38c9eff2ec9d4f8cabeb86f62fd9c406
+ms.openlocfilehash: 7447521faaac9577caaf640b14d6b14e07961154
+ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41688230"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "52142489"
 items:
 - uid: azure-arm-consumption.Tags
   name: Tags
   fullName: Tags
   children:
   - azure-arm-consumption.Tags.get
-  - azure-arm-consumption.Tags.get_1
   - azure-arm-consumption.Tags.get_2
+  - azure-arm-consumption.Tags.get_1
   - azure-arm-consumption.Tags.getWithHttpOperationResponse
   langs:
   - typeScript
@@ -20,7 +20,7 @@ items:
   summary: ''
   package: azure-arm-consumption
 - uid: azure-arm-consumption.Tags.get
-  name: get
+  name: get(string, Object)
   children: []
   type: method
   langs:
@@ -43,30 +43,8 @@ items:
       type:
       - Promise<azure-arm-consumption.TagsResult>
   package: azure-arm-consumption
-- uid: azure-arm-consumption.Tags.get_1
-  name: get
-  children: []
-  type: method
-  langs:
-  - typeScript
-  summary: Получение всех доступных тегов ключей для учетной записи выставления счетов.
-  syntax:
-    content: 'function get(billingAccountId: string, callback: ServiceCallback<TagsResult>)'
-    parameters:
-    - id: billingAccountId
-      type:
-      - string
-      description: ''
-    - id: callback
-      type:
-      - ServiceCallback<azure-arm-consumption.TagsResult>
-      description: ''
-    return:
-      type:
-      - Promise<azure-arm-consumption.TagsResult>
-  package: azure-arm-consumption
 - uid: azure-arm-consumption.Tags.get_2
-  name: get
+  name: get(string, Object, ServiceCallback<TagsResult>)
   children: []
   type: method
   langs:
@@ -91,8 +69,30 @@ items:
       type:
       - Promise<azure-arm-consumption.TagsResult>
   package: azure-arm-consumption
+- uid: azure-arm-consumption.Tags.get_1
+  name: get(string, ServiceCallback<TagsResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Получение всех доступных тегов ключей для учетной записи выставления счетов.
+  syntax:
+    content: 'function get(billingAccountId: string, callback: ServiceCallback<TagsResult>)'
+    parameters:
+    - id: billingAccountId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-consumption.TagsResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-consumption.TagsResult>
+  package: azure-arm-consumption
 - uid: azure-arm-consumption.Tags.getWithHttpOperationResponse
-  name: getWithHttpOperationResponse
+  name: getWithHttpOperationResponse(string, Object)
   children: []
   type: method
   langs:
@@ -117,6 +117,7 @@ items:
   package: azure-arm-consumption
 references:
 - uid: Promise<azure-arm-consumption.TagsResult>
+  name: TagsResult>
   spec.typeScript:
   - name: Promise<
     fullName: Promise<
@@ -126,6 +127,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: ServiceCallback<azure-arm-consumption.TagsResult>
+  name: TagsResult>
   spec.typeScript:
   - name: ServiceCallback<
     fullName: ServiceCallback<
@@ -135,6 +137,7 @@ references:
   - name: '>'
     fullName: '>'
 - uid: Promise<HttpOperationResponse<azure-arm-consumption.TagsResult>>
+  name: TagsResult>>
   spec.typeScript:
   - name: Promise<HttpOperationResponse<
     fullName: Promise<HttpOperationResponse<

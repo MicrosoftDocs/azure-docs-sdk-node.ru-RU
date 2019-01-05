@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: ae5e92e8b861f900a9d2364bbb1fc70519d0fabf
+ms.sourcegitcommit: 8f2555cd23e454ff79e27bd3ed0a6f65b08c1c9e
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48550302"
+items:
+- uid: '@azure/event-hubs.RetryConfig'
+  name: RetryConfig
+  fullName: RetryConfig<T>
+  children:
+  - '@azure/event-hubs.RetryConfig.connectionId'
+  - '@azure/event-hubs.RetryConfig.delayInSeconds'
+  - '@azure/event-hubs.RetryConfig.operation'
+  - '@azure/event-hubs.RetryConfig.operationType'
+  - '@azure/event-hubs.RetryConfig.times'
+  langs:
+  - typeScript
+  type: interface
+  summary: Описывает параметры, которые должны быть настроены для операции повтора.
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.connectionId'
+  name: connectionId
+  fullName: connectionId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    {Строка} connectionId идентификатор соединения. Использовать сведения о ведении журнала.
+
+    Очень полезно, если вход выполняется несколько подключений в одном файле.
+  syntax:
+    content: 'connectionId: string'
+    return:
+      type:
+      - string
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.delayInSeconds'
+  name: delayInSeconds
+  fullName: delayInSeconds
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} [delayInSeconds] Период времени ожидания в секундах перед следующей попыткой. Значение по умолчанию: 15.'
+  optional: true
+  syntax:
+    content: 'delayInSeconds?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.operation'
+  name: operation
+  fullName: operation
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{Обещание<T>} операцию, необходимо повторить операцию.'
+  syntax:
+    content: 'operation: () => Promise<T>'
+    return:
+      type:
+      - () => Promise<T>
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.operationType'
+  name: operationType
+  fullName: operationType
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    OperationType {RetryOperationType} имя/тип выполняемой операции.
+
+    Очень полезно в предоставлении лучше журналы отладки.
+  syntax:
+    content: 'operationType: RetryOperationType'
+    return:
+      type:
+      - '@azure/event-hubs.RetryOperationType'
+  package: '@azure/event-hubs'
+- uid: '@azure/event-hubs.RetryConfig.times'
+  name: times
+  fullName: times
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: '{number} [время] Количество раз, когда операции необходимо повторить в случае ошибки. Значение по умолчанию: 3.'
+  optional: true
+  syntax:
+    content: 'times?: number'
+    return:
+      type:
+      - number
+  package: '@azure/event-hubs'
+references:
+- uid: '@azure/event-hubs.RetryOperationType'
+  name: RetryOperationType
+  spec.typeScript:
+  - name: RetryOperationType
+    fullName: RetryOperationType
+    uid: '@azure/event-hubs.RetryOperationType'
