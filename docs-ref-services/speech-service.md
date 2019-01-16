@@ -4,19 +4,19 @@ description: Справочные материалы по пакету SDK сл�
 author: mahilleb-msft
 ms.author: mahilleb
 manager: wolfma
-ms.date: 09/24/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: nodejs
 ms.service: cognitive-services
 ms.component: speech-service
-ms.openlocfilehash: 69167faa5b2677fc15561ed33beccf7925efbe39
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 43a6921d4ec782287cc041ecaabab4567b0fe677
+ms.sourcegitcommit: 74417c10aee8987c3e0343728efac75823c902d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52015528"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54185991"
 ---
 # <a name="cognitive-services-speech-sdk-for-javascript"></a>Пакет SDK службы "Речь" в Cognitive Services для JavaScript
 
@@ -25,45 +25,73 @@ ms.locfileid: "52015528"
 Чтобы упростить разработку приложений с поддержкой речевых функций, корпорация Майкрософт предоставляет пакет SDK [службы "Речь"](https://aka.ms/csspeech).
 Пакет SDK службы "Речь" предоставляет согласованные собственные API для перевода речи и преобразования речи в текст.
 
-> [!NOTE]
-> Пакет SDK службы "Речь" сейчас доступен только в браузерной версии.
-> Пакет npm появится в ближайшее время.
+### <a name="install-the-npm-module"></a>Установка модуля npm
 
-### <a name="install-the-speech-sdk"></a>Установка пакета SDK службы "Речь"
+Установка модуля npm для пакета SDK службы "Речь" Cognitive Services
 
-Скачайте пакет SDK службы "Речь" как [ZIP-файл](https://aka.ms/csspeech/jsbrowserpackage) и распакуйте его.
-Будет распаковано несколько файлов, включая файл с именем `microsoft.cognitiveservices.speech.sdk.bundle.js`.
-Загрузите этот файл как ресурс скрипта на веб-страницу, чтобы начать использовать пакет SDK службы "Речь":
-
-```html
-<script src="microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+```bash
+npm install microsoft-cognitiveservices-speech-sdk
 ```
 
 ### <a name="example"></a>Пример 
 
-В следующих фрагментах кода показано, как выполнить простое распознавание речи в браузере:
+В следующих фрагментах кода показано, как выполнить простое распознавание речи в файле:
 
 ```javascript 
-var SpeechSDK = window.SpeechSDK;
-var speechConfig = SpeechSDK.SpeechConfig.fromSubscription("your-subscription-key", "your-service-region");
-speechConfig.language = "en-US";
-var audioConfig = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
-recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+// Pull in the required packages.
+var sdk = require("microsoft-cognitiveservices-speech-sdk");
+var fs = require("fs");
 
+// Replace with your own subscription key, service region (e.g., "westus"), and
+// the name of the file you want to run through the speech recognizer.
+var subscriptionKey = "YourSubscriptionKey";
+var serviceRegion = "YourServiceRegion"; // e.g., "westus"
+var filename = "YourAudioFile.wav"; // 16000 Hz, Mono
+
+// Create the push stream we need for the speech sdk.
+var pushStream = sdk.AudioInputStream.createPushStream();
+
+// Open the file and push it to the push stream.
+fs.createReadStream(filename).on('data', function(arrayBuffer) {
+  pushStream.write(arrayBuffer.buffer);
+}).on('end', function() {
+  pushStream.close();
+});
+
+// We are done with the setup
+console.log("Now recognizing from: " + filename);
+
+// Create the audio-config pointing to our stream and
+// the speech config specifying the language.
+var audioConfig = sdk.AudioConfig.fromStreamInput(pushStream);
+var speechConfig = sdk.SpeechConfig.fromSubscription(subscriptionKey, serviceRegion);
+
+// Setting the recognition language to English.
+speechConfig.speechRecognitionLanguage = "en-US";
+
+// Create the speech recognizer.
+var recognizer = new sdk.SpeechRecognizer(speechConfig, audioConfig);
+
+// Start the recognizer and wait for a result.
 recognizer.recognizeOnceAsync(
   function (result) {
-    alert("Recognition result:" + JSON.stringify(result));
+    console.log(result);
+
     recognizer.close();
+    recognizer = undefined;
   },
   function (err) {
-    alert("An error occurred:" + JSON.stringify(err));
+    console.trace("err - " + err);
+
     recognizer.close();
-  }
-);
+    recognizer = undefined;
+  });
 ``` 
 
-Ознакомьтесь с нашим [пошаговым кратким руководством](/azure/cognitive-services/speech-service/quickstart-js-browser).
+Ознакомьтесь с нашим [пошаговым кратким руководством](/azure/cognitive-services/speech-service/quickstart-js-node).
 
 ## <a name="samples"></a>Примеры
 
-Другие примеры доступны в нашем [репозитории примеров для пакета SDK службы "Речь"](https://aka.ms/csspeech/samples).
+* [Краткое пошаговое руководство по распознаванию речи в Node.js](/azure/cognitive-services/speech-service/quickstart-js-node).
+* [Краткое пошаговое руководство по распознаванию речи в браузере](/azure/cognitive-services/speech-service/quickstart-js-browser).
+* Другие примеры можно найти в нашем [репозитории примеров для пакета SDK службы "Речь"](https://aka.ms/csspeech/samples).
