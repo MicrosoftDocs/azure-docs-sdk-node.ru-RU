@@ -1,27 +1,55 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 8a4bc2ffa87d1fad8fe4c474a1a674e6ff29d270
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 5ba7cec2c5ee5bfbdeba23ae6c4573f2caadc182
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52104549"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55053645"
 items:
 - uid: azure-iot-provisioning-service.EnrollmentGroup
   name: EnrollmentGroup
   fullName: EnrollmentGroup
   children:
+  - azure-iot-provisioning-service.EnrollmentGroup.allocationPolicy
   - azure-iot-provisioning-service.EnrollmentGroup.attestation
   - azure-iot-provisioning-service.EnrollmentGroup.createdDateTimeUtc
+  - azure-iot-provisioning-service.EnrollmentGroup.customAllocationDefinition
   - azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
   - azure-iot-provisioning-service.EnrollmentGroup.etag
   - azure-iot-provisioning-service.EnrollmentGroup.initialTwin
   - azure-iot-provisioning-service.EnrollmentGroup.iotHubHostName
+  - azure-iot-provisioning-service.EnrollmentGroup.iotHubs
   - azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
   - azure-iot-provisioning-service.EnrollmentGroup.provisioningStatus
+  - azure-iot-provisioning-service.EnrollmentGroup.reprovisionPolicy
   langs:
   - typeScript
   type: interface
   summary: Объект групповой регистрации.
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.allocationPolicy
+  name: allocationPolicy
+  fullName: allocationPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Политика распределения этой группы регистрации. Эта политика переопределяет политику распределения на уровне клиента.
+
+    - «хэшированы»: Связанные центры Интернета вещей в равной степени могут быть подготовлены устройства.
+
+    - «geoLatency»:  Устройства подготавливаются в центре Интернета вещей с минимальной задержкой к устройству. Если несколько связанных центров Интернета вещей предоставляет одинаковую наименьшую задержку, служба подготовки хэширует устройства по этим центрам.
+
+    - «static»: Спецификация нужного центра Интернета вещей в списке регистрации имеет приоритет над политикой распределения на уровне службы.
+
+    - «специальный»: Устройства подготавливаются в центре Интернета вещей, в зависимости от собственной настраиваемой логики. Служба подготовки передает сведения об устройстве в логику и логику возвращает требуемый центр Интернета вещей, а также необходимую начальную конфигурацию. Мы рекомендуем использовать функции Azure для размещения логики.
+  optional: true
+  syntax:
+    content: 'allocationPolicy?: AllocationPolicyType'
+    return:
+      type:
+      - azure-iot-provisioning-service.AllocationPolicyType
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.attestation
   name: attestation
@@ -53,6 +81,21 @@ items:
     return:
       type:
       - string
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.customAllocationDefinition
+  name: customAllocationDefinition
+  fullName: customAllocationDefinition
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Определение пользовательского выделения.
+  optional: true
+  syntax:
+    content: 'customAllocationDefinition?: CustomAllocationDefinition'
+    return:
+      type:
+      - azure-iot-provisioning-service.CustomAllocationDefinition
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.enrollmentGroupId
   name: enrollmentGroupId
@@ -113,6 +156,20 @@ items:
       type:
       - string
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.iotHubs
+  name: iotHubs
+  fullName: iotHubs
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Список имен центров Интернета вещей устройства в этот ресурс может быть распределена. Он должен представлять собой подмножество клиента уровня список центров Интернета вещей.
+  syntax:
+    content: 'iotHubs: string[]'
+    return:
+      type:
+      - string[]
+  package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.EnrollmentGroup.lastUpdatedDateTimeUtc
   name: lastUpdatedDateTimeUtc
   fullName: lastUpdatedDateTimeUtc
@@ -141,13 +198,40 @@ items:
       type:
       - azure-iot-provisioning-service.ProvisioningStatus
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.EnrollmentGroup.reprovisionPolicy
+  name: reprovisionPolicy
+  fullName: reprovisionPolicy
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Поведение, если устройство повторно подготовлены к центру Интернета вещей.
+  optional: true
+  syntax:
+    content: 'reprovisionPolicy?: ReprovisionPolicy'
+    return:
+      type:
+      - azure-iot-provisioning-service.ReprovisionPolicy
+  package: azure-iot-provisioning-service
 references:
+- uid: azure-iot-provisioning-service.AllocationPolicyType
+  name: AllocationPolicyType
+  spec.typeScript:
+  - name: AllocationPolicyType
+    fullName: AllocationPolicyType
+    uid: azure-iot-provisioning-service.AllocationPolicyType
 - uid: azure-iot-provisioning-service.AttestationMechanism
   name: AttestationMechanism
   spec.typeScript:
   - name: AttestationMechanism
     fullName: AttestationMechanism
     uid: azure-iot-provisioning-service.AttestationMechanism
+- uid: azure-iot-provisioning-service.CustomAllocationDefinition
+  name: CustomAllocationDefinition
+  spec.typeScript:
+  - name: CustomAllocationDefinition
+    fullName: CustomAllocationDefinition
+    uid: azure-iot-provisioning-service.CustomAllocationDefinition
 - uid: azure-iot-provisioning-service.InitialTwin
   name: InitialTwin
   spec.typeScript:
@@ -160,3 +244,9 @@ references:
   - name: ProvisioningStatus
     fullName: ProvisioningStatus
     uid: azure-iot-provisioning-service.ProvisioningStatus
+- uid: azure-iot-provisioning-service.ReprovisionPolicy
+  name: ReprovisionPolicy
+  spec.typeScript:
+  - name: ReprovisionPolicy
+    fullName: ReprovisionPolicy
+    uid: azure-iot-provisioning-service.ReprovisionPolicy

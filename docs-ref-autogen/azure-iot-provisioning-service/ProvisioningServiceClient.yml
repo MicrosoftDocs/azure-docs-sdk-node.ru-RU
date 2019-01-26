@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fc1c43ecb10b456c40d7dc251e7aea361003efca
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: b226dae42166a1e4a9ec3596f1c1e3efe91ee725
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53683018"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55051855"
 items:
 - uid: azure-iot-provisioning-service.ProvisioningServiceClient
   name: ProvisioningServiceClient
@@ -34,8 +34,12 @@ items:
   - azure-iot-provisioning-service.ProvisioningServiceClient.getDeviceRegistrationState
   - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup_1
   - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroup
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroupAttestationMechanism_1
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroupAttestationMechanism
   - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment_1
   - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollmentAttestationMechanism_1
+  - azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollmentAttestationMechanism
   - azure-iot-provisioning-service.ProvisioningServiceClient.constructor
   - azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation_1
   - azure-iot-provisioning-service.ProvisioningServiceClient.runBulkEnrollmentOperation
@@ -532,6 +536,43 @@ items:
       - HttpResponseCallback<azure-iot-provisioning-service.EnrollmentGroup>
       description: ''
   package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroupAttestationMechanism_1
+  name: getEnrollmentGroupAttestationMechanism(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает механизм аттестации EnrollmentGroup записи.
+  syntax:
+    content: 'function getEnrollmentGroupAttestationMechanism(enrollmentGroupId: string)'
+    parameters:
+    - id: enrollmentGroupId
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<ResultWithHttpResponse<azure-iot-provisioning-service.AttestationMechanism>>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getEnrollmentGroupAttestationMechanism
+  name: getEnrollmentGroupAttestationMechanism(string, HttpResponseCallback<AttestationMechanism>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает механизм аттестации EnrollmentGroup записи.
+  syntax:
+    content: 'function getEnrollmentGroupAttestationMechanism(enrollmentGroupId: string, callback: HttpResponseCallback<AttestationMechanism>)'
+    parameters:
+    - id: enrollmentGroupId
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - HttpResponseCallback<azure-iot-provisioning-service.AttestationMechanism>
+      description: Функция, вызываемая при завершении запроса, либо с ошибкой, либо с объектом AttestationMechanism.
+  package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollment_1
   name: getIndividualEnrollment(string)
   children: []
@@ -568,6 +609,43 @@ items:
       type:
       - HttpResponseCallback<azure-iot-provisioning-service.IndividualEnrollment>
       description: ''
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollmentAttestationMechanism_1
+  name: getIndividualEnrollmentAttestationMechanism(string)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает механизм аттестации IndividualEnrollment записи.
+  syntax:
+    content: 'function getIndividualEnrollmentAttestationMechanism(enrollementId: string)'
+    parameters:
+    - id: enrollementId
+      type:
+      - string
+      description: ''
+    return:
+      type:
+      - Promise<ResultWithHttpResponse<azure-iot-provisioning-service.AttestationMechanism>>
+  package: azure-iot-provisioning-service
+- uid: azure-iot-provisioning-service.ProvisioningServiceClient.getIndividualEnrollmentAttestationMechanism
+  name: getIndividualEnrollmentAttestationMechanism(string, HttpResponseCallback<AttestationMechanism>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Возвращает механизм аттестации IndividualEnrollment записи.
+  syntax:
+    content: 'function getIndividualEnrollmentAttestationMechanism(enrollementId: string, callback: HttpResponseCallback<AttestationMechanism>)'
+    parameters:
+    - id: enrollementId
+      type:
+      - string
+      description: Уникальный идентификатор регистрации.
+    - id: callback
+      type:
+      - HttpResponseCallback<azure-iot-provisioning-service.AttestationMechanism>
+      description: Функция, вызываемая при завершении запроса, либо с ошибкой, либо с объектом AttestationMechanism.
   package: azure-iot-provisioning-service
 - uid: azure-iot-provisioning-service.ProvisioningServiceClient.constructor
   name: ProvisioningServiceClient(TransportConfig, RestApiClient)
@@ -734,6 +812,26 @@ references:
   - name: DeviceRegistrationState
     fullName: DeviceRegistrationState
     uid: azure-iot-provisioning-service.DeviceRegistrationState
+  - name: '>>'
+    fullName: '>>'
+- uid: HttpResponseCallback<azure-iot-provisioning-service.AttestationMechanism>
+  name: AttestationMechanism>
+  spec.typeScript:
+  - name: HttpResponseCallback<
+    fullName: HttpResponseCallback<
+  - name: AttestationMechanism
+    fullName: AttestationMechanism
+    uid: azure-iot-provisioning-service.AttestationMechanism
+  - name: '>'
+    fullName: '>'
+- uid: Promise<ResultWithHttpResponse<azure-iot-provisioning-service.AttestationMechanism>>
+  name: AttestationMechanism>>
+  spec.typeScript:
+  - name: Promise<ResultWithHttpResponse<
+    fullName: Promise<ResultWithHttpResponse<
+  - name: AttestationMechanism
+    fullName: AttestationMechanism
+    uid: azure-iot-provisioning-service.AttestationMechanism
   - name: '>>'
     fullName: '>>'
 - uid: azure-iot-provisioning-service.BulkEnrollmentOperation

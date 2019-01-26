@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: c43c4837ab8b753a732a3cc48105c596904c7baf
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55048584"
+items:
+- uid: azure-arm-batch.ResourceFile
+  name: ResourceFile
+  fullName: ResourceFile
+  children:
+  - azure-arm-batch.ResourceFile.autoStorageContainerName
+  - azure-arm-batch.ResourceFile.blobPrefix
+  - azure-arm-batch.ResourceFile.fileMode
+  - azure-arm-batch.ResourceFile.filePath
+  - azure-arm-batch.ResourceFile.httpUrl
+  - azure-arm-batch.ResourceFile.storageContainerUrl
+  langs:
+  - typeScript
+  type: interface
+  summary: ''
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.autoStorageContainerName
+  name: autoStorageContainerName
+  fullName: autoStorageContainerName
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Свойства autoStorageContainerName, storageContainerUrl и httpUrl являются взаимоисключающими, и должен быть задан один из них.
+  optional: true
+  syntax:
+    content: 'autoStorageContainerName?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.blobPrefix
+  name: blobPrefix
+  fullName: blobPrefix
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Свойство допустимо только в том случае, если используется autoStorageContainerName или storageContainerUrl. Этот префикс можно частичное имя файла или подкаталога. Если префикс не указан, будут загружены все файлы в контейнере.
+  optional: true
+  syntax:
+    content: 'blobPrefix?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.fileMode
+  name: fileMode
+  fullName: fileMode
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Это свойство применяется только к файлам, загружается вычислительных узлов Linux. Она будет игнорироваться, если он указан для resourceFile, который загружается на узел Windows. Если это свойство не указано для узла Linux, значение по умолчанию 0770 применяется к файлу.
+  optional: true
+  syntax:
+    content: 'fileMode?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.filePath
+  name: filePath
+  fullName: filePath
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Если свойство httpUrl указано, путь к файлу является обязательным и описание пути, который будет загружен, включая имя файла. Если свойство autoStorageContainerName или storageContainerUrl указано, filePath является необязательным и — это каталог для загрузки файлов. В случае, когда filePath используется как каталог произвольную структуру каталогов, уже связан с входными данными будут сохранены в полном объеме и добавлены в каталог, указанный путь к файлу. Указанный относительный путь не может разорвать рабочему каталогу задачи (например, с помощью "..").
+  optional: true
+  syntax:
+    content: 'filePath?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.httpUrl
+  name: httpUrl
+  fullName: httpUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Свойства autoStorageContainerName, storageContainerUrl и httpUrl являются взаимоисключающими, и должен быть задан один из них. Если URL-адрес хранилища BLOB-объектов Azure, он должен быть для чтения с помощью анонимного доступа; то есть пакетная служба не видит любые учетные данные при загрузке большого двоичного объекта. Существует два способа получить такой URL-адреса для большого двоичного объекта в службе хранилища Azure: Включение (Подписанный) предоставление разрешений на чтение большого двоичного объекта, или задание ACL для большого двоичного объекта или контейнера, чтобы разрешить общий доступ.'
+  optional: true
+  syntax:
+    content: 'httpUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+- uid: azure-arm-batch.ResourceFile.storageContainerUrl
+  name: storageContainerUrl
+  fullName: storageContainerUrl
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Свойства autoStorageContainerName, storageContainerUrl и httpUrl являются взаимоисключающими, и должен быть задан один из них. Этот URL-адрес должен быть доступным для чтения и listable при помощи анонимного доступа; то есть пакетная служба не видит любые учетные данные при загрузке большого двоичного объекта. Существует два способа получить такой URL-адреса для большого двоичного объекта в службе хранилища Azure: Включение (Подписанный) предоставление разрешений на чтение и создание списков большого двоичного объекта, или задание ACL для большого двоичного объекта или контейнера, чтобы разрешить общий доступ.'
+  optional: true
+  syntax:
+    content: 'storageContainerUrl?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch

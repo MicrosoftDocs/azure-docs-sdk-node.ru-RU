@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 9a07e66b3cd5d1bf179c351ff56f88d5e1e3f899
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: bf4f6ccee09c746c1de9ff86b91aab3b360fb296
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53709019"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55051725"
 items:
 - uid: '@azure/arm-network.ApplicationSecurityGroups'
   name: ApplicationSecurityGroups
@@ -13,6 +13,7 @@ items:
   - '@azure/arm-network.ApplicationSecurityGroups.constructor'
   - '@azure/arm-network.ApplicationSecurityGroups.beginCreateOrUpdate'
   - '@azure/arm-network.ApplicationSecurityGroups.beginDeleteMethod'
+  - '@azure/arm-network.ApplicationSecurityGroups.beginUpdateTags'
   - '@azure/arm-network.ApplicationSecurityGroups.createOrUpdate'
   - '@azure/arm-network.ApplicationSecurityGroups.deleteMethod'
   - '@azure/arm-network.ApplicationSecurityGroups.get'
@@ -30,6 +31,7 @@ items:
   - '@azure/arm-network.ApplicationSecurityGroups.listNext'
   - '@azure/arm-network.ApplicationSecurityGroups.listNext_2'
   - '@azure/arm-network.ApplicationSecurityGroups.listNext_1'
+  - '@azure/arm-network.ApplicationSecurityGroups.updateTags'
   langs:
   - typeScript
   type: class
@@ -100,6 +102,37 @@ items:
       type:
       - string
       description: Имя группы безопасности приложений.
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<LROPoller>
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.ApplicationSecurityGroups.beginUpdateTags'
+  name: beginUpdateTags(string, string, TagsObject, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function beginUpdateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: Имя группы ресурсов.
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: Имя группы безопасности приложений.
+    - id: parameters
+      type:
+      - '@azure/arm-network.TagsObject'
+      description: Параметры для обновления теги группы безопасности приложения.
     - id: options
       type:
       - msRest.RequestOptionsBase
@@ -532,6 +565,37 @@ items:
       type:
       - Promise<Models.ApplicationSecurityGroupsListNextResponse>
   package: '@azure/arm-network'
+- uid: '@azure/arm-network.ApplicationSecurityGroups.updateTags'
+  name: updateTags(string, string, TagsObject, msRest.RequestOptionsBase)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: msRest.RequestOptionsBase)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: Имя группы ресурсов.
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: Имя группы безопасности приложений.
+    - id: parameters
+      type:
+      - '@azure/arm-network.TagsObject'
+      description: Параметры для обновления теги группы безопасности приложения.
+    - id: options
+      type:
+      - msRest.RequestOptionsBase
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<Models.ApplicationSecurityGroupsUpdateTagsResponse>
+  package: '@azure/arm-network'
 references:
 - uid: '@azure/arm-network.NetworkManagementClientContext'
   name: NetworkManagementClientContext
@@ -545,6 +609,12 @@ references:
   - name: ApplicationSecurityGroup
     fullName: ApplicationSecurityGroup
     uid: '@azure/arm-network.ApplicationSecurityGroup'
+- uid: '@azure/arm-network.TagsObject'
+  name: TagsObject
+  spec.typeScript:
+  - name: TagsObject
+    fullName: TagsObject
+    uid: '@azure/arm-network.TagsObject'
 - uid: ServiceCallback<@azure/arm-network.ApplicationSecurityGroup>
   name: ApplicationSecurityGroup>
   spec.typeScript:

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: fc893d55ab7ee561ca20a5259dae69a4a1d57a0a
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: c1545a8aa12ca1efa929c9717e5688ece3cc2dc3
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52051559"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55051471"
 items:
 - uid: azure-arm-network.ApplicationSecurityGroups
   name: ApplicationSecurityGroups
@@ -18,6 +18,10 @@ items:
   - azure-arm-network.ApplicationSecurityGroups.beginDeleteMethod_2
   - azure-arm-network.ApplicationSecurityGroups.beginDeleteMethod_1
   - azure-arm-network.ApplicationSecurityGroups.beginDeleteMethodWithHttpOperationResponse
+  - azure-arm-network.ApplicationSecurityGroups.beginUpdateTags
+  - azure-arm-network.ApplicationSecurityGroups.beginUpdateTags_2
+  - azure-arm-network.ApplicationSecurityGroups.beginUpdateTags_1
+  - azure-arm-network.ApplicationSecurityGroups.beginUpdateTagsWithHttpOperationResponse
   - azure-arm-network.ApplicationSecurityGroups.createOrUpdate
   - azure-arm-network.ApplicationSecurityGroups.createOrUpdate_2
   - azure-arm-network.ApplicationSecurityGroups.createOrUpdate_1
@@ -46,6 +50,10 @@ items:
   - azure-arm-network.ApplicationSecurityGroups.listNext_1
   - azure-arm-network.ApplicationSecurityGroups.listNextWithHttpOperationResponse
   - azure-arm-network.ApplicationSecurityGroups.listWithHttpOperationResponse
+  - azure-arm-network.ApplicationSecurityGroups.updateTags
+  - azure-arm-network.ApplicationSecurityGroups.updateTags_2
+  - azure-arm-network.ApplicationSecurityGroups.updateTags_1
+  - azure-arm-network.ApplicationSecurityGroups.updateTagsWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
@@ -296,6 +304,138 @@ items:
     return:
       type:
       - Promise<HttpOperationResponse<void>>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.beginUpdateTags
+  name: beginUpdateTags(string, string, TagsObject, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function beginUpdateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов.
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: >
+        Имя группы безопасности приложений.
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: >
+        Параметры для обновления теги группы безопасности приложения.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.beginUpdateTags_2
+  name: beginUpdateTags(string, string, TagsObject, Object, ServiceCallback<ApplicationSecurityGroup>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function beginUpdateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options: Object, callback: ServiceCallback<ApplicationSecurityGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.ApplicationSecurityGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.beginUpdateTags_1
+  name: beginUpdateTags(string, string, TagsObject, ServiceCallback<ApplicationSecurityGroup>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function beginUpdateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, callback: ServiceCallback<ApplicationSecurityGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.ApplicationSecurityGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.beginUpdateTagsWithHttpOperationResponse
+  name: beginUpdateTagsWithHttpOperationResponse(string, string, TagsObject, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function beginUpdateTagsWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов.
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: >
+        Имя группы безопасности приложений.
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: >
+        Параметры для обновления теги группы безопасности приложения.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-network.ApplicationSecurityGroup>>
   package: azure-arm-network
 - uid: azure-arm-network.ApplicationSecurityGroups.createOrUpdate
   name: createOrUpdate(string, string, ApplicationSecurityGroup, Object)
@@ -1023,6 +1163,138 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-arm-network.ApplicationSecurityGroupListResult>>
   package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.updateTags
+  name: updateTags(string, string, TagsObject, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов.
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: >
+        Имя группы безопасности приложений.
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: >
+        Параметры для обновления теги группы безопасности приложения.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.updateTags_2
+  name: updateTags(string, string, TagsObject, Object, ServiceCallback<ApplicationSecurityGroup>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options: Object, callback: ServiceCallback<ApplicationSecurityGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.ApplicationSecurityGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.updateTags_1
+  name: updateTags(string, string, TagsObject, ServiceCallback<ApplicationSecurityGroup>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function updateTags(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, callback: ServiceCallback<ApplicationSecurityGroup>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: ''
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-network.ApplicationSecurityGroup>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-network.ApplicationSecurityGroup>
+  package: azure-arm-network
+- uid: azure-arm-network.ApplicationSecurityGroups.updateTagsWithHttpOperationResponse
+  name: updateTagsWithHttpOperationResponse(string, string, TagsObject, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Обновляет теги группы безопасности приложений.
+  syntax:
+    content: 'function updateTagsWithHttpOperationResponse(resourceGroupName: string, applicationSecurityGroupName: string, parameters: TagsObject, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов.
+    - id: applicationSecurityGroupName
+      type:
+      - string
+      description: >
+        Имя группы безопасности приложений.
+    - id: parameters
+      type:
+      - azure-arm-network.TagsObject
+      description: >
+        Параметры для обновления теги группы безопасности приложения.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-network.ApplicationSecurityGroup>>
+  package: azure-arm-network
 references:
 - uid: azure-arm-network.ApplicationSecurityGroup
   name: ApplicationSecurityGroup
@@ -1060,6 +1332,12 @@ references:
     uid: azure-arm-network.ApplicationSecurityGroup
   - name: '>>'
     fullName: '>>'
+- uid: azure-arm-network.TagsObject
+  name: TagsObject
+  spec.typeScript:
+  - name: TagsObject
+    fullName: TagsObject
+    uid: azure-arm-network.TagsObject
 - uid: Promise<azure-arm-network.ApplicationSecurityGroupListResult>
   name: ApplicationSecurityGroupListResult>
   spec.typeScript:

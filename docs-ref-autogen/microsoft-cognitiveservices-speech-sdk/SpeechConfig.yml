@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 4c6e65102cf738ac75210b581e9abb7af69ddf60
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: f1bb66712907cbb0937dcab25ded5ff3389122a7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53665198"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046618"
 items:
 - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
   name: SpeechConfig
@@ -33,9 +33,9 @@ items:
   - typeScript
   type: property
   summary: >-
-    Задает маркер авторизации.
+    GET или задает маркер авторизации.
 
-    Если это значение задано, ключ подписки учитывается.
+    Если токен autorizaton, ключ подписки учитывается.
 
     Пользователь должен убедиться, что предоставленный авторизации маркер является допустимым и не истекшим сроком действия.
   syntax:
@@ -62,7 +62,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: Получает идентификатор конечной точки, настроенные речи модели, которая используется для распознавания речи.
+  summary: Получает или задает идентификатор конечной точки, настроенные речи модели, которая используется для распознавания речи.
   syntax:
     content: 'public endpointId: string'
     return:
@@ -75,7 +75,10 @@ items:
   type: method
   langs:
   - typeScript
-  summary: Создает экземпляр фабрики речи с заданными начальной маркером авторизации и регион.
+  summary: >-
+    Создает экземпляр фабрики речи с заданными начальной маркером авторизации и регион.
+
+    Примечание. Используйте маркер, производный от LanguageUnderstanding ключ подписки, в случае, если вы хотите использовать распознаватель намерений.
   syntax:
     content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
     parameters:
@@ -103,6 +106,8 @@ items:
     Этот метод предназначен только для пользователей, которые используют нестандартные службы конечной точки или параметры.
 
     приоритет имеет параметр языка в uri, и эффективный язык «de-DE».
+
+    Примечание. Используйте ключ подписки LanguageUnderstanding в случае, если вы хотите использовать распознаватель намерений.
   syntax:
     content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
     parameters:
@@ -124,7 +129,10 @@ items:
   type: method
   langs:
   - typeScript
-  summary: Статический экземпляр SpeechConfig, возвращаемых путем передачи регион subscriptionKey и службы.
+  summary: >-
+    Статический экземпляр SpeechConfig, возвращаемых путем передачи регион subscriptionKey и службы.
+
+    Примечание. Используйте ключ подписки LanguageUnderstanding в случае, если вы хотите использовать распознаватель намерений.
   syntax:
     content: 'static function fromSubscription(subscriptionKey: string, region: string)'
     parameters:
@@ -170,7 +178,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: Получает формат выходных данных.
+  summary: Получает или задает формат вывода.
   syntax:
     content: 'public outputFormat: OutputFormat'
     return:
@@ -204,7 +212,7 @@ items:
   langs:
   - typeScript
   type: property
-  summary: Задает язык ввода.
+  summary: Получает или задает язык ввода.
   syntax:
     content: 'public speechRecognitionLanguage: string'
     return:

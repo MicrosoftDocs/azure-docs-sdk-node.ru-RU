@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: f1700ae3044ddda9e86c75d6be276b8acb63a21d
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 6a50a859748c592ea9d5ee8129e3c377116909e0
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52058809"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55048615"
 items:
 - uid: azure-arm-batch.ApplicationOperations
   name: ApplicationOperations
@@ -47,7 +47,7 @@ items:
   - typeScript
   summary: Добавляет приложение в указанную учетную запись пакетной службы.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, options?: Object)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -59,11 +59,11 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
     - id: options
       type:
       - Object
@@ -81,7 +81,7 @@ items:
   - typeScript
   summary: Добавляет приложение в указанную учетную запись пакетной службы.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, options: Object, callback: ServiceCallback<Application>)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, options: Object, callback: ServiceCallback<Application>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -91,7 +91,7 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
@@ -115,7 +115,7 @@ items:
   - typeScript
   summary: Добавляет приложение в указанную учетную запись пакетной службы.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, callback: ServiceCallback<Application>)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, callback: ServiceCallback<Application>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -125,7 +125,7 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
@@ -145,7 +145,7 @@ items:
   - typeScript
   summary: Добавляет приложение в указанную учетную запись пакетной службы.
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, options?: Object)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -157,11 +157,11 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
     - id: options
       type:
       - Object
@@ -179,7 +179,7 @@ items:
   - typeScript
   summary: Удаляет приложение.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, options?: Object)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -191,11 +191,11 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
     - id: options
       type:
       - Object
@@ -213,7 +213,7 @@ items:
   - typeScript
   summary: Удаляет приложение.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, options: Object, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -223,7 +223,7 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
@@ -247,7 +247,7 @@ items:
   - typeScript
   summary: Удаляет приложение.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -257,7 +257,7 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
@@ -277,7 +277,7 @@ items:
   - typeScript
   summary: Удаляет приложение.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, options?: Object)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -289,11 +289,11 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
     - id: options
       type:
       - Object
@@ -311,7 +311,7 @@ items:
   - typeScript
   summary: Получает сведения о указанное приложение.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, options?: Object)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -323,11 +323,11 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
     - id: options
       type:
       - Object
@@ -345,7 +345,7 @@ items:
   - typeScript
   summary: Получает сведения о указанное приложение.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, options: Object, callback: ServiceCallback<Application>)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, options: Object, callback: ServiceCallback<Application>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -355,7 +355,7 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
@@ -379,7 +379,7 @@ items:
   - typeScript
   summary: Получает сведения о указанное приложение.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, callback: ServiceCallback<Application>)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, callback: ServiceCallback<Application>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -389,7 +389,7 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
@@ -409,7 +409,7 @@ items:
   - typeScript
   summary: Получает сведения о указанное приложение.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, options?: Object)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -421,11 +421,11 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
     - id: options
       type:
       - Object
@@ -646,14 +646,14 @@ items:
       - Promise<HttpOperationResponse<azure-arm-batch.ListApplicationsResult>>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationOperations.update
-  name: update(string, string, string, ApplicationUpdateParameters, Object)
+  name: update(string, string, string, Application, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Обновляет параметры для указанного приложения.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, applicationId: string, parameters: ApplicationUpdateParameters, options?: Object)'
+    content: 'function update(resourceGroupName: string, accountName: string, applicationName: string, parameters: Application, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -665,14 +665,14 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
     - id: parameters
       type:
-      - azure-arm-batch.ApplicationUpdateParameters
+      - azure-arm-batch.Application
       description: >
         Параметры для запроса.
     - id: options
@@ -682,17 +682,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.Application>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationOperations.update_2
-  name: update(string, string, string, ApplicationUpdateParameters, Object, ServiceCallback<void>)
+  name: update(string, string, string, Application, Object, ServiceCallback<Application>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Обновляет параметры для указанного приложения.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, applicationId: string, parameters: ApplicationUpdateParameters, options: Object, callback: ServiceCallback<void>)'
+    content: 'function update(resourceGroupName: string, accountName: string, applicationName: string, parameters: Application, options: Object, callback: ServiceCallback<Application>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -702,13 +702,13 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
     - id: parameters
       type:
-      - azure-arm-batch.ApplicationUpdateParameters
+      - azure-arm-batch.Application
       description: ''
     - id: options
       type:
@@ -716,21 +716,21 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-batch.Application>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.Application>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationOperations.update_1
-  name: update(string, string, string, ApplicationUpdateParameters, ServiceCallback<void>)
+  name: update(string, string, string, Application, ServiceCallback<Application>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Обновляет параметры для указанного приложения.
   syntax:
-    content: 'function update(resourceGroupName: string, accountName: string, applicationId: string, parameters: ApplicationUpdateParameters, callback: ServiceCallback<void>)'
+    content: 'function update(resourceGroupName: string, accountName: string, applicationName: string, parameters: Application, callback: ServiceCallback<Application>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -740,31 +740,31 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
     - id: parameters
       type:
-      - azure-arm-batch.ApplicationUpdateParameters
+      - azure-arm-batch.Application
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-batch.Application>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.Application>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationOperations.updateWithHttpOperationResponse
-  name: updateWithHttpOperationResponse(string, string, string, ApplicationUpdateParameters, Object)
+  name: updateWithHttpOperationResponse(string, string, string, Application, Object)
   children: []
   type: method
   langs:
   - typeScript
   summary: Обновляет параметры для указанного приложения.
   syntax:
-    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, parameters: ApplicationUpdateParameters, options?: Object)'
+    content: 'function updateWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, parameters: Application, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -776,14 +776,14 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
     - id: parameters
       type:
-      - azure-arm-batch.ApplicationUpdateParameters
+      - azure-arm-batch.Application
       description: >
         Параметры для запроса.
     - id: options
@@ -793,7 +793,7 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<void>>
+      - Promise<HttpOperationResponse<azure-arm-batch.Application>>
   package: azure-arm-batch
 references:
 - uid: Promise<azure-arm-batch.Application>
@@ -856,9 +856,9 @@ references:
     uid: azure-arm-batch.ListApplicationsResult
   - name: '>>'
     fullName: '>>'
-- uid: azure-arm-batch.ApplicationUpdateParameters
-  name: ApplicationUpdateParameters
+- uid: azure-arm-batch.Application
+  name: Application
   spec.typeScript:
-  - name: ApplicationUpdateParameters
-    fullName: ApplicationUpdateParameters
-    uid: azure-arm-batch.ApplicationUpdateParameters
+  - name: Application
+    fullName: Application
+    uid: azure-arm-batch.Application

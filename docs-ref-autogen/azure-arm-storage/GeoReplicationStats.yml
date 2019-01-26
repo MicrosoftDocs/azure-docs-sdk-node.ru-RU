@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a9e6865351ab5e14c5d0996c49c3c1f865450494
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55062436"
+items:
+- uid: azure-arm-storage.GeoReplicationStats
+  name: GeoReplicationStats
+  fullName: GeoReplicationStats
+  children:
+  - azure-arm-storage.GeoReplicationStats.canFailover
+  - azure-arm-storage.GeoReplicationStats.lastSyncTime
+  - azure-arm-storage.GeoReplicationStats.status
+  langs:
+  - typeScript
+  type: interface
+  summary: Статистические данные, относящиеся к репликации для учетной записи хранения BLOB-объектов, таблицы, очереди и файл службы. Он доступен только при включении географически избыточной репликации для учетной записи хранения.
+  package: azure-arm-storage
+- uid: azure-arm-storage.GeoReplicationStats.canFailover
+  name: canFailover
+  fullName: canFailover
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Логический флаг, указывающий, поддерживается ли отработка отказа учетной записи для учетной записи.
+  optional: true
+  syntax:
+    content: 'canFailover?: boolean'
+    return:
+      type:
+      - boolean
+  package: azure-arm-storage
+- uid: azure-arm-storage.GeoReplicationStats.lastSyncTime
+  name: lastSyncTime
+  fullName: lastSyncTime
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Все первичные операции записи до этой даты и времени в формате UTC значение гарантированно будут доступны для операций чтения. Записанные в основное расположение после этой точки во времени, могут быть недоступны для операций чтения.
+
+    Элемент может быть значение по умолчанию, если значение значение Last Sync Time не доступны, это может произойти, если дополнительный находится в автономном режиме или в начальной загрузки.
+  optional: true
+  syntax:
+    content: 'lastSyncTime?: Date'
+    return:
+      type:
+      - Date
+  package: azure-arm-storage
+- uid: azure-arm-storage.GeoReplicationStats.status
+  name: status
+  fullName: status
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: 'Состояние дополнительного расположения. Возможными значениями являются: - Live: Указывает, что дополнительное расположение активно и работоспособно. -Начальной загрузки: Указывает, что выполняется начальная синхронизация из первичного расположения со вторичным расположением по умолчанию. Обычно это происходит при первом включении репликации. -Недоступен: Указывает, что дополнительное расположение временно недоступна. Ниже перечислены возможные значения. «Live», «загрузки», «Недоступна»'
+  optional: true
+  syntax:
+    content: 'status?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-storage

@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: a9f71af819e984aff15e0a57f968ec78e2dc79d8
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55054745"
+items:
+- uid: azure-arm-batch.NetworkConfiguration
+  name: NetworkConfiguration
+  fullName: NetworkConfiguration
+  children:
+  - azure-arm-batch.NetworkConfiguration.endpointConfiguration
+  - azure-arm-batch.NetworkConfiguration.subnetId
+  langs:
+  - typeScript
+  type: interface
+  summary: Конфигурация сети для пула.
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkConfiguration.endpointConfiguration
+  name: endpointConfiguration
+  fullName: endpointConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: Конфигурация конечных точек пула поддерживается только в пулах со свойством virtualMachineConfiguration.
+  optional: true
+  syntax:
+    content: 'endpointConfiguration?: PoolEndpointConfiguration'
+    return:
+      type:
+      - azure-arm-batch.PoolEndpointConfiguration
+  package: azure-arm-batch
+- uid: azure-arm-batch.NetworkConfiguration.subnetId
+  name: subnetId
+  fullName: subnetId
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    Виртуальная сеть должна находиться в том же регионе и подписке, что учетная запись пакетной службы Azure. Указанная подсеть должна иметь достаточно свободного IP-адресов, чтобы вместить количество узлов в пуле. Если подсеть не имеет достаточно свободного IP-адресов, пул выделит частично вычислительных узлов, и возникнет ошибка изменения размера. Субъекту-службе «MicrosoftAzureBatch» должен быть «участник классических виртуальных машин» роли управления доступом на основе ролей (RBAC) для указанной виртуальной сети. Указанная подсеть должна разрешать подключения из пакетной службы Azure, чтобы можно было назначать задачи на вычислительных узлах.
+
+    Это можно проверить путем проверки, если указанная виртуальная сеть содержит все связанные группы (безопасности). Если взаимодействие вычислительными узлами в указанной подсети отклонен группой безопасности, пакетная служба установит состояние вычислительных узлов в непригодном для использования. Для пулов, созданных с помощью virtualMachineConfiguration пакета учетная запись должна иметь poolAllocationMode userSubscription, чтобы использовать виртуальную сеть. Если у виртуальной сети есть связанные группы безопасности сети (NSG), необходимо включить несколько зарезервированных системных портов для входящего трафика. Для пулов, созданных с помощью конфигурации виртуальной машины, включите порты 29876 и 29877, а также порт 22 для Linux и порт 3389 для Windows. Для пулов, созданных с помощью конфигурации облачной службы, включите порты 10100, 20100 и 30100. Также включите исходящие подключения к службе хранилища Azure через порт 443. Дополнительные сведения см.: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+  optional: true
+  syntax:
+    content: 'subnetId?: string'
+    return:
+      type:
+      - string
+  package: azure-arm-batch
+references:
+- uid: azure-arm-batch.PoolEndpointConfiguration
+  name: PoolEndpointConfiguration
+  spec.typeScript:
+  - name: PoolEndpointConfiguration
+    fullName: PoolEndpointConfiguration
+    uid: azure-arm-batch.PoolEndpointConfiguration
