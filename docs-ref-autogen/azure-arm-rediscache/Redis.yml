@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 21ebded70294e5aae8c0148a0bb5c56d5af79baf
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: a36b6a633b8c671867c0c8e9b0094483a63e5545
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52128729"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55058405"
 items:
 - uid: azure-arm-rediscache.Redis
   name: Redis
@@ -26,6 +26,10 @@ items:
   - azure-arm-rediscache.Redis.beginImportData_2
   - azure-arm-rediscache.Redis.beginImportData_1
   - azure-arm-rediscache.Redis.beginImportDataWithHttpOperationResponse
+  - azure-arm-rediscache.Redis.checkNameAvailability
+  - azure-arm-rediscache.Redis.checkNameAvailability_2
+  - azure-arm-rediscache.Redis.checkNameAvailability_1
+  - azure-arm-rediscache.Redis.checkNameAvailabilityWithHttpOperationResponse
   - azure-arm-rediscache.Redis.create
   - azure-arm-rediscache.Redis.create_2
   - azure-arm-rediscache.Redis.create_1
@@ -69,6 +73,10 @@ items:
   - azure-arm-rediscache.Redis.listNext_2
   - azure-arm-rediscache.Redis.listNext_1
   - azure-arm-rediscache.Redis.listNextWithHttpOperationResponse
+  - azure-arm-rediscache.Redis.listUpgradeNotifications
+  - azure-arm-rediscache.Redis.listUpgradeNotifications_2
+  - azure-arm-rediscache.Redis.listUpgradeNotifications_1
+  - azure-arm-rediscache.Redis.listUpgradeNotificationsWithHttpOperationResponse
   - azure-arm-rediscache.Redis.listWithHttpOperationResponse
   - azure-arm-rediscache.Redis.regenerateKey
   - azure-arm-rediscache.Redis.regenerateKey_2
@@ -89,7 +97,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-101">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-101">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-101">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-101">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function beginCreate(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options?: Object)'
     parameters:
@@ -97,17 +105,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-102">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-102">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-102">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-102">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-103">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-103">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-103">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-103">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisCreateParameters
       description: >
-        <span data-ttu-id="130b2-104">Параметры для операции создания Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-104">Parameters supplied to the Create Redis operation.</span></span>
+        <span data-ttu-id="f411b-104">Параметры для операции создания Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-104">Parameters supplied to the Create Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -123,7 +131,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-105">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-105">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-105">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-105">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function beginCreate(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options: Object, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -157,7 +165,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-106">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-106">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-106">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-106">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function beginCreate(resourceGroupName: string, name: string, parameters: RedisCreateParameters, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -187,7 +195,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-107">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-107">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-107">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-107">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function beginCreateWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options?: Object)'
     parameters:
@@ -195,17 +203,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-108">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-108">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-108">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-108">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-109">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-109">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-109">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-109">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisCreateParameters
       description: >
-        <span data-ttu-id="130b2-110">Параметры для операции создания Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-110">Parameters supplied to the Create Redis operation.</span></span>
+        <span data-ttu-id="f411b-110">Параметры для операции создания Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-110">Parameters supplied to the Create Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -221,7 +229,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-111">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-111">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-111">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-111">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -229,12 +237,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-112">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-112">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-112">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-112">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-113">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-113">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-113">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-113">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -250,7 +258,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-114">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-114">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-114">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-114">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -280,7 +288,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-115">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-115">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-115">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-115">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function beginDeleteMethod(resourceGroupName: string, name: string, callback: ServiceCallback<void>)'
     parameters:
@@ -306,7 +314,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-116">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-116">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-116">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-116">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function beginDeleteMethodWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -314,12 +322,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-117">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-117">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-117">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-117">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-118">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-118">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-118">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-118">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -335,7 +343,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-119">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="130b2-119">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="f411b-119">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f411b-119">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function beginExportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options?: Object)'
     parameters:
@@ -343,17 +351,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-120">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-120">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-120">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-120">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-121">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-121">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-121">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-121">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ExportRDBParameters
       description: >
-        <span data-ttu-id="130b2-122">Параметры для операции экспорта Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-122">Parameters for Redis export operation.</span></span>
+        <span data-ttu-id="f411b-122">Параметры для операции экспорта Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-122">Parameters for Redis export operation.</span></span>
     - id: options
       type:
       - Object
@@ -369,7 +377,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-123">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="130b2-123">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="f411b-123">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f411b-123">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function beginExportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -403,7 +411,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-124">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="130b2-124">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="f411b-124">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f411b-124">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function beginExportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, callback: ServiceCallback<void>)'
     parameters:
@@ -433,7 +441,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-125">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="130b2-125">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="f411b-125">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f411b-125">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function beginExportDataWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options?: Object)'
     parameters:
@@ -441,17 +449,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-126">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-126">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-126">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-126">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-127">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-127">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-127">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-127">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ExportRDBParameters
       description: >
-        <span data-ttu-id="130b2-128">Параметры для операции экспорта Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-128">Parameters for Redis export operation.</span></span>
+        <span data-ttu-id="f411b-128">Параметры для операции экспорта Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-128">Parameters for Redis export operation.</span></span>
     - id: options
       type:
       - Object
@@ -467,7 +475,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-129">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-129">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-129">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-129">Import data into Redis cache.</span></span>
   syntax:
     content: 'function beginImportData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options?: Object)'
     parameters:
@@ -475,17 +483,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-130">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-130">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-130">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-130">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-131">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-131">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-131">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-131">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ImportRDBParameters
       description: >
-        <span data-ttu-id="130b2-132">Параметры для операции импорта Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-132">Parameters for Redis import operation.</span></span>
+        <span data-ttu-id="f411b-132">Параметры для операции импорта Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-132">Parameters for Redis import operation.</span></span>
     - id: options
       type:
       - Object
@@ -501,7 +509,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-133">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-133">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-133">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-133">Import data into Redis cache.</span></span>
   syntax:
     content: 'function beginImportData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -535,7 +543,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-134">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-134">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-134">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-134">Import data into Redis cache.</span></span>
   syntax:
     content: 'function beginImportData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, callback: ServiceCallback<void>)'
     parameters:
@@ -565,7 +573,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-135">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-135">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-135">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-135">Import data into Redis cache.</span></span>
   syntax:
     content: 'function beginImportDataWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options?: Object)'
     parameters:
@@ -573,17 +581,113 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-136">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-136">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-136">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-136">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-137">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-137">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-137">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-137">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ImportRDBParameters
       description: >
-        <span data-ttu-id="130b2-138">Параметры для операции импорта Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-138">Parameters for Redis import operation.</span></span>
+        <span data-ttu-id="f411b-138">Параметры для операции импорта Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-138">Parameters for Redis import operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<void>>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.checkNameAvailability
+  name: checkNameAvailability(CheckNameAvailabilityParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f411b-139">Проверяет, что имя кэша redis является допустимым и уже не используется.</span><span class="sxs-lookup"><span data-stu-id="f411b-139">Checks that the redis cache name is valid and is not already in use.</span></span>
+  syntax:
+    content: 'function checkNameAvailability(parameters: CheckNameAvailabilityParameters, options?: Object)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-rediscache.CheckNameAvailabilityParameters
+      description: >
+        <span data-ttu-id="f411b-140">Параметры для операции CheckNameAvailability Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-140">Parameters supplied to the CheckNameAvailability Redis operation.</span></span> <span data-ttu-id="f411b-141">Единственный поддерживаемый тип ресурса — «Microsoft.Cache/redis.»</span><span class="sxs-lookup"><span data-stu-id="f411b-141">The only supported resource type is 'Microsoft.Cache/redis'</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.checkNameAvailability_2
+  name: checkNameAvailability(CheckNameAvailabilityParameters, Object, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f411b-142">Проверяет, что имя кэша redis является допустимым и уже не используется.</span><span class="sxs-lookup"><span data-stu-id="f411b-142">Checks that the redis cache name is valid and is not already in use.</span></span>
+  syntax:
+    content: 'function checkNameAvailability(parameters: CheckNameAvailabilityParameters, options: Object, callback: ServiceCallback<void>)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-rediscache.CheckNameAvailabilityParameters
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.checkNameAvailability_1
+  name: checkNameAvailability(CheckNameAvailabilityParameters, ServiceCallback<void>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f411b-143">Проверяет, что имя кэша redis является допустимым и уже не используется.</span><span class="sxs-lookup"><span data-stu-id="f411b-143">Checks that the redis cache name is valid and is not already in use.</span></span>
+  syntax:
+    content: 'function checkNameAvailability(parameters: CheckNameAvailabilityParameters, callback: ServiceCallback<void>)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-rediscache.CheckNameAvailabilityParameters
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<void>
+      description: ''
+    return:
+      type:
+      - Promise<void>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.checkNameAvailabilityWithHttpOperationResponse
+  name: checkNameAvailabilityWithHttpOperationResponse(CheckNameAvailabilityParameters, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f411b-144">Проверяет, что имя кэша redis является допустимым и уже не используется.</span><span class="sxs-lookup"><span data-stu-id="f411b-144">Checks that the redis cache name is valid and is not already in use.</span></span>
+  syntax:
+    content: 'function checkNameAvailabilityWithHttpOperationResponse(parameters: CheckNameAvailabilityParameters, options?: Object)'
+    parameters:
+    - id: parameters
+      type:
+      - azure-arm-rediscache.CheckNameAvailabilityParameters
+      description: >
+        <span data-ttu-id="f411b-145">Параметры для операции CheckNameAvailability Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-145">Parameters supplied to the CheckNameAvailability Redis operation.</span></span> <span data-ttu-id="f411b-146">Единственный поддерживаемый тип ресурса — «Microsoft.Cache/redis.»</span><span class="sxs-lookup"><span data-stu-id="f411b-146">The only supported resource type is 'Microsoft.Cache/redis'</span></span>
     - id: options
       type:
       - Object
@@ -599,7 +703,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-139">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-139">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-147">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-147">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function create(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options?: Object)'
     parameters:
@@ -607,17 +711,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-140">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-140">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-148">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-148">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-141">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-141">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-149">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-149">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisCreateParameters
       description: >
-        <span data-ttu-id="130b2-142">Параметры для операции создания Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-142">Parameters supplied to the Create Redis operation.</span></span>
+        <span data-ttu-id="f411b-150">Параметры для операции создания Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-150">Parameters supplied to the Create Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -633,7 +737,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-143">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-143">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-151">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-151">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function create(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options: Object, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -667,7 +771,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-144">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-144">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-152">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-152">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function create(resourceGroupName: string, name: string, parameters: RedisCreateParameters, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -697,7 +801,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-145">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-145">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-153">Создать или заменить (перезаписать и повторного создания, потенциальных простоев) существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-153">Create or replace (overwrite/recreate, with potential downtime) an existing Redis cache.</span></span>
   syntax:
     content: 'function createWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: RedisCreateParameters, options?: Object)'
     parameters:
@@ -705,17 +809,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-146">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-146">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-154">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-154">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-147">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-147">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-155">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-155">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisCreateParameters
       description: >
-        <span data-ttu-id="130b2-148">Параметры для операции создания Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-148">Parameters supplied to the Create Redis operation.</span></span>
+        <span data-ttu-id="f411b-156">Параметры для операции создания Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-156">Parameters supplied to the Create Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -731,7 +835,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-149">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-149">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-157">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-157">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -739,12 +843,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-150">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-150">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-158">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-158">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-151">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-151">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-159">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-159">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -760,7 +864,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-152">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-152">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-160">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-160">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -790,7 +894,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-153">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-153">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-161">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-161">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function deleteMethod(resourceGroupName: string, name: string, callback: ServiceCallback<void>)'
     parameters:
@@ -816,7 +920,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-154">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-154">Deletes a Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-162">Удаление кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-162">Deletes a Redis cache.</span></span>
   syntax:
     content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -824,12 +928,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-155">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-155">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-163">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-163">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-156">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-156">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-164">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-164">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -845,7 +949,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-157">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="130b2-157">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="f411b-165">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f411b-165">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function exportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options?: Object)'
     parameters:
@@ -853,17 +957,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-158">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-158">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-166">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-166">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-159">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-159">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-167">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-167">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ExportRDBParameters
       description: >
-        <span data-ttu-id="130b2-160">Параметры для операции экспорта Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-160">Parameters for Redis export operation.</span></span>
+        <span data-ttu-id="f411b-168">Параметры для операции экспорта Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-168">Parameters for Redis export operation.</span></span>
     - id: options
       type:
       - Object
@@ -879,7 +983,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-161">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="130b2-161">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="f411b-169">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f411b-169">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function exportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -913,7 +1017,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-162">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="130b2-162">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="f411b-170">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f411b-170">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function exportData(resourceGroupName: string, name: string, parameters: ExportRDBParameters, callback: ServiceCallback<void>)'
     parameters:
@@ -943,7 +1047,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-163">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="130b2-163">Export data from the redis cache to blobs in a container.</span></span>
+  summary: <span data-ttu-id="f411b-171">Экспорт данных из кэша redis в большие двоичные объекты в контейнере.</span><span class="sxs-lookup"><span data-stu-id="f411b-171">Export data from the redis cache to blobs in a container.</span></span>
   syntax:
     content: 'function exportDataWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: ExportRDBParameters, options?: Object)'
     parameters:
@@ -951,17 +1055,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-164">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-164">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-172">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-172">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-165">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-165">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-173">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-173">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ExportRDBParameters
       description: >
-        <span data-ttu-id="130b2-166">Параметры для операции экспорта Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-166">Parameters for Redis export operation.</span></span>
+        <span data-ttu-id="f411b-174">Параметры для операции экспорта Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-174">Parameters for Redis export operation.</span></span>
     - id: options
       type:
       - Object
@@ -977,7 +1081,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-167">Перезагрузите указанным узлам Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-167">Reboot specified Redis node(s).</span></span> <span data-ttu-id="130b2-168">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-168">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="130b2-169">Возможна потеря данных.</span><span class="sxs-lookup"><span data-stu-id="130b2-169">There can be potential data loss.</span></span>
+  summary: <span data-ttu-id="f411b-175">Перезагрузите указанным узлам Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-175">Reboot specified Redis node(s).</span></span> <span data-ttu-id="f411b-176">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-176">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="f411b-177">Возможна потеря данных.</span><span class="sxs-lookup"><span data-stu-id="f411b-177">There can be potential data loss.</span></span>
   syntax:
     content: 'function forceReboot(resourceGroupName: string, name: string, parameters: RedisRebootParameters, options?: Object)'
     parameters:
@@ -985,17 +1089,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-170">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-170">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-178">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-178">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-171">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-171">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-179">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-179">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisRebootParameters
       description: >
-        <span data-ttu-id="130b2-172">Указывает, что Redis узлы для перезагрузки.</span><span class="sxs-lookup"><span data-stu-id="130b2-172">Specifies which Redis node(s) to reboot.</span></span>
+        <span data-ttu-id="f411b-180">Указывает, что Redis узлы для перезагрузки.</span><span class="sxs-lookup"><span data-stu-id="f411b-180">Specifies which Redis node(s) to reboot.</span></span>
     - id: options
       type:
       - Object
@@ -1011,7 +1115,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-173">Перезагрузите указанным узлам Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-173">Reboot specified Redis node(s).</span></span> <span data-ttu-id="130b2-174">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-174">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="130b2-175">Возможна потеря данных.</span><span class="sxs-lookup"><span data-stu-id="130b2-175">There can be potential data loss.</span></span>
+  summary: <span data-ttu-id="f411b-181">Перезагрузите указанным узлам Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-181">Reboot specified Redis node(s).</span></span> <span data-ttu-id="f411b-182">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-182">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="f411b-183">Возможна потеря данных.</span><span class="sxs-lookup"><span data-stu-id="f411b-183">There can be potential data loss.</span></span>
   syntax:
     content: 'function forceReboot(resourceGroupName: string, name: string, parameters: RedisRebootParameters, options: Object, callback: ServiceCallback<RedisForceRebootResponse>)'
     parameters:
@@ -1045,7 +1149,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-176">Перезагрузите указанным узлам Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-176">Reboot specified Redis node(s).</span></span> <span data-ttu-id="130b2-177">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-177">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="130b2-178">Возможна потеря данных.</span><span class="sxs-lookup"><span data-stu-id="130b2-178">There can be potential data loss.</span></span>
+  summary: <span data-ttu-id="f411b-184">Перезагрузите указанным узлам Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-184">Reboot specified Redis node(s).</span></span> <span data-ttu-id="f411b-185">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-185">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="f411b-186">Возможна потеря данных.</span><span class="sxs-lookup"><span data-stu-id="f411b-186">There can be potential data loss.</span></span>
   syntax:
     content: 'function forceReboot(resourceGroupName: string, name: string, parameters: RedisRebootParameters, callback: ServiceCallback<RedisForceRebootResponse>)'
     parameters:
@@ -1075,7 +1179,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-179">Перезагрузите указанным узлам Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-179">Reboot specified Redis node(s).</span></span> <span data-ttu-id="130b2-180">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-180">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="130b2-181">Возможна потеря данных.</span><span class="sxs-lookup"><span data-stu-id="130b2-181">There can be potential data loss.</span></span>
+  summary: <span data-ttu-id="f411b-187">Перезагрузите указанным узлам Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-187">Reboot specified Redis node(s).</span></span> <span data-ttu-id="f411b-188">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-188">This operation requires write permission to the cache resource.</span></span> <span data-ttu-id="f411b-189">Возможна потеря данных.</span><span class="sxs-lookup"><span data-stu-id="f411b-189">There can be potential data loss.</span></span>
   syntax:
     content: 'function forceRebootWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: RedisRebootParameters, options?: Object)'
     parameters:
@@ -1083,17 +1187,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-182">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-182">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-190">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-190">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-183">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-183">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-191">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-191">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisRebootParameters
       description: >
-        <span data-ttu-id="130b2-184">Указывает, что Redis узлы для перезагрузки.</span><span class="sxs-lookup"><span data-stu-id="130b2-184">Specifies which Redis node(s) to reboot.</span></span>
+        <span data-ttu-id="f411b-192">Указывает, что Redis узлы для перезагрузки.</span><span class="sxs-lookup"><span data-stu-id="f411b-192">Specifies which Redis node(s) to reboot.</span></span>
     - id: options
       type:
       - Object
@@ -1109,7 +1213,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-185">Возвращает кэш Redis (описание ресурса).</span><span class="sxs-lookup"><span data-stu-id="130b2-185">Gets a Redis cache (resource description).</span></span>
+  summary: <span data-ttu-id="f411b-193">Возвращает кэш Redis (описание ресурса).</span><span class="sxs-lookup"><span data-stu-id="f411b-193">Gets a Redis cache (resource description).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -1117,12 +1221,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-186">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-186">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-194">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-194">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-187">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-187">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-195">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-195">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -1138,7 +1242,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-188">Возвращает кэш Redis (описание ресурса).</span><span class="sxs-lookup"><span data-stu-id="130b2-188">Gets a Redis cache (resource description).</span></span>
+  summary: <span data-ttu-id="f411b-196">Возвращает кэш Redis (описание ресурса).</span><span class="sxs-lookup"><span data-stu-id="f411b-196">Gets a Redis cache (resource description).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -1168,7 +1272,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-189">Возвращает кэш Redis (описание ресурса).</span><span class="sxs-lookup"><span data-stu-id="130b2-189">Gets a Redis cache (resource description).</span></span>
+  summary: <span data-ttu-id="f411b-197">Возвращает кэш Redis (описание ресурса).</span><span class="sxs-lookup"><span data-stu-id="f411b-197">Gets a Redis cache (resource description).</span></span>
   syntax:
     content: 'function get(resourceGroupName: string, name: string, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -1194,7 +1298,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-190">Возвращает кэш Redis (описание ресурса).</span><span class="sxs-lookup"><span data-stu-id="130b2-190">Gets a Redis cache (resource description).</span></span>
+  summary: <span data-ttu-id="f411b-198">Возвращает кэш Redis (описание ресурса).</span><span class="sxs-lookup"><span data-stu-id="f411b-198">Gets a Redis cache (resource description).</span></span>
   syntax:
     content: 'function getWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -1202,12 +1306,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-191">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-191">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-199">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-199">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-192">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-192">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-200">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-200">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -1223,7 +1327,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-193">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-193">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-201">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-201">Import data into Redis cache.</span></span>
   syntax:
     content: 'function importData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options?: Object)'
     parameters:
@@ -1231,17 +1335,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-194">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-194">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-202">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-202">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-195">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-195">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-203">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-203">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ImportRDBParameters
       description: >
-        <span data-ttu-id="130b2-196">Параметры для операции импорта Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-196">Parameters for Redis import operation.</span></span>
+        <span data-ttu-id="f411b-204">Параметры для операции импорта Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-204">Parameters for Redis import operation.</span></span>
     - id: options
       type:
       - Object
@@ -1257,7 +1361,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-197">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-197">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-205">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-205">Import data into Redis cache.</span></span>
   syntax:
     content: 'function importData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options: Object, callback: ServiceCallback<void>)'
     parameters:
@@ -1291,7 +1395,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-198">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-198">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-206">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-206">Import data into Redis cache.</span></span>
   syntax:
     content: 'function importData(resourceGroupName: string, name: string, parameters: ImportRDBParameters, callback: ServiceCallback<void>)'
     parameters:
@@ -1321,7 +1425,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-199">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-199">Import data into Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-207">Импорт данных в кэш Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-207">Import data into Redis cache.</span></span>
   syntax:
     content: 'function importDataWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: ImportRDBParameters, options?: Object)'
     parameters:
@@ -1329,17 +1433,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-200">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-200">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-208">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-208">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-201">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-201">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-209">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-209">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.ImportRDBParameters
       description: >
-        <span data-ttu-id="130b2-202">Параметры для операции импорта Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-202">Parameters for Redis import operation.</span></span>
+        <span data-ttu-id="f411b-210">Параметры для операции импорта Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-210">Parameters for Redis import operation.</span></span>
     - id: options
       type:
       - Object
@@ -1355,7 +1459,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-203">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="130b2-203">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="f411b-211">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="f411b-211">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function list(options?: Object)'
     parameters:
@@ -1374,7 +1478,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-204">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="130b2-204">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="f411b-212">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="f411b-212">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function list(options: Object, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1396,7 +1500,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-205">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="130b2-205">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="f411b-213">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="f411b-213">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function list(callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1414,7 +1518,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-206">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-206">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="f411b-214">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-214">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroup(resourceGroupName: string, options?: Object)'
     parameters:
@@ -1422,7 +1526,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-207">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-207">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-215">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-215">The name of the resource group.</span></span>
     - id: options
       type:
       - Object
@@ -1438,7 +1542,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-208">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-208">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="f411b-216">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-216">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroup(resourceGroupName: string, options: Object, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1464,7 +1568,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-209">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-209">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="f411b-217">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-217">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroup(resourceGroupName: string, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1486,7 +1590,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-210">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-210">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="f411b-218">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-218">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupNext(nextPageLink: string, options?: Object)'
     parameters:
@@ -1494,7 +1598,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-211">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="130b2-211">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="f411b-219">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="f411b-219">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1510,7 +1614,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-212">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-212">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="f411b-220">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-220">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupNext(nextPageLink: string, options: Object, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1536,7 +1640,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-213">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-213">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="f411b-221">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-221">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupNext(nextPageLink: string, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1558,7 +1662,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-214">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-214">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="f411b-222">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-222">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
@@ -1566,7 +1670,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-215">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="130b2-215">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="f411b-223">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="f411b-223">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1582,7 +1686,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-216">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-216">Lists all Redis caches in a resource group.</span></span>
+  summary: <span data-ttu-id="f411b-224">Список всех кэшей Redis в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-224">Lists all Redis caches in a resource group.</span></span>
   syntax:
     content: 'function listByResourceGroupWithHttpOperationResponse(resourceGroupName: string, options?: Object)'
     parameters:
@@ -1590,7 +1694,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-217">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-217">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-225">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-225">The name of the resource group.</span></span>
     - id: options
       type:
       - Object
@@ -1606,7 +1710,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-218">Получить ключи доступа кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-218">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="130b2-219">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-219">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="f411b-226">Получить ключи доступа кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-226">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="f411b-227">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-227">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function listKeys(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -1614,12 +1718,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-220">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-220">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-228">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-228">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-221">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-221">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-229">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-229">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -1635,7 +1739,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-222">Получить ключи доступа кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-222">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="130b2-223">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-223">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="f411b-230">Получить ключи доступа кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-230">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="f411b-231">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-231">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function listKeys(resourceGroupName: string, name: string, options: Object, callback: ServiceCallback<RedisAccessKeys>)'
     parameters:
@@ -1665,7 +1769,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-224">Получить ключи доступа кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-224">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="130b2-225">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-225">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="f411b-232">Получить ключи доступа кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-232">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="f411b-233">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-233">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function listKeys(resourceGroupName: string, name: string, callback: ServiceCallback<RedisAccessKeys>)'
     parameters:
@@ -1691,7 +1795,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-226">Получить ключи доступа кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-226">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="130b2-227">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-227">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="f411b-234">Получить ключи доступа кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-234">Retrieve a Redis cache's access keys.</span></span> <span data-ttu-id="f411b-235">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-235">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function listKeysWithHttpOperationResponse(resourceGroupName: string, name: string, options?: Object)'
     parameters:
@@ -1699,12 +1803,12 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-228">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-228">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-236">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-236">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-229">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-229">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-237">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-237">The name of the Redis cache.</span></span>
     - id: options
       type:
       - Object
@@ -1720,7 +1824,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-230">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="130b2-230">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="f411b-238">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="f411b-238">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, options?: Object)'
     parameters:
@@ -1728,7 +1832,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-231">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="130b2-231">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="f411b-239">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="f411b-239">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1744,7 +1848,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-232">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="130b2-232">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="f411b-240">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="f411b-240">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1770,7 +1874,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-233">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="130b2-233">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="f411b-241">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="f411b-241">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listNext(nextPageLink: string, callback: ServiceCallback<RedisListResult>)'
     parameters:
@@ -1792,7 +1896,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-234">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="130b2-234">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="f411b-242">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="f411b-242">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
     parameters:
@@ -1800,7 +1904,7 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-235">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="130b2-235">The NextLink from the previous successful call to List operation.</span></span>
+        <span data-ttu-id="f411b-243">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="f411b-243">The NextLink from the previous successful call to List operation.</span></span>
     - id: options
       type:
       - Object
@@ -1810,13 +1914,145 @@ items:
       type:
       - Promise<HttpOperationResponse<azure-arm-rediscache.RedisListResult>>
   package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.listUpgradeNotifications
+  name: listUpgradeNotifications(string, string, number, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f411b-244">Получает все обновления уведомления для кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-244">Gets any upgrade notifications for a Redis cache.</span></span>
+  syntax:
+    content: 'function listUpgradeNotifications(resourceGroupName: string, name: string, history: number, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f411b-245">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-245">The name of the resource group.</span></span>
+    - id: name
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f411b-246">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-246">The name of the Redis cache.</span></span>
+    - id: history
+      type:
+      - number
+      description: >
+        <span data-ttu-id="f411b-247">сколько времени в минутах в прошлом искать обновления уведомления</span><span class="sxs-lookup"><span data-stu-id="f411b-247">how many minutes in past to look for upgrade notifications</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-rediscache.NotificationListResponse>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.listUpgradeNotifications_2
+  name: listUpgradeNotifications(string, string, number, Object, ServiceCallback<NotificationListResponse>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f411b-248">Получает все обновления уведомления для кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-248">Gets any upgrade notifications for a Redis cache.</span></span>
+  syntax:
+    content: 'function listUpgradeNotifications(resourceGroupName: string, name: string, history: number, options: Object, callback: ServiceCallback<NotificationListResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: history
+      type:
+      - number
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-rediscache.NotificationListResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-rediscache.NotificationListResponse>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.listUpgradeNotifications_1
+  name: listUpgradeNotifications(string, string, number, ServiceCallback<NotificationListResponse>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f411b-249">Получает все обновления уведомления для кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-249">Gets any upgrade notifications for a Redis cache.</span></span>
+  syntax:
+    content: 'function listUpgradeNotifications(resourceGroupName: string, name: string, history: number, callback: ServiceCallback<NotificationListResponse>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: name
+      type:
+      - string
+      description: ''
+    - id: history
+      type:
+      - number
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-rediscache.NotificationListResponse>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-rediscache.NotificationListResponse>
+  package: azure-arm-rediscache
+- uid: azure-arm-rediscache.Redis.listUpgradeNotificationsWithHttpOperationResponse
+  name: listUpgradeNotificationsWithHttpOperationResponse(string, string, number, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="f411b-250">Получает все обновления уведомления для кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-250">Gets any upgrade notifications for a Redis cache.</span></span>
+  syntax:
+    content: 'function listUpgradeNotificationsWithHttpOperationResponse(resourceGroupName: string, name: string, history: number, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f411b-251">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-251">The name of the resource group.</span></span>
+    - id: name
+      type:
+      - string
+      description: >
+        <span data-ttu-id="f411b-252">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-252">The name of the Redis cache.</span></span>
+    - id: history
+      type:
+      - number
+      description: >
+        <span data-ttu-id="f411b-253">сколько времени в минутах в прошлом искать обновления уведомления</span><span class="sxs-lookup"><span data-stu-id="f411b-253">how many minutes in past to look for upgrade notifications</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-rediscache.NotificationListResponse>>
+  package: azure-arm-rediscache
 - uid: azure-arm-rediscache.Redis.listWithHttpOperationResponse
   name: listWithHttpOperationResponse(Object)
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-236">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="130b2-236">Gets all Redis caches in the specified subscription.</span></span>
+  summary: <span data-ttu-id="f411b-254">Возвращает всех кэшей Redis в указанной подписке.</span><span class="sxs-lookup"><span data-stu-id="f411b-254">Gets all Redis caches in the specified subscription.</span></span>
   syntax:
     content: 'function listWithHttpOperationResponse(options?: Object)'
     parameters:
@@ -1835,7 +2071,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-237">Повторное создание ключей доступа к кэшу Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-237">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="130b2-238">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-238">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="f411b-255">Повторное создание ключей доступа к кэшу Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-255">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="f411b-256">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-256">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function regenerateKey(resourceGroupName: string, name: string, keyType: string, options?: Object)'
     parameters:
@@ -1843,17 +2079,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-239">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-239">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-257">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-257">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-240">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-240">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-258">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-258">The name of the Redis cache.</span></span>
     - id: keyType
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-241">Повторно создать ключ доступа Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-241">The Redis access key to regenerate.</span></span> <span data-ttu-id="130b2-242">Ниже перечислены возможные значения. «Primary», «Получатель»</span><span class="sxs-lookup"><span data-stu-id="130b2-242">Possible values include: 'Primary', 'Secondary'</span></span>
+        <span data-ttu-id="f411b-259">Повторно создать ключ доступа Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-259">The Redis access key to regenerate.</span></span> <span data-ttu-id="f411b-260">Ниже перечислены возможные значения. «Primary», «Получатель»</span><span class="sxs-lookup"><span data-stu-id="f411b-260">Possible values include: 'Primary', 'Secondary'</span></span>
     - id: options
       type:
       - Object
@@ -1869,7 +2105,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-243">Повторное создание ключей доступа к кэшу Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-243">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="130b2-244">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-244">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="f411b-261">Повторное создание ключей доступа к кэшу Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-261">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="f411b-262">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-262">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function regenerateKey(resourceGroupName: string, name: string, keyType: string, options: Object, callback: ServiceCallback<RedisAccessKeys>)'
     parameters:
@@ -1903,7 +2139,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-245">Повторное создание ключей доступа к кэшу Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-245">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="130b2-246">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-246">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="f411b-263">Повторное создание ключей доступа к кэшу Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-263">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="f411b-264">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-264">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function regenerateKey(resourceGroupName: string, name: string, keyType: string, callback: ServiceCallback<RedisAccessKeys>)'
     parameters:
@@ -1933,7 +2169,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-247">Повторное создание ключей доступа к кэшу Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-247">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="130b2-248">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="130b2-248">This operation requires write permission to the cache resource.</span></span>
+  summary: <span data-ttu-id="f411b-265">Повторное создание ключей доступа к кэшу Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-265">Regenerate Redis cache's access keys.</span></span> <span data-ttu-id="f411b-266">Этой операции требуется разрешение на запись к ресурсу кэша.</span><span class="sxs-lookup"><span data-stu-id="f411b-266">This operation requires write permission to the cache resource.</span></span>
   syntax:
     content: 'function regenerateKeyWithHttpOperationResponse(resourceGroupName: string, name: string, keyType: string, options?: Object)'
     parameters:
@@ -1941,17 +2177,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-249">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-249">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-267">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-267">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-250">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-250">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-268">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-268">The name of the Redis cache.</span></span>
     - id: keyType
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-251">Повторно создать ключ доступа Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-251">The Redis access key to regenerate.</span></span> <span data-ttu-id="130b2-252">Ниже перечислены возможные значения. «Primary», «Получатель»</span><span class="sxs-lookup"><span data-stu-id="130b2-252">Possible values include: 'Primary', 'Secondary'</span></span>
+        <span data-ttu-id="f411b-269">Повторно создать ключ доступа Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-269">The Redis access key to regenerate.</span></span> <span data-ttu-id="f411b-270">Ниже перечислены возможные значения. «Primary», «Получатель»</span><span class="sxs-lookup"><span data-stu-id="f411b-270">Possible values include: 'Primary', 'Secondary'</span></span>
     - id: options
       type:
       - Object
@@ -1967,7 +2203,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-253">Обновление существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-253">Update an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-271">Обновление существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-271">Update an existing Redis cache.</span></span>
   syntax:
     content: 'function update(resourceGroupName: string, name: string, parameters: RedisUpdateParameters, options?: Object)'
     parameters:
@@ -1975,17 +2211,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-254">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-254">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-272">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-272">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-255">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-255">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-273">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-273">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisUpdateParameters
       description: >
-        <span data-ttu-id="130b2-256">Параметры для операции обновления Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-256">Parameters supplied to the Update Redis operation.</span></span>
+        <span data-ttu-id="f411b-274">Параметры для операции обновления Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-274">Parameters supplied to the Update Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -2001,7 +2237,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-257">Обновление существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-257">Update an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-275">Обновление существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-275">Update an existing Redis cache.</span></span>
   syntax:
     content: 'function update(resourceGroupName: string, name: string, parameters: RedisUpdateParameters, options: Object, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -2035,7 +2271,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-258">Обновление существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-258">Update an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-276">Обновление существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-276">Update an existing Redis cache.</span></span>
   syntax:
     content: 'function update(resourceGroupName: string, name: string, parameters: RedisUpdateParameters, callback: ServiceCallback<RedisResource>)'
     parameters:
@@ -2065,7 +2301,7 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="130b2-259">Обновление существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-259">Update an existing Redis cache.</span></span>
+  summary: <span data-ttu-id="f411b-277">Обновление существующего кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-277">Update an existing Redis cache.</span></span>
   syntax:
     content: 'function updateWithHttpOperationResponse(resourceGroupName: string, name: string, parameters: RedisUpdateParameters, options?: Object)'
     parameters:
@@ -2073,17 +2309,17 @@ items:
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-260">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="130b2-260">The name of the resource group.</span></span>
+        <span data-ttu-id="f411b-278">Имя группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f411b-278">The name of the resource group.</span></span>
     - id: name
       type:
       - string
       description: >
-        <span data-ttu-id="130b2-261">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-261">The name of the Redis cache.</span></span>
+        <span data-ttu-id="f411b-279">Имя кэша Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-279">The name of the Redis cache.</span></span>
     - id: parameters
       type:
       - azure-arm-rediscache.RedisUpdateParameters
       description: >
-        <span data-ttu-id="130b2-262">Параметры для операции обновления Redis.</span><span class="sxs-lookup"><span data-stu-id="130b2-262">Parameters supplied to the Update Redis operation.</span></span>
+        <span data-ttu-id="f411b-280">Параметры для операции обновления Redis.</span><span class="sxs-lookup"><span data-stu-id="f411b-280">Parameters supplied to the Update Redis operation.</span></span>
     - id: options
       type:
       - Object
@@ -2142,6 +2378,12 @@ references:
   - name: ImportRDBParameters
     fullName: ImportRDBParameters
     uid: azure-arm-rediscache.ImportRDBParameters
+- uid: azure-arm-rediscache.CheckNameAvailabilityParameters
+  name: CheckNameAvailabilityParameters
+  spec.typeScript:
+  - name: CheckNameAvailabilityParameters
+    fullName: CheckNameAvailabilityParameters
+    uid: azure-arm-rediscache.CheckNameAvailabilityParameters
 - uid: azure-arm-rediscache.RedisRebootParameters
   name: RedisRebootParameters
   spec.typeScript:
@@ -2236,6 +2478,36 @@ references:
   - name: RedisAccessKeys
     fullName: RedisAccessKeys
     uid: azure-arm-rediscache.RedisAccessKeys
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-rediscache.NotificationListResponse>
+  name: NotificationListResponse>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: NotificationListResponse
+    fullName: NotificationListResponse
+    uid: azure-arm-rediscache.NotificationListResponse
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-rediscache.NotificationListResponse>
+  name: NotificationListResponse>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: NotificationListResponse
+    fullName: NotificationListResponse
+    uid: azure-arm-rediscache.NotificationListResponse
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-rediscache.NotificationListResponse>>
+  name: NotificationListResponse>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: NotificationListResponse
+    fullName: NotificationListResponse
+    uid: azure-arm-rediscache.NotificationListResponse
   - name: '>>'
     fullName: '>>'
 - uid: azure-arm-rediscache.RedisUpdateParameters

@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 27d71d41260a8b64b94bdc009c237fb48f5b3e94
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 6c65ea87eb944bd87ab8d50d94a89daf7fa3917a
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52082678"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55056925"
 items:
 - uid: azure-arm-batch.ApplicationPackageOperations
   name: ApplicationPackageOperations
@@ -26,6 +26,14 @@ items:
   - azure-arm-batch.ApplicationPackageOperations.get_2
   - azure-arm-batch.ApplicationPackageOperations.get_1
   - azure-arm-batch.ApplicationPackageOperations.getWithHttpOperationResponse
+  - azure-arm-batch.ApplicationPackageOperations.list
+  - azure-arm-batch.ApplicationPackageOperations.list_2
+  - azure-arm-batch.ApplicationPackageOperations.list_1
+  - azure-arm-batch.ApplicationPackageOperations.listNext
+  - azure-arm-batch.ApplicationPackageOperations.listNext_2
+  - azure-arm-batch.ApplicationPackageOperations.listNext_1
+  - azure-arm-batch.ApplicationPackageOperations.listNextWithHttpOperationResponse
+  - azure-arm-batch.ApplicationPackageOperations.listWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
@@ -37,35 +45,35 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-101">Активирует указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-101">Activates the specified application package.</span></span>
+  summary: <span data-ttu-id="62540-101">Активирует указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-101">Activates the specified application package.</span></span>
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options?: Object)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-102">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-102">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="62540-102">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-102">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-103">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-103">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="62540-103">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-103">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-104">Идентификатор приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-104">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="62540-104">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-104">The name of the application.</span></span> <span data-ttu-id="62540-105">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-105">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-105">Версия приложения для активации.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-105">The version of the application to activate.</span></span>
+        <span data-ttu-id="62540-106">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-106">The version of the application.</span></span>
     - id: format
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-106">Формат двоичного файла пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-106">The format of the application package binary file.</span></span>
+        <span data-ttu-id="62540-107">Формат двоичного файла пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-107">The format of the application package binary file.</span></span>
     - id: options
       type:
       - Object
@@ -73,17 +81,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activate_2
-  name: activate(string, string, string, string, string, Object, ServiceCallback<void>)
+  name: activate(string, string, string, string, string, Object, ServiceCallback<ApplicationPackage>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-107">Активирует указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-107">Activates the specified application package.</span></span>
+  summary: <span data-ttu-id="62540-108">Активирует указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-108">Activates the specified application package.</span></span>
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options: Object, callback: ServiceCallback<void>)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -93,11 +101,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -111,21 +119,21 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-batch.ApplicationPackage>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activate_1
-  name: activate(string, string, string, string, string, ServiceCallback<void>)
+  name: activate(string, string, string, string, string, ServiceCallback<ApplicationPackage>)
   children: []
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-108">Активирует указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-108">Activates the specified application package.</span></span>
+  summary: <span data-ttu-id="62540-109">Активирует указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-109">Activates the specified application package.</span></span>
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, callback: ServiceCallback<void>)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -135,11 +143,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -149,11 +157,11 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-batch.ApplicationPackage>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activateWithHttpOperationResponse
   name: activateWithHttpOperationResponse(string, string, string, string, string, Object)
@@ -161,35 +169,35 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-109">Активирует указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-109">Activates the specified application package.</span></span>
+  summary: <span data-ttu-id="62540-110">Активирует указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-110">Activates the specified application package.</span></span>
   syntax:
-    content: 'function activateWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options?: Object)'
+    content: 'function activateWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-110">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-110">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="62540-111">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-111">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-111">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-111">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="62540-112">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-112">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-112">Идентификатор приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-112">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="62540-113">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-113">The name of the application.</span></span> <span data-ttu-id="62540-114">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-114">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-113">Версия приложения для активации.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-113">The version of the application to activate.</span></span>
+        <span data-ttu-id="62540-115">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-115">The version of the application.</span></span>
     - id: format
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-114">Формат двоичного файла пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-114">The format of the application package binary file.</span></span>
+        <span data-ttu-id="62540-116">Формат двоичного файла пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-116">The format of the application package binary file.</span></span>
     - id: options
       type:
       - Object
@@ -197,7 +205,7 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<void>>
+      - Promise<HttpOperationResponse<azure-arm-batch.ApplicationPackage>>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.create
   name: create(string, string, string, string, Object)
@@ -205,30 +213,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-115">Создает запись пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-115">Creates an application package record.</span></span>
+  summary: <span data-ttu-id="62540-117">Создает запись пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-117">Creates an application package record.</span></span>
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-116">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-116">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="62540-118">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-118">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-117">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-117">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="62540-119">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-119">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-118">Идентификатор приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-118">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="62540-120">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-120">The name of the application.</span></span> <span data-ttu-id="62540-121">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-121">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-119">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-119">The version of the application.</span></span>
+        <span data-ttu-id="62540-122">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-122">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -244,9 +252,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-120">Создает запись пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-120">Creates an application package record.</span></span>
+  summary: <span data-ttu-id="62540-123">Создает запись пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-123">Creates an application package record.</span></span>
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -256,11 +264,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -282,9 +290,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-121">Создает запись пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-121">Creates an application package record.</span></span>
+  summary: <span data-ttu-id="62540-124">Создает запись пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-124">Creates an application package record.</span></span>
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -294,11 +302,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -316,30 +324,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-122">Создает запись пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-122">Creates an application package record.</span></span>
+  summary: <span data-ttu-id="62540-125">Создает запись пакета приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-125">Creates an application package record.</span></span>
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-123">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-123">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="62540-126">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-126">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-124">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-124">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="62540-127">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-127">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-125">Идентификатор приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-125">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="62540-128">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-128">The name of the application.</span></span> <span data-ttu-id="62540-129">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-129">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-126">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-126">The version of the application.</span></span>
+        <span data-ttu-id="62540-130">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-130">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -355,30 +363,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-127">Удаление записи пакета приложения и его соответствующий двоичный файл.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-127">Deletes an application package record and its associated binary file.</span></span>
+  summary: <span data-ttu-id="62540-131">Удаление записи пакета приложения и его соответствующий двоичный файл.</span><span class="sxs-lookup"><span data-stu-id="62540-131">Deletes an application package record and its associated binary file.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-128">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-128">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="62540-132">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-132">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-129">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-129">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="62540-133">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-133">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-130">Идентификатор приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-130">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="62540-134">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-134">The name of the application.</span></span> <span data-ttu-id="62540-135">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-135">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-131">Версия приложения для удаления.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-131">The version of the application to delete.</span></span>
+        <span data-ttu-id="62540-136">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-136">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -394,9 +402,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-132">Удаление записи пакета приложения и его соответствующий двоичный файл.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-132">Deletes an application package record and its associated binary file.</span></span>
+  summary: <span data-ttu-id="62540-137">Удаление записи пакета приложения и его соответствующий двоичный файл.</span><span class="sxs-lookup"><span data-stu-id="62540-137">Deletes an application package record and its associated binary file.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -406,11 +414,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -432,9 +440,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-133">Удаление записи пакета приложения и его соответствующий двоичный файл.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-133">Deletes an application package record and its associated binary file.</span></span>
+  summary: <span data-ttu-id="62540-138">Удаление записи пакета приложения и его соответствующий двоичный файл.</span><span class="sxs-lookup"><span data-stu-id="62540-138">Deletes an application package record and its associated binary file.</span></span>
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -444,11 +452,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -466,30 +474,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-134">Удаление записи пакета приложения и его соответствующий двоичный файл.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-134">Deletes an application package record and its associated binary file.</span></span>
+  summary: <span data-ttu-id="62540-139">Удаление записи пакета приложения и его соответствующий двоичный файл.</span><span class="sxs-lookup"><span data-stu-id="62540-139">Deletes an application package record and its associated binary file.</span></span>
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-135">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-135">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="62540-140">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-140">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-136">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-136">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="62540-141">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-141">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-137">Идентификатор приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-137">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="62540-142">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-142">The name of the application.</span></span> <span data-ttu-id="62540-143">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-143">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-138">Версия приложения для удаления.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-138">The version of the application to delete.</span></span>
+        <span data-ttu-id="62540-144">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-144">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -505,30 +513,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-139">Получает сведения о указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-139">Gets information about the specified application package.</span></span>
+  summary: <span data-ttu-id="62540-145">Получает сведения о указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-145">Gets information about the specified application package.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-140">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-140">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="62540-146">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-146">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-141">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-141">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="62540-147">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-147">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-142">Идентификатор приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-142">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="62540-148">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-148">The name of the application.</span></span> <span data-ttu-id="62540-149">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-149">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-143">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-143">The version of the application.</span></span>
+        <span data-ttu-id="62540-150">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-150">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -544,9 +552,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-144">Получает сведения о указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-144">Gets information about the specified application package.</span></span>
+  summary: <span data-ttu-id="62540-151">Получает сведения о указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-151">Gets information about the specified application package.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -556,11 +564,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -582,9 +590,9 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-145">Получает сведения о указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-145">Gets information about the specified application package.</span></span>
+  summary: <span data-ttu-id="62540-152">Получает сведения о указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-152">Gets information about the specified application package.</span></span>
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -594,11 +602,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -616,30 +624,30 @@ items:
   type: method
   langs:
   - typeScript
-  summary: <span data-ttu-id="fe0d5-146">Получает сведения о указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-146">Gets information about the specified application package.</span></span>
+  summary: <span data-ttu-id="62540-153">Получает сведения о указанный пакет приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-153">Gets information about the specified application package.</span></span>
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-147">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-147">The name of the resource group that contains the Batch account.</span></span>
+        <span data-ttu-id="62540-154">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-154">The name of the resource group that contains the Batch account.</span></span>
     - id: accountName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-148">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-148">The name of the Batch account.</span></span>
-    - id: applicationId
+        <span data-ttu-id="62540-155">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-155">The name of the Batch account.</span></span>
+    - id: applicationName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-149">Идентификатор приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-149">The ID of the application.</span></span>
-    - id: version
+        <span data-ttu-id="62540-156">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-156">The name of the application.</span></span> <span data-ttu-id="62540-157">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-157">This must be unique within the account.</span></span>
+    - id: versionName
       type:
       - string
       description: >
-        <span data-ttu-id="fe0d5-150">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="fe0d5-150">The version of the application.</span></span>
+        <span data-ttu-id="62540-158">Версия приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-158">The version of the application.</span></span>
     - id: options
       type:
       - Object
@@ -648,6 +656,234 @@ items:
     return:
       type:
       - Promise<HttpOperationResponse<azure-arm-batch.ApplicationPackage>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list
+  name: list(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="62540-159">Перечисляет все пакеты приложений в указанное приложение.</span><span class="sxs-lookup"><span data-stu-id="62540-159">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="62540-160">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-160">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="62540-161">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-161">The name of the Batch account.</span></span>
+    - id: applicationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="62540-162">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-162">The name of the application.</span></span> <span data-ttu-id="62540-163">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-163">This must be unique within the account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list_2
+  name: list(string, string, string, Object, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="62540-164">Перечисляет все пакеты приложений в указанное приложение.</span><span class="sxs-lookup"><span data-stu-id="62540-164">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, options: Object, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list_1
+  name: list(string, string, string, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="62540-165">Перечисляет все пакеты приложений в указанное приложение.</span><span class="sxs-lookup"><span data-stu-id="62540-165">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext
+  name: listNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="62540-166">Перечисляет все пакеты приложений в указанное приложение.</span><span class="sxs-lookup"><span data-stu-id="62540-166">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="62540-167">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="62540-167">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext_2
+  name: listNext(string, Object, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="62540-168">Перечисляет все пакеты приложений в указанное приложение.</span><span class="sxs-lookup"><span data-stu-id="62540-168">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext_1
+  name: listNext(string, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="62540-169">Перечисляет все пакеты приложений в указанное приложение.</span><span class="sxs-lookup"><span data-stu-id="62540-169">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="62540-170">Перечисляет все пакеты приложений в указанное приложение.</span><span class="sxs-lookup"><span data-stu-id="62540-170">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        <span data-ttu-id="62540-171">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="62540-171">The NextLink from the previous successful call to List operation.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: <span data-ttu-id="62540-172">Перечисляет все пакеты приложений в указанное приложение.</span><span class="sxs-lookup"><span data-stu-id="62540-172">Lists all of the application packages in the specified application.</span></span>
+  syntax:
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="62540-173">Имя группы ресурсов, которая содержит учетную запись пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-173">The name of the resource group that contains the Batch account.</span></span>
+    - id: accountName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="62540-174">Имя учетной записи пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="62540-174">The name of the Batch account.</span></span>
+    - id: applicationName
+      type:
+      - string
+      description: >
+        <span data-ttu-id="62540-175">Имя приложения.</span><span class="sxs-lookup"><span data-stu-id="62540-175">The name of the application.</span></span> <span data-ttu-id="62540-176">Это должен быть уникальным в пределах учетной записи.</span><span class="sxs-lookup"><span data-stu-id="62540-176">This must be unique within the account.</span></span>
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
   package: azure-arm-batch
 references:
 - uid: Promise<azure-arm-batch.ApplicationPackage>
@@ -678,5 +914,35 @@ references:
   - name: ApplicationPackage
     fullName: ApplicationPackage
     uid: azure-arm-batch.ApplicationPackage
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-batch.ListApplicationPackagesResult>
+  name: ListApplicationPackagesResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+  name: ListApplicationPackagesResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
+  name: ListApplicationPackagesResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
   - name: '>>'
     fullName: '>>'
