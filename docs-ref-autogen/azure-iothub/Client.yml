@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 3f17a6a8af9e46f508d62ffa2f764af53b5043ca
-ms.sourcegitcommit: ce76ec3eda83746ef9a765165173b5c00b5b7df6
+ms.openlocfilehash: 3fa73e6b39aa13478c9ab2e98f6d062ffddb3ae7
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53678998"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55057745"
 items:
 - uid: azure-iothub.Client
   name: Client
@@ -44,7 +44,7 @@ items:
       - прослушивать уведомления об отправке файлов с устройств.
     Пользователи должны создавать новые <xref:azure-iothub.Client> экземпляров путем вызова одного из заводских методов, [fromConnectionString](xref:azure-iothub.Client.fromConnectionString) или [fromSharedAccessSignature](xref:azure-iothub.Client.fromSharedAccessSignature), для создания клиента службы центра Интернета вещей.
   extends:
-    name: any
+    name: azure-iothub.Client
   package: azure-iothub
 - uid: azure-iothub.Client.close_1
   name: close()
@@ -91,7 +91,7 @@ items:
       description: Строку подключения, которая инкапсулирует «подключение» разрешения для центра Интернета вещей.
     - id: transportCtor
       type:
-      - azure-iothub.Client.TransportCtor
+      - azure-iothub.Client.Client.TransportCtor
       description: ''
       optional: true
     return:
@@ -114,7 +114,7 @@ items:
       description: Подпись общего доступа, который инкапсулирует «подключение службы» разрешения для центра Интернета вещей.
     - id: transportCtor
       type:
-      - azure-iothub.Client.TransportCtor
+      - azure-iothub.Client.Client.TransportCtor
       description: ''
       optional: true
     return:
@@ -375,6 +375,12 @@ items:
         Пакет SDK содержит 2 «встроенные» политики: ExponentialBackoffWithJitter (по умолчанию) и NoRetry (для отмены повторных попыток в любой форме). Пользователь также может передать свой собственный объект, до тех пор, пока он реализует два метода:-shouldRetry(err: Ошибка): логическое: Указывает, следует ли повторить операцию на основе типа ошибка - nextRetryTimeout (retryCount: номер, регулирование: логическое значение): номер: Возвращает время ожидания (в миллисекундах) до повторной попыткой, основаны на количество последних попыток () retryCount) и тот факт, что ошибки является ошибка регулирования или нет.
   package: azure-iothub
 references:
+- uid: azure-iothub.Client
+  name: Client
+  spec.typeScript:
+  - name: Client
+    fullName: Client
+    uid: azure-iothub.Client
 - uid: Callback<azure-iothub.Client.ServiceReceiver>
   name: ServiceReceiver>
   spec.typeScript:
@@ -491,18 +497,12 @@ references:
     uid: azure-iothub.ResultWithIncomingMessage
   - name: <MessageEnqueued>>
     fullName: <MessageEnqueued>>
-- uid: azure-iothub.Client.TransportCtor
+- uid: azure-iothub.Client.Client.TransportCtor
   name: TransportCtor
   spec.typeScript:
   - name: TransportCtor
     fullName: TransportCtor
-    uid: azure-iothub.Client.TransportCtor
-- uid: azure-iothub.Client
-  name: Client
-  spec.typeScript:
-  - name: Client
-    fullName: Client
-    uid: azure-iothub.Client
+    uid: azure-iothub.Client.Client.TransportCtor
 - uid: azure-iothub.Client.ServiceReceiver
   name: ServiceReceiver
 - uid: azure-iothub.Client.Transport

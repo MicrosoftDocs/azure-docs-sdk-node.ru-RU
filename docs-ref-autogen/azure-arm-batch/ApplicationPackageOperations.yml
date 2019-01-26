@@ -1,10 +1,10 @@
 ### YamlMime:UniversalReference
-ms.openlocfilehash: 27d71d41260a8b64b94bdc009c237fb48f5b3e94
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 6c65ea87eb944bd87ab8d50d94a89daf7fa3917a
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "52082678"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55056925"
 items:
 - uid: azure-arm-batch.ApplicationPackageOperations
   name: ApplicationPackageOperations
@@ -26,6 +26,14 @@ items:
   - azure-arm-batch.ApplicationPackageOperations.get_2
   - azure-arm-batch.ApplicationPackageOperations.get_1
   - azure-arm-batch.ApplicationPackageOperations.getWithHttpOperationResponse
+  - azure-arm-batch.ApplicationPackageOperations.list
+  - azure-arm-batch.ApplicationPackageOperations.list_2
+  - azure-arm-batch.ApplicationPackageOperations.list_1
+  - azure-arm-batch.ApplicationPackageOperations.listNext
+  - azure-arm-batch.ApplicationPackageOperations.listNext_2
+  - azure-arm-batch.ApplicationPackageOperations.listNext_1
+  - azure-arm-batch.ApplicationPackageOperations.listNextWithHttpOperationResponse
+  - azure-arm-batch.ApplicationPackageOperations.listWithHttpOperationResponse
   langs:
   - typeScript
   type: interface
@@ -39,7 +47,7 @@ items:
   - typeScript
   summary: Активирует указанный пакет приложения.
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options?: Object)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -51,16 +59,16 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
-    - id: version
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: versionName
       type:
       - string
       description: >
-        Версия приложения для активации.
+        Версия приложения.
     - id: format
       type:
       - string
@@ -73,17 +81,17 @@ items:
       optional: true
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activate_2
-  name: activate(string, string, string, string, string, Object, ServiceCallback<void>)
+  name: activate(string, string, string, string, string, Object, ServiceCallback<ApplicationPackage>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Активирует указанный пакет приложения.
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options: Object, callback: ServiceCallback<void>)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -93,11 +101,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -111,21 +119,21 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-batch.ApplicationPackage>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activate_1
-  name: activate(string, string, string, string, string, ServiceCallback<void>)
+  name: activate(string, string, string, string, string, ServiceCallback<ApplicationPackage>)
   children: []
   type: method
   langs:
   - typeScript
   summary: Активирует указанный пакет приложения.
   syntax:
-    content: 'function activate(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, callback: ServiceCallback<void>)'
+    content: 'function activate(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -135,11 +143,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -149,11 +157,11 @@ items:
       description: ''
     - id: callback
       type:
-      - ServiceCallback<void>
+      - ServiceCallback<azure-arm-batch.ApplicationPackage>
       description: ''
     return:
       type:
-      - Promise<void>
+      - Promise<azure-arm-batch.ApplicationPackage>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.activateWithHttpOperationResponse
   name: activateWithHttpOperationResponse(string, string, string, string, string, Object)
@@ -163,7 +171,7 @@ items:
   - typeScript
   summary: Активирует указанный пакет приложения.
   syntax:
-    content: 'function activateWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, format: string, options?: Object)'
+    content: 'function activateWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, format: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -175,16 +183,16 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
-    - id: version
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: versionName
       type:
       - string
       description: >
-        Версия приложения для активации.
+        Версия приложения.
     - id: format
       type:
       - string
@@ -197,7 +205,7 @@ items:
       optional: true
     return:
       type:
-      - Promise<HttpOperationResponse<void>>
+      - Promise<HttpOperationResponse<azure-arm-batch.ApplicationPackage>>
   package: azure-arm-batch
 - uid: azure-arm-batch.ApplicationPackageOperations.create
   name: create(string, string, string, string, Object)
@@ -207,7 +215,7 @@ items:
   - typeScript
   summary: Создает запись пакета приложения.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -219,12 +227,12 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
-    - id: version
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: versionName
       type:
       - string
       description: >
@@ -246,7 +254,7 @@ items:
   - typeScript
   summary: Создает запись пакета приложения.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -256,11 +264,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -284,7 +292,7 @@ items:
   - typeScript
   summary: Создает запись пакета приложения.
   syntax:
-    content: 'function create(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function create(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -294,11 +302,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -318,7 +326,7 @@ items:
   - typeScript
   summary: Создает запись пакета приложения.
   syntax:
-    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function createWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -330,12 +338,12 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
-    - id: version
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: versionName
       type:
       - string
       description: >
@@ -357,7 +365,7 @@ items:
   - typeScript
   summary: Удаление записи пакета приложения и его соответствующий двоичный файл.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -369,16 +377,16 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
-    - id: version
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: versionName
       type:
       - string
       description: >
-        Версия приложения для удаления.
+        Версия приложения.
     - id: options
       type:
       - Object
@@ -396,7 +404,7 @@ items:
   - typeScript
   summary: Удаление записи пакета приложения и его соответствующий двоичный файл.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -406,11 +414,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -434,7 +442,7 @@ items:
   - typeScript
   summary: Удаление записи пакета приложения и его соответствующий двоичный файл.
   syntax:
-    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<void>)'
+    content: 'function deleteMethod(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<void>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -444,11 +452,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -468,7 +476,7 @@ items:
   - typeScript
   summary: Удаление записи пакета приложения и его соответствующий двоичный файл.
   syntax:
-    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function deleteMethodWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -480,16 +488,16 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
-    - id: version
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: versionName
       type:
       - string
       description: >
-        Версия приложения для удаления.
+        Версия приложения.
     - id: options
       type:
       - Object
@@ -507,7 +515,7 @@ items:
   - typeScript
   summary: Получает сведения о указанный пакет приложения.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -519,12 +527,12 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
-    - id: version
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: versionName
       type:
       - string
       description: >
@@ -546,7 +554,7 @@ items:
   - typeScript
   summary: Получает сведения о указанный пакет приложения.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options: Object, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -556,11 +564,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -584,7 +592,7 @@ items:
   - typeScript
   summary: Получает сведения о указанный пакет приложения.
   syntax:
-    content: 'function get(resourceGroupName: string, accountName: string, applicationId: string, version: string, callback: ServiceCallback<ApplicationPackage>)'
+    content: 'function get(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, callback: ServiceCallback<ApplicationPackage>)'
     parameters:
     - id: resourceGroupName
       type:
@@ -594,11 +602,11 @@ items:
       type:
       - string
       description: ''
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: ''
-    - id: version
+    - id: versionName
       type:
       - string
       description: ''
@@ -618,7 +626,7 @@ items:
   - typeScript
   summary: Получает сведения о указанный пакет приложения.
   syntax:
-    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationId: string, version: string, options?: Object)'
+    content: 'function getWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, versionName: string, options?: Object)'
     parameters:
     - id: resourceGroupName
       type:
@@ -630,12 +638,12 @@ items:
       - string
       description: >
         Имя учетной записи пакетной службы.
-    - id: applicationId
+    - id: applicationName
       type:
       - string
       description: >
-        Идентификатор приложения.
-    - id: version
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: versionName
       type:
       - string
       description: >
@@ -648,6 +656,234 @@ items:
     return:
       type:
       - Promise<HttpOperationResponse<azure-arm-batch.ApplicationPackage>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list
+  name: list(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все пакеты приложений в указанное приложение.
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов, которая содержит учетную запись пакетной службы.
+    - id: accountName
+      type:
+      - string
+      description: >
+        Имя учетной записи пакетной службы.
+    - id: applicationName
+      type:
+      - string
+      description: >
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list_2
+  name: list(string, string, string, Object, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все пакеты приложений в указанное приложение.
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, options: Object, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.list_1
+  name: list(string, string, string, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все пакеты приложений в указанное приложение.
+  syntax:
+    content: 'function list(resourceGroupName: string, accountName: string, applicationName: string, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: ''
+    - id: accountName
+      type:
+      - string
+      description: ''
+    - id: applicationName
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext
+  name: listNext(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все пакеты приложений в указанное приложение.
+  syntax:
+    content: 'function listNext(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext_2
+  name: listNext(string, Object, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все пакеты приложений в указанное приложение.
+  syntax:
+    content: 'function listNext(nextPageLink: string, options: Object, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: options
+      type:
+      - Object
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNext_1
+  name: listNext(string, ServiceCallback<ListApplicationPackagesResult>)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все пакеты приложений в указанное приложение.
+  syntax:
+    content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ListApplicationPackagesResult>)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: ''
+    - id: callback
+      type:
+      - ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+      description: ''
+    return:
+      type:
+      - Promise<azure-arm-batch.ListApplicationPackagesResult>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listNextWithHttpOperationResponse
+  name: listNextWithHttpOperationResponse(string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все пакеты приложений в указанное приложение.
+  syntax:
+    content: 'function listNextWithHttpOperationResponse(nextPageLink: string, options?: Object)'
+    parameters:
+    - id: nextPageLink
+      type:
+      - string
+      description: >
+        NextLink из предыдущего успешного вызова операции List.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
+  package: azure-arm-batch
+- uid: azure-arm-batch.ApplicationPackageOperations.listWithHttpOperationResponse
+  name: listWithHttpOperationResponse(string, string, string, Object)
+  children: []
+  type: method
+  langs:
+  - typeScript
+  summary: Перечисляет все пакеты приложений в указанное приложение.
+  syntax:
+    content: 'function listWithHttpOperationResponse(resourceGroupName: string, accountName: string, applicationName: string, options?: Object)'
+    parameters:
+    - id: resourceGroupName
+      type:
+      - string
+      description: >
+        Имя группы ресурсов, которая содержит учетную запись пакетной службы.
+    - id: accountName
+      type:
+      - string
+      description: >
+        Имя учетной записи пакетной службы.
+    - id: applicationName
+      type:
+      - string
+      description: >
+        Имя приложения. Это должен быть уникальным в пределах учетной записи.
+    - id: options
+      type:
+      - Object
+      description: ''
+      optional: true
+    return:
+      type:
+      - Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
   package: azure-arm-batch
 references:
 - uid: Promise<azure-arm-batch.ApplicationPackage>
@@ -678,5 +914,35 @@ references:
   - name: ApplicationPackage
     fullName: ApplicationPackage
     uid: azure-arm-batch.ApplicationPackage
+  - name: '>>'
+    fullName: '>>'
+- uid: Promise<azure-arm-batch.ListApplicationPackagesResult>
+  name: ListApplicationPackagesResult>
+  spec.typeScript:
+  - name: Promise<
+    fullName: Promise<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
+  - name: '>'
+    fullName: '>'
+- uid: ServiceCallback<azure-arm-batch.ListApplicationPackagesResult>
+  name: ListApplicationPackagesResult>
+  spec.typeScript:
+  - name: ServiceCallback<
+    fullName: ServiceCallback<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
+  - name: '>'
+    fullName: '>'
+- uid: Promise<HttpOperationResponse<azure-arm-batch.ListApplicationPackagesResult>>
+  name: ListApplicationPackagesResult>>
+  spec.typeScript:
+  - name: Promise<HttpOperationResponse<
+    fullName: Promise<HttpOperationResponse<
+  - name: ListApplicationPackagesResult
+    fullName: ListApplicationPackagesResult
+    uid: azure-arm-batch.ListApplicationPackagesResult
   - name: '>>'
     fullName: '>>'
