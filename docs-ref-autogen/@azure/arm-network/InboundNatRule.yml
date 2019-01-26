@@ -1,0 +1,220 @@
+### YamlMime:UniversalReference
+ms.openlocfilehash: bafbc24e6c4fd34a677fb3af7bab2746a591f0ae
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55059506"
+items:
+- uid: '@azure/arm-network.InboundNatRule'
+  name: InboundNatRule
+  fullName: InboundNatRule
+  children:
+  - '@azure/arm-network.InboundNatRule.backendIPConfiguration'
+  - '@azure/arm-network.InboundNatRule.backendPort'
+  - '@azure/arm-network.InboundNatRule.enableFloatingIP'
+  - '@azure/arm-network.InboundNatRule.enableTcpReset'
+  - '@azure/arm-network.InboundNatRule.etag'
+  - '@azure/arm-network.InboundNatRule.frontendIPConfiguration'
+  - '@azure/arm-network.InboundNatRule.frontendPort'
+  - '@azure/arm-network.InboundNatRule.idleTimeoutInMinutes'
+  - '@azure/arm-network.InboundNatRule.name'
+  - '@azure/arm-network.InboundNatRule.protocol'
+  - '@azure/arm-network.InboundNatRule.provisioningState'
+  langs:
+  - typeScript
+  type: interface
+  summary: <span data-ttu-id="f03cd-101">Правило входящего трафика NAT подсистемы балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="f03cd-101">Inbound NAT rule of the load balancer.</span></span>
+  extends:
+    name: '@azure/arm-network.SubResource'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.backendIPConfiguration'
+  name: backendIPConfiguration
+  fullName: backendIPConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f03cd-102">Ссылка на частный IP-адрес, определенный в сетевом интерфейсе виртуальной машины.</span><span class="sxs-lookup"><span data-stu-id="f03cd-102">A reference to a private IP address defined on a network interface of a VM.</span></span> <span data-ttu-id="f03cd-103">Трафик, отправленный на интерфейсный порт для всех интерфейсных IP-конфигураций пересылаются внутреннему IP-Адресу.</span><span class="sxs-lookup"><span data-stu-id="f03cd-103">Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.</span></span>
+
+    <span data-ttu-id="f03cd-104">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f03cd-104">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+  optional: true
+  syntax:
+    content: 'backendIPConfiguration?: NetworkInterfaceIPConfiguration'
+    return:
+      type:
+      - '@azure/arm-network.NetworkInterfaceIPConfiguration'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.backendPort'
+  name: backendPort
+  fullName: backendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f03cd-105">Порт, используемый для внутренней конечной точки.</span><span class="sxs-lookup"><span data-stu-id="f03cd-105">The port used for the internal endpoint.</span></span> <span data-ttu-id="f03cd-106">Допустимые значения от 1 до 65535.</span><span class="sxs-lookup"><span data-stu-id="f03cd-106">Acceptable values range from 1 to 65535.</span></span>
+  optional: true
+  syntax:
+    content: 'backendPort?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.enableFloatingIP'
+  name: enableFloatingIP
+  fullName: enableFloatingIP
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f03cd-107">Настраивает конечную точку виртуальной машины для плавающих IP-адреса конфигурации, необходимые для настройки группы доступности AlwaysOn SQL.</span><span class="sxs-lookup"><span data-stu-id="f03cd-107">Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group.</span></span> <span data-ttu-id="f03cd-108">Этот параметр является обязательным при использовании групп доступности SQL AlwaysOn в SQL server.</span><span class="sxs-lookup"><span data-stu-id="f03cd-108">This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.</span></span> <span data-ttu-id="f03cd-109">Этот параметр нельзя изменить после создания конечной точки.</span><span class="sxs-lookup"><span data-stu-id="f03cd-109">This setting can't be changed after you create the endpoint.</span></span>
+  optional: true
+  syntax:
+    content: 'enableFloatingIP?: undefined | false | true'
+    return:
+      type:
+      - undefined | false | true
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.enableTcpReset'
+  name: enableTcpReset
+  fullName: enableTcpReset
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: >-
+    <span data-ttu-id="f03cd-110">Получает двунаправленный сброса TCP на время ожидания простоя TCP потока и завершения Непредвиденная соединений.</span><span class="sxs-lookup"><span data-stu-id="f03cd-110">Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination.</span></span>
+
+    <span data-ttu-id="f03cd-111">Этот элемент используется только в том случае, если протокол TCP.</span><span class="sxs-lookup"><span data-stu-id="f03cd-111">This element is only used when the protocol is set to TCP.</span></span>
+  optional: true
+  syntax:
+    content: 'enableTcpReset?: undefined | false | true'
+    return:
+      type:
+      - undefined | false | true
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.etag'
+  name: etag
+  fullName: etag
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f03cd-112">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="f03cd-112">A unique read-only string that changes whenever the resource is updated.</span></span>
+  optional: true
+  syntax:
+    content: 'etag?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.frontendIPConfiguration'
+  name: frontendIPConfiguration
+  fullName: frontendIPConfiguration
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f03cd-113">Ссылка на интерфейсных IP-адреса.</span><span class="sxs-lookup"><span data-stu-id="f03cd-113">A reference to frontend IP addresses.</span></span>
+  optional: true
+  syntax:
+    content: 'frontendIPConfiguration?: SubResource'
+    return:
+      type:
+      - '@azure/arm-network.SubResource'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.frontendPort'
+  name: frontendPort
+  fullName: frontendPort
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f03cd-114">Порт для внешней конечной точки.</span><span class="sxs-lookup"><span data-stu-id="f03cd-114">The port for the external endpoint.</span></span> <span data-ttu-id="f03cd-115">Номера портов для каждого правила должны быть уникальными в подсистеме балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="f03cd-115">Port numbers for each rule must be unique within the Load Balancer.</span></span> <span data-ttu-id="f03cd-116">Допустимые значения от 1 до 65534.</span><span class="sxs-lookup"><span data-stu-id="f03cd-116">Acceptable values range from 1 to 65534.</span></span>
+  optional: true
+  syntax:
+    content: 'frontendPort?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.idleTimeoutInMinutes'
+  name: idleTimeoutInMinutes
+  fullName: idleTimeoutInMinutes
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f03cd-117">Время ожидания простоя подключения TCP.</span><span class="sxs-lookup"><span data-stu-id="f03cd-117">The timeout for the TCP idle connection.</span></span> <span data-ttu-id="f03cd-118">Можно задать значение от 4 до 30 минут.</span><span class="sxs-lookup"><span data-stu-id="f03cd-118">The value can be set between 4 and 30 minutes.</span></span> <span data-ttu-id="f03cd-119">Значение по умолчанию — 4 минуты.</span><span class="sxs-lookup"><span data-stu-id="f03cd-119">The default value is 4 minutes.</span></span> <span data-ttu-id="f03cd-120">Этот элемент используется только в том случае, если протокол TCP.</span><span class="sxs-lookup"><span data-stu-id="f03cd-120">This element is only used when the protocol is set to TCP.</span></span>
+  optional: true
+  syntax:
+    content: 'idleTimeoutInMinutes?: undefined | number'
+    return:
+      type:
+      - undefined | number
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.name'
+  name: name
+  fullName: name
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: <span data-ttu-id="f03cd-121">Возвращает имя ресурса, который является уникальным в пределах группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f03cd-121">Gets name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="f03cd-122">Это имя может использоваться для доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="f03cd-122">This name can be used to access the resource.</span></span>
+  optional: true
+  syntax:
+    content: 'name?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.protocol'
+  name: protocol
+  fullName: protocol
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"f03cd-123\">Ниже перечислены возможные значения. «Udp», «Tcp», «Все»</span><span class=\"sxs-lookup\"><span data-stu-id=\"f03cd-123\">Possible values include: 'Udp', 'Tcp', 'All'</span></span>"
+  optional: true
+  syntax:
+    content: 'protocol?: TransportProtocol'
+    return:
+      type:
+      - '@azure/arm-network.TransportProtocol'
+  package: '@azure/arm-network'
+- uid: '@azure/arm-network.InboundNatRule.provisioningState'
+  name: provisioningState
+  fullName: provisioningState
+  children: []
+  langs:
+  - typeScript
+  type: property
+  summary: "<span data-ttu-id=\"f03cd-124\">Получает состояние подготовки ресурса общедоступного IP-адрес.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f03cd-124\">Gets the provisioning state of the public IP resource.</span></span> <span data-ttu-id=\"f03cd-125\">Возможные значения: «Обновление», «Удаление» и «Failed».</span><span class=\"sxs-lookup\"><span data-stu-id=\"f03cd-125\">Possible values are: 'Updating', 'Deleting', and 'Failed'.</span></span>"
+  optional: true
+  syntax:
+    content: 'provisioningState?: undefined | string'
+    return:
+      type:
+      - undefined | string
+  package: '@azure/arm-network'
+references:
+- uid: '@azure/arm-network.SubResource'
+  name: SubResource
+  spec.typeScript:
+  - name: SubResource
+    fullName: SubResource
+    uid: '@azure/arm-network.SubResource'
+- uid: '@azure/arm-network.NetworkInterfaceIPConfiguration'
+  name: NetworkInterfaceIPConfiguration
+  spec.typeScript:
+  - name: NetworkInterfaceIPConfiguration
+    fullName: NetworkInterfaceIPConfiguration
+    uid: '@azure/arm-network.NetworkInterfaceIPConfiguration'
+- uid: '@azure/arm-network.TransportProtocol'
+  name: TransportProtocol
+  spec.typeScript:
+  - name: TransportProtocol
+    fullName: TransportProtocol
+    uid: '@azure/arm-network.TransportProtocol'
