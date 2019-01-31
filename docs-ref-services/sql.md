@@ -6,16 +6,15 @@ ms.author: carlrab
 manager: craigg
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: nodejs
 ms.service: sql-database
-ms.openlocfilehash: 095a54a0919b237891ea89f4c826be0fc3060bbe
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.subservice: development
+ms.openlocfilehash: 00ba5984b5f8aef85570c54f23efefd1d741ca57
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259449"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046434"
 ---
 # <a name="azure-sql-modules-for-nodejs"></a>Модули SQL Azure для Node.js
 
