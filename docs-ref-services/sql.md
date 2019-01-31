@@ -6,35 +6,34 @@ ms.author: carlrab
 manager: craigg
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: nodejs
 ms.service: sql-database
-ms.openlocfilehash: 095a54a0919b237891ea89f4c826be0fc3060bbe
-ms.sourcegitcommit: 75051fec38cc3be4cb7d7cb6fc695c162fc0e91b
+ms.subservice: development
+ms.openlocfilehash: 00ba5984b5f8aef85570c54f23efefd1d741ca57
+ms.sourcegitcommit: 0e294f7c4dcdfae9df18ff3e82b6563680ef2519
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34259449"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55046434"
 ---
-# <a name="azure-sql-modules-for-nodejs"></a><span data-ttu-id="da2e0-103">Модули SQL Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="da2e0-103">Azure SQL modules for Node.js</span></span>
+# <a name="azure-sql-modules-for-nodejs"></a><span data-ttu-id="62c8f-103">Модули SQL Azure для Node.js</span><span class="sxs-lookup"><span data-stu-id="62c8f-103">Azure SQL modules for Node.js</span></span>
 
-<span data-ttu-id="da2e0-104">Работа с данными, хранящимися в [базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview), из Node.js.</span><span class="sxs-lookup"><span data-stu-id="da2e0-104">Work with data stored in [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) from Node.js.</span></span>
-<span data-ttu-id="da2e0-105">Библиотека управления предоставляет интерфейс для простого управления базами данных SQL Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="da2e0-105">The management library provides an interface to make it easy to manage Microsoft Azure SQL databases.</span></span>
+<span data-ttu-id="62c8f-104">Работа с данными, хранящимися в [базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview), из Node.js.</span><span class="sxs-lookup"><span data-stu-id="62c8f-104">Work with data stored in [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) from Node.js.</span></span>
+<span data-ttu-id="62c8f-105">Библиотека управления предоставляет интерфейс для простого управления базами данных SQL Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="62c8f-105">The management library provides an interface to make it easy to manage Microsoft Azure SQL databases.</span></span>
 
-## <a name="client-package"></a><span data-ttu-id="da2e0-106">Пакет клиента</span><span class="sxs-lookup"><span data-stu-id="da2e0-106">Client package</span></span>
+## <a name="client-package"></a><span data-ttu-id="62c8f-106">Пакет клиента</span><span class="sxs-lookup"><span data-stu-id="62c8f-106">Client package</span></span>
 
-### <a name="install-the-npm-module"></a><span data-ttu-id="da2e0-107">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="da2e0-107">Install the npm module</span></span>
+### <a name="install-the-npm-module"></a><span data-ttu-id="62c8f-107">Установка модуля npm</span><span class="sxs-lookup"><span data-stu-id="62c8f-107">Install the npm module</span></span>
 
-<span data-ttu-id="da2e0-108">Установите модуль npm клиента SQL Server.</span><span class="sxs-lookup"><span data-stu-id="da2e0-108">Install the SQL Server client npm module</span></span>
+<span data-ttu-id="62c8f-108">Установите модуль npm клиента SQL Server.</span><span class="sxs-lookup"><span data-stu-id="62c8f-108">Install the SQL Server client npm module</span></span>
 
 ```bash
 npm install tedious
 ```
 
-### <a name="example"></a><span data-ttu-id="da2e0-109">Пример</span><span class="sxs-lookup"><span data-stu-id="da2e0-109">Example</span></span>
+### <a name="example"></a><span data-ttu-id="62c8f-109">Пример</span><span class="sxs-lookup"><span data-stu-id="62c8f-109">Example</span></span>
 
-<span data-ttu-id="da2e0-110">Этот пример подключается к базе данных SQL Server и выполняет простой запрос.</span><span class="sxs-lookup"><span data-stu-id="da2e0-110">This example connects to a SQL Server database and perform a simple query.</span></span>
+<span data-ttu-id="62c8f-110">Этот пример подключается к базе данных SQL Server и выполняет простой запрос.</span><span class="sxs-lookup"><span data-stu-id="62c8f-110">This example connects to a SQL Server database and perform a simple query.</span></span>
 
 ```javascript
 const Connection = require('tedious').Connection;
@@ -69,19 +68,19 @@ const executeStatement = () => {
 };
 ```
 
-## <a name="management-package"></a><span data-ttu-id="da2e0-111">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="da2e0-111">Management package</span></span>
+## <a name="management-package"></a><span data-ttu-id="62c8f-111">Пакет управления</span><span class="sxs-lookup"><span data-stu-id="62c8f-111">Management package</span></span>
 
-### <a name="install-npm-modules"></a><span data-ttu-id="da2e0-112">Установка модулей npm</span><span class="sxs-lookup"><span data-stu-id="da2e0-112">Install npm modules</span></span>
+### <a name="install-npm-modules"></a><span data-ttu-id="62c8f-112">Установка модулей npm</span><span class="sxs-lookup"><span data-stu-id="62c8f-112">Install npm modules</span></span>
 
-<span data-ttu-id="da2e0-113">Установите модуль npm управления Azure SQL Server.</span><span class="sxs-lookup"><span data-stu-id="da2e0-113">Install the Azure SQL Server management npm module</span></span>
+<span data-ttu-id="62c8f-113">Установите модуль npm управления Azure SQL Server.</span><span class="sxs-lookup"><span data-stu-id="62c8f-113">Install the Azure SQL Server management npm module</span></span>
 
 ```
 npm install azure-arm-sql
 ```   
 
-### <a name="example"></a><span data-ttu-id="da2e0-114">Пример</span><span class="sxs-lookup"><span data-stu-id="da2e0-114">Example</span></span>
+### <a name="example"></a><span data-ttu-id="62c8f-114">Пример</span><span class="sxs-lookup"><span data-stu-id="62c8f-114">Example</span></span>
 
-<span data-ttu-id="da2e0-115">Проверка подлинности, создание клиента и отображение списка всех серверов.</span><span class="sxs-lookup"><span data-stu-id="da2e0-115">Authenticate, create a client, and list all servers.</span></span>
+<span data-ttu-id="62c8f-115">Проверка подлинности, создание клиента и отображение списка всех серверов.</span><span class="sxs-lookup"><span data-stu-id="62c8f-115">Authenticate, create a client, and list all servers.</span></span>
 
 ```javascript
 const msRestAzure = require('ms-rest-azure');
@@ -97,8 +96,8 @@ msRestAzure
   .catch(err => console.log(err));
 ```
 
-## <a name="samples"></a><span data-ttu-id="da2e0-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="da2e0-116">Samples</span></span>
+## <a name="samples"></a><span data-ttu-id="62c8f-116">Примеры</span><span class="sxs-lookup"><span data-stu-id="62c8f-116">Samples</span></span>
 
 [!INCLUDE [node-sql-samples](../docs-ref-conceptual/includes/sql-samples.md)]
 
-<span data-ttu-id="da2e0-117">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="da2e0-117">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
+<span data-ttu-id="62c8f-117">См. другие [примеры кода Node.js](https://azure.microsoft.com/resources/samples/?platform=nodejs), которые можно использовать в приложениях.</span><span class="sxs-lookup"><span data-stu-id="62c8f-117">Explore more [sample Node.js code](https://azure.microsoft.com/resources/samples/?platform=nodejs) you can use in your apps.</span></span>
