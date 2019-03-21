@@ -6,16 +6,14 @@ ms.author: kumud
 manager: jeconnoc
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: nodejs
 ms.service: Advisor
-ms.openlocfilehash: 54686220006d27341dbb50a249d0b2f44411b112
-ms.sourcegitcommit: efa2d98deffe8a0d41a8d63f9f07aa720862e6ab
+ms.openlocfilehash: 952ac4bb67f4c177a06ce0ae3eb0fac7fa8ded54
+ms.sourcegitcommit: 34172ad11850839ddd81d02841807e07f3761425
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52116550"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58052585"
 ---
 # <a name="azure-advisor-modules-for-nodejs"></a>Модули помощника по Azure для Node.js
 
