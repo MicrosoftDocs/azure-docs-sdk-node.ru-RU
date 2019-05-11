@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition
+    name: LocationThresholdRuleCondition
+    fullName: LocationThresholdRuleCondition
+    children:
+      - azure-arm-monitor.LocationThresholdRuleCondition.dataSource
+      - azure-arm-monitor.LocationThresholdRuleCondition.failedLocationCount
+      - azure-arm-monitor.LocationThresholdRuleCondition.odatatype
+      - azure-arm-monitor.LocationThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Условие правила, в зависимости от определенного числа расположений сбоем.'
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ресурс, из которого правило собирает данные. Для этого типа источника данных всегда будет иметь тип RuleMetricDataSource.'
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.failedLocationCount
+    name: failedLocationCount
+    fullName: failedLocationCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'количество расположений, которые не должны активировать оповещение.'
+    syntax:
+      content: 'failedLocationCount: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'период времени (в формате длительности ISO 8601), который используется для отслеживания активности оповещения по пороговому значению. Если указан, то он должен быть между 5 минутами и 1 день.'
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

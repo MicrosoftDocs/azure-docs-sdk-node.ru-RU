@@ -1,0 +1,233 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo
+    name: DeployedStatefulServiceReplicaInfo
+    fullName: DeployedStatefulServiceReplicaInfo
+    children:
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.address
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.codePackageName
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.hostProcessId
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.partitionId
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.reconfigurationInformation
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaId
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaRole
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaStatus
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.serviceKind
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.serviceManifestName
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.serviceName
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.servicePackageActivationId
+      - azure-servicefabric.DeployedStatefulServiceReplicaInfo.serviceTypeName
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Сведения о реплике службы с отслеживанием состояния, развернутых на узле.'
+    extends:
+      name: azure-servicefabric.DeployedServiceReplicaInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.address
+    name: address
+    fullName: address
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Последний адрес, возвращенный реплики в Open или ChangeRole.'
+    optional: true
+    syntax:
+      content: 'address?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.codePackageName
+    name: codePackageName
+    fullName: codePackageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Имя пакета кода, на котором размещается эта реплика.'
+    optional: true
+    syntax:
+      content: 'codePackageName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.hostProcessId
+    name: hostProcessId
+    fullName: hostProcessId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Идентификатор процесса узла процесса, на котором размещается реплика. Это будет равен нулю, если реплика недоступна. В контейнерах hyper-v из разных ядра будет этот идентификатор процесса узла.'
+    optional: true
+    syntax:
+      content: 'hostProcessId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Внутренний идентификатор, используемый Service Fabric для уникальной идентификации секции. Это произвольно созданным GUID, если служба была создана. Идентификатор секции уникален и не изменяется в течение времени существования службы. Если же служба удалена и создана повторно идентификаторы секций будет отличаться.'
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.reconfigurationInformation
+    name: reconfigurationInformation
+    fullName: reconfigurationInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Сведения о текущей перенастройки как этап "," тип "," роль в предыдущей конфигурации реплики и перенастройки дату и время начала.'
+    optional: true
+    syntax:
+      content: 'reconfigurationInformation?: ReconfigurationInformation'
+      return:
+        type:
+          - azure-servicefabric.ReconfigurationInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaId
+    name: replicaId
+    fullName: replicaId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Идентификатор реплики службы с отслеживанием состояния. ReplicaId используется Service Fabric для уникальной идентификации реплику секции. Он уникален в пределах секции и остается неизменным в течение жизненного цикла реплики. Если другая реплика создается на том же узле, для одной секции, удалении реплики, получите другое значение для идентификатора. Иногда идентификатор экземпляра службы без отслеживания состояния также называется идентификатором реплики.'
+    optional: true
+    syntax:
+      content: 'replicaId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaRole
+    name: replicaRole
+    fullName: replicaRole
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Роль реплики службы с отслеживанием состояния. Ниже перечислены возможные значения. «Неизвестный», «None», «Основной», «Неактивные», «Активные»'
+    optional: true
+    syntax:
+      content: 'replicaRole?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.replicaStatus
+    name: replicaStatus
+    fullName: replicaStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Состояние реплики службы. Ниже перечислены возможные значения. «Invalid», «Вторичные», «Резервный», «Готово», «Вниз», «Удалить»'
+    optional: true
+    syntax:
+      content: 'replicaStatus?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.serviceManifestName
+    name: serviceManifestName
+    fullName: serviceManifestName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Имя манифеста службы, в котором определен этот тип службы.'
+    optional: true
+    syntax:
+      content: 'serviceManifestName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Полное имя службы с "fabric:" схемы универсального кода ресурса (URI) "fabric:".'
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.servicePackageActivationId
+    name: servicePackageActivationId
+    fullName: servicePackageActivationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ActivationId из развернутого пакета службы. Если ServicePackageActivationMode, указанные во время создания службы является «SharedProcess» (или если он не указан, в этом случае по умолчанию используется «SharedProcess»), значением ServicePackageActivationId всегда является пустой строкой.'
+    optional: true
+    syntax:
+      content: 'servicePackageActivationId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatefulServiceReplicaInfo.serviceTypeName
+    name: serviceTypeName
+    fullName: serviceTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Имя типа службы, как указано в манифесте службы.'
+    optional: true
+    syntax:
+      content: 'serviceTypeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.DeployedServiceReplicaInfo
+    name: DeployedServiceReplicaInfo
+    spec.typeScript:
+      - name: DeployedServiceReplicaInfo
+        fullName: DeployedServiceReplicaInfo
+        uid: azure-servicefabric.DeployedServiceReplicaInfo
+  - uid: azure-servicefabric.ReconfigurationInformation
+    name: ReconfigurationInformation
+    spec.typeScript:
+      - name: ReconfigurationInformation
+        fullName: ReconfigurationInformation
+        uid: azure-servicefabric.ReconfigurationInformation

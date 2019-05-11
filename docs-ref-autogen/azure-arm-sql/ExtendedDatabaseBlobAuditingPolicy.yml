@@ -1,0 +1,244 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy
+    name: ExtendedDatabaseBlobAuditingPolicy
+    fullName: ExtendedDatabaseBlobAuditingPolicy
+    children:
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.auditActionsAndGroups
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.id
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.isAzureMonitorTargetEnabled
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.isStorageSecondaryKeyInUse
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.name
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.predicateExpression
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.retentionDays
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.state
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.storageAccountAccessKey
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.storageAccountSubscriptionId
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.storageEndpoint
+      - azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.type
+    langs:
+      - typeScript
+    type: interface
+    summary: Расширенные базы данных аудита больших двоичных объектов политики.
+    extends:
+      name: azure-arm-sql.ProxyResource
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.auditActionsAndGroups
+    name: auditActionsAndGroups
+    fullName: auditActionsAndGroups
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Указывает действия и группы действий аудита.
+      Рекомендуется следующий набор групп действий для использования является следующее — это аудит всех запросов и хранимых процедур, примененных к базе данных, а также об успешных и неудачных имена входа:
+
+      BATCH_COMPLETED_GROUP, SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP, FAILED_DATABASE_AUTHENTICATION_GROUP.
+
+      Выше сочетания это также набор, который настраивается по умолчанию при включении аудита на портале Azure.
+
+      Поддерживаемые действия группы для аудита (Примечание: выбрать только группы, которые охватывают потребностей аудита. С помощью ненужных группах может привести к очень большому количеству записей аудита):
+
+      APPLICATION_ROLE_CHANGE_PASSWORD_GROUP BACKUP_RESTORE_GROUP DATABASE_LOGOUT_GROUP DATABASE_OBJECT_CHANGE_GROUP DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP DATABASE_OBJECT_PERMISSION_CHANGE_GROUP DATABASE_OPERATION_GROUP DATABASE_ PERMISSION_CHANGE_GROUP DATABASE_PRINCIPAL_CHANGE_GROUP DATABASE_PRINCIPAL_IMPERSONATION_GROUP DATABASE_ROLE_MEMBER_CHANGE_GROUP FAILED_DATABASE_AUTHENTICATION_GROUP SCHEMA_OBJECT_ACCESS_GROUP SCHEMA_OBJECT_CHANGE_GROUP SCHEMA_ OBJECT_OWNERSHIP_CHANGE_GROUP SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP USER_CHANGE_PASSWORD_GROUP BATCH_STARTED_GROUP BATCH_COMPLETED_GROUP
+
+      Это группы, которые охватывают все инструкции sql и хранимые процедуры выполняться в базе данных и не следует использовать в сочетании с другими группами, так как это вызовет журналы аудита повторяющиеся.
+
+      Дополнительные сведения см. в разделе [группы действий аудита уровня базы данных](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-action-groups).
+
+      Для политики аудита базы данных определенные действия также может быть указанного (Обратите внимание, что действия нельзя использовать политику аудита сервера). Ниже приведены поддерживаемые действия для аудита. ВЫПОЛНЕНИЕ SELECT ОБНОВЛЕНИИ ВСТАВКЕ УДАЛЕНИИ ПОЛУЧАТЬ ССЫЛКИ
+
+      Имеет общую форму для определение действий для аудита: ON {action} {объект} {СУБЪЕКТОМ}
+
+      Обратите внимание, что <object> выше формат может ссылаться на объект таблицы, представления или хранимой процедуры или всю базу данных или схемы. Для последний случаев форм базы данных:: {db_name} и СХЕМЫ:: {schema_name} используются, соответственно.
+
+      Например: ВЫБЕРИТЕ на dbo.myTable, открытый SELECT DATABASE::myDatabase с общедоступных SELECT SCHEMA::mySchema по открытым
+
+      Дополнительные сведения см. в разделе [действий аудита уровня базы данных](https://docs.microsoft.com/en-us/sql/relational-databases/security/auditing/sql-server-audit-action-groups-and-actions#database-level-audit-actions)
+    optional: true
+    syntax:
+      content: 'auditActionsAndGroups?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Идентификатор ресурса.
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.isAzureMonitorTargetEnabled
+    name: isAzureMonitorTargetEnabled
+    fullName: isAzureMonitorTargetEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |+
+      Указывает, отправляются ли события аудита в Azure Monitor.
+      Для отправки событий в Azure Monitor, укажите «State», «Enabled» и «IsAzureMonitorTargetEnabled» значение true.
+      При использовании REST API для настройки аудита, необходимо также создать диагностики параметры с категорией «SQLSecurityAuditEvents» журналы диагностики в базе данных.
+      Обратите внимание, что для сервера уровня аудита, вы должны использовать базы данных «master», что {databaseName}.
+
+      Формат параметров диагностики URI: PUT https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroup}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/providers/microsoft.insights/diagnosticSettings/{settingsName}?api-version=2017-05-01-preview
+
+      Дополнительные сведения см. в разделе [REST API диагностики параметры](https://go.microsoft.com/fwlink/?linkid=2033207) или [диагностических параметров PowerShell](https://go.microsoft.com/fwlink/?linkid=2033043)
+
+    optional: true
+    syntax:
+      content: 'isAzureMonitorTargetEnabled?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.isStorageSecondaryKeyInUse
+    name: isStorageSecondaryKeyInUse
+    fullName: isStorageSecondaryKeyInUse
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает, является ли значение storageAccountAccessKey вторичный ключ хранилища.'
+    optional: true
+    syntax:
+      content: 'isStorageSecondaryKeyInUse?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Имя ресурса.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.predicateExpression
+    name: predicateExpression
+    fullName: predicateExpression
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Условие where предложение для создания аудита.
+    optional: true
+    syntax:
+      content: 'predicateExpression?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.retentionDays
+    name: retentionDays
+    fullName: retentionDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает количество дней хранения в журнале аудита, журналы в учетной записи хранения.'
+    optional: true
+    syntax:
+      content: 'retentionDays?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает состояние политики. Если включено состояние, требуются storageEndpoint или isAzureMonitorTargetEnabled. Ниже перечислены возможные значения. «Включено», «Отключено»'
+    syntax:
+      content: 'state: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.storageAccountAccessKey
+    name: storageAccountAccessKey
+    fullName: storageAccountAccessKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает ключ идентификатора для аудита учетной записи хранения. Если включено состояние и указана storageEndpoint, storageAccountAccessKey не требуется.'
+    optional: true
+    syntax:
+      content: 'storageAccountAccessKey?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.storageAccountSubscriptionId
+    name: storageAccountSubscriptionId
+    fullName: storageAccountSubscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Указывает идентификатор подписки хранилища BLOB-объектов
+    optional: true
+    syntax:
+      content: 'storageAccountSubscriptionId?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.storageEndpoint
+    name: storageEndpoint
+    fullName: storageEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает конечную точку хранилища BLOB-объектов (например https://MyAccount.blob.core.windows.net). Если включено состояние, storageEndpoint не требуется.'
+    optional: true
+    syntax:
+      content: 'storageEndpoint?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+  - uid: azure-arm-sql.ExtendedDatabaseBlobAuditingPolicy.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Тип ресурса.
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-sql
+references:
+  - uid: azure-arm-sql.ProxyResource
+    name: ProxyResource
+    spec.typeScript:
+      - name: ProxyResource
+        fullName: ProxyResource
+        uid: azure-arm-sql.ProxyResource
