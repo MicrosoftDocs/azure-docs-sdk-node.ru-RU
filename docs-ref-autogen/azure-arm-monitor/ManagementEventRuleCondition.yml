@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.ManagementEventRuleCondition
+    name: ManagementEventRuleCondition
+    fullName: ManagementEventRuleCondition
+    children:
+      - azure-arm-monitor.ManagementEventRuleCondition.aggregation
+      - azure-arm-monitor.ManagementEventRuleCondition.dataSource
+      - azure-arm-monitor.ManagementEventRuleCondition.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="4d086-101">Условие правила событий управления.</span><span class="sxs-lookup"><span data-stu-id="4d086-101">A management event rule condition.</span></span>
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ManagementEventRuleCondition.aggregation
+    name: aggregation
+    fullName: aggregation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4d086-102">Как данные, собираемые объединения течением времени, а также при активации оповещения.</span><span class="sxs-lookup"><span data-stu-id="4d086-102">How the data that is collected should be combined over time and when the alert is activated.</span></span>
+      <span data-ttu-id="4d086-103">Обратите внимание, что для агрегирование оповещений событий управления не обязательно – если оно не выполняется, любое событие вызовет оповещение для активации.</span><span class="sxs-lookup"><span data-stu-id="4d086-103">Note that for management event alerts aggregation is optional – if it is not provided then any event will cause the alert to activate.</span></span>
+    optional: true
+    syntax:
+      content: 'aggregation?: ManagementEventAggregationCondition'
+      return:
+        type:
+          - azure-arm-monitor.ManagementEventAggregationCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ManagementEventRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4d086-104">ресурс, из которого правило собирает данные.</span><span class="sxs-lookup"><span data-stu-id="4d086-104">the resource from which the rule collects its data.</span></span> <span data-ttu-id="4d086-105">Для этого типа источника данных всегда будет иметь тип RuleMetricDataSource.</span><span class="sxs-lookup"><span data-stu-id="4d086-105">For this type dataSource will always be of type RuleMetricDataSource.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.ManagementEventRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4d086-106">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="4d086-106">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.ManagementEventAggregationCondition
+    name: ManagementEventAggregationCondition
+    spec.typeScript:
+      - name: ManagementEventAggregationCondition
+        fullName: ManagementEventAggregationCondition
+        uid: azure-arm-monitor.ManagementEventAggregationCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

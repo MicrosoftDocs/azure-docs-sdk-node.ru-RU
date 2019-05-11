@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition
+    name: LocationThresholdRuleCondition
+    fullName: LocationThresholdRuleCondition
+    children:
+      - azure-arm-monitor.LocationThresholdRuleCondition.dataSource
+      - azure-arm-monitor.LocationThresholdRuleCondition.failedLocationCount
+      - azure-arm-monitor.LocationThresholdRuleCondition.odatatype
+      - azure-arm-monitor.LocationThresholdRuleCondition.windowSize
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="9a596-101">Условие правила, в зависимости от определенного числа расположений сбоем.</span><span class="sxs-lookup"><span data-stu-id="9a596-101">A rule condition based on a certain number of locations failing.</span></span>'
+    extends:
+      name: azure-arm-monitor.RuleCondition
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.dataSource
+    name: dataSource
+    fullName: dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9a596-102">ресурс, из которого правило собирает данные.</span><span class="sxs-lookup"><span data-stu-id="9a596-102">the resource from which the rule collects its data.</span></span> <span data-ttu-id="9a596-103">Для этого типа источника данных всегда будет иметь тип RuleMetricDataSource.</span><span class="sxs-lookup"><span data-stu-id="9a596-103">For this type dataSource will always be of type RuleMetricDataSource.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataSource?: RuleDataSource'
+      return:
+        type:
+          - azure-arm-monitor.RuleDataSource
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.failedLocationCount
+    name: failedLocationCount
+    fullName: failedLocationCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9a596-104">количество расположений, которые не должны активировать оповещение.</span><span class="sxs-lookup"><span data-stu-id="9a596-104">the number of locations that must fail to activate the alert.</span></span>'
+    syntax:
+      content: 'failedLocationCount: number'
+      return:
+        type:
+          - number
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9a596-105">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="9a596-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-monitor
+  - uid: azure-arm-monitor.LocationThresholdRuleCondition.windowSize
+    name: windowSize
+    fullName: windowSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9a596-106">период времени (в формате длительности ISO 8601), который используется для отслеживания активности оповещения по пороговому значению.</span><span class="sxs-lookup"><span data-stu-id="9a596-106">the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold.</span></span> <span data-ttu-id="9a596-107">Если указан, то он должен быть между 5 минутами и 1 день.</span><span class="sxs-lookup"><span data-stu-id="9a596-107">If specified then it must be between 5 minutes and 1 day.</span></span>'
+    optional: true
+    syntax:
+      content: 'windowSize?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-monitor
+references:
+  - uid: azure-arm-monitor.RuleCondition
+    name: RuleCondition
+    spec.typeScript:
+      - name: RuleCondition
+        fullName: RuleCondition
+        uid: azure-arm-monitor.RuleCondition
+  - uid: azure-arm-monitor.RuleDataSource
+    name: RuleDataSource
+    spec.typeScript:
+      - name: RuleDataSource
+        fullName: RuleDataSource
+        uid: azure-arm-monitor.RuleDataSource

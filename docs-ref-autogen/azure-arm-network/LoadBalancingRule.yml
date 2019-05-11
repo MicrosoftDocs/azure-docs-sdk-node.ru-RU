@@ -1,0 +1,262 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-network.LoadBalancingRule
+    name: LoadBalancingRule
+    fullName: LoadBalancingRule
+    children:
+      - azure-arm-network.LoadBalancingRule.backendAddressPool
+      - azure-arm-network.LoadBalancingRule.backendPort
+      - azure-arm-network.LoadBalancingRule.disableOutboundSnat
+      - azure-arm-network.LoadBalancingRule.enableFloatingIP
+      - azure-arm-network.LoadBalancingRule.enableTcpReset
+      - azure-arm-network.LoadBalancingRule.etag
+      - azure-arm-network.LoadBalancingRule.frontendIPConfiguration
+      - azure-arm-network.LoadBalancingRule.frontendPort
+      - azure-arm-network.LoadBalancingRule.id
+      - azure-arm-network.LoadBalancingRule.idleTimeoutInMinutes
+      - azure-arm-network.LoadBalancingRule.loadDistribution
+      - azure-arm-network.LoadBalancingRule.name
+      - azure-arm-network.LoadBalancingRule.probe
+      - azure-arm-network.LoadBalancingRule.protocol
+      - azure-arm-network.LoadBalancingRule.provisioningState
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="e77f4-101">Правило балансировки нагрузки для подсистемы балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="e77f4-101">A load balancing rule for a load balancer.</span></span>
+    extends:
+      name: azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.backendAddressPool
+    name: backendAddressPool
+    fullName: backendAddressPool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-102">Ссылка на пул частные интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="e77f4-102">A reference to a pool of DIPs.</span></span> <span data-ttu-id="e77f4-103">Входящий трафик случайным образом будет равномерно распределяться между IP-адресов, IP-адреса серверной части.</span><span class="sxs-lookup"><span data-stu-id="e77f4-103">Inbound traffic is randomly load balanced across IPs in the backend IPs.</span></span>'
+    optional: true
+    syntax:
+      content: 'backendAddressPool?: SubResource'
+      return:
+        type:
+          - azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.backendPort
+    name: backendPort
+    fullName: backendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e77f4-104">Порт, используемый для внутренних подключений к конечной точке.</span><span class="sxs-lookup"><span data-stu-id="e77f4-104">The port used for internal connections on the endpoint.</span></span> <span data-ttu-id="e77f4-105">Допустимые значения — от 0 и</span><span class="sxs-lookup"><span data-stu-id="e77f4-105">Acceptable values are between 0 and</span></span>
+      65535. <span data-ttu-id="e77f4-106">Обратите внимание, что значение 0 разрешает «Любой порт»</span><span class="sxs-lookup"><span data-stu-id="e77f4-106">Note that value 0 enables "Any Port"</span></span>
+    optional: true
+    syntax:
+      content: 'backendPort?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.disableOutboundSnat
+    name: disableOutboundSnat
+    fullName: disableOutboundSnat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-107">Настраивает SNAT для виртуальных машин в пуле серверной части, чтобы использовать адрес общедоступный IP-адрес, указанный в интерфейсную часть правила балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="e77f4-107">Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.</span></span>'
+    optional: true
+    syntax:
+      content: 'disableOutboundSnat?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.enableFloatingIP
+    name: enableFloatingIP
+    fullName: enableFloatingIP
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-108">Настраивает конечную точку виртуальной машины для плавающих IP-адреса конфигурации, необходимые для настройки группы доступности AlwaysOn SQL.</span><span class="sxs-lookup"><span data-stu-id="e77f4-108">Configures a virtual machine''s endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group.</span></span> <span data-ttu-id="e77f4-109">Этот параметр является обязательным при использовании групп доступности SQL AlwaysOn в SQL server.</span><span class="sxs-lookup"><span data-stu-id="e77f4-109">This setting is required when using the SQL AlwaysOn Availability Groups in SQL server.</span></span> <span data-ttu-id="e77f4-110">Этот параметр нельзя изменить после создания конечной точки.</span><span class="sxs-lookup"><span data-stu-id="e77f4-110">This setting can''t be changed after you create the endpoint.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableFloatingIP?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.enableTcpReset
+    name: enableTcpReset
+    fullName: enableTcpReset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e77f4-111">Получает двунаправленный сброса TCP на время ожидания простоя TCP потока и завершения Непредвиденная соединений.</span><span class="sxs-lookup"><span data-stu-id="e77f4-111">Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination.</span></span>
+      <span data-ttu-id="e77f4-112">Этот элемент используется только в том случае, если протокол TCP.</span><span class="sxs-lookup"><span data-stu-id="e77f4-112">This element is only used when the protocol is set to TCP.</span></span>
+    optional: true
+    syntax:
+      content: 'enableTcpReset?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-113">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="e77f4-113">A unique read-only string that changes whenever the resource is updated.</span></span>'
+    optional: true
+    syntax:
+      content: 'etag?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.frontendIPConfiguration
+    name: frontendIPConfiguration
+    fullName: frontendIPConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e77f4-114">Ссылка на интерфейсных IP-адреса.</span><span class="sxs-lookup"><span data-stu-id="e77f4-114">A reference to frontend IP addresses.</span></span>
+    optional: true
+    syntax:
+      content: 'frontendIPConfiguration?: SubResource'
+      return:
+        type:
+          - azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.frontendPort
+    name: frontendPort
+    fullName: frontendPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-115">Порт для внешней конечной точки.</span><span class="sxs-lookup"><span data-stu-id="e77f4-115">The port for the external endpoint.</span></span> <span data-ttu-id="e77f4-116">Номера портов для каждого правила должны быть уникальными в подсистеме балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="e77f4-116">Port numbers for each rule must be unique within the Load Balancer.</span></span> <span data-ttu-id="e77f4-117">Допустимые значения — от 0 до 65 534.</span><span class="sxs-lookup"><span data-stu-id="e77f4-117">Acceptable values are between 0 and 65534.</span></span> <span data-ttu-id="e77f4-118">Обратите внимание, что значение 0 разрешает «Любой порт»</span><span class="sxs-lookup"><span data-stu-id="e77f4-118">Note that value 0 enables "Any Port"</span></span>'
+    syntax:
+      content: 'frontendPort: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="e77f4-119">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="e77f4-119">Resource ID.</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.idleTimeoutInMinutes
+    name: idleTimeoutInMinutes
+    fullName: idleTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-120">Время ожидания простоя подключения TCP.</span><span class="sxs-lookup"><span data-stu-id="e77f4-120">The timeout for the TCP idle connection.</span></span> <span data-ttu-id="e77f4-121">Можно задать значение от 4 до 30 минут.</span><span class="sxs-lookup"><span data-stu-id="e77f4-121">The value can be set between 4 and 30 minutes.</span></span> <span data-ttu-id="e77f4-122">Значение по умолчанию — 4 минуты.</span><span class="sxs-lookup"><span data-stu-id="e77f4-122">The default value is 4 minutes.</span></span> <span data-ttu-id="e77f4-123">Этот элемент используется только в том случае, если протокол TCP.</span><span class="sxs-lookup"><span data-stu-id="e77f4-123">This element is only used when the protocol is set to TCP.</span></span>'
+    optional: true
+    syntax:
+      content: 'idleTimeoutInMinutes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.loadDistribution
+    name: loadDistribution
+    fullName: loadDistribution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-124">Политика распределения нагрузки для этого правила.</span><span class="sxs-lookup"><span data-stu-id="e77f4-124">The load distribution policy for this rule.</span></span> <span data-ttu-id="e77f4-125">Возможные значения: «Default», «SourceIP» и «SourceIPProtocol».</span><span class="sxs-lookup"><span data-stu-id="e77f4-125">Possible values are ''Default'', ''SourceIP'', and ''SourceIPProtocol''.</span></span> <span data-ttu-id="e77f4-126">Ниже перечислены возможные значения. «Default», «SourceIP», «SourceIPProtocol»</span><span class="sxs-lookup"><span data-stu-id="e77f4-126">Possible values include: ''Default'', ''SourceIP'', ''SourceIPProtocol''</span></span>'
+    optional: true
+    syntax:
+      content: 'loadDistribution?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-127">Имя ресурса, который является уникальным в пределах группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="e77f4-127">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="e77f4-128">Это имя может использоваться для доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="e77f4-128">This name can be used to access the resource.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.probe
+    name: probe
+    fullName: probe
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-129">Ссылка на зонд подсистемы балансировки нагрузки, используемые правила балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="e77f4-129">The reference of the load balancer probe used by the load balancing rule.</span></span>'
+    optional: true
+    syntax:
+      content: 'probe?: SubResource'
+      return:
+        type:
+          - azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.protocol
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-130">Ссылка на транспортный протокол, используемый правила балансировки нагрузки.</span><span class="sxs-lookup"><span data-stu-id="e77f4-130">The reference to the transport protocol used by the load balancing rule.</span></span> <span data-ttu-id="e77f4-131">Ниже перечислены возможные значения. «Udp», «Tcp», «Все»</span><span class="sxs-lookup"><span data-stu-id="e77f4-131">Possible values include: ''Udp'', ''Tcp'', ''All''</span></span>'
+    syntax:
+      content: 'protocol: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.LoadBalancingRule.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e77f4-132">Получает состояние подготовки ресурса общедоступного IP-адреса.</span><span class="sxs-lookup"><span data-stu-id="e77f4-132">Gets the provisioning state of the PublicIP resource.</span></span> <span data-ttu-id="e77f4-133">Возможные значения: «Обновление», «Удаление» и «Failed».</span><span class="sxs-lookup"><span data-stu-id="e77f4-133">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+references:
+  - uid: azure-arm-network.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-network.SubResource

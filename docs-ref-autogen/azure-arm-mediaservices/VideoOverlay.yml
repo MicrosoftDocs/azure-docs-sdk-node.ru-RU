@@ -1,0 +1,184 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoOverlay
+    name: VideoOverlay
+    fullName: VideoOverlay
+    children:
+      - azure-arm-mediaservices.VideoOverlay.audioGainLevel
+      - azure-arm-mediaservices.VideoOverlay.cropRectangle
+      - azure-arm-mediaservices.VideoOverlay.end
+      - azure-arm-mediaservices.VideoOverlay.fadeInDuration
+      - azure-arm-mediaservices.VideoOverlay.fadeOutDuration
+      - azure-arm-mediaservices.VideoOverlay.inputLabel
+      - azure-arm-mediaservices.VideoOverlay.odatatype
+      - azure-arm-mediaservices.VideoOverlay.opacity
+      - azure-arm-mediaservices.VideoOverlay.position
+      - azure-arm-mediaservices.VideoOverlay.start
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="7d166-101">Описывает свойства наложения видео.</span><span class="sxs-lookup"><span data-stu-id="7d166-101">Describes the properties of a video overlay.</span></span>
+    extends:
+      name: azure-arm-mediaservices.Overlay
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.audioGainLevel
+    name: audioGainLevel
+    fullName: audioGainLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-102">Уровень усиления звука в режиме наложения.</span><span class="sxs-lookup"><span data-stu-id="7d166-102">The gain level of audio in the overlay.</span></span> <span data-ttu-id="7d166-103">Значение должно находиться в диапазоне [0, 1.0].</span><span class="sxs-lookup"><span data-stu-id="7d166-103">The value should be in the range [0, 1.0].</span></span> <span data-ttu-id="7d166-104">По умолчанию используется 1.0.</span><span class="sxs-lookup"><span data-stu-id="7d166-104">The default is 1.0.</span></span>'
+    optional: true
+    syntax:
+      content: 'audioGainLevel?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.cropRectangle
+    name: cropRectangle
+    fullName: cropRectangle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-105">Необязательный прямоугольное окно, позволяет обрезать изображение для наложения или видео.</span><span class="sxs-lookup"><span data-stu-id="7d166-105">An optional rectangular window used to crop the overlay image or video.</span></span>'
+    optional: true
+    syntax:
+      content: 'cropRectangle?: Rectangle'
+      return:
+        type:
+          - azure-arm-mediaservices.Rectangle
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.end
+    name: end
+    fullName: end
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-106">Позиция, в которой заканчивается наложение входного видео.</span><span class="sxs-lookup"><span data-stu-id="7d166-106">The position in the input video at which the overlay ends.</span></span> <span data-ttu-id="7d166-107">Значение должно быть в формате длительности ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="7d166-107">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="7d166-108">Например PT30S концом наложения 30 секунд для входного видео.</span><span class="sxs-lookup"><span data-stu-id="7d166-108">For example, PT30S to end the overlay at 30 seconds in to the input video.</span></span> <span data-ttu-id="7d166-109">Если не указан наложение будет использоваться до конца входного видео, если inputLoop имеет значение true.</span><span class="sxs-lookup"><span data-stu-id="7d166-109">If not specified the overlay will be applied until the end of the input video if inputLoop is true.</span></span> <span data-ttu-id="7d166-110">В противном случае если inputLoop имеет значение false, затем наложения будет существовать пока продолжительность мультимедиа наложения.</span><span class="sxs-lookup"><span data-stu-id="7d166-110">Else, if inputLoop is false, then overlay will last as long as the duration of the overlay media.</span></span>'
+    optional: true
+    syntax:
+      content: 'end?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.fadeInDuration
+    name: fadeInDuration
+    fullName: fadeInDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-111">Интервал времени, по которому наложения отчетливее на входного видео.</span><span class="sxs-lookup"><span data-stu-id="7d166-111">The duration over which the overlay fades in onto the input video.</span></span> <span data-ttu-id="7d166-112">Значение должно быть в формате длительности ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="7d166-112">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="7d166-113">Если не указан, по умолчанию задается требуется не исчезания в (аналогично PT0S).</span><span class="sxs-lookup"><span data-stu-id="7d166-113">If not specified the default behavior is to have no fade in (same as PT0S).</span></span>'
+    optional: true
+    syntax:
+      content: 'fadeInDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.fadeOutDuration
+    name: fadeOutDuration
+    fullName: fadeOutDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-114">Интервал времени, по которому наложения постепенный входного видео.</span><span class="sxs-lookup"><span data-stu-id="7d166-114">The duration over which the overlay fades out of the input video.</span></span> <span data-ttu-id="7d166-115">Значение должно быть в формате длительности ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="7d166-115">The value should be in ISO 8601 duration format.</span></span> <span data-ttu-id="7d166-116">Если не указан, поведение по умолчанию — имеют не исчезания (аналогично PT0S).</span><span class="sxs-lookup"><span data-stu-id="7d166-116">If not specified the default behavior is to have no fade out (same as PT0S).</span></span>'
+    optional: true
+    syntax:
+      content: 'fadeOutDuration?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.inputLabel
+    name: inputLabel
+    fullName: inputLabel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-117">Подпись входных данных задания, который будет использоваться как наложение.</span><span class="sxs-lookup"><span data-stu-id="7d166-117">The label of the job input which is to be used as an overlay.</span></span> <span data-ttu-id="7d166-118">Входные данные необходимо указать только один файл.</span><span class="sxs-lookup"><span data-stu-id="7d166-118">The Input must specify exactly one file.</span></span> <span data-ttu-id="7d166-119">Можно указать файл изображения в форматах JPG или PNG- или аудиофайл (например, файл WAV, MP3, WMA или M4A) или видеофайл.</span><span class="sxs-lookup"><span data-stu-id="7d166-119">You can specify an image file in JPG or PNG formats, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file.</span></span> <span data-ttu-id="7d166-120">См. в разделе https://aka.ms/mesformats полный список поддерживаемых аудио и видео форматы.</span><span class="sxs-lookup"><span data-stu-id="7d166-120">See https://aka.ms/mesformats for the complete list of supported audio and video file formats.</span></span>'
+    syntax:
+      content: 'inputLabel: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="7d166-121">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="7d166-121">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.opacity
+    name: opacity
+    fullName: opacity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-122">Прозрачность наложения.</span><span class="sxs-lookup"><span data-stu-id="7d166-122">The opacity of the overlay.</span></span> <span data-ttu-id="7d166-123">Это значение в диапазоне [0 - 1.0].</span><span class="sxs-lookup"><span data-stu-id="7d166-123">This is a value in the range [0 - 1.0].</span></span> <span data-ttu-id="7d166-124">По умолчанию используется 1.0, это значит, что наложения является непрозрачным.</span><span class="sxs-lookup"><span data-stu-id="7d166-124">Default is 1.0 which mean the overlay is opaque.</span></span>'
+    optional: true
+    syntax:
+      content: 'opacity?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-125">Расположение в входного видео, где применяется наложения.</span><span class="sxs-lookup"><span data-stu-id="7d166-125">The location in the input video where the overlay is applied.</span></span>'
+    optional: true
+    syntax:
+      content: 'position?: Rectangle'
+      return:
+        type:
+          - azure-arm-mediaservices.Rectangle
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoOverlay.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7d166-126">Начальное положение, со ссылкой на входного видео, с которого начинается наложение.</span><span class="sxs-lookup"><span data-stu-id="7d166-126">The start position, with reference to the input video, at which the overlay starts.</span></span> <span data-ttu-id="7d166-127">Значение должно быть в формате ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="7d166-127">The value should be in ISO 8601 format.</span></span> <span data-ttu-id="7d166-128">Например PT05S для запуска в оверлей через 5 секунд в входного видео.</span><span class="sxs-lookup"><span data-stu-id="7d166-128">For example, PT05S to start the overlay at 5 seconds in to the input video.</span></span> <span data-ttu-id="7d166-129">Если не указан наложения начинается от начала входного видео.</span><span class="sxs-lookup"><span data-stu-id="7d166-129">If not specified the overlay starts from the beginning of the input video.</span></span>'
+    optional: true
+    syntax:
+      content: 'start?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Overlay
+    name: Overlay
+    spec.typeScript:
+      - name: Overlay
+        fullName: Overlay
+        uid: azure-arm-mediaservices.Overlay
+  - uid: azure-arm-mediaservices.Rectangle
+    name: Rectangle
+    spec.typeScript:
+      - name: Rectangle
+        fullName: Rectangle
+        uid: azure-arm-mediaservices.Rectangle
