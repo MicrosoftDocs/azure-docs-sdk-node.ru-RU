@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset
+    name: VideoAnalyzerPreset
+    fullName: VideoAnalyzerPreset
+    children:
+      - azure-arm-mediaservices.VideoAnalyzerPreset.audioLanguage
+      - azure-arm-mediaservices.VideoAnalyzerPreset.insightsToExtract
+      - azure-arm-mediaservices.VideoAnalyzerPreset.odatatype
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Это видео анализатор предустановку, извлекает из аудио и видео insights (широкие возможности метаданных), а затем выводит файл формата JSON.'
+    extends:
+      name: azure-arm-mediaservices.AudioAnalyzerPreset
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.audioLanguage
+    name: audioLanguage
+    fullName: audioLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Язык для полезных данных аудио во входных данных в формате BCP-47 «тег языка и региона» (например: «en US»).  Список поддерживаемых языков: английского («en US» и «en-GB»), испанский («es-ES» и «es-MX»), французский («fr-FR»), итальянский («it-IT»), японский («ja-JP»), португальский («pt-BR»), китайский («zh-CN»), немецкий («de-DE»), арабский («ar-EG» и «ar-SY»), русский (" ru-RU "), хинди («hi-IN») и корейском языках («ko-KR»). Если вы знаете язык содержимого, рекомендуется указать его. Если язык не указан или имеет значение NULL, функция автоматического распознавания языка выберет первый обнаруженный язык и обработает весь файл, используя этот язык. Эта возможность обнаружения языка в настоящее время поддерживает английский, китайский, французский, немецкий, итальянский, японский, испанский, русский и португальский. Сейчас она не поддерживает динамическое переключение между языками после распознавания первого языка. Автоматическое обнаружение лучше всего работает с аудиозаписи с четко заметно распознавания речи. Если автоматическое обнаружение не удается найти язык, расшифровка дикторского текста будет резервный «en-US».»'
+    optional: true
+    syntax:
+      content: 'audioLanguage?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.insightsToExtract
+    name: insightsToExtract
+    fullName: insightsToExtract
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Тип insights должно быть извлечено. Если не установлено, затем на основе содержимого, тип будет выбран.  Если содержимое является аудио, только в том случае, то извлекаются только аудио insights, и если это видео только. Ниже перечислены возможные значения. ''AudioInsightsOnly'', ''VideoInsightsOnly'', ''AllInsights'''
+    optional: true
+    syntax:
+      content: 'insightsToExtract?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.VideoAnalyzerPreset.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.AudioAnalyzerPreset
+    name: AudioAnalyzerPreset
+    spec.typeScript:
+      - name: AudioAnalyzerPreset
+        fullName: AudioAnalyzerPreset
+        uid: azure-arm-mediaservices.AudioAnalyzerPreset

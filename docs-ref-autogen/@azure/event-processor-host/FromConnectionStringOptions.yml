@@ -1,0 +1,227 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions'
+    name: FromConnectionStringOptions
+    fullName: FromConnectionStringOptions
+    children:
+      - '@azure/event-processor-host.FromConnectionStringOptions.consumerGroup'
+      - '@azure/event-processor-host.FromConnectionStringOptions.dataTransformer'
+      - '@azure/event-processor-host.FromConnectionStringOptions.eventHubPath'
+      - '@azure/event-processor-host.FromConnectionStringOptions.fastScanInterval'
+      - '@azure/event-processor-host.FromConnectionStringOptions.initialOffset'
+      - '@azure/event-processor-host.FromConnectionStringOptions.leaseDuration'
+      - '@azure/event-processor-host.FromConnectionStringOptions.leaseRenewInterval'
+      - '@azure/event-processor-host.FromConnectionStringOptions.onEphError'
+      - '@azure/event-processor-host.FromConnectionStringOptions.slowScanInterval'
+      - '@azure/event-processor-host.FromConnectionStringOptions.startupScanDelay'
+      - '@azure/event-processor-host.FromConnectionStringOptions.storageBlobPrefix'
+      - '@azure/event-processor-host.FromConnectionStringOptions.userAgent'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Описание необязательных параметров, которые можно указать для создания EventProcessorHost при создании с помощью строки подключения концентратора событий.'
+    extends:
+      name: '@azure/event-processor-host.FromTokenProviderOptions'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.consumerGroup'
+    name: consumerGroup
+    fullName: consumerGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{Строка} [consumerGroup] Имя группы потребителей в концентраторе событий. Значение по умолчанию: ** `"$default"` **.'
+    optional: true
+    syntax:
+      content: 'consumerGroup?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.dataTransformer'
+    name: dataTransformer
+    fullName: dataTransformer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{DataTransformer} [dataTransformer] Преобразователь данных, который будет использоваться для кодирования и декодирования соответственно отправленные и полученные сообщения. Если не указан, то мы будем использовать DefaultDataTransformer. Преобразователь по умолчанию должен обрабатывать большинство вариантов. Этот параметр должен использоваться только для особых ситуациях.'
+    optional: true
+    syntax:
+      content: 'dataTransformer?: DataTransformer'
+      return:
+        type:
+          - DataTransformer
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.eventHubPath'
+    name: eventHubPath
+    fullName: eventHubPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{Строка} [eventHubPath] Имя концентратора событий. Это не обязательно, если строка подключения концентратора событий содержит EntityPath = hub-name else возникает ошибка.'
+    optional: true
+    syntax:
+      content: 'eventHubPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.fastScanInterval'
+    name: fastScanInterval
+    fullName: fastScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {number} [fastScanInterval] Существует два раза больше возможных интервал между проверки на наличие доступных секций, быстрых и медленных запросов. Интервал fast (short) ** `in seconds` ** используется после сканирования, в какие аренду кражи возникло, для обеспечения быстрого перераспределения.
+      Значение по умолчанию — ** `3` секунд**.
+    optional: true
+    syntax:
+      content: 'fastScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.initialOffset'
+    name: initialOffset
+    fullName: initialOffset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Это только initialOffset {EventPosition} используется, когда получатель создается в первый раз, и нет контрольных точек данных в большой двоичный объект. Для этого параметра в силу убедитесь, что для обеспечения новое имя узла, который не использовался ранее.'
+    optional: true
+    syntax:
+      content: 'initialOffset?: EventPosition'
+      return:
+        type:
+          - EventPosition
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.leaseDuration'
+    name: leaseDuration
+    fullName: leaseDuration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{number} [leaseDuration] Продолжительность аренды ** `in seconds` ** до истечения срока его действия, если не обновлен. Значение по умолчанию — ** `30` секунд**, минимальное значение: ** `15` секунд**, максимальное значение: ** `60` секунд**.'
+    optional: true
+    syntax:
+      content: 'leaseDuration?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.leaseRenewInterval'
+    name: leaseRenewInterval
+    fullName: leaseRenewInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {number} [leaseRenewInterval] В течение заданного интервала ** `in seconds` ** между операциями сканирования.
+      Значение по умолчанию — ** `10` секунд**.
+
+      Позволяет указать PartitionManager, как часто следует проверять аренды и обновлять их реализации диспетчера аренды. Чтобы перераспределить аренды за отведенное время, после узла прекращает операционной, мы рекомендуем относительно короткий интервал времени, например через десять секунд. Очевидно, что она должна быть меньше половины продолжительность аренды, чтобы предотвратить случайное истечения срока действия.
+    optional: true
+    syntax:
+      content: 'leaseRenewInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.onEphError'
+    name: onEphError
+    fullName: onEphError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      {OnEphError} [onEphError] Обработчик ошибок, который можно предоставить для получения уведомлений для общих ошибок.
+
+      Ошибки, возникающие при обработке события из определенной секции концентратора событий доставляются `onError` обработчик, указанный в `start()` метод. Этот обработчик вызывается в случаях, при возникновении ошибки при управлении секций или аренды для секций.
+    optional: true
+    syntax:
+      content: 'onEphError?: OnEphError'
+      return:
+        type:
+          - '@azure/event-processor-host.OnEphError'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.slowScanInterval'
+    name: slowScanInterval
+    fullName: slowScanInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{number} [slowScanInterval] Медленно (long) интервал ** `in seconds` ** используется после сканирования, в какие аренду кражи не выполнена, для уменьшения ненужные сканирования, когда система находится в устойчивом состоянии. Значение по умолчанию — ** `5` секунд**.'
+    optional: true
+    syntax:
+      content: 'slowScanInterval?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.startupScanDelay'
+    name: startupScanDelay
+    fullName: startupScanDelay
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{number} [startupScanDelay] Время задержки ** `in seconds` ** между первый поиск доступных секций, а второй. Это является частью оптимизации запуска, который позволяет отдельным узлам становятся видимыми на другие узлы и тем самым получить более точное число количество узлов в системе, прежде чем они пытаются оценить количество секций, они должны отвечать. Значение по умолчанию — ** `30` секунд**.'
+    optional: true
+    syntax:
+      content: 'startupScanDelay?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.storageBlobPrefix'
+    name: storageBlobPrefix
+    fullName: storageBlobPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{Строка} [storageBlobPrefix] Префикс, используемый при именовании BLOB-объектов в контейнер хранилища.'
+    optional: true
+    syntax:
+      content: 'storageBlobPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.FromConnectionStringOptions.userAgent'
+    name: userAgent
+    fullName: userAgent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{Строка} [userAgent] Агент пользователя, необходимо добавить для пользователя встроенные строки агента.'
+    optional: true
+    syntax:
+      content: 'userAgent?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.FromTokenProviderOptions'
+    name: FromTokenProviderOptions
+    spec.typeScript:
+      - name: FromTokenProviderOptions
+        fullName: FromTokenProviderOptions
+        uid: '@azure/event-processor-host.FromTokenProviderOptions'
+  - uid: '@azure/event-processor-host.OnEphError'
+    name: OnEphError
+    spec.typeScript:
+      - name: OnEphError
+        fullName: OnEphError
+        uid: '@azure/event-processor-host.OnEphError'
