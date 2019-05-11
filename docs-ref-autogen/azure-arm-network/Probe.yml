@@ -1,0 +1,186 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-network.Probe
+    name: Probe
+    fullName: Probe
+    children:
+      - azure-arm-network.Probe.etag
+      - azure-arm-network.Probe.id
+      - azure-arm-network.Probe.intervalInSeconds
+      - azure-arm-network.Probe.loadBalancingRules
+      - azure-arm-network.Probe.name
+      - azure-arm-network.Probe.numberOfProbes
+      - azure-arm-network.Probe.port
+      - azure-arm-network.Probe.protocol
+      - azure-arm-network.Probe.provisioningState
+      - azure-arm-network.Probe.requestPath
+    langs:
+      - typeScript
+    type: interface
+    summary: Зонд подсистемы балансировки нагрузки.
+    extends:
+      name: azure-arm-network.SubResource
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.etag
+    name: etag
+    fullName: etag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Уникальная только для чтения строка, изменяется при изменении ресурса.'
+    optional: true
+    syntax:
+      content: 'etag?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Идентификатор ресурса.
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.intervalInSeconds
+    name: intervalInSeconds
+    fullName: intervalInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Интервал в секундах, определяющий частоту, с которой проверяется состояние работоспособности конечной точки.\nОбычно интервал немного меньше, чем половина выделенного времени ожидания (в секундах), что позволяет провести две полные проверки, прежде чем исключить экземпляр из работы. Значение по умолчанию равно\_15, а минимальное\_— 5."
+    optional: true
+    syntax:
+      content: 'intervalInSeconds?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.loadBalancingRules
+    name: loadBalancingRules
+    fullName: loadBalancingRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Правила балансировщика нагрузки, которые используют эту проверку.'
+    optional: true
+    syntax:
+      content: 'loadBalancingRules?: SubResource[]'
+      return:
+        type:
+          - 'azure-arm-network.SubResource[]'
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Возвращает имя ресурса, который является уникальным в пределах группы ресурсов. Это имя может использоваться для доступа к ресурсу.'
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.numberOfProbes
+    name: numberOfProbes
+    fullName: numberOfProbes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Число проверок where, если ответ не приведет к остановке дальнейшей трафика соответствующей конечной точке. Это значение позволяет конечных точек, которые должны выполняться из ротации быстрее или медленнее, чем обычного параметра количества попыток в Azure.'
+    optional: true
+    syntax:
+      content: 'numberOfProbes?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.port
+    name: port
+    fullName: port
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Порт связи с проверкой. Диапазон возможных значений: от 1 до 65\_535 включительно."
+    syntax:
+      content: 'port: number'
+      return:
+        type:
+          - number
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.protocol
+    name: protocol
+    fullName: protocol
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Протокол конечной точки. Возможные значения: «Http», «Tcp» или «Https». Если указано «Tcp», получено подтверждение не требуется для проверки успешного. Если указано «Http» или «Https», ответ 200 ОК из указывает URI является обязательным для пробы для успешной работы. Ниже перечислены возможные значения. «Http», «Tcp», «Https»'
+    syntax:
+      content: 'protocol: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Получает состояние подготовки ресурса общедоступного IP-адрес. Возможные значения: «Обновление», «Удаление» и «Failed».'
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+  - uid: azure-arm-network.Probe.requestPath
+    name: requestPath
+    fullName: requestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'URI используется, чтобы запросить состояние работоспособности у виртуальной машины. Путь является обязательным, если протокол http. В других случаях он запрещен. Нет значения по умолчанию.'
+    optional: true
+    syntax:
+      content: 'requestPath?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-network
+references:
+  - uid: azure-arm-network.SubResource
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-network.SubResource
+  - uid: 'azure-arm-network.SubResource[]'
+    name: 'SubResource[]'
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: azure-arm-network.SubResource
+      - name: '[]'
+        fullName: '[]'
