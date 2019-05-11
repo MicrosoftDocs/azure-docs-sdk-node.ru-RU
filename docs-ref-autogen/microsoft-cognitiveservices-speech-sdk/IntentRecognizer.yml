@@ -1,0 +1,471 @@
+### YamlMime:UniversalReference
+items:
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer
+    name: IntentRecognizer
+    fullName: IntentRecognizer
+    children:
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.addAllIntents
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.addIntent
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.addIntentWithLanguageModel
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.authorizationToken
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.canceled
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.close
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.enableTelemetry
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.constructor
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.properties
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognized
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognizeOnceAsync
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognizing
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.sessionStarted
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.sessionStopped
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechEndDetected
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechRecognitionLanguage
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechStartDetected
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startContinuousRecognitionAsync
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startKeywordRecognitionAsync
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.stopContinuousRecognitionAsync
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.stopKeywordRecognitionAsync
+      - microsoft-cognitiveservices-speech-sdk.IntentRecognizer.telemetryEnabled
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="4681a-101">Блокировка намерения распознаватель.</span><span class="sxs-lookup"><span data-stu-id="4681a-101">Intent recognizer.</span></span>
+    extends:
+      name: microsoft-cognitiveservices-speech-sdk.Recognizer
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.addAllIntents
+    name: 'addAllIntents(LanguageUnderstandingModel, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function addAllIntents(model: LanguageUnderstandingModel, intentId?: string)'
+      parameters:
+        - id: model
+          type:
+            - microsoft-cognitiveservices-speech-sdk.LanguageUnderstandingModel
+          description: '<span data-ttu-id="4681a-102">Основные сведения о языковая модель, содержащая намерений.</span><span class="sxs-lookup"><span data-stu-id="4681a-102">The language understanding model containing the intents.</span></span>'
+        - id: intentId
+          type:
+            - string
+          description: |
+            <span data-ttu-id="4681a-103">Пользовательский идентификатор в методе getIntentId() IntentRecognitionResult возвращаемой строки.</span><span class="sxs-lookup"><span data-stu-id="4681a-103">A custom id String to be returned in the IntentRecognitionResult's getIntentId() method.</span></span>
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.addIntent
+    name: 'addIntent(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="4681a-104">Добавляет фразу, которая должны распознаваться как намерение.</span><span class="sxs-lookup"><span data-stu-id="4681a-104">Adds a phrase that should be recognized as intent.</span></span>'
+    syntax:
+      content: 'function addIntent(simplePhrase: string, intentId?: string)'
+      parameters:
+        - id: simplePhrase
+          type:
+            - string
+          description: ''
+        - id: intentId
+          type:
+            - string
+          description: '<span data-ttu-id="4681a-105">Строка, представляющая идентификатор объекта intent для распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-105">A String that represents the identifier of the intent to be recognized.</span></span>'
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.addIntentWithLanguageModel
+    name: 'addIntentWithLanguageModel(string, LanguageUnderstandingModel, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4681a-106">Добавляет объект intent из службы Language Understanding для распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-106">Adds an intent from Language Understanding service for recognition.</span></span>
+    syntax:
+      content: 'function addIntentWithLanguageModel(intentId: string, model: LanguageUnderstandingModel, intentName?: string)'
+      parameters:
+        - id: intentId
+          type:
+            - string
+          description: '<span data-ttu-id="4681a-107">Строка, представляющая идентификатор объекта intent для распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-107">A String that represents the identifier of the intent to be recognized.</span></span> <span data-ttu-id="4681a-108">Учитывается, если intentName является пустым.</span><span class="sxs-lookup"><span data-stu-id="4681a-108">Ignored if intentName is empty.</span></span>'
+        - id: model
+          type:
+            - microsoft-cognitiveservices-speech-sdk.LanguageUnderstandingModel
+          description: <span data-ttu-id="4681a-109">Блокировка намерения модель из службы Language Understanding.</span><span class="sxs-lookup"><span data-stu-id="4681a-109">The intent model from Language Understanding service.</span></span>
+        - id: intentName
+          type:
+            - string
+          description: |
+            <span data-ttu-id="4681a-110">Намерением имя, определенное в модели намерений.</span><span class="sxs-lookup"><span data-stu-id="4681a-110">The intent name defined in the intent model.</span></span> <span data-ttu-id="4681a-111">Если он пуст, будут добавляться все намерений имена, определенные в модели.</span><span class="sxs-lookup"><span data-stu-id="4681a-111">If it is empty, all intent names defined in the model will be added.</span></span>
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.authorizationToken
+    name: authorizationToken
+    fullName: authorizationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="4681a-112">Получает или задает токен авторизации, используемый для взаимодействия со службой.</span><span class="sxs-lookup"><span data-stu-id="4681a-112">Gets/Sets the authorization token used to communicate with the service.</span></span>
+      <span data-ttu-id="4681a-113">Примечание. Используйте токен базируются на ключ подписки LanguageUnderstanding намерений распознаватель.</span><span class="sxs-lookup"><span data-stu-id="4681a-113">Note: Please use a token derived from your LanguageUnderstanding subscription key for the Intent recognizer.</span></span>
+    syntax:
+      content: 'public authorizationToken: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.canceled
+    name: canceled
+    fullName: canceled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4681a-114">Отменить событие сигнализирует произошла ошибка во время распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-114">The event canceled signals that an error occurred during recognition.</span></span>
+    syntax:
+      content: 'public canceled: (sender: IntentRecognizer, event: IntentRecognitionCanceledEventArgs) => void'
+      return:
+        type:
+          - '(sender: IntentRecognizer, event: IntentRecognitionCanceledEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.close
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="4681a-115">Закрывает все внешние ресурсы, занятые экземплярами этого класса.</span><span class="sxs-lookup"><span data-stu-id="4681a-115">closes all external resources held by an instance of this class.</span></span>'
+    syntax:
+      content: function close()
+      parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.enableTelemetry
+    name: enableTelemetry(boolean)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4681a-116">Этот метод глобально включает или отключает телеметрию.</span><span class="sxs-lookup"><span data-stu-id="4681a-116">This method globally enables or disables telemetry.</span></span>
+    syntax:
+      content: 'static function enableTelemetry(enabled: boolean)'
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: |
+            <span data-ttu-id="4681a-117">Глобальный параметр для сбора телеметрии.</span><span class="sxs-lookup"><span data-stu-id="4681a-117">Global setting for telemetry collection.</span></span>
+            <span data-ttu-id="4681a-118">Если задано значение true, данные телеметрии, такие как ошибки "микрофон", об ошибках распознавания собираются и отправляются в корпорацию Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="4681a-118">If set to true, telemetry information like microphone errors, recognition errors are collected and sent to Microsoft.</span></span>
+            <span data-ttu-id="4681a-119">Если задано значение false, не данные телеметрии отправляются в корпорацию Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="4681a-119">If set to false, no telemetry is sent to Microsoft.</span></span>
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.constructor
+    name: 'IntentRecognizer(SpeechConfig, AudioConfig)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4681a-120">Инициализирует новый экземпляр класса IntentRecognizer.</span><span class="sxs-lookup"><span data-stu-id="4681a-120">Initializes an instance of the IntentRecognizer.</span></span>
+    syntax:
+      content: 'new IntentRecognizer(speechConfig: SpeechConfig, audioConfig?: AudioConfig)'
+      parameters:
+        - id: speechConfig
+          type:
+            - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+          description: <span data-ttu-id="4681a-121">Набор свойств конфигурации.</span><span class="sxs-lookup"><span data-stu-id="4681a-121">The set of configuration properties.</span></span>
+        - id: audioConfig
+          type:
+            - microsoft-cognitiveservices-speech-sdk.AudioConfig
+          description: |
+            <span data-ttu-id="4681a-122">Необязательный аудио конфигурации ввода сопоставленный распознавателя</span><span class="sxs-lookup"><span data-stu-id="4681a-122">An optional audio input config associated with the recognizer</span></span>
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4681a-123">Коллекция свойств и их значений, определенных для этого IntentRecognizer.</span><span class="sxs-lookup"><span data-stu-id="4681a-123">The collection of properties and their values defined for this IntentRecognizer.</span></span>'
+    syntax:
+      content: 'public properties: PropertyCollection'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.PropertyCollection
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognized
+    name: recognized
+    fullName: recognized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4681a-124">Сообщает, что получен результат распознавания окончательный удалось распознать событие.</span><span class="sxs-lookup"><span data-stu-id="4681a-124">The event recognized signals that a final recognition result is received.</span></span>'
+    syntax:
+      content: 'public recognized: (sender: IntentRecognizer, event: IntentRecognitionEventArgs) => void'
+      return:
+        type:
+          - '(sender: IntentRecognizer, event: IntentRecognitionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognizeOnceAsync
+    name: 'recognizeOnceAsync((e: IntentRecognitionResult) => void, (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4681a-125">Распознавание сути высказывания начинается и останавливается после первого utterance распознается.</span><span class="sxs-lookup"><span data-stu-id="4681a-125">Starts intent recognition, and stops after the first utterance is recognized.</span></span>
+      <span data-ttu-id="4681a-126">Задача возвращает распознавания текста и только для чтения в виде результата.</span><span class="sxs-lookup"><span data-stu-id="4681a-126">The task returns the recognition text and intent as result.</span></span>
+      <span data-ttu-id="4681a-127">Примечание. RecognizeOnceAsync() возвращает при первом utterance был распознан, поэтому ее можно использовать только один снимок распознавания как команды или запроса.</span><span class="sxs-lookup"><span data-stu-id="4681a-127">Note: RecognizeOnceAsync() returns when the first utterance has been recognized, so it is suitable only for single shot recognition like command or query.</span></span>
+      <span data-ttu-id="4681a-128">Для распознавания выполняющейся длительное время используйте StartContinuousRecognitionAsync().</span><span class="sxs-lookup"><span data-stu-id="4681a-128">For long-running recognition, use StartContinuousRecognitionAsync() instead.</span></span>
+    syntax:
+      content: 'function recognizeOnceAsync(cb?: (e: IntentRecognitionResult) => void, err?: (e: string) => void)'
+      parameters:
+        - id: cb
+          type:
+            - '(e: IntentRecognitionResult) => void'
+          description: '<span data-ttu-id="4681a-129">С помощью IntentRecognitionResult завершения обратного вызова, который получил признание.</span><span class="sxs-lookup"><span data-stu-id="4681a-129">Callback that received the recognition has finished with an IntentRecognitionResult.</span></span>'
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: |
+            <span data-ttu-id="4681a-130">Обратный вызов вызывается в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="4681a-130">Callback invoked in case of an error.</span></span>
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.recognizing
+    name: recognizing
+    fullName: recognizing
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4681a-131">Событие, распознавая сигналов, что получен результат промежуточного распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-131">The event recognizing signals that an intermediate recognition result is received.</span></span>'
+    syntax:
+      content: 'public recognizing: (sender: IntentRecognizer, event: IntentRecognitionEventArgs) => void'
+      return:
+        type:
+          - '(sender: IntentRecognizer, event: IntentRecognitionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.sessionStarted
+    name: sessionStarted
+    fullName: sessionStarted
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4681a-132">Определяет обработчик событий для события сеанса работы.</span><span class="sxs-lookup"><span data-stu-id="4681a-132">Defines event handler for session started events.</span></span>
+    syntax:
+      content: 'public sessionStarted: (sender: Recognizer, event: SessionEventArgs) => void'
+      return:
+        type:
+          - '(sender: Recognizer, event: SessionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.sessionStopped
+    name: sessionStopped
+    fullName: sessionStopped
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4681a-133">Определяет обработчик событий для остановки сеанса событий.</span><span class="sxs-lookup"><span data-stu-id="4681a-133">Defines event handler for session stopped events.</span></span>
+    syntax:
+      content: 'public sessionStopped: (sender: Recognizer, event: SessionEventArgs) => void'
+      return:
+        type:
+          - '(sender: Recognizer, event: SessionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechEndDetected
+    name: speechEndDetected
+    fullName: speechEndDetected
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4681a-134">Определяет обработчик событий для события речи остановлена.</span><span class="sxs-lookup"><span data-stu-id="4681a-134">Defines event handler for speech stopped events.</span></span>
+    syntax:
+      content: 'public speechEndDetected: (sender: Recognizer, event: RecognitionEventArgs) => void'
+      return:
+        type:
+          - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechRecognitionLanguage
+    name: speechRecognitionLanguage
+    fullName: speechRecognitionLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4681a-135">Получает устной распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-135">Gets the spoken language of recognition.</span></span>
+    syntax:
+      content: 'public speechRecognitionLanguage: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.speechStartDetected
+    name: speechStartDetected
+    fullName: speechStartDetected
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4681a-136">Определяет обработчик событий для события запуска речи.</span><span class="sxs-lookup"><span data-stu-id="4681a-136">Defines event handler for speech started events.</span></span>
+    syntax:
+      content: 'public speechStartDetected: (sender: Recognizer, event: RecognitionEventArgs) => void'
+      return:
+        type:
+          - '(sender: Recognizer, event: RecognitionEventArgs) => void'
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startContinuousRecognitionAsync
+    name: 'startContinuousRecognitionAsync(() => void, (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4681a-137">Запуск распознавания речи, пока не будет вызван stopContinuousRecognitionAsync().</span><span class="sxs-lookup"><span data-stu-id="4681a-137">Starts speech recognition, until stopContinuousRecognitionAsync() is called.</span></span>
+      <span data-ttu-id="4681a-138">Пользователю необходимо подписаться на события для получения результатов распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-138">User must subscribe to events to receive recognition results.</span></span>
+    syntax:
+      content: 'function startContinuousRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+      parameters:
+        - id: cb
+          type:
+            - () => void
+          description: <span data-ttu-id="4681a-139">Обратный вызов вызывается после начала распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-139">Callback invoked once the recognition has started.</span></span>
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: |
+            <span data-ttu-id="4681a-140">Обратный вызов вызывается в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="4681a-140">Callback invoked in case of an error.</span></span>
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.startKeywordRecognitionAsync
+    name: 'startKeywordRecognitionAsync(KeywordRecognitionModel, () => void, (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4681a-141">Распознавание речи начинается с идентификации ключевое слово, пока не будет вызван stopKeywordRecognitionAsync().</span><span class="sxs-lookup"><span data-stu-id="4681a-141">Starts speech recognition with keyword spotting, until stopKeywordRecognitionAsync() is called.</span></span>
+      <span data-ttu-id="4681a-142">Пользователю необходимо подписаться на события для получения результатов распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-142">User must subscribe to events to receive recognition results.</span></span>
+      <span data-ttu-id="4681a-143">Примечание. Ключевое слово, выявления функциональность доступна только в Speech SDK устройства.</span><span class="sxs-lookup"><span data-stu-id="4681a-143">Note: Key word spotting functionality is only available on the Speech Devices SDK.</span></span>
+      <span data-ttu-id="4681a-144">В настоящее время эта функция не включается в сам пакет SDK.</span><span class="sxs-lookup"><span data-stu-id="4681a-144">This functionality is currently not included in the SDK itself.</span></span>
+    syntax:
+      content: 'function startKeywordRecognitionAsync(model: KeywordRecognitionModel, cb?: () => void, err?: (e: string) => void)'
+      parameters:
+        - id: model
+          type:
+            - microsoft-cognitiveservices-speech-sdk.KeywordRecognitionModel
+          description: '<span data-ttu-id="4681a-145">Модель ключевого слова признания, которая указывается ключевое слово для распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-145">The keyword recognition model that specifies the keyword to be recognized.</span></span>'
+        - id: cb
+          type:
+            - () => void
+          description: <span data-ttu-id="4681a-146">Обратный вызов вызывается после начала распознавания.</span><span class="sxs-lookup"><span data-stu-id="4681a-146">Callback invoked once the recognition has started.</span></span>
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: |
+            <span data-ttu-id="4681a-147">Обратный вызов вызывается в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="4681a-147">Callback invoked in case of an error.</span></span>
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.stopContinuousRecognitionAsync
+    name: 'stopContinuousRecognitionAsync(() => void, (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="4681a-148">Останавливает непрерывные распознавание сути высказывания.</span><span class="sxs-lookup"><span data-stu-id="4681a-148">Stops continuous intent recognition.</span></span>
+    syntax:
+      content: 'function stopContinuousRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+      parameters:
+        - id: cb
+          type:
+            - () => void
+          description: <span data-ttu-id="4681a-149">Обратный вызов вызывается после распознавания был остановлен.</span><span class="sxs-lookup"><span data-stu-id="4681a-149">Callback invoked once the recognition has stopped.</span></span>
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: |
+            <span data-ttu-id="4681a-150">Обратный вызов вызывается в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="4681a-150">Callback invoked in case of an error.</span></span>
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.stopKeywordRecognitionAsync
+    name: 'stopKeywordRecognitionAsync(() => void, (e: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="4681a-151">Останавливает распознавания речи непрерывной.</span><span class="sxs-lookup"><span data-stu-id="4681a-151">Stops continuous speech recognition.</span></span>
+      <span data-ttu-id="4681a-152">Примечание. Ключевое слово, выявления функциональность доступна только в Speech SDK устройства.</span><span class="sxs-lookup"><span data-stu-id="4681a-152">Note: Key word spotting functionality is only available on the Speech Devices SDK.</span></span>
+      <span data-ttu-id="4681a-153">В настоящее время эта функция не включается в сам пакет SDK.</span><span class="sxs-lookup"><span data-stu-id="4681a-153">This functionality is currently not included in the SDK itself.</span></span>
+    syntax:
+      content: 'function stopKeywordRecognitionAsync(cb?: () => void, err?: (e: string) => void)'
+      parameters:
+        - id: cb
+          type:
+            - () => void
+          description: <span data-ttu-id="4681a-154">Обратный вызов вызывается после распознавания был остановлен.</span><span class="sxs-lookup"><span data-stu-id="4681a-154">Callback invoked once the recognition has stopped.</span></span>
+          optional: true
+        - id: err
+          type:
+            - '(e: string) => void'
+          description: |
+            <span data-ttu-id="4681a-155">Обратный вызов вызывается в случае возникновения ошибки.</span><span class="sxs-lookup"><span data-stu-id="4681a-155">Callback invoked in case of an error.</span></span>
+          optional: true
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.IntentRecognizer.telemetryEnabled
+    name: telemetryEnabled
+    fullName: telemetryEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4681a-156">Этот метод возвращает текущее состояние параметра телеметрии.</span><span class="sxs-lookup"><span data-stu-id="4681a-156">This method returns the current state of the telemetry setting.</span></span>
+    syntax:
+      content: 'public static telemetryEnabled: boolean'
+      return:
+        type:
+          - boolean
+    package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+    name: Recognizer
+    spec.typeScript:
+      - name: Recognizer
+        fullName: Recognizer
+        uid: microsoft-cognitiveservices-speech-sdk.Recognizer
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    spec.typeScript:
+      - name: SpeechConfig
+        fullName: SpeechConfig
+        uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+  - uid: microsoft-cognitiveservices-speech-sdk.AudioConfig
+    name: AudioConfig
+    spec.typeScript:
+      - name: AudioConfig
+        fullName: AudioConfig
+        uid: microsoft-cognitiveservices-speech-sdk.AudioConfig
+  - uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection
+    name: PropertyCollection
+    spec.typeScript:
+      - name: PropertyCollection
+        fullName: PropertyCollection
+        uid: microsoft-cognitiveservices-speech-sdk.PropertyCollection
+  - uid: microsoft-cognitiveservices-speech-sdk.LanguageUnderstandingModel
+    name: LanguageUnderstandingModel
+    spec.typeScript:
+      - name: LanguageUnderstandingModel
+        fullName: LanguageUnderstandingModel
+        uid: microsoft-cognitiveservices-speech-sdk.LanguageUnderstandingModel
+  - uid: microsoft-cognitiveservices-speech-sdk.KeywordRecognitionModel
+    name: KeywordRecognitionModel
+    spec.typeScript:
+      - name: KeywordRecognitionModel
+        fullName: KeywordRecognitionModel
+        uid: microsoft-cognitiveservices-speech-sdk.KeywordRecognitionModel

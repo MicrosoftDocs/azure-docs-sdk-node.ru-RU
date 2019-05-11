@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.SingletonPartitionInformation
+    name: SingletonPartitionInformation
+    fullName: SingletonPartitionInformation
+    children:
+      - azure-servicefabric.SingletonPartitionInformation.id
+      - azure-servicefabric.SingletonPartitionInformation.servicePartitionKind
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="afb24-101">Сведения о секции, выходящей singleton.</span><span class="sxs-lookup"><span data-stu-id="afb24-101">Information about a partition that is singleton.</span></span> <span data-ttu-id="afb24-102">Службы с использованием схемы секционирования singleton, эффективно без секционирования.</span><span class="sxs-lookup"><span data-stu-id="afb24-102">The services with singleton partitioning scheme are effectively non-partitioned.</span></span> <span data-ttu-id="afb24-103">Остался только один раздел.</span><span class="sxs-lookup"><span data-stu-id="afb24-103">They only have one partition.</span></span>'
+    extends:
+      name: azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SingletonPartitionInformation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="afb24-104">Внутренний идентификатор, используемый Service Fabric для уникальной идентификации секции.</span><span class="sxs-lookup"><span data-stu-id="afb24-104">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="afb24-105">Это произвольно созданным GUID, если служба была создана.</span><span class="sxs-lookup"><span data-stu-id="afb24-105">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="afb24-106">Идентификатор секции уникален и не изменяется в течение времени существования службы.</span><span class="sxs-lookup"><span data-stu-id="afb24-106">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="afb24-107">Если же служба удалена и создана повторно идентификаторы секций будет отличаться.</span><span class="sxs-lookup"><span data-stu-id="afb24-107">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SingletonPartitionInformation.servicePartitionKind
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="afb24-108">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="afb24-108">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'servicePartitionKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation

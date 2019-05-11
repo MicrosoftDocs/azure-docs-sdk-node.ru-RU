@@ -1,0 +1,161 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo
+    name: DeployedStatelessServiceInstanceDetailInfo
+    fullName: DeployedStatelessServiceInstanceDetailInfo
+    children:
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperation
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperationStartTimeUtc
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.partitionId
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.reportedLoad
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceKind
+      - azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceName
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="aba1c-101">Сведения о экземпляра без отслеживания состояния, выполнив в пакете кода.</span><span class="sxs-lookup"><span data-stu-id="aba1c-101">Information about a stateless instance running in a code package.</span></span> <span data-ttu-id="aba1c-102">Обратите внимание на то, что DeployedServiceReplicaQueryResult будет содержать дублирующихся данных, таких как ServiceKind, ServiceName, PartitionId и InstanceId.</span><span class="sxs-lookup"><span data-stu-id="aba1c-102">Note that DeployedServiceReplicaQueryResult will contain duplicate data like ServiceKind, ServiceName, PartitionId and InstanceId.</span></span>'
+    extends:
+      name: azure-servicefabric.DeployedServiceReplicaDetailInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperation
+    name: currentServiceOperation
+    fullName: currentServiceOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aba1c-103">Указывает текущую операцию active жизненного цикла реплики службы с отслеживанием состояния или экземпляра службы без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="aba1c-103">Specifies the current active life-cycle operation on a stateful service replica or stateless service instance.</span></span> <span data-ttu-id="aba1c-104">Ниже перечислены возможные значения. «Неизвестный», «None», «открыть», «ChangeRole», «Закрытие», «Прервать»</span><span class="sxs-lookup"><span data-stu-id="aba1c-104">Possible values include: ''Unknown'', ''None'', ''Open'', ''ChangeRole'', ''Close'', ''Abort''</span></span>'
+    optional: true
+    syntax:
+      content: 'currentServiceOperation?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.currentServiceOperationStartTimeUtc
+    name: currentServiceOperationStartTimeUtc
+    fullName: currentServiceOperationStartTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="aba1c-105">Время начала текущей операции службы в формате UTC.</span><span class="sxs-lookup"><span data-stu-id="aba1c-105">The start time of the current service operation in UTC format.</span></span>
+    optional: true
+    syntax:
+      content: 'currentServiceOperationStartTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.deployedServiceReplicaQueryResult
+    name: deployedServiceReplicaQueryResult
+    fullName: deployedServiceReplicaQueryResult
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aba1c-106">Сведения об экземпляре службы без отслеживания состояния, развернутых на узле.</span><span class="sxs-lookup"><span data-stu-id="aba1c-106">Information about a stateless service instance deployed on a node.</span></span>'
+    optional: true
+    syntax:
+      content: 'deployedServiceReplicaQueryResult?: DeployedStatelessServiceInstanceInfo'
+      return:
+        type:
+          - azure-servicefabric.DeployedStatelessServiceInstanceInfo
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aba1c-107">Идентификатор экземпляра службы без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="aba1c-107">Id of a stateless service instance.</span></span> <span data-ttu-id="aba1c-108">InstanceId используется Service Fabric для уникальной идентификации экземпляра секции службы без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="aba1c-108">InstanceId is used by Service Fabric to uniquely identify an instance of a partition of a stateless service.</span></span> <span data-ttu-id="aba1c-109">Он уникален в пределах секции и остается неизменным в течение времени существования экземпляра.</span><span class="sxs-lookup"><span data-stu-id="aba1c-109">It is unique within a partition and does not change for the lifetime of the instance.</span></span> <span data-ttu-id="aba1c-110">Если экземпляр отработка отказа на том же или другом узле, получите другое значение для InstanceId.</span><span class="sxs-lookup"><span data-stu-id="aba1c-110">If the instance has failed over on the same or different node, it will get a different value for the InstanceId.</span></span>'
+    optional: true
+    syntax:
+      content: 'instanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aba1c-111">Внутренний идентификатор, используемый Service Fabric для уникальной идентификации секции.</span><span class="sxs-lookup"><span data-stu-id="aba1c-111">An internal ID used by Service Fabric to uniquely identify a partition.</span></span> <span data-ttu-id="aba1c-112">Это произвольно созданным GUID, если служба была создана.</span><span class="sxs-lookup"><span data-stu-id="aba1c-112">This is a randomly generated GUID when the service was created.</span></span> <span data-ttu-id="aba1c-113">Идентификатор секции уникален и не изменяется в течение времени существования службы.</span><span class="sxs-lookup"><span data-stu-id="aba1c-113">The partition ID is unique and does not change for the lifetime of the service.</span></span> <span data-ttu-id="aba1c-114">Если же служба удалена и создана повторно идентификаторы секций будет отличаться.</span><span class="sxs-lookup"><span data-stu-id="aba1c-114">If the same service was deleted and recreated the IDs of its partitions would be different.</span></span>'
+    optional: true
+    syntax:
+      content: 'partitionId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.reportedLoad
+    name: reportedLoad
+    fullName: reportedLoad
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aba1c-115">Список нагрузки, о которых сообщает реплики.</span><span class="sxs-lookup"><span data-stu-id="aba1c-115">List of load reported by replica.</span></span>'
+    optional: true
+    syntax:
+      content: 'reportedLoad?: LoadMetricReportInfo[]'
+      return:
+        type:
+          - 'azure-servicefabric.LoadMetricReportInfo[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="aba1c-116">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="aba1c-116">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceDetailInfo.serviceName
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aba1c-117">Полное иерархическое имя службы в формате URI, начиная с `fabric:`.</span><span class="sxs-lookup"><span data-stu-id="aba1c-117">Full hierarchical name of the service in URI format starting with `fabric:`.</span></span>'
+    optional: true
+    syntax:
+      content: 'serviceName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+    name: DeployedServiceReplicaDetailInfo
+    spec.typeScript:
+      - name: DeployedServiceReplicaDetailInfo
+        fullName: DeployedServiceReplicaDetailInfo
+        uid: azure-servicefabric.DeployedServiceReplicaDetailInfo
+  - uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
+    name: DeployedStatelessServiceInstanceInfo
+    spec.typeScript:
+      - name: DeployedStatelessServiceInstanceInfo
+        fullName: DeployedStatelessServiceInstanceInfo
+        uid: azure-servicefabric.DeployedStatelessServiceInstanceInfo
+  - uid: 'azure-servicefabric.LoadMetricReportInfo[]'
+    name: 'LoadMetricReportInfo[]'
+    spec.typeScript:
+      - name: LoadMetricReportInfo
+        fullName: LoadMetricReportInfo
+        uid: azure-servicefabric.LoadMetricReportInfo
+      - name: '[]'
+        fullName: '[]'

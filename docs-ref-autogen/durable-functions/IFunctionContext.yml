@@ -1,0 +1,180 @@
+### YamlMime:UniversalReference
+items:
+  - uid: durable-functions.IFunctionContext
+    name: IFunctionContext
+    fullName: IFunctionContext
+    children:
+      - durable-functions.IFunctionContext.bindingData
+      - durable-functions.IFunctionContext.bindingDefinitions
+      - durable-functions.IFunctionContext.bindings
+      - durable-functions.IFunctionContext.df
+      - durable-functions.IFunctionContext.done
+      - durable-functions.IFunctionContext.executionContext
+      - durable-functions.IFunctionContext.invocationId
+      - durable-functions.IFunctionContext.log
+      - durable-functions.IFunctionContext.req
+      - durable-functions.IFunctionContext.res
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      name: Context
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindingData
+    name: bindingData
+    fullName: bindingData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f97f3-101">Активировать данные вызова метаданных и функции.</span><span class="sxs-lookup"><span data-stu-id="f97f3-101">Trigger metadata and function invocation data.</span></span>
+    syntax:
+      content: 'bindingData: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindingDefinitions
+    name: bindingDefinitions
+    fullName: bindingDefinitions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f97f3-102">Привязки использует функции, как определено в function.json.</span><span class="sxs-lookup"><span data-stu-id="f97f3-102">Bindings your function uses, as defined in function.json.</span></span>'
+    syntax:
+      content: 'bindingDefinitions: BindingDefinition[]'
+      return:
+        type:
+          - 'BindingDefinition[]'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.bindings
+    name: bindings
+    fullName: bindings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f97f3-103">Входные данные и привязка данных, как определено в function.json триггера.</span><span class="sxs-lookup"><span data-stu-id="f97f3-103">Input and trigger binding data, as defined in function.json.</span></span> <span data-ttu-id="f97f3-104">Динамически создаются и именованных свойств данного объекта на основе свойства «name» в function.json.</span><span class="sxs-lookup"><span data-stu-id="f97f3-104">Properties on this object are dynamically generated and named based off of the "name" property in function.json.</span></span>'
+    syntax:
+      content: 'bindings: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.df
+    name: df
+    fullName: df
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'df: DurableOrchestrationContext'
+      return:
+        type:
+          - durable-functions.DurableOrchestrationContext
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.done
+    name: 'done(Error | string | null, any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="f97f3-105">Функция обратного вызова, сообщающий среды выполнения, что код был выполнен.</span><span class="sxs-lookup"><span data-stu-id="f97f3-105">A callback function that signals to the runtime that your code has completed.</span></span> <span data-ttu-id="f97f3-106">Если функция является синхронным, необходимо вызвать context.done в конце выполнения.</span><span class="sxs-lookup"><span data-stu-id="f97f3-106">If your function is synchronous, you must call context.done at the end of execution.</span></span> <span data-ttu-id="f97f3-107">Если функция является асинхронной, не следует использовать этот обратный вызов.</span><span class="sxs-lookup"><span data-stu-id="f97f3-107">If your function is asynchronous, you should not use this callback.</span></span>'
+    syntax:
+      content: 'function done(err?: Error | string | null, result?: any)'
+      parameters:
+        - id: err
+          type:
+            - Error | string | null
+          description: '<span data-ttu-id="f97f3-108">Пользовательские ошибки для передачи обратно среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="f97f3-108">A user-defined error to pass back to the runtime.</span></span> <span data-ttu-id="f97f3-109">При наличии политики выполнения функция завершится ошибкой.</span><span class="sxs-lookup"><span data-stu-id="f97f3-109">If present, your function execution will fail.</span></span>'
+          optional: true
+        - id: result
+          type:
+            - any
+          description: |
+            <span data-ttu-id="f97f3-110">Объект, содержащий выходные данные привязки.</span><span class="sxs-lookup"><span data-stu-id="f97f3-110">An object containing output binding data.</span></span> <span data-ttu-id="f97f3-111">`result` будет передаваться JSON.stringify применяется в строку, буфер, ArrayBufferView или числом.</span><span class="sxs-lookup"><span data-stu-id="f97f3-111">`result` will be passed to JSON.stringify unless it is a string, Buffer, ArrayBufferView, or number.</span></span>
+          optional: true
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.executionContext
+    name: executionContext
+    fullName: executionContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f97f3-112">Метаданные для выполнения функции.</span><span class="sxs-lookup"><span data-stu-id="f97f3-112">Function execution metadata.</span></span>
+    syntax:
+      content: 'executionContext: ExecutionContext'
+      return:
+        type:
+          - ExecutionContext
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.invocationId
+    name: invocationId
+    fullName: invocationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f97f3-113">Уникальный идентификатор GUID на вызов функции.</span><span class="sxs-lookup"><span data-stu-id="f97f3-113">A unique GUID per function invocation.</span></span>
+    syntax:
+      content: 'invocationId: string'
+      return:
+        type:
+          - string
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.log
+    name: log
+    fullName: log
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f97f3-114">Позволяет разработчикам писать функции журналы потоковой передачи.</span><span class="sxs-lookup"><span data-stu-id="f97f3-114">Allows you to write streaming function logs.</span></span> <span data-ttu-id="f97f3-115">Прямой вызов позволяет разработчикам писать потоковой передачи журналов функций на уровне трассировки по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="f97f3-115">Calling directly allows you to write streaming function logs at the default trace level.</span></span>
+    syntax:
+      content: 'log: Logger'
+      return:
+        type:
+          - Logger
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.req
+    name: req
+    fullName: req
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f97f3-116">Объект HTTP-запроса.</span><span class="sxs-lookup"><span data-stu-id="f97f3-116">HTTP request object.</span></span> <span data-ttu-id="f97f3-117">Предоставляемые функции при использовании привязок HTTP.</span><span class="sxs-lookup"><span data-stu-id="f97f3-117">Provided to your function when using HTTP Bindings.</span></span>
+    optional: true
+    syntax:
+      content: 'req?: HttpRequest'
+      return:
+        type:
+          - HttpRequest
+    package: durable-functions
+  - uid: durable-functions.IFunctionContext.res
+    name: res
+    fullName: res
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f97f3-118">Объект HTTP-ответа.</span><span class="sxs-lookup"><span data-stu-id="f97f3-118">HTTP response object.</span></span> <span data-ttu-id="f97f3-119">Предоставляемые функции при использовании привязок HTTP.</span><span class="sxs-lookup"><span data-stu-id="f97f3-119">Provided to your function when using HTTP Bindings.</span></span>
+    optional: true
+    syntax:
+      content: 'res?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: durable-functions
+references:
+  - uid: durable-functions.DurableOrchestrationContext
+    name: DurableOrchestrationContext
+    spec.typeScript:
+      - name: DurableOrchestrationContext
+        fullName: DurableOrchestrationContext
+        uid: durable-functions.DurableOrchestrationContext

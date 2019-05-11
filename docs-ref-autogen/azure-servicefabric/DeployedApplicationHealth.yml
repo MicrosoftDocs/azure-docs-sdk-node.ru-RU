@@ -1,0 +1,165 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.DeployedApplicationHealth
+    name: DeployedApplicationHealth
+    fullName: DeployedApplicationHealth
+    children:
+      - azure-servicefabric.DeployedApplicationHealth.aggregatedHealthState
+      - azure-servicefabric.DeployedApplicationHealth.deployedServicePackageHealthStates
+      - azure-servicefabric.DeployedApplicationHealth.healthEvents
+      - azure-servicefabric.DeployedApplicationHealth.healthStatistics
+      - azure-servicefabric.DeployedApplicationHealth.name
+      - azure-servicefabric.DeployedApplicationHealth.nodeName
+      - azure-servicefabric.DeployedApplicationHealth.unhealthyEvaluations
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="39ba2-101">Сведения о работоспособности приложения, развернутого на узле Service Fabric.</span><span class="sxs-lookup"><span data-stu-id="39ba2-101">Information about the health of an application deployed on a Service Fabric node.</span></span>'
+    extends:
+      name: azure-servicefabric.EntityHealth
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="39ba2-102">HealthState, представляющий общего состояния работоспособности сущности, вычисляемые диспетчером работоспособности.</span><span class="sxs-lookup"><span data-stu-id="39ba2-102">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>
+      <span data-ttu-id="39ba2-103">Оценка работоспособности сущности отражает все события, указанное в отчетах для сущности и его дочерние элементы (если таковые имеются).</span><span class="sxs-lookup"><span data-stu-id="39ba2-103">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+      <span data-ttu-id="39ba2-104">Статистическая обработка выполняется путем применения политики нужного работоспособности.</span><span class="sxs-lookup"><span data-stu-id="39ba2-104">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id="39ba2-105">Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»</span><span class="sxs-lookup"><span data-stu-id="39ba2-105">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.deployedServicePackageHealthStates
+    name: deployedServicePackageHealthStates
+    fullName: deployedServicePackageHealthStates
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="39ba2-106">Развернуть состояния работоспособности пакета службы для текущего развернутого приложения, обнаруженное в хранилище данных о работоспособности.</span><span class="sxs-lookup"><span data-stu-id="39ba2-106">Deployed service package health states for the current deployed application as found in the health store.</span></span>'
+    optional: true
+    syntax:
+      content: 'deployedServicePackageHealthStates?: DeployedServicePackageHealthState[]'
+      return:
+        type:
+          - 'azure-servicefabric.DeployedServicePackageHealthState[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.healthEvents
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="39ba2-107">Список событий работоспособности сущности.</span><span class="sxs-lookup"><span data-stu-id="39ba2-107">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvent[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.healthStatistics
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="39ba2-108">Показывает статистику работоспособности для всех типов дочерние элементы запрошенного объекта.</span><span class="sxs-lookup"><span data-stu-id="39ba2-108">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - azure-servicefabric.HealthStatistics
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="39ba2-109">Имя приложения, развернутого на узле, сведения о работоспособности, описывается этим объектом.</span><span class="sxs-lookup"><span data-stu-id="39ba2-109">Name of the application deployed on the node whose health information is described by this object.</span></span>'
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.nodeName
+    name: nodeName
+    fullName: nodeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="39ba2-110">Имя узла, где развертывании этого приложения.</span><span class="sxs-lookup"><span data-stu-id="39ba2-110">Name of the node where this application is deployed.</span></span>'
+    optional: true
+    syntax:
+      content: 'nodeName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.DeployedApplicationHealth.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="39ba2-111">Оценки неработоспособности, в которых показано, почему текущего общего состояния работоспособности был возвращен диспетчером работоспособности.</span><span class="sxs-lookup"><span data-stu-id="39ba2-111">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealth
+    name: EntityHealth
+    spec.typeScript:
+      - name: EntityHealth
+        fullName: EntityHealth
+        uid: azure-servicefabric.EntityHealth
+  - uid: 'azure-servicefabric.DeployedServicePackageHealthState[]'
+    name: 'DeployedServicePackageHealthState[]'
+    spec.typeScript:
+      - name: DeployedServicePackageHealthState
+        fullName: DeployedServicePackageHealthState
+        uid: azure-servicefabric.DeployedServicePackageHealthState
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: azure-servicefabric.HealthEvent
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.HealthStatistics
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: azure-servicefabric.HealthStatistics
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'
