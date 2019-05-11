@@ -1,0 +1,279 @@
+### YamlMime:UniversalReference
+items:
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    fullName: SpeechConfig
+    children:
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy_1
+      - microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+    langs:
+      - typeScript
+    type: class
+    summary: Конфигурация речи.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.authorizationToken
+    name: authorizationToken
+    fullName: authorizationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Получает или задает маркер авторизации.
+      Примечание. Вызывающий объект должен проверить допустимость маркера проверки подлинности. До истечения срока действия маркера авторизации, вызывающему объекту необходимо обновить его путем вызова этого метода установки с новым допустимым маркером.
+    syntax:
+      content: 'public authorizationToken: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.close
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Закрывает конфигурации.
+    syntax:
+      content: function close()
+      parameters: []
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.endpointId
+    name: endpointId
+    fullName: endpointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Получает или задает идентификатор конечной точки, настроенные речи модели, которая используется для распознавания речи.'
+    syntax:
+      content: 'public endpointId: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromAuthorizationToken
+    name: 'fromAuthorizationToken(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Создает экземпляр фабрики речи с заданными начальной маркером авторизации и регион.
+      Примечание. Вызывающий объект должен проверить допустимость маркера проверки подлинности. До истечения срока действия маркера авторизации, вызывающему объекту необходимо обновить его путем вызова этого метода установки с новым допустимым маркером.
+      Примечание. Используйте маркер, производный от LanguageUnderstanding ключ подписки, в случае, если вы хотите использовать распознаватель намерений. При копировании значения конфигурации при создании нового распознаватель новым значением маркера не будет применяться к распознаватели, которые уже были созданы. Для распознаватели, созданные перед необходимо задать маркер авторизации соответствующий распознавателя обновить токен. В противном случае распознаватели будут возникать ошибки во время распознавания.
+    syntax:
+      content: 'static function fromAuthorizationToken(authorizationToken: string, region: string)'
+      parameters:
+        - id: authorizationToken
+          type:
+            - string
+          description: Токен начальной авторизации.
+        - id: region
+          type:
+            - string
+          description: 'Имя региона (см. в разделе <a href="https://aka.ms/csspeech/region">область страницы</a>).'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromEndpoint
+    name: 'fromEndpoint(URL, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Создает экземпляр конфигурации речи с заданной конечной точки и ключ подписки.
+      Этот метод предназначен только для пользователей, которые используют конечную точку нестандартные службы или параметры.
+      Примечание. Используйте ключ подписки LanguageUnderstanding в случае, если вы хотите использовать распознаватель намерений.
+      Примечание. Параметры запроса, указанного в URL-адрес конечной точки, не изменяются, даже если они заданы с других API.
+      Например, если язык задан в uri как параметр запроса «language = de-DE» и также задаются SpeechConfig.speechRecognitionLanguage = «en US», приоритет имеет параметр языка в uri, и эффективный язык «de-DE». Только параметры, которые не указаны в конечной точке URL-адрес можно задать другие API-интерфейсами.
+      Примечание. Чтобы использовать маркер авторизации с fromEndpoint, передать пустую строку для subscriptionKey в методе fromEndpoint и задайте authorizationToken = «token» на созданный экземпляр SpeechConfig использовать маркер авторизации.
+    syntax:
+      content: 'static function fromEndpoint(endpoint: URL, subscriptionKey: string)'
+      parameters:
+        - id: endpoint
+          type:
+            - URL
+          description: Для подключения к конечной точки службы.
+        - id: subscriptionKey
+          type:
+            - string
+          description: Ключ подписки.
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.fromSubscription
+    name: 'fromSubscription(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Статический экземпляр SpeechConfig, возвращаемых путем передачи регион subscriptionKey и службы.
+      Примечание. Используйте ключ подписки LanguageUnderstanding в случае, если вы хотите использовать распознаватель намерений.
+    syntax:
+      content: 'static function fromSubscription(subscriptionKey: string, region: string)'
+      parameters:
+        - id: subscriptionKey
+          type:
+            - string
+          description: Ключ подписки.
+        - id: region
+          type:
+            - string
+          description: 'Имя региона (см. в разделе <a href="https://aka.ms/csspeech/region">область страницы</a>).'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.getProperty
+    name: 'getProperty(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Возвращает текущее значение произвольные свойства.
+    syntax:
+      content: 'function getProperty(name: string, def?: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Имя свойства для запроса.
+        - id: def
+          type:
+            - string
+          description: 'Значение, возвращаемое в случае, если свойство не известен.'
+          optional: true
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.outputFormat
+    name: outputFormat
+    fullName: outputFormat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Получает или задает формат вывода.
+    syntax:
+      content: 'public outputFormat: OutputFormat'
+      return:
+        type:
+          - microsoft-cognitiveservices-speech-sdk.OutputFormat
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProperty
+    name: 'setProperty(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Задает произвольный свойство.
+    syntax:
+      content: 'function setProperty(name: string, value: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Имя задаваемого свойства.
+        - id: value
+          type:
+            - string
+          description: |
+            Новое значение свойства.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy
+    name: 'setProxy(string, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Задает конфигурацию прокси-сервера.
+      Применимо только в средах Node.js.
+      Добавлена в версии 1.4.0.
+    syntax:
+      content: 'function setProxy(proxyHostName: string, proxyPort: number)'
+      parameters:
+        - id: proxyHostName
+          type:
+            - string
+          description: Имя узла прокси-сервера.
+        - id: proxyPort
+          type:
+            - number
+          description: |
+            Номер порта прокси-сервера.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.setProxy_1
+    name: 'setProxy(string, number, string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Задает конфигурацию прокси-сервера.
+      Применимо только в средах Node.js.
+      Добавлена в версии 1.4.0.
+    syntax:
+      content: 'function setProxy(proxyHostName: string, proxyPort: number, proxyUserName: string, proxyPassword: string)'
+      parameters:
+        - id: proxyHostName
+          type:
+            - string
+          description: 'Имя узла прокси-сервера, без схемы протокола (http://)'
+        - id: proxyPort
+          type:
+            - number
+          description: ''
+        - id: proxyUserName
+          type:
+            - string
+          description: Имя пользователя прокси-сервера.
+        - id: proxyPassword
+          type:
+            - string
+          description: |
+            Пароль прокси-сервера.
+    package: microsoft-cognitiveservices-speech-sdk
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig.speechRecognitionLanguage
+    name: speechRecognitionLanguage
+    fullName: speechRecognitionLanguage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Получает или задает язык ввода.
+    syntax:
+      content: 'public speechRecognitionLanguage: string'
+      return:
+        type:
+          - string
+    package: microsoft-cognitiveservices-speech-sdk
+references:
+  - uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+    name: OutputFormat
+    spec.typeScript:
+      - name: OutputFormat
+        fullName: OutputFormat
+        uid: microsoft-cognitiveservices-speech-sdk.OutputFormat
+  - uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
+    name: SpeechConfig
+    spec.typeScript:
+      - name: SpeechConfig
+        fullName: SpeechConfig
+        uid: microsoft-cognitiveservices-speech-sdk.SpeechConfig
