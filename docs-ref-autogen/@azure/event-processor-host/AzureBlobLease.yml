@@ -1,0 +1,262 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/event-processor-host.AzureBlobLease'
+    name: AzureBlobLease
+    fullName: AzureBlobLease
+    children:
+      - '@azure/event-processor-host.AzureBlobLease.constructor'
+      - '@azure/event-processor-host.AzureBlobLease.blob'
+      - '@azure/event-processor-host.AzureBlobLease.createFromPartitionId'
+      - '@azure/event-processor-host.AzureBlobLease.epoch'
+      - '@azure/event-processor-host.AzureBlobLease.getInfo'
+      - '@azure/event-processor-host.AzureBlobLease.incrementEpoch'
+      - '@azure/event-processor-host.AzureBlobLease.isOwned'
+      - '@azure/event-processor-host.AzureBlobLease.isOwnedBy'
+      - '@azure/event-processor-host.AzureBlobLease.offset'
+      - '@azure/event-processor-host.AzureBlobLease.owner'
+      - '@azure/event-processor-host.AzureBlobLease.partitionId'
+      - '@azure/event-processor-host.AzureBlobLease.sequenceNumber'
+      - '@azure/event-processor-host.AzureBlobLease.serialize'
+      - '@azure/event-processor-host.AzureBlobLease.token'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="0d5e2-101">Описывает аренды, использовать с большой двоичный объект Azure для хранения сведений о контрольных точках.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-101">Describes the lease used with an Azure Blob for storing the checkpoint information.</span></span>'
+    extends:
+      name: '@azure/event-processor-host.CompleteLease'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.constructor'
+    name: AzureBlobLease(AzureBlobLeaseInfo)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new AzureBlobLease(info: AzureBlobLeaseInfo)'
+      parameters:
+        - id: info
+          type:
+            - '@azure/event-processor-host.AzureBlobLeaseInfo'
+          description: ''
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.blob'
+    name: blob
+    fullName: blob
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d5e2-102">Большой двоичный объект {AzureBlob} ссылку на BLOB-объектов azure.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-102">{AzureBlob} blob Reference to the azure blob.</span></span>'
+    syntax:
+      content: 'blob: AzureBlob'
+      return:
+        type:
+          - AzureBlob
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.createFromPartitionId'
+    name: 'createFromPartitionId(string, AzureBlob)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d5e2-103">Создает аренду для данного partitionId.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-103">Creates a Lease for the given partitionId.</span></span>
+    syntax:
+      content: 'static function createFromPartitionId(id: string, blob: AzureBlob)'
+      parameters:
+        - id: id
+          type:
+            - string
+          description: '<span data-ttu-id="0d5e2-104">PartitionId, для которого Аренда должна быть создана.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-104">The partitionId for which the lease needs to be created.</span></span>'
+        - id: blob
+          type:
+            - AzureBlob
+          description: <span data-ttu-id="0d5e2-105">Ссылка BLOB-объектов azure</span><span class="sxs-lookup"><span data-stu-id="0d5e2-105">The azure blob reference</span></span>
+      return:
+        type:
+          - '@azure/event-processor-host.AzureBlobLease'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.epoch'
+    name: epoch
+    fullName: epoch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d5e2-106">{number} эпохи epoch(time) аренды, который является значением, можно использовать для определения владельца самой последней секции между узлами конкурирующих.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-106">{number} epoch The epoch(time) of the lease, which is a value you can use to determine the most recent owner of a partition between competing nodes.</span></span>'
+    syntax:
+      content: 'epoch: number'
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.getInfo'
+    name: getInfo()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d5e2-107">Возвращает сведения об аренде.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-107">Gets the lease information.</span></span>
+    syntax:
+      content: function getInfo()
+      parameters: []
+      return:
+        type:
+          - '@azure/event-processor-host.LeaseInfo'
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.incrementEpoch'
+    name: incrementEpoch()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d5e2-108">Увеличивает значение эпохи на 1.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-108">Increments the value of epoch by 1.</span></span>
+    syntax:
+      content: function incrementEpoch()
+      parameters: []
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.isOwned'
+    name: isOwned
+    fullName: isOwned
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d5e2-109">Указывает, что допускает {логическое} isOwned принадлежит аренда.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-109">{boolean} isOwned Indicates wether the lease is owned.</span></span> <span data-ttu-id="0d5e2-110">`true` Если он принадлежит другому; `false` в противном случае.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-110">`true` if it is owned by someone; `false` otherwise.</span></span>'
+    syntax:
+      content: 'isOwned: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.isOwnedBy'
+    name: isOwnedBy(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d5e2-111">Сравнивает possibleOwner от this.owner</span><span class="sxs-lookup"><span data-stu-id="0d5e2-111">Compares possibleOwner against this.owner</span></span>
+    syntax:
+      content: 'function isOwnedBy(possibleOwner: string)'
+      parameters:
+        - id: possibleOwner
+          type:
+            - string
+          description: <span data-ttu-id="0d5e2-112">Имя владельца для проверки.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-112">The owner name to check.</span></span>
+      return:
+        type:
+          - boolean
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.offset'
+    name: offset
+    fullName: offset
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d5e2-113">{Строка} смещения смещение события возврата.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-113">{string} offset The offset of the event to be checked in.</span></span>'
+    optional: true
+    syntax:
+      content: 'offset?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.owner'
+    name: owner
+    fullName: owner
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d5e2-114">Владелец {строка} владельце узла для секции.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-114">{string} owner The host owner for the partition.</span></span>'
+    syntax:
+      content: 'owner: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d5e2-115">{Строка} partitionId связанные partitionId для которого удерживается аренды.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-115">{string} partitionId The associated partitionId for which the lease is held.</span></span>'
+    syntax:
+      content: 'partitionId: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d5e2-116">sequenceNumber {строка} порядковый номер события возврата.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-116">{string} sequenceNumber The sequence number of the event to be checked in.</span></span>'
+    syntax:
+      content: 'sequenceNumber: number'
+      return:
+        type:
+          - number
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.serialize'
+    name: serialize()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="0d5e2-117">Выполняет сериализацию данных аренды.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-117">Serializes the lease information.</span></span>
+    syntax:
+      content: function serialize()
+      parameters: []
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+  - uid: '@azure/event-processor-host.AzureBlobLease.token'
+    name: token
+    fullName: token
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="0d5e2-118">токен {строка} токен, аренды, который осуществляет управление параллелизмом между узлами.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-118">{string} token The lease token that manages concurrency between hosts.</span></span> <span data-ttu-id="0d5e2-119">Этот маркер можно использовать для обеспечения единого доступа к любому ресурсу, необходимые для EPH.</span><span class="sxs-lookup"><span data-stu-id="0d5e2-119">You can use this token to guarantee single access to any resource needed by the EPH.</span></span>'
+    syntax:
+      content: 'token: string'
+      return:
+        type:
+          - string
+    package: '@azure/event-processor-host'
+references:
+  - uid: '@azure/event-processor-host.CompleteLease'
+    name: CompleteLease
+    spec.typeScript:
+      - name: CompleteLease
+        fullName: CompleteLease
+        uid: '@azure/event-processor-host.CompleteLease'
+  - uid: '@azure/event-processor-host.AzureBlobLeaseInfo'
+    name: AzureBlobLeaseInfo
+    spec.typeScript:
+      - name: AzureBlobLeaseInfo
+        fullName: AzureBlobLeaseInfo
+        uid: '@azure/event-processor-host.AzureBlobLeaseInfo'
+  - uid: '@azure/event-processor-host.LeaseInfo'
+    name: LeaseInfo
+    spec.typeScript:
+      - name: LeaseInfo
+        fullName: LeaseInfo
+        uid: '@azure/event-processor-host.LeaseInfo'
+  - uid: '@azure/event-processor-host.AzureBlobLease'
+    name: AzureBlobLease
+    spec.typeScript:
+      - name: AzureBlobLease
+        fullName: AzureBlobLease
+        uid: '@azure/event-processor-host.AzureBlobLease'

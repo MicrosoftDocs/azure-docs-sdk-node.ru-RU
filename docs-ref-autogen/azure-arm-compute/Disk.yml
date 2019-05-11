@@ -1,0 +1,324 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-compute.Disk
+    name: Disk
+    fullName: Disk
+    children:
+      - azure-arm-compute.Disk.creationData
+      - azure-arm-compute.Disk.diskIOPSReadWrite
+      - azure-arm-compute.Disk.diskMBpsReadWrite
+      - azure-arm-compute.Disk.diskSizeGB
+      - azure-arm-compute.Disk.diskState
+      - azure-arm-compute.Disk.encryptionSettingsCollection
+      - azure-arm-compute.Disk.hyperVGeneration
+      - azure-arm-compute.Disk.id
+      - azure-arm-compute.Disk.location
+      - azure-arm-compute.Disk.managedBy
+      - azure-arm-compute.Disk.name
+      - azure-arm-compute.Disk.osType
+      - azure-arm-compute.Disk.provisioningState
+      - azure-arm-compute.Disk.sku
+      - azure-arm-compute.Disk.tags
+      - azure-arm-compute.Disk.timeCreated
+      - azure-arm-compute.Disk.type
+      - azure-arm-compute.Disk.zones
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="cfd13-101">Дисковый ресурс.</span><span class="sxs-lookup"><span data-stu-id="cfd13-101">Disk resource.</span></span>
+    extends:
+      name: azure-arm-compute.Resource
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.creationData
+    name: creationData
+    fullName: creationData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="cfd13-102">Сведения об источнике диска.</span><span class="sxs-lookup"><span data-stu-id="cfd13-102">Disk source information.</span></span> <span data-ttu-id="cfd13-103">Сведения CreationData не может изменяться после создания диска.</span><span class="sxs-lookup"><span data-stu-id="cfd13-103">CreationData information cannot be changed after the disk has been created.</span></span>
+    syntax:
+      content: 'creationData: CreationData'
+      return:
+        type:
+          - azure-arm-compute.CreationData
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.diskIOPSReadWrite
+    name: diskIOPSReadWrite
+    fullName: diskIOPSReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-104">Число операций ввода-ВЫВОДА, разрешенное для этого диска; настраивается только для дисков режимом UltraSSD.</span><span class="sxs-lookup"><span data-stu-id="cfd13-104">The number of IOPS allowed for this disk; only settable for UltraSSD disks.</span></span> <span data-ttu-id="cfd13-105">Одной операции можно передавать между 4k и 256 КБ.</span><span class="sxs-lookup"><span data-stu-id="cfd13-105">One operation can transfer between 4k and 256k bytes.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskIOPSReadWrite?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.diskMBpsReadWrite
+    name: diskMBpsReadWrite
+    fullName: diskMBpsReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-106">Пропускная способность, разрешенное для этого диска; настраивается только для дисков режимом UltraSSD.</span><span class="sxs-lookup"><span data-stu-id="cfd13-106">The bandwidth allowed for this disk; only settable for UltraSSD disks.</span></span> <span data-ttu-id="cfd13-107">Означает миллионы байт в секунду, Мбит/с — здесь МБ использует приставка ISO, степени 10.</span><span class="sxs-lookup"><span data-stu-id="cfd13-107">MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskMBpsReadWrite?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.diskSizeGB
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-108">Если creationData.createOption пуста, это поле является обязательным и указывает размер виртуального жесткого диска для создания.</span><span class="sxs-lookup"><span data-stu-id="cfd13-108">If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create.</span></span> <span data-ttu-id="cfd13-109">Если это поле не отображается для обновления или создания с другими параметрами, это означает изменение размера.</span><span class="sxs-lookup"><span data-stu-id="cfd13-109">If this field is present for updates or creation with other options, it indicates a resize.</span></span> <span data-ttu-id="cfd13-110">Изменение размеров объекта разрешены только в том случае, если диск не подключен к работающей виртуальной машине и можно только увеличить размер диска.</span><span class="sxs-lookup"><span data-stu-id="cfd13-110">Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk''s size.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: number'
+      return:
+        type:
+          - number
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.diskState
+    name: diskState
+    fullName: diskState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-111">Состояние диска.</span><span class="sxs-lookup"><span data-stu-id="cfd13-111">The state of the disk.</span></span> <span data-ttu-id="cfd13-112">Ниже перечислены возможные значения. «Подключен», «подключен», «Reserved», «ActiveSAS», «ReadyToUpload», «ActiveUpload»</span><span class="sxs-lookup"><span data-stu-id="cfd13-112">Possible values include: ''Unattached'', ''Attached'', ''Reserved'', ''ActiveSAS'', ''ReadyToUpload'', ''ActiveUpload''</span></span>'
+    optional: true
+    syntax:
+      content: 'diskState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.encryptionSettingsCollection
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-113">Набор параметров шифрования, используемый для шифрования дисков Azure, может содержать несколько параметров шифрования на диск или моментальный снимок.</span><span class="sxs-lookup"><span data-stu-id="cfd13-113">Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - azure-arm-compute.EncryptionSettingsCollection
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.hyperVGeneration
+    name: hyperVGeneration
+    fullName: hyperVGeneration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-114">Низкоуровневая оболочка поколение виртуальной машины.</span><span class="sxs-lookup"><span data-stu-id="cfd13-114">The hypervisor generation of the Virtual Machine.</span></span> <span data-ttu-id="cfd13-115">Применимо к только диски операционной системы.</span><span class="sxs-lookup"><span data-stu-id="cfd13-115">Applicable to OS disks only.</span></span> <span data-ttu-id="cfd13-116">Ниже перечислены возможные значения. «V1», «V2»</span><span class="sxs-lookup"><span data-stu-id="cfd13-116">Possible values include: ''V1'', ''V2''</span></span>'
+    optional: true
+    syntax:
+      content: 'hyperVGeneration?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="cfd13-117">ИД ресурса</span><span class="sxs-lookup"><span data-stu-id="cfd13-117">Resource Id</span></span>
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="cfd13-118">Расположение ресурса</span><span class="sxs-lookup"><span data-stu-id="cfd13-118">Resource location</span></span>
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.managedBy
+    name: managedBy
+    fullName: managedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-119">Относительный URI, содержащий идентификатор виртуальной машины к которой подключен диск.</span><span class="sxs-lookup"><span data-stu-id="cfd13-119">A relative URI containing the ID of the VM that has the disk attached.</span></span>'
+    optional: true
+    syntax:
+      content: 'managedBy?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="cfd13-120">Имя ресурса</span><span class="sxs-lookup"><span data-stu-id="cfd13-120">Resource name</span></span>
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.osType
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-121">Тип операционной системы.</span><span class="sxs-lookup"><span data-stu-id="cfd13-121">The Operating System type.</span></span> <span data-ttu-id="cfd13-122">Ниже перечислены возможные значения. «Windows», «Linux»</span><span class="sxs-lookup"><span data-stu-id="cfd13-122">Possible values include: ''Windows'', ''Linux''</span></span>'
+    optional: true
+    syntax:
+      content: 'osType?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.provisioningState
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="cfd13-123">Состояние подготовки диска.</span><span class="sxs-lookup"><span data-stu-id="cfd13-123">The disk provisioning state.</span></span>
+    optional: true
+    syntax:
+      content: 'provisioningState?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.sku
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: DiskSku'
+      return:
+        type:
+          - azure-arm-compute.DiskSku
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="cfd13-124">Теги ресурсов</span><span class="sxs-lookup"><span data-stu-id="cfd13-124">Resource tags</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: [key: string]: string'
+      return:
+        type:
+          - '[key: string]: string'
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.timeCreated
+    name: timeCreated
+    fullName: timeCreated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfd13-125">Время, когда был создан диск.</span><span class="sxs-lookup"><span data-stu-id="cfd13-125">The time when the disk was created.</span></span>'
+    optional: true
+    syntax:
+      content: 'timeCreated?: Date'
+      return:
+        type:
+          - Date
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="cfd13-126">Тип ресурса</span><span class="sxs-lookup"><span data-stu-id="cfd13-126">Resource type</span></span>
+    optional: true
+    syntax:
+      content: 'type?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-compute
+  - uid: azure-arm-compute.Disk.zones
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="cfd13-127">Список логическая зона для диска.</span><span class="sxs-lookup"><span data-stu-id="cfd13-127">The Logical zone list for Disk.</span></span>
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-arm-compute
+references:
+  - uid: azure-arm-compute.Resource
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: azure-arm-compute.Resource
+  - uid: azure-arm-compute.CreationData
+    name: CreationData
+    spec.typeScript:
+      - name: CreationData
+        fullName: CreationData
+        uid: azure-arm-compute.CreationData
+  - uid: azure-arm-compute.EncryptionSettingsCollection
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: azure-arm-compute.EncryptionSettingsCollection
+  - uid: azure-arm-compute.DiskSku
+    name: DiskSku
+    spec.typeScript:
+      - name: DiskSku
+        fullName: DiskSku
+        uid: azure-arm-compute.DiskSku
