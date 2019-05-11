@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServiceReplicaDescription
+    name: ServiceReplicaDescription
+    fullName: ServiceReplicaDescription
+    children:
+      - azure-servicefabric.ServiceReplicaDescription.codePackages
+      - azure-servicefabric.ServiceReplicaDescription.diagnostics
+      - azure-servicefabric.ServiceReplicaDescription.networkRefs
+      - azure-servicefabric.ServiceReplicaDescription.osType
+      - azure-servicefabric.ServiceReplicaDescription.replicaName
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="6fb81-101">Описывает точная копия ресурса службы.</span><span class="sxs-lookup"><span data-stu-id="6fb81-101">Describes a replica of a service resource.</span></span>
+    extends:
+      name: azure-servicefabric.ServiceReplicaProperties
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.codePackages
+    name: codePackages
+    fullName: codePackages
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6fb81-102">Описывает набор пакетов кода, которые служба форм.</span><span class="sxs-lookup"><span data-stu-id="6fb81-102">Describes the set of code packages that forms the service.</span></span> <span data-ttu-id="6fb81-103">Пакет кода описывает контейнера и свойства для ее запуска.</span><span class="sxs-lookup"><span data-stu-id="6fb81-103">A code package describes the container and the properties for running it.</span></span> <span data-ttu-id="6fb81-104">Все пакеты кода запускаются вместе на одном узле и совместно использовать один и тот же контекст (сеть, процессов и т.д.).</span><span class="sxs-lookup"><span data-stu-id="6fb81-104">All the code packages are started together on the same host and share the same context (network, process etc.).</span></span>'
+    syntax:
+      content: 'codePackages: ContainerCodePackageProperties[]'
+      return:
+        type:
+          - 'azure-servicefabric.ContainerCodePackageProperties[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.diagnostics
+    name: diagnostics
+    fullName: diagnostics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6fb81-105">Ссылка на приемники в DiagnosticsDescription.</span><span class="sxs-lookup"><span data-stu-id="6fb81-105">Reference to sinks in DiagnosticsDescription.</span></span>
+    optional: true
+    syntax:
+      content: 'diagnostics?: DiagnosticsRef'
+      return:
+        type:
+          - azure-servicefabric.DiagnosticsRef
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.networkRefs
+    name: networkRefs
+    fullName: networkRefs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6fb81-106">Имена для частных сетей, которые эта служба должна быть частью.</span><span class="sxs-lookup"><span data-stu-id="6fb81-106">The names of the private networks that this service needs to be part of.</span></span>'
+    optional: true
+    syntax:
+      content: 'networkRefs?: NetworkRef[]'
+      return:
+        type:
+          - 'azure-servicefabric.NetworkRef[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.osType
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6fb81-107">В операционной системе, необходимый код в службе.</span><span class="sxs-lookup"><span data-stu-id="6fb81-107">The operation system required by the code in service.</span></span> <span data-ttu-id="6fb81-108">Ниже перечислены возможные значения. «Linux», «Windows»</span><span class="sxs-lookup"><span data-stu-id="6fb81-108">Possible values include: ''Linux'', ''Windows''</span></span>'
+    syntax:
+      content: 'osType: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServiceReplicaDescription.replicaName
+    name: replicaName
+    fullName: replicaName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="6fb81-109">Имя реплики.</span><span class="sxs-lookup"><span data-stu-id="6fb81-109">Name of the replica.</span></span>
+    syntax:
+      content: 'replicaName: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceReplicaProperties
+    name: ServiceReplicaProperties
+    spec.typeScript:
+      - name: ServiceReplicaProperties
+        fullName: ServiceReplicaProperties
+        uid: azure-servicefabric.ServiceReplicaProperties
+  - uid: 'azure-servicefabric.ContainerCodePackageProperties[]'
+    name: 'ContainerCodePackageProperties[]'
+    spec.typeScript:
+      - name: ContainerCodePackageProperties
+        fullName: ContainerCodePackageProperties
+        uid: azure-servicefabric.ContainerCodePackageProperties
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-servicefabric.DiagnosticsRef
+    name: DiagnosticsRef
+    spec.typeScript:
+      - name: DiagnosticsRef
+        fullName: DiagnosticsRef
+        uid: azure-servicefabric.DiagnosticsRef
+  - uid: 'azure-servicefabric.NetworkRef[]'
+    name: 'NetworkRef[]'
+    spec.typeScript:
+      - name: NetworkRef
+        fullName: NetworkRef
+        uid: azure-servicefabric.NetworkRef
+      - name: '[]'
+        fullName: '[]'
