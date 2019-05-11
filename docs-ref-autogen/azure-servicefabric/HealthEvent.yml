@@ -1,0 +1,265 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.HealthEvent
+    name: HealthEvent
+    fullName: HealthEvent
+    children:
+      - azure-servicefabric.HealthEvent.description
+      - azure-servicefabric.HealthEvent.healthState
+      - azure-servicefabric.HealthEvent.isExpired
+      - azure-servicefabric.HealthEvent.lastErrorTransitionAt
+      - azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+      - azure-servicefabric.HealthEvent.lastOkTransitionAt
+      - azure-servicefabric.HealthEvent.lastWarningTransitionAt
+      - azure-servicefabric.HealthEvent.property
+      - azure-servicefabric.HealthEvent.removeWhenExpired
+      - azure-servicefabric.HealthEvent.sequenceNumber
+      - azure-servicefabric.HealthEvent.sourceId
+      - azure-servicefabric.HealthEvent.sourceUtcTimestamp
+      - azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Представляет сведения о работоспособности о работоспособности сущности, такими как кластер, приложения или узла, с дополнительными метаданными, добавлены диспетчером работоспособности.'
+    extends:
+      name: azure-servicefabric.HealthInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Описание информации о работоспособности. Это свойство предоставляет информацию об отчете в произвольном текстовом формате, доступном для чтения.
+      Максимальная длина строки для описания составляет 4096 символов.
+      Более длинные строки автоматически усекаются.
+      При усечении в последние символы описания помещается маркер [Truncated], длина которого входит в строку длиной 4096 символов.
+      Наличие маркера указывает на усечение.
+      Обратите внимание, что усеченное описание включает менее 4096 символов исходной строки.
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Состояние работоспособности сущности Service Fabric, например кластера, узла, приложения, службы, секции, реплики и т.д. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»'
+    syntax:
+      content: 'healthState: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.isExpired
+    name: isExpired
+    fullName: isExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Возвращает значение true, если событие работоспособности истекшим сроком действия, в противном случае — значение false.'
+    optional: true
+    syntax:
+      content: 'isExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastErrorTransitionAt
+    name: lastErrorTransitionAt
+    fullName: lastErrorTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Если текущее состояние работоспособности «Ошибка», это свойство Возвращает время, по которому отчет о работоспособности сначала этот отчет «Error». Для периодической отчетности много отчетов с тем же состоянием мог быть создан тем не менее, это свойство возвращает только дату и время, после первой «ошибки» был получен отчет о работоспособности.
+      Если текущее состояние работоспособности «ОК» или «Предупреждение», возвращает дату и время, по которому состояние работоспособности был последним в «Error», перед переходом в другое состояние.
+
+      Если состояние работоспособности никогда не была «Ошибка», значение будет нулевой даты и времени.
+    optional: true
+    syntax:
+      content: 'lastErrorTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastModifiedUtcTimestamp
+    name: lastModifiedUtcTimestamp
+    fullName: lastModifiedUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Дата и время последнего изменения отчета о работоспособности хранилище данных о работоспособности.
+    optional: true
+    syntax:
+      content: 'lastModifiedUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastOkTransitionAt
+    name: lastOkTransitionAt
+    fullName: lastOkTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Если текущее состояние работоспособности «ОК», это свойство Возвращает время, по которому отчет о работоспособности сначала этот отчет «Ok».
+      Для периодической отчетности много отчетов с тем же состоянием мог быть создан.
+      Это свойство возвращает дату и время, когда был получен первый отчет о работоспособности «ОК».
+      Если текущее состояние работоспособности «Ошибка» или «Предупреждение», возвращает дату и время, по которому последнего состояния работоспособности в «Ok», перед переходом в другое состояние.
+
+      Если состояние работоспособности не «ОК», значение будет нулевой даты и времени.
+    optional: true
+    syntax:
+      content: 'lastOkTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.lastWarningTransitionAt
+    name: lastWarningTransitionAt
+    fullName: lastWarningTransitionAt
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Если текущее состояние работоспособности «предупреждение», это свойство Возвращает время, по которому отчет о работоспособности сначала была обнаружена с «Предупреждение». Для периодической отчетности много отчетов с тем же состоянием мог быть создан тем не менее, это свойство возвращает только дату и время первого отчета о работоспособности «Предупреждение» было получено.
+      Если текущее состояние работоспособности «ОК» или «Ошибка», возвращает дату и время, по которому последнего состояния работоспособности «Предупреждение», перед переходом в другое состояние.
+
+      Если состояние работоспособности было никогда не «предупреждение», значение будет нулевой даты и времени.
+    optional: true
+    syntax:
+      content: 'lastWarningTransitionAt?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.property
+    name: property
+    fullName: property
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Свойство информации о работоспособности. Один объект может возвращать отчеты о работоспособности для разных свойств.
+      Это свойство имеет строковый формат, а не фиксированное перечисление, чтобы создатель отчетов мог гибко классифицировать состояние, активировавшее отчет.
+      Например, создатель отчета с идентификатором источника LocalWatchdog может отслеживать состояние доступного дискового пространства на узле и передавать для этого узла свойство AvailableDisk.
+      Этот же создатель отчета может отслеживать подключения узла и передавать свойство Connectivity для того же узла.
+      В хранилище данных о работоспособности эти отчеты обрабатываются как независимые события работоспособности для указанного узла.
+      Кроме идентификатора источника, свойство однозначно идентифицирует данные о работоспособности.
+    syntax:
+      content: 'property: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.removeWhenExpired
+    name: removeWhenExpired
+    fullName: removeWhenExpired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Это значение указывает, удаляется ли отчет из хранилища работоспособности после истечения срока его действия.
+      Если задано значение true, отчет будет удален из хранилища работоспособности после истечения срока его действия.
+      Если задано значение false, отчет с истекшим сроком действия рассматривается как указывающий на ошибку. Для этого свойства по умолчанию используется значение false.
+      Если клиенты создают периодические отчеты, для параметра RemoveWhenExpired следует использовать значение false (по умолчанию).
+      Таким образом, если информатор имеет проблемы (например взаимоблокировки) и не может сообщить, сущность оценивается после ошибки по истечении срока действия отчета о работоспособности.
+      Такая сущность будет находиться в состоянии "Ошибка работоспособности".
+    optional: true
+    syntax:
+      content: 'removeWhenExpired?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sequenceNumber
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Порядковый номер отчета о работоспособности в формате числовой строки.
+      Порядковый номер отчета используется хранилищем данных о работоспособности для отслеживания устаревших отчетов.
+      Если значение не указано, порядковый номер автоматически создается клиентом работоспособности при добавлении отчета.
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceId
+    name: sourceId
+    fullName: sourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Имя источника, которое определяет клиента, службу наблюдения или компонент системы, создавший информацию о работоспособности.'
+    syntax:
+      content: 'sourceId: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.sourceUtcTimestamp
+    name: sourceUtcTimestamp
+    fullName: sourceUtcTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Дата и время отправки отчета о работоспособности в источнике.
+    optional: true
+    syntax:
+      content: 'sourceUtcTimestamp?: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+  - uid: azure-servicefabric.HealthEvent.timeToLiveInMilliSeconds
+    name: timeToLiveInMilliSeconds
+    fullName: timeToLiveInMilliSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      Срок, в течение которого отчет о работоспособности считается действительным. В этом поле указывается длительность в формате ISO8601.
+      Если клиенты создают периодические отчеты, периодичность отправки отчетов должна быть выше, чем срок жизни отчетов.
+      Если клиенты передают отчеты об изменении состояния, для них можно установить бесконечный срок действия.
+      По истечении срока жизни событие работоспособности, которое содержит данные о работоспособности, удаляется из хранилища данных о работоспособности (если RemoveWhenExpired имеет значение true) или считается ошибкой (если RemoveWhenExpired имеет значение false).
+      Если значение не указано, по умолчанию устанавливается бесконечный срок жизни.
+    optional: true
+    syntax:
+      content: 'timeToLiveInMilliSeconds?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthInformation
+    name: HealthInformation
+    spec.typeScript:
+      - name: HealthInformation
+        fullName: HealthInformation
+        uid: azure-servicefabric.HealthInformation

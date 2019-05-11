@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ValidationFailedChaosEvent
+    name: ValidationFailedChaosEvent
+    fullName: ValidationFailedChaosEvent
+    children:
+      - azure-servicefabric.ValidationFailedChaosEvent.kind
+      - azure-servicefabric.ValidationFailedChaosEvent.reason
+      - azure-servicefabric.ValidationFailedChaosEvent.timeStampUtc
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Событие chaos, соответствующий сбоя во время проверки.'
+    extends:
+      name: azure-servicefabric.ChaosEvent
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ValidationFailedChaosEvent.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ValidationFailedChaosEvent.reason
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Описывает, почему ValidationFailedChaosEvent был создан. Это может произойти, потому что больше, чем MaxPercentUnhealthyNodes находятся в неработоспособном состоянии дольше, чем MaxClusterStabilizationTimeout. Поэтому будет в свойстве причина ValidationFailedChaosEvent как строка.'
+    optional: true
+    syntax:
+      content: 'reason?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ValidationFailedChaosEvent.timeStampUtc
+    name: timeStampUtc
+    fullName: timeStampUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Отметка времени в формате UTC, когда было создано данное событие Chaos.'
+    syntax:
+      content: 'timeStampUtc: Date'
+      return:
+        type:
+          - Date
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ChaosEvent
+    name: ChaosEvent
+    spec.typeScript:
+      - name: ChaosEvent
+        fullName: ChaosEvent
+        uid: azure-servicefabric.ChaosEvent

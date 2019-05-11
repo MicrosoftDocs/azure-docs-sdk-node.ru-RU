@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.SingletonPartitionInformation
+    name: SingletonPartitionInformation
+    fullName: SingletonPartitionInformation
+    children:
+      - azure-servicefabric.SingletonPartitionInformation.id
+      - azure-servicefabric.SingletonPartitionInformation.servicePartitionKind
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Сведения о секции, выходящей singleton. Службы с использованием схемы секционирования singleton, эффективно без секционирования. Остался только один раздел.'
+    extends:
+      name: azure-servicefabric.PartitionInformation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SingletonPartitionInformation.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Внутренний идентификатор, используемый Service Fabric для уникальной идентификации секции. Это произвольно созданным GUID, если служба была создана. Идентификатор секции уникален и не изменяется в течение времени существования службы. Если же служба удалена и создана повторно идентификаторы секций будет отличаться.'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.SingletonPartitionInformation.servicePartitionKind
+    name: servicePartitionKind
+    fullName: servicePartitionKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'servicePartitionKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.PartitionInformation
+    name: PartitionInformation
+    spec.typeScript:
+      - name: PartitionInformation
+        fullName: PartitionInformation
+        uid: azure-servicefabric.PartitionInformation

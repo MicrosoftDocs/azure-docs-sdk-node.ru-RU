@@ -1,0 +1,173 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation
+    name: UpgradeDomainDeltaNodesCheckHealthEvaluation
+    fullName: UpgradeDomainDeltaNodesCheckHealthEvaluation
+    children:
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.aggregatedHealthState
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.baselineErrorCount
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.baselineTotalCount
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.description
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.kind
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.maxPercentDeltaUnhealthyNodes
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.totalCount
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.unhealthyEvaluations
+      - azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.upgradeDomainName
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Представляет оценки работоспособности дельта неработоспособными узлами кластера в домене обновления, содержащий оценки работоспособности для каждого неработоспособности узла, который влияет на текущее состояние сводные данные о работоспособности.
+      Может быть возвращено во время обновления кластера при статистической обработке кластера состояние работоспособности — предупреждение или ошибку.
+    extends:
+      name: azure-servicefabric.HealthEvaluation
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Состояние работоспособности сущности Service Fabric, например кластера, узла, приложения, службы, секции, реплики и т.д. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.baselineErrorCount
+    name: baselineErrorCount
+    fullName: baselineErrorCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Количество узлов домена обновления с состоянием агрегированные состоянием ошибки в хранилище данных о работоспособности в начале процесса обновления кластера.
+    optional: true
+    syntax:
+      content: 'baselineErrorCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.baselineTotalCount
+    name: baselineTotalCount
+    fullName: baselineTotalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Общее число узлов домена обновления в хранилище данных о работоспособности в начале процесса обновления кластера.
+    optional: true
+    syntax:
+      content: 'baselineTotalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Описание оценки работоспособности, который представляет сводку пробных испытаний.'
+    optional: true
+    syntax:
+      content: 'description?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.kind
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'kind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.maxPercentDeltaUnhealthyNodes
+    name: maxPercentDeltaUnhealthyNodes
+    fullName: maxPercentDeltaUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Максимальный разрешенный процент домен обновления разностных неработоспособных узлов из ClusterUpgradeHealthPolicy.
+    optional: true
+    syntax:
+      content: 'maxPercentDeltaUnhealthyNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.totalCount
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Общее число узлов домена обновления в хранилище данных о работоспособности.
+    optional: true
+    syntax:
+      content: 'totalCount?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.unhealthyEvaluations
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список оценки неработоспособности, которые привели к общего состояния работоспособности. Включает в себя все NodeHealthEvaluation неработоспособные, затронуты сводные данные о работоспособности.'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - 'azure-servicefabric.HealthEvaluationWrapper[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.UpgradeDomainDeltaNodesCheckHealthEvaluation.upgradeDomainName
+    name: upgradeDomainName
+    fullName: upgradeDomainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Имя домена обновления, где в настоящее время оценки работоспособности узлов.'
+    optional: true
+    syntax:
+      content: 'upgradeDomainName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.HealthEvaluation
+    name: HealthEvaluation
+    spec.typeScript:
+      - name: HealthEvaluation
+        fullName: HealthEvaluation
+        uid: azure-servicefabric.HealthEvaluation
+  - uid: 'azure-servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: azure-servicefabric.HealthEvaluationWrapper
+      - name: '[]'
+        fullName: '[]'

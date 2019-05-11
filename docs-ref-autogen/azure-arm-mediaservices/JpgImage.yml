@@ -1,0 +1,154 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-arm-mediaservices.JpgImage
+    name: JpgImage
+    fullName: JpgImage
+    children:
+      - azure-arm-mediaservices.JpgImage.keyFrameInterval
+      - azure-arm-mediaservices.JpgImage.label
+      - azure-arm-mediaservices.JpgImage.layers
+      - azure-arm-mediaservices.JpgImage.odatatype
+      - azure-arm-mediaservices.JpgImage.range
+      - azure-arm-mediaservices.JpgImage.start
+      - azure-arm-mediaservices.JpgImage.step
+      - azure-arm-mediaservices.JpgImage.stretchMode
+    langs:
+      - typeScript
+    type: interface
+    summary: Описание свойств для создания набора изображений JPEG из входного видео.
+    extends:
+      name: azure-arm-mediaservices.Image
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.keyFrameInterval
+    name: keyFrameInterval
+    fullName: keyFrameInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Расстояние между двумя опорными кадрами, тем самым определяя группы изображений (GOP). Значение должно быть целым числом ненулевое значение в диапазоне [1, 30] секунд, указан в формате ISO 8601. Значение по умолчанию равно 2 секундам (PT2S).'
+    optional: true
+    syntax:
+      content: 'keyFrameInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Необязательную метку для кодека. Метки можно использовать для управления поведением muxing.
+    optional: true
+    syntax:
+      content: 'label?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.layers
+    name: layers
+    fullName: layers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Коллекция выходных данных слоев изображения JPEG для созданных кодировщиком.
+    optional: true
+    syntax:
+      content: 'layers?: JpgLayer[]'
+      return:
+        type:
+          - 'azure-arm-mediaservices.JpgLayer[]'
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.odatatype
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'odatatype: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.range
+    name: range
+    fullName: range
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Позиция в выходное видео, в которой прекращается создание эскизов. Значение может быть в абсолютный timestamp (ISO 8601, например: PT5M30S для остановки в 5 минут 30 секунд), или число кадров (например, 300 для остановки в 300 кадр), или относительное значение (например, 100%).'
+    optional: true
+    syntax:
+      content: 'range?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.start
+    name: start
+    fullName: start
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Позиция во входящем видеофайле с которого следует начать создание эскизов. Значение может быть в абсолютный timestamp (ISO 8601, например: PT05S), или число кадров (например, 10 10 фрейма) или относительное значение (например, % 1). Также поддерживает макрос {Best}, который сообщает кодировщику выберите эскиз лучший из первых секунд видео.'
+    syntax:
+      content: 'start: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.step
+    name: step
+    fullName: step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Интервалы, в которых создаются эскизы. Значение может быть в абсолютный timestamp (ISO 8601, например: PT05S для одного изображения каждые 5 секунд), или число кадров (например, 30 для каждые 30 кадров), или относительное значение (например, % 1).'
+    optional: true
+    syntax:
+      content: 'step?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+  - uid: azure-arm-mediaservices.JpgImage.stretchMode
+    name: stretchMode
+    fullName: stretchMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Режим изменения размера - как входного видео будет изменяться в соответствии с поставленной первопричин. Значение по умолчанию — AutoSize. Ниже перечислены возможные значения. «None», «AutoSize», «AutoFit»'
+    optional: true
+    syntax:
+      content: 'stretchMode?: string'
+      return:
+        type:
+          - string
+    package: azure-arm-mediaservices
+references:
+  - uid: azure-arm-mediaservices.Image
+    name: Image
+    spec.typeScript:
+      - name: Image
+        fullName: Image
+        uid: azure-arm-mediaservices.Image
+  - uid: 'azure-arm-mediaservices.JpgLayer[]'
+    name: 'JpgLayer[]'
+    spec.typeScript:
+      - name: JpgLayer
+        fullName: JpgLayer
+        uid: azure-arm-mediaservices.JpgLayer
+      - name: '[]'
+        fullName: '[]'

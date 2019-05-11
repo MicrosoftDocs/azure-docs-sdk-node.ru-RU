@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.NodeHealthState
+    name: NodeHealthState
+    fullName: NodeHealthState
+    children:
+      - azure-servicefabric.NodeHealthState.aggregatedHealthState
+      - azure-servicefabric.NodeHealthState.id
+      - azure-servicefabric.NodeHealthState.name
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Представляет состояние работоспособности узла, который содержит идентификатор узла и его общего состояния работоспособности.'
+    extends:
+      name: azure-servicefabric.EntityHealthState
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NodeHealthState.aggregatedHealthState
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Состояние работоспособности сущности Service Fabric, например кластера, узла, приложения, службы, секции, реплики и т.д. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NodeHealthState.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Внутренний идентификатор, используемый Service Fabric для уникальной идентификации узла. Идентификатор узла детерминировано создается на основе имени узла.'
+    optional: true
+    syntax:
+      content: 'id?: NodeId'
+      return:
+        type:
+          - azure-servicefabric.NodeId
+    package: azure-servicefabric
+  - uid: azure-servicefabric.NodeHealthState.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Имя узла Service Fabric.
+    optional: true
+    syntax:
+      content: 'name?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthState
+    name: EntityHealthState
+    spec.typeScript:
+      - name: EntityHealthState
+        fullName: EntityHealthState
+        uid: azure-servicefabric.EntityHealthState
+  - uid: azure-servicefabric.NodeId
+    name: NodeId
+    spec.typeScript:
+      - name: NodeId
+        fullName: NodeId
+        uid: azure-servicefabric.NodeId

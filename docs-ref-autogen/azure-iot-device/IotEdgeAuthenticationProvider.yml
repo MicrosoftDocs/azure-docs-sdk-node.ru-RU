@@ -1,0 +1,126 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider
+    name: IotEdgeAuthenticationProvider
+    fullName: IotEdgeAuthenticationProvider
+    children:
+      - azure-iot-device.IotEdgeAuthenticationProvider.fromConnectionString
+      - azure-iot-device.IotEdgeAuthenticationProvider.getDeviceCredentials_1
+      - azure-iot-device.IotEdgeAuthenticationProvider.getDeviceCredentials
+      - azure-iot-device.IotEdgeAuthenticationProvider.getTrustBundle
+      - azure-iot-device.IotEdgeAuthenticationProvider.stop
+      - azure-iot-device.IotEdgeAuthenticationProvider.type
+    langs:
+      - typeScript
+    type: class
+    summary: |
+      Предоставляет `AuthenticationProvider` реализация, которая делегирует создания токенов для iotedged. Эта реализация предназначен для использования при использовании модуля клиента с помощью Azure IoT Edge.
+      Этот тип наследует из `SharedAccessKeyAuthenticationProvider` и функционально идентичен этого типа, за исключением части создания токенов, который он переопределяет путем реализации `_sign` метод.
+    extends:
+      name: azure-iot-device.SharedAccessKeyAuthenticationProvider
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.fromConnectionString
+    name: 'fromConnectionString(string, number, number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Создает новый `SharedAccessKeyAuthenticationProvider` из строки подключения
+    syntax:
+      content: 'static function fromConnectionString(connectionString: string, tokenValidTimeInSeconds?: number, tokenRenewalMarginInSeconds?: number)'
+      parameters:
+        - id: connectionString
+          type:
+            - string
+          description: 'Строка подключения устройства, содержащий необходимые параметры для проверки подлинности в центре Интернета вещей.'
+        - id: tokenValidTimeInSeconds
+          type:
+            - number
+          description: 'Количество секунд, для которых маркер должен быть допустимым.'
+          optional: true
+        - id: tokenRenewalMarginInSeconds
+          type:
+            - number
+          description: |
+            Количество секунд перед истечением срока действия во время которого `SharedAccessKeyAuthenticationProvider` должны обновлять маркер.
+          optional: true
+      return:
+        type:
+          - azure-iot-device.SharedAccessKeyAuthenticationProvider
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.getDeviceCredentials_1
+    name: getDeviceCredentials()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Этот метод используется транспортов, которые получает наиболее текущего устройства учетные данные в виде `TransportConfig` объекта.'
+    syntax:
+      content: function getDeviceCredentials()
+      parameters: []
+      return:
+        type:
+          - Promise<TransportConfig>
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.getDeviceCredentials
+    name: getDeviceCredentials(Callback<TransportConfig>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Этот метод используется транспортов, которые получает наиболее текущего устройства учетные данные в виде `TransportConfig` объекта.'
+    syntax:
+      content: 'function getDeviceCredentials(callback: Callback<TransportConfig>)'
+      parameters:
+        - id: callback
+          type:
+            - Callback<TransportConfig>
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.getTrustBundle
+    name: 'getTrustBundle((err?: Error, ca?: string) => void)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTrustBundle(callback: (err?: Error, ca?: string) => void)'
+      parameters:
+        - id: callback
+          type:
+            - '(err?: Error, ca?: string) => void'
+          description: ''
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.stop
+    name: stop()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Останавливает таймер, который применяется для обновления для маркера SAS.'
+    syntax:
+      content: function stop()
+      parameters: []
+    package: azure-iot-device
+  - uid: azure-iot-device.IotEdgeAuthenticationProvider.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'type: AuthenticationType'
+      return:
+        type:
+          - AuthenticationType
+    package: azure-iot-device
+references:
+  - uid: azure-iot-device.SharedAccessKeyAuthenticationProvider
+    name: SharedAccessKeyAuthenticationProvider
+    spec.typeScript:
+      - name: SharedAccessKeyAuthenticationProvider
+        fullName: SharedAccessKeyAuthenticationProvider
+        uid: azure-iot-device.SharedAccessKeyAuthenticationProvider

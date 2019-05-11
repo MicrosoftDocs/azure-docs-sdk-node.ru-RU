@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription
+    name: ServicePlacementRequireDomainDistributionPolicyDescription
+    fullName: ServicePlacementRequireDomainDistributionPolicyDescription
+    children:
+      - azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName
+      - azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Описывает политику, используемую для размещения службы Service Fabric, где две реплики из одной секции никогда нельзя размещать в одном домене сбоя или обновления.
+      Хотя это не общий доступ к службе создает высокий риск одновременных сбоев из-за незапланированного простоя или других случаях последующих/одновременных сбоев. Например рассмотрим случай, где развернутых реплик в другом центре обработки данных, с одной репликой в каждом месте. В случае недоступности одного центра обработки данных отключится от сети, обычно реплики, которая была помещена в этот центр обработки данных будут упакованы в один из оставшихся центров обработки данных. Если это нежелательно, то эта политика должно быть установлено.
+    extends:
+      name: azure-servicefabric.ServicePlacementPolicyDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Имя домена, который следует использовать для размещения в соответствии с этой политикой.'
+    optional: true
+    syntax:
+      content: 'domainName?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'type: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServicePlacementPolicyDescription
+    name: ServicePlacementPolicyDescription
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription

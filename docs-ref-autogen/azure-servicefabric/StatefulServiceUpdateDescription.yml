@@ -1,0 +1,259 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription
+    name: StatefulServiceUpdateDescription
+    fullName: StatefulServiceUpdateDescription
+    children:
+      - azure-servicefabric.StatefulServiceUpdateDescription.correlationScheme
+      - azure-servicefabric.StatefulServiceUpdateDescription.defaultMoveCost
+      - azure-servicefabric.StatefulServiceUpdateDescription.flags
+      - azure-servicefabric.StatefulServiceUpdateDescription.loadMetrics
+      - azure-servicefabric.StatefulServiceUpdateDescription.minReplicaSetSize
+      - azure-servicefabric.StatefulServiceUpdateDescription.placementConstraints
+      - azure-servicefabric.StatefulServiceUpdateDescription.quorumLossWaitDurationSeconds
+      - azure-servicefabric.StatefulServiceUpdateDescription.replicaRestartWaitDurationSeconds
+      - azure-servicefabric.StatefulServiceUpdateDescription.scalingPolicies
+      - azure-servicefabric.StatefulServiceUpdateDescription.serviceKind
+      - azure-servicefabric.StatefulServiceUpdateDescription.servicePlacementPolicies
+      - azure-servicefabric.StatefulServiceUpdateDescription.standByReplicaKeepDurationSeconds
+      - azure-servicefabric.StatefulServiceUpdateDescription.targetReplicaSetSize
+    langs:
+      - typeScript
+    type: interface
+    summary: Описание обновления для службы с отслеживанием состояния.
+    extends:
+      name: azure-servicefabric.ServiceUpdateDescription
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.correlationScheme
+    name: correlationScheme
+    fullName: correlationScheme
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Схема корреляции.
+    optional: true
+    syntax:
+      content: 'correlationScheme?: ServiceCorrelationDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceCorrelationDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.defaultMoveCost
+    name: defaultMoveCost
+    fullName: defaultMoveCost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Стоимость перемещения для службы. Ниже перечислены возможные значения. «Zero», «Low», «Среднее», «High»'
+    optional: true
+    syntax:
+      content: 'defaultMoveCost?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.flags
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Флаги, указывающие, установлены ли другие свойства. Каждый из связанных свойств соответствует флаг, указанных ниже, который, если задано, указать, что свойство определен.\nЭто свойство может быть сочетанием этих флагов, полученное с помощью битового оператора «Или».\nНапример если указано значение 6 затем задать флаги для ReplicaRestartWaitDuration (2) и QuorumLossWaitDuration (4).\n- None — не означает, что заданы другие свойства. Значение равно нулю.\n- Размер набора целевых реплик/InstanceCount - указывает, задано ли свойство значение TargetReplicaSetSize (для служб с отслеживанием состояния) или InstanceCount (для служб без отслеживания состояния). Значение равно\_1.\n- ReplicaRestartWaitDuration - указывает ReplicaRestartWaitDuration, свойство имеет значение. Значение равно 2.\n- QuorumLossWaitDuration - указывает QuorumLossWaitDuration, свойство имеет значение. Значение равно\n4.\n- StandByReplicaKeepDuration - указывает StandByReplicaKeepDuration, свойство имеет значение. Значение равно\_8.\n- MinReplicaSetSize - указывает MinReplicaSetSize, свойство имеет значение. Значение равно 16.\n- Ограничения размещения — указывает ограничения размещения, свойство имеет значение. Значение равно 32.\n- PlacementPolicyList - указывает ServicePlacementPolicies, свойство имеет значение. Значение равно\n64.\n- Корреляция - указывает CorrelationScheme, свойство имеет значение. Значение равно 128.\n- Метрики — указывает ServiceLoadMetrics, свойство имеет значение. Значение равно 256.\n- DefaultMoveCost - указывает DefaultMoveCost, свойство имеет значение. Значение равно 512.\n- ScalingPolicy - указывает ScalingPolicies, свойство имеет значение. Значение равно 1024.\n"
+    optional: true
+    syntax:
+      content: 'flags?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.loadMetrics
+    name: loadMetrics
+    fullName: loadMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Метрики нагрузки службы.
+    optional: true
+    syntax:
+      content: 'loadMetrics?: ServiceLoadMetricDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.minReplicaSetSize
+    name: minReplicaSetSize
+    fullName: minReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Минимальный размер набора реплик в виде числа.
+    optional: true
+    syntax:
+      content: 'minReplicaSetSize?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.placementConstraints
+    name: placementConstraints
+    fullName: placementConstraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Ограничения размещения в виде строки. Ограничения размещения — это логические выражения, которые позволяют на основе свойств узла ограничить размещение службы определенными узлами в соответствии с требованиями этой службы. Например чтобы размещать службы на узлах, в которых NodeType имеет значение blue, укажите следующее: "NodeColor == blue)».'
+    optional: true
+    syntax:
+      content: 'placementConstraints?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.quorumLossWaitDurationSeconds
+    name: quorumLossWaitDurationSeconds
+    fullName: quorumLossWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Максимальный интервал времени в секундах, в течение которого секция может находиться в состоянии потери кворума.'
+    optional: true
+    syntax:
+      content: 'quorumLossWaitDurationSeconds?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.replicaRestartWaitDurationSeconds
+    name: replicaRestartWaitDurationSeconds
+    fullName: replicaRestartWaitDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Интервал времени в секундах, по истечении которого после выхода из строя реплики создается новая реплика.'
+    optional: true
+    syntax:
+      content: 'replicaRestartWaitDurationSeconds?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.scalingPolicies
+    name: scalingPolicies
+    fullName: scalingPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Масштабирование политики для этой службы.
+    optional: true
+    syntax:
+      content: 'scalingPolicies?: ScalingPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ScalingPolicyDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.serviceKind
+    name: serviceKind
+    fullName: serviceKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'serviceKind: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.servicePlacementPolicies
+    name: servicePlacementPolicies
+    fullName: servicePlacementPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Политики размещения служб.
+    optional: true
+    syntax:
+      content: 'servicePlacementPolicies?: ServicePlacementPolicyDescription[]'
+      return:
+        type:
+          - 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.standByReplicaKeepDurationSeconds
+    name: standByReplicaKeepDurationSeconds
+    fullName: standByReplicaKeepDurationSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Определение, на сколько реплик StandBy, должен храниться до удаления.'
+    optional: true
+    syntax:
+      content: 'standByReplicaKeepDurationSeconds?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.StatefulServiceUpdateDescription.targetReplicaSetSize
+    name: targetReplicaSetSize
+    fullName: targetReplicaSetSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Размер целевого набора реплик в виде числа.
+    optional: true
+    syntax:
+      content: 'targetReplicaSetSize?: number'
+      return:
+        type:
+          - number
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.ServiceUpdateDescription
+    name: ServiceUpdateDescription
+    spec.typeScript:
+      - name: ServiceUpdateDescription
+        fullName: ServiceUpdateDescription
+        uid: azure-servicefabric.ServiceUpdateDescription
+  - uid: 'azure-servicefabric.ServiceCorrelationDescription[]'
+    name: 'ServiceCorrelationDescription[]'
+    spec.typeScript:
+      - name: ServiceCorrelationDescription
+        fullName: ServiceCorrelationDescription
+        uid: azure-servicefabric.ServiceCorrelationDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServiceLoadMetricDescription[]'
+    name: 'ServiceLoadMetricDescription[]'
+    spec.typeScript:
+      - name: ServiceLoadMetricDescription
+        fullName: ServiceLoadMetricDescription
+        uid: azure-servicefabric.ServiceLoadMetricDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ScalingPolicyDescription[]'
+    name: 'ScalingPolicyDescription[]'
+    spec.typeScript:
+      - name: ScalingPolicyDescription
+        fullName: ScalingPolicyDescription
+        uid: azure-servicefabric.ScalingPolicyDescription
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-servicefabric.ServicePlacementPolicyDescription[]'
+    name: 'ServicePlacementPolicyDescription[]'
+    spec.typeScript:
+      - name: ServicePlacementPolicyDescription
+        fullName: ServicePlacementPolicyDescription
+        uid: azure-servicefabric.ServicePlacementPolicyDescription
+      - name: '[]'
+        fullName: '[]'

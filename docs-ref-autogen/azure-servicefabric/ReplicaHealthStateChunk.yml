@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-servicefabric.ReplicaHealthStateChunk
+    name: ReplicaHealthStateChunk
+    fullName: ReplicaHealthStateChunk
+    children:
+      - azure-servicefabric.ReplicaHealthStateChunk.healthState
+      - azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Представляет фрагмент данных о работоспособности реплики службы с отслеживанием состояния или экземпляра службы без отслеживания состояния.
+      Состояние работоспособности реплики содержит идентификатор реплики и его общего состояния работоспособности.
+    extends:
+      name: azure-servicefabric.EntityHealthStateChunk
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.healthState
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Состояние работоспособности сущности Service Fabric, например кластера, узла, приложения, службы, секции, реплики и т.д. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»'
+    optional: true
+    syntax:
+      content: 'healthState?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+  - uid: azure-servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Идентификатор реплики службы с отслеживанием состояния или экземпляра службы без отслеживания состояния. Этот идентификатор используется в запросах, которые применяются к службам с отслеживанием состояния и без отслеживания состояния. Используется Service Fabric для уникальной идентификации реплике секции службы с отслеживанием состояния или экземпляру службы без отслеживания состояния секции. Он уникален в пределах секции и остается неизменным в течение жизненного цикла реплики или экземпляра. Если другая реплика создается на том же узле, для одной секции удалении реплики с отслеживанием состояния, он получит другое значение для идентификатора. Если экземпляр без отслеживания состояния выполняется отработка отказа на том же или другом узле он получит другое значение для идентификатора.'
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: string'
+      return:
+        type:
+          - string
+    package: azure-servicefabric
+references:
+  - uid: azure-servicefabric.EntityHealthStateChunk
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: azure-servicefabric.EntityHealthStateChunk
