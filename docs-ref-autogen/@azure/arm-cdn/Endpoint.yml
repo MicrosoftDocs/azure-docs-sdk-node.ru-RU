@@ -1,0 +1,386 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-cdn.Endpoint'
+    name: Endpoint
+    fullName: Endpoint
+    children:
+      - '@azure/arm-cdn.Endpoint.contentTypesToCompress'
+      - '@azure/arm-cdn.Endpoint.deliveryPolicy'
+      - '@azure/arm-cdn.Endpoint.geoFilters'
+      - '@azure/arm-cdn.Endpoint.hostName'
+      - '@azure/arm-cdn.Endpoint.id'
+      - '@azure/arm-cdn.Endpoint.isCompressionEnabled'
+      - '@azure/arm-cdn.Endpoint.isHttpAllowed'
+      - '@azure/arm-cdn.Endpoint.isHttpsAllowed'
+      - '@azure/arm-cdn.Endpoint.location'
+      - '@azure/arm-cdn.Endpoint.name'
+      - '@azure/arm-cdn.Endpoint.optimizationType'
+      - '@azure/arm-cdn.Endpoint.originHostHeader'
+      - '@azure/arm-cdn.Endpoint.originPath'
+      - '@azure/arm-cdn.Endpoint.origins'
+      - '@azure/arm-cdn.Endpoint.probePath'
+      - '@azure/arm-cdn.Endpoint.provisioningState'
+      - '@azure/arm-cdn.Endpoint.queryStringCachingBehavior'
+      - '@azure/arm-cdn.Endpoint.resourceState'
+      - '@azure/arm-cdn.Endpoint.tags'
+      - '@azure/arm-cdn.Endpoint.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Конечная точка CDN — это сущность, в профиле CDN, содержащий сведения о конфигурации, такие как источник, протокол, поведение кэширования и доставки содержимого. Конечная точка CDN использует формат URL-адреса <endpointname>. azureedge.net.'
+    extends:
+      name: '@azure/arm-cdn.TrackedResource'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.contentTypesToCompress'
+    name: contentTypesToCompress
+    fullName: contentTypesToCompress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список типов содержимого, на которых применяется сжатие. Значение должно быть допустимым типом MIME.'
+    optional: true
+    syntax:
+      content: 'contentTypesToCompress?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.deliveryPolicy'
+    name: deliveryPolicy
+    fullName: deliveryPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Политика, задающая правила доставки, используемый для конечной точки.'
+    optional: true
+    syntax:
+      content: 'deliveryPolicy?: EndpointPropertiesUpdateParametersDeliveryPolicy'
+      return:
+        type:
+          - '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.geoFilters'
+    name: geoFilters
+    fullName: geoFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список правил, определения географического доступа пользователя в конечную точку CDN. Каждый фильтр по расположению определяет правило доступа к указанному пути или содержимое, например блок Азиатско-Тихоокеанского РЕГИОНА для /pictures/ путь'
+    optional: true
+    syntax:
+      content: 'geoFilters?: GeoFilter[]'
+      return:
+        type:
+          - '@azure/arm-cdn.GeoFilter[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.hostName'
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Имя узла конечной точки, структурированную по {endpointName}. {DNSZone}, например, contoso.azureedge.net **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**'
+    optional: true
+    syntax:
+      content: 'hostName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор ресурса.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isCompressionEnabled'
+    name: isCompressionEnabled
+    fullName: isCompressionEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает, включено ли сжатие содержимого CDN. Значение по умолчанию — false. Если сжатие включено, содержимое будет предоставляться как в случае, если пользователь запрашивает для сжатая версия. Содержимое не быть сжаты в сети доставки Содержимого, если запрашиваемое содержимое больше 1 МБ или меньше, чем 1 байт.'
+    optional: true
+    syntax:
+      content: 'isCompressionEnabled?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isHttpAllowed'
+    name: isHttpAllowed
+    fullName: isHttpAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает, разрешены ли HTTP-трафик на конечную точку. Значение по умолчанию — true. Должны быть включены хотя бы один протокол (HTTP или HTTPS).'
+    optional: true
+    syntax:
+      content: 'isHttpAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.isHttpsAllowed'
+    name: isHttpsAllowed
+    fullName: isHttpsAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает, может ли трафик HTTPS в конечной точке. Значение по умолчанию — true. Должны быть включены хотя бы один протокол (HTTP или HTTPS).'
+    optional: true
+    syntax:
+      content: 'isHttpsAllowed?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.location'
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Расположение ресурса.
+    syntax:
+      content: 'location: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Имя ресурса.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.optimizationType'
+    name: optimizationType
+    fullName: optimizationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает, какие сценарии клиент хочет этой конечной точки CDN для оптимизации, например загрузки, служб мультимедиа. Имея эту информацию CDN можно применить сценарий на основе оптимизации. Ниже перечислены возможные значения. «GeneralWebDelivery», «GeneralMediaStreaming», «VideoOnDemandMediaStreaming», «LargeFileDownload», «DynamicSiteAcceleration»'
+    optional: true
+    syntax:
+      content: 'optimizationType?: OptimizationType'
+      return:
+        type:
+          - '@azure/arm-cdn.OptimizationType'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.originHostHeader'
+    name: originHostHeader
+    fullName: originHostHeader
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Значение заголовка узла, отправляемое в источник с каждым запросом. Если оставить это поле пустым, имя узла запроса определяет это значение. Источники CDN Azure, такие как веб-приложений, хранилище BLOB-объектов и облачные службы требуют это значение заголовка узла для сопоставления имени узла источника по умолчанию.'
+    optional: true
+    syntax:
+      content: 'originHostHeader?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.originPath'
+    name: originPath
+    fullName: originPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Путь к каталогу на сервере-источнике, можно использовать CDN извлекает содержимое, например contoso.cloudapp.net/originpath.'
+    optional: true
+    syntax:
+      content: 'originPath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.origins'
+    name: origins
+    fullName: origins
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Источник содержимого, доставляются с помощью CDN.'
+    syntax:
+      content: 'origins: DeepCreatedOrigin[]'
+      return:
+        type:
+          - '@azure/arm-cdn.DeepCreatedOrigin[]'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.probePath'
+    name: probePath
+    fullName: probePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Путь к файлу, размещенному на сервере-источнике, который помогает ускорить доставку динамического содержимого и рассчитать наиболее оптимальные маршруты для CDN. Это расположение указывается относительно путь к источнику.'
+    optional: true
+    syntax:
+      content: 'probePath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Состояние подготовки конечной точки.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.queryStringCachingBehavior'
+    name: queryStringCachingBehavior
+    fullName: queryStringCachingBehavior
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Определяет, как CDN кэширует запросам, содержащим строки запроса. Вы можете пропустить все строки запросов, при кэширования, обход кэширования для предотвращения запросы, содержащие строки запросов предотвращает кэширование или кэшировать каждый запрос с уникальным URL-адрес. Ниже перечислены возможные значения. ''IgnoreQueryString'', ''BypassCaching'', ''UseQueryString'', ''NotSet'''
+    optional: true
+    syntax:
+      content: 'queryStringCachingBehavior?: QueryStringCachingBehavior'
+      return:
+        type:
+          - '@azure/arm-cdn.QueryStringCachingBehavior'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.resourceState'
+    name: resourceState
+    fullName: resourceState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Состояние ресурса конечной точки. Ниже перечислены возможные значения. «Создание», «Удаление», «Работает», «Запуск», «остановлено», «Остановка» **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**'
+    optional: true
+    syntax:
+      content: 'resourceState?: EndpointResourceState'
+      return:
+        type:
+          - '@azure/arm-cdn.EndpointResourceState'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Теги ресурсов.
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-cdn'
+  - uid: '@azure/arm-cdn.Endpoint.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Тип ресурса.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-cdn'
+references:
+  - uid: '@azure/arm-cdn.TrackedResource'
+    name: TrackedResource
+    spec.typeScript:
+      - name: TrackedResource
+        fullName: TrackedResource
+        uid: '@azure/arm-cdn.TrackedResource'
+  - uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+    name: EndpointPropertiesUpdateParametersDeliveryPolicy
+    spec.typeScript:
+      - name: EndpointPropertiesUpdateParametersDeliveryPolicy
+        fullName: EndpointPropertiesUpdateParametersDeliveryPolicy
+        uid: '@azure/arm-cdn.EndpointPropertiesUpdateParametersDeliveryPolicy'
+  - uid: '@azure/arm-cdn.GeoFilter[]'
+    name: 'GeoFilter[]'
+    spec.typeScript:
+      - name: GeoFilter
+        fullName: GeoFilter
+        uid: '@azure/arm-cdn.GeoFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.OptimizationType'
+    name: OptimizationType
+    spec.typeScript:
+      - name: OptimizationType
+        fullName: OptimizationType
+        uid: '@azure/arm-cdn.OptimizationType'
+  - uid: '@azure/arm-cdn.DeepCreatedOrigin[]'
+    name: 'DeepCreatedOrigin[]'
+    spec.typeScript:
+      - name: DeepCreatedOrigin
+        fullName: DeepCreatedOrigin
+        uid: '@azure/arm-cdn.DeepCreatedOrigin'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-cdn.QueryStringCachingBehavior'
+    name: QueryStringCachingBehavior
+    spec.typeScript:
+      - name: QueryStringCachingBehavior
+        fullName: QueryStringCachingBehavior
+        uid: '@azure/arm-cdn.QueryStringCachingBehavior'
+  - uid: '@azure/arm-cdn.EndpointResourceState'
+    name: EndpointResourceState
+    spec.typeScript:
+      - name: EndpointResourceState
+        fullName: EndpointResourceState
+        uid: '@azure/arm-cdn.EndpointResourceState'
