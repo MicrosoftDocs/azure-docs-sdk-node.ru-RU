@@ -1,0 +1,249 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    fullName: SendableMessageInfo
+    children:
+      - '@azure/service-bus.SendableMessageInfo.body'
+      - '@azure/service-bus.SendableMessageInfo.contentType'
+      - '@azure/service-bus.SendableMessageInfo.correlationId'
+      - '@azure/service-bus.SendableMessageInfo.label'
+      - '@azure/service-bus.SendableMessageInfo.messageId'
+      - '@azure/service-bus.SendableMessageInfo.partitionKey'
+      - '@azure/service-bus.SendableMessageInfo.replyTo'
+      - '@azure/service-bus.SendableMessageInfo.replyToSessionId'
+      - '@azure/service-bus.SendableMessageInfo.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.SendableMessageInfo.sessionId'
+      - '@azure/service-bus.SendableMessageInfo.timeToLive'
+      - '@azure/service-bus.SendableMessageInfo.to'
+      - '@azure/service-bus.SendableMessageInfo.userProperties'
+      - '@azure/service-bus.SendableMessageInfo.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Описывает сообщение, отправляемое в служебную шину.'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Тело сообщения, который должен быть отправлен или получен.'
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Тип содержимого сообщения. При необходимости описывает полезные данные сообщения, с помощью дескриптора, используя формат RFC2045 раздела 5, например «application/json».'
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор корреляции, который позволяет приложению указать контекст сообщения для корреляции, например отражения MessageId сообщения, для которого предоставляется ответ.
+      См. в разделе [маршрутизации сообщений и корреляции](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Метка конкретного приложения. Это свойство позволяет приложению указать цель сообщения для получателя в стандартизованный вариант. Аналогично, в строку темы сообщения электронной почты. Сопоставленного свойства AMQP «субъект».'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Идентификатор сообщения\_— это определяемое приложением значение, позволяющее уникально идентифицировать сообщение и его полезные данные.\n\nПримечание. Числа, которые не являются целыми числами не допускаются."
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ключ раздела для отправки сообщения секционированной сущности.
+      Максимальная длина составляет 128 символов. Для [секционированных сущностей](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) установка этого значения позволяет назначить связанные сообщения тому же внутреннему разделу, чтобы порядок последовательности отправки был правильно записан. Раздел выбирается с помощью хэш-функции этого значения. Его нельзя выбрать напрямую.
+      - Для сущностей, учитывающих `sessionId` свойство переопределяет это значение.
+      - Для несекционированной сущностей будут игнорироваться ключ секции
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Адрес сущности для отправки ответов. Это необязательное значение, определяемое приложением, является стандартным способом выражения пути ответа для получателя сообщения. Когда отправитель ожидает ответа, он присваивает значение абсолютному или относительному пути очереди или раздела, куда будет отправлен ответ. См. в разделе [маршрутизации сообщений и корреляции](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор сеанса улучшения сущностях `replyTo` адрес.
+      Максимальная длина составляет 128 символов. Это значение расширяет сведения ReplyTo и указывает, какой SessionId должно задаваться для ответа при отправке в сущность ответа.
+      См. в разделе [маршрутизации сообщений и корреляции](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Дата и время в формате UTC, по которому сообщение будет поставлено в очередь. Это свойство Возвращает время в формате UTC. При задании свойства, заданное значение DateTime также должен быть в формате UTC. Это значение является для отправки отложенных сообщений.
+      Он используется для задержки сообщения, отправкой на определенный момент времени в будущем. Время постановки сообщения не означает, что сообщение будет отправлено в то же время. Он будет получать поставлено в очередь, но фактическое время отправки зависит от рабочей нагрузки в очереди и его состояние.
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор сеанса для сеанса с поддержкой сущности. Максимальная длина составляет 128 символов. Для сущностей, учитывающих сеансы, это значение, определяемое приложением, указывает принадлежность сеанса сообщения. В сообщениях с одинаковым идентификатором сеанса может быть заблокирована сводка и включена точная порядковая обработка и демультиплексирование. Для сущностей, не учитывающих сеансы, это значение игнорируется.
+      [Сеансы сообщений](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Срок жизни сообщения. Это значение это относительная длительность, после которого срок сообщения истекает, начиная с момента его принял и сохранил брокер, как записано в `enqueuedTimeUtc`. Если значение не задано явно, используется значение является DefaultTimeToLive для соответствующей очереди или раздела. Это сообщения уровня `timeToLive` значение не может быть больше времени, чем настройка DefaultTimeToLive сущности, и оно будет автоматически скорректировано в этом случае. См. в разделе [истечения срока действия](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Адрес «to». Это свойство зарезервировано для будущего использования в сценариях маршрутизации. Сейчас брокер игнорирует это свойство. Приложения могут использовать это значение в управляемых правилами [цепочки автоматической пересылки](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) сценарии, чтобы указать целевое логическое назначение сообщения.'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Свойства конкретного приложения, которые могут использоваться для метаданных пользовательское сообщение.'
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.SendableMessageInfo.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ключ раздела для отправки сообщения в сущность через очередь передачи секционированной. Максимальная длина составляет 128 символов. Если сообщение отправляется через очередь передачи в рамках транзакции, это значение выбирает раздел очереди передачи: Это функционально эквивалентно `partitionKey` свойства и гарантирует, что сообщения, хранятся вместе и в порядке, как они будут перенесены.
+      См. в разделе [передает и отправлять через](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
