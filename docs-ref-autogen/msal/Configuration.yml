@@ -7,7 +7,13 @@ items:
     langs:
       - typeScript
     type: type alias
-    summary: Объект конфигурации
+    summary: |
+      Чтобы настроить MSAL и инициализировать UserAgentApplication используйте следующий объект конфигурации.
+      Этот объект позволяет настроить важные элементы функций MSAL:
+      - Проверка подлинности: это которого настраивается auth элементы, такие как clientID, центр, используемый для проверки подлинности в платформе Microsoft Identity
+      - кэш: это где настроить расположение кэша и следует ли сохранять кэш в файлах cookie
+      - System: это, где можно настроить средство ведения журнала, время ожидания кадров и т.д.
+      - Платформа: это, где можно настроить режим выполнения для angular. Дополнительные статьи ближайшее время.
     syntax:
-      content: 'type Configuration = { auth:AuthOptions, cache:CacheOptions, framework:FrameworkOptions, system:SystemOptions }'
+      content: 'type Configuration = { auth: AuthOptions, cache: CacheOptions, framework: FrameworkOptions, system: SystemOptions }'
     package: msal
