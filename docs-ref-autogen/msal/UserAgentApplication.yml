@@ -15,8 +15,6 @@ items:
       - msal.UserAgentApplication.getLoginInProgress
       - msal.UserAgentApplication.getPostLogoutRedirectUri
       - msal.UserAgentApplication.getRedirectUri
-      - msal.UserAgentApplication.handleRedirectCallback_1
-      - msal.UserAgentApplication.handleRedirectCallback
       - msal.UserAgentApplication.loginPopup
       - msal.UserAgentApplication.loginRedirect
       - msal.UserAgentApplication.logout
@@ -24,7 +22,8 @@ items:
     langs:
       - typeScript
     type: class
-    summary: 'Класс UserAgentApplication: <xref:UserAgentApplication> Объект экземпляра, который разработчик может использовать, чтобы сделать loginXX acquireTokenXX функции OR'
+    summary: |
+      Класс UserAgentApplication экземпляр объекта, разработчик может использовать, чтобы сделать loginXX acquireTokenXX функции OR
     package: msal
   - uid: msal.UserAgentApplication.acquireTokenPopup
     name: acquireTokenPopup(AuthenticationParameters)
@@ -50,7 +49,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Используется, когда требуется получить маркер доступа для API, перенаправляя пользователя к конечной точке авторизации.'
+    summary: 'Используется, если вы хотите получить маркер доступа для API путем перенаправления браузера пользователя в конечную точку авторизации.'
     syntax:
       content: 'function acquireTokenRedirect(request: AuthenticationParameters)'
       parameters:
@@ -85,11 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: |-
-      Возвращает центр, где центр — это URL-адрес, указывающий, в каталог, MSAL можно использовать для получения маркеров
-      - В Azure AD этот атрибут является URL-адрес, указывающий, Azure active directory, MSAL для получения маркеров, он имеет вид https://login.microsoftonline.com/&lt; Enter_the_Tenant_Info_Here&gt; Если ваше приложение поддерживает учетные записи в одном каталоге организации, замените значение «Enter_the_Tenant_Info_Here» с идентификатором клиента или имя клиента (например, contoso.microsoft.com), если приложение поддерживает учетных записей в любом каталоге организации, замените значение «Enter_the_Tenant_Info_Here» организаций, если приложение поддерживает учетные записи в любой каталог организации и личных учетных записей Майкрософт, замените «Enter_the_Tenant_Info_ Здесь» значение с помощью обычных.
-      Для ограничения поддержки в корпорацию Майкрософт личные учетные записи, замените значение «Enter_the_Tenant_Info_Here» потребителей.
-      - В Azure B2C, он имеет форму https://&lt;экземпляр&gt;/tfp/&lt;клиента&gt;/<policyName>/
+    summary: Метод для управления URL-адрес центра.
     syntax:
       content: 'authority: string'
       return:
@@ -102,7 +97,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: 'Возвращает подписанный в учетную запись (пришло от объекта учетной записи, созданного во время входа в систему) или значение null, если состояние не будет найдена'
+    summary: 'Возвращает подписанный в учетной записи (объект учетной записи создается во время успешного входа в систему) или значение null, если состояние не будет найдена'
     syntax:
       content: function getAccount()
       parameters: []
@@ -116,7 +111,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Используется для фильтрации всех кэшированных элементов и возвращения списка уникальных учетных записей с учетом homeAccountIdentifier.
+    summary: Позволяет получить список уникальных учетных записей в зависимости от homeAccountIdentifier кэша MSAL.
     syntax:
       content: function getAllAccounts()
       parameters: []
@@ -130,7 +125,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: Возвращает экземпляр центра
+    summary: Получение текущего экземпляра центра из объекта конфигурации MSAL
     syntax:
       content: function getAuthorityInstance()
       parameters: []
@@ -198,40 +193,6 @@ items:
         type:
           - string
     package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback_1
-    name: handleRedirectCallback(authResponseCallback)
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Задает функции обратного вызова для потока перенаправления для обратной отправки объекта успеха или ошибки.
-    syntax:
-      content: 'function handleRedirectCallback(authCallback: authResponseCallback)'
-      parameters:
-        - id: authCallback
-          type:
-            - authResponseCallback
-          description: ''
-    package: msal
-  - uid: msal.UserAgentApplication.handleRedirectCallback
-    name: 'handleRedirectCallback(tokenReceivedCallback, errorReceivedCallback)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: Задает функции обратного вызова для потока перенаправления для обратной отправки объекта успеха или ошибки.
-    syntax:
-      content: 'function handleRedirectCallback(tokenReceivedCallback: tokenReceivedCallback, errorReceivedCallback: errorReceivedCallback)'
-      parameters:
-        - id: tokenReceivedCallback
-          type:
-            - tokenReceivedCallback
-          description: ''
-        - id: errorReceivedCallback
-          type:
-            - errorReceivedCallback
-          description: ''
-    package: msal
   - uid: msal.UserAgentApplication.loginPopup
     name: loginPopup(AuthenticationParameters)
     children: []
@@ -274,8 +235,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      Используется для Выход текущего пользователя и перенаправит пользователя postLogoutRedirectUri.
-      Поведение по умолчанию он перенаправляет пользователя `window.location.href`.
+      Используйте для входа текущего пользователя и перенаправит пользователя postLogoutRedirectUri.
+      Поведением по умолчанию является перенаправить пользователя на `window.location.href`.
     syntax:
       content: function logout()
       parameters: []
@@ -286,7 +247,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: 'Конструктор для <xref:UserAgentApplication> объекта, это позволяет создать экземпляр <xref:UserAgentApplication> объекта'
+    summary: ''
     syntax:
       content: 'new UserAgentApplication(configuration: Configuration)'
       parameters:
