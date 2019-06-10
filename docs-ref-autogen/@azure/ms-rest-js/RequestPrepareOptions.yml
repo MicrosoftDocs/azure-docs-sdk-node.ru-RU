@@ -1,0 +1,340 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions'
+    name: RequestPrepareOptions
+    fullName: RequestPrepareOptions
+    children:
+      - '@azure/ms-rest-js.RequestPrepareOptions.abortSignal'
+      - '@azure/ms-rest-js.RequestPrepareOptions.baseUrl'
+      - '@azure/ms-rest-js.RequestPrepareOptions.body'
+      - '@azure/ms-rest-js.RequestPrepareOptions.bodyIsStream'
+      - '@azure/ms-rest-js.RequestPrepareOptions.deserializationMapper'
+      - '@azure/ms-rest-js.RequestPrepareOptions.disableClientRequestId'
+      - '@azure/ms-rest-js.RequestPrepareOptions.disableJsonStringifyOnBody'
+      - '@azure/ms-rest-js.RequestPrepareOptions.formData'
+      - '@azure/ms-rest-js.RequestPrepareOptions.headers'
+      - '@azure/ms-rest-js.RequestPrepareOptions.mappers'
+      - '@azure/ms-rest-js.RequestPrepareOptions.method'
+      - '@azure/ms-rest-js.RequestPrepareOptions.onDownloadProgress'
+      - '@azure/ms-rest-js.RequestPrepareOptions.onUploadProgress'
+      - '@azure/ms-rest-js.RequestPrepareOptions.pathParameters'
+      - '@azure/ms-rest-js.RequestPrepareOptions.pathTemplate'
+      - '@azure/ms-rest-js.RequestPrepareOptions.queryParameters'
+      - '@azure/ms-rest-js.RequestPrepareOptions.serializationMapper'
+      - '@azure/ms-rest-js.RequestPrepareOptions.url'
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.abortSignal'
+    name: abortSignal
+    fullName: abortSignal
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'abortSignal?: AbortSignalLike'
+      return:
+        type:
+          - '@azure/ms-rest-js.AbortSignalLike'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.baseUrl'
+    name: baseUrl
+    fullName: baseUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Базовый URL-адрес запроса. Значение по умолчанию —: "https://management.azure.com«. Это применимо только с pathTemplate. Если вы предоставляете options.url, то предполагается, что предоставить полный URL-адрес.'
+    optional: true
+    syntax:
+      content: 'baseUrl?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Текст запроса. Он может быть любого типа. Это значение будет сериализован, если это не поток.'
+    optional: true
+    syntax:
+      content: 'body?: any'
+      return:
+        type:
+          - any
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.bodyIsStream'
+    name: bodyIsStream
+    fullName: bodyIsStream
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает, является ли тело запроса потока (полезно для сценариев передачи файлов).'
+    optional: true
+    syntax:
+      content: 'bodyIsStream?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.deserializationMapper'
+    name: deserializationMapper
+    fullName: deserializationMapper
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Сведения о том, как выполнить десериализацию текста ответа.'
+    optional: true
+    syntax:
+      content: 'deserializationMapper?: object'
+      return:
+        type:
+          - object
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.disableClientRequestId'
+    name: disableClientRequestId
+    fullName: disableClientRequestId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если задано значение true, указывает, что клиенту не присвоено новой Guid() заголовок «x-ms-client-request-id».'
+    optional: true
+    syntax:
+      content: 'disableClientRequestId?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.disableJsonStringifyOnBody'
+    name: disableJsonStringifyOnBody
+    fullName: disableJsonStringifyOnBody
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает, должен ли этот метод JSON.stringify() текст запроса. Значение по умолчанию: false.'
+    optional: true
+    syntax:
+      content: 'disableJsonStringifyOnBody?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.formData'
+    name: formData
+    fullName: formData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'formData?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.headers'
+    name: headers
+    fullName: headers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Словарь заголовков запросов, которые необходимо применить к запросу.
+      Вот ключ «заголовка name», а равно «-значение заголовка». Значение заголовка должно иметь строковый тип.
+       - ContentType должен иметь вид с именем ключа «Content-Type». Default value "application/json; charset=utf-8".
+       - «Transfer-Encoding» имеет значение «фрагментированный» по умолчанию если «options.bodyIsStream» имеет значение true.
+       - «Content-Type» значение «application/octet-stream» по умолчанию Если задано значение «options.bodyIsStream» значение true.
+       - «принять язык» по умолчанию имеет значение «en US»
+       - «x-ms-client-request-id» по умолчанию присваивается новый идентификатор Guid. Чтобы не создать guid для запроса, задайте options.disableClientRequestId значение true
+    optional: true
+    syntax:
+      content: 'headers?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.mappers'
+    name: mappers
+    fullName: mappers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Словарь модулей сопоставления, которые могут использоваться при сериализации [de].'
+    optional: true
+    syntax:
+      content: 'mappers?: [key: string]: any'
+      return:
+        type:
+          - '[key: string]: any'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.method'
+    name: method
+    fullName: method
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Метод HTTP-запроса. Допустимые значения: «GET», «PUT», «HEAD», «Удалить», «Параметры», «POST» или «PATCH».'
+    syntax:
+      content: 'method: HttpMethods'
+      return:
+        type:
+          - '@azure/ms-rest-js.HttpMethods'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.onDownloadProgress'
+    name: onDownloadProgress
+    fullName: onDownloadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - '(progress: TransferProgressEvent) => void'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.onUploadProgress'
+    name: onUploadProgress
+    fullName: onUploadProgress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
+      return:
+        type:
+          - '(progress: TransferProgressEvent) => void'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.pathParameters'
+    name: pathParameters
+    fullName: pathParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Словарь параметров пути, которые должны быть заменены фактическими значениями в pathTemplate.
+      Вот ключ «path-parameter-name», а равно «путь параметр значение».
+      «Путь параметр значение» может быть типа «String», или он может иметь тип «object».
+      Если вы хотите пропустить кодирования URL-адреса следует использовать формат «объект». При использовании формата объектов, объект должен иметь свойство с именем значение, которое предоставляет «путь параметр значение».
+      Пример:
+         - параметра Path в формате «объект»: {«path параметр name»: {значение: «путь параметр значение», skipUrlEncoding: true}}
+         - параметра Path в формате «string»: {«path параметр name»: «-параметра Path»}.
+    optional: true
+    syntax:
+      content: 'pathParameters?: [key: string]: function'
+      return:
+        type:
+          - '[key: string]: function'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.pathTemplate'
+    name: pathTemplate
+    fullName: pathTemplate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Шаблон пути запроса URL-адрес. Указать «url» или укажите «pathTemplate» в объект параметров. Оба варианта являются взаимоисключающими.
+      Пример: «/ subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}»
+    optional: true
+    syntax:
+      content: 'pathTemplate?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.queryParameters'
+    name: queryParameters
+    fullName: queryParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Словарь параметров запроса, добавляемая к URL-адрес, где «ключа» — «запрос parameter-name» и «value» является «запрос параметр значение».
+      «Запрос параметр значение» может быть типа «String», или он может иметь тип «object».
+      Если вы хотите пропустить кодирования URL-адреса следует использовать формат «объект». При использовании формата объектов, объект должен иметь свойство с именем значение, которое предоставляет «запроса параметр значение».
+      Пример:
+         - значение параметра запроса — в формате «объект»: {«— имя параметра запроса —»: {значение: «запроса параметр значение», skipUrlEncoding: true}}
+         - query-parameter-value in "string" format: { "query-parameter-name": "query-parameter-value"}.
+      Примечание. «Если options.url уже имеет некоторые параметры запроса, затем значение, указанное в options.queryParameters будет добавлен к URL-адрес.
+    optional: true
+    syntax:
+      content: 'queryParameters?: [key: string]: function'
+      return:
+        type:
+          - '[key: string]: function'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.serializationMapper'
+    name: serializationMapper
+    fullName: serializationMapper
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Сведения о том, как сериализовать текст запроса.'
+    optional: true
+    syntax:
+      content: 'serializationMapper?: Mapper'
+      return:
+        type:
+          - '@azure/ms-rest-js.Mapper'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.RequestPrepareOptions.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Запрос URL-адрес. Он может или не может иметь параметров запроса в нем. Указать «url» или укажите «pathTemplate» в объект параметров. Оба варианта являются взаимоисключающими.
+    optional: true
+    syntax:
+      content: 'url?: string'
+      return:
+        type:
+          - string
+    package: '@azure/ms-rest-js'
+references:
+  - uid: '@azure/ms-rest-js.AbortSignalLike'
+    name: AbortSignalLike
+    spec.typeScript:
+      - name: AbortSignalLike
+        fullName: AbortSignalLike
+        uid: '@azure/ms-rest-js.AbortSignalLike'
+  - uid: '@azure/ms-rest-js.HttpMethods'
+    name: HttpMethods
+    spec.typeScript:
+      - name: HttpMethods
+        fullName: HttpMethods
+        uid: '@azure/ms-rest-js.HttpMethods'
+  - uid: '@azure/ms-rest-js.Mapper'
+    name: Mapper
+    spec.typeScript:
+      - name: Mapper
+        fullName: Mapper
+        uid: '@azure/ms-rest-js.Mapper'
