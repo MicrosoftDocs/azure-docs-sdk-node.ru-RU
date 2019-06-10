@@ -1,0 +1,193 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-apimanagement.ProductContract'
+    name: ProductContract
+    fullName: ProductContract
+    children:
+      - '@azure/arm-apimanagement.ProductContract.approvalRequired'
+      - '@azure/arm-apimanagement.ProductContract.description'
+      - '@azure/arm-apimanagement.ProductContract.displayName'
+      - '@azure/arm-apimanagement.ProductContract.id'
+      - '@azure/arm-apimanagement.ProductContract.name'
+      - '@azure/arm-apimanagement.ProductContract.state'
+      - '@azure/arm-apimanagement.ProductContract.subscriptionRequired'
+      - '@azure/arm-apimanagement.ProductContract.subscriptionsLimit'
+      - '@azure/arm-apimanagement.ProductContract.terms'
+      - '@azure/arm-apimanagement.ProductContract.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: Сведения о продукте.
+    extends:
+      name: '@azure/arm-apimanagement.Resource'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.approvalRequired'
+    name: approvalRequired
+    fullName: approvalRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'является ли утверждение подписки является обязательным. Если значение равно false, новые подписки утверждаются автоматически, что позволяет разработчикам вызывать интерфейсы API продукта сразу же после оформления подписки. Если значение равно true, администраторы должны вручную утвердить подписку до разработчик сможет вызывать интерфейсы API продукта. Может присутствовать только в том случае, если свойство subscriptionRequired существует и имеет значение false.'
+    optional: true
+    syntax:
+      content: 'approvalRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Описание продукта. Может содержать теги форматирования HTML.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Название продукта.
+    syntax:
+      content: 'displayName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор ресурса.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Имя ресурса.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'name?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'ли продукт опубликован, или нет. Опубликованные продукты доступны пользователями портала разработчика. Не опубликованные продукты видны только администраторам. По умолчанию состояние продукта — notPublished. Возможные значения: «notPublished», «публикации»'
+    optional: true
+    syntax:
+      content: 'state?: ProductState'
+      return:
+        type:
+          - '@azure/arm-apimanagement.ProductState'
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.subscriptionRequired'
+    name: subscriptionRequired
+    fullName: subscriptionRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Включены ли подписки продукта, необходимые для доступа к интерфейсам API в этот продукт. Если значение равно true, называется продукта как «защищенный» и необходим действительный ключ подписки для запроса к API, включенных в продукт для успешного выполнения. Если значение равно false, продукт называется «открыть», и запросы к API, включенных в продукт могут выполняться без ключа подписки.
+      Если свойство опускается при создании нового продукта, его значение считается равным true.
+    optional: true
+    syntax:
+      content: 'subscriptionRequired?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.subscriptionsLimit'
+    name: subscriptionsLimit
+    fullName: subscriptionsLimit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Число подписок, пользователь может ли иметь на этот продукт в то же время. Имеет значение null или пропустите, чтобы разрешить неограниченное число подписок пользователя. Может присутствовать только в том случае, если свойство subscriptionRequired существует и имеет значение false.'
+    optional: true
+    syntax:
+      content: 'subscriptionsLimit?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.terms'
+    name: terms
+    fullName: terms
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Условия использования продукта. Они будут представлены разработчикам во время оформления подписки на продукт. Им понадобится принять эти условия, чтобы завершить процедуру оформления.'
+    optional: true
+    syntax:
+      content: 'terms?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+  - uid: '@azure/arm-apimanagement.ProductContract.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Тип ресурса для ресурса управления API.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-apimanagement'
+references:
+  - uid: '@azure/arm-apimanagement.Resource'
+    name: Resource
+    spec.typeScript:
+      - name: Resource
+        fullName: Resource
+        uid: '@azure/arm-apimanagement.Resource'
+  - uid: '@azure/arm-apimanagement.ProductState'
+    name: ProductState
+    spec.typeScript:
+      - name: ProductState
+        fullName: ProductState
+        uid: '@azure/arm-apimanagement.ProductState'
