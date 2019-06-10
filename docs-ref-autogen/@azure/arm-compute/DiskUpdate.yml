@@ -1,0 +1,142 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.DiskUpdate'
+    name: DiskUpdate
+    fullName: DiskUpdate
+    children:
+      - '@azure/arm-compute.DiskUpdate.diskIOPSReadWrite'
+      - '@azure/arm-compute.DiskUpdate.diskMBpsReadWrite'
+      - '@azure/arm-compute.DiskUpdate.diskSizeGB'
+      - '@azure/arm-compute.DiskUpdate.encryptionSettingsCollection'
+      - '@azure/arm-compute.DiskUpdate.osType'
+      - '@azure/arm-compute.DiskUpdate.sku'
+      - '@azure/arm-compute.DiskUpdate.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="591a6-101">Обновить ресурс диска.</span><span class="sxs-lookup"><span data-stu-id="591a6-101">Disk update resource.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskIOPSReadWrite'
+    name: diskIOPSReadWrite
+    fullName: diskIOPSReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="591a6-102">Число операций ввода-ВЫВОДА, разрешенное для этого диска; настраивается только для дисков режимом UltraSSD.</span><span class="sxs-lookup"><span data-stu-id="591a6-102">The number of IOPS allowed for this disk; only settable for UltraSSD disks.</span></span> <span data-ttu-id="591a6-103">Одной операции можно передавать между 4k и 256 КБ.</span><span class="sxs-lookup"><span data-stu-id="591a6-103">One operation can transfer between 4k and 256k bytes.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskIOPSReadWrite?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskMBpsReadWrite'
+    name: diskMBpsReadWrite
+    fullName: diskMBpsReadWrite
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="591a6-104">Пропускная способность, разрешенное для этого диска; настраивается только для дисков режимом UltraSSD.</span><span class="sxs-lookup"><span data-stu-id="591a6-104">The bandwidth allowed for this disk; only settable for UltraSSD disks.</span></span> <span data-ttu-id="591a6-105">Означает миллионы байт в секунду, Мбит/с — здесь МБ использует приставка ISO, степени 10.</span><span class="sxs-lookup"><span data-stu-id="591a6-105">MBps means millions of bytes per second - MB here uses the ISO notation, of powers of 10.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskMBpsReadWrite?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.diskSizeGB'
+    name: diskSizeGB
+    fullName: diskSizeGB
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="591a6-106">Если creationData.createOption пуста, это поле является обязательным и указывает размер виртуального жесткого диска для создания.</span><span class="sxs-lookup"><span data-stu-id="591a6-106">If creationData.createOption is Empty, this field is mandatory and it indicates the size of the VHD to create.</span></span> <span data-ttu-id="591a6-107">Если это поле не отображается для обновления или создания с другими параметрами, это означает изменение размера.</span><span class="sxs-lookup"><span data-stu-id="591a6-107">If this field is present for updates or creation with other options, it indicates a resize.</span></span> <span data-ttu-id="591a6-108">Изменение размеров объекта разрешены только в том случае, если диск не подключен к работающей виртуальной машине и можно только увеличить размер диска.</span><span class="sxs-lookup"><span data-stu-id="591a6-108">Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk''s size.</span></span>'
+    optional: true
+    syntax:
+      content: 'diskSizeGB?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.encryptionSettingsCollection'
+    name: encryptionSettingsCollection
+    fullName: encryptionSettingsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="591a6-109">Используемый набор параметров шифрования быть шифрование дисков Azure, может содержать несколько параметров шифрования на диск или моментальный снимок.</span><span class="sxs-lookup"><span data-stu-id="591a6-109">Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.</span></span>'
+    optional: true
+    syntax:
+      content: 'encryptionSettingsCollection?: EncryptionSettingsCollection'
+      return:
+        type:
+          - '@azure/arm-compute.EncryptionSettingsCollection'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.osType'
+    name: osType
+    fullName: osType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="591a6-110">Тип операционной системы.</span><span class="sxs-lookup"><span data-stu-id="591a6-110">the Operating System type.</span></span> <span data-ttu-id="591a6-111">Ниже перечислены возможные значения. «Windows», «Linux»</span><span class="sxs-lookup"><span data-stu-id="591a6-111">Possible values include: ''Windows'', ''Linux''</span></span>'
+    optional: true
+    syntax:
+      content: 'osType?: OperatingSystemTypes'
+      return:
+        type:
+          - '@azure/arm-compute.OperatingSystemTypes'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'sku?: DiskSku'
+      return:
+        type:
+          - '@azure/arm-compute.DiskSku'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.DiskUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="591a6-112">Теги ресурсов</span><span class="sxs-lookup"><span data-stu-id="591a6-112">Resource tags</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.EncryptionSettingsCollection'
+    name: EncryptionSettingsCollection
+    spec.typeScript:
+      - name: EncryptionSettingsCollection
+        fullName: EncryptionSettingsCollection
+        uid: '@azure/arm-compute.EncryptionSettingsCollection'
+  - uid: '@azure/arm-compute.OperatingSystemTypes'
+    name: OperatingSystemTypes
+    spec.typeScript:
+      - name: OperatingSystemTypes
+        fullName: OperatingSystemTypes
+        uid: '@azure/arm-compute.OperatingSystemTypes'
+  - uid: '@azure/arm-compute.DiskSku'
+    name: DiskSku
+    spec.typeScript:
+      - name: DiskSku
+        fullName: DiskSku
+        uid: '@azure/arm-compute.DiskSku'
