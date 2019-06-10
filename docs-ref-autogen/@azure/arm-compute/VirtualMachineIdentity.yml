@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineIdentity'
+    name: VirtualMachineIdentity
+    fullName: VirtualMachineIdentity
+    children:
+      - '@azure/arm-compute.VirtualMachineIdentity.principalId'
+      - '@azure/arm-compute.VirtualMachineIdentity.tenantId'
+      - '@azure/arm-compute.VirtualMachineIdentity.type'
+      - '@azure/arm-compute.VirtualMachineIdentity.userAssignedIdentities'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="6bbb7-101">Удостоверение для виртуальной машины.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-101">Identity for the virtual machine.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity.principalId'
+    name: principalId
+    fullName: principalId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6bbb7-102">Идентификатор субъекта-удостоверения виртуальной машины.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-102">The principal id of virtual machine identity.</span></span> <span data-ttu-id="6bbb7-103">Это свойство будет предоставляться только для системы удостоверений.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-103">This property will only be provided for a system assigned identity.</span></span>
+      <span data-ttu-id="6bbb7-104">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="6bbb7-104">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'principalId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity.tenantId'
+    name: tenantId
+    fullName: tenantId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="6bbb7-105">Идентификатор клиента, связанный с виртуальной машиной.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-105">The tenant id associated with the virtual machine.</span></span> <span data-ttu-id="6bbb7-106">Это свойство будет предоставляться только для системы удостоверений.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-106">This property will only be provided for a system assigned identity.</span></span>
+      <span data-ttu-id="6bbb7-107">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="6bbb7-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'tenantId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6bbb7-108">Тип удостоверения, используемые для виртуальной машины.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-108">The type of identity used for the virtual machine.</span></span> <span data-ttu-id="6bbb7-109">Тип «Него значение SystemAssigned, UserAssigned» включает в себя неявно созданных удостоверение и набор с пользовательскими удостоверениями.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-109">The type ''SystemAssigned, UserAssigned'' includes both an implicitly created identity and a set of user assigned identities.</span></span> <span data-ttu-id="6bbb7-110">Тип «None» приведет к удалению всех удостоверений из виртуальной машины.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-110">The type ''None'' will remove any identities from the virtual machine.</span></span> <span data-ttu-id="6bbb7-111">Ниже перечислены возможные значения. Него значение «SystemAssigned», «UserAssigned», «Него значение SystemAssigned, UserAssigned», «None»</span><span class="sxs-lookup"><span data-stu-id="6bbb7-111">Possible values include: ''SystemAssigned'', ''UserAssigned'', ''SystemAssigned, UserAssigned'', ''None''</span></span>'
+    optional: true
+    syntax:
+      content: 'type?: ResourceIdentityType'
+      return:
+        type:
+          - '@azure/arm-compute.ResourceIdentityType'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity.userAssignedIdentities'
+    name: userAssignedIdentities
+    fullName: userAssignedIdentities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6bbb7-112">Список удостоверений пользователей, связанных с виртуальной машиной.</span><span class="sxs-lookup"><span data-stu-id="6bbb7-112">The list of user identities associated with the Virtual Machine.</span></span> <span data-ttu-id="6bbb7-113">Ссылки ключа словаря удостоверение пользователя, будут идентификаторы ресурсов ARM в виде: "/ subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}".</span><span class="sxs-lookup"><span data-stu-id="6bbb7-113">The user identity dictionary key references will be ARM resource ids in the form: ''/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}''.</span></span>'
+    optional: true
+    syntax:
+      content: 'userAssignedIdentities?: undefined | [key: string]: VirtualMachineIdentityUserAssignedIdentitiesValue'
+      return:
+        type:
+          - 'undefined | [key: string]: @azure/arm-compute.VirtualMachineIdentityUserAssignedIdentitiesValue'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.ResourceIdentityType'
+    name: ResourceIdentityType
+    spec.typeScript:
+      - name: ResourceIdentityType
+        fullName: ResourceIdentityType
+        uid: '@azure/arm-compute.ResourceIdentityType'
+  - uid: 'undefined | [key: string]: @azure/arm-compute.VirtualMachineIdentityUserAssignedIdentitiesValue'
+    name: VirtualMachineIdentityUserAssignedIdentitiesValue
+    spec.typeScript:
+      - name: 'undefined | [key: string]: '
+        fullName: 'undefined | [key: string]: '
+      - name: VirtualMachineIdentityUserAssignedIdentitiesValue
+        fullName: VirtualMachineIdentityUserAssignedIdentitiesValue
+        uid: '@azure/arm-compute.VirtualMachineIdentityUserAssignedIdentitiesValue'
