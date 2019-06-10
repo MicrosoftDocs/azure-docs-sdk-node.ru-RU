@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFile'
+    name: withAuthFile()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="1726c-101">Перед использованием этого метода установите cli az из https://github.com/Azure/azure-cli/releases.</span><span class="sxs-lookup"><span data-stu-id="1726c-101">Before using this method please install az cli from https://github.com/Azure/azure-cli/releases.</span></span> <span data-ttu-id="1726c-102">Затем выполните `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span><span class="sxs-lookup"><span data-stu-id="1726c-102">Then execute `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.</span></span>
+      <span data-ttu-id="1726c-103">Если вы хотите создать хранимой процедуры для различных облачных/среды затем выполните:</span><span class="sxs-lookup"><span data-stu-id="1726c-103">If you want to create the sp for a different cloud/environment then please execute:</span></span>
+      1. <span data-ttu-id="1726c-104">список облаков AZ</span><span class="sxs-lookup"><span data-stu-id="1726c-104">az cloud list</span></span>
+      2. <span data-ttu-id="1726c-105">AZ cloud задать – n <name of the environment></span><span class="sxs-lookup"><span data-stu-id="1726c-105">az cloud set –n <name of the environment></span></span>
+      3. <span data-ttu-id="1726c-106">az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**</span><span class="sxs-lookup"><span data-stu-id="1726c-106">az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**</span></span>
+      3. <span data-ttu-id="1726c-107">AZ ad sp create-for-rbac--создать cert - sdk-auth > auth.json / / sp create с помощью сертификата, если создается субъект-служба уже затем имени входа с информацией о субъекта-службы:</span><span class="sxs-lookup"><span data-stu-id="1726c-107">az ad sp create-for-rbac --create-cert --sdk-auth > auth.json // create sp with certificate If the service principal is already created then login with service principal info:</span></span>
+      4. <span data-ttu-id="1726c-108">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span><span class="sxs-lookup"><span data-stu-id="1726c-108">az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId></span></span>
+      5. <span data-ttu-id="1726c-109">Учетная запись AZ Показать - sdk-auth > auth.json проверка подлинности с помощью сведения субъекта-службы, указанный в файле проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="1726c-109">az account show --sdk-auth > auth.json Authenticates using the service principal information provided in the auth file.</span></span> <span data-ttu-id="1726c-110">Этот метод будет присвоено идентификатор подписки из файла проверки подлинности пользователя, предоставленного переменной среды в параметр options, или значение по умолчанию «AZURE_SUBSCRIPTION_ID».</span><span class="sxs-lookup"><span data-stu-id="1726c-110">This method will set the subscriptionId from the auth file to the user provided environment variable in the options parameter or the default "AZURE_SUBSCRIPTION_ID".</span></span>
+    syntax:
+      content: function withAuthFile()
+      parameters: []
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    name: TokenCredentialsBase>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TokenCredentialsBase
+        fullName: TokenCredentialsBase
+        uid: '@azure/ms-rest-nodeauth.TokenCredentialsBase'
+      - name: '>'
+        fullName: '>'
