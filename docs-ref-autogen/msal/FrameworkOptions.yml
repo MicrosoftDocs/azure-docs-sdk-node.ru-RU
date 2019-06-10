@@ -8,12 +8,11 @@ items:
       - typeScript
     type: type alias
     summary: |+
-      Платформа приложения/конкретной среды поддержки isAngular - флаг присвоено определить, является ли Angular Framework. Используется для передачи маркеров. TODO: detangle Эта зависимость от core.
-      unprotectedResources - массив из URI которые являются незащищенных ресурсах. MSAL не присоединит маркер к исходящим запросам, которые имеют эти URI. По умолчанию используется значение «null».
-      protectedResourceMap - это сопоставление ресурсов для областей, используемых MSAL для автоматическое присоединение маркеров доступа в вызовы веб-API.
-      Единый маркер доступа получается для ресурса. Поэтому можно сопоставить путь определенного ресурса следующим образом: {»https://graph.microsoft.com/v1.0/me«, [«user.read»]}, или URL-адрес ресурса в виде приложения: {»https://graph.microsoft.com/«, [«user.read», «mail.send»]}.
-      Это необходимо для вызовов CORS.
+      Поддержка конкретной среды приложения и платформы
+      - isAngular - флаг для определения того, является ли он Angular Framework. MSAL использует это для рассылки маркеры. Подробнее здесь: detangle Эта зависимость от core.
+      - unprotectedResources - массив из URI которые являются незащищенных ресурсах. MSAL не присоединит маркер к исходящим запросам, которые имеют эти URI. По умолчанию используется значение «null».
+      - protectedResourceMap - это сопоставление ресурсов для областей, используемых MSAL для автоматическое присоединение маркеров доступа в вызовы веб-API. Единый маркер доступа получается для ресурса. Поэтому можно сопоставить путь определенного ресурса следующим образом: {»https://graph.microsoft.com/v1.0/me«, [«user.read»]}, или URL-адрес ресурса в виде приложения: {»https://graph.microsoft.com/«, [«user.read», «mail.send»]}. Это необходимо для вызовов CORS.
 
     syntax:
-      content: 'type FrameworkOptions = { isAngular:boolean, protectedResourceMap:Map<string>, unprotectedResources:Array<string> }'
+      content: 'type FrameworkOptions = { isAngular: boolean, protectedResourceMap: Map<string>, unprotectedResources: Array<string> }'
     package: msal
