@@ -1,0 +1,35 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.withAuthFile'
+    name: withAuthFile()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Перед использованием этого метода установите cli az из https://github.com/Azure/azure-cli/releases. Затем выполните `az ad sp create-for-rbac --sdk-auth > ${yourFilename.json}`.
+      Если вы хотите создать хранимой процедуры для различных облачных/среды затем выполните:
+      1. список облаков AZ
+      2. AZ cloud задать – n <name of the environment>
+      3. az ad sp create-for-rbac --sdk-auth > auth.json // create sp with secret **OR**
+      3. AZ ad sp create-for-rbac--создать cert - sdk-auth > auth.json / / sp create с помощью сертификата, если создается субъект-служба уже затем имени входа с информацией о субъекта-службы:
+      4. az login --service-principal -u <clientId> -p <clientSecret> -t <tenantId>
+      5. Учетная запись AZ Показать - sdk-auth > auth.json проверка подлинности с помощью сведения субъекта-службы, указанный в файле проверки подлинности. Этот метод будет присвоено идентификатор подписки из файла проверки подлинности пользователя, предоставленного переменной среды в параметр options, или значение по умолчанию «AZURE_SUBSCRIPTION_ID».
+    syntax:
+      content: function withAuthFile()
+      parameters: []
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: Promise<@azure/ms-rest-nodeauth.TokenCredentialsBase>
+    name: TokenCredentialsBase>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: TokenCredentialsBase
+        fullName: TokenCredentialsBase
+        uid: '@azure/ms-rest-nodeauth.TokenCredentialsBase'
+      - name: '>'
+        fullName: '>'

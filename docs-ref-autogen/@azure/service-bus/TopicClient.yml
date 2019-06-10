@@ -1,0 +1,111 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    fullName: TopicClient
+    children:
+      - '@azure/service-bus.TopicClient.close'
+      - '@azure/service-bus.TopicClient.createSender'
+      - '@azure/service-bus.TopicClient.entityPath'
+      - '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+      - '@azure/service-bus.TopicClient.id'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Описывает клиента, который обеспечивает взаимодействие с шины обслуживания.
+      Используйте `createTopicClient` функции объекта ServiceBusClient для создания экземпляра TopicClient
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Закрывает ссылку AMQP для отправителя, созданные этим клиентом.
+      После закрытия TopicClient ни отправителей можно использовать для других операций.
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.createSender'
+    name: createSender()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Создает отправителя для отправки сообщений, запланировав сообщения должны отправляться в дальнейшем и Отмена запланированного сообщения.
+      - Вызывает ошибку, если отправителем открыть уже существует для этого TopicClient.
+      Если раздел содержит подписки, поддерживающая сеансы, то сообщения отправлены без `sessionId` свойство будет отправлена в очередь невостребованных писем таких подписок.
+    syntax:
+      content: function createSender()
+      parameters: []
+      return:
+        type:
+          - '@azure/service-bus.Sender'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.entityPath'
+    name: entityPath
+    fullName: entityPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Путь для раздела служебной шины, для которого создается этот клиент.'
+    syntax:
+      content: 'entityPath: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.getDeadLetterTopicPath'
+    name: 'getDeadLetterTopicPath(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Возвращает имя соответствующего раздела недоставленных сообщений для заданного имена разделов и подписок.
+      Использовать это в `createSubscriptionClient` функции `ServiceBusClient` экземпляра для получения сообщений из очереди недоставленных сообщений для заданного подписки.
+    syntax:
+      content: 'static function getDeadLetterTopicPath(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: 'Имя раздела, имя которого недоставленных какой выбираются'
+        - id: subscriptionName
+          type:
+            - string
+          description: |
+            Имя подписки, имя которого недоставленных какой выбираются
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.TopicClient.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Уникальный идентификатор для данного клиента.
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    spec.typeScript:
+      - name: Sender
+        fullName: Sender
+        uid: '@azure/service-bus.Sender'
