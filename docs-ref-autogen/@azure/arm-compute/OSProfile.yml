@@ -1,0 +1,167 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    fullName: OSProfile
+    children:
+      - '@azure/arm-compute.OSProfile.adminPassword'
+      - '@azure/arm-compute.OSProfile.adminUsername'
+      - '@azure/arm-compute.OSProfile.allowExtensionOperations'
+      - '@azure/arm-compute.OSProfile.computerName'
+      - '@azure/arm-compute.OSProfile.customData'
+      - '@azure/arm-compute.OSProfile.linuxConfiguration'
+      - '@azure/arm-compute.OSProfile.secrets'
+      - '@azure/arm-compute.OSProfile.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="df34b-101">Указывает параметры операционной системы виртуальной машины.</span><span class="sxs-lookup"><span data-stu-id="df34b-101">Specifies the operating system settings for the virtual machine.</span></span>
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminPassword'
+    name: adminPassword
+    fullName: adminPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="df34b-102">Указывает пароль учетной записи администратора.</span><span class="sxs-lookup"><span data-stu-id="df34b-102">Specifies the password of the administrator account.</span></span> <br><br> <span data-ttu-id="df34b-103">**Минимальная длина (Windows):** 8 символов</span><span class="sxs-lookup"><span data-stu-id="df34b-103">**Minimum-length (Windows):** 8 characters</span></span> <br><br> <span data-ttu-id="df34b-104">**Минимальная длина (Linux):** 6 символов</span><span class="sxs-lookup"><span data-stu-id="df34b-104">**Minimum-length (Linux):** 6 characters</span></span> <br><br> <span data-ttu-id="df34b-105">**Максимальная длина (Windows):** 123 символов</span><span class="sxs-lookup"><span data-stu-id="df34b-105">**Max-length (Windows):** 123 characters</span></span> <br><br> <span data-ttu-id="df34b-106">**Максимальная длина (Linux):** 72 символов</span><span class="sxs-lookup"><span data-stu-id="df34b-106">**Max-length (Linux):** 72 characters</span></span> <br><br>
+      <span data-ttu-id="df34b-107">**Требования к сложности:** ниже 3 из 4 условия должны быть выполнены</span><span class="sxs-lookup"><span data-stu-id="df34b-107">**Complexity requirements:** 3 out of 4 conditions below need to be fulfilled</span></span> <br> <span data-ttu-id="df34b-108">Имеет строчные знаки</span><span class="sxs-lookup"><span data-stu-id="df34b-108">Has lower characters</span></span> <br><span data-ttu-id="df34b-109">Имеет прописные знаки</span><span class="sxs-lookup"><span data-stu-id="df34b-109">Has upper characters</span></span> <br> <span data-ttu-id="df34b-110">Содержит цифру</span><span class="sxs-lookup"><span data-stu-id="df34b-110">Has a digit</span></span> <br> <span data-ttu-id="df34b-111">Есть специальный символ (регулярное выражение соответствует [\W_])</span><span class="sxs-lookup"><span data-stu-id="df34b-111">Has a special character (Regex match [\W_])</span></span> <br><br> <span data-ttu-id="df34b-112">**Запрещенные значения:** "abc@123«, «P@$$w0rd»,"P@ssw0rd«,»P@ssword123«, «Pa$ $роль», "pass@word1«, «Password!», «Password1», «Password22», «iloveyou!»</span><span class="sxs-lookup"><span data-stu-id="df34b-112">**Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"</span></span> <br><br> <span data-ttu-id="df34b-113">Сброс пароля, см. в разделе [сброс службы удаленных рабочих столов или ее пароль для входа в виртуальную Машину Windows](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="df34b-113">For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)</span></span>
+      <br><br> <span data-ttu-id="df34b-114">Сброс пароля пользователя root, см. в разделе [управлять пользователями, SSH и проверка или восстановление дисков в виртуальных машинах Azure, с помощью расширения VMAccess](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)</span><span class="sxs-lookup"><span data-stu-id="df34b-114">For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)</span></span>
+    optional: true
+    syntax:
+      content: 'adminPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminUsername'
+    name: adminUsername
+    fullName: adminUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="df34b-115">Задает имя учетной записи администратора.</span><span class="sxs-lookup"><span data-stu-id="df34b-115">Specifies the name of the administrator account.</span></span> <br><br> <span data-ttu-id="df34b-116">**Ограничение "только для Windows":** Не может заканчиваться на «.»</span><span class="sxs-lookup"><span data-stu-id="df34b-116">**Windows-only restriction:** Cannot end in "."</span></span> <br><br> <span data-ttu-id="df34b-117">**Запрещенные значения:** «администратор», «admin», «user», «user1», «test», «user2», «test1», «user3», «администратора (1)», «1», «123», «», «actuser», «adm», «администратора (2)», «aspnet», «backup», «консоль», «david», «Гость», «john», «владелец», «root», «server», " SQL», «поддержка», «support_388945a0», «sys», «test2», «test3», «Пользователь4», «user5».</span><span class="sxs-lookup"><span data-stu-id="df34b-117">**Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5".</span></span> <br><br> <span data-ttu-id="df34b-118">**Минимальная длина (Linux):** 1 символ</span><span class="sxs-lookup"><span data-stu-id="df34b-118">**Minimum-length (Linux):** 1  character</span></span> <br><br> <span data-ttu-id="df34b-119">**Максимальная длина (Linux):** 64 символов</span><span class="sxs-lookup"><span data-stu-id="df34b-119">**Max-length (Linux):** 64 characters</span></span> <br><br> <span data-ttu-id="df34b-120">**Максимальная длина (Windows):** 20 символов</span><span class="sxs-lookup"><span data-stu-id="df34b-120">**Max-length (Windows):** 20 characters</span></span>  <br><br><li> <span data-ttu-id="df34b-121">Доступ с правами root для виртуальной Машины Linux, см. в разделе [использование привилегий суперпользователя на виртуальных машинах Linux в Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="df34b-121">For root access to the Linux VM, see [Using root privileges on Linux virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span></span><br><li>
+      <span data-ttu-id="df34b-122">Список встроенных системных пользователей на платформе Linux, который не должен использоваться в этом поле, см. в разделе [Выбор имен пользователей для Linux в Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="df34b-122">For a list of built-in system users on Linux that should not be used in this field, see [Selecting User Names for Linux on Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span></span>
+    optional: true
+    syntax:
+      content: 'adminUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.allowExtensionOperations'
+    name: allowExtensionOperations
+    fullName: allowExtensionOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="df34b-123">Указывает, разрешены ли операций расширения на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="df34b-123">Specifies whether extension operations should be allowed on the virtual machine.</span></span> <br><br><span data-ttu-id="df34b-124">Это может устанавливаться только на False при расширения не присутствуют на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="df34b-124">This may only be set to False when no extensions are present on the virtual machine.</span></span>'
+    optional: true
+    syntax:
+      content: 'allowExtensionOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.computerName'
+    name: computerName
+    fullName: computerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="df34b-125">Указывает имя ОС узла виртуальной машины.</span><span class="sxs-lookup"><span data-stu-id="df34b-125">Specifies the host OS name of the virtual machine.</span></span> <br><br> <span data-ttu-id="df34b-126">Это имя нельзя обновить после создания виртуальной Машины.</span><span class="sxs-lookup"><span data-stu-id="df34b-126">This name cannot be updated after the VM is created.</span></span> <br><br> <span data-ttu-id="df34b-127">**Максимальная длина (Windows):** 15 символов</span><span class="sxs-lookup"><span data-stu-id="df34b-127">**Max-length (Windows):** 15 characters</span></span> <br><br> <span data-ttu-id="df34b-128">**Максимальная длина (Linux):** 64 символов.</span><span class="sxs-lookup"><span data-stu-id="df34b-128">**Max-length (Linux):** 64 characters.</span></span> <br><br> <span data-ttu-id="df34b-129">Для создания имени правила и ограничения см. в разделе [руководство по реализации служб инфраструктуры Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).</span><span class="sxs-lookup"><span data-stu-id="df34b-129">For naming conventions and restrictions see [Azure infrastructure services implementation guidelines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).</span></span>'
+    optional: true
+    syntax:
+      content: 'computerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.customData'
+    name: customData
+    fullName: customData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="df34b-130">Указывает строку пользовательских данных кодировке base-64.</span><span class="sxs-lookup"><span data-stu-id="df34b-130">Specifies a base-64 encoded string of custom data.</span></span> <span data-ttu-id="df34b-131">Закодированной строки base-64 кодируется в двоичный массив, который сохраняется в виде файла на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="df34b-131">The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine.</span></span> <span data-ttu-id="df34b-132">Максимальная длина двоичного массива — 65 535 байт.</span><span class="sxs-lookup"><span data-stu-id="df34b-132">The maximum length of the binary array is 65535 bytes.</span></span> <br><br> <span data-ttu-id="df34b-133">С помощью cloud-init для виртуальной Машины, см. в разделе [с помощью cloud-init настроить виртуальную Машину Linux во время создания](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="df34b-133">For using cloud-init for your VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span></span>'
+    optional: true
+    syntax:
+      content: 'customData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.linuxConfiguration'
+    name: linuxConfiguration
+    fullName: linuxConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="df34b-134">Указывает параметры операционной системы Linux на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="df34b-134">Specifies the Linux operating system settings on the virtual machine.</span></span> <br><br><span data-ttu-id="df34b-135">Список поддерживаемых дистрибутивах Linux, см. в разделе [Linux в Azure — рекомендованные дистрибутивы](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span><span class="sxs-lookup"><span data-stu-id="df34b-135">For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)</span></span>
+      <br><br> <span data-ttu-id="df34b-136">Для запуска нерекомендованных дистрибутивах, см. в разделе [сведения о дистрибутивах Non-Endorsed](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).</span><span class="sxs-lookup"><span data-stu-id="df34b-136">For running non-endorsed distributions, see [Information for Non-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).</span></span>
+    optional: true
+    syntax:
+      content: 'linuxConfiguration?: LinuxConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.LinuxConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.secrets'
+    name: secrets
+    fullName: secrets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="df34b-137">Указывает набор сертификатов, которые должны быть установлены на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="df34b-137">Specifies set of certificates that should be installed onto the virtual machine.</span></span>'
+    optional: true
+    syntax:
+      content: 'secrets?: VaultSecretGroup[]'
+      return:
+        type:
+          - '@azure/arm-compute.VaultSecretGroup[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="df34b-138">Указывает параметры операционной системы Windows на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="df34b-138">Specifies Windows operating system settings on the virtual machine.</span></span>
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WindowsConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    spec.typeScript:
+      - name: LinuxConfiguration
+        fullName: LinuxConfiguration
+        uid: '@azure/arm-compute.LinuxConfiguration'
+  - uid: '@azure/arm-compute.VaultSecretGroup[]'
+    name: 'VaultSecretGroup[]'
+    spec.typeScript:
+      - name: VaultSecretGroup
+        fullName: VaultSecretGroup
+        uid: '@azure/arm-compute.VaultSecretGroup'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/arm-compute.WindowsConfiguration'

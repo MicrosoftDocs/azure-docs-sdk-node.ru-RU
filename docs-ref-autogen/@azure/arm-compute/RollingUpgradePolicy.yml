@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    fullName: RollingUpgradePolicy
+    children:
+      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="aa0a6-101">Параметры конфигурации, используемые при выполнении последовательного обновления.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-101">The configuration parameters used while performing a rolling upgrade.</span></span>'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    name: maxBatchInstancePercent
+    fullName: maxBatchInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aa0a6-102">Максимальный процент общее экземпляров виртуальных машин, которые будут обновляться одновременно путем последовательного обновления в одном пакете.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-102">The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch.</span></span> <span data-ttu-id="aa0a6-103">Так как это более неработоспособные экземпляры в предыдущей или будущей пакетов может привести к процента экземпляров, в пакете для уменьшения для обеспечения надежности более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-103">As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.</span></span> <span data-ttu-id="aa0a6-104">Значение по умолчанию для этого параметра составляет 20%.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-104">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxBatchInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+    name: maxUnhealthyInstancePercent
+    fullName: maxUnhealthyInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aa0a6-105">Максимальный процент экземпляры общее виртуальных машин в масштабируемом наборе, которое может быть одновременно неработоспособности, в результате обновления, либо обнаруженных в неработоспособном состоянии проверки работоспособности виртуальной машины перед прерывает выполнение последовательного обновления.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-105">The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts.</span></span> <span data-ttu-id="aa0a6-106">Это ограничение будет проверяться перед началом любого пакета.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-106">This constraint will be checked prior to starting any batch.</span></span> <span data-ttu-id="aa0a6-107">Значение по умолчанию для этого параметра составляет 20%.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-107">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+    name: maxUnhealthyUpgradedInstancePercent
+    fullName: maxUnhealthyUpgradedInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="aa0a6-108">Максимальный процент обновленные экземпляры виртуальных машин, которые находятся в неработоспособном состоянии.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-108">The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state.</span></span> <span data-ttu-id="aa0a6-109">Эта проверка будет происходить после обновления каждый пакет.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-109">This check will happen after each batch is upgraded.</span></span> <span data-ttu-id="aa0a6-110">Если когда-нибудь исчерпании данного процента, отменяет последовательное обновление.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-110">If this percentage is ever exceeded, the rolling update aborts.</span></span> <span data-ttu-id="aa0a6-111">Значение по умолчанию для этого параметра составляет 20%.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-111">The default value for this parameter is 20%.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    name: pauseTimeBetweenBatches
+    fullName: pauseTimeBetweenBatches
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="aa0a6-112">Время ожидания между обновления для всех виртуальных машин в одном пакете и началом следующего пакета.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-112">The wait time between completing the update for all virtual machines in one batch and starting the next batch.</span></span> <span data-ttu-id="aa0a6-113">Промежуток времени должен быть указан в формате ISO 8601.</span><span class="sxs-lookup"><span data-stu-id="aa0a6-113">The time duration should be specified in ISO 8601 format.</span></span> <span data-ttu-id="aa0a6-114">Значение по умолчанию — 0 секунд (PT0S).</span><span class="sxs-lookup"><span data-stu-id="aa0a6-114">The default value is 0 seconds (PT0S).</span></span>
+    optional: true
+    syntax:
+      content: 'pauseTimeBetweenBatches?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
