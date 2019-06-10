@@ -1,0 +1,226 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ServiceBusClient'
+    name: ServiceBusClient
+    fullName: ServiceBusClient
+    children:
+      - '@azure/service-bus.ServiceBusClient.close'
+      - '@azure/service-bus.ServiceBusClient.createFromAadTokenCredentials'
+      - '@azure/service-bus.ServiceBusClient.createFromConnectionString'
+      - '@azure/service-bus.ServiceBusClient.createFromTokenProvider'
+      - '@azure/service-bus.ServiceBusClient.createQueueClient'
+      - '@azure/service-bus.ServiceBusClient.createSubscriptionClient'
+      - '@azure/service-bus.ServiceBusClient.createTopicClient'
+      - '@azure/service-bus.ServiceBusClient.name'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="134f6-101">Описывает клиента, которое обеспечивает взаимодействие с экземпляром служебной шины.</span><span class="sxs-lookup"><span data-stu-id="134f6-101">Describes the client that allows interacting with a Service Bus instance.</span></span>
+      <span data-ttu-id="134f6-102">Оставляет подключение AMQP на пространство имен служебной шины и представляет собой точку входа для использования очереди, разделы и подписки.</span><span class="sxs-lookup"><span data-stu-id="134f6-102">Holds the AMQP connection to the Service Bus Namespace and is the entry point for using Queues, Topics and Subscriptions.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="134f6-103">Закрывает подключение AMQP, созданные этой ServiceBusClient, а также ссылки AMQP для отправителей или получателей, созданные клиентами очереди, раздела или подписки, созданные этой ServiceBusClient.</span><span class="sxs-lookup"><span data-stu-id="134f6-103">Closes the AMQP connection created by this ServiceBusClient along with AMQP links for sender/receivers created by the queue/topic/subscription clients created by this ServiceBusClient.</span></span>
+      <span data-ttu-id="134f6-104">После закрытия</span><span class="sxs-lookup"><span data-stu-id="134f6-104">Once closed,</span></span>
+      - <span data-ttu-id="134f6-105">Клиенты, созданные этой ServiceBusClient не может использоваться для отправки и приема сообщений больше.</span><span class="sxs-lookup"><span data-stu-id="134f6-105">the clients created by this ServiceBusClient cannot be used to send/receive messages anymore.</span></span>
+      - <span data-ttu-id="134f6-106">Этот ServiceBusClient не может использоваться для создания любых новых клиентов очереди, разделы и подписки.</span><span class="sxs-lookup"><span data-stu-id="134f6-106">this ServiceBusClient cannot be used to create any new queues/topics/subscriptions clients.</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<any>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromAadTokenCredentials'
+    name: 'createFromAadTokenCredentials(string, ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="134f6-107">Создает ServiceBusClient для пространства имен служебной шины, представленного хост-узелом заданного с помощью TokenCredentials, созданный с помощью `@azure/ms-rest-nodeauth` библиотеки.</span><span class="sxs-lookup"><span data-stu-id="134f6-107">Creates a ServiceBusClient for the Service Bus Namespace represented by the given host using the TokenCredentials generated using the `@azure/ms-rest-nodeauth` library.</span></span>'
+    syntax:
+      content: 'static function createFromAadTokenCredentials(host: string, credentials: ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: |-
+            <span data-ttu-id="134f6-108">Полное доменное имя для служебной шины.</span><span class="sxs-lookup"><span data-stu-id="134f6-108">Fully qualified domain name for ServiceBus.</span></span>
+            <span data-ttu-id="134f6-109">Скорее всего, {yournamespace}. servicebus.windows .net</span><span class="sxs-lookup"><span data-stu-id="134f6-109">Most likely, {yournamespace}.servicebus.windows.net</span></span>
+        - id: credentials
+          type:
+            - ApplicationTokenCredentials | UserTokenCredentials | DeviceTokenCredentials | MSITokenCredentials
+          description: |-
+            <span data-ttu-id="134f6-110">Учетные данные маркера, созданные с помощью `@azure/ms-rest-nodeauth` библиотеки.</span><span class="sxs-lookup"><span data-stu-id="134f6-110">The Token credentials generated by using the `@azure/ms-rest-nodeauth` library.</span></span> <span data-ttu-id="134f6-111">Он может принимать одно из следующих:</span><span class="sxs-lookup"><span data-stu-id="134f6-111">It can be one of the following:</span></span>
+             - <span data-ttu-id="134f6-112">ApplicationTokenCredentials</span><span class="sxs-lookup"><span data-stu-id="134f6-112">ApplicationTokenCredentials</span></span>
+             - <span data-ttu-id="134f6-113">UserTokenCredentials</span><span class="sxs-lookup"><span data-stu-id="134f6-113">UserTokenCredentials</span></span>
+             - <span data-ttu-id="134f6-114">DeviceTokenCredentials</span><span class="sxs-lookup"><span data-stu-id="134f6-114">DeviceTokenCredentials</span></span>
+             - <span data-ttu-id="134f6-115">MSITokenCredentials.</span><span class="sxs-lookup"><span data-stu-id="134f6-115">MSITokenCredentials.</span></span>
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: <span data-ttu-id="134f6-116">Параметры для управления способы взаимодействия с пространство имен служебной шины.</span><span class="sxs-lookup"><span data-stu-id="134f6-116">Options to control ways to interact with the Service Bus Namespace.</span></span>
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromConnectionString'
+    name: 'createFromConnectionString(string, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="134f6-117">Создает ServiceBusClient для пространства имен служебной шины, представленное в строке данного соединения.</span><span class="sxs-lookup"><span data-stu-id="134f6-117">Creates a ServiceBusClient for the Service Bus Namespace represented in the given connection string.</span></span>'
+    syntax:
+      content: 'static function createFromConnectionString(connectionString: string, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: connectionString
+          type:
+            - string
+          description: '<span data-ttu-id="134f6-118">Строка подключения вида "Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/; SharedAccessKeyName = my-SA-name; SharedAccessKey my-SA-key = "</span><span class="sxs-lookup"><span data-stu-id="134f6-118">Connection string of the form ''Endpoint=sb://my-servicebus-namespace.servicebus.windows.net/;SharedAccessKeyName=my-SA-name;SharedAccessKey=my-SA-key''</span></span>'
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createFromTokenProvider'
+    name: 'createFromTokenProvider(string, TokenProvider, ServiceBusClientOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="134f6-119">Создает пространство имен служебной шины, представленного хост-узелом заданного с помощью заданного TokenProvider ServiceBusClient.</span><span class="sxs-lookup"><span data-stu-id="134f6-119">Creates a ServiceBusClient for the Service Bus Namespace represented by the given host using the given TokenProvider.</span></span>'
+    syntax:
+      content: 'static function createFromTokenProvider(host: string, tokenProvider: TokenProvider, options?: ServiceBusClientOptions)'
+      parameters:
+        - id: host
+          type:
+            - string
+          description: '<span data-ttu-id="134f6-120">Полное доменное имя для служебной шины.</span><span class="sxs-lookup"><span data-stu-id="134f6-120">Fully qualified domain name for Servicebus.</span></span> <span data-ttu-id="134f6-121">Скорее всего, `<yournamespace>.servicebus.windows.net`.</span><span class="sxs-lookup"><span data-stu-id="134f6-121">Most likely, `<yournamespace>.servicebus.windows.net`.</span></span>'
+        - id: tokenProvider
+          type:
+            - TokenProvider
+          description: '<span data-ttu-id="134f6-122">Пользовательские реализации [поставщик маркеров](https://github.com/Azure/amqp-common-js/blob/master/lib/auth/token.ts) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="134f6-122">Your custom implementation of the [Token Provider](https://github.com/Azure/amqp-common-js/blob/master/lib/auth/token.ts) interface.</span></span>'
+        - id: options
+          type:
+            - '@azure/service-bus.ServiceBusClientOptions'
+          description: <span data-ttu-id="134f6-123">Параметры для управления способы взаимодействия с пространство имен служебной шины.</span><span class="sxs-lookup"><span data-stu-id="134f6-123">Options to control ways to interact with the Service Bus Namespace.</span></span>
+          optional: true
+      return:
+        type:
+          - '@azure/service-bus.ServiceBusClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createQueueClient'
+    name: createQueueClient(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="134f6-124">Создает QueueClient существующей очереди шины службы.</span><span class="sxs-lookup"><span data-stu-id="134f6-124">Creates a QueueClient for an existing Service Bus Queue.</span></span>
+    syntax:
+      content: 'function createQueueClient(queueName: string)'
+      parameters:
+        - id: queueName
+          type:
+            - string
+          description: <span data-ttu-id="134f6-125">Имя очереди.</span><span class="sxs-lookup"><span data-stu-id="134f6-125">The queue name.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.QueueClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createSubscriptionClient'
+    name: 'createSubscriptionClient(string, string)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="134f6-126">Создает SubscriptionClient для существующей подписки Service Bus.</span><span class="sxs-lookup"><span data-stu-id="134f6-126">Creates a SubscriptionClient for an existing Service Bus Subscription.</span></span>
+    syntax:
+      content: 'function createSubscriptionClient(topicName: string, subscriptionName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="134f6-127">Имя раздела.</span><span class="sxs-lookup"><span data-stu-id="134f6-127">The topic name.</span></span>
+        - id: subscriptionName
+          type:
+            - string
+          description: <span data-ttu-id="134f6-128">Имя подписки.</span><span class="sxs-lookup"><span data-stu-id="134f6-128">The subscription name.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.SubscriptionClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.createTopicClient'
+    name: createTopicClient(string)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="134f6-129">Создает TopicClient для существующего раздела Service Bus.</span><span class="sxs-lookup"><span data-stu-id="134f6-129">Creates a TopicClient for an existing Service Bus Topic.</span></span>
+    syntax:
+      content: 'function createTopicClient(topicName: string)'
+      parameters:
+        - id: topicName
+          type:
+            - string
+          description: <span data-ttu-id="134f6-130">Имя раздела.</span><span class="sxs-lookup"><span data-stu-id="134f6-130">The topic name.</span></span>
+      return:
+        type:
+          - '@azure/service-bus.TopicClient'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ServiceBusClient.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="134f6-131">Имя пространства имен служебной шины.</span><span class="sxs-lookup"><span data-stu-id="134f6-131">The name of the Service Bus Namespace.</span></span>
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.QueueClient'
+    name: QueueClient
+    spec.typeScript:
+      - name: QueueClient
+        fullName: QueueClient
+        uid: '@azure/service-bus.QueueClient'
+  - uid: '@azure/service-bus.SubscriptionClient'
+    name: SubscriptionClient
+    spec.typeScript:
+      - name: SubscriptionClient
+        fullName: SubscriptionClient
+        uid: '@azure/service-bus.SubscriptionClient'
+  - uid: '@azure/service-bus.TopicClient'
+    name: TopicClient
+    spec.typeScript:
+      - name: TopicClient
+        fullName: TopicClient
+        uid: '@azure/service-bus.TopicClient'
+  - uid: '@azure/service-bus.ServiceBusClientOptions'
+    name: ServiceBusClientOptions
+    spec.typeScript:
+      - name: ServiceBusClientOptions
+        fullName: ServiceBusClientOptions
+        uid: '@azure/service-bus.ServiceBusClientOptions'
+  - uid: '@azure/service-bus.ServiceBusClient'
+    name: ServiceBusClient
+    spec.typeScript:
+      - name: ServiceBusClient
+        fullName: ServiceBusClient
+        uid: '@azure/service-bus.ServiceBusClient'
