@@ -1,0 +1,278 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.Receiver'
+    name: Receiver
+    fullName: Receiver
+    children:
+      - '@azure/service-bus.Receiver.close'
+      - '@azure/service-bus.Receiver.getMessageIterator'
+      - '@azure/service-bus.Receiver.isClosed'
+      - '@azure/service-bus.Receiver.isReceivingMessages'
+      - '@azure/service-bus.Receiver.receiveDeferredMessage'
+      - '@azure/service-bus.Receiver.receiveDeferredMessages'
+      - '@azure/service-bus.Receiver.receiveMessages'
+      - '@azure/service-bus.Receiver.receiveMode'
+      - '@azure/service-bus.Receiver.registerMessageHandler'
+      - '@azure/service-bus.Receiver.renewMessageLock'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Класс приемника можно использовать для получения сообщений в пакете или путем регистрации обработчиков.
+      Используйте `createReceiver` функции на QueueClient и SubscriptionClient для создания экземпляра приемником.
+      Класс приемника — это абстракция над базовой ссылке получателя AMQP.
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Закрывает базовый ссылке получателя AMQP.
+      После закрытия получатель не может использоваться для других операций.
+      Используйте `createReceiver` функции на QueueClient и SubscriptionClient для создания нового получателя
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.getMessageIterator'
+    name: getMessageIterator()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Возвращает асинхронный итератор через сообщения от получателя.
+      Вызывает ошибку, если имеется другой операции получения выполняется на том же получателя. Если вы не уверены ли другой получать выполнение операции, проверьте `isReceivingMessages` свойство на стороне получателя.
+
+      Если не удается получить новое сообщение в за минуту, итератор `undefined` будут возвращены.
+    syntax:
+      content: function getMessageIterator()
+      parameters: []
+      return:
+        type:
+          - AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Возвращает `true` Если получатель будет закрыт. Это может произойти, либо потому, что получатель сам был закрыт или клиент, он создан был закрыт.'
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.isReceivingMessages'
+    name: isReceivingMessages()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Указывает ли получатель получает сообщения или нет.
+      Когда возвращается значение true, новый `registerMessageHandler()` или `receiveMessages()` вызовы не может выполняться.
+    syntax:
+      content: function isReceivingMessages()
+      parameters: []
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveDeferredMessage'
+    name: receiveDeferredMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Возвращает обещание, которое разрешается в определяемый отложенного сообщения заданного `sequenceNumber`.'
+    syntax:
+      content: 'function receiveDeferredMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: 'Порядковый номер сообщения, который должен быть получен.'
+      return:
+        type:
+          - Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveDeferredMessages'
+    name: 'receiveDeferredMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Возвращает обещание, которое разрешается к массиву отложенного сообщения, определенные по `sequenceNumbers`.'
+    syntax:
+      content: 'function receiveDeferredMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: 'Массив порядковых номеров для сообщений, которые необходимо получать.'
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveMessages'
+    name: 'receiveMessages(number, undefined | number)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Возвращает обещание, которое разрешается в массив сообщений на основе указанных число и время ожидания через приемник AMQP ссылка из очереди или подписки.
+      Вызывает ошибку, если имеется другой операции получения выполняется на том же получателя. Если вы не уверены ли другой получать выполнение операции, проверьте `isReceivingMessages` свойство на стороне получателя.
+    syntax:
+      content: 'function receiveMessages(maxMessageCount: number, idleTimeoutInSeconds?: undefined | number)'
+      parameters:
+        - id: maxMessageCount
+          type:
+            - number
+          description: Максимальное количество сообщений для получения из очереди или подписки.
+        - id: idleTimeoutInSeconds
+          type:
+            - undefined | number
+          description: |-
+            Максимальное время ожидания в секундах для которых получателя должна подождать получения первого сообщения. Если сообщение не получено к этому моменту, возвращенное обещание возвращает разрешенный на пустой массив.
+            - **По умолчанию**: `60` секунд.
+          optional: true
+      return:
+        type:
+          - 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.receiveMode'
+    name: receiveMode
+    fullName: receiveMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Обозначает receiveMode этого приемника.
+    syntax:
+      content: 'receiveMode: ReceiveMode'
+      return:
+        type:
+          - '@azure/service-bus.ReceiveMode'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.registerMessageHandler'
+    name: 'registerMessageHandler(OnMessage, OnError, MessageHandlerOptions)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      Регистрирует обработчики для обработки входящего потока сообщений через связь приемника AMQP из очереди или подписки.
+      Чтобы отказаться от получения сообщений, вызовите `close()` на стороне получателя.
+      Вызывает ошибку, если имеется другой операции получения выполняется на том же получателя. Если вы не уверены ли другой получать выполнение операции, проверьте `isReceivingMessages` свойство на стороне получателя.
+    syntax:
+      content: 'function registerMessageHandler(onMessage: OnMessage, onError: OnError, options?: MessageHandlerOptions)'
+      parameters:
+        - id: onMessage
+          type:
+            - '@azure/service-bus.OnMessage'
+          description: Обработчик для обработки каждого входящего сообщения.
+        - id: onError
+          type:
+            - '@azure/service-bus.OnError'
+          description: 'Обработчик для любая ошибка, возникающая при получении или обработке сообщений.'
+        - id: options
+          type:
+            - '@azure/service-bus.MessageHandlerOptions'
+          description: |
+            Параметры для элемента управления, если сообщения должна быть завершена автоматически, и (или) имеют свои блокировки автоматического обновления. Можно задать максимальное количество сообщений, которые должны обрабатываться одновременно. Можно также предоставить время ожидания в секундах для обозначения того, время ожидания закрытия получатель новое сообщение.
+          optional: true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Receiver.renewMessageLock'
+    name: renewMessageLock(string | ServiceBusMessage)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Продлевает блокировку сообщения в течение, как указано при создании очереди или подписки.
+      - Проверьте `lockedUntilUtc` свойство сообщения для время истечения срока действия блокировки.
+      - Если сообщение не сопоставлена (с помощью `complete()`, `defer()` или `deadletter()`, до истечения его блокировки, а затем территории сообщения в очереди или подписки для следующей операции получения.
+    syntax:
+      content: 'function renewMessageLock(lockTokenOrMessage: string | ServiceBusMessage)'
+      parameters:
+        - id: lockTokenOrMessage
+          type:
+            - string | @azure/service-bus.ServiceBusMessage
+          description: '`lockToken` Свойство сообщения или сообщения.'
+      return:
+        type:
+          - Promise<Date>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceiveMode'
+    name: ReceiveMode
+    spec.typeScript:
+      - name: ReceiveMode
+        fullName: ReceiveMode
+        uid: '@azure/service-bus.ReceiveMode'
+  - uid: AsyncIterableIterator<@azure/service-bus.ServiceBusMessage>
+    name: ServiceBusMessage>
+    spec.typeScript:
+      - name: AsyncIterableIterator<
+        fullName: AsyncIterableIterator<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '>'
+        fullName: '>'
+  - uid: Promise<@azure/service-bus.ServiceBusMessage | undefined>
+    name: ServiceBusMessage | undefined>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: ' | undefined>'
+        fullName: ' | undefined>'
+  - uid: 'Promise<@azure/service-bus.ServiceBusMessage[]>'
+    name: 'ServiceBusMessage[]>'
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/service-bus.OnMessage'
+    name: OnMessage
+    spec.typeScript:
+      - name: OnMessage
+        fullName: OnMessage
+        uid: '@azure/service-bus.OnMessage'
+  - uid: '@azure/service-bus.OnError'
+    name: OnError
+    spec.typeScript:
+      - name: OnError
+        fullName: OnError
+        uid: '@azure/service-bus.OnError'
+  - uid: '@azure/service-bus.MessageHandlerOptions'
+    name: MessageHandlerOptions
+    spec.typeScript:
+      - name: MessageHandlerOptions
+        fullName: MessageHandlerOptions
+        uid: '@azure/service-bus.MessageHandlerOptions'
+  - uid: string | @azure/service-bus.ServiceBusMessage
+    name: ServiceBusMessage
+    spec.typeScript:
+      - name: 'string | '
+        fullName: 'string | '
+      - name: ServiceBusMessage
+        fullName: ServiceBusMessage
+        uid: '@azure/service-bus.ServiceBusMessage'

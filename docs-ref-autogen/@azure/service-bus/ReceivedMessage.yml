@@ -1,0 +1,475 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.ReceivedMessage'
+    name: ReceivedMessage
+    fullName: ReceivedMessage
+    children:
+      - '@azure/service-bus.ReceivedMessage.abandon'
+      - '@azure/service-bus.ReceivedMessage.body'
+      - '@azure/service-bus.ReceivedMessage.complete'
+      - '@azure/service-bus.ReceivedMessage.contentType'
+      - '@azure/service-bus.ReceivedMessage.correlationId'
+      - '@azure/service-bus.ReceivedMessage.deadLetter'
+      - '@azure/service-bus.ReceivedMessage.deadLetterSource'
+      - '@azure/service-bus.ReceivedMessage.defer'
+      - '@azure/service-bus.ReceivedMessage.deliveryCount'
+      - '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+      - '@azure/service-bus.ReceivedMessage.label'
+      - '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+      - '@azure/service-bus.ReceivedMessage.lockToken'
+      - '@azure/service-bus.ReceivedMessage.messageId'
+      - '@azure/service-bus.ReceivedMessage.partitionKey'
+      - '@azure/service-bus.ReceivedMessage.replyTo'
+      - '@azure/service-bus.ReceivedMessage.replyToSessionId'
+      - '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+      - '@azure/service-bus.ReceivedMessage.sequenceNumber'
+      - '@azure/service-bus.ReceivedMessage.sessionId'
+      - '@azure/service-bus.ReceivedMessage.timeToLive'
+      - '@azure/service-bus.ReceivedMessage.to'
+      - '@azure/service-bus.ReceivedMessage.userProperties'
+      - '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Описывает сообщение, полученное из служебной шины.'
+    extends:
+      name: '@azure/service-bus.ReceivedMessageInfo'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.abandon'
+    name: 'abandon(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Блокировки, удерживаемой для сообщения получателем является отойдем, делает сообщение доступным еще раз в служебной шине для другой операции получения.'
+    syntax:
+      content: 'function abandon(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            Свойства сообщения для изменения при отклонением этого сообщения.
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.body'
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Тело сообщения, который должен быть отправлен или получен.'
+    syntax:
+      content: 'body: any'
+      return:
+        type:
+          - any
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.complete'
+    name: complete()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Удаляет сообщение из служебной шины.
+    syntax:
+      content: function complete()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.contentType'
+    name: contentType
+    fullName: contentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Тип содержимого сообщения. При необходимости описывает полезные данные сообщения, с помощью дескриптора, используя формат RFC2045 раздела 5, например «application/json».'
+    optional: true
+    syntax:
+      content: 'contentType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.correlationId'
+    name: correlationId
+    fullName: correlationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор корреляции, который позволяет приложению указать контекст сообщения для корреляции, например отражения MessageId сообщения, для которого предоставляется ответ.
+      См. в разделе [маршрутизации сообщений и корреляции](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'correlationId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetter'
+    name: deadLetter(DeadLetterOptions)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Сообщение перемещается во вложенную очередь недоставленных сообщений. Для получения сообщения deadletted, создайте новый QueueClient и SubscriptionClient, используя путь для вложенную очередь недоставленных сообщений.'
+    syntax:
+      content: 'function deadLetter(options?: DeadLetterOptions)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/service-bus.DeadLetterOptions'
+          description: |
+            Параметры недоставленных сообщений, которые можно указать при отклоняет сообщение.
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deadLetterSource'
+    name: deadLetterSource
+    fullName: deadLetterSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '{Строка} [deadLetterSource] Имя очереди или подписки, это сообщение было поставлено в очередь, прежде чем он был Недоставленное. Задается только в сообщениях, которые не были доставлены и впоследствии были автоматически пересланы из очереди недоставленных сообщений в другую сущность. Указывает сущность, в которой сообщения перешли в состояние недоставленных.'
+    optional: true
+    syntax:
+      content: 'deadLetterSource?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.defer'
+    name: 'defer(undefined | [key: string]: any)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Откладывает обработку сообщения. Сохранить `sequenceNumber` сообщения, чтобы получить его снова в будущем с помощью сообщения `receiveDeferredMessage` метод.'
+    syntax:
+      content: 'function defer(propertiesToModify?: undefined | [key: string]: any)'
+      parameters:
+        - id: propertiesToModify
+          type:
+            - 'undefined | [key: string]: any'
+          description: |
+            Свойства сообщения для изменения во время откладывание сообщения
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.deliveryCount'
+    name: deliveryCount
+    fullName: deliveryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Количество попыток доставки этого сообщения. Счетчик увеличивается в том случае, когда истекает срок действия блокировки сообщения, или сообщение явно отклоняется с помощью `abandon()` для сообщения.'
+    optional: true
+    syntax:
+      content: 'deliveryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedSequenceNumber'
+    name: enqueuedSequenceNumber
+    fullName: enqueuedSequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Исходный порядковый номер сообщения. Для автоматически пересланных сообщений это свойство отражает порядковый номер, который был присвоен сообщению в исходной точке отправки.'
+    optional: true
+    syntax:
+      content: 'enqueuedSequenceNumber?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.enqueuedTimeUtc'
+    name: enqueuedTimeUtc
+    fullName: enqueuedTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: В формате UTC по которому сообщение было принято и хранятся в служебной шине.
+    optional: true
+    syntax:
+      content: 'enqueuedTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.expiresAtUtc'
+    name: expiresAtUtc
+    fullName: expiresAtUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время в формате UTC, когда сообщение было помечено для удаления и стало недоступным для извлечения из сущности из-за истечения срока действия. Это свойство вычисляется на основе 2 других свойств в сообщении: `enqueuedTimeUtc`  +  `timeToLive`.'
+    optional: true
+    syntax:
+      content: 'expiresAtUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Метка конкретного приложения. Это свойство позволяет приложению указать цель сообщения для получателя в стандартизованный вариант. Аналогично, в строку темы сообщения электронной почты. Сопоставленного свойства AMQP «субъект».'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockedUntilUtc'
+    name: lockedUntilUtc
+    fullName: lockedUntilUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      В формате UTC до которого удерживается сообщение заблокировано в очереди или подписки.
+      По истечении срока действия блокировки `deliveryCount` увеличивается и сообщение снова станет недоступным для извлечения.
+      - Не применяется, когда сообщение поступает в `ReceiveMode.receiveAndDelete` режиме.
+    optional: true
+    syntax:
+      content: 'lockedUntilUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.lockToken'
+    name: lockToken
+    fullName: lockToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Маркер блокировки является ссылкой на блокировку, удерживаемую брокером в `ReceiveMode.PeekLock` режиме. Блокировки используются внутренне сопоставления сообщений, как описано в [документации по продукту, более подробно](https://docs.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement)
+      - Не применяется, когда сообщение поступает в `ReceiveMode.receiveAndDelete` режиме.
+    optional: true
+    syntax:
+      content: 'lockToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.messageId'
+    name: messageId
+    fullName: messageId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Идентификатор сообщения\_— это определяемое приложением значение, позволяющее уникально идентифицировать сообщение и его полезные данные.\n\nПримечание. Числа, которые не являются целыми числами не допускаются."
+    optional: true
+    syntax:
+      content: 'messageId?: string | number | Buffer'
+      return:
+        type:
+          - string | number | Buffer
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.partitionKey'
+    name: partitionKey
+    fullName: partitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ключ раздела для отправки сообщения секционированной сущности.
+      Максимальная длина составляет 128 символов. Для [секционированных сущностей](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-partitioning) установка этого значения позволяет назначить связанные сообщения тому же внутреннему разделу, чтобы порядок последовательности отправки был правильно записан. Раздел выбирается с помощью хэш-функции этого значения. Его нельзя выбрать напрямую.
+      - Для сущностей, учитывающих `sessionId` свойство переопределяет это значение.
+      - Для несекционированной сущностей будут игнорироваться ключ секции
+    optional: true
+    syntax:
+      content: 'partitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyTo'
+    name: replyTo
+    fullName: replyTo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Адрес сущности для отправки ответов. Это необязательное значение, определяемое приложением, является стандартным способом выражения пути ответа для получателя сообщения. Когда отправитель ожидает ответа, он присваивает значение абсолютному или относительному пути очереди или раздела, куда будет отправлен ответ. См. в разделе [маршрутизации сообщений и корреляции](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).'
+    optional: true
+    syntax:
+      content: 'replyTo?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.replyToSessionId'
+    name: replyToSessionId
+    fullName: replyToSessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор сеанса улучшения сущностях `replyTo` адрес.
+      Максимальная длина составляет 128 символов. Это значение расширяет сведения ReplyTo и указывает, какой SessionId должно задаваться для ответа при отправке в сущность ответа.
+      См. в разделе [маршрутизации сообщений и корреляции](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messages-payloads?#message-routing-and-correlation).
+    optional: true
+    syntax:
+      content: 'replyToSessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.scheduledEnqueueTimeUtc'
+    name: scheduledEnqueueTimeUtc
+    fullName: scheduledEnqueueTimeUtc
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Дата и время в формате UTC, по которому сообщение будет поставлено в очередь. Это свойство Возвращает время в формате UTC. При задании свойства, заданное значение DateTime также должен быть в формате UTC. Это значение является для отправки отложенных сообщений.
+      Он используется для задержки сообщения, отправкой на определенный момент времени в будущем. Время постановки сообщения не означает, что сообщение будет отправлено в то же время. Он будет получать поставлено в очередь, но фактическое время отправки зависит от рабочей нагрузки в очереди и его состояние.
+    optional: true
+    syntax:
+      content: 'scheduledEnqueueTimeUtc?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sequenceNumber'
+    name: sequenceNumber
+    fullName: sequenceNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Уникальный номер, присвоенный сообщению шиной Service.\nПорядковый номер\_— это уникальное 64-битное целое число, присваиваемое сообщению, когда его принимает и сохраняет брокер, которое выступает в качестве правильного идентификатора. Для секционированных сущностей верхние 16 бит отражают идентификатор раздела. Порядковые номера монотонно увеличиваются.\nКогда диапазон 48–64\_бит исчерпан, используется значение\_0.\n\n**Безопасная целочисленная Max** что Javascript в настоящее время поддерживает является `2^53 - 1`. Порядковый номер — AMQP `Long` тип, который может быть не более 64 бита. Для представления, что мы используем библиотеку с именем [long.js](https://github.com/dcodeIO/long.js). Мы ожидаем, что для использования клиентами ** `Long` ** экспортировать тип этой библиотекой."
+    optional: true
+    syntax:
+      content: 'sequenceNumber?: Long'
+      return:
+        type:
+          - Long
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.sessionId'
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор сеанса для сеанса с поддержкой сущности. Максимальная длина составляет 128 символов. Для сущностей, учитывающих сеансы, это значение, определяемое приложением, указывает принадлежность сеанса сообщения. В сообщениях с одинаковым идентификатором сеанса может быть заблокирована сводка и включена точная порядковая обработка и демультиплексирование. Для сущностей, не учитывающих сеансы, это значение игнорируется.
+      [Сеансы сообщений](https://docs.microsoft.com/azure/service-bus-messaging/message-sessions).
+    optional: true
+    syntax:
+      content: 'sessionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.timeToLive'
+    name: timeToLive
+    fullName: timeToLive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Срок жизни сообщения. Это значение это относительная длительность, после которого срок сообщения истекает, начиная с момента его принял и сохранил брокер, как записано в `enqueuedTimeUtc`. Если значение не задано явно, используется значение является DefaultTimeToLive для соответствующей очереди или раздела. Это сообщения уровня `timeToLive` значение не может быть больше времени, чем настройка DefaultTimeToLive сущности, и оно будет автоматически скорректировано в этом случае. См. в разделе [истечения срока действия](https://docs.microsoft.com/azure/service-bus-messaging/message-expiration).'
+    optional: true
+    syntax:
+      content: 'timeToLive?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.to'
+    name: to
+    fullName: to
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Адрес «to». Это свойство зарезервировано для будущего использования в сценариях маршрутизации. Сейчас брокер игнорирует это свойство. Приложения могут использовать это значение в управляемых правилами [цепочки автоматической пересылки](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-auto-forwarding) сценарии, чтобы указать целевое логическое назначение сообщения.'
+    optional: true
+    syntax:
+      content: 'to?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.userProperties'
+    name: userProperties
+    fullName: userProperties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Свойства конкретного приложения, которые могут использоваться для метаданных пользовательское сообщение.'
+    optional: true
+    syntax:
+      content: 'userProperties?: undefined | [key: string]: any'
+      return:
+        type:
+          - 'undefined | [key: string]: any'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.ReceivedMessage.viaPartitionKey'
+    name: viaPartitionKey
+    fullName: viaPartitionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Ключ раздела для отправки сообщения в сущность через очередь передачи секционированной. Максимальная длина составляет 128 символов. Если сообщение отправляется через очередь передачи в рамках транзакции, это значение выбирает раздел очереди передачи: Это функционально эквивалентно `partitionKey` свойства и гарантирует, что сообщения, хранятся вместе и в порядке, как они будут перенесены.
+      См. в разделе [передает и отправлять через](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-transactions#transfers-and-send-via).
+    optional: true
+    syntax:
+      content: 'viaPartitionKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.ReceivedMessageInfo'
+    name: ReceivedMessageInfo
+    spec.typeScript:
+      - name: ReceivedMessageInfo
+        fullName: ReceivedMessageInfo
+        uid: '@azure/service-bus.ReceivedMessageInfo'
+  - uid: '@azure/service-bus.DeadLetterOptions'
+    name: DeadLetterOptions
+    spec.typeScript:
+      - name: DeadLetterOptions
+        fullName: DeadLetterOptions
+        uid: '@azure/service-bus.DeadLetterOptions'
