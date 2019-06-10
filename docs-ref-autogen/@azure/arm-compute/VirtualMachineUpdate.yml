@@ -1,0 +1,331 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.VirtualMachineUpdate'
+    name: VirtualMachineUpdate
+    fullName: VirtualMachineUpdate
+    children:
+      - '@azure/arm-compute.VirtualMachineUpdate.additionalCapabilities'
+      - '@azure/arm-compute.VirtualMachineUpdate.availabilitySet'
+      - '@azure/arm-compute.VirtualMachineUpdate.diagnosticsProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.hardwareProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.identity'
+      - '@azure/arm-compute.VirtualMachineUpdate.instanceView'
+      - '@azure/arm-compute.VirtualMachineUpdate.licenseType'
+      - '@azure/arm-compute.VirtualMachineUpdate.networkProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.osProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.plan'
+      - '@azure/arm-compute.VirtualMachineUpdate.provisioningState'
+      - '@azure/arm-compute.VirtualMachineUpdate.storageProfile'
+      - '@azure/arm-compute.VirtualMachineUpdate.tags'
+      - '@azure/arm-compute.VirtualMachineUpdate.vmId'
+      - '@azure/arm-compute.VirtualMachineUpdate.zones'
+    langs:
+      - typeScript
+    type: interface
+    summary: В этой статье описано обновление виртуальной машины.
+    extends:
+      name: '@azure/arm-compute.UpdateResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.additionalCapabilities'
+    name: additionalCapabilities
+    fullName: additionalCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Указывает дополнительные возможности включены или отключены на виртуальной машине.
+    optional: true
+    syntax:
+      content: 'additionalCapabilities?: AdditionalCapabilities'
+      return:
+        type:
+          - '@azure/arm-compute.AdditionalCapabilities'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.availabilitySet'
+    name: availabilitySet
+    fullName: availabilitySet
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Указывает сведения о группе доступности, который должен быть назначен виртуальной машине. Виртуальные машины, заданные в одной группе доступности, выделяются в различных узлах для достижения максимальной доступности. Дополнительные сведения о группах доступности см. в разделе [Управление доступностью виртуальных машин](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-manage-availability?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
+      <br><br> Дополнительные сведения о плановое обслуживание Azure, см. в разделе [плановое обслуживание виртуальных машин в Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-planned-maintenance?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> В настоящее время виртуальную Машину можно добавить только для групп доступности во время создания. Невозможно добавить существующую виртуальную Машину в группу доступности.
+    optional: true
+    syntax:
+      content: 'availabilitySet?: SubResource'
+      return:
+        type:
+          - '@azure/arm-compute.SubResource'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.diagnosticsProfile'
+    name: diagnosticsProfile
+    fullName: diagnosticsProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает состояние параметров диагностики загрузки. <br><br>Минимальная версия api: 2015-06-15.'
+    optional: true
+    syntax:
+      content: 'diagnosticsProfile?: DiagnosticsProfile'
+      return:
+        type:
+          - '@azure/arm-compute.DiagnosticsProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.hardwareProfile'
+    name: hardwareProfile
+    fullName: hardwareProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Указывает параметры оборудования виртуальной машины.
+    optional: true
+    syntax:
+      content: 'hardwareProfile?: HardwareProfile'
+      return:
+        type:
+          - '@azure/arm-compute.HardwareProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.identity'
+    name: identity
+    fullName: identity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Идентификатор виртуальной машины, если настроен.'
+    optional: true
+    syntax:
+      content: 'identity?: VirtualMachineIdentity'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineIdentity'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.instanceView'
+    name: instanceView
+    fullName: instanceView
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Представление экземпляров виртуальной машины.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'instanceView?: VirtualMachineInstanceView'
+      return:
+        type:
+          - '@azure/arm-compute.VirtualMachineInstanceView'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Указывает, что образ или диск, который используется был лицензирован локально. Этот элемент используется только для образов, содержащих операционной системы Windows Server. <br><br> Возможные значения: <br><br> Windows_Client <br><br> Windows_Server <br><br> Если этот элемент включен в запрос на обновление, значение должно соответствовать начальное значение. Невозможно обновить это значение. <br><br> Дополнительные сведения см. в разделе [гибридного использования преимуществ Azure для Windows Server](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Минимальная версия api: 2015-06-15
+    optional: true
+    syntax:
+      content: 'licenseType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.networkProfile'
+    name: networkProfile
+    fullName: networkProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Указывает сетевые интерфейсы виртуальной машины.
+    optional: true
+    syntax:
+      content: 'networkProfile?: NetworkProfile'
+      return:
+        type:
+          - '@azure/arm-compute.NetworkProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.osProfile'
+    name: osProfile
+    fullName: osProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Указывает параметры операционной системы виртуальной машины.
+    optional: true
+    syntax:
+      content: 'osProfile?: OSProfile'
+      return:
+        type:
+          - '@azure/arm-compute.OSProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.plan'
+    name: plan
+    fullName: plan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает сведения о образа marketplace, используемого для создания виртуальной машины. Этот элемент используется только для образов marketplace. Перед использованием образа marketplace из API-интерфейса, необходимо включить изображение для его использования в программном коде.  На портале Azure найти образ marketplace, который вы хотите использовать, а затем нажмите кнопку **нужно, чтобы выполнить развертывание программным способом, начало работы "->"**. Укажите все необходимые сведения и нажмите кнопку **Сохранить**.'
+    optional: true
+    syntax:
+      content: 'plan?: Plan'
+      return:
+        type:
+          - '@azure/arm-compute.Plan'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.provisioningState'
+    name: provisioningState
+    fullName: provisioningState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Состояние подготовки, который появляется только в ответе.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.storageProfile'
+    name: storageProfile
+    fullName: storageProfile
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Указывает параметры хранилища дисков виртуальной машины.
+    optional: true
+    syntax:
+      content: 'storageProfile?: StorageProfile'
+      return:
+        type:
+          - '@azure/arm-compute.StorageProfile'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Теги ресурсов
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.vmId'
+    name: vmId
+    fullName: vmId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Указывает уникальный идентификатор виртуальной Машины, который является идентификатором 128 бит, кодируются, а сохраняются в все SMBIOS виртуальных машин IaaS Azure и может быть чтения с помощью команды BIOS платформы.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'vmId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.VirtualMachineUpdate.zones'
+    name: zones
+    fullName: zones
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Зоны виртуальной машины.
+    optional: true
+    syntax:
+      content: 'zones?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.UpdateResource'
+    name: UpdateResource
+    spec.typeScript:
+      - name: UpdateResource
+        fullName: UpdateResource
+        uid: '@azure/arm-compute.UpdateResource'
+  - uid: '@azure/arm-compute.AdditionalCapabilities'
+    name: AdditionalCapabilities
+    spec.typeScript:
+      - name: AdditionalCapabilities
+        fullName: AdditionalCapabilities
+        uid: '@azure/arm-compute.AdditionalCapabilities'
+  - uid: '@azure/arm-compute.SubResource'
+    name: SubResource
+    spec.typeScript:
+      - name: SubResource
+        fullName: SubResource
+        uid: '@azure/arm-compute.SubResource'
+  - uid: '@azure/arm-compute.DiagnosticsProfile'
+    name: DiagnosticsProfile
+    spec.typeScript:
+      - name: DiagnosticsProfile
+        fullName: DiagnosticsProfile
+        uid: '@azure/arm-compute.DiagnosticsProfile'
+  - uid: '@azure/arm-compute.HardwareProfile'
+    name: HardwareProfile
+    spec.typeScript:
+      - name: HardwareProfile
+        fullName: HardwareProfile
+        uid: '@azure/arm-compute.HardwareProfile'
+  - uid: '@azure/arm-compute.VirtualMachineIdentity'
+    name: VirtualMachineIdentity
+    spec.typeScript:
+      - name: VirtualMachineIdentity
+        fullName: VirtualMachineIdentity
+        uid: '@azure/arm-compute.VirtualMachineIdentity'
+  - uid: '@azure/arm-compute.VirtualMachineInstanceView'
+    name: VirtualMachineInstanceView
+    spec.typeScript:
+      - name: VirtualMachineInstanceView
+        fullName: VirtualMachineInstanceView
+        uid: '@azure/arm-compute.VirtualMachineInstanceView'
+  - uid: '@azure/arm-compute.NetworkProfile'
+    name: NetworkProfile
+    spec.typeScript:
+      - name: NetworkProfile
+        fullName: NetworkProfile
+        uid: '@azure/arm-compute.NetworkProfile'
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    spec.typeScript:
+      - name: OSProfile
+        fullName: OSProfile
+        uid: '@azure/arm-compute.OSProfile'
+  - uid: '@azure/arm-compute.Plan'
+    name: Plan
+    spec.typeScript:
+      - name: Plan
+        fullName: Plan
+        uid: '@azure/arm-compute.Plan'
+  - uid: '@azure/arm-compute.StorageProfile'
+    name: StorageProfile
+    spec.typeScript:
+      - name: StorageProfile
+        fullName: StorageProfile
+        uid: '@azure/arm-compute.StorageProfile'
