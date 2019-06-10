@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-nodeauth.loginWithVmMSI'
+    name: loginWithVmMSI()
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Перед использованием этого метода установите cli az из https://github.com/Azure/azure-cli/releases.
+      Если у вас есть виртуальная машина Azure подготовлены с помощью az cli и включения MSI, можно затем использовать этот метод для получения маркеров проверки подлинности из виртуальной Машины.
+      Чтобы создать новую виртуальную Машину, включить MSI, выполните эту команду: создание -g < имя_группы_ресурсов > - n < vm_name > — az vm assign-identity - изображение < os_image_name > Примечание: Приведенная выше команда включает конечную точку службы в хост-компьютере и порт по умолчанию 50342
+
+      Чтобы включить MSI в уже подготовленной виртуальной Машины, выполните следующую команду: az vm--assign-identity - g < имя_группы_ресурсов > -n < vm_name > — порт < custom_port_number >
+
+      Дополнительные сведения об этой команде, выполните: az vm--assign-identity - h
+
+      Выполняет проверку подлинности с помощью удостоверений службы, запущенной на виртуальной машине Azure.
+      Этот метод выполняет запрос к службе проверки подлинности, размещенной на виртуальной Машине и снова получает маркер доступа.
+    syntax:
+      content: function loginWithVmMSI()
+      parameters: []
+      return:
+        type:
+          - Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    package: '@azure/ms-rest-nodeauth'
+references:
+  - uid: Promise<@azure/ms-rest-nodeauth.MSIVmTokenCredentials>
+    name: MSIVmTokenCredentials>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: MSIVmTokenCredentials
+        fullName: MSIVmTokenCredentials
+        uid: '@azure/ms-rest-nodeauth.MSIVmTokenCredentials'
+      - name: '>'
+        fullName: '>'
