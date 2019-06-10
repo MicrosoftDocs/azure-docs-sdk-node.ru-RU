@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/ms-rest-browserauth.AuthManager'
+    name: AuthManager
+    fullName: AuthManager
+    children:
+      - '@azure/ms-rest-browserauth.AuthManager.constructor'
+      - '@azure/ms-rest-browserauth.AuthManager.finalizeLogin'
+      - '@azure/ms-rest-browserauth.AuthManager.login'
+      - '@azure/ms-rest-browserauth.AuthManager.logout'
+    langs:
+      - typeScript
+    type: class
+    summary: <span data-ttu-id="ca11f-101">Проверяет подлинность пользователей с Azure AD и получает маркеры для запросов API.</span><span class="sxs-lookup"><span data-stu-id="ca11f-101">Authenticates users to Azure AD and obtains tokens for API requests.</span></span>
+    package: '@azure/ms-rest-browserauth'
+  - uid: '@azure/ms-rest-browserauth.AuthManager.constructor'
+    name: AuthManager(AuthOptions)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'new AuthManager(opts: AuthOptions)'
+      parameters:
+        - id: opts
+          type:
+            - '@azure/ms-rest-browserauth.AuthOptions'
+          description: ''
+    package: '@azure/ms-rest-browserauth'
+  - uid: '@azure/ms-rest-browserauth.AuthManager.finalizeLogin'
+    name: finalizeLogin()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ca11f-102">Должен вызываться каждый раз при загрузке страницы, требующие проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="ca11f-102">Should be called each time the page requiring auth loads.</span></span>
+      <span data-ttu-id="ca11f-103">Может взиматься дополнительные перенаправления.</span><span class="sxs-lookup"><span data-stu-id="ca11f-103">May result in additional redirects.</span></span> <span data-ttu-id="ca11f-104">После таких перенаправлений этот метод должен вызываться снова.</span><span class="sxs-lookup"><span data-stu-id="ca11f-104">After any such redirects, this method should be called again.</span></span>
+    syntax:
+      content: function finalizeLogin()
+      parameters: []
+      return:
+        type:
+          - Promise<@azure/ms-rest-browserauth.LoginResult>
+    package: '@azure/ms-rest-browserauth'
+  - uid: '@azure/ms-rest-browserauth.AuthManager.login'
+    name: login()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="ca11f-105">Выполняет вход пользователя в Azure AD через перенаправление.</span><span class="sxs-lookup"><span data-stu-id="ca11f-105">Logs the user into Azure AD via redirect.</span></span>
+      <span data-ttu-id="ca11f-106">Должен вызываться в ответ на щелчок кнопки входа или эквивалентное действие в веб-приложения.</span><span class="sxs-lookup"><span data-stu-id="ca11f-106">Should be called in response to a click on a login button or equivalent action in the web app.</span></span>
+    syntax:
+      content: function login()
+      parameters: []
+    package: '@azure/ms-rest-browserauth'
+  - uid: '@azure/ms-rest-browserauth.AuthManager.logout'
+    name: logout()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="ca11f-107">Регистрирует пользователя из Azure AD через перенаправление.</span><span class="sxs-lookup"><span data-stu-id="ca11f-107">Logs the user out of Azure AD via redirect.</span></span>
+    syntax:
+      content: function logout()
+      parameters: []
+    package: '@azure/ms-rest-browserauth'
+references:
+  - uid: '@azure/ms-rest-browserauth.AuthOptions'
+    name: AuthOptions
+    spec.typeScript:
+      - name: AuthOptions
+        fullName: AuthOptions
+        uid: '@azure/ms-rest-browserauth.AuthOptions'
+  - uid: Promise<@azure/ms-rest-browserauth.LoginResult>
+    name: LoginResult>
+    spec.typeScript:
+      - name: Promise<
+        fullName: Promise<
+      - name: LoginResult
+        fullName: LoginResult
+        uid: '@azure/ms-rest-browserauth.LoginResult'
+      - name: '>'
+        fullName: '>'
