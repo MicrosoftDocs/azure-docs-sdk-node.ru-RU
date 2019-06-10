@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.MessageHandlerOptions'
+    name: MessageHandlerOptions
+    fullName: MessageHandlerOptions
+    children:
+      - '@azure/service-bus.MessageHandlerOptions.autoComplete'
+      - '@azure/service-bus.MessageHandlerOptions.maxConcurrentCalls'
+      - '@azure/service-bus.MessageHandlerOptions.maxMessageAutoRenewLockDurationInSeconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Описывает параметры, передаваемые `registerMessageHandler` метод при получении сообщений из очереди или подписки, которая не поддерживает сеансы отключены.'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.autoComplete'
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Указывает, является ли `complete()` метод сообщения автоматически должен вызываться с помощью пакета sdk, после предоставленного пользователем обработчик onMessage был выполнен.
+      Вызов `complete()` на сообщение удаляется из очереди или подписки.
+      - **По умолчанию**: `true`.
+    optional: true
+    syntax:
+      content: 'autoComplete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.maxConcurrentCalls'
+    name: maxConcurrentCalls
+    fullName: maxConcurrentCalls
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Максимальное количество одновременных вызовов, пакет sdk можно изменять обработчик сообщений для пользователя. Когда этот предел достигнут, дополнительные сообщения не будут приниматься пока по меньшей мере, один из вызовов обработчика сообщений пользователя завершена.
+      - **По умолчанию**: `1`.
+    optional: true
+    syntax:
+      content: 'maxConcurrentCalls?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.MessageHandlerOptions.maxMessageAutoRenewLockDurationInSeconds'
+    name: maxMessageAutoRenewLockDurationInSeconds
+    fullName: maxMessageAutoRenewLockDurationInSeconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Максимальная длительность в секундах, до которых блокировка сообщения будет обновлен с помощью пакета sdk автоматически. Это автоматическое продление останавливается после сопоставления сообщения или после предоставленного пользователем, что обработчик onMessage завершает выполнение ite.
+
+      - **По умолчанию**: `300` секунд (5 минут).
+      - **Чтобы отключить обновления autolock**, задайте значение `0`.
+    optional: true
+    syntax:
+      content: 'maxMessageAutoRenewLockDurationInSeconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/service-bus'
