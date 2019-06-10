@@ -1,0 +1,189 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/service-bus.Sender'
+    name: Sender
+    fullName: Sender
+    children:
+      - '@azure/service-bus.Sender.cancelScheduledMessage'
+      - '@azure/service-bus.Sender.cancelScheduledMessages'
+      - '@azure/service-bus.Sender.close'
+      - '@azure/service-bus.Sender.isClosed'
+      - '@azure/service-bus.Sender.scheduleMessage'
+      - '@azure/service-bus.Sender.scheduleMessages'
+      - '@azure/service-bus.Sender.send'
+      - '@azure/service-bus.Sender.sendBatch'
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      <span data-ttu-id="76b3a-101">Класс отправителя можно использовать для отправки сообщений, запланировать сообщения отправляться в дальнейшем и Отмена запланированного сообщения.</span><span class="sxs-lookup"><span data-stu-id="76b3a-101">The Sender class can be used to send messages, schedule messages to be sent at a later time and cancel such scheduled messages.</span></span>
+      <span data-ttu-id="76b3a-102">Используйте `createSender` функция QueueClient или TopicClient для создания экземпляра отправителя.</span><span class="sxs-lookup"><span data-stu-id="76b3a-102">Use the `createSender` function on the QueueClient or TopicClient to instantiate a Sender.</span></span>
+      <span data-ttu-id="76b3a-103">Класс отправителя — это абстракция над базовой ссылке отправителя AMQP.</span><span class="sxs-lookup"><span data-stu-id="76b3a-103">The Sender class is an abstraction over the underlying AMQP sender link.</span></span>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.cancelScheduledMessage'
+    name: cancelScheduledMessage(Long)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="76b3a-104">Отменяет сообщение, которое было запланировано отображаются в очереди служебной шины или подписки.</span><span class="sxs-lookup"><span data-stu-id="76b3a-104">Cancels a message that was scheduled to appear on a ServiceBus Queue/Subscription.</span></span>'
+    syntax:
+      content: 'function cancelScheduledMessage(sequenceNumber: Long)'
+      parameters:
+        - id: sequenceNumber
+          type:
+            - Long
+          description: <span data-ttu-id="76b3a-105">Порядковый номер сообщения должны быть отменены.</span><span class="sxs-lookup"><span data-stu-id="76b3a-105">The sequence number of the message to be cancelled.</span></span>
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.cancelScheduledMessages'
+    name: 'cancelScheduledMessages(Long[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="76b3a-106">Отменяет несколько сообщений, запланированные для отображения на служебной шины очереди или подписки.</span><span class="sxs-lookup"><span data-stu-id="76b3a-106">Cancels multiple messages that were scheduled to appear on a ServiceBus Queue/Subscription.</span></span>'
+    syntax:
+      content: 'function cancelScheduledMessages(sequenceNumbers: Long[])'
+      parameters:
+        - id: sequenceNumbers
+          type:
+            - 'Long[]'
+          description: <span data-ttu-id="76b3a-107">Массив порядковых номеров сообщений должны быть отменены.</span><span class="sxs-lookup"><span data-stu-id="76b3a-107">An Array of sequence numbers of the messages to be cancelled.</span></span>
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.close'
+    name: close()
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      <span data-ttu-id="76b3a-108">Закрывает базовый ссылке отправителя AMQP.</span><span class="sxs-lookup"><span data-stu-id="76b3a-108">Closes the underlying AMQP sender link.</span></span>
+      <span data-ttu-id="76b3a-109">После закрытия отправитель не может использоваться для других операций.</span><span class="sxs-lookup"><span data-stu-id="76b3a-109">Once closed, the sender cannot be used for any further operations.</span></span>
+      <span data-ttu-id="76b3a-110">Используйте `createSender` функции в QueueClient или TopicClient, чтобы создать экземпляр нового отправителя</span><span class="sxs-lookup"><span data-stu-id="76b3a-110">Use the `createSender` function on the QueueClient or TopicClient to instantiate a new Sender</span></span>
+    syntax:
+      content: function close()
+      parameters: []
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.isClosed'
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="76b3a-111">Возвращает `true` Если отправитель или клиента, который его создал был закрыт</span><span class="sxs-lookup"><span data-stu-id="76b3a-111">Returns `true` if either the sender or the client that created it has been closed</span></span>'
+    syntax:
+      content: 'isClosed: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.scheduleMessage'
+    name: 'scheduleMessage(Date, SendableMessageInfo)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="76b3a-112">Расписания, получает сообщение, отображаемое на шины службы очереди или подписки в дальнейшем.</span><span class="sxs-lookup"><span data-stu-id="76b3a-112">Schedules given message to appear on Service Bus Queue/Subscription at a later time.</span></span>'
+    syntax:
+      content: 'function scheduleMessage(scheduledEnqueueTimeUtc: Date, message: SendableMessageInfo)'
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type:
+            - Date
+          description: '<span data-ttu-id="76b3a-113">Время в формате UTC, по которому сообщение должно быть поставлено в очередь.</span><span class="sxs-lookup"><span data-stu-id="76b3a-113">The UTC time at which the message should be enqueued.</span></span>'
+        - id: message
+          type:
+            - '@azure/service-bus.SendableMessageInfo'
+          description: '<span data-ttu-id="76b3a-114">Сообщение, которое необходимо запланировать.</span><span class="sxs-lookup"><span data-stu-id="76b3a-114">The message that needs to be scheduled.</span></span>'
+      return:
+        type:
+          - Promise<Long>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.scheduleMessages'
+    name: 'scheduleMessages(Date, SendableMessageInfo[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: '<span data-ttu-id="76b3a-115">Расписания, учитывая сообщения на шины службы очереди или подписки в дальнейшем.</span><span class="sxs-lookup"><span data-stu-id="76b3a-115">Schedules given messages to appear on Service Bus Queue/Subscription at a later time.</span></span>'
+    syntax:
+      content: 'function scheduleMessages(scheduledEnqueueTimeUtc: Date, messages: SendableMessageInfo[])'
+      parameters:
+        - id: scheduledEnqueueTimeUtc
+          type:
+            - Date
+          description: '<span data-ttu-id="76b3a-116">Время в формате UTC, по которому сообщения должно быть поставлено в очередь.</span><span class="sxs-lookup"><span data-stu-id="76b3a-116">The UTC time at which the messages should be enqueued.</span></span>'
+        - id: messages
+          type:
+            - '@azure/service-bus.SendableMessageInfo[]'
+          description: '<span data-ttu-id="76b3a-117">Массив сообщений, которые нужно планировать.</span><span class="sxs-lookup"><span data-stu-id="76b3a-117">Array of Messages that need to be scheduled.</span></span>'
+      return:
+        type:
+          - 'Promise<Long[]>'
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.send'
+    name: send(SendableMessageInfo)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="76b3a-118">Отправляет данное сообщение, после создания ссылки на AMQP отправителя, если он еще не существует.</span><span class="sxs-lookup"><span data-stu-id="76b3a-118">Sends the given message after creating an AMQP Sender link if it doesnt already exists.</span></span>
+      <span data-ttu-id="76b3a-119">Чтобы отправить сообщение для `session` и/или `partition` включена очередь или раздел, задайте `sessionId` и/или `partitionKey` свойств соответственно в сообщении.</span><span class="sxs-lookup"><span data-stu-id="76b3a-119">To send a message to a `session` and/or `partition` enabled Queue/Topic, set the `sessionId` and/or `partitionKey` properties respectively on the message.</span></span>
+    syntax:
+      content: 'function send(message: SendableMessageInfo)'
+      parameters:
+        - id: message
+          type:
+            - '@azure/service-bus.SendableMessageInfo'
+          description: <span data-ttu-id="76b3a-120">Отправляемое сообщение.</span><span class="sxs-lookup"><span data-stu-id="76b3a-120">Message to send.</span></span>
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+  - uid: '@azure/service-bus.Sender.sendBatch'
+    name: 'sendBatch(SendableMessageInfo[])'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |
+      <span data-ttu-id="76b3a-121">Отправляет заданного сообщения в одном пакете, т. е. в одном сообщении AMQP, после создания ссылки на AMQP отправителя, если он еще не существует.</span><span class="sxs-lookup"><span data-stu-id="76b3a-121">Sends the given messages in a single batch i.e. in a single AMQP message after creating an AMQP Sender link if it doesnt already exists.</span></span>
+      - <span data-ttu-id="76b3a-122">Для отправки сообщений- `session` и/или `partition` включена очередь или раздел, задайте `sessionId` и/или `partitionKey` свойства соответственно в сообщениях.</span><span class="sxs-lookup"><span data-stu-id="76b3a-122">To send messages to a `session` and/or `partition` enabled Queue/Topic, set the `sessionId` and/or `partitionKey` properties respectively on the messages.</span></span>
+      - <span data-ttu-id="76b3a-123">При этом все сообщения в пакете должен использоваться одинаковый `sessionId` (при использовании сеансов) и имеет одинаковые `parititionKey` (при использовании paritions).</span><span class="sxs-lookup"><span data-stu-id="76b3a-123">When doing so, all messages in the batch should have the same `sessionId` (if using sessions) and the same `parititionKey` (if using paritions).</span></span>
+    syntax:
+      content: 'function sendBatch(messages: SendableMessageInfo[])'
+      parameters:
+        - id: messages
+          type:
+            - '@azure/service-bus.SendableMessageInfo[]'
+          description: <span data-ttu-id="76b3a-124">Массив объектов SendableMessageInfo для отправки в сообщении пакета.</span><span class="sxs-lookup"><span data-stu-id="76b3a-124">An array of SendableMessageInfo objects to be sent in a Batch message.</span></span>
+      return:
+        type:
+          - Promise<void>
+    package: '@azure/service-bus'
+references:
+  - uid: '@azure/service-bus.SendableMessageInfo'
+    name: SendableMessageInfo
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+  - uid: '@azure/service-bus.SendableMessageInfo[]'
+    name: 'SendableMessageInfo[]'
+    spec.typeScript:
+      - name: SendableMessageInfo
+        fullName: SendableMessageInfo
+        uid: '@azure/service-bus.SendableMessageInfo'
+      - name: '[]'
+        fullName: '[]'
