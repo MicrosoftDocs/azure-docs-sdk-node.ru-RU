@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.RollingUpgradePolicy'
+    name: RollingUpgradePolicy
+    fullName: RollingUpgradePolicy
+    children:
+      - '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+      - '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Параметры конфигурации, используемые при выполнении последовательного обновления.'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxBatchInstancePercent'
+    name: maxBatchInstancePercent
+    fullName: maxBatchInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Максимальный процент общее экземпляров виртуальных машин, которые будут обновляться одновременно путем последовательного обновления в одном пакете. Так как это более неработоспособные экземпляры в предыдущей или будущей пакетов может привести к процента экземпляров, в пакете для уменьшения для обеспечения надежности более поздней версии. Значение по умолчанию для этого параметра составляет 20%.'
+    optional: true
+    syntax:
+      content: 'maxBatchInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyInstancePercent'
+    name: maxUnhealthyInstancePercent
+    fullName: maxUnhealthyInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Максимальный процент экземпляры общее виртуальных машин в масштабируемом наборе, которое может быть одновременно неработоспособности, в результате обновления, либо обнаруженных в неработоспособном состоянии проверки работоспособности виртуальной машины перед прерывает выполнение последовательного обновления. Это ограничение будет проверяться перед началом любого пакета. Значение по умолчанию для этого параметра составляет 20%.'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.maxUnhealthyUpgradedInstancePercent'
+    name: maxUnhealthyUpgradedInstancePercent
+    fullName: maxUnhealthyUpgradedInstancePercent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Максимальный процент обновленные экземпляры виртуальных машин, которые находятся в неработоспособном состоянии. Эта проверка будет происходить после обновления каждый пакет. Если когда-нибудь исчерпании данного процента, отменяет последовательное обновление. Значение по умолчанию для этого параметра составляет 20%.'
+    optional: true
+    syntax:
+      content: 'maxUnhealthyUpgradedInstancePercent?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.RollingUpgradePolicy.pauseTimeBetweenBatches'
+    name: pauseTimeBetweenBatches
+    fullName: pauseTimeBetweenBatches
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Время ожидания между обновления для всех виртуальных машин в одном пакете и началом следующего пакета. Промежуток времени должен быть указан в формате ISO 8601. Значение по умолчанию — 0 секунд (PT0S).
+    optional: true
+    syntax:
+      content: 'pauseTimeBetweenBatches?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'

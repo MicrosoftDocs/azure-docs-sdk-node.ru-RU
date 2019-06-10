@@ -1,0 +1,167 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-compute.OSProfile'
+    name: OSProfile
+    fullName: OSProfile
+    children:
+      - '@azure/arm-compute.OSProfile.adminPassword'
+      - '@azure/arm-compute.OSProfile.adminUsername'
+      - '@azure/arm-compute.OSProfile.allowExtensionOperations'
+      - '@azure/arm-compute.OSProfile.computerName'
+      - '@azure/arm-compute.OSProfile.customData'
+      - '@azure/arm-compute.OSProfile.linuxConfiguration'
+      - '@azure/arm-compute.OSProfile.secrets'
+      - '@azure/arm-compute.OSProfile.windowsConfiguration'
+    langs:
+      - typeScript
+    type: interface
+    summary: Указывает параметры операционной системы виртуальной машины.
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminPassword'
+    name: adminPassword
+    fullName: adminPassword
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Указывает пароль учетной записи администратора. <br><br> **Минимальная длина (Windows):** 8 символов <br><br> **Минимальная длина (Linux):** 6 символов <br><br> **Максимальная длина (Windows):** 123 символов <br><br> **Максимальная длина (Linux):** 72 символов <br><br>
+      **Требования к сложности:** ниже 3 из 4 условия должны быть выполнены <br> Имеет строчные знаки <br>Имеет прописные знаки <br> Содержит цифру <br> Есть специальный символ (регулярное выражение соответствует [\W_]) <br><br> **Запрещенные значения:** "abc@123«, «P@$$w0rd»,"P@ssw0rd«,»P@ssword123«, «Pa$ $роль», "pass@word1«, «Password!», «Password1», «Password22», «iloveyou!» <br><br> Сброс пароля, см. в разделе [сброс службы удаленных рабочих столов или ее пароль для входа в виртуальную Машину Windows](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-reset-rdp?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json)
+      <br><br> Сброс пароля пользователя root, см. в разделе [управлять пользователями, SSH и проверка или восстановление дисков в виртуальных машинах Azure, с помощью расширения VMAccess](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-vmaccess-extension?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#reset-root-password)
+    optional: true
+    syntax:
+      content: 'adminPassword?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.adminUsername'
+    name: adminUsername
+    fullName: adminUsername
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Задает имя учетной записи администратора. <br><br> **Ограничение "только для Windows":** Не может заканчиваться на «.» <br><br> **Запрещенные значения:** «администратор», «admin», «user», «user1», «test», «user2», «test1», «user3», «администратора (1)», «1», «123», «», «actuser», «adm», «администратора (2)», «aspnet», «backup», «консоль», «david», «Гость», «john», «владелец», «root», «server», " SQL», «поддержка», «support_388945a0», «sys», «test2», «test3», «Пользователь4», «user5». <br><br> **Минимальная длина (Linux):** 1 символ <br><br> **Максимальная длина (Linux):** 64 символов <br><br> **Максимальная длина (Windows):** 20 символов  <br><br><li> Доступ с правами root для виртуальной Машины Linux, см. в разделе [использование привилегий суперпользователя на виртуальных машинах Linux в Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-use-root-privileges?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)<br><li>
+      Список встроенных системных пользователей на платформе Linux, который не должен использоваться в этом поле, см. в разделе [Выбор имен пользователей для Linux в Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-usernames?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+    optional: true
+    syntax:
+      content: 'adminUsername?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.allowExtensionOperations'
+    name: allowExtensionOperations
+    fullName: allowExtensionOperations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает, разрешены ли операций расширения на виртуальной машине. <br><br>Это может устанавливаться только на False при расширения не присутствуют на виртуальной машине.'
+    optional: true
+    syntax:
+      content: 'allowExtensionOperations?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.computerName'
+    name: computerName
+    fullName: computerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает имя ОС узла виртуальной машины. <br><br> Это имя нельзя обновить после создания виртуальной Машины. <br><br> **Максимальная длина (Windows):** 15 символов <br><br> **Максимальная длина (Linux):** 64 символов. <br><br> Для создания имени правила и ограничения см. в разделе [руководство по реализации служб инфраструктуры Azure](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-infrastructure-subscription-accounts-guidelines?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json#1-naming-conventions).'
+    optional: true
+    syntax:
+      content: 'computerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.customData'
+    name: customData
+    fullName: customData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает строку пользовательских данных кодировке base-64. Закодированной строки base-64 кодируется в двоичный массив, который сохраняется в виде файла на виртуальной машине. Максимальная длина двоичного массива — 65 535 байт. <br><br> С помощью cloud-init для виртуальной Машины, см. в разделе [с помощью cloud-init настроить виртуальную Машину Linux во время создания](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-using-cloud-init?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)'
+    optional: true
+    syntax:
+      content: 'customData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.linuxConfiguration'
+    name: linuxConfiguration
+    fullName: linuxConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Указывает параметры операционной системы Linux на виртуальной машине. <br><br>Список поддерживаемых дистрибутивах Linux, см. в разделе [Linux в Azure — рекомендованные дистрибутивы](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-endorsed-distros?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json)
+      <br><br> Для запуска нерекомендованных дистрибутивах, см. в разделе [сведения о дистрибутивах Non-Endorsed](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-linux-create-upload-generic?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json).
+    optional: true
+    syntax:
+      content: 'linuxConfiguration?: LinuxConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.LinuxConfiguration'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.secrets'
+    name: secrets
+    fullName: secrets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Указывает набор сертификатов, которые должны быть установлены на виртуальной машине.'
+    optional: true
+    syntax:
+      content: 'secrets?: VaultSecretGroup[]'
+      return:
+        type:
+          - '@azure/arm-compute.VaultSecretGroup[]'
+    package: '@azure/arm-compute'
+  - uid: '@azure/arm-compute.OSProfile.windowsConfiguration'
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Указывает параметры операционной системы Windows на виртуальной машине.
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - '@azure/arm-compute.WindowsConfiguration'
+    package: '@azure/arm-compute'
+references:
+  - uid: '@azure/arm-compute.LinuxConfiguration'
+    name: LinuxConfiguration
+    spec.typeScript:
+      - name: LinuxConfiguration
+        fullName: LinuxConfiguration
+        uid: '@azure/arm-compute.LinuxConfiguration'
+  - uid: '@azure/arm-compute.VaultSecretGroup[]'
+    name: 'VaultSecretGroup[]'
+    spec.typeScript:
+      - name: VaultSecretGroup
+        fullName: VaultSecretGroup
+        uid: '@azure/arm-compute.VaultSecretGroup'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/arm-compute.WindowsConfiguration'
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: '@azure/arm-compute.WindowsConfiguration'
