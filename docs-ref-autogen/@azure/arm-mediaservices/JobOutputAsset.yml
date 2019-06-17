@@ -1,0 +1,122 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.JobOutputAsset'
+    name: JobOutputAsset
+    fullName: JobOutputAsset
+    children:
+      - '@azure/arm-mediaservices.JobOutputAsset.assetName'
+      - '@azure/arm-mediaservices.JobOutputAsset.error'
+      - '@azure/arm-mediaservices.JobOutputAsset.label'
+      - '@azure/arm-mediaservices.JobOutputAsset.odatatype'
+      - '@azure/arm-mediaservices.JobOutputAsset.progress'
+      - '@azure/arm-mediaservices.JobOutputAsset.state'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="9b73d-101">Представляет ресурс, который используется в качестве JobOutput.</span><span class="sxs-lookup"><span data-stu-id="9b73d-101">Represents an Asset used as a JobOutput.</span></span>'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.assetName'
+    name: assetName
+    fullName: assetName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9b73d-102">Имя выходных данных средства.</span><span class="sxs-lookup"><span data-stu-id="9b73d-102">The name of the output Asset.</span></span>
+    syntax:
+      content: 'assetName: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.error'
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9b73d-103">Если JobOutput находится в состоянии ошибки, он содержит сведения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="9b73d-103">If the JobOutput is in the Error state, it contains the details of the error.</span></span>
+      <span data-ttu-id="9b73d-104">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="9b73d-104">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'error?: JobError'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobError'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.label'
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9b73d-105">Метка, которая назначается JobOutput, чтобы помочь идентифицировать его.</span><span class="sxs-lookup"><span data-stu-id="9b73d-105">A label that is assigned to a JobOutput in order to help uniquely identify it.</span></span> <span data-ttu-id="9b73d-106">Это полезно в том случае, если преобразование имеет более одного TransformOutput, при котором в задании содержится более одного JobOutput.</span><span class="sxs-lookup"><span data-stu-id="9b73d-106">This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput.</span></span> <span data-ttu-id="9b73d-107">В таком случае при отправке задания, вы добавите двух или более JobOutputs, в том же порядке, что TransformOutputs в преобразование.</span><span class="sxs-lookup"><span data-stu-id="9b73d-107">In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform.</span></span> <span data-ttu-id="9b73d-108">Как следствие при извлечении задания, либо через события, либо на запрос GET, можно использовать метки легко идентифицировать JobOutput.</span><span class="sxs-lookup"><span data-stu-id="9b73d-108">Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput.</span></span> <span data-ttu-id="9b73d-109">Если метка отсутствует, значение по умолчанию «{presetName} _ {outputIndex}» будет использоваться, где стандартное имя — имя набора предустановок в соответствующий TransformOutput и индекс выходные данные — относительный индекс данного JobOutput в рамках задания.</span><span class="sxs-lookup"><span data-stu-id="9b73d-109">If a label is not provided, a default value of ''{presetName}_{outputIndex}'' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job.</span></span> <span data-ttu-id="9b73d-110">Обратите внимание, что этот индекс так же, как относительный индекс соответствующего TransformOutput его преобразования.</span><span class="sxs-lookup"><span data-stu-id="9b73d-110">Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.</span></span>'
+    optional: true
+    syntax:
+      content: 'label?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9b73d-111">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="9b73d-111">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.JobOutputAsset"'
+      return:
+        type:
+          - '"#Microsoft.Media.JobOutputAsset"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.progress'
+    name: progress
+    fullName: progress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="9b73d-112">Если JobOutput находится в состоянии обработки, он содержит процент завершения задания.</span><span class="sxs-lookup"><span data-stu-id="9b73d-112">If the JobOutput is in a Processing state, this contains the Job completion percentage.</span></span> <span data-ttu-id="9b73d-113">Значение является приблизительными и не предназначен для использования для прогнозирования времени завершения задания.</span><span class="sxs-lookup"><span data-stu-id="9b73d-113">The value is an estimate and not intended to be used to predict Job completion times.</span></span> <span data-ttu-id="9b73d-114">Чтобы определить, если JobOutput завершен, используйте свойство State.</span><span class="sxs-lookup"><span data-stu-id="9b73d-114">To determine if the JobOutput is complete, use the State property.</span></span>
+      <span data-ttu-id="9b73d-115">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="9b73d-115">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'progress?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.JobOutputAsset.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9b73d-116">Описывает состояние JobOutput.</span><span class="sxs-lookup"><span data-stu-id="9b73d-116">Describes the state of the JobOutput.</span></span> <span data-ttu-id="9b73d-117">Ниже перечислены возможные значения. «Отменено», «Отмена», «Ошибка», «Завершено», «Обработки», «Queued», «запланировано» **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="9b73d-117">Possible values include: ''Canceled'', ''Canceling'', ''Error'', ''Finished'', ''Processing'', ''Queued'', ''Scheduled'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: JobState'
+      return:
+        type:
+          - '@azure/arm-mediaservices.JobState'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.JobError'
+    name: JobError
+    spec.typeScript:
+      - name: JobError
+        fullName: JobError
+        uid: '@azure/arm-mediaservices.JobError'
+  - uid: '@azure/arm-mediaservices.JobState'
+    name: JobState
+    spec.typeScript:
+      - name: JobState
+        fullName: JobState
+        uid: '@azure/arm-mediaservices.JobState'
