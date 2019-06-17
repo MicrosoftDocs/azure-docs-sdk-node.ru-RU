@@ -1,0 +1,114 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitConditions'
+    name: ExitConditions
+    fullName: ExitConditions
+    children:
+      - '@azure/batch.ExitConditions.default'
+      - '@azure/batch.ExitConditions.exitCodeRanges'
+      - '@azure/batch.ExitConditions.exitCodes'
+      - '@azure/batch.ExitConditions.fileUploadError'
+      - '@azure/batch.ExitConditions.preProcessingError'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="c6a14-101">Интерфейс, представляющий ExitConditions.</span><span class="sxs-lookup"><span data-stu-id="c6a14-101">An interface representing ExitConditions.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.default'
+    name: default
+    fullName: default
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c6a14-102">Пакетная служба реакции в случае сбоя задачи с помощью условия выхода не распространяются никакие другие свойства.</span><span class="sxs-lookup"><span data-stu-id="c6a14-102">How the Batch service should respond if the task fails with an exit condition not covered by any of the other properties.</span></span> <span data-ttu-id="c6a14-103">Это значение используется в том случае, если задача завершается с любой ненулевой код выхода не перечислены в коллекции exitCodes или exitCodeRanges, ошибка предварительной обработки, если свойство preProcessingError не существует или Ошибка отправки файла, если свойство fileUploadError не присутствует.</span><span class="sxs-lookup"><span data-stu-id="c6a14-103">This value is used if the task exits with any nonzero exit code not listed in the exitCodes or exitCodeRanges collection, with a pre-processing error if the preProcessingError property is not present, or with a file upload error if the fileUploadError property is not present.</span></span> <span data-ttu-id="c6a14-104">Если требуется нестандартное поведение на код выхода 0, необходимо указать его явно с помощью коллекции exitCodes или exitCodeRanges.</span><span class="sxs-lookup"><span data-stu-id="c6a14-104">If you want non-default behavior on exit code 0, you must list it explicitly using the exitCodes or exitCodeRanges collection.</span></span>'
+    optional: true
+    syntax:
+      content: 'default?: ExitOptions'
+      return:
+        type:
+          - '@azure/batch.ExitOptions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.exitCodeRanges'
+    name: exitCodeRanges
+    fullName: exitCodeRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c6a14-105">Список диапазонов код выхода задачи и как пакетная служба должны отреагировать на них.</span><span class="sxs-lookup"><span data-stu-id="c6a14-105">A list of task exit code ranges and how the Batch service should respond to them.</span></span>
+    optional: true
+    syntax:
+      content: 'exitCodeRanges?: ExitCodeRangeMapping[]'
+      return:
+        type:
+          - '@azure/batch.ExitCodeRangeMapping[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.exitCodes'
+    name: exitCodes
+    fullName: exitCodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c6a14-106">Список кодов выхода отдельных задач и как пакетная служба должны отреагировать на них.</span><span class="sxs-lookup"><span data-stu-id="c6a14-106">A list of individual task exit codes and how the Batch service should respond to them.</span></span>
+    optional: true
+    syntax:
+      content: 'exitCodes?: ExitCodeMapping[]'
+      return:
+        type:
+          - '@azure/batch.ExitCodeMapping[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.fileUploadError'
+    name: fileUploadError
+    fullName: fileUploadError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c6a14-107">Пакетная служба реакции Если возникла ошибка отправки файла.</span><span class="sxs-lookup"><span data-stu-id="c6a14-107">How the Batch service should respond if a file upload error occurs.</span></span> <span data-ttu-id="c6a14-108">Если задача завершила работу с кодом выхода, который был задан с помощью exitCodes или exitCodeRanges, а затем произошла ошибка при отправке файла, действие, указанное в код выхода имеет приоритет.</span><span class="sxs-lookup"><span data-stu-id="c6a14-108">If the task exited with an exit code that was specified via exitCodes or exitCodeRanges, and then encountered a file upload error, then the action specified by the exit code takes precedence.</span></span>'
+    optional: true
+    syntax:
+      content: 'fileUploadError?: ExitOptions'
+      return:
+        type:
+          - '@azure/batch.ExitOptions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitConditions.preProcessingError'
+    name: preProcessingError
+    fullName: preProcessingError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c6a14-109">Пакетная служба реакции Если задача не запускается из-за ошибки.</span><span class="sxs-lookup"><span data-stu-id="c6a14-109">How the Batch service should respond if the task fails to start due to an error.</span></span>
+    optional: true
+    syntax:
+      content: 'preProcessingError?: ExitOptions'
+      return:
+        type:
+          - '@azure/batch.ExitOptions'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    spec.typeScript:
+      - name: ExitOptions
+        fullName: ExitOptions
+        uid: '@azure/batch.ExitOptions'
+  - uid: '@azure/batch.ExitCodeRangeMapping[]'
+    name: 'ExitCodeRangeMapping[]'
+    spec.typeScript:
+      - name: ExitCodeRangeMapping
+        fullName: ExitCodeRangeMapping
+        uid: '@azure/batch.ExitCodeRangeMapping'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.ExitCodeMapping[]'
+    name: 'ExitCodeMapping[]'
+    spec.typeScript:
+      - name: ExitCodeMapping
+        fullName: ExitCodeMapping
+        uid: '@azure/batch.ExitCodeMapping'
+      - name: '[]'
+        fullName: '[]'
