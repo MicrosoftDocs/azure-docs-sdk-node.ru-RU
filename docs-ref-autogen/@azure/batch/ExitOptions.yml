@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - '@azure/batch.ExitOptions.dependencyAction'
+      - '@azure/batch.ExitOptions.jobAction'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий ExitOptions.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.dependencyAction'
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Действие, которое пакетная служба выполняет задачи, которые зависят от этой задачи. Значение по умолчанию — «удовлетворяют» для кода выхода 0 и «блокировать» для всех остальных условий выхода. Если задания usesTaskDependencies свойство имеет значение false, указав свойство dependencyAction возвращает ошибку и добавить поручение завершается с ошибкой значение недопустимое свойство; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос). Возможные значения: «удовлетворяют», «блокировать»'
+    optional: true
+    syntax:
+      content: 'dependencyAction?: DependencyAction'
+      return:
+        type:
+          - '@azure/batch.DependencyAction'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.jobAction'
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Действия, предпринимаемые на задания, содержащего задачу, если задача завершается с заданной выходного условия и onTaskFailed свойства задания — «performExitOptionsJobAction». Значение по умолчанию имеет значение none для кода выхода 0 и завершения для всех остальных условий выхода. Если свойство onTaskFailed задания noaction, указав это свойство возвращает сообщение об ошибке, и добавить поручение завершается с ошибкой значение недопустимое свойство; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос). Возможные значения: «none», «отключить», «terminate»'
+    optional: true
+    syntax:
+      content: 'jobAction?: JobAction'
+      return:
+        type:
+          - '@azure/batch.JobAction'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DependencyAction'
+    name: DependencyAction
+    spec.typeScript:
+      - name: DependencyAction
+        fullName: DependencyAction
+        uid: '@azure/batch.DependencyAction'
+  - uid: '@azure/batch.JobAction'
+    name: JobAction
+    spec.typeScript:
+      - name: JobAction
+        fullName: JobAction
+        uid: '@azure/batch.JobAction'
