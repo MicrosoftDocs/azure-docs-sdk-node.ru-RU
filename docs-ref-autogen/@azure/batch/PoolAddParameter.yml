@@ -1,0 +1,414 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolAddParameter'
+    name: PoolAddParameter
+    fullName: PoolAddParameter
+    children:
+      - '@azure/batch.PoolAddParameter.applicationLicenses'
+      - '@azure/batch.PoolAddParameter.applicationPackageReferences'
+      - '@azure/batch.PoolAddParameter.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolAddParameter.autoScaleFormula'
+      - '@azure/batch.PoolAddParameter.certificateReferences'
+      - '@azure/batch.PoolAddParameter.cloudServiceConfiguration'
+      - '@azure/batch.PoolAddParameter.displayName'
+      - '@azure/batch.PoolAddParameter.enableAutoScale'
+      - '@azure/batch.PoolAddParameter.enableInterNodeCommunication'
+      - '@azure/batch.PoolAddParameter.id'
+      - '@azure/batch.PoolAddParameter.maxTasksPerNode'
+      - '@azure/batch.PoolAddParameter.metadata'
+      - '@azure/batch.PoolAddParameter.networkConfiguration'
+      - '@azure/batch.PoolAddParameter.resizeTimeout'
+      - '@azure/batch.PoolAddParameter.startTask'
+      - '@azure/batch.PoolAddParameter.targetDedicatedNodes'
+      - '@azure/batch.PoolAddParameter.targetLowPriorityNodes'
+      - '@azure/batch.PoolAddParameter.taskSchedulingPolicy'
+      - '@azure/batch.PoolAddParameter.userAccounts'
+      - '@azure/batch.PoolAddParameter.virtualMachineConfiguration'
+      - '@azure/batch.PoolAddParameter.vmSize'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий PoolAddParameter.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.applicationLicenses'
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список приложений лицензии пакетной службы, служба будет доступна на каждом вычислительном узле в пуле. Список лицензий приложений должны представлять собой подмножество имеющихся лицензий для приложения службы пакетной службы. Если запрашивается лицензию, который не поддерживается, произойдет сбой создания пула.'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список пакетов приложений для установки на каждом вычислительном узле в пуле. Изменения ссылки на пакет приложения влияют на все вычислительные узлы объединения в пул, но не влияют на вычислительных узлах, которые уже находятся в пуле до перезагрузки или повторного создания образа. Можно использовать не более 10 ссылок на пакет приложения для любого пула.'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Интервал времени, по которому автоматически изменяет размер пула по формуле автоматического масштабирования. Значение по умолчанию — 15 минут. Минимальное и максимальное значение составляет 5 минут и 168 часов соответственно. Если указать значение меньше 5 минут или больше, чем 168 часов, то пакетная служба возвращает ошибку; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Формула для требуемого числа вычислительных узлов в пуле. Это свойство не должно быть указано, если enableAutoScale имеет значение false. Он необходим, если enableAutoScale задано значение true. Формула проверяется на допустимость до создания пула. Если формула не является допустимой, пакетная служба отклоняет запрос с подробные сведения об ошибке. Дополнительные сведения об указании этой формулы см. в разделе «Автоматическое масштабирование вычислительных узлов в пуле пакетной службы Azure» (https://azure.microsoft.com/documentation/articles/batch-automatic-scaling/).'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список сертификатов, должны быть установлены на каждом вычислительном узле в пуле. Для Windows вычислительных узлов, пакетная служба устанавливает сертификаты для хранилища сертификатов и расположение. Для вычислительных узлов Linux сертификаты, хранятся в каталог в рабочем каталоге задачи и среде, которую переменной AZ_BATCH_CERTIFICATES_DIR передается запрос для этого расположения. Для сертификатов с видимостью «remoteUser» каталог «сертификаты» создается в домашнем каталоге пользователя (например, /home/ {имя_пользователя} / certs) и сертификаты помещаются в этот каталог.'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.cloudServiceConfiguration'
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Конфигурация облачной службы для пула. Это свойство и virtualMachineConfiguration являются взаимоисключающими, и одно из свойств должен быть указан. Это свойство не может быть указан, если учетной записи пакетной службы была создана со свойством poolAllocationMode, имеющим значение «UserSubscription».'
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - '@azure/batch.CloudServiceConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Отображаемое имя для пула. Отображаемое имя не должно быть уникальным и может содержать любые символы Юникода, максимум — 1024.'
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.enableAutoScale'
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Размер пула должен изменяется ли автоматически со временем. Если значение равно false, по крайней мере один из targetDedicateNodes и targetLowPriorityNodes необходимо указать. Если значение равно true, свойство autoScaleFormula является обязательным, и пул автоматически изменяет свои размеры по формуле. По умолчанию для этого параметра используется значение false.'
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.enableInterNodeCommunication'
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Является ли пул позволяет прямой обмен данными между узлами. Включение связи между узлами ограничивает максимальный размер пула из-за ограничений развертывания на узлах пула.
+      Это может привести в пуле не достигают нужного размера. По умолчанию для этого параметра используется значение false.
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Строка, уникально определяющее пул в учетной записи. Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов. Идентификатор меняющее регистр и не учитывает регистр (то есть не имеется два идентификатора пула в учетной записи, которые различаются только регистром).'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.maxTasksPerNode'
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Максимальное число задач, которые могут быть запущены одновременно на одном вычислительном узле в пуле.
+      Значение по умолчанию — 1. Максимальное значение — это меньшее из 4 раза количество ядер vmSize пула или 256.
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список пар "имя значение", связанных с пулом как метаданные. Пакетная служба не назначает значение для метаданных; Это исключительно для использования пользовательского кода.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Конфигурация сети для пула.
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.NetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время ожидания при выделении вычислительных узлов в пул. Это время ожидания применяется только к ручное масштабирование; он не действует при элемента enableAutoScale задано значение в значение true. Значение по умолчанию — 15 минут. Минимальное значение — 5 минут. Если указать значение меньше 5 минут, то пакетная служба возвращает ошибку; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Задачи, указанной для запуска на каждом вычислительном узле, когда он присоединяется к пулу. Задача выполняется при добавлении узла к пулу или при перезапуске узла.'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.targetDedicatedNodes'
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Требуемое число выделенных вычислительных узлов в пуле. Это свойство не должно быть указано, если enableAutoScale задано значение true. Если enableAutoScale имеет значение false, то необходимо задать либо targetDedicatedNodes, targetLowPriorityNodes или оба.'
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.targetLowPriorityNodes'
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Требуемое число низкоприоритетные вычислительные узлы в пуле. Это свойство не должно быть указано, если enableAutoScale задано значение true. Если enableAutoScale имеет значение false, то необходимо задать либо targetDedicatedNodes, targetLowPriorityNodes или оба.'
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.taskSchedulingPolicy'
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Как задачи распределяются между вычислительными узлами в пуле. Если не указан, распределены по умолчанию.'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - '@azure/batch.TaskSchedulingPolicy'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.userAccounts'
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Список учетных записей пользователей на каждом узле в пуле.
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - '@azure/batch.UserAccount[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.virtualMachineConfiguration'
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Конфигурация виртуальной машины для пула. Это свойство и cloudServiceConfiguration являются взаимоисключающими, и одно из свойств должен быть указан.'
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - '@azure/batch.VirtualMachineConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolAddParameter.vmSize'
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Размер виртуальных машин в пуле. Все виртуальные машины в пуле имеют одинаковый размер.
+      Сведения о доступных размерах виртуальных машин для облачных служб пулов (пулы, созданные с помощью cloudServiceConfiguration), см. в разделе размеры для облачных служб (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Пакетная служба поддерживает все размеры виртуальной Машине облачных служб, кроме "очень мелкий", A1V2 и A2V2. Сведения о доступных виртуальных Машин размеры пулов при использовании образов из магазина виртуальных машин (пулы, созданные с помощью virtualMachineConfiguration) см. размеры виртуальных машин (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) или размеры виртуальных машин (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Пакетная служба поддерживает все размеры виртуальных Машин Azure, за исключением STANDARD_A0 и с хранилищем класса premium (серии STANDARD_GS STANDARD_DS и STANDARD_DSV2).
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CloudServiceConfiguration'
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: '@azure/batch.CloudServiceConfiguration'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: '@azure/batch.NetworkConfiguration'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'
+  - uid: '@azure/batch.TaskSchedulingPolicy'
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: '@azure/batch.TaskSchedulingPolicy'
+  - uid: '@azure/batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: '@azure/batch.UserAccount'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.VirtualMachineConfiguration'
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: '@azure/batch.VirtualMachineConfiguration'
