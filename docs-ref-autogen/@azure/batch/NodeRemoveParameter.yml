@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    fullName: NodeRemoveParameter
+    children:
+      - '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+      - '@azure/batch.NodeRemoveParameter.nodeList'
+      - '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий NodeRemoveParameter.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+    name: nodeDeallocationOption
+    fullName: nodeDeallocationOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Определяет, что делать с узла и его выполнение задач после выбора для освобождения. По умолчанию используется значение requeue. Возможные значения: «повторной постановки в очередь», «terminate», «taskCompletion», «retainedData»'
+    optional: true
+    syntax:
+      content: 'nodeDeallocationOption?: ComputeNodeDeallocationOption'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeDeallocationOption'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeList'
+    name: nodeList
+    fullName: nodeList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список, содержащий коды из вычислительных узлов, который необходимо удалить из указанного пула.'
+    syntax:
+      content: 'nodeList: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время ожидания удаления вычислительных узлов в пул. Значение по умолчанию — 15 минут. Минимальное значение — 5 минут. Если указать значение меньше 5 минут, то пакетная служба возвращает ошибку; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ComputeNodeDeallocationOption'
+    name: ComputeNodeDeallocationOption
+    spec.typeScript:
+      - name: ComputeNodeDeallocationOption
+        fullName: ComputeNodeDeallocationOption
+        uid: '@azure/batch.ComputeNodeDeallocationOption'

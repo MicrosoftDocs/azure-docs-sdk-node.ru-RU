@@ -1,0 +1,85 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-monitor.ScaleAction'
+    name: ScaleAction
+    fullName: ScaleAction
+    children:
+      - '@azure/arm-monitor.ScaleAction.cooldown'
+      - '@azure/arm-monitor.ScaleAction.direction'
+      - '@azure/arm-monitor.ScaleAction.type'
+      - '@azure/arm-monitor.ScaleAction.value'
+    langs:
+      - typeScript
+    type: interface
+    summary: параметры для действия масштабирования.
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.cooldown'
+    name: cooldown
+    fullName: cooldown
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: количество времени ожидания с момента последнего действия масштабирования перед выполнением этого действия. Она должна составлять от 1 недели до 1 минуты в формате ISO 8601.
+    syntax:
+      content: 'cooldown: string'
+      return:
+        type:
+          - string
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.direction'
+    name: direction
+    fullName: direction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Направление масштабирования. Ли действия масштабирования увеличивает или уменьшает число экземпляров. Ниже перечислены возможные значения. «None», «Увеличить», «уменьшить»'
+    syntax:
+      content: 'direction: ScaleDirection'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleDirection'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Тип действия, которое должно выполняться при срабатывании правила масштабирования. Ниже перечислены возможные значения. «ChangeCount», «PercentChangeCount», «ExactCount»'
+    syntax:
+      content: 'type: ScaleType'
+      return:
+        type:
+          - '@azure/arm-monitor.ScaleType'
+    package: '@azure/arm-monitor'
+  - uid: '@azure/arm-monitor.ScaleAction.value'
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "количество экземпляров, которые участвуют в действии масштабирования. Для этого параметра должно быть указано значение не меньше\_1. Значение по умолчанию — 1. Значение по умолчанию: '1'."
+    optional: true
+    syntax:
+      content: 'value?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-monitor'
+references:
+  - uid: '@azure/arm-monitor.ScaleDirection'
+    name: ScaleDirection
+    spec.typeScript:
+      - name: ScaleDirection
+        fullName: ScaleDirection
+        uid: '@azure/arm-monitor.ScaleDirection'
+  - uid: '@azure/arm-monitor.ScaleType'
+    name: ScaleType
+    spec.typeScript:
+      - name: ScaleType
+        fullName: ScaleType
+        uid: '@azure/arm-monitor.ScaleType'
