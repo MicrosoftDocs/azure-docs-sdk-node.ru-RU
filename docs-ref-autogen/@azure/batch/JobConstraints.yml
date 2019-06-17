@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - '@azure/batch.JobConstraints.maxTaskRetryCount'
+      - '@azure/batch.JobConstraints.maxWallClockTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="f223b-101">Интерфейс, представляющий значения JobConstraints.</span><span class="sxs-lookup"><span data-stu-id="f223b-101">An interface representing JobConstraints.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f223b-102">Максимальное число повторных попыток каждая задача может быть.</span><span class="sxs-lookup"><span data-stu-id="f223b-102">The maximum number of times each task may be retried.</span></span> <span data-ttu-id="f223b-103">Пакетная служба пытается выполнить задачу повторно, если ее код выхода имеет ненулевое значение.</span><span class="sxs-lookup"><span data-stu-id="f223b-103">The Batch service retries a task if its exit code is nonzero.</span></span> <span data-ttu-id="f223b-104">Обратите внимание, что это значение определяет количество повторных попыток.</span><span class="sxs-lookup"><span data-stu-id="f223b-104">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="f223b-105">Пакетная служба попытается каждую задачу один раз и повторите вплоть до этого предела.</span><span class="sxs-lookup"><span data-stu-id="f223b-105">The Batch service will try each task once, and may then retry up to this limit.</span></span> <span data-ttu-id="f223b-106">Например, если максимальное число повторных попыток равно 3, пакетная служба пытается выполнить задачу до 4 раз (одна начальная попытка и 3 повторных).</span><span class="sxs-lookup"><span data-stu-id="f223b-106">For example, if the maximum retry count is 3, Batch tries a task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="f223b-107">Если максимальное число повторных попыток равно 0, пакетная служба не пытается выполнить задачи повторно.</span><span class="sxs-lookup"><span data-stu-id="f223b-107">If the maximum retry count is 0, the Batch service does not retry tasks.</span></span> <span data-ttu-id="f223b-108">Если максимальное число повторных попыток равно –1, пакетная служба может повторять попытки сколько угодно.</span><span class="sxs-lookup"><span data-stu-id="f223b-108">If the maximum retry count is -1, the Batch service retries tasks without limit.</span></span> <span data-ttu-id="f223b-109">Значение по умолчанию — 0 (без повторных попыток).</span><span class="sxs-lookup"><span data-stu-id="f223b-109">The default value is 0 (no retries).</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f223b-110">Максимальное время, затраченное на выполнение задания, измеренное с момента создания задания.</span><span class="sxs-lookup"><span data-stu-id="f223b-110">The maximum elapsed time that the job may run, measured from the time the job is created.</span></span> <span data-ttu-id="f223b-111">Если задание не выполняется в течение ограниченного времени, пакетная служба завершит его и все задачи, которые по-прежнему работают.</span><span class="sxs-lookup"><span data-stu-id="f223b-111">If the job does not complete within the time limit, the Batch service terminates it and any tasks that are still running.</span></span> <span data-ttu-id="f223b-112">В этом случае причиной завершения работы будет MaxWallClockTimeExpiry.</span><span class="sxs-lookup"><span data-stu-id="f223b-112">In this case, the termination reason will be MaxWallClockTimeExpiry.</span></span>
+      <span data-ttu-id="f223b-113">Если это свойство не указано, есть без временных ограничений на продолжительность выполнения задания.</span><span class="sxs-lookup"><span data-stu-id="f223b-113">If this property is not specified, there is no time limit on how long the job may run.</span></span>
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
