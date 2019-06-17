@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.AutoPoolSpecification'
+    name: AutoPoolSpecification
+    fullName: AutoPoolSpecification
+    children:
+      - '@azure/batch.AutoPoolSpecification.autoPoolIdPrefix'
+      - '@azure/batch.AutoPoolSpecification.keepAlive'
+      - '@azure/batch.AutoPoolSpecification.pool'
+      - '@azure/batch.AutoPoolSpecification.poolLifetimeOption'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="854de-101">Интерфейс, представляющий AutoPoolSpecification.</span><span class="sxs-lookup"><span data-stu-id="854de-101">An interface representing AutoPoolSpecification.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.autoPoolIdPrefix'
+    name: autoPoolIdPrefix
+    fullName: autoPoolIdPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="854de-102">Префикс, добавляемый уникальный идентификатор при создании пула создается автоматически.</span><span class="sxs-lookup"><span data-stu-id="854de-102">A prefix to be added to the unique identifier when a pool is automatically created.</span></span> <span data-ttu-id="854de-103">Пакетная служба назначает каждой автоматический пул уникальный идентификатор при создании.</span><span class="sxs-lookup"><span data-stu-id="854de-103">The Batch service assigns each auto pool a unique identifier on creation.</span></span> <span data-ttu-id="854de-104">Чтобы различать пулов, созданных для разных целей, можно указать этот элемент, добавляемый префикс идентификатор, назначенный.</span><span class="sxs-lookup"><span data-stu-id="854de-104">To distinguish between pools created for different purposes, you can specify this element to add a prefix to the ID that is assigned.</span></span> <span data-ttu-id="854de-105">Префикс может иметь до 20 символов.</span><span class="sxs-lookup"><span data-stu-id="854de-105">The prefix can be up to 20 characters long.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoPoolIdPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.keepAlive'
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="854de-106">Нужно ли поддерживать автоматический пул в активном состоянии после истечения времени его существования.</span><span class="sxs-lookup"><span data-stu-id="854de-106">Whether to keep an auto pool alive after its lifetime expires.</span></span> <span data-ttu-id="854de-107">Если значение равно false, пакетная служба удаляет пул, по истечении срока существования (в зависимости от параметра poolLifetimeOption); то есть если запланировать задание или задания завершается.</span><span class="sxs-lookup"><span data-stu-id="854de-107">If false, the Batch service deletes the pool once its lifetime (as determined by the poolLifetimeOption setting) expires; that is, when the job or job schedule completes.</span></span> <span data-ttu-id="854de-108">Если значение равно true, пакетная служба не удалить пул автоматически.</span><span class="sxs-lookup"><span data-stu-id="854de-108">If true, the Batch service does not delete the pool automatically.</span></span> <span data-ttu-id="854de-109">Это, пользователь должен удалить автоматически пулов, созданных с помощью этого параметра.</span><span class="sxs-lookup"><span data-stu-id="854de-109">It is up to the user to delete auto pools created with this option.</span></span>'
+    optional: true
+    syntax:
+      content: 'keepAlive?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.pool'
+    name: pool
+    fullName: pool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="854de-110">Спецификацию для автоматического пула.</span><span class="sxs-lookup"><span data-stu-id="854de-110">The pool specification for the auto pool.</span></span>
+    optional: true
+    syntax:
+      content: 'pool?: PoolSpecification'
+      return:
+        type:
+          - '@azure/batch.PoolSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.AutoPoolSpecification.poolLifetimeOption'
+    name: poolLifetimeOption
+    fullName: poolLifetimeOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="854de-111">Минимальное время жизни автоматически созданный пулов и каким образом несколько заданий по расписанию назначены пулы.</span><span class="sxs-lookup"><span data-stu-id="854de-111">The minimum lifetime of created auto pools, and how multiple jobs on a schedule are assigned to pools.</span></span> <span data-ttu-id="854de-112">Возможные значения: «jobSchedule», «задания»</span><span class="sxs-lookup"><span data-stu-id="854de-112">Possible values include: ''jobSchedule'', ''job''</span></span>'
+    syntax:
+      content: 'poolLifetimeOption: PoolLifetimeOption'
+      return:
+        type:
+          - '@azure/batch.PoolLifetimeOption'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.PoolSpecification'
+    name: PoolSpecification
+    spec.typeScript:
+      - name: PoolSpecification
+        fullName: PoolSpecification
+        uid: '@azure/batch.PoolSpecification'
+  - uid: '@azure/batch.PoolLifetimeOption'
+    name: PoolLifetimeOption
+    spec.typeScript:
+      - name: PoolLifetimeOption
+        fullName: PoolLifetimeOption
+        uid: '@azure/batch.PoolLifetimeOption'
