@@ -10,13 +10,13 @@ items:
       - '@azure/arm-network.NetworkInterface.etag'
       - '@azure/arm-network.NetworkInterface.hostedWorkloads'
       - '@azure/arm-network.NetworkInterface.id'
-      - '@azure/arm-network.NetworkInterface.interfaceEndpoint'
       - '@azure/arm-network.NetworkInterface.ipConfigurations'
       - '@azure/arm-network.NetworkInterface.location'
       - '@azure/arm-network.NetworkInterface.macAddress'
       - '@azure/arm-network.NetworkInterface.name'
       - '@azure/arm-network.NetworkInterface.networkSecurityGroup'
       - '@azure/arm-network.NetworkInterface.primary'
+      - '@azure/arm-network.NetworkInterface.privateEndpoint'
       - '@azure/arm-network.NetworkInterface.provisioningState'
       - '@azure/arm-network.NetworkInterface.resourceGuid'
       - '@azure/arm-network.NetworkInterface.tags'
@@ -26,7 +26,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="dd598-101">Сетевой интерфейс в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="dd598-101">A network interface in a resource group.</span></span>
+    summary: <span data-ttu-id="dbc4d-101">Сетевой интерфейс в группе ресурсов.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-101">A network interface in a resource group.</span></span>
     extends:
       name: '@azure/arm-network.Resource'
     package: '@azure/arm-network'
@@ -37,7 +37,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="dd598-102">Параметры DNS, в сетевой интерфейс.</span><span class="sxs-lookup"><span data-stu-id="dd598-102">The DNS settings in network interface.</span></span>'
+    summary: '<span data-ttu-id="dbc4d-102">Параметры DNS, в сетевой интерфейс.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-102">The DNS settings in network interface.</span></span>'
     optional: true
     syntax:
       content: 'dnsSettings?: NetworkInterfaceDnsSettings'
@@ -52,7 +52,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="dd598-103">Если сетевой интерфейс является Ускоренная сеть включена.</span><span class="sxs-lookup"><span data-stu-id="dd598-103">If the network interface is accelerated networking enabled.</span></span>
+    summary: <span data-ttu-id="dbc4d-103">Если сетевой интерфейс является Ускоренная сеть включена.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-103">If the network interface is accelerated networking enabled.</span></span>
     optional: true
     syntax:
       content: 'enableAcceleratedNetworking?: undefined | false | true'
@@ -67,7 +67,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="dd598-104">Указывает, разрешена ли переадресация IP-адрес в этом сетевом интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="dd598-104">Indicates whether IP forwarding is enabled on this network interface.</span></span>'
+    summary: '<span data-ttu-id="dbc4d-104">Указывает, разрешена ли переадресация IP-адрес в этом сетевом интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-104">Indicates whether IP forwarding is enabled on this network interface.</span></span>'
     optional: true
     syntax:
       content: 'enableIPForwarding?: undefined | false | true'
@@ -82,7 +82,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="dd598-105">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="dd598-105">A unique read-only string that changes whenever the resource is updated.</span></span>'
+    summary: '<span data-ttu-id="dbc4d-105">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-105">A unique read-only string that changes whenever the resource is updated.</span></span>'
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -97,7 +97,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="dd598-106">Список ссылок на связанные ресурсы BareMetal **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dd598-106">A list of references to linked BareMetal resources **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: |-
+      <span data-ttu-id="dbc4d-106">Список ссылок на связанные ресурсы BareMetal.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-106">A list of references to linked BareMetal resources.</span></span>
+      <span data-ttu-id="dbc4d-107">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dbc4d-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'hostedWorkloads?: string[]'
@@ -112,30 +114,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="dd598-107">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="dd598-107">Resource ID.</span></span>
+    summary: <span data-ttu-id="dbc4d-108">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-108">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.NetworkInterface.interfaceEndpoint'
-    name: interfaceEndpoint
-    fullName: interfaceEndpoint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      <span data-ttu-id="dd598-108">Ссылка на интерфейс конечную точку, с которой связан сетевой интерфейс.</span><span class="sxs-lookup"><span data-stu-id="dd598-108">A reference to the interface endpoint to which the network interface is linked.</span></span>
-      <span data-ttu-id="dd598-109">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dd598-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
-    optional: true
-    syntax:
-      content: 'interfaceEndpoint?: InterfaceEndpoint'
-      return:
-        type:
-          - '@azure/arm-network.InterfaceEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.ipConfigurations'
     name: ipConfigurations
@@ -144,7 +129,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="dd598-110">Список IP-конфигурации сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="dd598-110">A list of IPConfigurations of the network interface.</span></span>
+    summary: <span data-ttu-id="dbc4d-109">Список IP-конфигурации сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-109">A list of IPConfigurations of the network interface.</span></span>
     optional: true
     syntax:
       content: 'ipConfigurations?: NetworkInterfaceIPConfiguration[]'
@@ -159,7 +144,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="dd598-111">Расположение ресурса.</span><span class="sxs-lookup"><span data-stu-id="dd598-111">Resource location.</span></span>
+    summary: <span data-ttu-id="dbc4d-110">Расположение ресурса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-110">Resource location.</span></span>
     optional: true
     syntax:
       content: 'location?: undefined | string'
@@ -174,7 +159,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="dd598-112">MAC-адрес сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="dd598-112">The MAC address of the network interface.</span></span>
+    summary: <span data-ttu-id="dbc4d-111">MAC-адрес сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-111">The MAC address of the network interface.</span></span>
     optional: true
     syntax:
       content: 'macAddress?: undefined | string'
@@ -190,8 +175,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="dd598-113">Имя ресурса.</span><span class="sxs-lookup"><span data-stu-id="dd598-113">Resource name.</span></span>
-      <span data-ttu-id="dd598-114">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dd598-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="dbc4d-112">Имя ресурса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-112">Resource name.</span></span>
+      <span data-ttu-id="dbc4d-113">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dbc4d-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -206,7 +191,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="dd598-115">Ссылка на ресурс NetworkSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="dd598-115">The reference of the NetworkSecurityGroup resource.</span></span>
+    summary: <span data-ttu-id="dbc4d-114">Ссылка на ресурс NetworkSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-114">The reference of the NetworkSecurityGroup resource.</span></span>
     optional: true
     syntax:
       content: 'networkSecurityGroup?: NetworkSecurityGroup'
@@ -221,13 +206,30 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="dd598-116">Возвращает, является ли этот основного сетевого интерфейса на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="dd598-116">Gets whether this is a primary network interface on a virtual machine.</span></span>'
+    summary: '<span data-ttu-id="dbc4d-115">Возвращает, является ли этот основного сетевого интерфейса на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-115">Gets whether this is a primary network interface on a virtual machine.</span></span>'
     optional: true
     syntax:
       content: 'primary?: undefined | false | true'
       return:
         type:
           - undefined | false | true
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.NetworkInterface.privateEndpoint'
+    name: privateEndpoint
+    fullName: privateEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dbc4d-116">Ссылка на частную конечную точку, с которой связан сетевой интерфейс.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-116">A reference to the private endpoint to which the network interface is linked.</span></span>
+      <span data-ttu-id="dbc4d-117">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dbc4d-117">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'privateEndpoint?: PrivateEndpoint'
+      return:
+        type:
+          - '@azure/arm-network.PrivateEndpoint'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.NetworkInterface.provisioningState'
     name: provisioningState
@@ -236,7 +238,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="dd598-117">Состояние подготовки ресурса общедоступного IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="dd598-117">The provisioning state of the public IP resource.</span></span> <span data-ttu-id="dd598-118">Возможные значения: «Обновление», «Удаление» и «Failed».</span><span class="sxs-lookup"><span data-stu-id="dd598-118">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    summary: '<span data-ttu-id="dbc4d-118">Состояние подготовки ресурса общедоступного IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-118">The provisioning state of the public IP resource.</span></span> <span data-ttu-id="dbc4d-119">Возможные значения: «Обновление», «Удаление» и «Failed».</span><span class="sxs-lookup"><span data-stu-id="dbc4d-119">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -251,7 +253,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="dd598-119">Ресурс, свойство GUID ресурса сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="dd598-119">The resource GUID property of the network interface resource.</span></span>'
+    summary: '<span data-ttu-id="dbc4d-120">Ресурс, свойство GUID ресурса сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-120">The resource GUID property of the network interface resource.</span></span>'
     optional: true
     syntax:
       content: 'resourceGuid?: undefined | string'
@@ -266,7 +268,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="dd598-120">Теги ресурсов.</span><span class="sxs-lookup"><span data-stu-id="dd598-120">Resource tags.</span></span>
+    summary: <span data-ttu-id="dbc4d-121">Теги ресурсов.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-121">Resource tags.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -281,7 +283,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="dd598-121">Список TapConfigurations сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="dd598-121">A list of TapConfigurations of the network interface.</span></span>
+    summary: <span data-ttu-id="dbc4d-122">Список TapConfigurations сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-122">A list of TapConfigurations of the network interface.</span></span>
     optional: true
     syntax:
       content: 'tapConfigurations?: NetworkInterfaceTapConfiguration[]'
@@ -297,8 +299,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="dd598-122">Тип ресурса.</span><span class="sxs-lookup"><span data-stu-id="dd598-122">Resource type.</span></span>
-      <span data-ttu-id="dd598-123">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dd598-123">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="dbc4d-123">Тип ресурса.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-123">Resource type.</span></span>
+      <span data-ttu-id="dbc4d-124">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dbc4d-124">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
@@ -314,8 +316,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="dd598-124">Ссылка на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="dd598-124">The reference of a virtual machine.</span></span>
-      <span data-ttu-id="dd598-125">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dd598-125">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="dbc4d-125">Ссылка на виртуальной машине.</span><span class="sxs-lookup"><span data-stu-id="dbc4d-125">The reference of a virtual machine.</span></span>
+      <span data-ttu-id="dbc4d-126">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="dbc4d-126">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'virtualMachine?: SubResource'
@@ -336,12 +338,6 @@ references:
       - name: NetworkInterfaceDnsSettings
         fullName: NetworkInterfaceDnsSettings
         uid: '@azure/arm-network.NetworkInterfaceDnsSettings'
-  - uid: '@azure/arm-network.InterfaceEndpoint'
-    name: InterfaceEndpoint
-    spec.typeScript:
-      - name: InterfaceEndpoint
-        fullName: InterfaceEndpoint
-        uid: '@azure/arm-network.InterfaceEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceIPConfiguration[]'
     name: 'NetworkInterfaceIPConfiguration[]'
     spec.typeScript:
@@ -356,6 +352,12 @@ references:
       - name: NetworkSecurityGroup
         fullName: NetworkSecurityGroup
         uid: '@azure/arm-network.NetworkSecurityGroup'
+  - uid: '@azure/arm-network.PrivateEndpoint'
+    name: PrivateEndpoint
+    spec.typeScript:
+      - name: PrivateEndpoint
+        fullName: PrivateEndpoint
+        uid: '@azure/arm-network.PrivateEndpoint'
   - uid: '@azure/arm-network.NetworkInterfaceTapConfiguration[]'
     name: 'NetworkInterfaceTapConfiguration[]'
     spec.typeScript:

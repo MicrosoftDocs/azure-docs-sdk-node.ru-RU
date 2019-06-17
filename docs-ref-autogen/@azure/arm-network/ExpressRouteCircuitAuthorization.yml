@@ -10,10 +10,11 @@ items:
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.id'
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.name'
       - '@azure/arm-network.ExpressRouteCircuitAuthorization.provisioningState'
+      - '@azure/arm-network.ExpressRouteCircuitAuthorization.type'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="7e372-101">Авторизация в ресурсе канала Expressroute.</span><span class="sxs-lookup"><span data-stu-id="7e372-101">Authorization in an ExpressRouteCircuit resource.</span></span>
+    summary: <span data-ttu-id="f962f-101">Авторизация в ресурсе канала Expressroute.</span><span class="sxs-lookup"><span data-stu-id="f962f-101">Authorization in an ExpressRouteCircuit resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
@@ -24,7 +25,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7e372-102">Ключ авторизации.</span><span class="sxs-lookup"><span data-stu-id="7e372-102">The authorization key.</span></span>
+    summary: <span data-ttu-id="f962f-102">Ключ авторизации.</span><span class="sxs-lookup"><span data-stu-id="f962f-102">The authorization key.</span></span>
     optional: true
     syntax:
       content: 'authorizationKey?: undefined | string'
@@ -39,7 +40,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="7e372-103">AuthorizationUseStatus.</span><span class="sxs-lookup"><span data-stu-id="7e372-103">AuthorizationUseStatus.</span></span> <span data-ttu-id="7e372-104">Возможные значения: «Доступный» и «Модуль».</span><span class="sxs-lookup"><span data-stu-id="7e372-104">Possible values are: ''Available'' and ''InUse''.</span></span> <span data-ttu-id="7e372-105">Ниже перечислены возможные значения. «Доступно», «Модуль»</span><span class="sxs-lookup"><span data-stu-id="7e372-105">Possible values include: ''Available'', ''InUse''</span></span>'
+    summary: '<span data-ttu-id="f962f-103">Используйте состояние авторизации.</span><span class="sxs-lookup"><span data-stu-id="f962f-103">The authorization use status.</span></span> <span data-ttu-id="f962f-104">Ниже перечислены возможные значения. «Доступно», «Модуль»</span><span class="sxs-lookup"><span data-stu-id="f962f-104">Possible values include: ''Available'', ''InUse''</span></span>'
     optional: true
     syntax:
       content: 'authorizationUseStatus?: AuthorizationUseStatus'
@@ -55,8 +56,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="7e372-106">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="7e372-106">A unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="7e372-107">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="7e372-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="f962f-105">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="f962f-105">A unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="f962f-106">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f962f-106">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -71,7 +72,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="7e372-108">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="7e372-108">Resource ID.</span></span>
+    summary: <span data-ttu-id="f962f-107">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="f962f-107">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -86,7 +87,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="7e372-109">Возвращает имя ресурса, который является уникальным в пределах группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="7e372-109">Gets name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="7e372-110">Это имя может использоваться для доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="7e372-110">This name can be used to access the resource.</span></span>'
+    summary: '<span data-ttu-id="f962f-108">Возвращает имя ресурса, который является уникальным в пределах группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f962f-108">Gets name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="f962f-109">Это имя может использоваться для доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="f962f-109">This name can be used to access the resource.</span></span>'
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -101,10 +102,27 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="7e372-111">Получает состояние подготовки ресурса общедоступного IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="7e372-111">Gets the provisioning state of the public IP resource.</span></span> <span data-ttu-id="7e372-112">Возможные значения: «Обновление», «Удаление» и «Failed».</span><span class="sxs-lookup"><span data-stu-id="7e372-112">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
+    summary: '<span data-ttu-id="f962f-110">Получает состояние подготовки ресурса общедоступного IP-адрес.</span><span class="sxs-lookup"><span data-stu-id="f962f-110">Gets the provisioning state of the public IP resource.</span></span> <span data-ttu-id="f962f-111">Возможные значения: «Обновление», «Удаление» и «Failed».</span><span class="sxs-lookup"><span data-stu-id="f962f-111">Possible values are: ''Updating'', ''Deleting'', and ''Failed''.</span></span>'
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ExpressRouteCircuitAuthorization.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f962f-112">Тип ресурса.</span><span class="sxs-lookup"><span data-stu-id="f962f-112">Type of the resource.</span></span>
+      <span data-ttu-id="f962f-113">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f962f-113">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
