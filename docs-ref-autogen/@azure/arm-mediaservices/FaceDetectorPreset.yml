@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset'
+    name: FaceDetectorPreset
+    fullName: FaceDetectorPreset
+    children:
+      - '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+      - '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="32a6c-101">Описывает все параметры, которые будут использоваться при анализе видео для обнаружения всех лиц, которые присутствуют.</span><span class="sxs-lookup"><span data-stu-id="32a6c-101">Describes all the settings to be used when analyzing a video in order to detect all the faces present.</span></span>'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="32a6c-102">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="32a6c-102">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.FaceDetectorPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.FaceDetectorPreset"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    name: resolution
+    fullName: resolution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="32a6c-103">Указывает максимальное разрешение, в котором анализируется видео.</span><span class="sxs-lookup"><span data-stu-id="32a6c-103">Specifies the maximum resolution at which your video is analyzed.</span></span> <span data-ttu-id="32a6c-104">Поведение по умолчанию — «SourceResolution», которые обеспечат входного видео с его исходным разрешением при анализе.</span><span class="sxs-lookup"><span data-stu-id="32a6c-104">The default behavior is "SourceResolution," which will keep the input video at its original resolution when analyzed.</span></span>
+      <span data-ttu-id="32a6c-105">С помощью «StandardDefinition» будет изменять размер входного видео, чтобы стандартного определения, сохраняя соответствующие пропорции.</span><span class="sxs-lookup"><span data-stu-id="32a6c-105">Using "StandardDefinition" will resize input videos to standard definition while preserving the appropriate aspect ratio.</span></span> <span data-ttu-id="32a6c-106">Только он изменится, если видео имеет высокое разрешение.</span><span class="sxs-lookup"><span data-stu-id="32a6c-106">It will only resize if the video is of higher resolution.</span></span> <span data-ttu-id="32a6c-107">Например ввод 1920 x 1080 будет масштабироваться до 640 x 360, перед обработкой.</span><span class="sxs-lookup"><span data-stu-id="32a6c-107">For example, a 1920x1080 input would be scaled to 640x360 before processing.</span></span> <span data-ttu-id="32a6c-108">Переключение на «StandardDefinition» сократит время, необходимое для процесса высокого разрешения видео.</span><span class="sxs-lookup"><span data-stu-id="32a6c-108">Switching to "StandardDefinition" will reduce the time it takes to process high resolution video.</span></span> <span data-ttu-id="32a6c-109">Он также может сократить затраты на использование этого компонента (см. в разделе https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics подробные сведения).</span><span class="sxs-lookup"><span data-stu-id="32a6c-109">It may also reduce the cost of using this component (see https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics for details).</span></span>
+      <span data-ttu-id="32a6c-110">Тем не менее могут не обнаруживаться лиц, которые в конечном счете, слишком мал, в размер видео.</span><span class="sxs-lookup"><span data-stu-id="32a6c-110">However, faces that end up being too small in the resized video may not be detected.</span></span> <span data-ttu-id="32a6c-111">Ниже перечислены возможные значения. «SourceResolution», «StandardDefinition»</span><span class="sxs-lookup"><span data-stu-id="32a6c-111">Possible values include: 'SourceResolution', 'StandardDefinition'</span></span>
+    optional: true
+    syntax:
+      content: 'resolution?: AnalysisResolution'
+      return:
+        type:
+          - '@azure/arm-mediaservices.AnalysisResolution'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.AnalysisResolution'
+    name: AnalysisResolution
+    spec.typeScript:
+      - name: AnalysisResolution
+        fullName: AnalysisResolution
+        uid: '@azure/arm-mediaservices.AnalysisResolution'
