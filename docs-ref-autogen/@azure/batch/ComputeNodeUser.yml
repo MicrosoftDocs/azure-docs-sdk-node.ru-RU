@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ComputeNodeUser'
+    name: ComputeNodeUser
+    fullName: ComputeNodeUser
+    children:
+      - '@azure/batch.ComputeNodeUser.expiryTime'
+      - '@azure/batch.ComputeNodeUser.isAdmin'
+      - '@azure/batch.ComputeNodeUser.name'
+      - '@azure/batch.ComputeNodeUser.password'
+      - '@azure/batch.ComputeNodeUser.sshPublicKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий ComputeNodeUser.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.expiryTime'
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время, по которому срока действия учетной записи. Если не указано, значение по умолчанию — 1 день от текущего времени. Для вычислительных узлов Linux expiryTime имеет точность до в день.'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.isAdmin'
+    name: isAdmin
+    fullName: isAdmin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ли учетная запись должна иметь права администратора на вычислительном узле. По умолчанию для этого параметра используется значение false.
+    optional: true
+    syntax:
+      content: 'isAdmin?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.name'
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Имя пользователя учетной записи.
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Пароль учетной записи. Пароль необходим для узлов Windows (те, созданные с помощью «cloudServiceConfiguration», или с помощью virtualMachineConfiguration с помощью ссылки на образ Windows). Для вычислительных узлов Linux пароль при необходимости можно указать вместе со свойством sshPublicKey.'
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ComputeNodeUser.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Открытый ключ SSH, который может использоваться для удаленного входа на вычислительном узле. Открытый ключ должен быть совместим с кодировкой OpenSSH и должны быть закодированы base-64. Это свойство может быть указан только для узлов Linux. Если этот параметр указан для узла Windows, пакетная служба отклоняет запрос; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).'
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

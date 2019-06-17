@@ -1,0 +1,1555 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Pool'
+    name: Pool
+    fullName: Pool
+    children:
+      - '@azure/batch.Pool.add'
+      - '@azure/batch.Pool.add_2'
+      - '@azure/batch.Pool.add_1'
+      - '@azure/batch.Pool.deleteMethod'
+      - '@azure/batch.Pool.deleteMethod_2'
+      - '@azure/batch.Pool.deleteMethod_1'
+      - '@azure/batch.Pool.disableAutoScale'
+      - '@azure/batch.Pool.disableAutoScale_2'
+      - '@azure/batch.Pool.disableAutoScale_1'
+      - '@azure/batch.Pool.enableAutoScale'
+      - '@azure/batch.Pool.enableAutoScale_2'
+      - '@azure/batch.Pool.enableAutoScale_1'
+      - '@azure/batch.Pool.evaluateAutoScale'
+      - '@azure/batch.Pool.evaluateAutoScale_2'
+      - '@azure/batch.Pool.evaluateAutoScale_1'
+      - '@azure/batch.Pool.exists'
+      - '@azure/batch.Pool.exists_2'
+      - '@azure/batch.Pool.exists_1'
+      - '@azure/batch.Pool.get'
+      - '@azure/batch.Pool.get_2'
+      - '@azure/batch.Pool.get_1'
+      - '@azure/batch.Pool.getAllLifetimeStatistics'
+      - '@azure/batch.Pool.getAllLifetimeStatistics_2'
+      - '@azure/batch.Pool.getAllLifetimeStatistics_1'
+      - '@azure/batch.Pool.list'
+      - '@azure/batch.Pool.list_2'
+      - '@azure/batch.Pool.list_1'
+      - '@azure/batch.Pool.listNext'
+      - '@azure/batch.Pool.listNext_2'
+      - '@azure/batch.Pool.listNext_1'
+      - '@azure/batch.Pool.listUsageMetrics'
+      - '@azure/batch.Pool.listUsageMetrics_2'
+      - '@azure/batch.Pool.listUsageMetrics_1'
+      - '@azure/batch.Pool.listUsageMetricsNext'
+      - '@azure/batch.Pool.listUsageMetricsNext_2'
+      - '@azure/batch.Pool.listUsageMetricsNext_1'
+      - '@azure/batch.Pool.patch'
+      - '@azure/batch.Pool.patch_2'
+      - '@azure/batch.Pool.patch_1'
+      - '@azure/batch.Pool.constructor'
+      - '@azure/batch.Pool.removeNodes'
+      - '@azure/batch.Pool.removeNodes_2'
+      - '@azure/batch.Pool.removeNodes_1'
+      - '@azure/batch.Pool.resize'
+      - '@azure/batch.Pool.resize_2'
+      - '@azure/batch.Pool.resize_1'
+      - '@azure/batch.Pool.stopResize'
+      - '@azure/batch.Pool.stopResize_2'
+      - '@azure/batch.Pool.stopResize_1'
+      - '@azure/batch.Pool.updateProperties'
+      - '@azure/batch.Pool.updateProperties_2'
+      - '@azure/batch.Pool.updateProperties_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Класс, представляющий пул.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add'
+    name: 'add(PoolAddParameter, Models.PoolAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'При именовании пулы, избегайте включения конфиденциальные сведения, например имена пользователей и секретный проекта. Эти сведения могут отображаться в журналах телеметрии, доступ к инженерам службы поддержки Майкрософт.'
+    syntax:
+      content: 'function add(pool: PoolAddParameter, options?: Models.PoolAddOptionalParams)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: Пул должен быть добавлен.
+        - id: options
+          type:
+            - Models.PoolAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add_2'
+    name: 'add(PoolAddParameter, PoolAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(pool: PoolAddParameter, options: PoolAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: Пул должен быть добавлен.
+        - id: options
+          type:
+            - '@azure/batch.PoolAddOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.add_1'
+    name: 'add(PoolAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(pool: PoolAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: pool
+          type:
+            - '@azure/batch.PoolAddParameter'
+          description: Пул должен быть добавлен.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod'
+    name: 'deleteMethod(string, Models.PoolDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      При запросе удаления пула, выполняются следующие действия: состояние пула присваивается удаление; останавливаются все текущую операцию изменения размера пула; Пакетная служба запускает изменение размера пула до нуля узлов; Все задачи, выполняемые на существующие узлы завершаются и повторно поставлено в очередь (как если бы был запрошен операции изменения размера пула с параметром повторной постановки в очередь по умолчанию); Наконец пула удаляется из системы. Так как выполнение задач помещались в очередь, то пользователь может перезапустить эти задачи, обновив свою работу для другого пула. Задачи можно выполнять в новом пуле.
+      Если требуется переопределить поведение по повторной постановки в очередь, следует вызывать изменения размера пула явным образом, чтобы уменьшить пул для нулевой размер перед удалением пула. Если вызвать обновления, исправление или удаление API в пул в состоянии удаления, он завершится ошибкой с кодом состояния HTTP 409 с кодом ошибки PoolBeingDeleted.
+    syntax:
+      content: 'function deleteMethod(poolId: string, options?: Models.PoolDeleteMethodOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для удаления.
+        - id: options
+          type:
+            - Models.PoolDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod_2'
+    name: 'deleteMethod(string, PoolDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(poolId: string, options: PoolDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для удаления.
+        - id: options
+          type:
+            - '@azure/batch.PoolDeleteMethodOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для удаления.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale'
+    name: 'disableAutoScale(string, Models.PoolDisableAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, options?: Models.PoolDisableAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, в котором для отключения автоматического масштабирования.'
+        - id: options
+          type:
+            - Models.PoolDisableAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale_2'
+    name: 'disableAutoScale(string, PoolDisableAutoScaleOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, options: PoolDisableAutoScaleOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, в котором для отключения автоматического масштабирования.'
+        - id: options
+          type:
+            - '@azure/batch.PoolDisableAutoScaleOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.disableAutoScale_1'
+    name: 'disableAutoScale(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function disableAutoScale(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, в котором для отключения автоматического масштабирования.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolDisableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, Models.PoolEnableAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Невозможно включить автоматическое масштабирование в пуле, если операция изменения размера выполняется в пуле.
+      Если автоматическое масштабирование пула сейчас отключена, необходимо указать допустимую формулу автомасштабирования, как часть запроса. Если автоматическое масштабирование пула уже включено, можно указать в поле новую формулу автомасштабирования и/или новый интервал оценки. Не удается вызвать этот API для одного пула более одного раза каждые 30 секунд.
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, options?: Models.PoolEnableAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, для которого необходимо включить автоматическое масштабирование.'
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - Models.PoolEnableAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale_2'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, PoolEnableAutoScaleOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, options: PoolEnableAutoScaleOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, для которого необходимо включить автоматическое масштабирование.'
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - '@azure/batch.PoolEnableAutoScaleOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.enableAutoScale_1'
+    name: 'enableAutoScale(string, PoolEnableAutoScaleParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableAutoScale(poolId: string, poolEnableAutoScaleParameter: PoolEnableAutoScaleParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, для которого необходимо включить автоматическое масштабирование.'
+        - id: poolEnableAutoScaleParameter
+          type:
+            - '@azure/batch.PoolEnableAutoScaleParameter'
+          description: Параметры для запроса.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolEnableAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale'
+    name: 'evaluateAutoScale(string, string, Models.PoolEvaluateAutoScaleOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Этот API используется главным образом для того, для проверки формулы автоматического масштабирования, так как он просто возвращает результат без применения формулы в пул. Пул должен иметь включить, чтобы вычислить формулу автомасштабирования.'
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, options?: Models.PoolEvaluateAutoScaleOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, для которого необходимо вычислить формулу автоматического масштабирования.'
+        - id: autoScaleFormula
+          type:
+            - string
+          description: 'Формула для требуемое число вычислительных узлов в пуле. Формула проверяется и вычисляется его результаты, но он не применяется к пулу. Чтобы применить формулу к пулу, «включить автоматическое масштабирование в пуле». Дополнительные сведения об указании этой формулы см. Автоматическое масштабирование вычислительных узлов в пуле пакетной службы Azure (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).'
+        - id: options
+          type:
+            - Models.PoolEvaluateAutoScaleOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale_2'
+    name: 'evaluateAutoScale(string, string, PoolEvaluateAutoScaleOptionalParams, ServiceCallback<AutoScaleRun>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, options: PoolEvaluateAutoScaleOptionalParams, callback: ServiceCallback<AutoScaleRun>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, для которого необходимо вычислить формулу автоматического масштабирования.'
+        - id: autoScaleFormula
+          type:
+            - string
+          description: 'Формула для требуемое число вычислительных узлов в пуле. Формула проверяется и вычисляется его результаты, но он не применяется к пулу. Чтобы применить формулу к пулу, «включить автоматическое масштабирование в пуле». Дополнительные сведения об указании этой формулы см. Автоматическое масштабирование вычислительных узлов в пуле пакетной службы Azure (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).'
+        - id: options
+          type:
+            - '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.AutoScaleRun>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.evaluateAutoScale_1'
+    name: 'evaluateAutoScale(string, string, ServiceCallback<AutoScaleRun>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function evaluateAutoScale(poolId: string, autoScaleFormula: string, callback: ServiceCallback<AutoScaleRun>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, для которого необходимо вычислить формулу автоматического масштабирования.'
+        - id: autoScaleFormula
+          type:
+            - string
+          description: 'Формула для требуемое число вычислительных узлов в пуле. Формула проверяется и вычисляется его результаты, но он не применяется к пулу. Чтобы применить формулу к пулу, «включить автоматическое масштабирование в пуле». Дополнительные сведения об указании этой формулы см. Автоматическое масштабирование вычислительных узлов в пуле пакетной службы Azure (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.AutoScaleRun>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolEvaluateAutoScaleResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists'
+    name: 'exists(string, Models.PoolExistsOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Получает основные свойства пула.
+    syntax:
+      content: 'function exists(poolId: string, options?: Models.PoolExistsOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для получения.
+        - id: options
+          type:
+            - Models.PoolExistsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists_2'
+    name: 'exists(string, PoolExistsOptionalParams, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(poolId: string, options: PoolExistsOptionalParams, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для получения.
+        - id: options
+          type:
+            - '@azure/batch.PoolExistsOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.exists_1'
+    name: 'exists(string, ServiceCallback<boolean>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function exists(poolId: string, callback: ServiceCallback<boolean>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для получения.
+        - id: callback
+          type:
+            - ServiceCallback<boolean>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolExistsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get'
+    name: 'get(string, Models.PoolGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Получает сведения об указанном пуле.
+    syntax:
+      content: 'function get(poolId: string, options?: Models.PoolGetOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для получения.
+        - id: options
+          type:
+            - Models.PoolGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get_2'
+    name: 'get(string, PoolGetOptionalParams, ServiceCallback<CloudPool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, options: PoolGetOptionalParams, callback: ServiceCallback<CloudPool>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для получения.
+        - id: options
+          type:
+            - '@azure/batch.PoolGetOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPool>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.get_1'
+    name: 'get(string, ServiceCallback<CloudPool>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(poolId: string, callback: ServiceCallback<CloudPool>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для получения.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPool>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics'
+    name: getAllLifetimeStatistics(Models.PoolGetAllLifetimeStatisticsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Статистики во всех пулах, которые когда-либо существовали в учетной записи, от создания учетной записи до последнего времени обновления статистики. Статистические данные не могут быть немедленно доступны. Пакетная служба выполняет периодические сводный статистики. Типичный задержки составляет около 30 минут.'
+    syntax:
+      content: 'function getAllLifetimeStatistics(options?: Models.PoolGetAllLifetimeStatisticsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolGetAllLifetimeStatisticsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics_2'
+    name: 'getAllLifetimeStatistics(PoolGetAllLifetimeStatisticsOptionalParams, ServiceCallback<PoolStatistics>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(options: PoolGetAllLifetimeStatisticsOptionalParams, callback: ServiceCallback<PoolStatistics>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolStatistics>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.getAllLifetimeStatistics_1'
+    name: getAllLifetimeStatistics(ServiceCallback<PoolStatistics>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getAllLifetimeStatistics(callback: ServiceCallback<PoolStatistics>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolStatistics>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolGetAllLifetimeStatisticsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list'
+    name: list(Models.PoolListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options?: Models.PoolListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list_2'
+    name: 'list(PoolListOptionalParams, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: PoolListOptionalParams, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolListOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.list_1'
+    name: list(ServiceCallback<CloudPoolListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext'
+    name: 'listNext(string, Models.PoolListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.PoolListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - Models.PoolListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext_2'
+    name: 'listNext(string, PoolListNextOptionalParams, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: PoolListNextOptionalParams, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - '@azure/batch.PoolListNextOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listNext_1'
+    name: 'listNext(string, ServiceCallback<CloudPoolListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CloudPoolListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CloudPoolListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics'
+    name: listUsageMetrics(Models.PoolListUsageMetricsOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Если вы не укажете предложение $filter, включая poolId, ответ содержит все пулы, которые существовали в учетной записи в диапазоне времени интервалов возвращаемый статистической обработки. Если не указано предложение $filter, включая startTime и endTime фильтры по умолчанию это время начала и окончания последнего интервала статистической обработки, которые в настоящее время недоступно; то есть возвращается только последнего интервала статистической обработки.'
+    syntax:
+      content: 'function listUsageMetrics(options?: Models.PoolListUsageMetricsOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.PoolListUsageMetricsOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics_2'
+    name: 'listUsageMetrics(PoolListUsageMetricsOptionalParams, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetrics(options: PoolListUsageMetricsOptionalParams, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.PoolListUsageMetricsOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetrics_1'
+    name: listUsageMetrics(ServiceCallback<PoolListUsageMetricsResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetrics(callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext'
+    name: 'listUsageMetricsNext(string, Models.PoolListUsageMetricsNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Если вы не укажете предложение $filter, включая poolId, ответ содержит все пулы, которые существовали в учетной записи в диапазоне времени интервалов возвращаемый статистической обработки. Если не указано предложение $filter, включая startTime и endTime фильтры по умолчанию это время начала и окончания последнего интервала статистической обработки, которые в настоящее время недоступно; то есть возвращается только последнего интервала статистической обработки.'
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, options?: Models.PoolListUsageMetricsNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - Models.PoolListUsageMetricsNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext_2'
+    name: 'listUsageMetricsNext(string, PoolListUsageMetricsNextOptionalParams, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, options: PoolListUsageMetricsNextOptionalParams, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.listUsageMetricsNext_1'
+    name: 'listUsageMetricsNext(string, ServiceCallback<PoolListUsageMetricsResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listUsageMetricsNext(nextPageLink: string, callback: ServiceCallback<PoolListUsageMetricsResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolListUsageMetricsResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch'
+    name: 'patch(string, PoolPatchParameter, Models.PoolPatchOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Этот параметр заменяет только свойства пула, указанное в запросе. Например если пул имеет связанную с ним задачу и запрос не содержит элемент задачи запуска, пул сохраняет существующие задачи запуска.'
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, options?: Models.PoolPatchOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула должен быть обновлен.
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - Models.PoolPatchOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch_2'
+    name: 'patch(string, PoolPatchParameter, PoolPatchOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, options: PoolPatchOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула должен быть обновлен.
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - '@azure/batch.PoolPatchOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.patch_1'
+    name: 'patch(string, PoolPatchParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function patch(poolId: string, poolPatchParameter: PoolPatchParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула должен быть обновлен.
+        - id: poolPatchParameter
+          type:
+            - '@azure/batch.PoolPatchParameter'
+          description: Параметры для запроса.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolPatchResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.constructor'
+    name: Pool(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Создайте пул.
+    syntax:
+      content: 'new Pool(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            Ссылка на клиента службы.
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes'
+    name: 'removeNodes(string, NodeRemoveParameter, Models.PoolRemoveNodesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Эту операцию можно запустить только в том случае, когда устойчивое состояние выделения пула. При выполнении этой операции изменения состояния выделения из стабильного для изменения размера.'
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, options?: Models.PoolRemoveNodesOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, из которого требуется удалить узлы.'
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - Models.PoolRemoveNodesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes_2'
+    name: 'removeNodes(string, NodeRemoveParameter, PoolRemoveNodesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, options: PoolRemoveNodesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, из которого требуется удалить узлы.'
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - '@azure/batch.PoolRemoveNodesOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.removeNodes_1'
+    name: 'removeNodes(string, NodeRemoveParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeNodes(poolId: string, nodeRemoveParameter: NodeRemoveParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, из которого требуется удалить узлы.'
+        - id: nodeRemoveParameter
+          type:
+            - '@azure/batch.NodeRemoveParameter'
+          description: Параметры для запроса.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolRemoveNodesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize'
+    name: 'resize(string, PoolResizeParameter, Models.PoolResizeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Можно только изменить размер пула при его состояние выделения постоянной. Если уже изменения размера пула, запрос завершается ошибкой с кодом состояния 409. При изменении размера пула, изменения состояния выделения пула из стабильного для изменения размера. Нельзя изменить размер пулов, которые настроены для автоматического масштабирования. Если вы попытаетесь сделать это, пакетная служба возвращает ошибку 409. При изменении размера пула вниз, пакетная служба выбирает узлы, которые следует удалить. Для удаления конкретных узлов, используйте узлы пула remove API.'
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, options?: Models.PoolResizeOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для изменения размера.
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - Models.PoolResizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize_2'
+    name: 'resize(string, PoolResizeParameter, PoolResizeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, options: PoolResizeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для изменения размера.
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - '@azure/batch.PoolResizeOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.resize_1'
+    name: 'resize(string, PoolResizeParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function resize(poolId: string, poolResizeParameter: PoolResizeParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула для изменения размера.
+        - id: poolResizeParameter
+          type:
+            - '@azure/batch.PoolResizeParameter'
+          description: Параметры для запроса.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize'
+    name: 'stopResize(string, Models.PoolStopResizeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Не восстанавливается в предыдущее состояние перед операцией изменения размера пула: он прекращает только дальнейшие изменения, внесенные и пулом текущего состояния. После остановки, пула стабилизируется на количество узлов, которой он находился при выполненной операции stop. Во время остановки операции состояние выделения пула изменяет сначала остановки, а затем в постоянной. Операция изменения размера не обязательно должны быть запрос явного изменения размера пула; Этот API может также использоваться для остановки начального размера пула при его создании.'
+    syntax:
+      content: 'function stopResize(poolId: string, options?: Models.PoolStopResizeOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, изменение размера, необходимо остановить.'
+        - id: options
+          type:
+            - Models.PoolStopResizeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize_2'
+    name: 'stopResize(string, PoolStopResizeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(poolId: string, options: PoolStopResizeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, изменение размера, необходимо остановить.'
+        - id: options
+          type:
+            - '@azure/batch.PoolStopResizeOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.stopResize_1'
+    name: 'stopResize(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function stopResize(poolId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: 'Идентификатор пула, изменение размера, необходимо остановить.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolStopResizeResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, Models.PoolUpdatePropertiesOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Это полностью заменяет все обновляемые свойства пула. Например если пул имеет связанную с ним задачу и если задача запуска не указывается в запросе, затем пакетная служба удалит существующую задачу запуска.'
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, options?: Models.PoolUpdatePropertiesOptionalParams)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула должен быть обновлен.
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - Models.PoolUpdatePropertiesOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties_2'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, PoolUpdatePropertiesOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, options: PoolUpdatePropertiesOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула должен быть обновлен.
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: Параметры для запроса.
+        - id: options
+          type:
+            - '@azure/batch.PoolUpdatePropertiesOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.Pool.updateProperties_1'
+    name: 'updateProperties(string, PoolUpdatePropertiesParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateProperties(poolId: string, poolUpdatePropertiesParameter: PoolUpdatePropertiesParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: poolId
+          type:
+            - string
+          description: Идентификатор пула должен быть обновлен.
+        - id: poolUpdatePropertiesParameter
+          type:
+            - '@azure/batch.PoolUpdatePropertiesParameter'
+          description: Параметры для запроса.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.PoolUpdatePropertiesResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.PoolAddParameter'
+    name: PoolAddParameter
+    spec.typeScript:
+      - name: PoolAddParameter
+        fullName: PoolAddParameter
+        uid: '@azure/batch.PoolAddParameter'
+  - uid: '@azure/batch.PoolAddOptionalParams'
+    name: PoolAddOptionalParams
+    spec.typeScript:
+      - name: PoolAddOptionalParams
+        fullName: PoolAddOptionalParams
+        uid: '@azure/batch.PoolAddOptionalParams'
+  - uid: '@azure/batch.PoolDeleteMethodOptionalParams'
+    name: PoolDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: PoolDeleteMethodOptionalParams
+        fullName: PoolDeleteMethodOptionalParams
+        uid: '@azure/batch.PoolDeleteMethodOptionalParams'
+  - uid: '@azure/batch.PoolDisableAutoScaleOptionalParams'
+    name: PoolDisableAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolDisableAutoScaleOptionalParams
+        fullName: PoolDisableAutoScaleOptionalParams
+        uid: '@azure/batch.PoolDisableAutoScaleOptionalParams'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter'
+    name: PoolEnableAutoScaleParameter
+    spec.typeScript:
+      - name: PoolEnableAutoScaleParameter
+        fullName: PoolEnableAutoScaleParameter
+        uid: '@azure/batch.PoolEnableAutoScaleParameter'
+  - uid: '@azure/batch.PoolEnableAutoScaleOptionalParams'
+    name: PoolEnableAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolEnableAutoScaleOptionalParams
+        fullName: PoolEnableAutoScaleOptionalParams
+        uid: '@azure/batch.PoolEnableAutoScaleOptionalParams'
+  - uid: ServiceCallback<@azure/batch.AutoScaleRun>
+    name: AutoScaleRun>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AutoScaleRun
+        fullName: AutoScaleRun
+        uid: '@azure/batch.AutoScaleRun'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+    name: PoolEvaluateAutoScaleOptionalParams
+    spec.typeScript:
+      - name: PoolEvaluateAutoScaleOptionalParams
+        fullName: PoolEvaluateAutoScaleOptionalParams
+        uid: '@azure/batch.PoolEvaluateAutoScaleOptionalParams'
+  - uid: '@azure/batch.PoolExistsOptionalParams'
+    name: PoolExistsOptionalParams
+    spec.typeScript:
+      - name: PoolExistsOptionalParams
+        fullName: PoolExistsOptionalParams
+        uid: '@azure/batch.PoolExistsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudPool>
+    name: CloudPool>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudPool
+        fullName: CloudPool
+        uid: '@azure/batch.CloudPool'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolGetOptionalParams'
+    name: PoolGetOptionalParams
+    spec.typeScript:
+      - name: PoolGetOptionalParams
+        fullName: PoolGetOptionalParams
+        uid: '@azure/batch.PoolGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.PoolStatistics>
+    name: PoolStatistics>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PoolStatistics
+        fullName: PoolStatistics
+        uid: '@azure/batch.PoolStatistics'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+    name: PoolGetAllLifetimeStatisticsOptionalParams
+    spec.typeScript:
+      - name: PoolGetAllLifetimeStatisticsOptionalParams
+        fullName: PoolGetAllLifetimeStatisticsOptionalParams
+        uid: '@azure/batch.PoolGetAllLifetimeStatisticsOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CloudPoolListResult>
+    name: CloudPoolListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CloudPoolListResult
+        fullName: CloudPoolListResult
+        uid: '@azure/batch.CloudPoolListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolListOptionalParams'
+    name: PoolListOptionalParams
+    spec.typeScript:
+      - name: PoolListOptionalParams
+        fullName: PoolListOptionalParams
+        uid: '@azure/batch.PoolListOptionalParams'
+  - uid: '@azure/batch.PoolListNextOptionalParams'
+    name: PoolListNextOptionalParams
+    spec.typeScript:
+      - name: PoolListNextOptionalParams
+        fullName: PoolListNextOptionalParams
+        uid: '@azure/batch.PoolListNextOptionalParams'
+  - uid: ServiceCallback<@azure/batch.PoolListUsageMetricsResult>
+    name: PoolListUsageMetricsResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: PoolListUsageMetricsResult
+        fullName: PoolListUsageMetricsResult
+        uid: '@azure/batch.PoolListUsageMetricsResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.PoolListUsageMetricsOptionalParams'
+    name: PoolListUsageMetricsOptionalParams
+    spec.typeScript:
+      - name: PoolListUsageMetricsOptionalParams
+        fullName: PoolListUsageMetricsOptionalParams
+        uid: '@azure/batch.PoolListUsageMetricsOptionalParams'
+  - uid: '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+    name: PoolListUsageMetricsNextOptionalParams
+    spec.typeScript:
+      - name: PoolListUsageMetricsNextOptionalParams
+        fullName: PoolListUsageMetricsNextOptionalParams
+        uid: '@azure/batch.PoolListUsageMetricsNextOptionalParams'
+  - uid: '@azure/batch.PoolPatchParameter'
+    name: PoolPatchParameter
+    spec.typeScript:
+      - name: PoolPatchParameter
+        fullName: PoolPatchParameter
+        uid: '@azure/batch.PoolPatchParameter'
+  - uid: '@azure/batch.PoolPatchOptionalParams'
+    name: PoolPatchOptionalParams
+    spec.typeScript:
+      - name: PoolPatchOptionalParams
+        fullName: PoolPatchOptionalParams
+        uid: '@azure/batch.PoolPatchOptionalParams'
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    spec.typeScript:
+      - name: NodeRemoveParameter
+        fullName: NodeRemoveParameter
+        uid: '@azure/batch.NodeRemoveParameter'
+  - uid: '@azure/batch.PoolRemoveNodesOptionalParams'
+    name: PoolRemoveNodesOptionalParams
+    spec.typeScript:
+      - name: PoolRemoveNodesOptionalParams
+        fullName: PoolRemoveNodesOptionalParams
+        uid: '@azure/batch.PoolRemoveNodesOptionalParams'
+  - uid: '@azure/batch.PoolResizeParameter'
+    name: PoolResizeParameter
+    spec.typeScript:
+      - name: PoolResizeParameter
+        fullName: PoolResizeParameter
+        uid: '@azure/batch.PoolResizeParameter'
+  - uid: '@azure/batch.PoolResizeOptionalParams'
+    name: PoolResizeOptionalParams
+    spec.typeScript:
+      - name: PoolResizeOptionalParams
+        fullName: PoolResizeOptionalParams
+        uid: '@azure/batch.PoolResizeOptionalParams'
+  - uid: '@azure/batch.PoolStopResizeOptionalParams'
+    name: PoolStopResizeOptionalParams
+    spec.typeScript:
+      - name: PoolStopResizeOptionalParams
+        fullName: PoolStopResizeOptionalParams
+        uid: '@azure/batch.PoolStopResizeOptionalParams'
+  - uid: '@azure/batch.PoolUpdatePropertiesParameter'
+    name: PoolUpdatePropertiesParameter
+    spec.typeScript:
+      - name: PoolUpdatePropertiesParameter
+        fullName: PoolUpdatePropertiesParameter
+        uid: '@azure/batch.PoolUpdatePropertiesParameter'
+  - uid: '@azure/batch.PoolUpdatePropertiesOptionalParams'
+    name: PoolUpdatePropertiesOptionalParams
+    spec.typeScript:
+      - name: PoolUpdatePropertiesOptionalParams
+        fullName: PoolUpdatePropertiesOptionalParams
+        uid: '@azure/batch.PoolUpdatePropertiesOptionalParams'
