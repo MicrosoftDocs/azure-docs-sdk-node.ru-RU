@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeUpdateUserParameter'
+    name: NodeUpdateUserParameter
+    fullName: NodeUpdateUserParameter
+    children:
+      - '@azure/batch.NodeUpdateUserParameter.expiryTime'
+      - '@azure/batch.NodeUpdateUserParameter.password'
+      - '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий NodeUpdateUserParameter.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.expiryTime'
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время, по которому срока действия учетной записи. Если не указано, значение по умолчанию — 1 день от текущего времени. Для вычислительных узлов Linux expiryTime имеет точность до в день.'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.password'
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Пароль учетной записи. Пароль необходим для узлов Windows (те, созданные с помощью «cloudServiceConfiguration», или с помощью virtualMachineConfiguration с помощью ссылки на образ Windows). Для вычислительных узлов Linux пароль при необходимости можно указать вместе со свойством sshPublicKey. Если не указано, удаляется любой существующий пароль.'
+    optional: true
+    syntax:
+      content: 'password?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeUpdateUserParameter.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Открытый ключ SSH, который может использоваться для удаленного входа на вычислительном узле. Открытый ключ должен быть совместим с кодировкой OpenSSH и должны быть закодированы base-64. Это свойство может быть указан только для узлов Linux. Если этот параметр указан для узла Windows, пакетная служба отклоняет запрос; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос). Если не указано, удаляется любой существующий открытый ключ SSH.'
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
