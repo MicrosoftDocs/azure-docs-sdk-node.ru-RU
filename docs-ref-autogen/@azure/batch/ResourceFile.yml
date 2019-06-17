@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ResourceFile'
+    name: ResourceFile
+    fullName: ResourceFile
+    children:
+      - '@azure/batch.ResourceFile.autoStorageContainerName'
+      - '@azure/batch.ResourceFile.blobPrefix'
+      - '@azure/batch.ResourceFile.fileMode'
+      - '@azure/batch.ResourceFile.filePath'
+      - '@azure/batch.ResourceFile.httpUrl'
+      - '@azure/batch.ResourceFile.storageContainerUrl'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="cff96-101">Интерфейс, представляющий ResourceFile.</span><span class="sxs-lookup"><span data-stu-id="cff96-101">An interface representing ResourceFile.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.autoStorageContainerName'
+    name: autoStorageContainerName
+    fullName: autoStorageContainerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cff96-102">Имя контейнера хранилища в учетной записи хранения автоматически.</span><span class="sxs-lookup"><span data-stu-id="cff96-102">The storage container name in the auto storage account.</span></span> <span data-ttu-id="cff96-103">Свойства autoStorageContainerName, storageContainerUrl и httpUrl являются взаимоисключающими, и должен быть задан один из них.</span><span class="sxs-lookup"><span data-stu-id="cff96-103">The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoStorageContainerName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.blobPrefix'
+    name: blobPrefix
+    fullName: blobPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cff96-104">Префикс BLOB-объектов для использования при загрузке больших двоичных объектов из контейнера хранилища Azure.</span><span class="sxs-lookup"><span data-stu-id="cff96-104">The blob prefix to use when downloading blobs from an Azure Storage container.</span></span> <span data-ttu-id="cff96-105">Будут загружены только большие двоичные объекты, имена которых начинаются с указанного префикса.</span><span class="sxs-lookup"><span data-stu-id="cff96-105">Only the blobs whose names begin with the specified prefix will be downloaded.</span></span> <span data-ttu-id="cff96-106">Свойство допустимо только в том случае, если используется autoStorageContainerName или storageContainerUrl.</span><span class="sxs-lookup"><span data-stu-id="cff96-106">The property is valid only when autoStorageContainerName or storageContainerUrl is used.</span></span> <span data-ttu-id="cff96-107">Этот префикс можно частичное имя файла или подкаталога.</span><span class="sxs-lookup"><span data-stu-id="cff96-107">This prefix can be a partial filename or a subdirectory.</span></span> <span data-ttu-id="cff96-108">Если префикс не указан, будут загружены все файлы в контейнере.</span><span class="sxs-lookup"><span data-stu-id="cff96-108">If a prefix is not specified, all the files in the container will be downloaded.</span></span>'
+    optional: true
+    syntax:
+      content: 'blobPrefix?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.fileMode'
+    name: fileMode
+    fullName: fileMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cff96-109">Атрибут режима разрешений файла в восьмеричном формате.</span><span class="sxs-lookup"><span data-stu-id="cff96-109">The file permission mode attribute in octal format.</span></span> <span data-ttu-id="cff96-110">Это свойство применяется только к файлам, загружается вычислительных узлов Linux.</span><span class="sxs-lookup"><span data-stu-id="cff96-110">This property applies only to files being downloaded to Linux compute nodes.</span></span> <span data-ttu-id="cff96-111">Она будет игнорироваться, если он указан для resourceFile, который загружается на узел Windows.</span><span class="sxs-lookup"><span data-stu-id="cff96-111">It will be ignored if it is specified for a resourceFile which will be downloaded to a Windows node.</span></span> <span data-ttu-id="cff96-112">Если это свойство не указано для узла Linux, значение по умолчанию 0770 применяется к файлу.</span><span class="sxs-lookup"><span data-stu-id="cff96-112">If this property is not specified for a Linux node, then a default value of 0770 is applied to the file.</span></span>'
+    optional: true
+    syntax:
+      content: 'fileMode?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.filePath'
+    name: filePath
+    fullName: filePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cff96-113">Расположение на вычислительном узле, к которой следует загружать файлы, по отношению к рабочему каталогу задачи.</span><span class="sxs-lookup"><span data-stu-id="cff96-113">The location on the compute node to which to download the file(s), relative to the task''s working directory.</span></span> <span data-ttu-id="cff96-114">Если свойство httpUrl указано, путь к файлу является обязательным и описание пути, который будет загружен, включая имя файла.</span><span class="sxs-lookup"><span data-stu-id="cff96-114">If the httpUrl property is specified, the filePath is required and describes the path which the file will be downloaded to, including the filename.</span></span> <span data-ttu-id="cff96-115">Если свойство autoStorageContainerName или storageContainerUrl указано, filePath является необязательным и — это каталог для загрузки файлов.</span><span class="sxs-lookup"><span data-stu-id="cff96-115">Otherwise, if the autoStorageContainerName or storageContainerUrl property is specified, filePath is optional and is the directory to download the files to.</span></span> <span data-ttu-id="cff96-116">В случае, когда filePath используется как каталог произвольную структуру каталогов, уже связан с входными данными будут сохранены в полном объеме и добавлены в каталог, указанный путь к файлу.</span><span class="sxs-lookup"><span data-stu-id="cff96-116">In the case where filePath is used as a directory, any directory structure already associated with the input data will be retained in full and appended to the specified filePath directory.</span></span> <span data-ttu-id="cff96-117">Указанный относительный путь не может разорвать рабочему каталогу задачи (например, с помощью "..").</span><span class="sxs-lookup"><span data-stu-id="cff96-117">The specified relative path cannot break out of the task''s working directory (for example by using ''..'').</span></span>'
+    optional: true
+    syntax:
+      content: 'filePath?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.httpUrl'
+    name: httpUrl
+    fullName: httpUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cff96-118">URL-адрес для скачивания файла.</span><span class="sxs-lookup"><span data-stu-id="cff96-118">The URL of the file to download.</span></span> <span data-ttu-id="cff96-119">Свойства autoStorageContainerName, storageContainerUrl и httpUrl являются взаимоисключающими, и должен быть задан один из них.</span><span class="sxs-lookup"><span data-stu-id="cff96-119">The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.</span></span> <span data-ttu-id="cff96-120">Если URL-адрес указывает на хранилище BLOB-объектов, он должен быть для чтения с помощью анонимного доступа; то есть пакетная служба не видит любые учетные данные при загрузке большого двоичного объекта.</span><span class="sxs-lookup"><span data-stu-id="cff96-120">If the URL points to Azure Blob Storage, it must be readable using anonymous access; that is, the Batch service does not present any credentials when downloading the blob.</span></span> <span data-ttu-id="cff96-121">Существует два способа получить такой URL-адреса для большого двоичного объекта в службе хранилища Azure: Включение (Подписанный) предоставление разрешений на чтение большого двоичного объекта, или задание ACL для большого двоичного объекта или контейнера, чтобы разрешить общий доступ.</span><span class="sxs-lookup"><span data-stu-id="cff96-121">There are two ways to get such a URL for a blob in Azure storage: include a Shared Access Signature (SAS) granting read permissions on the blob, or set the ACL for the blob or its container to allow public access.</span></span>'
+    optional: true
+    syntax:
+      content: 'httpUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.ResourceFile.storageContainerUrl'
+    name: storageContainerUrl
+    fullName: storageContainerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cff96-122">URL-адрес в контейнере больших двоичных объектов в хранилище BLOB-объектов.</span><span class="sxs-lookup"><span data-stu-id="cff96-122">The URL of the blob container within Azure Blob Storage.</span></span> <span data-ttu-id="cff96-123">Свойства autoStorageContainerName, storageContainerUrl и httpUrl являются взаимоисключающими, и должен быть задан один из них.</span><span class="sxs-lookup"><span data-stu-id="cff96-123">The autoStorageContainerName, storageContainerUrl and httpUrl properties are mutually exclusive and one of them must be specified.</span></span> <span data-ttu-id="cff96-124">Этот URL-адрес должен быть доступным для чтения и listable при помощи анонимного доступа; то есть пакетная служба не видит любые учетные данные при загрузке больших двоичных объектов из контейнера.</span><span class="sxs-lookup"><span data-stu-id="cff96-124">This URL must be readable and listable using anonymous access; that is, the Batch service does not present any credentials when downloading blobs from the container.</span></span> <span data-ttu-id="cff96-125">Существует два способа для получения такой URL-адрес для контейнера в службе хранилища Azure: Включение (Подписанный) предоставление разрешений на чтение и создание списков в контейнере, или задание списка управления Доступом для контейнера, чтобы разрешить общий доступ.</span><span class="sxs-lookup"><span data-stu-id="cff96-125">There are two ways to get such a URL for a container in Azure storage: include a Shared Access Signature (SAS) granting read and list permissions on the container, or set the ACL for the container to allow public access.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerUrl?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'

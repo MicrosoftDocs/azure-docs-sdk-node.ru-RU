@@ -4,18 +4,36 @@ items:
     name: ServiceAssociationLink
     fullName: ServiceAssociationLink
     children:
+      - '@azure/arm-network.ServiceAssociationLink.allowDelete'
       - '@azure/arm-network.ServiceAssociationLink.etag'
       - '@azure/arm-network.ServiceAssociationLink.id'
       - '@azure/arm-network.ServiceAssociationLink.link'
       - '@azure/arm-network.ServiceAssociationLink.linkedResourceType'
+      - '@azure/arm-network.ServiceAssociationLink.locations'
       - '@azure/arm-network.ServiceAssociationLink.name'
       - '@azure/arm-network.ServiceAssociationLink.provisioningState'
+      - '@azure/arm-network.ServiceAssociationLink.type'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="3e658-101">ServiceAssociationLink ресурс.</span><span class="sxs-lookup"><span data-stu-id="3e658-101">ServiceAssociationLink resource.</span></span>
+    summary: <span data-ttu-id="84a06-101">ServiceAssociationLink ресурс.</span><span class="sxs-lookup"><span data-stu-id="84a06-101">ServiceAssociationLink resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.allowDelete'
+    name: allowDelete
+    fullName: allowDelete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="84a06-102">Значение true, если ресурс можно удалить.</span><span class="sxs-lookup"><span data-stu-id="84a06-102">If true, the resource can be deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'allowDelete?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.etag'
     name: etag
@@ -25,8 +43,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="3e658-102">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="3e658-102">A unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="3e658-103">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="3e658-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="84a06-103">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="84a06-103">A unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="84a06-104">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="84a06-104">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -41,7 +59,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="3e658-104">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="3e658-104">Resource ID.</span></span>
+    summary: <span data-ttu-id="84a06-105">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="84a06-105">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
@@ -56,7 +74,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="3e658-105">Ссылка на внешний ресурс.</span><span class="sxs-lookup"><span data-stu-id="3e658-105">Link to the external resource.</span></span>
+    summary: <span data-ttu-id="84a06-106">Ссылка на внешний ресурс.</span><span class="sxs-lookup"><span data-stu-id="84a06-106">Link to the external resource.</span></span>
     optional: true
     syntax:
       content: 'link?: undefined | string'
@@ -71,13 +89,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="3e658-106">Тип ресурса связанного ресурса.</span><span class="sxs-lookup"><span data-stu-id="3e658-106">Resource type of the linked resource.</span></span>
+    summary: <span data-ttu-id="84a06-107">Тип ресурса связанного ресурса.</span><span class="sxs-lookup"><span data-stu-id="84a06-107">Resource type of the linked resource.</span></span>
     optional: true
     syntax:
       content: 'linkedResourceType?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.locations'
+    name: locations
+    fullName: locations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="84a06-108">Список расположений.</span><span class="sxs-lookup"><span data-stu-id="84a06-108">A list of locations.</span></span>
+    optional: true
+    syntax:
+      content: 'locations?: string[]'
+      return:
+        type:
+          - 'string[]'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.ServiceAssociationLink.name'
     name: name
@@ -86,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="3e658-107">Имя ресурса, который является уникальным в пределах группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="3e658-107">Name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="3e658-108">Это имя может использоваться для доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="3e658-108">This name can be used to access the resource.</span></span>'
+    summary: '<span data-ttu-id="84a06-109">Имя ресурса, который является уникальным в пределах группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="84a06-109">Name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="84a06-110">Это имя может использоваться для доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="84a06-110">This name can be used to access the resource.</span></span>'
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -102,11 +135,26 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="3e658-109">Состояние подготовки ресурса ServiceAssociationLink.</span><span class="sxs-lookup"><span data-stu-id="3e658-109">Provisioning state of the ServiceAssociationLink resource.</span></span>
-      <span data-ttu-id="3e658-110">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="3e658-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="84a06-111">Состояние подготовки ресурса ServiceAssociationLink.</span><span class="sxs-lookup"><span data-stu-id="84a06-111">Provisioning state of the ServiceAssociationLink resource.</span></span>
+      <span data-ttu-id="84a06-112">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="84a06-112">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.ServiceAssociationLink.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="84a06-113">Тип ресурса.</span><span class="sxs-lookup"><span data-stu-id="84a06-113">Resource type.</span></span>
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
       return:
         type:
           - undefined | string
