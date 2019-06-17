@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    fullName: PoolInformation
+    children:
+      - '@azure/batch.PoolInformation.autoPoolSpecification'
+      - '@azure/batch.PoolInformation.poolId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий PoolInformation.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolInformation.autoPoolSpecification'
+    name: autoPoolSpecification
+    fullName: autoPoolSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Характеристики для временного «автоматический пул». Пакетная служба создаст этот автоматический пул при отправке задания. При сбое создание автоматического пула, пакетная служба переводит задание в завершенное состояние, и ошибка создания пула задается в свойство планирования ошибки задания.
+      Пакетная служба управляет временем существования (создании, так и, если не указан параметр keepAlive, удаление) автоматического пула. Любые действия пользователя, которые влияют на время существования автоматического пула, во время выполнения задания приведет к непредвиденному поведению. Необходимо указать идентификатор пула или спецификации автоматического пула, но не оба.
+    optional: true
+    syntax:
+      content: 'autoPoolSpecification?: AutoPoolSpecification'
+      return:
+        type:
+          - '@azure/batch.AutoPoolSpecification'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Идентификатор существующего пула. Все задачи задания выполняются на указанном пуле. Необходимо убедиться, что пул ссылается это свойство существует. Если пул не существует во время, пакетная служба пытается запланировать задание, задачи для задания не будет выполняться, пока вы не создадите пул с таким идентификатором. Обратите внимание, что пакетная служба не будет отклонять запрос задания; он просто не запустится задач пока не существует в пуле. Необходимо указать идентификатор пула или спецификации автоматического пула, но не оба.'
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AutoPoolSpecification'
+    name: AutoPoolSpecification
+    spec.typeScript:
+      - name: AutoPoolSpecification
+        fullName: AutoPoolSpecification
+        uid: '@azure/batch.AutoPoolSpecification'
