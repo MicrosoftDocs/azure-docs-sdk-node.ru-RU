@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - '@azure/batch.TaskConstraints.maxTaskRetryCount'
+      - '@azure/batch.TaskConstraints.maxWallClockTime'
+      - '@azure/batch.TaskConstraints.retentionTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий TaskConstraints.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxTaskRetryCount'
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Максимальное количество повторных попыток для задачи. Пакетная служба пытается выполнить задачу повторно, если ее код выхода имеет ненулевое значение. Обратите внимание на то, что это значение определяет количество повторных попыток для исполняемого файла, из-за ненулевой код завершения задачи. Пакетная служба попытается выполнить задачу один раз, а затем будет предпринимать повторные попытки вплоть до этого предела. Например, если максимальное число повторных попыток равно 3, пакет пытается задачу до 4 раз (одна начальная попытка и 3 повторных). Если максимальное число повторных попыток равно 0, пакетная служба не повторять попытку задачи после первой попытки. Если максимальное число повторных попыток равно -1, повторные попытки операций служб пакетного неограниченное.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.maxWallClockTime'
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Максимальное время, задача может выполняться, измеренное с при запуске задачи. Если задача не завершается в течение ограниченного времени, пакетная служба завершит его. Если этот параметр не указан, не ограничено время на время выполнения задачи.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.TaskConstraints.retentionTime'
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Минимальное время, чтобы сохранить каталог задач на вычислительном узле, где она выполнялась, с момента его завершения выполнения. По истечении этого времени пакетная служба может удалить каталог задач и все его содержимое. По умолчанию — 7 дней, т. е. каталогу задачи будут храниться в течение 7 дней, если задание удаляется или удалении вычислительных узлов.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
