@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CertificateReference'
+    name: CertificateReference
+    fullName: CertificateReference
+    children:
+      - '@azure/batch.CertificateReference.storeLocation'
+      - '@azure/batch.CertificateReference.storeName'
+      - '@azure/batch.CertificateReference.thumbprint'
+      - '@azure/batch.CertificateReference.thumbprintAlgorithm'
+      - '@azure/batch.CertificateReference.visibility'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий CertificateReference.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeLocation'
+    name: storeLocation
+    fullName: storeLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Расположение в хранилище сертификатов на вычислительном узле, в который необходимо установить сертификат. Значение по умолчанию — currentuser. Это свойство применимо только для групп, настроены узлы Windows (то есть, созданные с помощью cloudServiceConfiguration и с помощью virtualMachineConfiguration, с помощью Windows графические ссылку). Для вычислительных узлов Linux сертификаты, хранятся в каталог в рабочем каталоге задачи и среде, которую переменной AZ_BATCH_CERTIFICATES_DIR передается запрос для этого расположения. Для сертификатов с видимостью «remoteUser» каталог «сертификаты» создается в домашнем каталоге пользователя (например, /home/ {имя_пользователя} / certs) и сертификаты помещаются в этот каталог.
+      Возможные значения: «currentUser», «localMachine»
+    optional: true
+    syntax:
+      content: 'storeLocation?: CertificateStoreLocation'
+      return:
+        type:
+          - '@azure/batch.CertificateStoreLocation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.storeName'
+    name: storeName
+    fullName: storeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Имя хранилища сертификатов на вычислительном узле, в который необходимо установить сертификат.
+      Это свойство применимо только для групп, настроены узлы Windows (то есть, созданные с помощью cloudServiceConfiguration и с помощью virtualMachineConfiguration, с помощью Windows графические ссылку). Имена общих хранилища включают: My корневой, штат Калифорния, доверия, не разрешено, TrustedPeople, TrustedPublisher, AuthRoot, адресной книги, но любое имя пользовательского хранилища можно также использовать. Значение по умолчанию — Мои.
+    optional: true
+    syntax:
+      content: 'storeName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprint'
+    name: thumbprint
+    fullName: thumbprint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Отпечаток сертификата.
+    syntax:
+      content: 'thumbprint: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.thumbprintAlgorithm'
+    name: thumbprintAlgorithm
+    fullName: thumbprintAlgorithm
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Алгоритм, с которым связан отпечаток. Это должен быть sha1.'
+    syntax:
+      content: 'thumbprintAlgorithm: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateReference.visibility'
+    name: visibility
+    fullName: visibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Какие учетные записи на вычислительном узле должны иметь доступ к конфиденциальным данным сертификата. В этой коллекции можно указать более одного видимости. Значение по умолчанию — все учетные записи.
+    optional: true
+    syntax:
+      content: 'visibility?: CertificateVisibility[]'
+      return:
+        type:
+          - '@azure/batch.CertificateVisibility[]'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.CertificateStoreLocation'
+    name: CertificateStoreLocation
+    spec.typeScript:
+      - name: CertificateStoreLocation
+        fullName: CertificateStoreLocation
+        uid: '@azure/batch.CertificateStoreLocation'
+  - uid: '@azure/batch.CertificateVisibility[]'
+    name: 'CertificateVisibility[]'
+    spec.typeScript:
+      - name: CertificateVisibility
+        fullName: CertificateVisibility
+        uid: '@azure/batch.CertificateVisibility'
+      - name: '[]'
+        fullName: '[]'

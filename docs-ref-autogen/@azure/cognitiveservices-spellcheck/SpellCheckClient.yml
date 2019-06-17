@@ -1,0 +1,218 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient'
+    name: SpellCheckClient
+    fullName: SpellCheckClient
+    children:
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.credentials'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.endpoint'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.sendOperationRequest'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.sendRequest'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.constructor'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker_1'
+      - '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker_2'
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      name: '@azure/cognitiveservices-spellcheck.SpellCheckClientContext'
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.credentials'
+    name: credentials
+    fullName: credentials
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'credentials: ServiceClientCredentials'
+      return:
+        type:
+          - ServiceClientCredentials
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.endpoint'
+    name: endpoint
+    fullName: endpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'endpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.sendOperationRequest'
+    name: 'sendOperationRequest(OperationArguments, OperationSpec, ServiceCallback<any>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Отправьте запрос HTTP, который заполняется с помощью предоставленного OperationSpec.'
+    syntax:
+      content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
+      parameters:
+        - id: operationArguments
+          type:
+            - OperationArguments
+          description: 'Аргументы, которые будут заполнены шаблонного значения HTTP-запроса из.'
+        - id: operationSpec
+          type:
+            - OperationSpec
+          description: 'OperationSpec, используемые для заполнения httpRequest.'
+        - id: callback
+          type:
+            - ServiceCallback<any>
+          description: |
+            Обратный вызов, вызываемый после получения ответа.
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.sendRequest'
+    name: sendRequest(RequestPrepareOptions | WebResource)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Отправьте предоставленный httpRequest.
+    syntax:
+      content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
+      parameters:
+        - id: options
+          type:
+            - RequestPrepareOptions | WebResource
+          description: ''
+      return:
+        type:
+          - Promise<HttpOperationResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.constructor'
+    name: 'SpellCheckClient(ServiceClientCredentials, Models.SpellCheckClientOptions)'
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Инициализирует новый экземпляр класса SpellCheckClient.
+    syntax:
+      content: 'new SpellCheckClient(credentials: ServiceClientCredentials, options?: Models.SpellCheckClientOptions)'
+      parameters:
+        - id: credentials
+          type:
+            - ServiceClientCredentials
+          description: 'Учетные данные для подписки, которые однозначно идентифицируют подписку клиента.'
+        - id: options
+          type:
+            - Models.SpellCheckClientOptions
+          description: ''
+          optional: true
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker'
+    name: 'spellChecker(string, Models.SpellCheckClientSpellCheckerOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function spellChecker(text: string, options?: Models.SpellCheckClientSpellCheckerOptionalParams)'
+      parameters:
+        - id: text
+          type:
+            - string
+          description: |-
+            Текстовая строка для поиска ошибок правописания и грамматики. Общая длина текстовой строки, строки preContextText и postContextText строка не может превышать 10 000 символов.
+            Этот параметр можно указать в строке запроса GET, или в теле запроса POST. Из-за ограничения длины строки запроса операция обычно используется запрос POST, если вы проверяете только коротких строк.
+        - id: options
+          type:
+            - Models.SpellCheckClientSpellCheckerOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SpellCheckerResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker_1'
+    name: 'spellChecker(string, ServiceCallback<SpellCheck>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function spellChecker(text: string, callback: ServiceCallback<SpellCheck>)'
+      parameters:
+        - id: text
+          type:
+            - string
+          description: |-
+            Текстовая строка для поиска ошибок правописания и грамматики. Общая длина текстовой строки, строки preContextText и postContextText строка не может превышать 10 000 символов.
+            Этот параметр можно указать в строке запроса GET, или в теле запроса POST. Из-за ограничения длины строки запроса операция обычно используется запрос POST, если вы проверяете только коротких строк.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-spellcheck.SpellCheck>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SpellCheckerResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClient.spellChecker_2'
+    name: 'spellChecker(string, SpellCheckClientSpellCheckerOptionalParams, ServiceCallback<SpellCheck>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function spellChecker(text: string, options: SpellCheckClientSpellCheckerOptionalParams, callback: ServiceCallback<SpellCheck>)'
+      parameters:
+        - id: text
+          type:
+            - string
+          description: |-
+            Текстовая строка для поиска ошибок правописания и грамматики. Общая длина текстовой строки, строки preContextText и postContextText строка не может превышать 10 000 символов.
+            Этот параметр можно указать в строке запроса GET, или в теле запроса POST. Из-за ограничения длины строки запроса операция обычно используется запрос POST, если вы проверяете только коротких строк.
+        - id: options
+          type:
+            - '@azure/cognitiveservices-spellcheck.SpellCheckClientSpellCheckerOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-spellcheck.SpellCheck>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SpellCheckerResponse>
+    package: '@azure/cognitiveservices-spellcheck'
+references:
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClientContext'
+    name: SpellCheckClientContext
+    spec.typeScript:
+      - name: SpellCheckClientContext
+        fullName: SpellCheckClientContext
+        uid: '@azure/cognitiveservices-spellcheck.SpellCheckClientContext'
+  - uid: ServiceCallback<@azure/cognitiveservices-spellcheck.SpellCheck>
+    name: SpellCheck>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: SpellCheck
+        fullName: SpellCheck
+        uid: '@azure/cognitiveservices-spellcheck.SpellCheck'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/cognitiveservices-spellcheck.SpellCheckClientSpellCheckerOptionalParams'
+    name: SpellCheckClientSpellCheckerOptionalParams
+    spec.typeScript:
+      - name: SpellCheckClientSpellCheckerOptionalParams
+        fullName: SpellCheckClientSpellCheckerOptionalParams
+        uid: '@azure/cognitiveservices-spellcheck.SpellCheckClientSpellCheckerOptionalParams'
