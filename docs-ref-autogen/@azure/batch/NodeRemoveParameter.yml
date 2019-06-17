@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NodeRemoveParameter'
+    name: NodeRemoveParameter
+    fullName: NodeRemoveParameter
+    children:
+      - '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+      - '@azure/batch.NodeRemoveParameter.nodeList'
+      - '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="c2268-101">Интерфейс, представляющий NodeRemoveParameter.</span><span class="sxs-lookup"><span data-stu-id="c2268-101">An interface representing NodeRemoveParameter.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeDeallocationOption'
+    name: nodeDeallocationOption
+    fullName: nodeDeallocationOption
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c2268-102">Определяет, что делать с узла и его выполнение задач после выбора для освобождения.</span><span class="sxs-lookup"><span data-stu-id="c2268-102">Determines what to do with a node and its running task(s) after it has been selected for deallocation.</span></span> <span data-ttu-id="c2268-103">По умолчанию используется значение requeue.</span><span class="sxs-lookup"><span data-stu-id="c2268-103">The default value is requeue.</span></span> <span data-ttu-id="c2268-104">Возможные значения: «повторной постановки в очередь», «terminate», «taskCompletion», «retainedData»</span><span class="sxs-lookup"><span data-stu-id="c2268-104">Possible values include: ''requeue'', ''terminate'', ''taskCompletion'', ''retainedData''</span></span>'
+    optional: true
+    syntax:
+      content: 'nodeDeallocationOption?: ComputeNodeDeallocationOption'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeDeallocationOption'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.nodeList'
+    name: nodeList
+    fullName: nodeList
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c2268-105">Список, содержащий коды из вычислительных узлов, который необходимо удалить из указанного пула.</span><span class="sxs-lookup"><span data-stu-id="c2268-105">A list containing the IDs of the compute nodes to be removed from the specified pool.</span></span>'
+    syntax:
+      content: 'nodeList: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NodeRemoveParameter.resizeTimeout'
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c2268-106">Время ожидания удаления вычислительных узлов в пул.</span><span class="sxs-lookup"><span data-stu-id="c2268-106">The timeout for removal of compute nodes to the pool.</span></span> <span data-ttu-id="c2268-107">Значение по умолчанию — 15 минут.</span><span class="sxs-lookup"><span data-stu-id="c2268-107">The default value is 15 minutes.</span></span> <span data-ttu-id="c2268-108">Минимальное значение — 5 минут.</span><span class="sxs-lookup"><span data-stu-id="c2268-108">The minimum value is 5 minutes.</span></span> <span data-ttu-id="c2268-109">Если указать значение меньше 5 минут, то пакетная служба возвращает ошибку; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="c2268-109">If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ComputeNodeDeallocationOption'
+    name: ComputeNodeDeallocationOption
+    spec.typeScript:
+      - name: ComputeNodeDeallocationOption
+        fullName: ComputeNodeDeallocationOption
+        uid: '@azure/batch.ComputeNodeDeallocationOption'

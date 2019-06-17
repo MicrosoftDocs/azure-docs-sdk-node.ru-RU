@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration'
+    name: UploadBatchServiceLogsConfiguration
+    fullName: UploadBatchServiceLogsConfiguration
+    children:
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+      - '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="c312a-101">Интерфейс, представляющий UploadBatchServiceLogsConfiguration.</span><span class="sxs-lookup"><span data-stu-id="c312a-101">An interface representing UploadBatchServiceLogsConfiguration.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.containerUrl'
+    name: containerUrl
+    fullName: containerUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c312a-102">URL-адрес в контейнере в хранилище BLOB-объектов, к которому необходимо отправить файлы журнала пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="c312a-102">The URL of the container within Azure Blob Storage to which to upload the Batch Service log file(s).</span></span> <span data-ttu-id="c312a-103">URL-адрес должен включать (Подписанный) предоставление разрешения на запись в контейнер.</span><span class="sxs-lookup"><span data-stu-id="c312a-103">The URL must include a Shared Access Signature (SAS) granting write permissions to the container.</span></span> <span data-ttu-id="c312a-104">Длительность SAS должна оставлять достаточно времени для окончания загрузки.</span><span class="sxs-lookup"><span data-stu-id="c312a-104">The SAS duration must allow enough time for the upload to finish.</span></span> <span data-ttu-id="c312a-105">Время начала для SAS является необязательным и указывать его не рекомендуется.</span><span class="sxs-lookup"><span data-stu-id="c312a-105">The start time for SAS is optional and recommended to not be specified.</span></span>'
+    syntax:
+      content: 'containerUrl: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c312a-106">Конец диапазона времени, откуда передаются файлы журнала пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="c312a-106">The end of the time range from which to upload Batch Service log file(s).</span></span> <span data-ttu-id="c312a-107">Любой файл журнала, содержащий сообщения журнала в диапазоне времени будет загружен.</span><span class="sxs-lookup"><span data-stu-id="c312a-107">Any log file containing a log message in the time range will be uploaded.</span></span> <span data-ttu-id="c312a-108">Это означает, что операция может получить дополнительные журналы не были запрошены, так как весь файл журнала всегда загружается, но операция не будет загружать журналы меньше запрошенного.</span><span class="sxs-lookup"><span data-stu-id="c312a-108">This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested.</span></span> <span data-ttu-id="c312a-109">Если этот параметр опущен, по умолчанию используется для передачи всех журналов, доступных после времени начала.</span><span class="sxs-lookup"><span data-stu-id="c312a-109">If omitted, the default is to upload all logs available after the startTime.</span></span>'
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.UploadBatchServiceLogsConfiguration.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c312a-110">Начало периода, откуда передаются файлы журнала пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="c312a-110">The start of the time range from which to upload Batch Service log file(s).</span></span> <span data-ttu-id="c312a-111">Любой файл журнала, содержащий сообщения журнала в диапазоне времени будет загружен.</span><span class="sxs-lookup"><span data-stu-id="c312a-111">Any log file containing a log message in the time range will be uploaded.</span></span> <span data-ttu-id="c312a-112">Это означает, что операция может получить дополнительные журналы не были запрошены, так как весь файл журнала всегда загружается, но операция не будет загружать журналы меньше запрошенного.</span><span class="sxs-lookup"><span data-stu-id="c312a-112">This means that the operation might retrieve more logs than have been requested since the entire log file is always uploaded, but the operation should not retrieve fewer logs than have been requested.</span></span>'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
