@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset'
+    name: FaceDetectorPreset
+    fullName: FaceDetectorPreset
+    children:
+      - '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+      - '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Описывает все параметры, которые будут использоваться при анализе видео для обнаружения всех лиц, которые присутствуют.'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.odatatype'
+    name: odatatype
+    fullName: odatatype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'odatatype: "#Microsoft.Media.FaceDetectorPreset"'
+      return:
+        type:
+          - '"#Microsoft.Media.FaceDetectorPreset"'
+    package: '@azure/arm-mediaservices'
+  - uid: '@azure/arm-mediaservices.FaceDetectorPreset.resolution'
+    name: resolution
+    fullName: resolution
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Указывает максимальное разрешение, в котором анализируется видео. Поведение по умолчанию — «SourceResolution», которые обеспечат входного видео с его исходным разрешением при анализе.
+      С помощью «StandardDefinition» будет изменять размер входного видео, чтобы стандартного определения, сохраняя соответствующие пропорции. Только он изменится, если видео имеет высокое разрешение. Например ввод 1920 x 1080 будет масштабироваться до 640 x 360, перед обработкой. Переключение на «StandardDefinition» сократит время, необходимое для процесса высокого разрешения видео. Он также может сократить затраты на использование этого компонента (см. в разделе https://azure.microsoft.com/en-us/pricing/details/media-services/#analytics подробные сведения).
+      Тем не менее могут не обнаруживаться лиц, которые в конечном счете, слишком мал, в размер видео. Ниже перечислены возможные значения. «SourceResolution», «StandardDefinition»
+    optional: true
+    syntax:
+      content: 'resolution?: AnalysisResolution'
+      return:
+        type:
+          - '@azure/arm-mediaservices.AnalysisResolution'
+    package: '@azure/arm-mediaservices'
+references:
+  - uid: '@azure/arm-mediaservices.AnalysisResolution'
+    name: AnalysisResolution
+    spec.typeScript:
+      - name: AnalysisResolution
+        fullName: AnalysisResolution
+        uid: '@azure/arm-mediaservices.AnalysisResolution'
