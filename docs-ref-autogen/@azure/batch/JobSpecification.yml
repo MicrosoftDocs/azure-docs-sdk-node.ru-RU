@@ -1,0 +1,285 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobSpecification'
+    name: JobSpecification
+    fullName: JobSpecification
+    children:
+      - '@azure/batch.JobSpecification.commonEnvironmentSettings'
+      - '@azure/batch.JobSpecification.constraints'
+      - '@azure/batch.JobSpecification.displayName'
+      - '@azure/batch.JobSpecification.jobManagerTask'
+      - '@azure/batch.JobSpecification.jobPreparationTask'
+      - '@azure/batch.JobSpecification.jobReleaseTask'
+      - '@azure/batch.JobSpecification.metadata'
+      - '@azure/batch.JobSpecification.networkConfiguration'
+      - '@azure/batch.JobSpecification.onAllTasksComplete'
+      - '@azure/batch.JobSpecification.onTaskFailure'
+      - '@azure/batch.JobSpecification.poolInfo'
+      - '@azure/batch.JobSpecification.priority'
+      - '@azure/batch.JobSpecification.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="f99de-101">Интерфейс, представляющий JobSpecification.</span><span class="sxs-lookup"><span data-stu-id="f99de-101">An interface representing JobSpecification.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-102">Список общих параметров переменных среды.</span><span class="sxs-lookup"><span data-stu-id="f99de-102">A list of common environment variable settings.</span></span> <span data-ttu-id="f99de-103">Эти переменные среды заданы для всех задач в заданиях, созданных по этому расписанию (включая задачи диспетчера заданий, подготовки задания и прекращения заданий).</span><span class="sxs-lookup"><span data-stu-id="f99de-103">These environment variables are set for all tasks in jobs created under this schedule (including the Job Manager, Job Preparation and Job Release tasks).</span></span> <span data-ttu-id="f99de-104">Отдельные задачи могут переопределить настройку среды, указанную ниже, указав то же имя параметра с другим значением.</span><span class="sxs-lookup"><span data-stu-id="f99de-104">Individual tasks can override an environment setting specified here by specifying the same setting name with a different value.</span></span>'
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-105">Ограничения выполнения для заданий, созданных по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-105">The execution constraints for jobs created under this schedule.</span></span>'
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-106">Отображаемое имя для задания, созданные по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-106">The display name for jobs created under this schedule.</span></span> <span data-ttu-id="f99de-107">Имя не должно быть уникальным и может содержать любые символы Юникода, максимум — 1024.</span><span class="sxs-lookup"><span data-stu-id="f99de-107">The name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>'
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-108">Сведения о задаче диспетчера заданий, которую требуется запустить при запуске задания по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-108">The details of a Job Manager task to be launched when a job is started under this schedule.</span></span> <span data-ttu-id="f99de-109">Если задание указывает задачу диспетчера заданий, пользователь должен явно добавить задачи к заданию с помощью API задачи.</span><span class="sxs-lookup"><span data-stu-id="f99de-109">If the job does not specify a Job Manager task, the user must explicitly add tasks to the job using the Task API.</span></span> <span data-ttu-id="f99de-110">Если задание задача диспетчера заданий, пакетная служба создает задачу диспетчера заданий при создании задания и попытается запланировать задачу диспетчера заданий перед планированием других задач в задании.</span><span class="sxs-lookup"><span data-stu-id="f99de-110">If the job does specify a Job Manager task, the Batch service creates the Job Manager task when the job is created, and will try to schedule the Job Manager task before scheduling other tasks in the job.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-111">Задача подготовки задания для задания, созданные по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-111">The Job Preparation task for jobs created under this schedule.</span></span> <span data-ttu-id="f99de-112">Если задание включает задачу подготовки задания, пакетная служба запустит задачу подготовки задания на вычислительном узле прежде чем выполнять какие-либо задачи задания на этом узле вычислений.</span><span class="sxs-lookup"><span data-stu-id="f99de-112">If a job has a Job Preparation task, the Batch service will run the Job Preparation task on a compute node before starting any tasks of that job on that compute node.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-113">Задача снятия задания для заданий, созданных по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-113">The Job Release task for jobs created under this schedule.</span></span> <span data-ttu-id="f99de-114">Основная цель задачи прекращения задания заключается в отмене изменений на вычислительных узлах, выполненных задачей подготовки задания.</span><span class="sxs-lookup"><span data-stu-id="f99de-114">The primary purpose of the Job Release task is to undo changes to compute nodes made by the Job Preparation task.</span></span> <span data-ttu-id="f99de-115">Пример действия включают удаление локальные файлы или завершение работы службы, которые были запущены в ходе подготовки задания.</span><span class="sxs-lookup"><span data-stu-id="f99de-115">Example activities include deleting local files, or shutting down services that were started as part of job preparation.</span></span> <span data-ttu-id="f99de-116">Нельзя указать задачу прекращения задания без указания задачи подготовки задания для задания.</span><span class="sxs-lookup"><span data-stu-id="f99de-116">A Job Release task cannot be specified without also specifying a Job Preparation task for the job.</span></span> <span data-ttu-id="f99de-117">Пакетная служба запускает задачу снятия задания на вычислительных узлах, которые запущены задачу подготовки задания.</span><span class="sxs-lookup"><span data-stu-id="f99de-117">The Batch service runs the Job Release task on the compute nodes that have run the Job Preparation task.</span></span>'
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f99de-118">Список пар "имя значение", связанные с каждым заданием, созданных по этому расписанию как метаданные.</span><span class="sxs-lookup"><span data-stu-id="f99de-118">A list of name-value pairs associated with each job created under this schedule as metadata.</span></span>
+      <span data-ttu-id="f99de-119">Пакетная служба не назначает значение для метаданных; Это исключительно для использования пользовательского кода.</span><span class="sxs-lookup"><span data-stu-id="f99de-119">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f99de-120">Конфигурация сети для задания.</span><span class="sxs-lookup"><span data-stu-id="f99de-120">The network configuration for the job.</span></span>
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-121">Действие, должна выполнить пакетная служба в завершенном состоянии после всех задач в задании, созданных по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-121">The action the Batch service should take when all tasks in a job created under this schedule are in the completed state.</span></span> <span data-ttu-id="f99de-122">Обратите внимание, что если задание включает нет задач, то все задачи считаются завершения.</span><span class="sxs-lookup"><span data-stu-id="f99de-122">Note that if a job contains no tasks, then all tasks are considered complete.</span></span> <span data-ttu-id="f99de-123">Этот параметр чаще всего используется с задачей диспетчера заданий; Если вы хотите использовать автоматическое завершение заданий без диспетчера заданий, следует изначально присвоено onAllTasksComplete noaction и обновить свойства задания присвоить onAllTasksComplete terminatejob после завершения добавления задачи.</span><span class="sxs-lookup"><span data-stu-id="f99de-123">This option is therefore most commonly used with a Job Manager task; if you want to use automatic job termination without a Job Manager, you should initially set onAllTasksComplete to noaction and update the job properties to set onAllTasksComplete to terminatejob once you have finished adding tasks.</span></span> <span data-ttu-id="f99de-124">Значение по умолчанию — noaction.</span><span class="sxs-lookup"><span data-stu-id="f99de-124">The default is noaction.</span></span> <span data-ttu-id="f99de-125">Возможные значения: «noAction», «terminateJob»</span><span class="sxs-lookup"><span data-stu-id="f99de-125">Possible values include: ''noAction'', ''terminateJob''</span></span>'
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-126">Действие, должна выполнить пакетная служба при сбое любой задачи в задании, созданных по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-126">The action the Batch service should take when any task fails in a job created under this schedule.</span></span> <span data-ttu-id="f99de-127">Задача считается завершившимся сбоем, если его не удалось наличие failureInfo.</span><span class="sxs-lookup"><span data-stu-id="f99de-127">A task is considered to have failed if it have failed if has a failureInfo.</span></span> <span data-ttu-id="f99de-128">FailureInfo устанавливается в том случае, если задача завершается с кодом выхода ненулевой исчерпав его число повторных попыток, или если произошла ошибка при запуске задачи, например из-за файлом ресурсов Ошибка загрузки.</span><span class="sxs-lookup"><span data-stu-id="f99de-128">A failureInfo is set if the task completes with a non-zero exit code after exhausting its retry count, or if there was an error starting the task, for example due to a resource file download error.</span></span> <span data-ttu-id="f99de-129">Значение по умолчанию — noaction.</span><span class="sxs-lookup"><span data-stu-id="f99de-129">The default is noaction.</span></span> <span data-ttu-id="f99de-130">Возможные значения: «noAction», «performExitOptionsJobAction»</span><span class="sxs-lookup"><span data-stu-id="f99de-130">Possible values include: ''noAction'', ''performExitOptionsJobAction''</span></span>'
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-131">Пул, на котором пакетная служба выполняет задачи заданий, созданных по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-131">The pool on which the Batch service runs the tasks of jobs created under this schedule.</span></span>'
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f99de-132">Приоритет заданий, созданных по этому расписанию.</span><span class="sxs-lookup"><span data-stu-id="f99de-132">The priority of jobs created under this schedule.</span></span> <span data-ttu-id="f99de-133">Значения приоритета находится в диапазоне от -1000 до 1000, где – 1000 — самый низкий приоритет, а 1000 — самый высокий приоритет.</span><span class="sxs-lookup"><span data-stu-id="f99de-133">Priority values can range from -1000 to 1000, with -1000 being the lowest priority and 1000 being the highest priority.</span></span> <span data-ttu-id="f99de-134">Значение по умолчанию — 0.</span><span class="sxs-lookup"><span data-stu-id="f99de-134">The default value is 0.</span></span> <span data-ttu-id="f99de-135">Этот приоритет используется по умолчанию для всех заданий в расписание задания.</span><span class="sxs-lookup"><span data-stu-id="f99de-135">This priority is used as the default for all jobs under the job schedule.</span></span> <span data-ttu-id="f99de-136">Вы можете обновить приоритет задания после его создания с помощью задания обновления API.</span><span class="sxs-lookup"><span data-stu-id="f99de-136">You can update a job''s priority after it has been created using by using the update job API.</span></span>'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobSpecification.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f99de-137">Ли задачами в задании можно определить зависимости друг от друга.</span><span class="sxs-lookup"><span data-stu-id="f99de-137">Whether tasks in the job can define dependencies on each other.</span></span> <span data-ttu-id="f99de-138">Его значение по умолчанию — false.</span><span class="sxs-lookup"><span data-stu-id="f99de-138">The default is false.</span></span>
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
