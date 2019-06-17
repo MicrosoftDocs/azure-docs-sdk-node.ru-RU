@@ -1,0 +1,281 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate'
+    name: ManagedDatabaseUpdate
+    fullName: ManagedDatabaseUpdate
+    children:
+      - '@azure/arm-sql.ManagedDatabaseUpdate.catalogCollation'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.collation'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.createMode'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.creationDate'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.defaultSecondaryLocation'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.earliestRestorePoint'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.failoverGroupId'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.recoverableDatabaseId'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.restorableDroppedDatabaseId'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.restorePointInTime'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.sourceDatabaseId'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.status'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.storageContainerSasToken'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.storageContainerUri'
+      - '@azure/arm-sql.ManagedDatabaseUpdate.tags'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="ac9cd-101">Обновление управляемой базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-101">An managed database update.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.catalogCollation'
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac9cd-102">Параметры сортировки каталога метаданных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-102">Collation of the metadata catalog.</span></span> <span data-ttu-id="ac9cd-103">Ниже перечислены возможные значения. ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS''</span><span class="sxs-lookup"><span data-stu-id="ac9cd-103">Possible values include: ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS''</span></span>'
+    optional: true
+    syntax:
+      content: 'catalogCollation?: CatalogCollationType'
+      return:
+        type:
+          - '@azure/arm-sql.CatalogCollationType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac9cd-104">Параметры сортировки управляемой базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-104">Collation of the managed database.</span></span>
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac9cd-105">Режим создания управляемых базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-105">Managed database create mode.</span></span> <span data-ttu-id="ac9cd-106">Обновление: Создание базы данных, восстановив моменту времени резервного копирования существующей базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-106">PointInTimeRestore: Create a database by restoring a point in time backup of an existing database.</span></span> <span data-ttu-id="ac9cd-107">Необходимо указать SourceDatabaseName, SourceManagedInstanceName и PointInTime.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-107">SourceDatabaseName, SourceManagedInstanceName and PointInTime must be specified.</span></span> <span data-ttu-id="ac9cd-108">RestoreExternalBackup: Создание базы данных путем восстановления из внешних файлов резервных копий.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-108">RestoreExternalBackup: Create a database by restoring from external backup files.</span></span> <span data-ttu-id="ac9cd-109">Необходимо указать параметры сортировки, StorageContainerUri и StorageContainerSasToken.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-109">Collation, StorageContainerUri and StorageContainerSasToken must be specified.</span></span> <span data-ttu-id="ac9cd-110">Восстановление: Создает базу данных из резервной копии географически реплицированных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-110">Recovery: Creates a database by restoring a geo-replicated backup.</span></span>
+      <span data-ttu-id="ac9cd-111">RecoverableDatabaseId должно быть указано как идентификатор восстанавливаемой базы данных для восстановления.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-111">RecoverableDatabaseId must be specified as the recoverable database resource ID to restore.</span></span>
+      <span data-ttu-id="ac9cd-112">Ниже перечислены возможные значения. «Default», «RestoreExternalBackup», «Обновление», «Восстановление»</span><span class="sxs-lookup"><span data-stu-id="ac9cd-112">Possible values include: 'Default', 'RestoreExternalBackup', 'PointInTimeRestore', 'Recovery'</span></span>
+    optional: true
+    syntax:
+      content: 'createMode?: ManagedDatabaseCreateMode'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseCreateMode'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.creationDate'
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac9cd-113">Дата создания базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-113">Creation date of the database.</span></span>
+      <span data-ttu-id="ac9cd-114">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="ac9cd-114">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.defaultSecondaryLocation'
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac9cd-115">Георепликацией парном регионе.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-115">Geo paired region.</span></span>
+      <span data-ttu-id="ac9cd-116">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="ac9cd-116">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.earliestRestorePoint'
+    name: earliestRestorePoint
+    fullName: earliestRestorePoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac9cd-117">Самая ранняя точка восстановления на момент времени, восстановление на момент времени.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-117">Earliest restore point in time for point in time restore.</span></span>
+      <span data-ttu-id="ac9cd-118">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="ac9cd-118">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'earliestRestorePoint?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.failoverGroupId'
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ac9cd-119">Идентификатор ресурса группы отработки отказа экземпляра, к которому принадлежит этот управляемой базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-119">Instance Failover Group resource identifier that this managed database belongs to.</span></span>
+      <span data-ttu-id="ac9cd-120">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="ac9cd-120">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.recoverableDatabaseId'
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac9cd-121">Идентификатор ресурса для восстанавливаемой базы данных, связанных с создания этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-121">The resource identifier of the recoverable database associated with create operation of this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.restorableDroppedDatabaseId'
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac9cd-122">Идентификатор ресурса для восстановления удаленной базы данных для восстановления при создании этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-122">The restorable dropped database resource id to restore when creating this database.</span></span>
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.restorePointInTime'
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac9cd-123">Условный.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-123">Conditional.</span></span> <span data-ttu-id="ac9cd-124">Если createMode обновление, это значение является обязательным.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-124">If createMode is PointInTimeRestore, this value is required.</span></span> <span data-ttu-id="ac9cd-125">Указывает точку во времени (в формате ISO8601) базы данных-источника, для создания новой базы данных будет восстановлена.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-125">Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.</span></span>'
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.sourceDatabaseId'
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac9cd-126">Идентификатор ресурса исходной базы данных, связанных с создания этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-126">The resource identifier of the source database associated with create operation of this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac9cd-127">Состояние базы данных.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-127">Status of the database.</span></span> <span data-ttu-id="ac9cd-128">Ниже перечислены возможные значения. «Интернет», «автономно», «Завершение работы», «Создание», «Недоступна», «Обновление» **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="ac9cd-128">Possible values include: ''Online'', ''Offline'', ''Shutdown'', ''Creating'', ''Inaccessible'', ''Updating'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: ManagedDatabaseStatus'
+      return:
+        type:
+          - '@azure/arm-sql.ManagedDatabaseStatus'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.storageContainerSasToken'
+    name: storageContainerSasToken
+    fullName: storageContainerSasToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac9cd-129">Условный.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-129">Conditional.</span></span> <span data-ttu-id="ac9cd-130">Если createMode RestoreExternalBackup, это значение является обязательным.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-130">If createMode is RestoreExternalBackup, this value is required.</span></span> <span data-ttu-id="ac9cd-131">Указывает токен sas контейнера хранилища.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-131">Specifies the storage container sas token.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerSasToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.storageContainerUri'
+    name: storageContainerUri
+    fullName: storageContainerUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ac9cd-132">Условный.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-132">Conditional.</span></span> <span data-ttu-id="ac9cd-133">Если createMode RestoreExternalBackup, это значение является обязательным.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-133">If createMode is RestoreExternalBackup, this value is required.</span></span> <span data-ttu-id="ac9cd-134">Указывает uri контейнера хранилища, где хранятся резервные копии для восстановления.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-134">Specifies the uri of the storage container where backups for this restore are stored.</span></span>'
+    optional: true
+    syntax:
+      content: 'storageContainerUri?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.ManagedDatabaseUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="ac9cd-135">Теги ресурсов.</span><span class="sxs-lookup"><span data-stu-id="ac9cd-135">Resource tags.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.CatalogCollationType'
+    name: CatalogCollationType
+    spec.typeScript:
+      - name: CatalogCollationType
+        fullName: CatalogCollationType
+        uid: '@azure/arm-sql.CatalogCollationType'
+  - uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+    name: ManagedDatabaseCreateMode
+    spec.typeScript:
+      - name: ManagedDatabaseCreateMode
+        fullName: ManagedDatabaseCreateMode
+        uid: '@azure/arm-sql.ManagedDatabaseCreateMode'
+  - uid: '@azure/arm-sql.ManagedDatabaseStatus'
+    name: ManagedDatabaseStatus
+    spec.typeScript:
+      - name: ManagedDatabaseStatus
+        fullName: ManagedDatabaseStatus
+        uid: '@azure/arm-sql.ManagedDatabaseStatus'

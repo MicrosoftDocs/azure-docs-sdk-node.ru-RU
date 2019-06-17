@@ -9,12 +9,12 @@ items:
       - '@azure/arm-network.Subnet.delegations'
       - '@azure/arm-network.Subnet.etag'
       - '@azure/arm-network.Subnet.id'
-      - '@azure/arm-network.Subnet.interfaceEndpoints'
       - '@azure/arm-network.Subnet.ipConfigurationProfiles'
       - '@azure/arm-network.Subnet.ipConfigurations'
       - '@azure/arm-network.Subnet.name'
       - '@azure/arm-network.Subnet.natGateway'
       - '@azure/arm-network.Subnet.networkSecurityGroup'
+      - '@azure/arm-network.Subnet.privateEndpoints'
       - '@azure/arm-network.Subnet.provisioningState'
       - '@azure/arm-network.Subnet.purpose'
       - '@azure/arm-network.Subnet.resourceNavigationLinks'
@@ -25,7 +25,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="5558d-101">Подсеть в ресурс виртуальной сети.</span><span class="sxs-lookup"><span data-stu-id="5558d-101">Subnet in a virtual network resource.</span></span>
+    summary: <span data-ttu-id="eb87e-101">Подсеть в ресурс виртуальной сети.</span><span class="sxs-lookup"><span data-stu-id="eb87e-101">Subnet in a virtual network resource.</span></span>
     extends:
       name: '@azure/arm-network.SubResource'
     package: '@azure/arm-network'
@@ -36,7 +36,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-102">Префикс адреса для подсети.</span><span class="sxs-lookup"><span data-stu-id="5558d-102">The address prefix for the subnet.</span></span>
+    summary: <span data-ttu-id="eb87e-102">Префикс адреса для подсети.</span><span class="sxs-lookup"><span data-stu-id="eb87e-102">The address prefix for the subnet.</span></span>
     optional: true
     syntax:
       content: 'addressPrefix?: undefined | string'
@@ -51,7 +51,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-103">Список префиксов адресов для подсети.</span><span class="sxs-lookup"><span data-stu-id="5558d-103">List of  address prefixes for the subnet.</span></span>
+    summary: <span data-ttu-id="eb87e-103">Список префиксов адресов для подсети.</span><span class="sxs-lookup"><span data-stu-id="eb87e-103">List of address prefixes for the subnet.</span></span>
     optional: true
     syntax:
       content: 'addressPrefixes?: string[]'
@@ -66,7 +66,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-104">Получает массив ссылок для делегирования в подсети.</span><span class="sxs-lookup"><span data-stu-id="5558d-104">Gets an array of references to the delegations on the subnet.</span></span>
+    summary: <span data-ttu-id="eb87e-104">Получает массив ссылок для делегирования в подсети.</span><span class="sxs-lookup"><span data-stu-id="eb87e-104">Gets an array of references to the delegations on the subnet.</span></span>
     optional: true
     syntax:
       content: 'delegations?: Delegation[]'
@@ -81,7 +81,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="5558d-105">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="5558d-105">A unique read-only string that changes whenever the resource is updated.</span></span>'
+    summary: '<span data-ttu-id="eb87e-105">Уникальная только для чтения строка, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="eb87e-105">A unique read-only string that changes whenever the resource is updated.</span></span>'
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -96,28 +96,13 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-106">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="5558d-106">Resource ID.</span></span>
+    summary: <span data-ttu-id="eb87e-106">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="eb87e-106">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
-    package: '@azure/arm-network'
-  - uid: '@azure/arm-network.Subnet.interfaceEndpoints'
-    name: interfaceEndpoints
-    fullName: interfaceEndpoints
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: '<span data-ttu-id="5558d-107">Массив ссылок на конечные точки интерфейс **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="5558d-107">An array of references to interface endpoints **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
-    optional: true
-    syntax:
-      content: 'interfaceEndpoints?: InterfaceEndpoint[]'
-      return:
-        type:
-          - '@azure/arm-network.InterfaceEndpoint[]'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.Subnet.ipConfigurationProfiles'
     name: ipConfigurationProfiles
@@ -127,8 +112,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="5558d-108">Массив профилей конфигурации IP-адрес, которые ссылаются на эту подсеть.</span><span class="sxs-lookup"><span data-stu-id="5558d-108">Array of IP configuration profiles which reference this subnet.</span></span>
-      <span data-ttu-id="5558d-109">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="5558d-109">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="eb87e-107">Массив профилей конфигурации IP-адрес, которые ссылаются на эту подсеть.</span><span class="sxs-lookup"><span data-stu-id="eb87e-107">Array of IP configuration profiles which reference this subnet.</span></span>
+      <span data-ttu-id="eb87e-108">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="eb87e-108">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'ipConfigurationProfiles?: IPConfigurationProfile[]'
@@ -144,8 +129,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="5558d-110">Получает массив ссылок на IP-конфигурации сетевого интерфейса с помощью подсети.</span><span class="sxs-lookup"><span data-stu-id="5558d-110">Gets an array of references to the network interface IP configurations using subnet.</span></span>
-      <span data-ttu-id="5558d-111">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="5558d-111">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="eb87e-109">Получает массив ссылок на IP-конфигурации сетевого интерфейса с помощью подсети.</span><span class="sxs-lookup"><span data-stu-id="eb87e-109">Gets an array of references to the network interface IP configurations using subnet.</span></span>
+      <span data-ttu-id="eb87e-110">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="eb87e-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'ipConfigurations?: IPConfiguration[]'
@@ -160,7 +145,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="5558d-112">Имя ресурса, который является уникальным в пределах группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="5558d-112">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="5558d-113">Это имя может использоваться для доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="5558d-113">This name can be used to access the resource.</span></span>'
+    summary: '<span data-ttu-id="eb87e-111">Имя ресурса, который является уникальным в пределах группы ресурсов.</span><span class="sxs-lookup"><span data-stu-id="eb87e-111">The name of the resource that is unique within a resource group.</span></span> <span data-ttu-id="eb87e-112">Это имя может использоваться для доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="eb87e-112">This name can be used to access the resource.</span></span>'
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -175,7 +160,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="5558d-114">Шлюз NAT, связанные с этой подсетью.</span><span class="sxs-lookup"><span data-stu-id="5558d-114">Nat gateway associated with this subnet.</span></span>'
+    summary: '<span data-ttu-id="eb87e-113">Шлюз NAT, связанные с этой подсетью.</span><span class="sxs-lookup"><span data-stu-id="eb87e-113">Nat gateway associated with this subnet.</span></span>'
     optional: true
     syntax:
       content: 'natGateway?: SubResource'
@@ -190,13 +175,30 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-115">Ссылка на ресурс NetworkSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="5558d-115">The reference of the NetworkSecurityGroup resource.</span></span>
+    summary: <span data-ttu-id="eb87e-114">Ссылка на ресурс NetworkSecurityGroup.</span><span class="sxs-lookup"><span data-stu-id="eb87e-114">The reference of the NetworkSecurityGroup resource.</span></span>
     optional: true
     syntax:
       content: 'networkSecurityGroup?: NetworkSecurityGroup'
       return:
         type:
           - '@azure/arm-network.NetworkSecurityGroup'
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.Subnet.privateEndpoints'
+    name: privateEndpoints
+    fullName: privateEndpoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="eb87e-115">Массив ссылок к частным конечным точкам.</span><span class="sxs-lookup"><span data-stu-id="eb87e-115">An array of references to private endpoints.</span></span>
+      <span data-ttu-id="eb87e-116">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="eb87e-116">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'privateEndpoints?: PrivateEndpoint[]'
+      return:
+        type:
+          - '@azure/arm-network.PrivateEndpoint[]'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.Subnet.provisioningState'
     name: provisioningState
@@ -205,7 +207,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-116">Состояние подготовки ресурса.</span><span class="sxs-lookup"><span data-stu-id="5558d-116">The provisioning state of the resource.</span></span>
+    summary: <span data-ttu-id="eb87e-117">Состояние подготовки ресурса.</span><span class="sxs-lookup"><span data-stu-id="eb87e-117">The provisioning state of the resource.</span></span>
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -221,8 +223,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="5558d-117">Только для чтения строка, определяющая намерение использования для этой подсети, на основе делегирования и другие определяемые пользователем свойства.</span><span class="sxs-lookup"><span data-stu-id="5558d-117">A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.</span></span>
-      <span data-ttu-id="5558d-118">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="5558d-118">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="eb87e-118">Только для чтения строка, определяющая намерение использования для этой подсети, на основе делегирования и другие определяемые пользователем свойства.</span><span class="sxs-lookup"><span data-stu-id="eb87e-118">A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.</span></span>
+      <span data-ttu-id="eb87e-119">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="eb87e-119">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'purpose?: undefined | string'
@@ -237,7 +239,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="5558d-119">Получает массив ссылок на внешние ресурсы, с помощью подсети.</span><span class="sxs-lookup"><span data-stu-id="5558d-119">Gets an array of references to the external resources using subnet.</span></span>'
+    summary: '<span data-ttu-id="eb87e-120">Получает массив ссылок на внешние ресурсы, с помощью подсети.</span><span class="sxs-lookup"><span data-stu-id="eb87e-120">Gets an array of references to the external resources using subnet.</span></span>'
     optional: true
     syntax:
       content: 'resourceNavigationLinks?: ResourceNavigationLink[]'
@@ -252,7 +254,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-120">Ссылка на ресурс RouteTable.</span><span class="sxs-lookup"><span data-stu-id="5558d-120">The reference of the RouteTable resource.</span></span>
+    summary: <span data-ttu-id="eb87e-121">Ссылка на ресурс RouteTable.</span><span class="sxs-lookup"><span data-stu-id="eb87e-121">The reference of the RouteTable resource.</span></span>
     optional: true
     syntax:
       content: 'routeTable?: RouteTable'
@@ -267,7 +269,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="5558d-121">Получает массив ссылок на службы, добавление в этой подсети.</span><span class="sxs-lookup"><span data-stu-id="5558d-121">Gets an array of references to services injecting into this subnet.</span></span>'
+    summary: '<span data-ttu-id="eb87e-122">Получает массив ссылок на службы, добавление в этой подсети.</span><span class="sxs-lookup"><span data-stu-id="eb87e-122">Gets an array of references to services injecting into this subnet.</span></span>'
     optional: true
     syntax:
       content: 'serviceAssociationLinks?: ServiceAssociationLink[]'
@@ -282,7 +284,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-122">Массив политик конечной точки службы.</span><span class="sxs-lookup"><span data-stu-id="5558d-122">An array of service endpoint policies.</span></span>
+    summary: <span data-ttu-id="eb87e-123">Массив политик конечной точки службы.</span><span class="sxs-lookup"><span data-stu-id="eb87e-123">An array of service endpoint policies.</span></span>
     optional: true
     syntax:
       content: 'serviceEndpointPolicies?: ServiceEndpointPolicy[]'
@@ -297,7 +299,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="5558d-123">Массив конечных точек службы.</span><span class="sxs-lookup"><span data-stu-id="5558d-123">An array of service endpoints.</span></span>
+    summary: <span data-ttu-id="eb87e-124">Массив конечных точек службы.</span><span class="sxs-lookup"><span data-stu-id="eb87e-124">An array of service endpoints.</span></span>
     optional: true
     syntax:
       content: 'serviceEndpoints?: ServiceEndpointPropertiesFormat[]'
@@ -318,14 +320,6 @@ references:
       - name: Delegation
         fullName: Delegation
         uid: '@azure/arm-network.Delegation'
-      - name: '[]'
-        fullName: '[]'
-  - uid: '@azure/arm-network.InterfaceEndpoint[]'
-    name: 'InterfaceEndpoint[]'
-    spec.typeScript:
-      - name: InterfaceEndpoint
-        fullName: InterfaceEndpoint
-        uid: '@azure/arm-network.InterfaceEndpoint'
       - name: '[]'
         fullName: '[]'
   - uid: '@azure/arm-network.IPConfigurationProfile[]'
@@ -350,6 +344,14 @@ references:
       - name: NetworkSecurityGroup
         fullName: NetworkSecurityGroup
         uid: '@azure/arm-network.NetworkSecurityGroup'
+  - uid: '@azure/arm-network.PrivateEndpoint[]'
+    name: 'PrivateEndpoint[]'
+    spec.typeScript:
+      - name: PrivateEndpoint
+        fullName: PrivateEndpoint
+        uid: '@azure/arm-network.PrivateEndpoint'
+      - name: '[]'
+        fullName: '[]'
   - uid: '@azure/arm-network.ResourceNavigationLink[]'
     name: 'ResourceNavigationLink[]'
     spec.typeScript:

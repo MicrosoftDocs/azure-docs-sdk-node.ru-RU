@@ -1,0 +1,115 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest'
+    name: FindSimilarRequest
+    fullName: FindSimilarRequest
+    children:
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceIds'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.faceListId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.largeFaceListId'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.maxNumOfCandidatesReturned'
+      - '@azure/cognitiveservices-face.FindSimilarRequest.mode'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="03a30-101">Текст для поиска похожую операцию запроса.</span><span class="sxs-lookup"><span data-stu-id="03a30-101">Request body for find similar operation.</span></span>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceId'
+    name: faceId
+    fullName: faceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="03a30-102">FaceId поверхности запроса.</span><span class="sxs-lookup"><span data-stu-id="03a30-102">FaceId of the query face.</span></span> <span data-ttu-id="03a30-103">Пользователь должен вызвать лиц — обнаруживать первым допустимым faceId.</span><span class="sxs-lookup"><span data-stu-id="03a30-103">User needs to call Face - Detect first to get a valid faceId.</span></span> <span data-ttu-id="03a30-104">Обратите внимание, что этот faceId не сохраняется и заканчивается через 24 часа после вызова метода обнаружения</span><span class="sxs-lookup"><span data-stu-id="03a30-104">Note that this faceId is not persisted and will expire 24 hours after the detection call</span></span>'
+    syntax:
+      content: 'faceId: string'
+      return:
+        type:
+          - string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceIds'
+    name: faceIds
+    fullName: faceIds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="03a30-105">Массив faceIds кандидатов.</span><span class="sxs-lookup"><span data-stu-id="03a30-105">An array of candidate faceIds.</span></span> <span data-ttu-id="03a30-106">Все они создаются с лиц — обнаруживать и faceIds заканчивается через 24 часа после вызова метода обнаружения.</span><span class="sxs-lookup"><span data-stu-id="03a30-106">All of them are created by Face - Detect and the faceIds will expire 24 hours after the detection call.</span></span> <span data-ttu-id="03a30-107">Количество faceIds ограничено 1000.</span><span class="sxs-lookup"><span data-stu-id="03a30-107">The number of faceIds is limited to 1000.</span></span> <span data-ttu-id="03a30-108">Параметр faceListId, largeFaceListId и faceIds не следует указывать в то же время.</span><span class="sxs-lookup"><span data-stu-id="03a30-108">Parameter faceListId, largeFaceListId and faceIds should not be provided at the same time.</span></span>'
+    optional: true
+    syntax:
+      content: 'faceIds?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.faceListId'
+    name: faceListId
+    fullName: faceListId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="03a30-109">Существующий список лиц определяемое пользователем уникальное кандидатов, созданные в список лиц — создайте список лиц.</span><span class="sxs-lookup"><span data-stu-id="03a30-109">An existing user-specified unique candidate face list, created in Face List - Create a Face List.</span></span> <span data-ttu-id="03a30-110">Список лиц содержит набор persistedFaceIds, в которой сохраняются и никогда не истекает.</span><span class="sxs-lookup"><span data-stu-id="03a30-110">Face list contains a set of persistedFaceIds which are persisted and will never expire.</span></span>
+      <span data-ttu-id="03a30-111">Параметр faceListId, largeFaceListId и faceIds не следует указывать в то же время.</span><span class="sxs-lookup"><span data-stu-id="03a30-111">Parameter faceListId, largeFaceListId and faceIds should not be provided at the same time.</span></span>
+    optional: true
+    syntax:
+      content: 'faceListId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.largeFaceListId'
+    name: largeFaceListId
+    fullName: largeFaceListId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="03a30-112">Существующий список большой лицевой определяемое пользователем уникальное кандидатов, созданные в LargeFaceList - создание.</span><span class="sxs-lookup"><span data-stu-id="03a30-112">An existing user-specified unique candidate large face list, created in LargeFaceList - Create.</span></span> <span data-ttu-id="03a30-113">Большой лицевой список содержит набор persistedFaceIds, в которой сохраняются и никогда не истекает.</span><span class="sxs-lookup"><span data-stu-id="03a30-113">Large face list contains a set of persistedFaceIds which are persisted and will never expire.</span></span> <span data-ttu-id="03a30-114">Параметр faceListId, largeFaceListId и faceIds не следует указывать в то же время.</span><span class="sxs-lookup"><span data-stu-id="03a30-114">Parameter faceListId, largeFaceListId and faceIds should not be provided at the same time.</span></span>'
+    optional: true
+    syntax:
+      content: 'largeFaceListId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.maxNumOfCandidatesReturned'
+    name: maxNumOfCandidatesReturned
+    fullName: maxNumOfCandidatesReturned
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="03a30-115">Возвращается номер верхней похожих лиц.</span><span class="sxs-lookup"><span data-stu-id="03a30-115">The number of top similar faces returned.</span></span> <span data-ttu-id="03a30-116">Допустимый диапазон: [1, 1000].</span><span class="sxs-lookup"><span data-stu-id="03a30-116">The valid range is [1, 1000].</span></span> <span data-ttu-id="03a30-117">Значение по умолчанию: 20.</span><span class="sxs-lookup"><span data-stu-id="03a30-117">Default value: 20.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxNumOfCandidatesReturned?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FindSimilarRequest.mode'
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="03a30-118">Аналогичный режим поиска лиц.</span><span class="sxs-lookup"><span data-stu-id="03a30-118">Similar face searching mode.</span></span> <span data-ttu-id="03a30-119">Это может быть, «matchPerson» или «matchFace».</span><span class="sxs-lookup"><span data-stu-id="03a30-119">It can be "matchPerson" or "matchFace".</span></span> <span data-ttu-id="03a30-120">Возможные значения: «matchPerson», «matchFace».</span><span class="sxs-lookup"><span data-stu-id="03a30-120">Possible values include: ''matchPerson'', ''matchFace''.</span></span> <span data-ttu-id="03a30-121">Значение по умолчанию: «matchPerson».</span><span class="sxs-lookup"><span data-stu-id="03a30-121">Default value: ''matchPerson''.</span></span>'
+    optional: true
+    syntax:
+      content: 'mode?: FindSimilarMatchMode'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.FindSimilarMatchMode'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FindSimilarMatchMode'
+    name: FindSimilarMatchMode
+    spec.typeScript:
+      - name: FindSimilarMatchMode
+        fullName: FindSimilarMatchMode
+        uid: '@azure/cognitiveservices-face.FindSimilarMatchMode'

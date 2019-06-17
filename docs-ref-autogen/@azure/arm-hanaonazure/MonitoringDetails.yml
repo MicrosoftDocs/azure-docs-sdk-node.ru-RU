@@ -4,44 +4,28 @@ items:
     name: MonitoringDetails
     fullName: MonitoringDetails
     children:
-      - '@azure/arm-hanaonazure.MonitoringDetails.dbContainer'
-      - '@azure/arm-hanaonazure.MonitoringDetails.hanaDatabase'
+      - '@azure/arm-hanaonazure.MonitoringDetails.hanaDbName'
       - '@azure/arm-hanaonazure.MonitoringDetails.hanaDbPassword'
+      - '@azure/arm-hanaonazure.MonitoringDetails.hanaDbSqlPort'
       - '@azure/arm-hanaonazure.MonitoringDetails.hanaDbUsername'
       - '@azure/arm-hanaonazure.MonitoringDetails.hanaHostname'
-      - '@azure/arm-hanaonazure.MonitoringDetails.hanaInstanceNum'
-      - '@azure/arm-hanaonazure.MonitoringDetails.hanaVnet'
+      - '@azure/arm-hanaonazure.MonitoringDetails.hanaSubnet'
     langs:
       - typeScript
     type: interface
-    summary: '<span data-ttu-id="6a3f1-101">Получить данные, необходимые для мониторинга экземпляра Hana</span><span class="sxs-lookup"><span data-stu-id="6a3f1-101">Details needed to monitor a Hana Instance</span></span>'
+    summary: '<span data-ttu-id="5b174-101">Получить данные, необходимые для мониторинга экземпляра Hana</span><span class="sxs-lookup"><span data-stu-id="5b174-101">Details needed to monitor a Hana Instance</span></span>'
     package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.MonitoringDetails.dbContainer'
-    name: dbContainer
-    fullName: dbContainer
+  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaDbName'
+    name: hanaDbName
+    fullName: hanaDbName
     children: []
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="6a3f1-102">Один или несколько в зависимости от использования MDC (контейнеров несколько баз данных).</span><span class="sxs-lookup"><span data-stu-id="6a3f1-102">Either single or multiple depending on the use of MDC(Multiple Database Containers).</span></span> <span data-ttu-id="6a3f1-103">Возможные значения: «single», «несколько».</span><span class="sxs-lookup"><span data-stu-id="6a3f1-103">Possible values include: ''single'', ''multiple''.</span></span> <span data-ttu-id="6a3f1-104">Значение по умолчанию: «single».</span><span class="sxs-lookup"><span data-stu-id="6a3f1-104">Default value: ''single''.</span></span>'
+    summary: <span data-ttu-id="5b174-102">Имя самой базы данных.</span><span class="sxs-lookup"><span data-stu-id="5b174-102">Name of the database itself.</span></span>
     optional: true
     syntax:
-      content: 'dbContainer?: HanaDatabaseContainersEnum'
-      return:
-        type:
-          - '@azure/arm-hanaonazure.HanaDatabaseContainersEnum'
-    package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaDatabase'
-    name: hanaDatabase
-    fullName: hanaDatabase
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: <span data-ttu-id="6a3f1-105">Имя самой базы данных.</span><span class="sxs-lookup"><span data-stu-id="6a3f1-105">Name of the database itself.</span></span>  <span data-ttu-id="6a3f1-106">Его необходимо указать при использовании MDC</span><span class="sxs-lookup"><span data-stu-id="6a3f1-106">It only needs to be specified if using MDC</span></span>
-    optional: true
-    syntax:
-      content: 'hanaDatabase?: undefined | string'
+      content: 'hanaDbName?: undefined | string'
       return:
         type:
           - undefined | string
@@ -53,13 +37,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="6a3f1-107">Пароль для базы данных HANA с именем входа для мониторинга</span><span class="sxs-lookup"><span data-stu-id="6a3f1-107">Password for the HANA database to login for monitoring</span></span>
+    summary: <span data-ttu-id="5b174-103">Пароль для базы данных HANA с именем входа для мониторинга</span><span class="sxs-lookup"><span data-stu-id="5b174-103">Password for the HANA database to login for monitoring</span></span>
     optional: true
     syntax:
       content: 'hanaDbPassword?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaDbSqlPort'
+    name: hanaDbSqlPort
+    fullName: hanaDbSqlPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="5b174-104">Номер порта клиента базы данных.</span><span class="sxs-lookup"><span data-stu-id="5b174-104">The port number of the tenant DB.</span></span> <span data-ttu-id="5b174-105">Используется для подключения к базе данных.</span><span class="sxs-lookup"><span data-stu-id="5b174-105">Used to connect to the DB.</span></span>
+    optional: true
+    syntax:
+      content: 'hanaDbSqlPort?: undefined | number'
+      return:
+        type:
+          - undefined | number
     package: '@azure/arm-hanaonazure'
   - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaDbUsername'
     name: hanaDbUsername
@@ -68,7 +67,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="6a3f1-108">Имя пользователя для базы данных HANA для входа для мониторинга</span><span class="sxs-lookup"><span data-stu-id="6a3f1-108">Username for the HANA database to login to for monitoring</span></span>
+    summary: <span data-ttu-id="5b174-106">Имя пользователя для базы данных HANA для входа для мониторинга</span><span class="sxs-lookup"><span data-stu-id="5b174-106">Username for the HANA database to login to for monitoring</span></span>
     optional: true
     syntax:
       content: 'hanaDbUsername?: undefined | string'
@@ -83,7 +82,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="6a3f1-109">Имя узла колонка экземпляра HANA.</span><span class="sxs-lookup"><span data-stu-id="6a3f1-109">Hostname of the HANA Instance blade.</span></span>
+    summary: <span data-ttu-id="5b174-107">Имя узла колонка экземпляра HANA.</span><span class="sxs-lookup"><span data-stu-id="5b174-107">Hostname of the HANA Instance blade.</span></span>
     optional: true
     syntax:
       content: 'hanaHostname?: undefined | string'
@@ -91,40 +90,18 @@ items:
         type:
           - undefined | string
     package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaInstanceNum'
-    name: hanaInstanceNum
-    fullName: hanaInstanceNum
+  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaSubnet'
+    name: hanaSubnet
+    fullName: hanaSubnet
     children: []
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="6a3f1-110">Число от 00 до 99, хранящихся в виде строки для поддержания нулем в начале.</span><span class="sxs-lookup"><span data-stu-id="6a3f1-110">A number between 00 and 99, stored as a string to maintain leading zero.</span></span>'
+    summary: <span data-ttu-id="5b174-108">Идентификатор ARM подсети Azure с доступом к экземпляру HANA.</span><span class="sxs-lookup"><span data-stu-id="5b174-108">ARM ID of an Azure Subnet with access to the HANA instance.</span></span>
     optional: true
     syntax:
-      content: 'hanaInstanceNum?: undefined | string'
+      content: 'hanaSubnet?: undefined | string'
       return:
         type:
           - undefined | string
     package: '@azure/arm-hanaonazure'
-  - uid: '@azure/arm-hanaonazure.MonitoringDetails.hanaVnet'
-    name: hanaVnet
-    fullName: hanaVnet
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: <span data-ttu-id="6a3f1-111">Идентификатор ARM виртуальной сети Azure с доступом к экземпляру HANA.</span><span class="sxs-lookup"><span data-stu-id="6a3f1-111">ARM ID of an Azure Vnet with access to the HANA instance.</span></span>
-    optional: true
-    syntax:
-      content: 'hanaVnet?: undefined | string'
-      return:
-        type:
-          - undefined | string
-    package: '@azure/arm-hanaonazure'
-references:
-  - uid: '@azure/arm-hanaonazure.HanaDatabaseContainersEnum'
-    name: HanaDatabaseContainersEnum
-    spec.typeScript:
-      - name: HanaDatabaseContainersEnum
-        fullName: HanaDatabaseContainersEnum
-        uid: '@azure/arm-hanaonazure.HanaDatabaseContainersEnum'
