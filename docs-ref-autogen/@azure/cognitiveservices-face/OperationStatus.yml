@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="ea710-101">Объект состояния операции.</span><span class="sxs-lookup"><span data-stu-id="ea710-101">Operation status object.</span></span> <span data-ttu-id="ea710-102">Операция относится к задаче асинхронной серверной части, включая создание снимка и применение моментального снимка.</span><span class="sxs-lookup"><span data-stu-id="ea710-102">Operation refers to the asynchronous backend task including taking a snapshot and applying a snapshot.</span></span>'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea710-103">Объединенный строки даты и времени в формате UTC, который описывает время при операции (или изменения моментального снимка) запрашивается.</span><span class="sxs-lookup"><span data-stu-id="ea710-103">A combined UTC date and time string that describes the time when the operation (take or apply a snapshot) is requested.</span></span> <span data-ttu-id="ea710-104">(например,</span><span class="sxs-lookup"><span data-stu-id="ea710-104">E.g.</span></span> <span data-ttu-id="ea710-105">2018-12-25T11:41:02.2331413Z.</span><span class="sxs-lookup"><span data-stu-id="ea710-105">2018-12-25T11:41:02.2331413Z.</span></span>'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea710-106">Объединенный Дата в формате UTC и время строку, описывающую последнего время операции (или изменения моментального снимка) активно переносите данные.</span><span class="sxs-lookup"><span data-stu-id="ea710-106">A combined UTC date and time string that describes the last time the operation (take or apply a snapshot) is actively migrating data.</span></span> <span data-ttu-id="ea710-107">LastActionTime будет хранить увеличения до завершения операции.</span><span class="sxs-lookup"><span data-stu-id="ea710-107">The lastActionTime will keep increasing until the operation finishes.</span></span> <span data-ttu-id="ea710-108">(например,</span><span class="sxs-lookup"><span data-stu-id="ea710-108">E.g.</span></span> <span data-ttu-id="ea710-109">2018-12-25T11:51:27.8705696Z.</span><span class="sxs-lookup"><span data-stu-id="ea710-109">2018-12-25T11:51:27.8705696Z.</span></span>'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea710-110">Показать сообщение об ошибке при сбое операции (не указывать, если операция выполнена успешно).</span><span class="sxs-lookup"><span data-stu-id="ea710-110">Show failure message when operation fails (omitted when operation succeeds).</span></span>'
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea710-111">Когда операция успешно выполнена успешно, это, для операции создания моментального снимка идентификатор моментального снимка будут включены в это поле и путь для получения целевого объекта для моментального снимка, применяя операцию, будет возвращаться в этом поле.</span><span class="sxs-lookup"><span data-stu-id="ea710-111">When the operation succeeds successfully, for snapshot taking operation the snapshot id will be included in this field, and for snapshot applying operation, the path to get the target object will be returned in this field.</span></span>'
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="ea710-112">Состояние операции: notstarted, запущена, выполнена успешно, сбой.</span><span class="sxs-lookup"><span data-stu-id="ea710-112">Operation status: notstarted, running, succeeded, failed.</span></span> <span data-ttu-id="ea710-113">Если запрошенная операция и ожидающих выполнения, находится в состоянии notstarted.</span><span class="sxs-lookup"><span data-stu-id="ea710-113">If the operation is requested and waiting to perform, the status is notstarted.</span></span> <span data-ttu-id="ea710-114">Если операция выполняется в серверной части, состояние = запущен.</span><span class="sxs-lookup"><span data-stu-id="ea710-114">If the operation is ongoing in backend, the status is running.</span></span> <span data-ttu-id="ea710-115">Состояние успешного выполнения означает, что операция завершается успешно, специально для операции создания моментального снимка, он иллюстрирует моментального снимка также выбирается и готовность к применению, и для моментальных снимков, применяя операцию, представляет целевой объект завершил создание с моментальный снимок и все готово для использования.</span><span class="sxs-lookup"><span data-stu-id="ea710-115">Status succeeded means the operation is completed successfully, specifically for snapshot taking operation, it illustrates the snapshot is well taken and ready to apply, and for snapshot applying operation, it presents the target object has finished creating by the snapshot and ready to be used.</span></span> <span data-ttu-id="ea710-116">Состояние ошибки часто бывает вызвана редактирования исходного объекта при создании моментального снимка или редактирования целевого объекта во время применения моментального снимка до завершения, см. в разделе поле «сообщение» причины сбоя.</span><span class="sxs-lookup"><span data-stu-id="ea710-116">Status failed is often caused by editing the source object while taking the snapshot or editing the target object while applying the snapshot before completion, see the field "message" to check the failure reason.</span></span>
+      <span data-ttu-id="ea710-117">Возможные значения: «не запущено», «работает», «succeeded», «сбой»</span><span class="sxs-lookup"><span data-stu-id="ea710-117">Possible values include: 'notstarted', 'running', 'succeeded', 'failed'</span></span>
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'

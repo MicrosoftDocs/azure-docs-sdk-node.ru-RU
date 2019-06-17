@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+      - '@azure/batch.NetworkConfiguration.endpointConfiguration'
+      - '@azure/batch.NetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="fd237-101">Конфигурация сети для пула.</span><span class="sxs-lookup"><span data-stu-id="fd237-101">The network configuration for a pool.</span></span>
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fd237-102">Область назначения динамического виртуальной сети.</span><span class="sxs-lookup"><span data-stu-id="fd237-102">The scope of dynamic vnet assignment.</span></span> <span data-ttu-id="fd237-103">Возможные значения: «none», «задания»</span><span class="sxs-lookup"><span data-stu-id="fd237-103">Possible values include: ''none'', ''job''</span></span>'
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: DynamicVNetAssignmentScope'
+      return:
+        type:
+          - '@azure/batch.DynamicVNetAssignmentScope'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.endpointConfiguration'
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="fd237-104">Конфигурации для конечных точек на вычислительных узлах в пуле пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="fd237-104">The configuration for endpoints on compute nodes in the Batch pool.</span></span> <span data-ttu-id="fd237-105">Конфигурация конечных точек пула поддерживается только в пулах со свойством virtualMachineConfiguration.</span><span class="sxs-lookup"><span data-stu-id="fd237-105">Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.</span></span>
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - '@azure/batch.PoolEndpointConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="fd237-106">Идентификатор ARM ресурса подсети виртуальной сети, которую, присоединяются к вычислительные узлы пула.</span><span class="sxs-lookup"><span data-stu-id="fd237-106">The ARM resource identifier of the virtual network subnet which the compute nodes of the pool will join.</span></span> <span data-ttu-id="fd237-107">Это имеет /subnets/ /virtualNetworks/ {network} /providers/ {provider} формы /subscriptions/ {subscription} /resourceGroups/ {группа} {подсети}.</span><span class="sxs-lookup"><span data-stu-id="fd237-107">This is of the form /subscriptions/{subscription}/resourceGroups/{group}/providers/{provider}/virtualNetworks/{network}/subnets/{subnet}.</span></span>
+      <span data-ttu-id="fd237-108">Виртуальная сеть должна находиться в том же регионе и подписке, что учетная запись пакетной службы Azure.</span><span class="sxs-lookup"><span data-stu-id="fd237-108">The virtual network must be in the same region and subscription as the Azure Batch account.</span></span>
+      <span data-ttu-id="fd237-109">Указанная подсеть должна иметь достаточно свободного IP-адресов, чтобы вместить количество узлов в пуле.</span><span class="sxs-lookup"><span data-stu-id="fd237-109">The specified subnet should have enough free IP addresses to accommodate the number of nodes in the pool.</span></span> <span data-ttu-id="fd237-110">Если подсеть не имеет достаточно свободного IP-адресов, пул выделит частично вычислительных узлов, и возникнет ошибка изменения размера.</span><span class="sxs-lookup"><span data-stu-id="fd237-110">If the subnet doesn't have enough free IP addresses, the pool will partially allocate compute nodes, and a resize error will occur.</span></span> <span data-ttu-id="fd237-111">Для пулов, созданных с помощью virtualMachineConfiguration поддерживаются только ARM виртуальные сети («Microsoft.Network/virtualNetworks»), но для пулов, созданных с помощью cloudServiceConfiguration поддерживаются ARM и классических виртуальных сетей.</span><span class="sxs-lookup"><span data-stu-id="fd237-111">For pools created with virtualMachineConfiguration only ARM virtual networks ('Microsoft.Network/virtualNetworks') are supported, but for pools created with cloudServiceConfiguration both ARM and classic virtual networks are supported.</span></span> <span data-ttu-id="fd237-112">Дополнительные сведения см. в разделе: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="fd237-112">For more details, see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>
+    optional: true
+    syntax:
+      content: 'subnetId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DynamicVNetAssignmentScope'
+    name: DynamicVNetAssignmentScope
+    spec.typeScript:
+      - name: DynamicVNetAssignmentScope
+        fullName: DynamicVNetAssignmentScope
+        uid: '@azure/batch.DynamicVNetAssignmentScope'
+  - uid: '@azure/batch.PoolEndpointConfiguration'
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: '@azure/batch.PoolEndpointConfiguration'

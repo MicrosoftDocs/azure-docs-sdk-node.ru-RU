@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+      - '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+      - '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="ea2d2-101">Многоэкземплярные задачи обычно используются для поддержки задач MPI.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-101">Multi-instance tasks are commonly used to support MPI tasks.</span></span> <span data-ttu-id="ea2d2-102">В случае MPI, если любая из подзадач ошибкой (например из-за выхода из с кодом выхода ненулевой длины) всего несколькими экземплярами задача завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-102">In the MPI case, if any of the subtasks fail (for example due to exiting with a non-zero exit code) the entire multi-instance task fails.</span></span> <span data-ttu-id="ea2d2-103">Затем задача с несколькими экземплярами завершается и выполняется повторно, пока не будет достигнут предел повтора.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-103">The multi-instance task is then terminated and retried, up to its retry limit.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea2d2-104">Список файлов, которые пакетная служба скачает перед запуском командной строки координации.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-104">A list of files that the Batch service will download before running the coordination command line.</span></span> <span data-ttu-id="ea2d2-105">Разности между общими файлами ресурсов и файлами ресурсов задач является то, что общие файлы ресурсов скачиваются для всех подзадач, включая первичную реплику, тогда как файлы ресурсов задач скачиваются только для сервера-источника.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-105">The difference between common resource files and task resource files is that common resource files are downloaded for all subtasks including the primary, whereas task resource files are downloaded only for the primary.</span></span> <span data-ttu-id="ea2d2-106">Также Обратите внимание, что эти файлы ресурсов не загружаются рабочему каталогу задачи, но вместо этого загружаются в корневой каталог задачи (один каталог выше рабочий каталог).</span><span class="sxs-lookup"><span data-stu-id="ea2d2-106">Also note that these resource files are not downloaded to the task working directory, but instead are downloaded to the task root directory (one directory above the working directory).</span></span>  <span data-ttu-id="ea2d2-107">Максимальный размер для список файлов ресурсов установлен.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-107">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="ea2d2-108">При превышении максимального размера, запрос завершится ошибкой, и код ошибки ответа будет RequestEntityTooLarge.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-108">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="ea2d2-109">В этом случае коллекция ResourceFiles необходимо уменьшить размер.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-109">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="ea2d2-110">Это можно сделать с помощью ZIP-файлы, пакеты приложений или контейнеров Docker.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-110">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>'
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea2d2-111">Командной строки для запуска на всех вычислительных узлах, чтобы включить их для координации, когда источник запускает команду основной задачи.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-111">The command line to run on all the compute nodes to enable them to coordinate when the primary runs the main task command.</span></span> <span data-ttu-id="ea2d2-112">Обычная Командная строка координации запускает фоновую службу и проверяет, что служба готова для обработки сообщений между узлами.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-112">A typical coordination command line launches a background service and verifies that the service is ready to process inter-node messages.</span></span>'
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ea2d2-113">Число вычислительных узлов, необходимых задаче.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-113">The number of compute nodes required by the task.</span></span> <span data-ttu-id="ea2d2-114">Если не указано, значение по умолчанию равно 1.</span><span class="sxs-lookup"><span data-stu-id="ea2d2-114">If omitted, the default is 1.</span></span>'
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
