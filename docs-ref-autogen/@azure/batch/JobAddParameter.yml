@@ -1,0 +1,302 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobAddParameter'
+    name: JobAddParameter
+    fullName: JobAddParameter
+    children:
+      - '@azure/batch.JobAddParameter.commonEnvironmentSettings'
+      - '@azure/batch.JobAddParameter.constraints'
+      - '@azure/batch.JobAddParameter.displayName'
+      - '@azure/batch.JobAddParameter.id'
+      - '@azure/batch.JobAddParameter.jobManagerTask'
+      - '@azure/batch.JobAddParameter.jobPreparationTask'
+      - '@azure/batch.JobAddParameter.jobReleaseTask'
+      - '@azure/batch.JobAddParameter.metadata'
+      - '@azure/batch.JobAddParameter.networkConfiguration'
+      - '@azure/batch.JobAddParameter.onAllTasksComplete'
+      - '@azure/batch.JobAddParameter.onTaskFailure'
+      - '@azure/batch.JobAddParameter.poolInfo'
+      - '@azure/batch.JobAddParameter.priority'
+      - '@azure/batch.JobAddParameter.usesTaskDependencies'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий JobAddParameter.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.commonEnvironmentSettings'
+    name: commonEnvironmentSettings
+    fullName: commonEnvironmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Список общих параметров переменных среды. Эти переменные среды заданы для всех задач в задании (включая задачи диспетчера заданий, подготовки задания и прекращения заданий).
+      Отдельные задачи могут переопределить настройку среды, указанную ниже, указав то же имя параметра с другим значением.
+    optional: true
+    syntax:
+      content: 'commonEnvironmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ограничения выполнения задания.
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - '@azure/batch.JobConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Отображаемое имя для задания. Отображаемое имя не должно быть уникальным и может содержать любые символы Юникода, максимум — 1024.'
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Строка, однозначно определяет задание в учетной записи. Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов. Идентификатор меняющее регистр и не учитывает регистр (то есть не имеется два идентификатора в учетной записи, которые различаются только регистром).'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.jobManagerTask'
+    name: jobManagerTask
+    fullName: jobManagerTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Сведения о задаче диспетчера заданий, которую требуется запустить при запуске задания. Если задание указывает задачу диспетчера заданий, пользователь должен явно добавить задачи к заданию. Если задание задача диспетчера заданий, пакетная служба создает задачу диспетчера заданий при создании задания и попытается запланировать задачу диспетчера заданий перед планированием других задач в задании. Задача диспетчера заданий обычно предназначен для управления и/или отслеживания выполнения задания, например, решить, какие дополнительные задачи для запуска, определение, когда работа будет завершена и т. д. (Тем не менее, эти действия не ограничен задачу диспетчера заданий: она квалифицированного выполняется в системе и выполните нужные действия, необходимые для задания.) Например задачу диспетчера заданий может скачать файл, указанное в качестве параметра, анализировать содержимое этого файла и отправить дополнительные задачи, в зависимости от содержимого.'
+    optional: true
+    syntax:
+      content: 'jobManagerTask?: JobManagerTask'
+      return:
+        type:
+          - '@azure/batch.JobManagerTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.jobPreparationTask'
+    name: jobPreparationTask
+    fullName: jobPreparationTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Задача подготовки задания. Если задание включает задачу подготовки задания, пакетная служба запустит задачу подготовки задания на вычислительном узле прежде чем выполнять какие-либо задачи задания на этом узле вычислений.'
+    optional: true
+    syntax:
+      content: 'jobPreparationTask?: JobPreparationTask'
+      return:
+        type:
+          - '@azure/batch.JobPreparationTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.jobReleaseTask'
+    name: jobReleaseTask
+    fullName: jobReleaseTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Задача снятия задания. Нельзя указать задачу прекращения задания без указания задачи подготовки задания для задания. Пакетная служба запускает задачу снятия задания на вычислительных узлах, которые запущены задачу подготовки задания. Основная цель задачи прекращения задания заключается в отмене изменений на вычислительных узлах, выполненных задачей подготовки задания. Пример действия включают удаление локальные файлы или завершение работы службы, которые были запущены в ходе подготовки задания.'
+    optional: true
+    syntax:
+      content: 'jobReleaseTask?: JobReleaseTask'
+      return:
+        type:
+          - '@azure/batch.JobReleaseTask'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список пар "имя значение", связанный с заданием в качестве метаданных. Пакетная служба не назначает значение для метаданных; Это исключительно для использования пользовательского кода.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.networkConfiguration'
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Конфигурация сети для задания.
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: JobNetworkConfiguration'
+      return:
+        type:
+          - '@azure/batch.JobNetworkConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.onAllTasksComplete'
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Действие, должна выполнить пакетная служба после всех задач в задание в завершенное состояние.
+      Обратите внимание, что если задание включает нет задач, то все задачи считаются завершения. Этот параметр чаще всего используется с задачей диспетчера заданий; Если вы хотите использовать автоматическое завершение заданий без диспетчера заданий, следует изначально присвоено onAllTasksComplete noaction и обновить свойства задания присвоить onAllTasksComplete terminatejob после завершения добавления задачи. Значение по умолчанию — noaction. Возможные значения: «noAction», «terminateJob»
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: OnAllTasksComplete'
+      return:
+        type:
+          - '@azure/batch.OnAllTasksComplete'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.onTaskFailure'
+    name: onTaskFailure
+    fullName: onTaskFailure
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Действие, должна выполнить пакетная служба при сбое любой задачи в задании. Задача считается иметь неудачных имеющие failureInfo. FailureInfo устанавливается в том случае, если задача завершается с кодом выхода ненулевой исчерпав его число повторных попыток, или если произошла ошибка при запуске задачи, например из-за файлом ресурсов Ошибка загрузки. Значение по умолчанию — noaction. Возможные значения: «noAction», «performExitOptionsJobAction»'
+    optional: true
+    syntax:
+      content: 'onTaskFailure?: OnTaskFailure'
+      return:
+        type:
+          - '@azure/batch.OnTaskFailure'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.poolInfo'
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Пул, на котором пакетная служба выполняет задачи задания.'
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - '@azure/batch.PoolInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Приоритет задания. Значения приоритета находится в диапазоне от -1000 до 1000, где – 1000 — самый низкий приоритет, а 1000 — самый высокий приоритет. Значение по умолчанию — 0.'
+    optional: true
+    syntax:
+      content: 'priority?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobAddParameter.usesTaskDependencies'
+    name: usesTaskDependencies
+    fullName: usesTaskDependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ли задачами в задании можно определить зависимости друг от друга. Его значение по умолчанию — false.
+    optional: true
+    syntax:
+      content: 'usesTaskDependencies?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobConstraints'
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: '@azure/batch.JobConstraints'
+  - uid: '@azure/batch.JobManagerTask'
+    name: JobManagerTask
+    spec.typeScript:
+      - name: JobManagerTask
+        fullName: JobManagerTask
+        uid: '@azure/batch.JobManagerTask'
+  - uid: '@azure/batch.JobPreparationTask'
+    name: JobPreparationTask
+    spec.typeScript:
+      - name: JobPreparationTask
+        fullName: JobPreparationTask
+        uid: '@azure/batch.JobPreparationTask'
+  - uid: '@azure/batch.JobReleaseTask'
+    name: JobReleaseTask
+    spec.typeScript:
+      - name: JobReleaseTask
+        fullName: JobReleaseTask
+        uid: '@azure/batch.JobReleaseTask'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    spec.typeScript:
+      - name: JobNetworkConfiguration
+        fullName: JobNetworkConfiguration
+        uid: '@azure/batch.JobNetworkConfiguration'
+  - uid: '@azure/batch.OnAllTasksComplete'
+    name: OnAllTasksComplete
+    spec.typeScript:
+      - name: OnAllTasksComplete
+        fullName: OnAllTasksComplete
+        uid: '@azure/batch.OnAllTasksComplete'
+  - uid: '@azure/batch.OnTaskFailure'
+    name: OnTaskFailure
+    spec.typeScript:
+      - name: OnTaskFailure
+        fullName: OnTaskFailure
+        uid: '@azure/batch.OnTaskFailure'
+  - uid: '@azure/batch.PoolInformation'
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: '@azure/batch.PoolInformation'
