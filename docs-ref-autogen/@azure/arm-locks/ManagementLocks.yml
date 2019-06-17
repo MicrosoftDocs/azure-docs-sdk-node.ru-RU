@@ -58,6 +58,12 @@ items:
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext'
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext_2'
       - '@azure/arm-locks.ManagementLocks.listAtSubscriptionLevelNext_1'
+      - '@azure/arm-locks.ManagementLocks.listByScope_2'
+      - '@azure/arm-locks.ManagementLocks.listByScope'
+      - '@azure/arm-locks.ManagementLocks.listByScope_1'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext_2'
+      - '@azure/arm-locks.ManagementLocks.listByScopeNext_1'
       - '@azure/arm-locks.ManagementLocks.constructor'
     langs:
       - typeScript
@@ -1714,6 +1720,152 @@ items:
         type:
           - Promise<Models.ManagementLocksListAtSubscriptionLevelNextResponse>
     package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope_2'
+    name: 'listByScope(string, ManagementLocksListByScopeOptionalParams, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScope(scope: string, options: ManagementLocksListByScopeOptionalParams, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'Область блокировки. При предоставлении область для назначения, используйте «/ subscriptions / {subscriptionId}» для подписок, «/ subscriptions / {subscriptionId} /resourcegroups/ {resourceGroupName}» для группы ресурсов, и "/ subscriptions / {subscriptionId} / resourcegroups / {resourceGroupName} /providers/ {Пространство_имен_поставщиков_ресурсов} / {parentResourcePathIfPresent} / {Тип_ресурса} / {resourceName} "для ресурсов.'
+        - id: options
+          type:
+            - '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope'
+    name: 'listByScope(string, Models.ManagementLocksListByScopeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Возвращает всех блокировок управления для области.
+    syntax:
+      content: 'function listByScope(scope: string, options?: Models.ManagementLocksListByScopeOptionalParams)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'Область блокировки. При предоставлении область для назначения, используйте «/ subscriptions / {subscriptionId}» для подписок, «/ subscriptions / {subscriptionId} /resourcegroups/ {resourceGroupName}» для группы ресурсов, и "/ subscriptions / {subscriptionId} / resourcegroups / {resourceGroupName} /providers/ {Пространство_имен_поставщиков_ресурсов} / {parentResourcePathIfPresent} / {Тип_ресурса} / {resourceName} "для ресурсов.'
+        - id: options
+          type:
+            - Models.ManagementLocksListByScopeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScope_1'
+    name: 'listByScope(string, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScope(scope: string, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: 'Область блокировки. При предоставлении область для назначения, используйте «/ subscriptions / {subscriptionId}» для подписок, «/ subscriptions / {subscriptionId} /resourcegroups/ {resourceGroupName}» для группы ресурсов, и "/ subscriptions / {subscriptionId} / resourcegroups / {resourceGroupName} /providers/ {Пространство_имен_поставщиков_ресурсов} / {parentResourcePathIfPresent} / {Тип_ресурса} / {resourceName} "для ресурсов.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext'
+    name: 'listByScopeNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Возвращает всех блокировок управления для области.
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext_2'
+    name: 'listByScopeNext(string, RequestOptionsBase, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
+  - uid: '@azure/arm-locks.ManagementLocks.listByScopeNext_1'
+    name: 'listByScopeNext(string, ServiceCallback<ManagementLockListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByScopeNext(nextPageLink: string, callback: ServiceCallback<ManagementLockListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-locks.ManagementLockListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.ManagementLocksListByScopeNextResponse>
+    package: '@azure/arm-locks'
   - uid: '@azure/arm-locks.ManagementLocks.constructor'
     name: ManagementLocks(ManagementLockClientContext)
     children: []
@@ -1781,3 +1933,9 @@ references:
       - name: ManagementLocksListAtSubscriptionLevelOptionalParams
         fullName: ManagementLocksListAtSubscriptionLevelOptionalParams
         uid: '@azure/arm-locks.ManagementLocksListAtSubscriptionLevelOptionalParams'
+  - uid: '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'
+    name: ManagementLocksListByScopeOptionalParams
+    spec.typeScript:
+      - name: ManagementLocksListByScopeOptionalParams
+        fullName: ManagementLocksListByScopeOptionalParams
+        uid: '@azure/arm-locks.ManagementLocksListByScopeOptionalParams'

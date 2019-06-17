@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-storage.Restriction'
+    name: Restriction
+    fullName: Restriction
+    children:
+      - '@azure/arm-storage.Restriction.reasonCode'
+      - '@azure/arm-storage.Restriction.type'
+      - '@azure/arm-storage.Restriction.values'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Ограничение, из-за которой невозможно использовать SKU.'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.reasonCode'
+    name: reasonCode
+    fullName: reasonCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Причина в ограничении. На данный момент это может быть «Идентификатора квоты» или «NotAvailableForSubscription». Квота идентификатор задан в том случае, если SKU содержит параметр requiredQuotas, так как подписки не принадлежит данной квоты. «NotAvailableForSubscription» относится к емкости в центр Обработки данных. Ниже перечислены возможные значения. «Идентификатора квоты», «NotAvailableForSubscription»'
+    optional: true
+    syntax:
+      content: 'reasonCode?: ReasonCode'
+      return:
+        type:
+          - '@azure/arm-storage.ReasonCode'
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Тип ограничения. На данный момент только возможное значение для этого — расположение.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'type?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.Restriction.values'
+    name: values
+    fullName: values
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Значение ограничения. Если тип ограничения задано расположение. Это было бы разных местах, где ограничен SKU.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'values?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: '@azure/arm-storage'
+references:
+  - uid: '@azure/arm-storage.ReasonCode'
+    name: ReasonCode
+    spec.typeScript:
+      - name: ReasonCode
+        fullName: ReasonCode
+        uid: '@azure/arm-storage.ReasonCode'
