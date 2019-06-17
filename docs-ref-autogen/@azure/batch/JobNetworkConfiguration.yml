@@ -1,0 +1,29 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobNetworkConfiguration'
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - '@azure/batch.JobNetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий JobNetworkConfiguration.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobNetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор ARM ресурса подсети виртуальной сети, которую узлов под управлением задачи из задания, присоединяются к для время выполнения задачи. Поддерживается только для заданий, запущенных в пулы VirtualMachineConfiguration. Это имеет /subnets/ /virtualNetworks/ {network} /providers/ {provider} формы /subscriptions/ {subscription} /resourceGroups/ {группа} {подсети}.
+      Виртуальная сеть должна находиться в том же регионе и подписке, что учетная запись пакетной службы Azure.
+      Указанная подсеть должна иметь достаточно свободного IP-адресов, чтобы вместить количество узлов, которые будут выполняться задачи из задания. Дополнительные сведения см. в разделе https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'

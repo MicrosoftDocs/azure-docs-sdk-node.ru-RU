@@ -1,0 +1,98 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.OperationStatus'
+    name: OperationStatus
+    fullName: OperationStatus
+    children:
+      - '@azure/cognitiveservices-face.OperationStatus.createdTime'
+      - '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+      - '@azure/cognitiveservices-face.OperationStatus.message'
+      - '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+      - '@azure/cognitiveservices-face.OperationStatus.status'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Объект состояния операции. Операция относится к задаче асинхронной серверной части, включая создание снимка и применение моментального снимка.'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.createdTime'
+    name: createdTime
+    fullName: createdTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Объединенный строки даты и времени в формате UTC, который описывает время при операции (или изменения моментального снимка) запрашивается. (например, 2018-12-25T11:41:02.2331413Z.'
+    syntax:
+      content: 'createdTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.lastActionTime'
+    name: lastActionTime
+    fullName: lastActionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Объединенный Дата в формате UTC и время строку, описывающую последнего время операции (или изменения моментального снимка) активно переносите данные. LastActionTime будет хранить увеличения до завершения операции. (например, 2018-12-25T11:51:27.8705696Z.'
+    optional: true
+    syntax:
+      content: 'lastActionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.message'
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Показать сообщение об ошибке при сбое операции (не указывать, если операция выполнена успешно).'
+    optional: true
+    syntax:
+      content: 'message?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.resourceLocation'
+    name: resourceLocation
+    fullName: resourceLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Когда операция успешно выполнена успешно, это, для операции создания моментального снимка идентификатор моментального снимка будут включены в это поле и путь для получения целевого объекта для моментального снимка, применяя операцию, будет возвращаться в этом поле.'
+    optional: true
+    syntax:
+      content: 'resourceLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.OperationStatus.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Состояние операции: notstarted, запущена, выполнена успешно, сбой. Если запрошенная операция и ожидающих выполнения, находится в состоянии notstarted. Если операция выполняется в серверной части, состояние = запущен. Состояние успешного выполнения означает, что операция завершается успешно, специально для операции создания моментального снимка, он иллюстрирует моментального снимка также выбирается и готовность к применению, и для моментальных снимков, применяя операцию, представляет целевой объект завершил создание с моментальный снимок и все готово для использования. Состояние ошибки часто бывает вызвана редактирования исходного объекта при создании моментального снимка или редактирования целевого объекта во время применения моментального снимка до завершения, см. в разделе поле «сообщение» причины сбоя.
+      Возможные значения: «не запущено», «работает», «succeeded», «сбой»
+    syntax:
+      content: 'status: OperationStatusType'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.OperationStatusType'
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.OperationStatusType'
+    name: OperationStatusType
+    spec.typeScript:
+      - name: OperationStatusType
+        fullName: OperationStatusType
+        uid: '@azure/cognitiveservices-face.OperationStatusType'

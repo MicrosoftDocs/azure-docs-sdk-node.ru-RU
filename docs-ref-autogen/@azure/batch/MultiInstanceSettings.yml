@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    fullName: MultiInstanceSettings
+    children:
+      - '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+      - '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+      - '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Многоэкземплярные задачи обычно используются для поддержки задач MPI. В случае MPI, если любая из подзадач ошибкой (например из-за выхода из с кодом выхода ненулевой длины) всего несколькими экземплярами задача завершается с ошибкой. Затем задача с несколькими экземплярами завершается и выполняется повторно, пока не будет достигнут предел повтора.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.commonResourceFiles'
+    name: commonResourceFiles
+    fullName: commonResourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список файлов, которые пакетная служба скачает перед запуском командной строки координации. Разности между общими файлами ресурсов и файлами ресурсов задач является то, что общие файлы ресурсов скачиваются для всех подзадач, включая первичную реплику, тогда как файлы ресурсов задач скачиваются только для сервера-источника. Также Обратите внимание, что эти файлы ресурсов не загружаются рабочему каталогу задачи, но вместо этого загружаются в корневой каталог задачи (один каталог выше рабочий каталог).  Максимальный размер для список файлов ресурсов установлен.  При превышении максимального размера, запрос завершится ошибкой, и код ошибки ответа будет RequestEntityTooLarge. В этом случае коллекция ResourceFiles необходимо уменьшить размер. Это можно сделать с помощью ZIP-файлы, пакеты приложений или контейнеров Docker.'
+    optional: true
+    syntax:
+      content: 'commonResourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.coordinationCommandLine'
+    name: coordinationCommandLine
+    fullName: coordinationCommandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Командной строки для запуска на всех вычислительных узлах, чтобы включить их для координации, когда источник запускает команду основной задачи. Обычная Командная строка координации запускает фоновую службу и проверяет, что служба готова для обработки сообщений между узлами.'
+    syntax:
+      content: 'coordinationCommandLine: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+  - uid: '@azure/batch.MultiInstanceSettings.numberOfInstances'
+    name: numberOfInstances
+    fullName: numberOfInstances
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Число вычислительных узлов, необходимых задаче. Если не указано, значение по умолчанию равно 1.'
+    optional: true
+    syntax:
+      content: 'numberOfInstances?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'

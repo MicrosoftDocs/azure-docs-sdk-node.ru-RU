@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkConfiguration'
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+      - '@azure/batch.NetworkConfiguration.endpointConfiguration'
+      - '@azure/batch.NetworkConfiguration.subnetId'
+    langs:
+      - typeScript
+    type: interface
+    summary: Конфигурация сети для пула.
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.dynamicVNetAssignmentScope'
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Область назначения динамического виртуальной сети. Возможные значения: «none», «задания»'
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: DynamicVNetAssignmentScope'
+      return:
+        type:
+          - '@azure/batch.DynamicVNetAssignmentScope'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.endpointConfiguration'
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Конфигурации для конечных точек на вычислительных узлах в пуле пакетной службы. Конфигурация конечных точек пула поддерживается только в пулах со свойством virtualMachineConfiguration.
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - '@azure/batch.PoolEndpointConfiguration'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkConfiguration.subnetId'
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор ARM ресурса подсети виртуальной сети, которую, присоединяются к вычислительные узлы пула. Это имеет /subnets/ /virtualNetworks/ {network} /providers/ {provider} формы /subscriptions/ {subscription} /resourceGroups/ {группа} {подсети}.
+      Виртуальная сеть должна находиться в том же регионе и подписке, что учетная запись пакетной службы Azure.
+      Указанная подсеть должна иметь достаточно свободного IP-адресов, чтобы вместить количество узлов в пуле. Если подсеть не имеет достаточно свободного IP-адресов, пул выделит частично вычислительных узлов, и возникнет ошибка изменения размера. Для пулов, созданных с помощью virtualMachineConfiguration поддерживаются только ARM виртуальные сети («Microsoft.Network/virtualNetworks»), но для пулов, созданных с помощью cloudServiceConfiguration поддерживаются ARM и классических виртуальных сетей. Дополнительные сведения см. в разделе: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+    optional: true
+    syntax:
+      content: 'subnetId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DynamicVNetAssignmentScope'
+    name: DynamicVNetAssignmentScope
+    spec.typeScript:
+      - name: DynamicVNetAssignmentScope
+        fullName: DynamicVNetAssignmentScope
+        uid: '@azure/batch.DynamicVNetAssignmentScope'
+  - uid: '@azure/batch.PoolEndpointConfiguration'
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: '@azure/batch.PoolEndpointConfiguration'
