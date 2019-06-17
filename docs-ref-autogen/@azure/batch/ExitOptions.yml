@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.ExitOptions'
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - '@azure/batch.ExitOptions.dependencyAction'
+      - '@azure/batch.ExitOptions.jobAction'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="ead29-101">Интерфейс, представляющий ExitOptions.</span><span class="sxs-lookup"><span data-stu-id="ead29-101">An interface representing ExitOptions.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.dependencyAction'
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ead29-102">Действие, которое пакетная служба выполняет задачи, которые зависят от этой задачи.</span><span class="sxs-lookup"><span data-stu-id="ead29-102">An action that the Batch service performs on tasks that depend on this task.</span></span> <span data-ttu-id="ead29-103">Значение по умолчанию — «удовлетворяют» для кода выхода 0 и «блокировать» для всех остальных условий выхода.</span><span class="sxs-lookup"><span data-stu-id="ead29-103">The default is ''satisfy'' for exit code 0, and ''block'' for all other exit conditions.</span></span> <span data-ttu-id="ead29-104">Если задания usesTaskDependencies свойство имеет значение false, указав свойство dependencyAction возвращает ошибку и добавить поручение завершается с ошибкой значение недопустимое свойство; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="ead29-104">If the job''s usesTaskDependencies property is set to false, then specifying the dependencyAction property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400  (Bad Request).</span></span> <span data-ttu-id="ead29-105">Возможные значения: «удовлетворяют», «блокировать»</span><span class="sxs-lookup"><span data-stu-id="ead29-105">Possible values include: ''satisfy'', ''block''</span></span>'
+    optional: true
+    syntax:
+      content: 'dependencyAction?: DependencyAction'
+      return:
+        type:
+          - '@azure/batch.DependencyAction'
+    package: '@azure/batch'
+  - uid: '@azure/batch.ExitOptions.jobAction'
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="ead29-106">Действия, предпринимаемые на задания, содержащего задачу, если задача завершается с заданной выходного условия и onTaskFailed свойства задания — «performExitOptionsJobAction».</span><span class="sxs-lookup"><span data-stu-id="ead29-106">An action to take on the job containing the task, if the task completes with the given exit condition and the job''s onTaskFailed property is ''performExitOptionsJobAction''.</span></span> <span data-ttu-id="ead29-107">Значение по умолчанию имеет значение none для кода выхода 0 и завершения для всех остальных условий выхода.</span><span class="sxs-lookup"><span data-stu-id="ead29-107">The default is none for exit code 0 and terminate for all other exit conditions.</span></span> <span data-ttu-id="ead29-108">Если свойство onTaskFailed задания noaction, указав это свойство возвращает сообщение об ошибке, и добавить поручение завершается с ошибкой значение недопустимое свойство; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="ead29-108">If the job''s onTaskFailed property is noaction, then specifying this property returns an error and the add task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="ead29-109">Возможные значения: «none», «отключить», «terminate»</span><span class="sxs-lookup"><span data-stu-id="ead29-109">Possible values include: ''none'', ''disable'', ''terminate''</span></span>'
+    optional: true
+    syntax:
+      content: 'jobAction?: JobAction'
+      return:
+        type:
+          - '@azure/batch.JobAction'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.DependencyAction'
+    name: DependencyAction
+    spec.typeScript:
+      - name: DependencyAction
+        fullName: DependencyAction
+        uid: '@azure/batch.DependencyAction'
+  - uid: '@azure/batch.JobAction'
+    name: JobAction
+    spec.typeScript:
+      - name: JobAction
+        fullName: JobAction
+        uid: '@azure/batch.JobAction'
