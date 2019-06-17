@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-network.RouteFilter.etag'
       - '@azure/arm-network.RouteFilter.id'
+      - '@azure/arm-network.RouteFilter.ipv6Peerings'
       - '@azure/arm-network.RouteFilter.location'
       - '@azure/arm-network.RouteFilter.name'
       - '@azure/arm-network.RouteFilter.peerings'
@@ -16,7 +17,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="44eeb-101">Ресурс фильтра маршрута.</span><span class="sxs-lookup"><span data-stu-id="44eeb-101">Route Filter Resource.</span></span>
+    summary: <span data-ttu-id="f0c76-101">Ресурс фильтра маршрута.</span><span class="sxs-lookup"><span data-stu-id="f0c76-101">Route Filter Resource.</span></span>
     extends:
       name: '@azure/arm-network.Resource'
     package: '@azure/arm-network'
@@ -28,8 +29,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="44eeb-102">Получает уникальную строку только для чтения, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="44eeb-102">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
-      <span data-ttu-id="44eeb-103">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="44eeb-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="f0c76-102">Получает уникальную строку только для чтения, изменяется при изменении ресурса.</span><span class="sxs-lookup"><span data-stu-id="f0c76-102">Gets a unique read-only string that changes whenever the resource is updated.</span></span>
+      <span data-ttu-id="f0c76-103">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f0c76-103">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'etag?: undefined | string'
@@ -44,13 +45,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="44eeb-104">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="44eeb-104">Resource ID.</span></span>
+    summary: <span data-ttu-id="f0c76-104">Идентификатор ресурса.</span><span class="sxs-lookup"><span data-stu-id="f0c76-104">Resource ID.</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-network'
+  - uid: '@azure/arm-network.RouteFilter.ipv6Peerings'
+    name: ipv6Peerings
+    fullName: ipv6Peerings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f0c76-105">Коллекция ссылок на express пиринга ipv6 каналов маршрута.</span><span class="sxs-lookup"><span data-stu-id="f0c76-105">A collection of references to express route circuit ipv6 peerings.</span></span>
+    optional: true
+    syntax:
+      content: 'ipv6Peerings?: ExpressRouteCircuitPeering[]'
+      return:
+        type:
+          - '@azure/arm-network.ExpressRouteCircuitPeering[]'
     package: '@azure/arm-network'
   - uid: '@azure/arm-network.RouteFilter.location'
     name: location
@@ -59,7 +75,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="44eeb-105">Расположение ресурса.</span><span class="sxs-lookup"><span data-stu-id="44eeb-105">Resource location.</span></span>
+    summary: <span data-ttu-id="f0c76-106">Расположение ресурса.</span><span class="sxs-lookup"><span data-stu-id="f0c76-106">Resource location.</span></span>
     optional: true
     syntax:
       content: 'location?: undefined | string'
@@ -75,8 +91,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="44eeb-106">Имя ресурса.</span><span class="sxs-lookup"><span data-stu-id="44eeb-106">Resource name.</span></span>
-      <span data-ttu-id="44eeb-107">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="44eeb-107">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="f0c76-107">Имя ресурса.</span><span class="sxs-lookup"><span data-stu-id="f0c76-107">Resource name.</span></span>
+      <span data-ttu-id="f0c76-108">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f0c76-108">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'name?: undefined | string'
@@ -91,7 +107,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="44eeb-108">Коллекция ссылок на express route пиринга каналов.</span><span class="sxs-lookup"><span data-stu-id="44eeb-108">A collection of references to express route circuit peerings.</span></span>
+    summary: <span data-ttu-id="f0c76-109">Коллекция ссылок на express route пиринга каналов.</span><span class="sxs-lookup"><span data-stu-id="f0c76-109">A collection of references to express route circuit peerings.</span></span>
     optional: true
     syntax:
       content: 'peerings?: ExpressRouteCircuitPeering[]'
@@ -107,8 +123,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="44eeb-109">Состояние подготовки ресурса.</span><span class="sxs-lookup"><span data-stu-id="44eeb-109">The provisioning state of the resource.</span></span> <span data-ttu-id="44eeb-110">Возможные значения: «Обновление», «Удаление», «Succeeded» и «Сбой».</span><span class="sxs-lookup"><span data-stu-id="44eeb-110">Possible values are: 'Updating', 'Deleting', 'Succeeded' and 'Failed'.</span></span>
-      <span data-ttu-id="44eeb-111">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="44eeb-111">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="f0c76-110">Состояние подготовки ресурса.</span><span class="sxs-lookup"><span data-stu-id="f0c76-110">The provisioning state of the resource.</span></span> <span data-ttu-id="f0c76-111">Возможные значения: «Обновление», «Удаление», «Succeeded» и «Сбой».</span><span class="sxs-lookup"><span data-stu-id="f0c76-111">Possible values are: 'Updating', 'Deleting', 'Succeeded' and 'Failed'.</span></span>
+      <span data-ttu-id="f0c76-112">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f0c76-112">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'provisioningState?: undefined | string'
@@ -123,7 +139,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="44eeb-112">Коллекция RouteFilterRules, содержащихся в фильтр маршрутов.</span><span class="sxs-lookup"><span data-stu-id="44eeb-112">Collection of RouteFilterRules contained within a route filter.</span></span>'
+    summary: '<span data-ttu-id="f0c76-113">Коллекция RouteFilterRules, содержащихся в фильтр маршрутов.</span><span class="sxs-lookup"><span data-stu-id="f0c76-113">Collection of RouteFilterRules contained within a route filter.</span></span>'
     optional: true
     syntax:
       content: 'rules?: RouteFilterRule[]'
@@ -138,7 +154,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="44eeb-113">Теги ресурсов.</span><span class="sxs-lookup"><span data-stu-id="44eeb-113">Resource tags.</span></span>
+    summary: <span data-ttu-id="f0c76-114">Теги ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f0c76-114">Resource tags.</span></span>
     optional: true
     syntax:
       content: 'tags?: undefined | [key: string]: string'
@@ -154,8 +170,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="44eeb-114">Тип ресурса.</span><span class="sxs-lookup"><span data-stu-id="44eeb-114">Resource type.</span></span>
-      <span data-ttu-id="44eeb-115">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="44eeb-115">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="f0c76-115">Тип ресурса.</span><span class="sxs-lookup"><span data-stu-id="f0c76-115">Resource type.</span></span>
+      <span data-ttu-id="f0c76-116">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f0c76-116">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'type?: undefined | string'
