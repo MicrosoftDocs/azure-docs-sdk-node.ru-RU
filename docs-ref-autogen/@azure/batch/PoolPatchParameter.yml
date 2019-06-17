@@ -1,0 +1,106 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolPatchParameter'
+    name: PoolPatchParameter
+    fullName: PoolPatchParameter
+    children:
+      - '@azure/batch.PoolPatchParameter.applicationPackageReferences'
+      - '@azure/batch.PoolPatchParameter.certificateReferences'
+      - '@azure/batch.PoolPatchParameter.metadata'
+      - '@azure/batch.PoolPatchParameter.startTask'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="a0f88-101">Интерфейс, представляющий PoolPatchParameter.</span><span class="sxs-lookup"><span data-stu-id="a0f88-101">An interface representing PoolPatchParameter.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a0f88-102">Список пакетов приложений для установки на каждом вычислительном узле в пуле.</span><span class="sxs-lookup"><span data-stu-id="a0f88-102">The list of application packages to be installed on each compute node in the pool.</span></span> <span data-ttu-id="a0f88-103">Список заменяет любые существующие ссылки на пакет приложения в пуле.</span><span class="sxs-lookup"><span data-stu-id="a0f88-103">The list replaces any existing application package references on the pool.</span></span> <span data-ttu-id="a0f88-104">Изменения ссылки на пакет приложения влияют на все вычислительные узлы объединения в пул, но не влияют на вычислительных узлах, которые уже находятся в пуле до перезагрузки или повторного создания образа.</span><span class="sxs-lookup"><span data-stu-id="a0f88-104">Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="a0f88-105">Можно использовать не более 10 ссылок на пакет приложения для любого пула.</span><span class="sxs-lookup"><span data-stu-id="a0f88-105">There is a maximum of 10 application package references on any given pool.</span></span> <span data-ttu-id="a0f88-106">Если этот параметр опущен, любой существующий пакет приложения, ссылки остаются без изменений.</span><span class="sxs-lookup"><span data-stu-id="a0f88-106">If omitted, any existing application package references are left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.certificateReferences'
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a0f88-107">Список сертификатов, должны быть установлены на каждом вычислительном узле в пуле.</span><span class="sxs-lookup"><span data-stu-id="a0f88-107">A list of certificates to be installed on each compute node in the pool.</span></span> <span data-ttu-id="a0f88-108">Если этот элемент присутствует, он заменяет любой существующий сертификат ссылки, настроенные в пуле.</span><span class="sxs-lookup"><span data-stu-id="a0f88-108">If this element is present, it replaces any existing certificate references configured on the pool.</span></span> <span data-ttu-id="a0f88-109">Если этот параметр опущен, любой существующий сертификат ссылки остаются без изменений.</span><span class="sxs-lookup"><span data-stu-id="a0f88-109">If omitted, any existing certificate references are left unchanged.</span></span> <span data-ttu-id="a0f88-110">Для Windows вычислительных узлов, пакетная служба устанавливает сертификаты для хранилища сертификатов и расположение.</span><span class="sxs-lookup"><span data-stu-id="a0f88-110">For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location.</span></span> <span data-ttu-id="a0f88-111">Для вычислительных узлов Linux сертификаты, хранятся в каталог в рабочем каталоге задачи и среде, которую переменной AZ_BATCH_CERTIFICATES_DIR передается запрос для этого расположения.</span><span class="sxs-lookup"><span data-stu-id="a0f88-111">For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location.</span></span> <span data-ttu-id="a0f88-112">Для сертификатов с видимостью «remoteUser» каталог «сертификаты» создается в домашнем каталоге пользователя (например, /home/ {имя_пользователя} / certs) и сертификаты помещаются в этот каталог.</span><span class="sxs-lookup"><span data-stu-id="a0f88-112">For certificates with visibility of ''remoteUser'', a ''certs'' directory is created in the user''s home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - '@azure/batch.CertificateReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.metadata'
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a0f88-113">Список пар "имя значение", связанных с пулом как метаданные.</span><span class="sxs-lookup"><span data-stu-id="a0f88-113">A list of name-value pairs associated with the pool as metadata.</span></span> <span data-ttu-id="a0f88-114">Если этот элемент присутствует, он заменяет все существующие метаданные, которые настроены в пуле.</span><span class="sxs-lookup"><span data-stu-id="a0f88-114">If this element is present, it replaces any existing metadata configured on the pool.</span></span> <span data-ttu-id="a0f88-115">Если указать пустую коллекцию, все метаданные, удаляется из пула.</span><span class="sxs-lookup"><span data-stu-id="a0f88-115">If you specify an empty collection, any metadata is removed from the pool.</span></span> <span data-ttu-id="a0f88-116">Если этот параметр опущен, все существующие метаданные остается без изменений.</span><span class="sxs-lookup"><span data-stu-id="a0f88-116">If omitted, any existing metadata is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - '@azure/batch.MetadataItem[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolPatchParameter.startTask'
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="a0f88-117">Задача для запуска на каждом вычислительном узле, когда он присоединяется к пулу.</span><span class="sxs-lookup"><span data-stu-id="a0f88-117">A task to run on each compute node as it joins the pool.</span></span> <span data-ttu-id="a0f88-118">Задача выполняется при добавлении узла к пулу или при перезапуске узла.</span><span class="sxs-lookup"><span data-stu-id="a0f88-118">The task runs when the node is added to the pool or when the node is restarted.</span></span> <span data-ttu-id="a0f88-119">Если этот элемент присутствует, он переопределяет любые существующие задачи запуска.</span><span class="sxs-lookup"><span data-stu-id="a0f88-119">If this element is present, it overwrites any existing start task.</span></span> <span data-ttu-id="a0f88-120">Если этот параметр опущен, любой существующей задачи начала остается без изменений.</span><span class="sxs-lookup"><span data-stu-id="a0f88-120">If omitted, any existing start task is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - '@azure/batch.StartTask'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: '@azure/batch.CertificateReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: '@azure/batch.MetadataItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.StartTask'
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: '@azure/batch.StartTask'

@@ -1,0 +1,537 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.DatabaseUpdate'
+    name: DatabaseUpdate
+    fullName: DatabaseUpdate
+    children:
+      - '@azure/arm-sql.DatabaseUpdate.catalogCollation'
+      - '@azure/arm-sql.DatabaseUpdate.collation'
+      - '@azure/arm-sql.DatabaseUpdate.createMode'
+      - '@azure/arm-sql.DatabaseUpdate.creationDate'
+      - '@azure/arm-sql.DatabaseUpdate.currentServiceObjectiveName'
+      - '@azure/arm-sql.DatabaseUpdate.currentSku'
+      - '@azure/arm-sql.DatabaseUpdate.databaseId'
+      - '@azure/arm-sql.DatabaseUpdate.defaultSecondaryLocation'
+      - '@azure/arm-sql.DatabaseUpdate.earliestRestoreDate'
+      - '@azure/arm-sql.DatabaseUpdate.elasticPoolId'
+      - '@azure/arm-sql.DatabaseUpdate.failoverGroupId'
+      - '@azure/arm-sql.DatabaseUpdate.licenseType'
+      - '@azure/arm-sql.DatabaseUpdate.longTermRetentionBackupResourceId'
+      - '@azure/arm-sql.DatabaseUpdate.maxLogSizeBytes'
+      - '@azure/arm-sql.DatabaseUpdate.maxSizeBytes'
+      - '@azure/arm-sql.DatabaseUpdate.readScale'
+      - '@azure/arm-sql.DatabaseUpdate.recoverableDatabaseId'
+      - '@azure/arm-sql.DatabaseUpdate.recoveryServicesRecoveryPointId'
+      - '@azure/arm-sql.DatabaseUpdate.requestedServiceObjectiveName'
+      - '@azure/arm-sql.DatabaseUpdate.restorableDroppedDatabaseId'
+      - '@azure/arm-sql.DatabaseUpdate.restorePointInTime'
+      - '@azure/arm-sql.DatabaseUpdate.sampleName'
+      - '@azure/arm-sql.DatabaseUpdate.sku'
+      - '@azure/arm-sql.DatabaseUpdate.sourceDatabaseDeletionDate'
+      - '@azure/arm-sql.DatabaseUpdate.sourceDatabaseId'
+      - '@azure/arm-sql.DatabaseUpdate.status'
+      - '@azure/arm-sql.DatabaseUpdate.tags'
+      - '@azure/arm-sql.DatabaseUpdate.zoneRedundant'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="f5d66-101">Ресурс базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-101">A database resource.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.catalogCollation'
+    name: catalogCollation
+    fullName: catalogCollation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-102">Параметры сортировки каталога метаданных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-102">Collation of the metadata catalog.</span></span> <span data-ttu-id="f5d66-103">Ниже перечислены возможные значения. ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS''</span><span class="sxs-lookup"><span data-stu-id="f5d66-103">Possible values include: ''DATABASE_DEFAULT'', ''SQL_Latin1_General_CP1_CI_AS''</span></span>'
+    optional: true
+    syntax:
+      content: 'catalogCollation?: CatalogCollationType'
+      return:
+        type:
+          - '@azure/arm-sql.CatalogCollationType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.collation'
+    name: collation
+    fullName: collation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f5d66-104">Параметры сортировки базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-104">The collation of the database.</span></span>
+    optional: true
+    syntax:
+      content: 'collation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.createMode'
+    name: createMode
+    fullName: createMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="f5d66-105">Указывает режим создания базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-105">Specifies the mode of database creation.</span></span>
+      <span data-ttu-id="f5d66-106">Значение по умолчанию — создания обычной базой данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-106">Default: regular database creation.</span></span>
+
+      <span data-ttu-id="f5d66-107">Копия: создает базу данных как копию существующей базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-107">Copy: creates a database as a copy of an existing database.</span></span> <span data-ttu-id="f5d66-108">sourceDatabaseId должно быть указано как идентификатор ресурса базы данных-источника.</span><span class="sxs-lookup"><span data-stu-id="f5d66-108">sourceDatabaseId must be specified as the resource ID of the source database.</span></span>
+
+      <span data-ttu-id="f5d66-109">Вторичный: создает базу данных в качестве вторичной реплики из существующей базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-109">Secondary: creates a database as a secondary replica of an existing database.</span></span> <span data-ttu-id="f5d66-110">sourceDatabaseId должно быть указано как идентификатор существующей базы данных-источника.</span><span class="sxs-lookup"><span data-stu-id="f5d66-110">sourceDatabaseId must be specified as the resource ID of the existing primary database.</span></span>
+
+      <span data-ttu-id="f5d66-111">Обновление: Создает базу данных, восстановив моменту времени резервного копирования существующей базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-111">PointInTimeRestore: Creates a database by restoring a point in time backup of an existing database.</span></span> <span data-ttu-id="f5d66-112">sourceDatabaseId должно быть указано как идентификатор ресурса для существующей базы данных, а restorePointInTime должен быть указан.</span><span class="sxs-lookup"><span data-stu-id="f5d66-112">sourceDatabaseId must be specified as the resource ID of the existing database, and restorePointInTime must be specified.</span></span>
+
+      <span data-ttu-id="f5d66-113">Восстановление: Создает базу данных из резервной копии географически реплицированных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-113">Recovery: Creates a database by restoring a geo-replicated backup.</span></span> <span data-ttu-id="f5d66-114">sourceDatabaseId должно быть указано как идентификатор восстанавливаемой базы данных для восстановления.</span><span class="sxs-lookup"><span data-stu-id="f5d66-114">sourceDatabaseId must be specified as the recoverable database resource ID to restore.</span></span>
+
+      <span data-ttu-id="f5d66-115">Восстановление: Создает базу данных путем восстановления резервной копии удаленной базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-115">Restore: Creates a database by restoring a backup of a deleted database.</span></span> <span data-ttu-id="f5d66-116">необходимо указать sourceDatabaseId.</span><span class="sxs-lookup"><span data-stu-id="f5d66-116">sourceDatabaseId must be specified.</span></span> <span data-ttu-id="f5d66-117">Если sourceDatabaseId исходный идентификатор ресурса базы данных, должен быть указан sourceDatabaseDeletionDate.</span><span class="sxs-lookup"><span data-stu-id="f5d66-117">If sourceDatabaseId is the database's original resource ID, then sourceDatabaseDeletionDate must be specified.</span></span> <span data-ttu-id="f5d66-118">В противном случае sourceDatabaseId должен быть идентификатор ресурса для восстановления удаленной базы данных и sourceDatabaseDeletionDate учитывается.</span><span class="sxs-lookup"><span data-stu-id="f5d66-118">Otherwise sourceDatabaseId must be the restorable dropped database resource ID and sourceDatabaseDeletionDate is ignored.</span></span>
+      <span data-ttu-id="f5d66-119">также можно указать restorePointInTime восстановление на более ранний момент времени.</span><span class="sxs-lookup"><span data-stu-id="f5d66-119">restorePointInTime may also be specified to restore from an earlier point in time.</span></span>
+
+      <span data-ttu-id="f5d66-120">RestoreLongTermRetentionBackup: Создает базу данных путем восстановления из хранилища долгосрочного хранения.</span><span class="sxs-lookup"><span data-stu-id="f5d66-120">RestoreLongTermRetentionBackup: Creates a database by restoring from a long term retention vault.</span></span> <span data-ttu-id="f5d66-121">recoveryServicesRecoveryPointResourceId должно быть указано как идентификатор ресурса точки восстановления</span><span class="sxs-lookup"><span data-stu-id="f5d66-121">recoveryServicesRecoveryPointResourceId must be specified as the recovery point resource ID.</span></span>
+
+      <span data-ttu-id="f5d66-122">Копирование, дополнительный и RestoreLongTermRetentionBackup не поддерживаются для выпуска хранилища данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-122">Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.</span></span> <span data-ttu-id="f5d66-123">Ниже перечислены возможные значения. «По умолчанию», «Копировать», «Получатель», «Обновление», «восстановить», «Восстановления», «RestoreExternalBackup», «RestoreExternalBackupSecondary», «RestoreLongTermRetentionBackup», «OnlineSecondary»</span><span class="sxs-lookup"><span data-stu-id="f5d66-123">Possible values include: 'Default', 'Copy', 'Secondary', 'PointInTimeRestore', 'Restore', 'Recovery', 'RestoreExternalBackup', 'RestoreExternalBackupSecondary', 'RestoreLongTermRetentionBackup', 'OnlineSecondary'</span></span>
+    optional: true
+    syntax:
+      content: 'createMode?: CreateMode'
+      return:
+        type:
+          - '@azure/arm-sql.CreateMode'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.creationDate'
+    name: creationDate
+    fullName: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-124">Дата создания базы данных (в формате ISO8601).</span><span class="sxs-lookup"><span data-stu-id="f5d66-124">The creation date of the database (ISO8601 format).</span></span>
+      <span data-ttu-id="f5d66-125">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-125">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'creationDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.currentServiceObjectiveName'
+    name: currentServiceObjectiveName
+    fullName: currentServiceObjectiveName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-126">Текущий уровень цели имя службы базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-126">The current service level objective name of the database.</span></span>
+      <span data-ttu-id="f5d66-127">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-127">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'currentServiceObjectiveName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.currentSku'
+    name: currentSku
+    fullName: currentSku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-128">Имя и уровень номера SKU.</span><span class="sxs-lookup"><span data-stu-id="f5d66-128">The name and tier of the SKU.</span></span>
+      <span data-ttu-id="f5d66-129">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-129">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'currentSku?: Sku'
+      return:
+        type:
+          - '@azure/arm-sql.Sku'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.databaseId'
+    name: databaseId
+    fullName: databaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-130">Идентификатор базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-130">The ID of the database.</span></span>
+      <span data-ttu-id="f5d66-131">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-131">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'databaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.defaultSecondaryLocation'
+    name: defaultSecondaryLocation
+    fullName: defaultSecondaryLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-132">Дополнительный регион по умолчанию для этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-132">The default secondary region for this database.</span></span>
+      <span data-ttu-id="f5d66-133">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-133">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'defaultSecondaryLocation?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.earliestRestoreDate'
+    name: earliestRestoreDate
+    fullName: earliestRestoreDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-134">Это записывается раннюю дату начала и времени, восстановление доступно для этой базы данных (в формате ISO8601).</span><span class="sxs-lookup"><span data-stu-id="f5d66-134">This records the earliest start date and time that restore is available for this database (ISO8601 format).</span></span>
+      <span data-ttu-id="f5d66-135">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-135">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'earliestRestoreDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.elasticPoolId'
+    name: elasticPoolId
+    fullName: elasticPoolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-136">Идентификатор ресурса эластичного пула, содержащего эту базу данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-136">The resource identifier of the elastic pool containing this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'elasticPoolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.failoverGroupId'
+    name: failoverGroupId
+    fullName: failoverGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-137">Идентификатор ресурса группы отработки отказа, к которой принадлежит эта база данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-137">Failover Group resource identifier that this database belongs to.</span></span>
+      <span data-ttu-id="f5d66-138">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-138">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'failoverGroupId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.licenseType'
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-139">Тип лицензии, чтобы применить для этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-139">The license type to apply for this database.</span></span> <span data-ttu-id="f5d66-140">Ниже перечислены возможные значения. «LicenseIncluded», «BasePrice»</span><span class="sxs-lookup"><span data-stu-id="f5d66-140">Possible values include: ''LicenseIncluded'', ''BasePrice''</span></span>'
+    optional: true
+    syntax:
+      content: 'licenseType?: DatabaseLicenseType'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseLicenseType'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.longTermRetentionBackupResourceId'
+    name: longTermRetentionBackupResourceId
+    fullName: longTermRetentionBackupResourceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-141">Идентификатор ресурса для долгосрочного хранения резервной копии, связанный с создания этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-141">The resource identifier of the long term retention backup associated with create operation of this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'longTermRetentionBackupResourceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.maxLogSizeBytes'
+    name: maxLogSizeBytes
+    fullName: maxLogSizeBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-142">Максимальный размер журнала для этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-142">The max log size for this database.</span></span>
+      <span data-ttu-id="f5d66-143">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-143">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'maxLogSizeBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.maxSizeBytes'
+    name: maxSizeBytes
+    fullName: maxSizeBytes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f5d66-144">Максимальный размер базы данных в байтах.</span><span class="sxs-lookup"><span data-stu-id="f5d66-144">The max size of the database expressed in bytes.</span></span>
+    optional: true
+    syntax:
+      content: 'maxSizeBytes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.readScale'
+    name: readScale
+    fullName: readScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-145">Состояние маршрутизации только для чтения.</span><span class="sxs-lookup"><span data-stu-id="f5d66-145">The state of read-only routing.</span></span> <span data-ttu-id="f5d66-146">Если параметр включен, подключений, которые имеют значение только для чтения в своей строке подключения намерение приложения может перенаправляться на вторичную реплику только для чтения, в том же регионе.</span><span class="sxs-lookup"><span data-stu-id="f5d66-146">If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.</span></span> <span data-ttu-id="f5d66-147">Ниже перечислены возможные значения. «Включено», «Отключено»</span><span class="sxs-lookup"><span data-stu-id="f5d66-147">Possible values include: ''Enabled'', ''Disabled''</span></span>'
+    optional: true
+    syntax:
+      content: 'readScale?: DatabaseReadScale'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseReadScale'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.recoverableDatabaseId'
+    name: recoverableDatabaseId
+    fullName: recoverableDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-148">Идентификатор ресурса для восстанавливаемой базы данных, связанных с создания этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-148">The resource identifier of the recoverable database associated with create operation of this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'recoverableDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.recoveryServicesRecoveryPointId'
+    name: recoveryServicesRecoveryPointId
+    fullName: recoveryServicesRecoveryPointId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-149">Идентификатор ресурса для точки восстановления, связанной с создания этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-149">The resource identifier of the recovery point associated with create operation of this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'recoveryServicesRecoveryPointId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.requestedServiceObjectiveName'
+    name: requestedServiceObjectiveName
+    fullName: requestedServiceObjectiveName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f5d66-150">Запрошенная служба цели имя уровня базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-150">The requested service level objective name of the database.</span></span>
+      <span data-ttu-id="f5d66-151">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-151">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+    optional: true
+    syntax:
+      content: 'requestedServiceObjectiveName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.restorableDroppedDatabaseId'
+    name: restorableDroppedDatabaseId
+    fullName: restorableDroppedDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-152">Идентификатор ресурса для восстановления удаленной базы данных, связанных с создания этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-152">The resource identifier of the restorable dropped database associated with create operation of this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'restorableDroppedDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.restorePointInTime'
+    name: restorePointInTime
+    fullName: restorePointInTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-153">Указывает точку во времени (в формате ISO8601) базы данных-источника, для создания новой базы данных будет восстановлена.</span><span class="sxs-lookup"><span data-stu-id="f5d66-153">Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.</span></span>'
+    optional: true
+    syntax:
+      content: 'restorePointInTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.sampleName'
+    name: sampleName
+    fullName: sampleName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-154">Имя примера схемы для применения при создании этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-154">The name of the sample schema to apply when creating this database.</span></span> <span data-ttu-id="f5d66-155">Ниже перечислены возможные значения. «AdventureWorksLT», «WideWorldImportersStd», «WideWorldImportersFull»</span><span class="sxs-lookup"><span data-stu-id="f5d66-155">Possible values include: ''AdventureWorksLT'', ''WideWorldImportersStd'', ''WideWorldImportersFull''</span></span>'
+    optional: true
+    syntax:
+      content: 'sampleName?: SampleName'
+      return:
+        type:
+          - '@azure/arm-sql.SampleName'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.sku'
+    name: sku
+    fullName: sku
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f5d66-156">Имя и уровень номера SKU.</span><span class="sxs-lookup"><span data-stu-id="f5d66-156">The name and tier of the SKU.</span></span>
+    optional: true
+    syntax:
+      content: 'sku?: Sku'
+      return:
+        type:
+          - '@azure/arm-sql.Sku'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.sourceDatabaseDeletionDate'
+    name: sourceDatabaseDeletionDate
+    fullName: sourceDatabaseDeletionDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-157">Указывает время, когда база данных удалена.</span><span class="sxs-lookup"><span data-stu-id="f5d66-157">Specifies the time that the database was deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'sourceDatabaseDeletionDate?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.sourceDatabaseId'
+    name: sourceDatabaseId
+    fullName: sourceDatabaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-158">Идентификатор ресурса исходной базы данных, связанных с создания этой базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-158">The resource identifier of the source database associated with create operation of this database.</span></span>'
+    optional: true
+    syntax:
+      content: 'sourceDatabaseId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.status'
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-159">Состояние базы данных.</span><span class="sxs-lookup"><span data-stu-id="f5d66-159">The status of the database.</span></span> <span data-ttu-id="f5d66-160">Ниже перечислены возможные значения. «Сети», «Восстановление», «RecoveryPending», «Восстановление», «Предполагаете, что», «Вне сети», «Резервный», «Завершение работы», «EmergencyMode», «Автоматически закрыта», «Копирование», «Создание», «Недоступна», «OfflineSecondary», «Приостановка», «остановлено», «Возобновление», «Масштабирование» **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f5d66-160">Possible values include: ''Online'', ''Restoring'', ''RecoveryPending'', ''Recovering'', ''Suspect'', ''Offline'', ''Standby'', ''Shutdown'', ''EmergencyMode'', ''AutoClosed'', ''Copying'', ''Creating'', ''Inaccessible'', ''OfflineSecondary'', ''Pausing'', ''Paused'', ''Resuming'', ''Scaling'' **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    optional: true
+    syntax:
+      content: 'status?: DatabaseStatus'
+      return:
+        type:
+          - '@azure/arm-sql.DatabaseStatus'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.tags'
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="f5d66-161">Теги ресурсов.</span><span class="sxs-lookup"><span data-stu-id="f5d66-161">Resource tags.</span></span>
+    optional: true
+    syntax:
+      content: 'tags?: undefined | [key: string]: string'
+      return:
+        type:
+          - 'undefined | [key: string]: string'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.DatabaseUpdate.zoneRedundant'
+    name: zoneRedundant
+    fullName: zoneRedundant
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f5d66-162">Ли эта база данных является избыточным в пределах зоны, что означает реплики этой базы данных будут распределены в нескольких зонах доступности.</span><span class="sxs-lookup"><span data-stu-id="f5d66-162">Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.</span></span>'
+    optional: true
+    syntax:
+      content: 'zoneRedundant?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.CatalogCollationType'
+    name: CatalogCollationType
+    spec.typeScript:
+      - name: CatalogCollationType
+        fullName: CatalogCollationType
+        uid: '@azure/arm-sql.CatalogCollationType'
+  - uid: '@azure/arm-sql.CreateMode'
+    name: CreateMode
+    spec.typeScript:
+      - name: CreateMode
+        fullName: CreateMode
+        uid: '@azure/arm-sql.CreateMode'
+  - uid: '@azure/arm-sql.Sku'
+    name: Sku
+    spec.typeScript:
+      - name: Sku
+        fullName: Sku
+        uid: '@azure/arm-sql.Sku'
+  - uid: '@azure/arm-sql.DatabaseLicenseType'
+    name: DatabaseLicenseType
+    spec.typeScript:
+      - name: DatabaseLicenseType
+        fullName: DatabaseLicenseType
+        uid: '@azure/arm-sql.DatabaseLicenseType'
+  - uid: '@azure/arm-sql.DatabaseReadScale'
+    name: DatabaseReadScale
+    spec.typeScript:
+      - name: DatabaseReadScale
+        fullName: DatabaseReadScale
+        uid: '@azure/arm-sql.DatabaseReadScale'
+  - uid: '@azure/arm-sql.SampleName'
+    name: SampleName
+    spec.typeScript:
+      - name: SampleName
+        fullName: SampleName
+        uid: '@azure/arm-sql.SampleName'
+  - uid: '@azure/arm-sql.DatabaseStatus'
+    name: DatabaseStatus
+    spec.typeScript:
+      - name: DatabaseStatus
+        fullName: DatabaseStatus
+        uid: '@azure/arm-sql.DatabaseStatus'
