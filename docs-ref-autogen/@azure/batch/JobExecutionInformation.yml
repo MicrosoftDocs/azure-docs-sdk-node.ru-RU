@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.JobExecutionInformation'
+    name: JobExecutionInformation
+    fullName: JobExecutionInformation
+    children:
+      - '@azure/batch.JobExecutionInformation.endTime'
+      - '@azure/batch.JobExecutionInformation.poolId'
+      - '@azure/batch.JobExecutionInformation.schedulingError'
+      - '@azure/batch.JobExecutionInformation.startTime'
+      - '@azure/batch.JobExecutionInformation.terminateReason'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий JobExecutionInformation.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.endTime'
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время завершения задания. Это свойство задается только в том случае, если задание находится в завершенном состоянии.'
+    optional: true
+    syntax:
+      content: 'endTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.poolId'
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор пула, к которому назначено это задание. Этот элемент содержит фактические пула, которой присваивается задание. При получении сведений о задании из службы, они также содержат poolInfo элемент, который содержит данные о конфигурации пула из при добавлении или обновлении задания.
+      Этот элемент poolInfo также может содержать элемент poolId. В этом случае два идентификатора одинаковы.
+      Если этого не произошло, это означает, что запущено задание на автоматический пул, и это свойство содержит идентификатор этого автоматического пула.
+    optional: true
+    syntax:
+      content: 'poolId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.schedulingError'
+    name: schedulingError
+    fullName: schedulingError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Сведения о любой ошибке службой при запуске задания. Это свойство не задано, если нет ошибок, запуск задания.'
+    optional: true
+    syntax:
+      content: 'schedulingError?: JobSchedulingError'
+      return:
+        type:
+          - '@azure/batch.JobSchedulingError'
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.startTime'
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время начала задания. Это время, с которого было создано задание.'
+    syntax:
+      content: 'startTime: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.JobExecutionInformation.terminateReason'
+    name: terminateReason
+    fullName: terminateReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Строка, описывающая причину задание завершено. Это свойство задается только в том случае, если задание находится в завершенном состоянии. Если пакетная служба завершит задание, он задает причину следующим образом: JMComplete - задача диспетчера заданий завершена и killJobOnCompletion было задано значение true.
+      MaxWallClockTimeExpiry - задание достигнут его ограничение maxWallClockTime. TerminateJobSchedule
+      - запущено задание как часть плана, и расписание прерван. AllTasksComplete - задания onAllTasksComplete атрибут имеет значение terminatejob и выполнены все задачи в задании.
+      TaskFailed - задания onTaskFailure атрибуту присваивается performExitOptionsJobAction и задачи в задании завершилась условия выхода, который указан jobAction terminatejob. Любая другая строка является заданная пользователем причина, указанный в вызове операции «Завершения задания».
+    optional: true
+    syntax:
+      content: 'terminateReason?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.JobSchedulingError'
+    name: JobSchedulingError
+    spec.typeScript:
+      - name: JobSchedulingError
+        fullName: JobSchedulingError
+        uid: '@azure/batch.JobSchedulingError'
