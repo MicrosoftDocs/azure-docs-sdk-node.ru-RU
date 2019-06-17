@@ -1,0 +1,532 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CloudTask'
+    name: CloudTask
+    fullName: CloudTask
+    children:
+      - '@azure/batch.CloudTask.affinityInfo'
+      - '@azure/batch.CloudTask.applicationPackageReferences'
+      - '@azure/batch.CloudTask.authenticationTokenSettings'
+      - '@azure/batch.CloudTask.commandLine'
+      - '@azure/batch.CloudTask.constraints'
+      - '@azure/batch.CloudTask.containerSettings'
+      - '@azure/batch.CloudTask.creationTime'
+      - '@azure/batch.CloudTask.dependsOn'
+      - '@azure/batch.CloudTask.displayName'
+      - '@azure/batch.CloudTask.environmentSettings'
+      - '@azure/batch.CloudTask.eTag'
+      - '@azure/batch.CloudTask.executionInfo'
+      - '@azure/batch.CloudTask.exitConditions'
+      - '@azure/batch.CloudTask.id'
+      - '@azure/batch.CloudTask.lastModified'
+      - '@azure/batch.CloudTask.multiInstanceSettings'
+      - '@azure/batch.CloudTask.nodeInfo'
+      - '@azure/batch.CloudTask.outputFiles'
+      - '@azure/batch.CloudTask.previousState'
+      - '@azure/batch.CloudTask.previousStateTransitionTime'
+      - '@azure/batch.CloudTask.resourceFiles'
+      - '@azure/batch.CloudTask.state'
+      - '@azure/batch.CloudTask.stateTransitionTime'
+      - '@azure/batch.CloudTask.stats'
+      - '@azure/batch.CloudTask.url'
+      - '@azure/batch.CloudTask.userIdentity'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="c0405-101">Пакет повторит задачи, когда операция восстановления запускается на вычислительном узле.</span><span class="sxs-lookup"><span data-stu-id="c0405-101">Batch will retry tasks when a recovery operation is triggered on a compute node.</span></span> <span data-ttu-id="c0405-102">Примеры операций восстановления причинами (но не ограничиваются) при перезагрузке неработоспособное вычислительном узле или вычислительного узла не отображается из-за сбоя узла.</span><span class="sxs-lookup"><span data-stu-id="c0405-102">Examples of recovery operations include (but are not limited to) when an unhealthy compute node is rebooted or a compute node disappeared due to host failure.</span></span> <span data-ttu-id="c0405-103">Повторно из-за восстановления операций независимы и не учитываются для maxTaskRetryCount.</span><span class="sxs-lookup"><span data-stu-id="c0405-103">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="c0405-104">Даже если maxTaskRetryCount равно 0, может возникнуть внутренних повторных попыток из-за операции восстановления.</span><span class="sxs-lookup"><span data-stu-id="c0405-104">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="c0405-105">По этой причине все задачи должны быть идемпотентными.</span><span class="sxs-lookup"><span data-stu-id="c0405-105">Because of this, all tasks should be idempotent.</span></span> <span data-ttu-id="c0405-106">Это означает, что задачи должны допускать прервана и перезапущена без возникновения любые повреждения или повторяющиеся данные.</span><span class="sxs-lookup"><span data-stu-id="c0405-106">This means tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="c0405-107">Лучшие практики для долго выполняющихся задач является использование определенные виды создания контрольных точек.</span><span class="sxs-lookup"><span data-stu-id="c0405-107">The best practice for long running tasks is to use some form of checkpointing.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.affinityInfo'
+    name: affinityInfo
+    fullName: affinityInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-108">Подсказку расположения, в которую можно использоваться пакетной службой для выбора вычислительных узлов, в котором запускается новая задача.</span><span class="sxs-lookup"><span data-stu-id="c0405-108">A locality hint that can be used by the Batch service to select a compute node on which to start the new task.</span></span>'
+    optional: true
+    syntax:
+      content: 'affinityInfo?: AffinityInformation'
+      return:
+        type:
+          - '@azure/batch.AffinityInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.applicationPackageReferences'
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-109">Список пакетов приложений, которые пакетная служба будет развернуть на вычислительном узле перед запуском командной строки.</span><span class="sxs-lookup"><span data-stu-id="c0405-109">A list of application packages that the Batch service will deploy to the compute node before running the command line.</span></span> <span data-ttu-id="c0405-110">Пакеты приложений загрузку и развертывание в общий каталог, не рабочем каталоге задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-110">Application packages are downloaded and deployed to a shared directory, not the task working directory.</span></span> <span data-ttu-id="c0405-111">Таким образом Если указанный по ссылке пакет уже находится на вычислительном узле и в актуальном состоянии, то оно не повторно загружается; используется имеющуюся копию на вычислительном узле.</span><span class="sxs-lookup"><span data-stu-id="c0405-111">Therefore, if a referenced package is already on the compute node, and is up to date, then it is not re-downloaded; the existing copy on the compute node is used.</span></span> <span data-ttu-id="c0405-112">Если в пакет приложения, на который указывает ссылка невозможно установить, например потому, что пакет был удален, или из-за сбоя загрузки, задача завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="c0405-112">If a referenced application package cannot be installed, for example because the package has been deleted or because download failed, the task fails.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - '@azure/batch.ApplicationPackageReference[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.authenticationTokenSettings'
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-113">Параметры для маркера проверки подлинности, ее можно использовать для выполнения операций пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="c0405-113">The settings for an authentication token that the task can use to perform Batch service operations.</span></span> <span data-ttu-id="c0405-114">Если это свойство имеет значение, пакетная служба предоставляет задачи с помощью маркера проверки подлинности, который может использоваться для проверки подлинности операций пакетной службы, не требуя ключ доступа учетной записи.</span><span class="sxs-lookup"><span data-stu-id="c0405-114">If this property is set, the Batch service provides the task with an authentication token which can be used to authenticate Batch service operations without requiring an account access key.</span></span> <span data-ttu-id="c0405-115">Маркер предоставляется через переменную среды AZ_BATCH_AUTHENTICATION_TOKEN.</span><span class="sxs-lookup"><span data-stu-id="c0405-115">The token is provided via the AZ_BATCH_AUTHENTICATION_TOKEN environment variable.</span></span> <span data-ttu-id="c0405-116">Операции, которые можно выполнять с помощью токена задачи зависят от параметров.</span><span class="sxs-lookup"><span data-stu-id="c0405-116">The operations that the task can carry out using the token depend on the settings.</span></span> <span data-ttu-id="c0405-117">Например задача может запрашивать разрешения задание для добавления других задач в задание, или проверить состояние задания или других задач в задании.</span><span class="sxs-lookup"><span data-stu-id="c0405-117">For example, a task can request job permissions in order to add other tasks to the job, or check the status of the job or of other tasks under the job.</span></span>'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - '@azure/batch.AuthenticationTokenSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.commandLine'
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-118">Командная строка задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-118">The command line of the task.</span></span> <span data-ttu-id="c0405-119">Для многоэкземплярных задач командной строки выполняется как основная задача, после завершения выполнения Командная строка координации основная задача и все подзадачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-119">For multi-instance tasks, the command line is executed as the primary task, after the primary task and all subtasks have finished executing the coordination command line.</span></span> <span data-ttu-id="c0405-120">В командной строке не выполняются в оболочке и таким образом, не может воспользоваться преимуществами функции оболочки, например расширение переменных среды.</span><span class="sxs-lookup"><span data-stu-id="c0405-120">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="c0405-121">Если вы хотите воспользоваться преимуществами таких функций, необходимо вызвать оболочку в командной строке, например с помощью «cmd /c MyCommand» в Windows или «/ bin/sh - c MyCommand» в Linux.</span><span class="sxs-lookup"><span data-stu-id="c0405-121">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="c0405-122">Если командной строке ссылается на пути к файлам, она должна использовать относительный путь (по отношению к рабочему каталогу задачи), или пакетное указанной переменной среды (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="c0405-122">If the command line refers to file paths, it should use a relative path (relative to the task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    optional: true
+    syntax:
+      content: 'commandLine?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.constraints'
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-123">Ограничения выполнения, применяемые к этой задаче.</span><span class="sxs-lookup"><span data-stu-id="c0405-123">The execution constraints that apply to this task.</span></span>'
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - '@azure/batch.TaskConstraints'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.containerSettings'
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-124">Параметры для контейнера, для которого выполняется задание.</span><span class="sxs-lookup"><span data-stu-id="c0405-124">The settings for the container under which the task runs.</span></span> <span data-ttu-id="c0405-125">Если в пуле, который будет выполняться эта задача значение containerConfiguration, это необходимо также задать.</span><span class="sxs-lookup"><span data-stu-id="c0405-125">If the pool that will run this task has containerConfiguration set, this must be set as well.</span></span> <span data-ttu-id="c0405-126">Если пул, который будет выполняться эта задача не имеет значение containerConfiguration, это не должно быть задано.</span><span class="sxs-lookup"><span data-stu-id="c0405-126">If the pool that will run this task doesn''t have containerConfiguration set, this must not be set.</span></span> <span data-ttu-id="c0405-127">Если этот параметр указан, все каталоги рекурсивно ниже AZ_BATCH_NODE_ROOT_DIR (корень каталогов пакетной службы Azure на узле) сопоставляются в контейнере, все переменные среды задач сопоставляются в контейнере и Командная строка задачи выполняется в контейнере.</span><span class="sxs-lookup"><span data-stu-id="c0405-127">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all task environment variables are mapped into the container, and the task command line is executed in the container.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - '@azure/batch.TaskContainerSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.creationTime'
+    name: creationTime
+    fullName: creationTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c0405-128">Время создания задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-128">The creation time of the task.</span></span>
+    optional: true
+    syntax:
+      content: 'creationTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.dependsOn'
+    name: dependsOn
+    fullName: dependsOn
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-129">Задачи, от которых зависит эта задача.</span><span class="sxs-lookup"><span data-stu-id="c0405-129">The tasks that this task depends on.</span></span> <span data-ttu-id="c0405-130">Эта задача не должна планироваться, пока не будет успешно выполнены все задачи, от которых он зависит.</span><span class="sxs-lookup"><span data-stu-id="c0405-130">This task will not be scheduled until all tasks that it depends on have completed successfully.</span></span> <span data-ttu-id="c0405-131">Если любой из этих задач ошибкой и выделять их количества повторных попыток, эта задача никогда не планируется.</span><span class="sxs-lookup"><span data-stu-id="c0405-131">If any of those tasks fail and exhaust their retry counts, this task will never be scheduled.</span></span>'
+    optional: true
+    syntax:
+      content: 'dependsOn?: TaskDependencies'
+      return:
+        type:
+          - '@azure/batch.TaskDependencies'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.displayName'
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-132">Отображаемое имя для задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-132">A display name for the task.</span></span> <span data-ttu-id="c0405-133">Отображаемое имя не должно быть уникальным и может содержать любые символы Юникода, максимум — 1024.</span><span class="sxs-lookup"><span data-stu-id="c0405-133">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>'
+    optional: true
+    syntax:
+      content: 'displayName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.environmentSettings'
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c0405-134">Список параметров переменных среды для задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-134">A list of environment variable settings for the task.</span></span>
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - '@azure/batch.EnvironmentSetting[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.eTag'
+    name: eTag
+    fullName: eTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-135">ETag задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-135">The ETag of the task.</span></span> <span data-ttu-id="c0405-136">Это непрозрачная строка.</span><span class="sxs-lookup"><span data-stu-id="c0405-136">This is an opaque string.</span></span> <span data-ttu-id="c0405-137">Его можно использовать для определения, был ли изменен задачи между запросами.</span><span class="sxs-lookup"><span data-stu-id="c0405-137">You can use it to detect whether the task has changed between requests.</span></span> <span data-ttu-id="c0405-138">В частности можно быть передать ETag при обновлении задачу, чтобы указать, что следует вступают в силу только в том случае, если задача никто другой не изменен в то же время.</span><span class="sxs-lookup"><span data-stu-id="c0405-138">In particular, you can be pass the ETag when updating a task to specify that your changes should take effect only if nobody else has modified the task in the meantime.</span></span>'
+    optional: true
+    syntax:
+      content: 'eTag?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.executionInfo'
+    name: executionInfo
+    fullName: executionInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c0405-139">Сведения о выполнении задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-139">Information about the execution of the task.</span></span>
+    optional: true
+    syntax:
+      content: 'executionInfo?: TaskExecutionInformation'
+      return:
+        type:
+          - '@azure/batch.TaskExecutionInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.exitConditions'
+    name: exitConditions
+    fullName: exitConditions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c0405-140">Пакетная служба реакции при завершении задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-140">How the Batch service should respond when the task completes.</span></span>
+    optional: true
+    syntax:
+      content: 'exitConditions?: ExitConditions'
+      return:
+        type:
+          - '@azure/batch.ExitConditions'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.id'
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-141">Строка, однозначно определяет задачу в рамках задания.</span><span class="sxs-lookup"><span data-stu-id="c0405-141">A string that uniquely identifies the task within the job.</span></span> <span data-ttu-id="c0405-142">Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов.</span><span class="sxs-lookup"><span data-stu-id="c0405-142">The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters.</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.lastModified'
+    name: lastModified
+    fullName: lastModified
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c0405-143">Время задачи последнего изменения.</span><span class="sxs-lookup"><span data-stu-id="c0405-143">The last modified time of the task.</span></span>
+    optional: true
+    syntax:
+      content: 'lastModified?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.multiInstanceSettings'
+    name: multiInstanceSettings
+    fullName: multiInstanceSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-144">Объект, который указывает, что задача задачи с несколькими экземплярами и содержит сведения о способах выполнения задачи с несколькими экземплярами.</span><span class="sxs-lookup"><span data-stu-id="c0405-144">An object that indicates that the task is a multi-instance task, and contains information about how to run the multi-instance task.</span></span>'
+    optional: true
+    syntax:
+      content: 'multiInstanceSettings?: MultiInstanceSettings'
+      return:
+        type:
+          - '@azure/batch.MultiInstanceSettings'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.nodeInfo'
+    name: nodeInfo
+    fullName: nodeInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-145">Сведения о вычислительном узле, на котором выполнялась задача.</span><span class="sxs-lookup"><span data-stu-id="c0405-145">Information about the compute node on which the task ran.</span></span>'
+    optional: true
+    syntax:
+      content: 'nodeInfo?: ComputeNodeInformation'
+      return:
+        type:
+          - '@azure/batch.ComputeNodeInformation'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.outputFiles'
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-146">Список файлов, которые пакетная служба будет передавать в вычислительном узле после запуска командной строки.</span><span class="sxs-lookup"><span data-stu-id="c0405-146">A list of files that the Batch service will upload from the compute node after running the command line.</span></span> <span data-ttu-id="c0405-147">Для задач с несколькими экземплярами файлы будут отправлены только в вычислительном узле, на котором выполняется основная задача.</span><span class="sxs-lookup"><span data-stu-id="c0405-147">For multi-instance tasks, the files will only be uploaded from the compute node on which the primary task is executed.</span></span>'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - '@azure/batch.OutputFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.previousState'
+    name: previousState
+    fullName: previousState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-148">Предыдущее состояние задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-148">The previous state of the task.</span></span> <span data-ttu-id="c0405-149">Это свойство не задано, если задача находится в исходном активном состоянии.</span><span class="sxs-lookup"><span data-stu-id="c0405-149">This property is not set if the task is in its initial Active state.</span></span> <span data-ttu-id="c0405-150">Возможные значения: «active», «подготовка», «работает», «завершено»</span><span class="sxs-lookup"><span data-stu-id="c0405-150">Possible values include: ''active'', ''preparing'', ''running'', ''completed''</span></span>'
+    optional: true
+    syntax:
+      content: 'previousState?: TaskState'
+      return:
+        type:
+          - '@azure/batch.TaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.previousStateTransitionTime'
+    name: previousStateTransitionTime
+    fullName: previousStateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-151">Время, по которому задачи перешел в предыдущее состояние.</span><span class="sxs-lookup"><span data-stu-id="c0405-151">The time at which the task entered its previous state.</span></span> <span data-ttu-id="c0405-152">Это свойство не задано, если задача находится в исходном активном состоянии.</span><span class="sxs-lookup"><span data-stu-id="c0405-152">This property is not set if the task is in its initial Active state.</span></span>'
+    optional: true
+    syntax:
+      content: 'previousStateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.resourceFiles'
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-153">Список файлов, которые пакетная служба скачает вычислительный узел перед запуском командной строки.</span><span class="sxs-lookup"><span data-stu-id="c0405-153">A list of files that the Batch service will download to the compute node before running the command line.</span></span> <span data-ttu-id="c0405-154">Для задач с несколькими экземплярами файлы ресурсов будут загружены только на вычислительном узле, на котором выполняется основная задача.</span><span class="sxs-lookup"><span data-stu-id="c0405-154">For multi-instance tasks, the resource files will only be downloaded to the compute node on which the primary task is executed.</span></span> <span data-ttu-id="c0405-155">Максимальный размер для список файлов ресурсов установлен.</span><span class="sxs-lookup"><span data-stu-id="c0405-155">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="c0405-156">При превышении максимального размера, запрос завершится ошибкой, и код ошибки ответа будет RequestEntityTooLarge.</span><span class="sxs-lookup"><span data-stu-id="c0405-156">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="c0405-157">В этом случае коллекция ResourceFiles необходимо уменьшить размер.</span><span class="sxs-lookup"><span data-stu-id="c0405-157">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="c0405-158">Это можно сделать с помощью ZIP-файлы, пакеты приложений или контейнеров Docker.</span><span class="sxs-lookup"><span data-stu-id="c0405-158">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - '@azure/batch.ResourceFile[]'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-159">Текущее состояние задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-159">The current state of the task.</span></span> <span data-ttu-id="c0405-160">Возможные значения: «active», «подготовка», «работает», «завершено»</span><span class="sxs-lookup"><span data-stu-id="c0405-160">Possible values include: ''active'', ''preparing'', ''running'', ''completed''</span></span>'
+    optional: true
+    syntax:
+      content: 'state?: TaskState'
+      return:
+        type:
+          - '@azure/batch.TaskState'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.stateTransitionTime'
+    name: stateTransitionTime
+    fullName: stateTransitionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-161">Время, когда задание перешло текущего состояния.</span><span class="sxs-lookup"><span data-stu-id="c0405-161">The time at which the task entered its current state.</span></span>'
+    optional: true
+    syntax:
+      content: 'stateTransitionTime?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.stats'
+    name: stats
+    fullName: stats
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c0405-162">Статистика использования ресурсов для задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-162">Resource usage statistics for the task.</span></span>
+    optional: true
+    syntax:
+      content: 'stats?: TaskStatistics'
+      return:
+        type:
+          - '@azure/batch.TaskStatistics'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.url'
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="c0405-163">URL-адрес задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-163">The URL of the task.</span></span>
+    optional: true
+    syntax:
+      content: 'url?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.CloudTask.userIdentity'
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="c0405-164">Удостоверение пользователя, под которой выполняется задача.</span><span class="sxs-lookup"><span data-stu-id="c0405-164">The user identity under which the task runs.</span></span> <span data-ttu-id="c0405-165">Если не указано, задача выполняется как пользователь без прав администратора уникальные задачи.</span><span class="sxs-lookup"><span data-stu-id="c0405-165">If omitted, the task runs as a non-administrative user unique to the task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - '@azure/batch.UserIdentity'
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.AffinityInformation'
+    name: AffinityInformation
+    spec.typeScript:
+      - name: AffinityInformation
+        fullName: AffinityInformation
+        uid: '@azure/batch.AffinityInformation'
+  - uid: '@azure/batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: '@azure/batch.ApplicationPackageReference'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.AuthenticationTokenSettings'
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: '@azure/batch.AuthenticationTokenSettings'
+  - uid: '@azure/batch.TaskConstraints'
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: '@azure/batch.TaskConstraints'
+  - uid: '@azure/batch.TaskContainerSettings'
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: '@azure/batch.TaskContainerSettings'
+  - uid: '@azure/batch.TaskDependencies'
+    name: TaskDependencies
+    spec.typeScript:
+      - name: TaskDependencies
+        fullName: TaskDependencies
+        uid: '@azure/batch.TaskDependencies'
+  - uid: '@azure/batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: '@azure/batch.EnvironmentSetting'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskExecutionInformation'
+    name: TaskExecutionInformation
+    spec.typeScript:
+      - name: TaskExecutionInformation
+        fullName: TaskExecutionInformation
+        uid: '@azure/batch.TaskExecutionInformation'
+  - uid: '@azure/batch.ExitConditions'
+    name: ExitConditions
+    spec.typeScript:
+      - name: ExitConditions
+        fullName: ExitConditions
+        uid: '@azure/batch.ExitConditions'
+  - uid: '@azure/batch.MultiInstanceSettings'
+    name: MultiInstanceSettings
+    spec.typeScript:
+      - name: MultiInstanceSettings
+        fullName: MultiInstanceSettings
+        uid: '@azure/batch.MultiInstanceSettings'
+  - uid: '@azure/batch.ComputeNodeInformation'
+    name: ComputeNodeInformation
+    spec.typeScript:
+      - name: ComputeNodeInformation
+        fullName: ComputeNodeInformation
+        uid: '@azure/batch.ComputeNodeInformation'
+  - uid: '@azure/batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: '@azure/batch.OutputFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskState'
+    name: TaskState
+    spec.typeScript:
+      - name: TaskState
+        fullName: TaskState
+        uid: '@azure/batch.TaskState'
+  - uid: '@azure/batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: '@azure/batch.ResourceFile'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/batch.TaskStatistics'
+    name: TaskStatistics
+    spec.typeScript:
+      - name: TaskStatistics
+        fullName: TaskStatistics
+        uid: '@azure/batch.TaskStatistics'
+  - uid: '@azure/batch.UserIdentity'
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: '@azure/batch.UserIdentity'
