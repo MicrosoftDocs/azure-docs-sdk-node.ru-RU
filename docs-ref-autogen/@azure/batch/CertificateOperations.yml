@@ -1,0 +1,577 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.CertificateOperations'
+    name: CertificateOperations
+    fullName: CertificateOperations
+    children:
+      - '@azure/batch.CertificateOperations.add_2'
+      - '@azure/batch.CertificateOperations.add'
+      - '@azure/batch.CertificateOperations.add_1'
+      - '@azure/batch.CertificateOperations.cancelDeletion_2'
+      - '@azure/batch.CertificateOperations.cancelDeletion'
+      - '@azure/batch.CertificateOperations.cancelDeletion_1'
+      - '@azure/batch.CertificateOperations.constructor'
+      - '@azure/batch.CertificateOperations.deleteMethod_2'
+      - '@azure/batch.CertificateOperations.deleteMethod'
+      - '@azure/batch.CertificateOperations.deleteMethod_1'
+      - '@azure/batch.CertificateOperations.get_2'
+      - '@azure/batch.CertificateOperations.get'
+      - '@azure/batch.CertificateOperations.get_1'
+      - '@azure/batch.CertificateOperations.list_2'
+      - '@azure/batch.CertificateOperations.list'
+      - '@azure/batch.CertificateOperations.list_1'
+      - '@azure/batch.CertificateOperations.listNext_2'
+      - '@azure/batch.CertificateOperations.listNext'
+      - '@azure/batch.CertificateOperations.listNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Класс, представляющий CertificateOperations.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.add_2'
+    name: 'add(CertificateAddParameter, CertificateAddOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(certificate: CertificateAddParameter, options: CertificateAddOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: certificate
+          type:
+            - '@azure/batch.CertificateAddParameter'
+          description: Сертификат должен быть добавлен.
+        - id: options
+          type:
+            - '@azure/batch.CertificateAddOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.add'
+    name: 'add(CertificateAddParameter, Models.CertificateAddOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(certificate: CertificateAddParameter, options?: Models.CertificateAddOptionalParams)'
+      parameters:
+        - id: certificate
+          type:
+            - '@azure/batch.CertificateAddParameter'
+          description: Сертификат должен быть добавлен.
+        - id: options
+          type:
+            - Models.CertificateAddOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.add_1'
+    name: 'add(CertificateAddParameter, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function add(certificate: CertificateAddParameter, callback: ServiceCallback<void>)'
+      parameters:
+        - id: certificate
+          type:
+            - '@azure/batch.CertificateAddParameter'
+          description: Сертификат должен быть добавлен.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateAddResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.cancelDeletion_2'
+    name: 'cancelDeletion(string, string, CertificateCancelDeletionOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(thumbprintAlgorithm: string, thumbprint: string, options: CertificateCancelDeletionOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: 'Отпечаток сертификата, удаляется.'
+        - id: options
+          type:
+            - '@azure/batch.CertificateCancelDeletionOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.cancelDeletion'
+    name: 'cancelDeletion(string, string, Models.CertificateCancelDeletionOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Если вы попытаетесь удалить сертификат, который используется с помощью пула и вычислительного узла, сертификат приобретает в резервную копию. Если вы решите, что вы хотите продолжить использование сертификата, эту операцию можно использовать для задания состояния сертификата обратно на активное. Если вы планируете удалить сертификат, вы не обязательно должны выполнять эту операцию после неудачного удаления. Необходимо убедиться в том, что сертификат не используется никакими ресурсами, и затем попытайтесь снова удалить сертификат.'
+    syntax:
+      content: 'function cancelDeletion(thumbprintAlgorithm: string, thumbprint: string, options?: Models.CertificateCancelDeletionOptionalParams)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: 'Отпечаток сертификата, удаляется.'
+        - id: options
+          type:
+            - Models.CertificateCancelDeletionOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.cancelDeletion_1'
+    name: 'cancelDeletion(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancelDeletion(thumbprintAlgorithm: string, thumbprint: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: 'Отпечаток сертификата, удаляется.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateCancelDeletionResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.constructor'
+    name: CertificateOperations(BatchServiceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Создайте CertificateOperations.
+    syntax:
+      content: 'new CertificateOperations(client: BatchServiceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/batch.BatchServiceClientContext'
+          description: |
+            Ссылка на клиента службы.
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.deleteMethod_2'
+    name: 'deleteMethod(string, string, CertificateDeleteMethodOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(thumbprintAlgorithm: string, thumbprint: string, options: CertificateDeleteMethodOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: Отпечаток сертификата для удаления.
+        - id: options
+          type:
+            - '@azure/batch.CertificateDeleteMethodOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.deleteMethod'
+    name: 'deleteMethod(string, string, Models.CertificateDeleteMethodOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Невозможно удалить сертификат, если он используется ресурсом (пулом или вычислительного узла). Перед удалением сертификата, поэтому убедитесь, что сертификат не связан с любой существующих пулов, сертификат не установлен на все вычислительные узлы (даже если удалить сертификат из пула, не удаляется из существующих вычислений узлы в этом пуле только после перезапуска), а не выполняемые задачи зависят от сертификата. Если вы попытаетесь удалить сертификат, который используется, удаление завершится ошибкой. Состояние сертификата изменится на резервную копию. Отмена удаления сертификата можно использовать для задания состояния обратно на активное, если вы решите, что вы хотите продолжить использование сертификата.'
+    syntax:
+      content: 'function deleteMethod(thumbprintAlgorithm: string, thumbprint: string, options?: Models.CertificateDeleteMethodOptionalParams)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: Отпечаток сертификата для удаления.
+        - id: options
+          type:
+            - Models.CertificateDeleteMethodOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.deleteMethod_1'
+    name: 'deleteMethod(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(thumbprintAlgorithm: string, thumbprint: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: Отпечаток сертификата для удаления.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateDeleteResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.get_2'
+    name: 'get(string, string, CertificateGetOptionalParams, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(thumbprintAlgorithm: string, thumbprint: string, options: CertificateGetOptionalParams, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: 'Отпечаток сертификата, чтобы получить.'
+        - id: options
+          type:
+            - '@azure/batch.CertificateGetOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.Certificate>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.get'
+    name: 'get(string, string, Models.CertificateGetOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Получает сведения об указанном сертификате.
+    syntax:
+      content: 'function get(thumbprintAlgorithm: string, thumbprint: string, options?: Models.CertificateGetOptionalParams)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: 'Отпечаток сертификата, чтобы получить.'
+        - id: options
+          type:
+            - Models.CertificateGetOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.get_1'
+    name: 'get(string, string, ServiceCallback<Certificate>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(thumbprintAlgorithm: string, thumbprint: string, callback: ServiceCallback<Certificate>)'
+      parameters:
+        - id: thumbprintAlgorithm
+          type:
+            - string
+          description: 'Алгоритм, используемый для формирования отпечатка параметра. Это должен быть sha1.'
+        - id: thumbprint
+          type:
+            - string
+          description: 'Отпечаток сертификата, чтобы получить.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.Certificate>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateGetResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.list_2'
+    name: 'list(CertificateListOptionalParams, ServiceCallback<CertificateListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: CertificateListOptionalParams, callback: ServiceCallback<CertificateListResult>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/batch.CertificateListOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CertificateListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.list'
+    name: list(Models.CertificateListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options?: Models.CertificateListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.CertificateListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.list_1'
+    name: list(ServiceCallback<CertificateListResult>)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<CertificateListResult>)'
+      parameters:
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CertificateListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.listNext_2'
+    name: 'listNext(string, CertificateListNextOptionalParams, ServiceCallback<CertificateListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: CertificateListNextOptionalParams, callback: ServiceCallback<CertificateListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - '@azure/batch.CertificateListNextOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CertificateListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.listNext'
+    name: 'listNext(string, Models.CertificateListNextOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: Models.CertificateListNextOptionalParams)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - Models.CertificateListNextOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CertificateListResponse>
+    package: '@azure/batch'
+  - uid: '@azure/batch.CertificateOperations.listNext_1'
+    name: 'listNext(string, ServiceCallback<CertificateListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<CertificateListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/batch.CertificateListResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CertificateListResponse>
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.BatchServiceClientContext'
+    name: BatchServiceClientContext
+    spec.typeScript:
+      - name: BatchServiceClientContext
+        fullName: BatchServiceClientContext
+        uid: '@azure/batch.BatchServiceClientContext'
+  - uid: '@azure/batch.CertificateAddParameter'
+    name: CertificateAddParameter
+    spec.typeScript:
+      - name: CertificateAddParameter
+        fullName: CertificateAddParameter
+        uid: '@azure/batch.CertificateAddParameter'
+  - uid: '@azure/batch.CertificateAddOptionalParams'
+    name: CertificateAddOptionalParams
+    spec.typeScript:
+      - name: CertificateAddOptionalParams
+        fullName: CertificateAddOptionalParams
+        uid: '@azure/batch.CertificateAddOptionalParams'
+  - uid: '@azure/batch.CertificateCancelDeletionOptionalParams'
+    name: CertificateCancelDeletionOptionalParams
+    spec.typeScript:
+      - name: CertificateCancelDeletionOptionalParams
+        fullName: CertificateCancelDeletionOptionalParams
+        uid: '@azure/batch.CertificateCancelDeletionOptionalParams'
+  - uid: '@azure/batch.CertificateDeleteMethodOptionalParams'
+    name: CertificateDeleteMethodOptionalParams
+    spec.typeScript:
+      - name: CertificateDeleteMethodOptionalParams
+        fullName: CertificateDeleteMethodOptionalParams
+        uid: '@azure/batch.CertificateDeleteMethodOptionalParams'
+  - uid: ServiceCallback<@azure/batch.Certificate>
+    name: Certificate>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Certificate
+        fullName: Certificate
+        uid: '@azure/batch.Certificate'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.CertificateGetOptionalParams'
+    name: CertificateGetOptionalParams
+    spec.typeScript:
+      - name: CertificateGetOptionalParams
+        fullName: CertificateGetOptionalParams
+        uid: '@azure/batch.CertificateGetOptionalParams'
+  - uid: ServiceCallback<@azure/batch.CertificateListResult>
+    name: CertificateListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CertificateListResult
+        fullName: CertificateListResult
+        uid: '@azure/batch.CertificateListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/batch.CertificateListOptionalParams'
+    name: CertificateListOptionalParams
+    spec.typeScript:
+      - name: CertificateListOptionalParams
+        fullName: CertificateListOptionalParams
+        uid: '@azure/batch.CertificateListOptionalParams'
+  - uid: '@azure/batch.CertificateListNextOptionalParams'
+    name: CertificateListNextOptionalParams
+    spec.typeScript:
+      - name: CertificateListNextOptionalParams
+        fullName: CertificateListNextOptionalParams
+        uid: '@azure/batch.CertificateListNextOptionalParams'
