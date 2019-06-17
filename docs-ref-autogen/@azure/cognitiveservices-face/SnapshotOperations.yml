@@ -1,0 +1,666 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations'
+    name: SnapshotOperations
+    fullName: SnapshotOperations
+    children:
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+      - '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Класс, представляющий SnapshotOperations.'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply'
+    name: 'apply(string, string, Models.SnapshotApplyOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Отправьте операцию для применения моментального снимка к текущей подписке. Для каждого моментального снимка, а только те подписки, которые включены в applyScope моментального снимка — Take можно применить.<br />
+      В интерфейсы моментальных снимков предназначены для пользователей, резервное копирование и восстановление данных лиц из одной грани подписки в другую, в том же регионе или разных регионах. Рабочий процесс содержит два этапа, пользователь сначала вызывает что моментальный снимок — Take, чтобы создать копию исходного объекта и сохраните его как моментальный снимок, затем вызывает моментального снимка: применение вставить моментальный снимок в целевую подписку. Моментальные снимки хранятся в централизованном расположении (для каждого экземпляра Azure), таким образом, чтобы их можно применить между учетными записями и областями.<br />
+      Применение моментального снимка является асинхронной операцией. Идентификатор операции можно получить из поля «Operation-Location» в заголовке ответа, для использования в OperationStatus - Get для отслеживания хода выполнения, применения моментального снимка. Идентификатор целевого объекта будут включены в поле «resourceLocation» OperationStatus - Get ответа при его состояние операции «успешно».<br />
+      Время применения моментального снимка зависит от числа элементов и их лицах в объекте моментального снимка.
+      Он может быть в секундах или вверх до 1 часа для 1 000 000 лиц с помощью нескольких лиц.<br />
+      Моментальные снимки будут автоматически срок действия истек и очищенных за 48 часов после его создания моментальных снимков
+      - Take. Поэтому целевая подписка необходим для применения моментального снимка в течение 48 часов с момента его создания.<br />
+      Применение моментального снимка будет не блокируют другие операции на целевом объекте объекта, однако его не рекомендуется, поскольку невозможно гарантировать корректность во время применения моментального снимка. После применения моментального снимка, все операции по направлению к целевой объект может работать в обычном режиме.
+      Моментальный снимок также содержат результаты обучения объекта источника, который означает, что целевая подписка применяется не нужна повторного обучения целевого объекта перед вызовом выявление/FindSimilar моментального снимка.<br />
+      Один моментальный снимок можно применять несколько раз в параллельном режиме, пока только CreateNew применить режим поддерживается, это означает, что операции применения завершится ошибкой, если целевая подписка уже содержит объект того же типа и с помощью же objectId. Пользователи могут указать «objectId» в тексте запроса, чтобы избежать таких конфликтов.<br />
+      * Квота освободить уровня подписки: 100 применения операций в месяц.
+      * Квота подписки уровня S0: 100 применения операций в день.
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options?: Models.SnapshotApplyOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: objectId
+          type:
+            - string
+          description: 'Идентификатор целевого объекта должен быть создан из моментального снимка, заданное пользователем.'
+        - id: options
+          type:
+            - Models.SnapshotApplyOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_1'
+    name: 'apply(string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: objectId
+          type:
+            - string
+          description: 'Идентификатор целевого объекта должен быть создан из моментального снимка, заданное пользователем.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.apply_2'
+    name: 'apply(string, string, SnapshotApplyOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function apply(snapshotId: string, objectId: string, options: SnapshotApplyOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: objectId
+          type:
+            - string
+          description: 'Идентификатор целевого объекта должен быть создан из моментального снимка, заданное пользователем.'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotApplyResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod'
+    name: 'deleteMethod(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Удалите существующий моментальный снимок в соответствии с идентификатор снимка. Также удаляются все данные объекта и информацию в моментальном снимке. Только исходная подписка, принявшем моментальный снимок можно удалить моментальный снимок. Если пользователь не удаляет моментальный снимок с помощью этого API, моментальный снимок по-прежнему автоматически удаляется в течение 48 часов после ее создания.'
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_2'
+    name: 'deleteMethod(string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.deleteMethod_1'
+    name: 'deleteMethod(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteMethod(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get'
+    name: 'get(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Получить сведения о моментального снимка. Моментальный снимок доступен только для исходной подписки, принявшем его и целевые подписки, включенные в applyScope в моментальный снимок — воспользоваться.'
+    syntax:
+      content: 'function get(snapshotId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_2'
+    name: 'get(string, RequestOptionsBase, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, options: RequestOptionsBase, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.get_1'
+    name: 'get(string, ServiceCallback<Snapshot>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(snapshotId: string, callback: ServiceCallback<Snapshot>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotGetResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus'
+    name: 'getOperationStatus(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: Получить состояние операции take/применить моментальный снимок.
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: Идентификатор ссылки на определенный take применяются операции моментального снимка.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_2'
+    name: 'getOperationStatus(string, RequestOptionsBase, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, options: RequestOptionsBase, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: Идентификатор ссылки на определенный take применяются операции моментального снимка.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.getOperationStatus_1'
+    name: 'getOperationStatus(string, ServiceCallback<OperationStatus>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getOperationStatus(operationId: string, callback: ServiceCallback<OperationStatus>)'
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: Идентификатор ссылки на определенный take применяются операции моментального снимка.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotGetOperationStatusResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list'
+    name: list(Models.SnapshotListOptionalParams)
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Список всех доступных моментальных снимков со связанными сведениями, включая моментальные снимки, выполненные пользователем или моментальные снимки, чтобы быть применены к пользователю (идентификатор подписки был включен в applyScope в моментальном снимке — перенос).'
+    syntax:
+      content: 'function list(options?: Models.SnapshotListOptionalParams)'
+      parameters:
+        - id: options
+          type:
+            - Models.SnapshotListOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_1'
+    name: 'list(ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.list_2'
+    name: 'list(SnapshotListOptionalParams, ServiceCallback<Snapshot[]>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function list(options: SnapshotListOptionalParams, callback: ServiceCallback<Snapshot[]>)'
+      parameters:
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotListResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.constructor'
+    name: SnapshotOperations(FaceClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Создайте SnapshotOperations.
+    syntax:
+      content: 'new SnapshotOperations(client: FaceClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/cognitiveservices-face.FaceClientContext'
+          description: |
+            Ссылка на клиента службы.
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take'
+    name: 'take(Models.SnapshotObjectType, string, string[], Models.SnapshotTakeOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Отправьте операцию для снимка список лиц, списка больших лиц, лица группу или больших person, с помощью моментального снимка, определяемый пользователем тип, ИД исходного объекта, применить область и необязательные пользовательские данные.<br />
+      В интерфейсы моментальных снимков предназначены для пользователей, резервное копирование и восстановление данных лиц из одной грани подписки в другую, в том же регионе или разных регионах. Рабочий процесс содержит два этапа, пользователь сначала вызывает что моментальный снимок — Take, чтобы создать копию исходного объекта и сохраните его как моментальный снимок, затем вызывает моментального снимка: применение вставить моментальный снимок в целевую подписку. Моментальные снимки хранятся в централизованном расположении (для каждого экземпляра Azure), таким образом, чтобы их можно применить между учетными записями и областями.<br />
+      Создание моментального снимка является асинхронной операцией. Идентификатор операции можно получить из поля «Operation-Location» в заголовке ответа, для использования в OperationStatus - Get для отслеживания хода выполнения, создания моментального снимка. Идентификатор моментального снимка будут включены в поле «resourceLocation» OperationStatus - Get ответа при его состояние операции «успешно».<br />
+      Время моментального снимка зависит от числа элементов и их лицах в объекте-источнике. Возможно, в секундах или до нескольких часов для 1 000 000 лиц с помощью нескольких лиц.<br />
+      Моментальные снимки будут автоматически срок действия истек и очищенных за 48 часов после его создания моментальных снимков
+      - Take. Пользователь может удалить моментальный снимок, с помощью моментальных снимков - Delete сами по себе любое время до истечения срока действия.<br />
+      С помощью снимка для определенного объекта не будет блокировать другие операции с объектом. Все операции только для чтения (Get и получения списка и выявление/FindSimilar/Verify) могут выполняться как обычно. Для всех операций для записи, включая добавление, обновление и удаление исходного объекта или его лиц/лиц и обучение они являются не блокируется, но не рекомендуется, поскольку для записи обновления могут не отражаться на моментального снимка во время его создания. После завершения создания моментальных снимков, все операции для чтения и записи можно работать в обычном режиме. Моментальный снимок также будет содержать результаты обучения объекта источника, который означает, что целевая подписка применяется не нужна повторного обучения целевого объекта перед вызовом выявление/FindSimilar моментального снимка.<br />
+      * Квота освободить уровня подписки: 100 занять операций в месяц.
+      * Квота подписки уровня S0: 100 занять операций в день.
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options?: Models.SnapshotTakeOptionalParams)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: 'Пользователь указал типа для исходного объекта, чтобы сделать снимок из. В настоящее время поддерживаются FaceList, каждой группе людей, LargeFaceList и LargePersonGroup. Ниже перечислены возможные значения. «FaceList», «LargeFaceList», «LargePersonGroup», «Каждой группе людей»'
+        - id: objectId
+          type:
+            - string
+          description: 'ИД исходного объекта, чтобы сделать снимок из заданное пользователем.'
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Массив идентификаторов подписок целевой лиц для моментального снимка, заданное пользователем. Для каждого моментального снимка, а только те подписки, которые включены в applyScope моментального снимка — Take можно применить.'
+        - id: options
+          type:
+            - Models.SnapshotTakeOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_1'
+    name: 'take(Models.SnapshotObjectType, string, string[], ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: 'Пользователь указал типа для исходного объекта, чтобы сделать снимок из. В настоящее время поддерживаются FaceList, каждой группе людей, LargeFaceList и LargePersonGroup. Ниже перечислены возможные значения. «FaceList», «LargeFaceList», «LargePersonGroup», «Каждой группе людей»'
+        - id: objectId
+          type:
+            - string
+          description: 'ИД исходного объекта, чтобы сделать снимок из заданное пользователем.'
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Массив идентификаторов подписок целевой лиц для моментального снимка, заданное пользователем. Для каждого моментального снимка, а только те подписки, которые включены в applyScope моментального снимка — Take можно применить.'
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.take_2'
+    name: 'take(Models.SnapshotObjectType, string, string[], SnapshotTakeOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function take(type: Models.SnapshotObjectType, objectId: string, applyScope: string[], options: SnapshotTakeOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: type
+          type:
+            - Models.SnapshotObjectType
+          description: 'Пользователь указал типа для исходного объекта, чтобы сделать снимок из. В настоящее время поддерживаются FaceList, каждой группе людей, LargeFaceList и LargePersonGroup. Ниже перечислены возможные значения. «FaceList», «LargeFaceList», «LargePersonGroup», «Каждой группе людей»'
+        - id: objectId
+          type:
+            - string
+          description: 'ИД исходного объекта, чтобы сделать снимок из заданное пользователем.'
+        - id: applyScope
+          type:
+            - 'string[]'
+          description: 'Массив идентификаторов подписок целевой лиц для моментального снимка, заданное пользователем. Для каждого моментального снимка, а только те подписки, которые включены в applyScope моментального снимка — Take можно применить.'
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.SnapshotTakeResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update'
+    name: 'update(string, Models.SnapshotUpdateOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Обновите данные моментального снимка. Только исходная подписка, принявшем моментального снимка можно обновить моментальный снимок.'
+    syntax:
+      content: 'function update(snapshotId: string, options?: Models.SnapshotUpdateOptionalParams)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: options
+          type:
+            - Models.SnapshotUpdateOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_1'
+    name: 'update(string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.SnapshotOperations.update_2'
+    name: 'update(string, SnapshotUpdateOptionalParams, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function update(snapshotId: string, options: SnapshotUpdateOptionalParams, callback: ServiceCallback<void>)'
+      parameters:
+        - id: snapshotId
+          type:
+            - string
+          description: Идентификатор ссылки на отдельного моментального снимка.
+        - id: options
+          type:
+            - '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.FaceClientContext'
+    name: FaceClientContext
+    spec.typeScript:
+      - name: FaceClientContext
+        fullName: FaceClientContext
+        uid: '@azure/cognitiveservices-face.FaceClientContext'
+  - uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+    name: SnapshotApplyOptionalParams
+    spec.typeScript:
+      - name: SnapshotApplyOptionalParams
+        fullName: SnapshotApplyOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotApplyOptionalParams'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.Snapshot>
+    name: Snapshot>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/cognitiveservices-face.OperationStatus>
+    name: OperationStatus>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: OperationStatus
+        fullName: OperationStatus
+        uid: '@azure/cognitiveservices-face.OperationStatus'
+      - name: '>'
+        fullName: '>'
+  - uid: 'ServiceCallback<@azure/cognitiveservices-face.Snapshot[]>'
+    name: 'Snapshot[]>'
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: Snapshot
+        fullName: Snapshot
+        uid: '@azure/cognitiveservices-face.Snapshot'
+      - name: '[]>'
+        fullName: '[]>'
+  - uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+    name: SnapshotListOptionalParams
+    spec.typeScript:
+      - name: SnapshotListOptionalParams
+        fullName: SnapshotListOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotListOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+    name: SnapshotTakeOptionalParams
+    spec.typeScript:
+      - name: SnapshotTakeOptionalParams
+        fullName: SnapshotTakeOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotTakeOptionalParams'
+  - uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
+    name: SnapshotUpdateOptionalParams
+    spec.typeScript:
+      - name: SnapshotUpdateOptionalParams
+        fullName: SnapshotUpdateOptionalParams
+        uid: '@azure/cognitiveservices-face.SnapshotUpdateOptionalParams'
