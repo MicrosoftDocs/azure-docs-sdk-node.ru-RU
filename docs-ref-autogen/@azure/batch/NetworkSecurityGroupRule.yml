@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.NetworkSecurityGroupRule'
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - '@azure/batch.NetworkSecurityGroupRule.access'
+      - '@azure/batch.NetworkSecurityGroupRule.priority'
+      - '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий NetworkSecurityGroupRule.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.access'
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Действие, которое следует выполнять для заданного IP-адрес, диапазон подсети или тега. Возможные значения: «разрешить», «отклонить»'
+    syntax:
+      content: 'access: NetworkSecurityGroupRuleAccess'
+      return:
+        type:
+          - '@azure/batch.NetworkSecurityGroupRuleAccess'
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.priority'
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Приоритет для этого правила. Приоритеты в пуле должно быть уникальным и оцениваются в порядке приоритета. Чем меньше число, тем выше приоритет. Например можно задать правила с порядковыми номерами 150, 250 и 350. Правило с номером заказа 150 имеет приоритет над правилом с порядком 250. Допустимые приоритеты должны 150 к 3500. Если все зарезервированные или повторяющиеся значения указаны, запрос завершается ошибкой с кодом состояния HTTP 400.'
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: '@azure/batch'
+  - uid: '@azure/batch.NetworkSecurityGroupRule.sourceAddressPrefix'
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Префикс исходного адреса или тег для сопоставления для правила. Допустимые значения: один IP-адрес (т. е. 10.10.10.10), IP-подсеть (т. е. 192.168.1.0/24), тег по умолчанию, или * (для всех адресов).
+      Если любые другие значения предоставляются, запрос завершается ошибкой с кодом состояния HTTP 400.
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: '@azure/batch'
+references:
+  - uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
+    name: NetworkSecurityGroupRuleAccess
+    spec.typeScript:
+      - name: NetworkSecurityGroupRuleAccess
+        fullName: NetworkSecurityGroupRuleAccess
+        uid: '@azure/batch.NetworkSecurityGroupRuleAccess'
