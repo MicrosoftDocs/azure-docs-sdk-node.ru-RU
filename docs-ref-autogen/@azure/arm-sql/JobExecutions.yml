@@ -1,0 +1,831 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-sql.JobExecutions'
+    name: JobExecutions
+    fullName: JobExecutions
+    children:
+      - '@azure/arm-sql.JobExecutions.beginCreate'
+      - '@azure/arm-sql.JobExecutions.beginCreateOrUpdate'
+      - '@azure/arm-sql.JobExecutions.cancel'
+      - '@azure/arm-sql.JobExecutions.cancel_2'
+      - '@azure/arm-sql.JobExecutions.cancel_1'
+      - '@azure/arm-sql.JobExecutions.create'
+      - '@azure/arm-sql.JobExecutions.createOrUpdate'
+      - '@azure/arm-sql.JobExecutions.get'
+      - '@azure/arm-sql.JobExecutions.get_2'
+      - '@azure/arm-sql.JobExecutions.get_1'
+      - '@azure/arm-sql.JobExecutions.constructor'
+      - '@azure/arm-sql.JobExecutions.listByAgent_2'
+      - '@azure/arm-sql.JobExecutions.listByAgent'
+      - '@azure/arm-sql.JobExecutions.listByAgent_1'
+      - '@azure/arm-sql.JobExecutions.listByAgentNext'
+      - '@azure/arm-sql.JobExecutions.listByAgentNext_2'
+      - '@azure/arm-sql.JobExecutions.listByAgentNext_1'
+      - '@azure/arm-sql.JobExecutions.listByJob_2'
+      - '@azure/arm-sql.JobExecutions.listByJob'
+      - '@azure/arm-sql.JobExecutions.listByJob_1'
+      - '@azure/arm-sql.JobExecutions.listByJobNext'
+      - '@azure/arm-sql.JobExecutions.listByJobNext_2'
+      - '@azure/arm-sql.JobExecutions.listByJobNext_1'
+    langs:
+      - typeScript
+    type: class
+    summary: '<span data-ttu-id="9714c-101">Класс, представляющий JobExecutions.</span><span class="sxs-lookup"><span data-stu-id="9714c-101">Class representing a JobExecutions.</span></span>'
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.beginCreate'
+    name: 'beginCreate(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-102">Начинается выполнение задания обработки эластичных БД.</span><span class="sxs-lookup"><span data-stu-id="9714c-102">Starts an elastic job execution.</span></span>
+    syntax:
+      content: 'function beginCreate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-103">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-103">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-104">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-104">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-105">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-105">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-106">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-106">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-107">Имя задания для получения.</span><span class="sxs-lookup"><span data-stu-id="9714c-107">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.beginCreateOrUpdate'
+    name: 'beginCreateOrUpdate(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-108">Создает или обновляет выполнения задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-108">Creates or updates a job execution.</span></span>
+    syntax:
+      content: 'function beginCreateOrUpdate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-109">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-109">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-110">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-110">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-111">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-111">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-112">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-112">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-113">Имя задания для получения.</span><span class="sxs-lookup"><span data-stu-id="9714c-113">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="9714c-114">Идентификатор выполнения задания для создания задания на выполнение в группе.</span><span class="sxs-lookup"><span data-stu-id="9714c-114">The job execution id to create the job execution under.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<LROPoller>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.cancel'
+    name: 'cancel(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-115">Запрашивает отмену выполнения задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-115">Requests cancellation of a job execution.</span></span>
+    syntax:
+      content: 'function cancel(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-116">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-116">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-117">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-117">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-118">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-118">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-119">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-119">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-120">Имя задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-120">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="9714c-121">Идентификатор выполнения задания для отмены.</span><span class="sxs-lookup"><span data-stu-id="9714c-121">The id of the job execution to cancel.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.cancel_2'
+    name: 'cancel(string, string, string, string, string, RequestOptionsBase, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options: RequestOptionsBase, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-122">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-122">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-123">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-123">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-124">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-124">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-125">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-125">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-126">Имя задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-126">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="9714c-127">Идентификатор выполнения задания для отмены.</span><span class="sxs-lookup"><span data-stu-id="9714c-127">The id of the job execution to cancel.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9714c-128">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="9714c-128">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="9714c-129">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-129">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.cancel_1'
+    name: 'cancel(string, string, string, string, string, ServiceCallback<void>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function cancel(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, callback: ServiceCallback<void>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-130">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-130">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-131">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-131">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-132">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-132">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-133">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-133">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-134">Имя задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-134">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="9714c-135">Идентификатор выполнения задания для отмены.</span><span class="sxs-lookup"><span data-stu-id="9714c-135">The id of the job execution to cancel.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<void>
+          description: |
+            <span data-ttu-id="9714c-136">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-136">The callback</span></span>
+      return:
+        type:
+          - Promise<RestResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.create'
+    name: 'create(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-137">Начинается выполнение задания обработки эластичных БД.</span><span class="sxs-lookup"><span data-stu-id="9714c-137">Starts an elastic job execution.</span></span>
+    syntax:
+      content: 'function create(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-138">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-138">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-139">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-139">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-140">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-140">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-141">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-141">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-142">Имя задания для получения.</span><span class="sxs-lookup"><span data-stu-id="9714c-142">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsCreateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.createOrUpdate'
+    name: 'createOrUpdate(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-143">Создает или обновляет выполнения задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-143">Creates or updates a job execution.</span></span>
+    syntax:
+      content: 'function createOrUpdate(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-144">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-144">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-145">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-145">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-146">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-146">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-147">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-147">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-148">Имя задания для получения.</span><span class="sxs-lookup"><span data-stu-id="9714c-148">The name of the job to get.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="9714c-149">Идентификатор выполнения задания для создания задания на выполнение в группе.</span><span class="sxs-lookup"><span data-stu-id="9714c-149">The job execution id to create the job execution under.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsCreateOrUpdateResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-150">Возвращает выполнение задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-150">Gets a job execution.</span></span>
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-151">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-151">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-152">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-152">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-153">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-153">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-154">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-154">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-155">Имя задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-155">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="9714c-156">Идентификатор выполнения задания</span><span class="sxs-lookup"><span data-stu-id="9714c-156">The id of the job execution</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<JobExecution>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecution>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-157">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-157">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-158">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-158">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-159">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-159">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-160">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-160">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-161">Имя задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-161">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="9714c-162">Идентификатор выполнения задания</span><span class="sxs-lookup"><span data-stu-id="9714c-162">The id of the job execution</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9714c-163">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="9714c-163">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecution>
+          description: |
+            <span data-ttu-id="9714c-164">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-164">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<JobExecution>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, jobExecutionId: string, callback: ServiceCallback<JobExecution>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-165">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-165">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-166">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-166">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-167">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-167">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-168">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-168">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-169">Имя задания.</span><span class="sxs-lookup"><span data-stu-id="9714c-169">The name of the job.</span></span>
+        - id: jobExecutionId
+          type:
+            - string
+          description: <span data-ttu-id="9714c-170">Идентификатор выполнения задания</span><span class="sxs-lookup"><span data-stu-id="9714c-170">The id of the job execution</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecution>
+          description: |
+            <span data-ttu-id="9714c-171">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-171">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsGetResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.constructor'
+    name: JobExecutions(SqlManagementClientContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-172">Создайте JobExecutions.</span><span class="sxs-lookup"><span data-stu-id="9714c-172">Create a JobExecutions.</span></span>
+    syntax:
+      content: 'new JobExecutions(client: SqlManagementClientContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-sql.SqlManagementClientContext'
+          description: |
+            <span data-ttu-id="9714c-173">Ссылка на клиента службы.</span><span class="sxs-lookup"><span data-stu-id="9714c-173">Reference to the service client.</span></span>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgent_2'
+    name: 'listByAgent(string, string, string, JobExecutionsListByAgentOptionalParams, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAgent(resourceGroupName: string, serverName: string, jobAgentName: string, options: JobExecutionsListByAgentOptionalParams, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-174">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-174">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-175">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-175">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-176">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-176">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-177">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-177">The name of the job agent.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-sql.JobExecutionsListByAgentOptionalParams'
+          description: <span data-ttu-id="9714c-178">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="9714c-178">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="9714c-179">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-179">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgent'
+    name: 'listByAgent(string, string, string, Models.JobExecutionsListByAgentOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-180">Список всех выполнений в агенте заданий.</span><span class="sxs-lookup"><span data-stu-id="9714c-180">Lists all executions in a job agent.</span></span>
+    syntax:
+      content: 'function listByAgent(resourceGroupName: string, serverName: string, jobAgentName: string, options?: Models.JobExecutionsListByAgentOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-181">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-181">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-182">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-182">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-183">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-183">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-184">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-184">The name of the job agent.</span></span>
+        - id: options
+          type:
+            - Models.JobExecutionsListByAgentOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgent_1'
+    name: 'listByAgent(string, string, string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAgent(resourceGroupName: string, serverName: string, jobAgentName: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-185">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-185">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-186">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-186">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-187">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-187">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-188">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-188">The name of the job agent.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="9714c-189">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-189">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgentNext'
+    name: 'listByAgentNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-190">Список всех выполнений в агенте заданий.</span><span class="sxs-lookup"><span data-stu-id="9714c-190">Lists all executions in a job agent.</span></span>
+    syntax:
+      content: 'function listByAgentNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9714c-191">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="9714c-191">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgentNext_2'
+    name: 'listByAgentNext(string, RequestOptionsBase, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAgentNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9714c-192">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="9714c-192">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9714c-193">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="9714c-193">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="9714c-194">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-194">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByAgentNext_1'
+    name: 'listByAgentNext(string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAgentNext(nextPageLink: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9714c-195">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="9714c-195">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="9714c-196">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-196">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByAgentNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJob_2'
+    name: 'listByJob(string, string, string, string, JobExecutionsListByJobOptionalParams, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options: JobExecutionsListByJobOptionalParams, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-197">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-197">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-198">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-198">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-199">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-199">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-200">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-200">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-201">Имя задания для получения.</span><span class="sxs-lookup"><span data-stu-id="9714c-201">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - '@azure/arm-sql.JobExecutionsListByJobOptionalParams'
+          description: <span data-ttu-id="9714c-202">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="9714c-202">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="9714c-203">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-203">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJob'
+    name: 'listByJob(string, string, string, string, Models.JobExecutionsListByJobOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-204">Список сведений о выполнении заданий.</span><span class="sxs-lookup"><span data-stu-id="9714c-204">Lists a job's executions.</span></span>
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, options?: Models.JobExecutionsListByJobOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-205">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-205">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-206">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-206">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-207">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-207">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-208">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-208">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-209">Имя задания для получения.</span><span class="sxs-lookup"><span data-stu-id="9714c-209">The name of the job to get.</span></span>
+        - id: options
+          type:
+            - Models.JobExecutionsListByJobOptionalParams
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJob_1'
+    name: 'listByJob(string, string, string, string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJob(resourceGroupName: string, serverName: string, jobAgentName: string, jobName: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: '<span data-ttu-id="9714c-210">Имя группы ресурсов, к которой относится ресурс.</span><span class="sxs-lookup"><span data-stu-id="9714c-210">The name of the resource group that contains the resource.</span></span> <span data-ttu-id="9714c-211">Это значение можно получить от API-интерфейса диспетчера ресурсов Azure или портала.</span><span class="sxs-lookup"><span data-stu-id="9714c-211">You can obtain this value from the Azure Resource Manager API or the portal.</span></span>'
+        - id: serverName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-212">Имени сервера.</span><span class="sxs-lookup"><span data-stu-id="9714c-212">The name of the server.</span></span>
+        - id: jobAgentName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-213">Имя задания агента.</span><span class="sxs-lookup"><span data-stu-id="9714c-213">The name of the job agent.</span></span>
+        - id: jobName
+          type:
+            - string
+          description: <span data-ttu-id="9714c-214">Имя задания для получения.</span><span class="sxs-lookup"><span data-stu-id="9714c-214">The name of the job to get.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="9714c-215">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-215">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJobNext'
+    name: 'listByJobNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: <span data-ttu-id="9714c-216">Список сведений о выполнении заданий.</span><span class="sxs-lookup"><span data-stu-id="9714c-216">Lists a job's executions.</span></span>
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9714c-217">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="9714c-217">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJobNext_2'
+    name: 'listByJobNext(string, RequestOptionsBase, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9714c-218">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="9714c-218">The NextLink from the previous successful call to List operation.</span></span>
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: <span data-ttu-id="9714c-219">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="9714c-219">The optional parameters</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="9714c-220">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-220">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobNextResponse>
+    package: '@azure/arm-sql'
+  - uid: '@azure/arm-sql.JobExecutions.listByJobNext_1'
+    name: 'listByJobNext(string, ServiceCallback<JobExecutionListResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByJobNext(nextPageLink: string, callback: ServiceCallback<JobExecutionListResult>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: <span data-ttu-id="9714c-221">NextLink из предыдущего успешного вызова операции List.</span><span class="sxs-lookup"><span data-stu-id="9714c-221">The NextLink from the previous successful call to List operation.</span></span>
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+          description: |
+            <span data-ttu-id="9714c-222">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="9714c-222">The callback</span></span>
+      return:
+        type:
+          - Promise<Models.JobExecutionsListByJobNextResponse>
+    package: '@azure/arm-sql'
+references:
+  - uid: '@azure/arm-sql.SqlManagementClientContext'
+    name: SqlManagementClientContext
+    spec.typeScript:
+      - name: SqlManagementClientContext
+        fullName: SqlManagementClientContext
+        uid: '@azure/arm-sql.SqlManagementClientContext'
+  - uid: ServiceCallback<@azure/arm-sql.JobExecution>
+    name: JobExecution>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobExecution
+        fullName: JobExecution
+        uid: '@azure/arm-sql.JobExecution'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-sql.JobExecutionListResult>
+    name: JobExecutionListResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: JobExecutionListResult
+        fullName: JobExecutionListResult
+        uid: '@azure/arm-sql.JobExecutionListResult'
+      - name: '>'
+        fullName: '>'
+  - uid: '@azure/arm-sql.JobExecutionsListByAgentOptionalParams'
+    name: JobExecutionsListByAgentOptionalParams
+    spec.typeScript:
+      - name: JobExecutionsListByAgentOptionalParams
+        fullName: JobExecutionsListByAgentOptionalParams
+        uid: '@azure/arm-sql.JobExecutionsListByAgentOptionalParams'
+  - uid: '@azure/arm-sql.JobExecutionsListByJobOptionalParams'
+    name: JobExecutionsListByJobOptionalParams
+    spec.typeScript:
+      - name: JobExecutionsListByJobOptionalParams
+        fullName: JobExecutionsListByJobOptionalParams
+        uid: '@azure/arm-sql.JobExecutionsListByJobOptionalParams'

@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.LinuxUserConfiguration'
+    name: LinuxUserConfiguration
+    fullName: LinuxUserConfiguration
+    children:
+      - '@azure/batch.LinuxUserConfiguration.gid'
+      - '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+      - '@azure/batch.LinuxUserConfiguration.uid'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="2360d-101">Интерфейс, представляющий LinuxUserConfiguration.</span><span class="sxs-lookup"><span data-stu-id="2360d-101">An interface representing LinuxUserConfiguration.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.gid'
+    name: gid
+    fullName: gid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2360d-102">Идентификатор группы для учетной записи пользователя.</span><span class="sxs-lookup"><span data-stu-id="2360d-102">The group ID for the user account.</span></span> <span data-ttu-id="2360d-103">Uid и gid свойства должны указываться вместе или не полностью.</span><span class="sxs-lookup"><span data-stu-id="2360d-103">The uid and gid properties must be specified together or not at all.</span></span> <span data-ttu-id="2360d-104">Если не указан базовой операционной системы выбирает gid.</span><span class="sxs-lookup"><span data-stu-id="2360d-104">If not specified the underlying operating system picks the gid.</span></span>
+    optional: true
+    syntax:
+      content: 'gid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.sshPrivateKey'
+    name: sshPrivateKey
+    fullName: sshPrivateKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="2360d-105">Закрытый ключ SSH для учетной записи пользователя.</span><span class="sxs-lookup"><span data-stu-id="2360d-105">The SSH private key for the user account.</span></span> <span data-ttu-id="2360d-106">Закрытый ключ не должен быть защищен паролем.</span><span class="sxs-lookup"><span data-stu-id="2360d-106">The private key must not be password protected.</span></span> <span data-ttu-id="2360d-107">Закрытый ключ используется для автоматической настройки асимметричный ключ проверки подлинности на основе для SSH между узлами в пуле Linux, когда пул enableInterNodeCommunication имеет значение true (он учитывается, если enableInterNodeCommunication имеет значение false).</span><span class="sxs-lookup"><span data-stu-id="2360d-107">The private key is used to automatically configure asymmetric-key based authentication for SSH between nodes in a Linux pool when the pool''s enableInterNodeCommunication property is true (it is ignored if enableInterNodeCommunication is false).</span></span> <span data-ttu-id="2360d-108">Это делается путем помещения пары ключей, содержащихся в каталоге .ssh пользователя.</span><span class="sxs-lookup"><span data-stu-id="2360d-108">It does this by placing the key pair into the user''s .ssh directory.</span></span> <span data-ttu-id="2360d-109">Если не указан, без пароля SSH не настроен между узлами (без изменения каталоге .ssh пользователя выполняется).</span><span class="sxs-lookup"><span data-stu-id="2360d-109">If not specified, password-less SSH is not configured between nodes (no modification of the user''s .ssh directory is done).</span></span>'
+    optional: true
+    syntax:
+      content: 'sshPrivateKey?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.LinuxUserConfiguration.uid'
+    name: uid
+    fullName: uid
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="2360d-110">Идентификатор пользователя учетной записи пользователя.</span><span class="sxs-lookup"><span data-stu-id="2360d-110">The user ID of the user account.</span></span> <span data-ttu-id="2360d-111">Uid и gid свойства должны указываться вместе или не полностью.</span><span class="sxs-lookup"><span data-stu-id="2360d-111">The uid and gid properties must be specified together or not at all.</span></span> <span data-ttu-id="2360d-112">Если не указан базовой операционной системы выбирает идентификатор uid.</span><span class="sxs-lookup"><span data-stu-id="2360d-112">If not specified the underlying operating system picks the uid.</span></span>
+    optional: true
+    syntax:
+      content: 'uid?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/batch'
