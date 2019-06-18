@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/arm-migrate.AssessedMachines'
+    name: AssessedMachines
+    fullName: AssessedMachines
+    children:
+      - '@azure/arm-migrate.AssessedMachines.constructor'
+      - '@azure/arm-migrate.AssessedMachines.get'
+      - '@azure/arm-migrate.AssessedMachines.get_2'
+      - '@azure/arm-migrate.AssessedMachines.get_1'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment_2'
+      - '@azure/arm-migrate.AssessedMachines.listByAssessment_1'
+    langs:
+      - typeScript
+    type: class
+    summary: 'Класс, представляющий AssessedMachines.'
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.constructor'
+    name: AssessedMachines(AzureMigrateContext)
+    children: []
+    type: constructor
+    langs:
+      - typeScript
+    summary: Создайте AssessedMachines.
+    syntax:
+      content: 'new AssessedMachines(client: AzureMigrateContext)'
+      parameters:
+        - id: client
+          type:
+            - '@azure/arm-migrate.AzureMigrateContext'
+          description: |
+            Ссылка на клиента службы.
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get'
+    name: 'get(string, string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Скачать машине оцениваемые с его размер и стоимость estimnate, который был получен в процессе оценки, указанный.'
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Имя группы ресурсов Azure, этот проект является частью.'
+        - id: projectName
+          type:
+            - string
+          description: Имя проекта "Миграция Azure".
+        - id: groupName
+          type:
+            - string
+          description: Уникальное имя группы в проекте.
+        - id: assessmentName
+          type:
+            - string
+          description: Уникальное имя оценки в рамках проекта.
+        - id: assessedMachineName
+          type:
+            - string
+          description: 'Уникальное имя машине имущество, вычисляется как часть оценки.'
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get_2'
+    name: 'get(string, string, string, string, string, RequestOptionsBase, ServiceCallback<AssessedMachine>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessedMachine>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Имя группы ресурсов Azure, этот проект является частью.'
+        - id: projectName
+          type:
+            - string
+          description: Имя проекта "Миграция Azure".
+        - id: groupName
+          type:
+            - string
+          description: Уникальное имя группы в проекте.
+        - id: assessmentName
+          type:
+            - string
+          description: Уникальное имя оценки в рамках проекта.
+        - id: assessedMachineName
+          type:
+            - string
+          description: 'Уникальное имя машине имущество, вычисляется как часть оценки.'
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachine>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.get_1'
+    name: 'get(string, string, string, string, string, ServiceCallback<AssessedMachine>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function get(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, assessedMachineName: string, callback: ServiceCallback<AssessedMachine>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Имя группы ресурсов Azure, этот проект является частью.'
+        - id: projectName
+          type:
+            - string
+          description: Имя проекта "Миграция Azure".
+        - id: groupName
+          type:
+            - string
+          description: Уникальное имя группы в проекте.
+        - id: assessmentName
+          type:
+            - string
+          description: Уникальное имя оценки в рамках проекта.
+        - id: assessedMachineName
+          type:
+            - string
+          description: 'Уникальное имя машине имущество, вычисляется как часть оценки.'
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachine>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.AssessedMachinesGetResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment'
+    name: 'listByAssessment(string, string, string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: |-
+      Получите список компьютеров, на которые оценивается как часть указанного оценки. Возвращает массив json объектов типа «оцениваемый компьютер» как указано в разделе моделей.
+      Каждый раз, когда оценка создается или обновляется, он не привлекают внимания вычисления. На этом этапе поля «status» оценка объекта сообщает «Вычисления».
+      Во время периода оценки в области вычислений список оцениваемых компьютеров пуста, и компьютеры, не прошедшие возвращаются при вызове этого метода.
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Имя группы ресурсов Azure, этот проект является частью.'
+        - id: projectName
+          type:
+            - string
+          description: Имя проекта "Миграция Azure".
+        - id: groupName
+          type:
+            - string
+          description: Уникальное имя группы в проекте.
+        - id: assessmentName
+          type:
+            - string
+          description: Уникальное имя оценки в рамках проекта.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment_2'
+    name: 'listByAssessment(string, string, string, string, RequestOptionsBase, ServiceCallback<AssessedMachineResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, options: RequestOptionsBase, callback: ServiceCallback<AssessedMachineResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Имя группы ресурсов Azure, этот проект является частью.'
+        - id: projectName
+          type:
+            - string
+          description: Имя проекта "Миграция Azure".
+        - id: groupName
+          type:
+            - string
+          description: Уникальное имя группы в проекте.
+        - id: assessmentName
+          type:
+            - string
+          description: Уникальное имя оценки в рамках проекта.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+  - uid: '@azure/arm-migrate.AssessedMachines.listByAssessment_1'
+    name: 'listByAssessment(string, string, string, string, ServiceCallback<AssessedMachineResultList>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listByAssessment(resourceGroupName: string, projectName: string, groupName: string, assessmentName: string, callback: ServiceCallback<AssessedMachineResultList>)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: 'Имя группы ресурсов Azure, этот проект является частью.'
+        - id: projectName
+          type:
+            - string
+          description: Имя проекта "Миграция Azure".
+        - id: groupName
+          type:
+            - string
+          description: Уникальное имя группы в проекте.
+        - id: assessmentName
+          type:
+            - string
+          description: Уникальное имя оценки в рамках проекта.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.AssessedMachinesListByAssessmentResponse>
+    package: '@azure/arm-migrate'
+references:
+  - uid: '@azure/arm-migrate.AzureMigrateContext'
+    name: AzureMigrateContext
+    spec.typeScript:
+      - name: AzureMigrateContext
+        fullName: AzureMigrateContext
+        uid: '@azure/arm-migrate.AzureMigrateContext'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessedMachine>
+    name: AssessedMachine>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessedMachine
+        fullName: AssessedMachine
+        uid: '@azure/arm-migrate.AssessedMachine'
+      - name: '>'
+        fullName: '>'
+  - uid: ServiceCallback<@azure/arm-migrate.AssessedMachineResultList>
+    name: AssessedMachineResultList>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: AssessedMachineResultList
+        fullName: AssessedMachineResultList
+        uid: '@azure/arm-migrate.AssessedMachineResultList'
+      - name: '>'
+        fullName: '>'

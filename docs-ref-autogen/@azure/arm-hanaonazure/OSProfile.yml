@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/arm-hanaonazure.OSProfile.computerName'
       - '@azure/arm-hanaonazure.OSProfile.osType'
+      - '@azure/arm-hanaonazure.OSProfile.sshPublicKey'
       - '@azure/arm-hanaonazure.OSProfile.version'
     langs:
       - typeScript
@@ -42,6 +43,23 @@ items:
     optional: true
     syntax:
       content: 'osType?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-hanaonazure'
+  - uid: '@azure/arm-hanaonazure.OSProfile.sshPublicKey'
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Указывает открытый ключ SSH, используемый для доступа к операционной системе.
+      **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: undefined | string'
       return:
         type:
           - undefined | string
