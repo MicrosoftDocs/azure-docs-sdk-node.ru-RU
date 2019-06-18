@@ -7,12 +7,13 @@ items:
       - '@azure/arm-cosmosdb.Location.documentEndpoint'
       - '@azure/arm-cosmosdb.Location.failoverPriority'
       - '@azure/arm-cosmosdb.Location.id'
+      - '@azure/arm-cosmosdb.Location.isZoneRedundant'
       - '@azure/arm-cosmosdb.Location.locationName'
       - '@azure/arm-cosmosdb.Location.provisioningState'
     langs:
       - typeScript
     type: interface
-    summary: '<span data-ttu-id="62a2e-101">Регион, учетную запись базы данных Azure Cosmos DB развертывается.</span><span class="sxs-lookup"><span data-stu-id="62a2e-101">A region in which the Azure Cosmos DB database account is deployed.</span></span>'
+    summary: '<span data-ttu-id="f6107-101">Регион, учетную запись базы данных Azure Cosmos DB развертывается.</span><span class="sxs-lookup"><span data-stu-id="f6107-101">A region in which the Azure Cosmos DB database account is deployed.</span></span>'
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.Location.documentEndpoint'
     name: documentEndpoint
@@ -21,7 +22,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="62a2e-102">Конечная точка подключения для определенного региона.</span><span class="sxs-lookup"><span data-stu-id="62a2e-102">The connection endpoint for the specific region.</span></span> <span data-ttu-id="62a2e-103">Пример: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/ **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="62a2e-103">Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/ **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
+    summary: '<span data-ttu-id="f6107-102">Конечная точка подключения для определенного региона.</span><span class="sxs-lookup"><span data-stu-id="f6107-102">The connection endpoint for the specific region.</span></span> <span data-ttu-id="f6107-103">Пример: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/ **Примечание: Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f6107-103">Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/ **NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>'
     optional: true
     syntax:
       content: 'documentEndpoint?: undefined | string'
@@ -36,7 +37,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="62a2e-104">Приоритет отработки отказа региона.</span><span class="sxs-lookup"><span data-stu-id="62a2e-104">The failover priority of the region.</span></span> <span data-ttu-id="62a2e-105">Приоритет отработки отказа 0 указывает, регион записи.</span><span class="sxs-lookup"><span data-stu-id="62a2e-105">A failover priority of 0 indicates a write region.</span></span> <span data-ttu-id="62a2e-106">Максимальное значение приоритета отработки отказа = (общее число регионов - 1).</span><span class="sxs-lookup"><span data-stu-id="62a2e-106">The maximum value for a failover priority = (total number of regions - 1).</span></span> <span data-ttu-id="62a2e-107">Значения приоритетов отработки отказа должен быть уникальным для каждого из регионов, в которых существует учетная запись базы данных.</span><span class="sxs-lookup"><span data-stu-id="62a2e-107">Failover priority values must be unique for each of the regions in which the database account exists.</span></span>'
+    summary: '<span data-ttu-id="f6107-104">Приоритет отработки отказа региона.</span><span class="sxs-lookup"><span data-stu-id="f6107-104">The failover priority of the region.</span></span> <span data-ttu-id="f6107-105">Приоритет отработки отказа 0 указывает, регион записи.</span><span class="sxs-lookup"><span data-stu-id="f6107-105">A failover priority of 0 indicates a write region.</span></span> <span data-ttu-id="f6107-106">Максимальное значение приоритета отработки отказа = (общее число регионов - 1).</span><span class="sxs-lookup"><span data-stu-id="f6107-106">The maximum value for a failover priority = (total number of regions - 1).</span></span> <span data-ttu-id="f6107-107">Значения приоритетов отработки отказа должен быть уникальным для каждого из регионов, в которых существует учетная запись базы данных.</span><span class="sxs-lookup"><span data-stu-id="f6107-107">Failover priority values must be unique for each of the regions in which the database account exists.</span></span>'
     optional: true
     syntax:
       content: 'failoverPriority?: undefined | number'
@@ -52,14 +53,29 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="62a2e-108">Уникальный идентификатор область в пределах учетной записи базы данных.</span><span class="sxs-lookup"><span data-stu-id="62a2e-108">The unique identifier of the region within the database account.</span></span> <span data-ttu-id="62a2e-109">Пример: &lt;accountName&gt;-&lt;locationName&gt;.</span><span class="sxs-lookup"><span data-stu-id="62a2e-109">Example: &lt;accountName&gt;-&lt;locationName&gt;.</span></span>
-      <span data-ttu-id="62a2e-110">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="62a2e-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
+      <span data-ttu-id="f6107-108">Уникальный идентификатор область в пределах учетной записи базы данных.</span><span class="sxs-lookup"><span data-stu-id="f6107-108">The unique identifier of the region within the database account.</span></span> <span data-ttu-id="f6107-109">Пример: &lt;accountName&gt;-&lt;locationName&gt;.</span><span class="sxs-lookup"><span data-stu-id="f6107-109">Example: &lt;accountName&gt;-&lt;locationName&gt;.</span></span>
+      <span data-ttu-id="f6107-110">**ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**</span><span class="sxs-lookup"><span data-stu-id="f6107-110">**NOTE: This property will not be serialized. It can only be populated by the server.**</span></span>
     optional: true
     syntax:
       content: 'id?: undefined | string'
       return:
         type:
           - undefined | string
+    package: '@azure/arm-cosmosdb'
+  - uid: '@azure/arm-cosmosdb.Location.isZoneRedundant'
+    name: isZoneRedundant
+    fullName: isZoneRedundant
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="f6107-111">Флаг, указывающий, является ли этот регион регионом AvailabilityZone</span><span class="sxs-lookup"><span data-stu-id="f6107-111">Flag to indicate whether or not this region is an AvailabilityZone region</span></span>'
+    optional: true
+    syntax:
+      content: 'isZoneRedundant?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
     package: '@azure/arm-cosmosdb'
   - uid: '@azure/arm-cosmosdb.Location.locationName'
     name: locationName
@@ -68,7 +84,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="62a2e-111">Имя области.</span><span class="sxs-lookup"><span data-stu-id="62a2e-111">The name of the region.</span></span>
+    summary: <span data-ttu-id="f6107-112">Имя области.</span><span class="sxs-lookup"><span data-stu-id="f6107-112">The name of the region.</span></span>
     optional: true
     syntax:
       content: 'locationName?: undefined | string'
