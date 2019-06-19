@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter'
+    name: PoolEnableAutoScaleParameter
+    fullName: PoolEnableAutoScaleParameter
+    children:
+      - '@azure/batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval'
+      - '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="4cf0a-101">Интерфейс, представляющий PoolEnableAutoScaleParameter.</span><span class="sxs-lookup"><span data-stu-id="4cf0a-101">An interface representing PoolEnableAutoScaleParameter.</span></span>'
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleEvaluationInterval'
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4cf0a-102">Интервал времени, по которому автоматически изменяет размер пула по формуле автоматического масштабирования.</span><span class="sxs-lookup"><span data-stu-id="4cf0a-102">The time interval at which to automatically adjust the pool size according to the autoscale formula.</span></span> <span data-ttu-id="4cf0a-103">Значение по умолчанию — 15 минут.</span><span class="sxs-lookup"><span data-stu-id="4cf0a-103">The default value is 15 minutes.</span></span> <span data-ttu-id="4cf0a-104">Минимальное и максимальное значение составляет 5 минут и 168 часов соответственно.</span><span class="sxs-lookup"><span data-stu-id="4cf0a-104">The minimum and maximum value are 5 minutes and 168 hours respectively.</span></span> <span data-ttu-id="4cf0a-105">Если указать значение меньше 5 минут или больше, чем 168 часов, пакетная служба отклоняет запрос с ошибкой значение недопустимое свойство; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="4cf0a-105">If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span> <span data-ttu-id="4cf0a-106">Если указать новый интервал, имеющееся расписание оценки автомасштабирования будет остановлена, и запускается новое расписание оценки автомасштабирования, с его времени начала, времени, когда был выдан этим запросом.</span><span class="sxs-lookup"><span data-stu-id="4cf0a-106">If you specify a new interval, then the existing autoscale evaluation schedule will be stopped and a new autoscale evaluation schedule will be started, with its starting time being the time when this request was issued.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.PoolEnableAutoScaleParameter.autoScaleFormula'
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4cf0a-107">Формула для требуемое число вычислительных узлов в пуле.</span><span class="sxs-lookup"><span data-stu-id="4cf0a-107">The formula for the desired number of compute nodes in the pool.</span></span> <span data-ttu-id="4cf0a-108">Формула проверяется на допустимость перед их применением в пул.</span><span class="sxs-lookup"><span data-stu-id="4cf0a-108">The formula is checked for validity before it is applied to the pool.</span></span> <span data-ttu-id="4cf0a-109">Если формула не является допустимой, пакетная служба отклоняет запрос с подробные сведения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="4cf0a-109">If the formula is not valid, the Batch service rejects the request with detailed error information.</span></span> <span data-ttu-id="4cf0a-110">Дополнительные сведения об указании этой формулы см. Автоматическое масштабирование вычислительных узлов в пуле пакетной службы Azure (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).</span><span class="sxs-lookup"><span data-stu-id="4cf0a-110">For more information about specifying this formula, see Automatically scale compute nodes in an Azure Batch pool (https://azure.microsoft.com/en-us/documentation/articles/batch-automatic-scaling).</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
