@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/batch.Schedule'
+    name: Schedule
+    fullName: Schedule
+    children:
+      - '@azure/batch.Schedule.doNotRunAfter'
+      - '@azure/batch.Schedule.doNotRunUntil'
+      - '@azure/batch.Schedule.recurrenceInterval'
+      - '@azure/batch.Schedule.startWindow'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Интерфейс, представляющий расписание.'
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunAfter'
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время, после которого задания не будут создаваться по этому расписанию заданий. Расписание перейдет в состояние завершения, сразу после крайнего срока и нет активных заданий по этому расписанию заданий. Если вы не укажете время doNotRunAfter и создании регулярное расписание задания, расписания задания будет оставаться активным, пока вы явным образом завершить его.'
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.doNotRunUntil'
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Самое раннее время, по которому любые задания могут создаваться по этому расписанию заданий. Если вы не укажете время doNotRunUntil, расписание становится все готово для создания задания немедленно.'
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.recurrenceInterval'
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Интервал времени между временами запуска двух последовательных заданий в расписание задания. Расписание заданий может иметь не более одного активного задания в его в любой момент времени. Так как расписание заданий может иметь не более одного активного задания в в любой момент времени, пора создать задание в расписание заданий, когда предыдущее задание еще выполняется, пакетная служба не создаст новое задание, пока не завершится предыдущее. Если предыдущее задание не завершается в течение startWindow новый recurrenceInterval, новое задание или не будет выполняться для этого интервала. Для повторяющихся заданий обычно необходимо указать jobManagerTask в jobSpecification. Если вы не используете jobManagerTask, вам потребуется внешний процесс отслеживания при создании заданий, добавьте задачи для заданий и завершить выполнение заданий, все готово для следующего повторения. По умолчанию используется расписание повторения: создается одно задание, в пределах startWindow через время doNotRunUntil, расписание завершения и сразу же после завершения этого задания. Минимальное значение — 1 минута. Если указать более низкое значение, пакетная служба отклоняет расписание с ошибкой; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).'
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
+  - uid: '@azure/batch.Schedule.startWindow'
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Интервал времени, начиная от времени, по которому указанные в расписании задания должен будет создан, в которой необходимо создать задание. Если в течение интервала startWindow не создается задание, затем «возможность» поддерживается. задания не будут создаваться до следующего повторения расписания. Если расписание повторяется и startWindow, превышающего интервал повторения, затем это эквивалентно startWindow бесконечного, так как задания, срок в один recurrenceInterval не переносится в следующий интервал повторения. Значение по умолчанию бесконечна. Минимальное значение — 1 минута. Если указать более низкое значение, пакетная служба отклоняет расписание с ошибкой; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).'
+    optional: true
+    syntax:
+      content: 'startWindow?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/batch'
