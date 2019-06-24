@@ -1,0 +1,45 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ExitOptions
+    name: ExitOptions
+    fullName: ExitOptions
+    children:
+      - azure-batch.ExitOptions.dependencyAction
+      - azure-batch.ExitOptions.jobAction
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ExitOptions.dependencyAction
+    name: dependencyAction
+    fullName: dependencyAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Значение по умолчанию — «удовлетворяют» для кода выхода 0 и «блокировать» для всех остальных условий выхода. Если задания usesTaskDependencies свойство имеет значение false, указав свойство dependencyAction возвращает ошибку и добавить поручение завершается с ошибкой значение недопустимое свойство; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос). Возможные значения: «удовлетворяют», «блокировать»'
+    optional: true
+    syntax:
+      content: 'dependencyAction?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ExitOptions.jobAction
+    name: jobAction
+    fullName: jobAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Значение по умолчанию имеет значение none для кода выхода 0 и завершения для всех остальных условий выхода.
+      Если свойство onTaskFailed задания noaction, указав это свойство возвращает сообщение об ошибке, и добавить поручение завершается с ошибкой значение недопустимое свойство; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос). Возможные значения: «none», «отключить», «terminate»
+    optional: true
+    syntax:
+      content: 'jobAction?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

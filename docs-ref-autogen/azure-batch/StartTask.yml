@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.StartTask
+    name: StartTask
+    fullName: StartTask
+    children:
+      - azure-batch.StartTask.commandLine
+      - azure-batch.StartTask.containerSettings
+      - azure-batch.StartTask.environmentSettings
+      - azure-batch.StartTask.maxTaskRetryCount
+      - azure-batch.StartTask.resourceFiles
+      - azure-batch.StartTask.userIdentity
+      - azure-batch.StartTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Пакета повторит задачи, когда операция восстановления запускается на узле. Примеры операций восстановления причинами (но не ограничиваются) при неработоспособный узел перезагружается или вычислительного узла не отображается из-за сбоя узла. Повторно из-за восстановления операций независимы и не учитываются для maxTaskRetryCount. Даже если maxTaskRetryCount равно 0, может возникнуть внутренних повторных попыток из-за операции восстановления. По этой причине все задачи должны быть идемпотентными. Это означает, что задачи должны допускать прервана и перезапущена без возникновения любые повреждения или повторяющиеся данные. Лучшие практики для долго выполняющихся задач является использование определенные виды создания контрольных точек. В некоторых случаях начала задачи может быть повторно запущено несмотря на то, что вычислительного узла не был перезагружен. Специальные следует соблюдать осторожность для предотвращения запуска задачи, которые создают breakaway обработать или установка или запуск службы с самого начала рабочему каталогу задачи, так как это будет блокировать пакет не сможет повторно выполнять запуск задачи.'
+    package: azure-batch
+  - uid: azure-batch.StartTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'В командной строке не выполняются в оболочке и таким образом, не может воспользоваться преимуществами функции оболочки, например расширение переменных среды. Если вы хотите воспользоваться преимуществами таких функций, необходимо вызвать оболочку в командной строке, например с помощью «cmd /c MyCommand» в Windows или «/ bin/sh - c MyCommand» в Linux. Если командной строке ссылается на пути к файлам, она должна использовать относительный путь (по отношению к рабочему каталогу задачи), или пакетное указанной переменной среды (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.StartTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если этот параметр указан, все каталоги рекурсивно ниже AZ_BATCH_NODE_ROOT_DIR (корень каталогов пакетной службы Azure на узле) сопоставляются в контейнере, все переменные среды задач сопоставляются в контейнере и Командная строка задачи выполняется в контейнере. Файлы, созданные в контейнере за пределами AZ_BATCH_NODE_ROOT_DIR могут не отражаться на диск узла, это означает, что API-интерфейсов файлового пакетного нельзя будет получить доступ к этим файлам.'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.StartTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Пакетная служба повторяет задачу, если ее код выхода имеет ненулевое значение. Обратите внимание, что это значение определяет количество повторных попыток. Пакетная служба попытается выполнить задачу один раз и повторите вплоть до этого предела. Например если максимальное число повторных попыток равно 3, пакетная служба пытается выполнить задачу до 4 раз (одна начальная попытка и 3 повторных). Если максимальное число повторных попыток равно 0, пакетная служба не выполняет повторную попытку запуска задачи. Если максимальное число повторных попыток равно -1, пакетная служба повторяет неограниченное.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.StartTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Файлы, перечисленные в этом элементе, находятся в рабочем каталоге задачи.'
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.StartTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если не указано, задача выполняется как пользователь без прав администратора уникальные задачи.'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.StartTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если значение true и начала задачи произошел сбой на узле, пакетная служба повторяет попытку запуска задачи до его максимальное число повторных попыток (maxTaskRetryCount). Если у задачи по-прежнему не завершилось успешно по истечении всех повторных попыток, а затем знаков обслуживания пакета непригодным для использования узла и не будем планировать задачи к нему. Это условие можно обнаружить через подробности сведения о состоянии и отказ вычислительного узла. Если значение равно false, пакетная служба не будет ожидать начала выполнения задачи. В этом случае другие задачи может начать выполнение на вычислительный узел во время запуска, которые по-прежнему выполняется задача; и даже в случае сбоя для задачи запуска, новые задачи будет планироваться на вычислительный узел. Его значение по умолчанию — false.'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - azure-batch.JobConstraints.maxTaskRetryCount
+      - azure-batch.JobConstraints.maxWallClockTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Обратите внимание, что это значение определяет количество повторных попыток. Пакетная служба попытается каждую задачу один раз и повторите вплоть до этого предела. Например если максимальное число повторных попыток равно 3, пакетная служба пытается выполнить задачу до 4 раз (одна начальная попытка и 3 повторных). Если максимальное число повторных попыток равно 0, пакетная служба не выполняет повторную попытку запуска задачи. Если максимальное число повторных попыток равно -1, пакетная служба повторяет задачи без ограничений. Значение по умолчанию — 0 (без повторных попыток).'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.JobConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если задание не выполняется в течение ограниченного времени, пакетная служба завершит его и все задачи, которые по-прежнему работают. В этом случае причиной завершения работы будет MaxWallClockTimeExpiry. Если это свойство не указано, есть без временных ограничений на продолжительность выполнения задания.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

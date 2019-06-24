@@ -1,0 +1,71 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.OutputFile
+    name: OutputFile
+    fullName: OutputFile
+    children:
+      - azure-batch.OutputFile.destination
+      - azure-batch.OutputFile.filePattern
+      - azure-batch.OutputFile.uploadOptions
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.OutputFile.destination
+    name: destination
+    fullName: destination
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'destination: OutputFileDestination'
+      return:
+        type:
+          - azure-batch.OutputFileDestination
+    package: azure-batch
+  - uid: azure-batch.OutputFile.filePattern
+    name: filePattern
+    fullName: filePattern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Поддерживаются относительных и абсолютных путей. Относительные пути задаются относительно рабочему каталогу задачи. Поддерживаются следующие подстановочные знаки: * соответствует 0 или нескольким символам (для примера шаблона abc * бы соответствует abc или abcdef), ** соответствует любой каталог?
+      соответствует любому одиночному символу, [abc] соответствует один символ в квадратных скобках и совпадения [a-c] один символ в диапазоне. Квадратные скобки можно включить отрицание на совпадение с любым символом не указан (например [! abc] соответствует всем символам, кроме, b или c). Если имя файла начинается с «.» игнорирует его по умолчанию, но может совпадать с явное указание (например *.gif не совпадут. a.gif, но.*. GIF будет). Простой пример: **\*.txt соответствует любой файл, который не запускается в "." и заканчивается .txt в рабочем каталоге задачи или любого подкаталога. Если имя файла содержит подстановочный знак его можно экранировать с помощью квадратных скобок (например abc [*] будет соответствовать файл с именем abc *). Обратите внимание, что оба \ и / рассматриваются как разделители в Windows, но только для каталога / — в Linux. Переменные среды (% переменная % на Windows) или $var на платформе Linux расширяются до применения шаблона.
+    syntax:
+      content: 'filePattern: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.OutputFile.uploadOptions
+    name: uploadOptions
+    fullName: uploadOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'uploadOptions: OutputFileUploadOptions'
+      return:
+        type:
+          - azure-batch.OutputFileUploadOptions
+    package: azure-batch
+references:
+  - uid: azure-batch.OutputFileDestination
+    name: OutputFileDestination
+    spec.typeScript:
+      - name: OutputFileDestination
+        fullName: OutputFileDestination
+        uid: azure-batch.OutputFileDestination
+  - uid: azure-batch.OutputFileUploadOptions
+    name: OutputFileUploadOptions
+    spec.typeScript:
+      - name: OutputFileUploadOptions
+        fullName: OutputFileUploadOptions
+        uid: azure-batch.OutputFileUploadOptions

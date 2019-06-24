@@ -1,0 +1,136 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.VirtualMachineConfiguration
+    name: VirtualMachineConfiguration
+    fullName: VirtualMachineConfiguration
+    children:
+      - azure-batch.VirtualMachineConfiguration.containerConfiguration
+      - azure-batch.VirtualMachineConfiguration.dataDisks
+      - azure-batch.VirtualMachineConfiguration.imageReference
+      - azure-batch.VirtualMachineConfiguration.licenseType
+      - azure-batch.VirtualMachineConfiguration.nodeAgentSKUId
+      - azure-batch.VirtualMachineConfiguration.windowsConfiguration
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.containerConfiguration
+    name: containerConfiguration
+    fullName: containerConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если указан, программа установки выполняется на каждом узле вычислений в пуле, чтобы разрешить запускать задачи в контейнерах. Все регулярные задачи и задач диспетчера заданий, которые выполняются в этом пуле должно быть указано свойство containerSettings, и все остальные задачи может установить его.'
+    optional: true
+    syntax:
+      content: 'containerConfiguration?: ContainerConfiguration'
+      return:
+        type:
+          - azure-batch.ContainerConfiguration
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.dataDisks
+    name: dataDisks
+    fullName: dataDisks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Это свойство должно быть указано, вычислительные узлы в пуле должны иметь пустые диски данных к ним. Не удалось обновить. Каждый вычислительный узел получает свой собственный диск (диск не является общей папки). Невозможно подключить существующих дисков, каждый подключенный диск пуст. Когда вычислительный узел удаляется из пула, также удаляется диск и все данные, связанные с ним. Диск не отформатирован после присоединения, он должен быть отформатирован перед использованием — Дополнительные сведения см. https://docs.microsoft.com/en-us/azure/virtual-machines/linux/classic/attach-disk#initialize-a-new-data-disk-in-linux и https://docs.microsoft.com/en-us/azure/virtual-machines/windows/attach-disk-ps#add-an-empty-data-disk-to-a-virtual-machine.'
+    optional: true
+    syntax:
+      content: 'dataDisks?: DataDisk[]'
+      return:
+        type:
+          - 'azure-batch.DataDisk[]'
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.imageReference
+    name: imageReference
+    fullName: imageReference
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'imageReference: ImageReference'
+      return:
+        type:
+          - azure-batch.ImageReference
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.licenseType
+    name: licenseType
+    fullName: licenseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Это относится только к образам, содержащие операционную систему Windows и должен использоваться только в режиме допустимым локальные лицензии для вычислительных узлов, который будет развернут. Если не указано, отсутствие локальной лицензирования скидка применяется. Доступны следующие значения:
+
+      Windows_Server - — локальную лицензию Windows Server.
+      Windows_Client - локальную лицензию — для клиента Windows.
+    optional: true
+    syntax:
+      content: 'licenseType?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.nodeAgentSKUId
+    name: nodeAgentSKUId
+    fullName: nodeAgentSKUId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Агент узла вычислений пакетной службы — это программа, которая выполняется на каждом узле вычислений в пуле и предоставляет интерфейс контроля и управления между узлом вычислений и пакетной службы. Существуют различные реализации агента вычислительного узла, известные как номера SKU, для разных операционных систем. Необходимо указать агент вычислительного узла, номер SKU, который соответствует выбранной ссылки на образ. Чтобы получить список поддерживаемых вычислительных номеров SKU агентов узлов вместе с их список проверенных ссылками на изображения, см. в разделе операции «Список поддерживаемые номера SKU агентов узлов вычислений».'
+    syntax:
+      content: 'nodeAgentSKUId: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.VirtualMachineConfiguration.windowsConfiguration
+    name: windowsConfiguration
+    fullName: windowsConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Это свойство не должно быть указано, если свойство imageReference указывает образ операционной системы Linux.'
+    optional: true
+    syntax:
+      content: 'windowsConfiguration?: WindowsConfiguration'
+      return:
+        type:
+          - azure-batch.WindowsConfiguration
+    package: azure-batch
+references:
+  - uid: azure-batch.ContainerConfiguration
+    name: ContainerConfiguration
+    spec.typeScript:
+      - name: ContainerConfiguration
+        fullName: ContainerConfiguration
+        uid: azure-batch.ContainerConfiguration
+  - uid: 'azure-batch.DataDisk[]'
+    name: 'DataDisk[]'
+    spec.typeScript:
+      - name: DataDisk
+        fullName: DataDisk
+        uid: azure-batch.DataDisk
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.ImageReference
+    name: ImageReference
+    spec.typeScript:
+      - name: ImageReference
+        fullName: ImageReference
+        uid: azure-batch.ImageReference
+  - uid: azure-batch.WindowsConfiguration
+    name: WindowsConfiguration
+    spec.typeScript:
+      - name: WindowsConfiguration
+        fullName: WindowsConfiguration
+        uid: azure-batch.WindowsConfiguration

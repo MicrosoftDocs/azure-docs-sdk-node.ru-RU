@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams.targetFace'
@@ -47,6 +48,21 @@ items:
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Имя обнаружения модели. Модель обнаружения используется для определения лиц отправленного изображения. Имя модели обнаружения можно указать при выполнении лиц - обнаружить или распознавания лиц (Large) FaceList — добавление распознавания лиц или каждой группе людей (Large) - добавить. Значение по умолчанию — «detection_01», если требуется другой модели, необходимо явно указать его. Возможные значения: «detection_01», «detection_02». Значение по умолчанию: «detection_01».'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.LargePersonGroupPersonAddFaceFromStreamOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -123,3 +139,10 @@ items:
         type:
           - undefined | string
     package: '@azure/cognitiveservices-face'
+references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'

@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkSecurityGroupRule
+    name: NetworkSecurityGroupRule
+    fullName: NetworkSecurityGroupRule
+    children:
+      - azure-batch.NetworkSecurityGroupRule.access
+      - azure-batch.NetworkSecurityGroupRule.priority
+      - azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+      - azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.access
+    name: access
+    fullName: access
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Возможные значения: «разрешить», «отклонить»'
+    syntax:
+      content: 'access: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Приоритеты в пуле должно быть уникальным и оцениваются в порядке приоритета.
+      Чем меньше число, тем выше приоритет. Например можно задать правила с порядковыми номерами 150, 250 и 350. Правило с номером заказа 150 имеет приоритет над правилом с порядком 250. Допустимые приоритеты должны 150 к 3500. Если все зарезервированные или повторяющиеся значения указаны, запрос завершается ошибкой с кодом состояния HTTP 400.
+    syntax:
+      content: 'priority: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourceAddressPrefix
+    name: sourceAddressPrefix
+    fullName: sourceAddressPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Допустимые значения: один IP-адрес (т. е. 10.10.10.10), IP-подсеть (т. е. 192.168.1.0/24), тег по умолчанию, или * (для всех адресов).  Если любые другие значения предоставляются, запрос завершается ошибкой с кодом состояния HTTP 400.'
+    syntax:
+      content: 'sourceAddressPrefix: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkSecurityGroupRule.sourcePortRanges
+    name: sourcePortRanges
+    fullName: sourcePortRanges
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Допустимые значения: "*" (для всех портов 0 – 65535), конкретного порта, (т. е. 22) или диапазон портов (т. е. 100 – 200). Порты должны быть в диапазоне от 0 до 65535. Каждая запись в этой коллекции не должны перекрываться любой другой записи (или диапазон, или один из отдельных портов). Если любые другие значения предоставляются, запрос завершается ошибкой с кодом состояния HTTP 400. Значение по умолчанию — "*".'
+    optional: true
+    syntax:
+      content: 'sourcePortRanges?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch

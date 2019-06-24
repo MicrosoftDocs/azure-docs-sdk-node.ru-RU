@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    fullName: TaskContainerSettings
+    children:
+      - azure-batch.TaskContainerSettings.containerRunOptions
+      - azure-batch.TaskContainerSettings.imageName
+      - azure-batch.TaskContainerSettings.registry
+      - azure-batch.TaskContainerSettings.workingDirectory
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.containerRunOptions
+    name: containerRunOptions
+    fullName: containerRunOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Эти дополнительные параметры передаются как аргументы для команды «docker create» помимо тех, управляемой пакетной службой.'
+    optional: true
+    syntax:
+      content: 'containerRunOptions?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.imageName
+    name: imageName
+    fullName: imageName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Это ссылка на полный образ, будет называться «docker Pull». Если тег не предоставляется как часть имени изображения, тег «: последнюю» используется по умолчанию.'
+    syntax:
+      content: 'imageName: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.registry
+    name: registry
+    fullName: registry
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Этот параметр можно опустить, если он был указан при создании пула.'
+    optional: true
+    syntax:
+      content: 'registry?: ContainerRegistry'
+      return:
+        type:
+          - azure-batch.ContainerRegistry
+    package: azure-batch
+  - uid: azure-batch.TaskContainerSettings.workingDirectory
+    name: workingDirectory
+    fullName: workingDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Значение по умолчанию — «taskWorkingDirectory». Возможные значения: «taskWorkingDirectory», «containerImageDefault»'
+    optional: true
+    syntax:
+      content: 'workingDirectory?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.ContainerRegistry
+    name: ContainerRegistry
+    spec.typeScript:
+      - name: ContainerRegistry
+        fullName: ContainerRegistry
+        uid: azure-batch.ContainerRegistry

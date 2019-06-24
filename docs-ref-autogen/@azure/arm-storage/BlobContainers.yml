@@ -32,9 +32,12 @@ items:
       - '@azure/arm-storage.BlobContainers.lease_2'
       - '@azure/arm-storage.BlobContainers.lease'
       - '@azure/arm-storage.BlobContainers.lease_1'
-      - '@azure/arm-storage.BlobContainers.list'
       - '@azure/arm-storage.BlobContainers.list_2'
+      - '@azure/arm-storage.BlobContainers.list'
       - '@azure/arm-storage.BlobContainers.list_1'
+      - '@azure/arm-storage.BlobContainers.listNext'
+      - '@azure/arm-storage.BlobContainers.listNext_2'
+      - '@azure/arm-storage.BlobContainers.listNext_1'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_2'
       - '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy_1'
@@ -1000,42 +1003,15 @@ items:
         type:
           - Promise<Models.BlobContainersLeaseResponse>
     package: '@azure/arm-storage'
-  - uid: '@azure/arm-storage.BlobContainers.list'
-    name: 'list(string, string, msRest.RequestOptionsBase)'
-    children: []
-    type: method
-    langs:
-      - typeScript
-    summary: 'Перечисляет все контейнеры и не поддерживает префикс, например плоскости данных. Также политик ограниченного использования Программ уже сегодня не возвращает токен продолжения.'
-    syntax:
-      content: 'function list(resourceGroupName: string, accountName: string, options?: msRest.RequestOptionsBase)'
-      parameters:
-        - id: resourceGroupName
-          type:
-            - string
-          description: Имя группы ресурсов в подписке пользователя. Имя без учета регистра.
-        - id: accountName
-          type:
-            - string
-          description: Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
-        - id: options
-          type:
-            - msRest.RequestOptionsBase
-          description: ''
-          optional: true
-      return:
-        type:
-          - Promise<Models.BlobContainersListResponse>
-    package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.list_2'
-    name: 'list(string, string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    name: 'list(string, string, BlobContainersListOptionalParams, ServiceCallback<ListContainerItems>)'
     children: []
     type: method
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'function list(resourceGroupName: string, accountName: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      content: 'function list(resourceGroupName: string, accountName: string, options: BlobContainersListOptionalParams, callback: ServiceCallback<ListContainerItems>)'
       parameters:
         - id: resourceGroupName
           type:
@@ -1047,13 +1023,40 @@ items:
           description: Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
         - id: options
           type:
-            - RequestOptionsBase
+            - '@azure/arm-storage.BlobContainersListOptionalParams'
           description: Возможно использование необязательных параметров
         - id: callback
           type:
             - ServiceCallback<@azure/arm-storage.ListContainerItems>
           description: |
             Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.list'
+    name: 'list(string, string, Models.BlobContainersListOptionalParams)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Перечисляет все контейнеры и не поддерживает префикс, например плоскости данных. Также политик ограниченного использования Программ уже сегодня не возвращает токен продолжения.'
+    syntax:
+      content: 'function list(resourceGroupName: string, accountName: string, options?: Models.BlobContainersListOptionalParams)'
+      parameters:
+        - id: resourceGroupName
+          type:
+            - string
+          description: Имя группы ресурсов в подписке пользователя. Имя без учета регистра.
+        - id: accountName
+          type:
+            - string
+          description: Имя учетной записи хранения в указанной группе ресурсов. Имя учетной записи хранения должно содержать от 3 до 24 символов и состоять только из цифр и букв нижнего регистра.
+        - id: options
+          type:
+            - Models.BlobContainersListOptionalParams
+          description: ''
+          optional: true
       return:
         type:
           - Promise<Models.BlobContainersListResponse>
@@ -1084,6 +1087,79 @@ items:
       return:
         type:
           - Promise<Models.BlobContainersListResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext'
+    name: 'listNext(string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Перечисляет все контейнеры и не поддерживает префикс, например плоскости данных. Также политик ограниченного использования Программ уже сегодня не возвращает токен продолжения.'
+    syntax:
+      content: 'function listNext(nextPageLink: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext_2'
+    name: 'listNext(string, RequestOptionsBase, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, options: RequestOptionsBase, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
+    package: '@azure/arm-storage'
+  - uid: '@azure/arm-storage.BlobContainers.listNext_1'
+    name: 'listNext(string, ServiceCallback<ListContainerItems>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function listNext(nextPageLink: string, callback: ServiceCallback<ListContainerItems>)'
+      parameters:
+        - id: nextPageLink
+          type:
+            - string
+          description: NextLink из предыдущего успешного вызова операции List.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-storage.ListContainerItems>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.BlobContainersListNextResponse>
     package: '@azure/arm-storage'
   - uid: '@azure/arm-storage.BlobContainers.lockImmutabilityPolicy'
     name: 'lockImmutabilityPolicy(string, string, string, string, msRest.RequestOptionsBase)'
@@ -1481,6 +1557,12 @@ references:
         uid: '@azure/arm-storage.ListContainerItems'
       - name: '>'
         fullName: '>'
+  - uid: '@azure/arm-storage.BlobContainersListOptionalParams'
+    name: BlobContainersListOptionalParams
+    spec.typeScript:
+      - name: BlobContainersListOptionalParams
+        fullName: BlobContainersListOptionalParams
+        uid: '@azure/arm-storage.BlobContainersListOptionalParams'
   - uid: '@azure/arm-storage.BlobContainersUpdateOptionalParams'
     name: BlobContainersUpdateOptionalParams
     spec.typeScript:

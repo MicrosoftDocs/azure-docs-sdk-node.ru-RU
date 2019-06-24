@@ -1,0 +1,113 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobUpdateParameter
+    name: JobUpdateParameter
+    fullName: JobUpdateParameter
+    children:
+      - azure-batch.JobUpdateParameter.constraints
+      - azure-batch.JobUpdateParameter.metadata
+      - azure-batch.JobUpdateParameter.onAllTasksComplete
+      - azure-batch.JobUpdateParameter.poolInfo
+      - azure-batch.JobUpdateParameter.priority
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobUpdateParameter.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если не указано, очищаются ограничения.'
+    optional: true
+    syntax:
+      content: 'constraints?: JobConstraints'
+      return:
+        type:
+          - azure-batch.JobConstraints
+    package: azure-batch
+  - uid: azure-batch.JobUpdateParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если не указано, принимается значение по умолчанию, равное пустой список; по сути удаляются все существующие метаданные.'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.JobUpdateParameter.onAllTasksComplete
+    name: onAllTasksComplete
+    fullName: onAllTasksComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Если этот параметр опущен, работу завершения присваивается noaction. Если текущее значение terminatejob, это ошибка, так как поведение завершения задания не может быть изменено с terminatejob на noaction. Не может изменить значение из terminatejob на noaction — то есть после штырьки разъема автоматического завершения задания, нельзя отключить его снова. Если вы попытаетесь это сделать, запрос завершается ошибкой и пакета возвращает состояние кода, 400 (неправильный запрос) и сообщение об ошибке «Недопустимое значение свойства». Если вы не укажете этот элемент в запросе PUT, это эквивалентно передаче noaction. Это ошибка, если текущее значение — terminatejob.
+      Возможные значения: «noAction», «terminateJob»
+    optional: true
+    syntax:
+      content: 'onAllTasksComplete?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobUpdateParameter.poolInfo
+    name: poolInfo
+    fullName: poolInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Можно изменить пул для задания только в том случае, если задание отключено. Вызов задания обновления завершится ошибкой, если вы включите элемент poolInfo и задание не отключено. Если указать спецификацию autoPoolSpecification в poolInfo, можно обновить только свойство keepAlive, а затем только в том случае, если poolLifetimeOption задания имеет автоматического пула.'
+    syntax:
+      content: 'poolInfo: PoolInformation'
+      return:
+        type:
+          - azure-batch.PoolInformation
+    package: azure-batch
+  - uid: azure-batch.JobUpdateParameter.priority
+    name: priority
+    fullName: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Значения приоритета находится в диапазоне от -1000 до 1000, где – 1000 — самый низкий приоритет, а 1000 — самый высокий приоритет. Если не указано, оно присваивается значение по умолчанию 0.'
+    optional: true
+    syntax:
+      content: 'priority?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+references:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    spec.typeScript:
+      - name: JobConstraints
+        fullName: JobConstraints
+        uid: azure-batch.JobConstraints
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    spec.typeScript:
+      - name: PoolInformation
+        fullName: PoolInformation
+        uid: azure-batch.PoolInformation

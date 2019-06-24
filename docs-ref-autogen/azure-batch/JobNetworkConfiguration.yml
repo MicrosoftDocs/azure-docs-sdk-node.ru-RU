@@ -1,0 +1,28 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobNetworkConfiguration
+    name: JobNetworkConfiguration
+    fullName: JobNetworkConfiguration
+    children:
+      - azure-batch.JobNetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobNetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Виртуальная сеть должна находиться в том же регионе и подписке, что учетной записи пакетной службы Azure. Указанной подсети должно быть достаточно свободного IP-адресов, чтобы вместить количество вычислительных узлов, который будет выполнять задачи из задания. Это может превышать количество вычислительных узлов в пуле. Субъекту-службе «MicrosoftAzureBatch» должен иметь «участник классических виртуальных машин» роли управления доступом на основе ролей (RBAC) для указанной виртуальной сети, таким образом, чтобы расписание задач на узлах пакетной службы Azure. Это можно проверить путем проверки, если указанная виртуальная сеть содержит все связанные группы (безопасности). Если взаимодействие с узлами в указанной подсети отклонен группой безопасности, пакетная служба установит состояние вычислительные узлы в непригодном для использования. Это имеет /subnets/ /virtualNetworks/ {network} /providers/ {provider} формы /subscriptions/ {subscription} /resourceGroups/ {группа} {подсети}.
+      Если указанная виртуальная сеть содержит все связанные группы (безопасности), несколько зарезервированных системных портов необходимо включить для входящих сообщений из пакетной службы Azure. Для пулов, созданных с конфигурацией виртуальной машины включите порты 29876 и 29877, а также порт 22 для Linux и порт 3389 для Windows. Порт 443 должен быть открыт для исходящих соединений для подключения к службе хранилища Azure. Дополнительные сведения см.: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration
+    syntax:
+      content: 'subnetId: string'
+      return:
+        type:
+          - string
+    package: azure-batch

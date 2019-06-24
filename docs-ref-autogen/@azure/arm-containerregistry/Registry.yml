@@ -11,6 +11,7 @@ items:
       - '@azure/arm-containerregistry.Registry.loginServer'
       - '@azure/arm-containerregistry.Registry.name'
       - '@azure/arm-containerregistry.Registry.networkRuleSet'
+      - '@azure/arm-containerregistry.Registry.policies'
       - '@azure/arm-containerregistry.Registry.provisioningState'
       - '@azure/arm-containerregistry.Registry.sku'
       - '@azure/arm-containerregistry.Registry.status'
@@ -136,6 +137,21 @@ items:
         type:
           - '@azure/arm-containerregistry.NetworkRuleSet'
     package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.Registry.policies'
+    name: policies
+    fullName: policies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Политики для реестра контейнеров.
+    optional: true
+    syntax:
+      content: 'policies?: Policies'
+      return:
+        type:
+          - '@azure/arm-containerregistry.Policies'
+    package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.Registry.provisioningState'
     name: provisioningState
     fullName: provisioningState
@@ -179,10 +195,10 @@ items:
       **ПРИМЕЧАНИЕ. Это свойство не сериализуется. Он может быть заполнен только на сервере.**
     optional: true
     syntax:
-      content: 'status?: Status'
+      content: 'status?: Status1'
       return:
         type:
-          - '@azure/arm-containerregistry.Status'
+          - '@azure/arm-containerregistry.Status1'
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.Registry.storageAccount'
     name: storageAccount
@@ -244,6 +260,12 @@ references:
       - name: NetworkRuleSet
         fullName: NetworkRuleSet
         uid: '@azure/arm-containerregistry.NetworkRuleSet'
+  - uid: '@azure/arm-containerregistry.Policies'
+    name: Policies
+    spec.typeScript:
+      - name: Policies
+        fullName: Policies
+        uid: '@azure/arm-containerregistry.Policies'
   - uid: '@azure/arm-containerregistry.ProvisioningState'
     name: ProvisioningState
     spec.typeScript:
@@ -256,12 +278,12 @@ references:
       - name: Sku
         fullName: Sku
         uid: '@azure/arm-containerregistry.Sku'
-  - uid: '@azure/arm-containerregistry.Status'
-    name: Status
+  - uid: '@azure/arm-containerregistry.Status1'
+    name: Status1
     spec.typeScript:
-      - name: Status
-        fullName: Status
-        uid: '@azure/arm-containerregistry.Status'
+      - name: Status1
+        fullName: Status1
+        uid: '@azure/arm-containerregistry.Status1'
   - uid: '@azure/arm-containerregistry.StorageAccountProperties'
     name: StorageAccountProperties
     spec.typeScript:

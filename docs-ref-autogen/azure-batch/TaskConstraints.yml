@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - azure-batch.TaskConstraints.maxTaskRetryCount
+      - azure-batch.TaskConstraints.maxWallClockTime
+      - azure-batch.TaskConstraints.retentionTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Обратите внимание на то, что это значение определяет количество повторных попыток для исполняемого файла задачи из-за ненулевой код выхода. Пакетная служба попытается выполнить задачу один раз и повторите вплоть до этого предела. Например если максимальное число повторных попыток равно 3, пакетная служба пытается выполнить задачу до 4 раз (одна начальная попытка и 3 повторных). Если максимальное число повторных попыток равно 0, пакетная служба не повторять попытку задачи после первой попытки. Если максимальное число повторных попыток равно -1, пакетная служба повторяет неограниченное.'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если этот параметр не указан, не ограничено время на время выполнения задачи.'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'По умолчанию — 7 дней, т. е. каталогу задачи будут храниться 7 дней, если задание удалено или удалении вычислительного узла.'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
