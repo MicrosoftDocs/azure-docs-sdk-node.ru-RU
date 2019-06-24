@@ -14,12 +14,14 @@ items:
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.replications'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.restoreLROPoller'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.runs'
+      - '@azure/arm-containerregistry.ContainerRegistryManagementClient.scopeMaps'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendLongRunningRequest'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendLRORequest'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendOperationRequest'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendRequest'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.subscriptionId'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.tasks'
+      - '@azure/arm-containerregistry.ContainerRegistryManagementClient.tokens'
       - '@azure/arm-containerregistry.ContainerRegistryManagementClient.webhooks'
     langs:
       - typeScript
@@ -48,14 +50,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="182e1-101">Отправить первоначальный запрос LRO (длительные операции) и получить обратно HttpLongRunningOperationResponse, который предоставляет методы для опроса LRO и проверки, если завершения LRO при выполнении.</span><span class="sxs-lookup"><span data-stu-id="182e1-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>'
+    summary: '<span data-ttu-id="26e49-101">Отправить первоначальный запрос LRO (длительные операции) и получить обратно HttpLongRunningOperationResponse, который предоставляет методы для опроса LRO и проверки, если завершения LRO при выполнении.</span><span class="sxs-lookup"><span data-stu-id="26e49-101">Send the initial request of a LRO (long running operation) and get back an HttpLongRunningOperationResponse that provides methods for polling the LRO and checking if the LRO is finished.</span></span>'
     syntax:
       content: 'function beginLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="182e1-102">Объект запроса</span><span class="sxs-lookup"><span data-stu-id="182e1-102">The request object</span></span>
+          description: <span data-ttu-id="26e49-102">Объект запроса</span><span class="sxs-lookup"><span data-stu-id="26e49-102">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -71,18 +73,18 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="182e1-103">Инициализирует новый экземпляр класса ContainerRegistryManagementClient.</span><span class="sxs-lookup"><span data-stu-id="182e1-103">Initializes a new instance of the ContainerRegistryManagementClient class.</span></span>
+    summary: <span data-ttu-id="26e49-103">Инициализирует новый экземпляр класса ContainerRegistryManagementClient.</span><span class="sxs-lookup"><span data-stu-id="26e49-103">Initializes a new instance of the ContainerRegistryManagementClient class.</span></span>
     syntax:
       content: 'new ContainerRegistryManagementClient(credentials: ServiceClientCredentials, subscriptionId: string, options?: Models.ContainerRegistryManagementClientOptions)'
       parameters:
         - id: credentials
           type:
             - ServiceClientCredentials
-          description: '<span data-ttu-id="182e1-104">Учетные данные, необходимые для клиента для подключения к Azure.</span><span class="sxs-lookup"><span data-stu-id="182e1-104">Credentials needed for the client to connect to Azure.</span></span>'
+          description: '<span data-ttu-id="26e49-104">Учетные данные, необходимые для клиента для подключения к Azure.</span><span class="sxs-lookup"><span data-stu-id="26e49-104">Credentials needed for the client to connect to Azure.</span></span>'
         - id: subscriptionId
           type:
             - string
-          description: <span data-ttu-id="182e1-105">Идентификатор подписки Microsoft Azure</span><span class="sxs-lookup"><span data-stu-id="182e1-105">The Microsoft Azure subscription ID.</span></span>
+          description: <span data-ttu-id="26e49-105">Идентификатор подписки Microsoft Azure</span><span class="sxs-lookup"><span data-stu-id="26e49-105">The Microsoft Azure subscription ID.</span></span>
         - id: options
           type:
             - Models.ContainerRegistryManagementClientOptions
@@ -110,7 +112,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="182e1-106">Время ожидания в секундах для длительных операций повтора.</span><span class="sxs-lookup"><span data-stu-id="182e1-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="182e1-107">Значение по умолчанию — 30.</span><span class="sxs-lookup"><span data-stu-id="182e1-107">Default value is 30.</span></span>
+    summary: <span data-ttu-id="26e49-106">Время ожидания в секундах для длительных операций повтора.</span><span class="sxs-lookup"><span data-stu-id="26e49-106">The retry timeout in seconds for Long Running Operations.</span></span> <span data-ttu-id="26e49-107">Значение по умолчанию — 30.</span><span class="sxs-lookup"><span data-stu-id="26e49-107">Default value is 30.</span></span>
     optional: true
     syntax:
       content: 'longRunningOperationRetryTimeout?: undefined | number'
@@ -166,7 +168,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="182e1-108">Восстановите LROPoller из предоставленного LROPollState.</span><span class="sxs-lookup"><span data-stu-id="182e1-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="182e1-109">Этот метод может использоваться для повторного создания LROPoller на другом процессе или компьютере.</span><span class="sxs-lookup"><span data-stu-id="182e1-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
+    summary: <span data-ttu-id="26e49-108">Восстановите LROPoller из предоставленного LROPollState.</span><span class="sxs-lookup"><span data-stu-id="26e49-108">Restore an LROPoller from the provided LROPollState.</span></span> <span data-ttu-id="26e49-109">Этот метод может использоваться для повторного создания LROPoller на другом процессе или компьютере.</span><span class="sxs-lookup"><span data-stu-id="26e49-109">This method can be used to recreate an LROPoller on a different process or machine.</span></span>
     syntax:
       content: 'function restoreLROPoller(lroPollState: LROPollState)'
       parameters:
@@ -192,20 +194,34 @@ items:
         type:
           - '@azure/arm-containerregistry.Runs'
     package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClient.scopeMaps'
+    name: scopeMaps
+    fullName: scopeMaps
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'scopeMaps: ScopeMaps'
+      return:
+        type:
+          - '@azure/arm-containerregistry.ScopeMaps'
+    package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClient.sendLongRunningRequest'
     name: 'sendLongRunningRequest(RequestPrepareOptions | WebResource, RequestOptionsBase)'
     children: []
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="182e1-110">Предоставляет механизм для выполнения запроса, которая будет опрашивать и предоставляют результат.</span><span class="sxs-lookup"><span data-stu-id="182e1-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>'
+    summary: '<span data-ttu-id="26e49-110">Предоставляет механизм для выполнения запроса, которая будет опрашивать и предоставляют результат.</span><span class="sxs-lookup"><span data-stu-id="26e49-110">Provides a mechanism to make a request that will poll and provide the final result.</span></span>'
     syntax:
       content: 'function sendLongRunningRequest(request: RequestPrepareOptions | WebResource, options?: RequestOptionsBase)'
       parameters:
         - id: request
           type:
             - RequestPrepareOptions | WebResource
-          description: <span data-ttu-id="182e1-111">Объект запроса</span><span class="sxs-lookup"><span data-stu-id="182e1-111">The request object</span></span>
+          description: <span data-ttu-id="26e49-111">Объект запроса</span><span class="sxs-lookup"><span data-stu-id="26e49-111">The request object</span></span>
         - id: options
           type:
             - RequestOptionsBase
@@ -221,22 +237,22 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="182e1-112">Отправить первоначальный запрос LRO (длительные операции) и получить обратно LROPoller, который предоставляет методы для опроса LRO и проверки, если завершения LRO при выполнении.</span><span class="sxs-lookup"><span data-stu-id="182e1-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>'
+    summary: '<span data-ttu-id="26e49-112">Отправить первоначальный запрос LRO (длительные операции) и получить обратно LROPoller, который предоставляет методы для опроса LRO и проверки, если завершения LRO при выполнении.</span><span class="sxs-lookup"><span data-stu-id="26e49-112">Send the initial request of a LRO (long running operation) and get back an LROPoller that provides methods for polling the LRO and checking if the LRO is finished.</span></span>'
     syntax:
       content: 'function sendLRORequest(operationArguments: OperationArguments, operationSpec: OperationSpec, options?: RequestOptionsBase)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: <span data-ttu-id="182e1-113">Аргументы операции.</span><span class="sxs-lookup"><span data-stu-id="182e1-113">The arguments to the operation.</span></span>
+          description: <span data-ttu-id="26e49-113">Аргументы операции.</span><span class="sxs-lookup"><span data-stu-id="26e49-113">The arguments to the operation.</span></span>
         - id: operationSpec
           type:
             - OperationSpec
-          description: <span data-ttu-id="182e1-114">Спецификация для операции.</span><span class="sxs-lookup"><span data-stu-id="182e1-114">The specification for the operation.</span></span>
+          description: <span data-ttu-id="26e49-114">Спецификация для операции.</span><span class="sxs-lookup"><span data-stu-id="26e49-114">The specification for the operation.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="182e1-115">Дополнительные параметры для отправляться при создании запроса.</span><span class="sxs-lookup"><span data-stu-id="182e1-115">Additional options to be sent while making the request.</span></span>
+          description: <span data-ttu-id="26e49-115">Дополнительные параметры для отправляться при создании запроса.</span><span class="sxs-lookup"><span data-stu-id="26e49-115">Additional options to be sent while making the request.</span></span>
           optional: true
       return:
         type:
@@ -248,23 +264,23 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="182e1-116">Отправьте запрос HTTP, который заполняется с помощью предоставленного OperationSpec.</span><span class="sxs-lookup"><span data-stu-id="182e1-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>'
+    summary: '<span data-ttu-id="26e49-116">Отправьте запрос HTTP, который заполняется с помощью предоставленного OperationSpec.</span><span class="sxs-lookup"><span data-stu-id="26e49-116">Send an HTTP request that is populated using the provided OperationSpec.</span></span>'
     syntax:
       content: 'function sendOperationRequest(operationArguments: OperationArguments, operationSpec: OperationSpec, callback?: ServiceCallback<any>)'
       parameters:
         - id: operationArguments
           type:
             - OperationArguments
-          description: '<span data-ttu-id="182e1-117">Аргументы, которые будут заполнены шаблонного значения HTTP-запроса из.</span><span class="sxs-lookup"><span data-stu-id="182e1-117">The arguments that the HTTP request''s templated values will be populated from.</span></span>'
+          description: '<span data-ttu-id="26e49-117">Аргументы, которые будут заполнены шаблонного значения HTTP-запроса из.</span><span class="sxs-lookup"><span data-stu-id="26e49-117">The arguments that the HTTP request''s templated values will be populated from.</span></span>'
         - id: operationSpec
           type:
             - OperationSpec
-          description: '<span data-ttu-id="182e1-118">OperationSpec, используемые для заполнения httpRequest.</span><span class="sxs-lookup"><span data-stu-id="182e1-118">The OperationSpec to use to populate the httpRequest.</span></span>'
+          description: '<span data-ttu-id="26e49-118">OperationSpec, используемые для заполнения httpRequest.</span><span class="sxs-lookup"><span data-stu-id="26e49-118">The OperationSpec to use to populate the httpRequest.</span></span>'
         - id: callback
           type:
             - ServiceCallback<any>
           description: |
-            <span data-ttu-id="182e1-119">Обратный вызов, вызываемый после получения ответа.</span><span class="sxs-lookup"><span data-stu-id="182e1-119">The callback to call when the response is received.</span></span>
+            <span data-ttu-id="26e49-119">Обратный вызов, вызываемый после получения ответа.</span><span class="sxs-lookup"><span data-stu-id="26e49-119">The callback to call when the response is received.</span></span>
           optional: true
       return:
         type:
@@ -276,7 +292,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="182e1-120">Отправьте предоставленный httpRequest.</span><span class="sxs-lookup"><span data-stu-id="182e1-120">Send the provided httpRequest.</span></span>
+    summary: <span data-ttu-id="26e49-120">Отправьте предоставленный httpRequest.</span><span class="sxs-lookup"><span data-stu-id="26e49-120">Send the provided httpRequest.</span></span>
     syntax:
       content: 'function sendRequest(options: RequestPrepareOptions | WebResource)'
       parameters:
@@ -315,6 +331,20 @@ items:
       return:
         type:
           - '@azure/arm-containerregistry.Tasks'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClient.tokens'
+    name: tokens
+    fullName: tokens
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'tokens: Tokens'
+      return:
+        type:
+          - '@azure/arm-containerregistry.Tokens'
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.ContainerRegistryManagementClient.webhooks'
     name: webhooks
@@ -361,12 +391,24 @@ references:
       - name: Runs
         fullName: Runs
         uid: '@azure/arm-containerregistry.Runs'
+  - uid: '@azure/arm-containerregistry.ScopeMaps'
+    name: ScopeMaps
+    spec.typeScript:
+      - name: ScopeMaps
+        fullName: ScopeMaps
+        uid: '@azure/arm-containerregistry.ScopeMaps'
   - uid: '@azure/arm-containerregistry.Tasks'
     name: Tasks
     spec.typeScript:
       - name: Tasks
         fullName: Tasks
         uid: '@azure/arm-containerregistry.Tasks'
+  - uid: '@azure/arm-containerregistry.Tokens'
+    name: Tokens
+    spec.typeScript:
+      - name: Tokens
+        fullName: Tokens
+        uid: '@azure/arm-containerregistry.Tokens'
   - uid: '@azure/arm-containerregistry.Webhooks'
     name: Webhooks
     spec.typeScript:

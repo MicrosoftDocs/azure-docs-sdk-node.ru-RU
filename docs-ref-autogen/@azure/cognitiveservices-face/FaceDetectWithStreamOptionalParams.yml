@@ -6,6 +6,7 @@ items:
     children:
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.abortSignal'
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.customHeaders'
+      - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.detectionModel'
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.onDownloadProgress'
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.onUploadProgress'
       - '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.recognitionModel'
@@ -17,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="317b0-101">Необязательные параметры.</span><span class="sxs-lookup"><span data-stu-id="317b0-101">Optional Parameters.</span></span>
+    summary: <span data-ttu-id="3431f-101">Необязательные параметры.</span><span class="sxs-lookup"><span data-stu-id="3431f-101">Optional Parameters.</span></span>
     extends:
       name: RequestOptionsBase
     package: '@azure/cognitiveservices-face'
@@ -28,7 +29,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-102">Сигнал, который может использоваться для отмены запросов.</span><span class="sxs-lookup"><span data-stu-id="317b0-102">The signal which can be used to abort requests.</span></span>'
+    summary: '<span data-ttu-id="3431f-102">Сигнал, который может использоваться для отмены запросов.</span><span class="sxs-lookup"><span data-stu-id="3431f-102">The signal which can be used to abort requests.</span></span>'
     optional: true
     syntax:
       content: 'abortSignal?: AbortSignalLike'
@@ -43,13 +44,28 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-103">{объект} [customHeaders] Пользовательский пользовательские заголовки запросов, которые будут применяться перед отправкой запроса.</span><span class="sxs-lookup"><span data-stu-id="317b0-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
+    summary: '<span data-ttu-id="3431f-103">{объект} [customHeaders] Пользовательский пользовательские заголовки запросов, которые будут применяться перед отправкой запроса.</span><span class="sxs-lookup"><span data-stu-id="3431f-103">{object} [customHeaders] User defined custom request headers that will be applied before the request is sent.</span></span>'
     optional: true
     syntax:
       content: 'customHeaders?: undefined | [key: string]: string'
       return:
         type:
           - 'undefined | [key: string]: string'
+    package: '@azure/cognitiveservices-face'
+  - uid: '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.detectionModel'
+    name: detectionModel
+    fullName: detectionModel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="3431f-104">Имя обнаружения модели.</span><span class="sxs-lookup"><span data-stu-id="3431f-104">Name of detection model.</span></span> <span data-ttu-id="3431f-105">Модель обнаружения используется для определения лиц отправленного изображения.</span><span class="sxs-lookup"><span data-stu-id="3431f-105">Detection model is used to detect faces in the submitted image.</span></span> <span data-ttu-id="3431f-106">Имя модели обнаружения можно указать при выполнении лиц - обнаружить или распознавания лиц (Large) FaceList — добавление распознавания лиц или каждой группе людей (Large) - добавить.</span><span class="sxs-lookup"><span data-stu-id="3431f-106">A detection model name can be provided when performing Face - Detect or (Large)FaceList - Add Face or (Large)PersonGroup - Add Face.</span></span> <span data-ttu-id="3431f-107">Значение по умолчанию — «detection_01», если требуется другой модели, необходимо явно указать его.</span><span class="sxs-lookup"><span data-stu-id="3431f-107">The default value is ''detection_01'', if another model is needed, please explicitly specify it.</span></span> <span data-ttu-id="3431f-108">Возможные значения: «detection_01», «detection_02».</span><span class="sxs-lookup"><span data-stu-id="3431f-108">Possible values include: ''detection_01'', ''detection_02''.</span></span> <span data-ttu-id="3431f-109">Значение по умолчанию: «detection_01».</span><span class="sxs-lookup"><span data-stu-id="3431f-109">Default value: ''detection_01''.</span></span>'
+    optional: true
+    syntax:
+      content: 'detectionModel?: DetectionModel'
+      return:
+        type:
+          - '@azure/cognitiveservices-face.DetectionModel'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.FaceDetectWithStreamOptionalParams.onDownloadProgress'
     name: onDownloadProgress
@@ -58,7 +74,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-104">Обратный вызов, который запускается после загрузки.</span><span class="sxs-lookup"><span data-stu-id="317b0-104">Callback which fires upon download progress.</span></span>'
+    summary: '<span data-ttu-id="3431f-110">Обратный вызов, который запускается после загрузки.</span><span class="sxs-lookup"><span data-stu-id="3431f-110">Callback which fires upon download progress.</span></span>'
     optional: true
     syntax:
       content: 'onDownloadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -73,7 +89,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-105">Обратный вызов, который срабатывает при ход передачи.</span><span class="sxs-lookup"><span data-stu-id="317b0-105">Callback which fires upon upload progress.</span></span>'
+    summary: '<span data-ttu-id="3431f-111">Обратный вызов, который срабатывает при ход передачи.</span><span class="sxs-lookup"><span data-stu-id="3431f-111">Callback which fires upon upload progress.</span></span>'
     optional: true
     syntax:
       content: 'onUploadProgress?: undefined | (progress: TransferProgressEvent) => void'
@@ -88,7 +104,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-106">Имя модели распознавания.</span><span class="sxs-lookup"><span data-stu-id="317b0-106">Name of recognition model.</span></span> <span data-ttu-id="317b0-107">Модель распознавания используется в том случае, когда извлекаются и связанные с обнаруженных faceIds, FaceList (Large) или каждой группе людей (Large) функции распознавания лиц.</span><span class="sxs-lookup"><span data-stu-id="317b0-107">Recognition model is used when the face features are extracted and associated with detected faceIds, (Large)FaceList or (Large)PersonGroup.</span></span> <span data-ttu-id="317b0-108">Имя модели распознавания может быть обеспечено при выполнения лиц — обнаруживать или FaceList (Large) — Создание или каждой группе людей (Large) — создать.</span><span class="sxs-lookup"><span data-stu-id="317b0-108">A recognition model name can be provided when performing Face - Detect or (Large)FaceList - Create or (Large)PersonGroup - Create.</span></span> <span data-ttu-id="317b0-109">Значение по умолчанию — «recognition_01», если последняя модель необходимо явно указать модель, которую требуется.</span><span class="sxs-lookup"><span data-stu-id="317b0-109">The default value is ''recognition_01'', if latest model needed, please explicitly specify the model you need.</span></span> <span data-ttu-id="317b0-110">Возможные значения: «recognition_01», «recognition_02».</span><span class="sxs-lookup"><span data-stu-id="317b0-110">Possible values include: ''recognition_01'', ''recognition_02''.</span></span> <span data-ttu-id="317b0-111">Значение по умолчанию: «recognition_01».</span><span class="sxs-lookup"><span data-stu-id="317b0-111">Default value: ''recognition_01''.</span></span>'
+    summary: '<span data-ttu-id="3431f-112">Имя модели распознавания.</span><span class="sxs-lookup"><span data-stu-id="3431f-112">Name of recognition model.</span></span> <span data-ttu-id="3431f-113">Модель распознавания используется в том случае, когда извлекаются и связанные с обнаруженных faceIds, FaceList (Large) или каждой группе людей (Large) функции распознавания лиц.</span><span class="sxs-lookup"><span data-stu-id="3431f-113">Recognition model is used when the face features are extracted and associated with detected faceIds, (Large)FaceList or (Large)PersonGroup.</span></span> <span data-ttu-id="3431f-114">Имя модели распознавания может быть обеспечено при выполнения лиц — обнаруживать или FaceList (Large) — Создание или каждой группе людей (Large) — создать.</span><span class="sxs-lookup"><span data-stu-id="3431f-114">A recognition model name can be provided when performing Face - Detect or (Large)FaceList - Create or (Large)PersonGroup - Create.</span></span> <span data-ttu-id="3431f-115">Значение по умолчанию — «recognition_01», если последняя модель необходимо явно указать модель, которую требуется.</span><span class="sxs-lookup"><span data-stu-id="3431f-115">The default value is ''recognition_01'', if latest model needed, please explicitly specify the model you need.</span></span> <span data-ttu-id="3431f-116">Возможные значения: «recognition_01», «recognition_02».</span><span class="sxs-lookup"><span data-stu-id="3431f-116">Possible values include: ''recognition_01'', ''recognition_02''.</span></span> <span data-ttu-id="3431f-117">Значение по умолчанию: «recognition_01».</span><span class="sxs-lookup"><span data-stu-id="3431f-117">Default value: ''recognition_01''.</span></span>'
     optional: true
     syntax:
       content: 'recognitionModel?: RecognitionModel'
@@ -103,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-112">Анализ и вернуть один или несколько атрибутов указанного лиц в строке с разделителями запятыми, например «returnFaceAttributes = возраст, Пол».</span><span class="sxs-lookup"><span data-stu-id="317b0-112">Analyze and return the one or more specified face attributes in the comma-separated string like "returnFaceAttributes=age,gender".</span></span> <span data-ttu-id="317b0-113">Поддерживаемые атрибуты включают возраст, пол, headPose, одобрение, facialHair, очков и эмоций.</span><span class="sxs-lookup"><span data-stu-id="317b0-113">Supported face attributes include age, gender, headPose, smile, facialHair, glasses and emotion.</span></span> <span data-ttu-id="317b0-114">Обратите внимание, что каждый атрибут анализ лиц дополнительных затрат времени и вычислений.</span><span class="sxs-lookup"><span data-stu-id="317b0-114">Note that each face attribute analysis has additional computational and time cost.</span></span>'
+    summary: '<span data-ttu-id="3431f-118">Анализ и вернуть один или несколько атрибутов указанного лиц в строке с разделителями запятыми, например «returnFaceAttributes = возраст, Пол».</span><span class="sxs-lookup"><span data-stu-id="3431f-118">Analyze and return the one or more specified face attributes in the comma-separated string like "returnFaceAttributes=age,gender".</span></span> <span data-ttu-id="3431f-119">Поддерживаемые атрибуты включают возраст, пол, headPose, одобрение, facialHair, очков и эмоций.</span><span class="sxs-lookup"><span data-stu-id="3431f-119">Supported face attributes include age, gender, headPose, smile, facialHair, glasses and emotion.</span></span> <span data-ttu-id="3431f-120">Обратите внимание, что каждый атрибут анализ лиц дополнительных затрат времени и вычислений.</span><span class="sxs-lookup"><span data-stu-id="3431f-120">Note that each face attribute analysis has additional computational and time cost.</span></span>'
     optional: true
     syntax:
       content: 'returnFaceAttributes?: FaceAttributeType[]'
@@ -118,7 +134,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-115">Значение, указывающее, является ли операция должна возвращать faceIds обнаруженных лиц.</span><span class="sxs-lookup"><span data-stu-id="317b0-115">A value indicating whether the operation should return faceIds of detected faces.</span></span> <span data-ttu-id="317b0-116">Значение по умолчанию: true.</span><span class="sxs-lookup"><span data-stu-id="317b0-116">Default value: true.</span></span>'
+    summary: '<span data-ttu-id="3431f-121">Значение, указывающее, является ли операция должна возвращать faceIds обнаруженных лиц.</span><span class="sxs-lookup"><span data-stu-id="3431f-121">A value indicating whether the operation should return faceIds of detected faces.</span></span> <span data-ttu-id="3431f-122">Значение по умолчанию: true.</span><span class="sxs-lookup"><span data-stu-id="3431f-122">Default value: true.</span></span>'
     optional: true
     syntax:
       content: 'returnFaceId?: undefined | false | true'
@@ -134,8 +150,8 @@ items:
       - typeScript
     type: property
     summary: |-
-      <span data-ttu-id="317b0-117">Значение, указывающее, является ли операция должна возвращать ориентиров обнаруженных лиц.</span><span class="sxs-lookup"><span data-stu-id="317b0-117">A value indicating whether the operation should return landmarks of the detected faces.</span></span>
-      <span data-ttu-id="317b0-118">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="317b0-118">Default value: false.</span></span>
+      <span data-ttu-id="3431f-123">Значение, указывающее, является ли операция должна возвращать ориентиров обнаруженных лиц.</span><span class="sxs-lookup"><span data-stu-id="3431f-123">A value indicating whether the operation should return landmarks of the detected faces.</span></span>
+      <span data-ttu-id="3431f-124">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="3431f-124">Default value: false.</span></span>
     optional: true
     syntax:
       content: 'returnFaceLandmarks?: undefined | false | true'
@@ -150,7 +166,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-119">Значение, указывающее, является ли операция должна возвращать «recognitionModel» в ответе.</span><span class="sxs-lookup"><span data-stu-id="317b0-119">A value indicating whether the operation should return ''recognitionModel'' in response.</span></span> <span data-ttu-id="317b0-120">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="317b0-120">Default value: false.</span></span>'
+    summary: '<span data-ttu-id="3431f-125">Значение, указывающее, является ли операция должна возвращать «recognitionModel» в ответе.</span><span class="sxs-lookup"><span data-stu-id="3431f-125">A value indicating whether the operation should return ''recognitionModel'' in response.</span></span> <span data-ttu-id="3431f-126">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="3431f-126">Default value: false.</span></span>'
     optional: true
     syntax:
       content: 'returnRecognitionModel?: undefined | false | true'
@@ -165,7 +181,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="317b0-121">Число микросекунд, которое запрос может выполняться автоматически прекращается.</span><span class="sxs-lookup"><span data-stu-id="317b0-121">The number of milliseconds a request can take before automatically being terminated.</span></span>'
+    summary: '<span data-ttu-id="3431f-127">Число микросекунд, которое запрос может выполняться автоматически прекращается.</span><span class="sxs-lookup"><span data-stu-id="3431f-127">The number of milliseconds a request can take before automatically being terminated.</span></span>'
     optional: true
     syntax:
       content: 'timeout?: undefined | number'
@@ -174,6 +190,12 @@ items:
           - undefined | number
     package: '@azure/cognitiveservices-face'
 references:
+  - uid: '@azure/cognitiveservices-face.DetectionModel'
+    name: DetectionModel
+    spec.typeScript:
+      - name: DetectionModel
+        fullName: DetectionModel
+        uid: '@azure/cognitiveservices-face.DetectionModel'
   - uid: '@azure/cognitiveservices-face.RecognitionModel'
     name: RecognitionModel
     spec.typeScript:

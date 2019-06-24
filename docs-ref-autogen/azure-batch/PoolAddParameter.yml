@@ -1,0 +1,408 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolAddParameter
+    name: PoolAddParameter
+    fullName: PoolAddParameter
+    children:
+      - azure-batch.PoolAddParameter.applicationLicenses
+      - azure-batch.PoolAddParameter.applicationPackageReferences
+      - azure-batch.PoolAddParameter.autoScaleEvaluationInterval
+      - azure-batch.PoolAddParameter.autoScaleFormula
+      - azure-batch.PoolAddParameter.certificateReferences
+      - azure-batch.PoolAddParameter.cloudServiceConfiguration
+      - azure-batch.PoolAddParameter.displayName
+      - azure-batch.PoolAddParameter.enableAutoScale
+      - azure-batch.PoolAddParameter.enableInterNodeCommunication
+      - azure-batch.PoolAddParameter.id
+      - azure-batch.PoolAddParameter.maxTasksPerNode
+      - azure-batch.PoolAddParameter.metadata
+      - azure-batch.PoolAddParameter.networkConfiguration
+      - azure-batch.PoolAddParameter.resizeTimeout
+      - azure-batch.PoolAddParameter.startTask
+      - azure-batch.PoolAddParameter.targetDedicatedNodes
+      - azure-batch.PoolAddParameter.targetLowPriorityNodes
+      - azure-batch.PoolAddParameter.taskSchedulingPolicy
+      - azure-batch.PoolAddParameter.userAccounts
+      - azure-batch.PoolAddParameter.virtualMachineConfiguration
+      - azure-batch.PoolAddParameter.vmSize
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.applicationLicenses
+    name: applicationLicenses
+    fullName: applicationLicenses
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-101">Список лицензий приложений должны представлять собой подмножество имеющихся лицензий для приложения службы пакетной службы.</span><span class="sxs-lookup"><span data-stu-id="9c585-101">The list of application licenses must be a subset of available Batch service application licenses.</span></span> <span data-ttu-id="9c585-102">Если запрашивается лицензию, который не поддерживается, произойдет сбой создания пула.</span><span class="sxs-lookup"><span data-stu-id="9c585-102">If a license is requested which is not supported, Pool creation will fail.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationLicenses?: string[]'
+      return:
+        type:
+          - 'string[]'
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-103">Изменения ссылок на пакеты влияют на все новые узлы, объединения в пул, но не влияют на вычислительные узлы, которые уже в пуле до перезагрузки или повторного создания образа.</span><span class="sxs-lookup"><span data-stu-id="9c585-103">Changes to Package references affect all new Nodes joining the Pool, but do not affect Compute Nodes that are already in the Pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="9c585-104">Есть более 10 ссылок на пакеты на любого пула.</span><span class="sxs-lookup"><span data-stu-id="9c585-104">There is a maximum of 10 Package references on any given Pool.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.autoScaleEvaluationInterval
+    name: autoScaleEvaluationInterval
+    fullName: autoScaleEvaluationInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-105">Значение по умолчанию — 15 минут.</span><span class="sxs-lookup"><span data-stu-id="9c585-105">The default value is 15 minutes.</span></span> <span data-ttu-id="9c585-106">Минимальное и максимальное значение составляет 5 минут и 168 часов соответственно.</span><span class="sxs-lookup"><span data-stu-id="9c585-106">The minimum and maximum value are 5 minutes and 168 hours respectively.</span></span> <span data-ttu-id="9c585-107">Если указать значение меньше 5 минут или больше, чем 168 часов, то пакетная служба возвращает ошибку; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="9c585-107">If you specify a value less than 5 minutes or greater than 168 hours, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleEvaluationInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.autoScaleFormula
+    name: autoScaleFormula
+    fullName: autoScaleFormula
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-108">Это свойство не должно быть указано, если enableAutoScale имеет значение false.</span><span class="sxs-lookup"><span data-stu-id="9c585-108">This property must not be specified if enableAutoScale is set to false.</span></span> <span data-ttu-id="9c585-109">Он необходим, если enableAutoScale задано значение true.</span><span class="sxs-lookup"><span data-stu-id="9c585-109">It is required if enableAutoScale is set to true.</span></span> <span data-ttu-id="9c585-110">Формула проверяется на допустимость до создания пула.</span><span class="sxs-lookup"><span data-stu-id="9c585-110">The formula is checked for validity before the Pool is created.</span></span> <span data-ttu-id="9c585-111">Если формула не является допустимой, пакетная служба отклоняет запрос с подробные сведения об ошибке.</span><span class="sxs-lookup"><span data-stu-id="9c585-111">If the formula is not valid, the Batch service rejects the request with detailed error information.</span></span> <span data-ttu-id="9c585-112">Дополнительные сведения об указании этой формулы см. в разделе «Автоматическое масштабирование вычислительных узлов в пуле пакетной службы Azure» (https://azure.microsoft.com/documentation/articles/batch-automatic-scaling/).</span><span class="sxs-lookup"><span data-stu-id="9c585-112">For more information about specifying this formula, see ''Automatically scale Compute Nodes in an Azure Batch Pool'' (https://azure.microsoft.com/documentation/articles/batch-automatic-scaling/).</span></span>'
+    optional: true
+    syntax:
+      content: 'autoScaleFormula?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-113">Для узлов Windows пакетная служба устанавливает сертификаты для указанного сертификата хранилища и расположение.</span><span class="sxs-lookup"><span data-stu-id="9c585-113">For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location.</span></span> <span data-ttu-id="9c585-114">Для вычислительных узлов Linux сертификаты хранятся в каталоге внутри задачи рабочего каталога и переменной среды, которые AZ_BATCH_CERTIFICATES_DIR передается в задачу для запроса для этого расположения.</span><span class="sxs-lookup"><span data-stu-id="9c585-114">For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the Task to query for this location.</span></span> <span data-ttu-id="9c585-115">Для сертификатов с видимостью «remoteUser» каталог «сертификаты» создается в домашнем каталоге пользователя (например, /home/ {имя_пользователя} / certs) и сертификаты помещаются в этот каталог.</span><span class="sxs-lookup"><span data-stu-id="9c585-115">For Certificates with visibility of ''remoteUser'', a ''certs'' directory is created in the user''s home directory (e.g., /home/{user-name}/certs) and Certificates are placed in that directory.</span></span>'
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.cloudServiceConfiguration
+    name: cloudServiceConfiguration
+    fullName: cloudServiceConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-116">Это свойство и virtualMachineConfiguration являются взаимоисключающими, и одно из свойств должен быть указан.</span><span class="sxs-lookup"><span data-stu-id="9c585-116">This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified.</span></span> <span data-ttu-id="9c585-117">Это свойство не может быть указан, если учетной записи пакетной службы была создана со свойством poolAllocationMode, имеющим значение «UserSubscription».</span><span class="sxs-lookup"><span data-stu-id="9c585-117">This property cannot be specified if the Batch Account was created with its poolAllocationMode property set to ''UserSubscription''.</span></span>'
+    optional: true
+    syntax:
+      content: 'cloudServiceConfiguration?: CloudServiceConfiguration'
+      return:
+        type:
+          - azure-batch.CloudServiceConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-118">Отображаемое имя не должно быть уникальным и может содержать любые символы Юникода, максимум — 1024.</span><span class="sxs-lookup"><span data-stu-id="9c585-118">The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>'
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.enableAutoScale
+    name: enableAutoScale
+    fullName: enableAutoScale
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-119">Если значение равно false, по крайней мере один из targetDedicateNodes и targetLowPriorityNodes необходимо указать.</span><span class="sxs-lookup"><span data-stu-id="9c585-119">If false, at least one of targetDedicateNodes and targetLowPriorityNodes must be specified.</span></span> <span data-ttu-id="9c585-120">Если значение равно true, свойство autoScaleFormula является обязательным, и пул автоматически изменяет свои размеры по формуле.</span><span class="sxs-lookup"><span data-stu-id="9c585-120">If true, the autoScaleFormula property is required and the Pool automatically resizes according to the formula.</span></span> <span data-ttu-id="9c585-121">По умолчанию для этого параметра используется значение false.</span><span class="sxs-lookup"><span data-stu-id="9c585-121">The default value is false.</span></span>'
+    optional: true
+    syntax:
+      content: 'enableAutoScale?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.enableInterNodeCommunication
+    name: enableInterNodeCommunication
+    fullName: enableInterNodeCommunication
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9c585-122">Включение связи между узлами ограничивает максимальный размер пула из-за ограничений развертывания на вычислительных узлах пула.</span><span class="sxs-lookup"><span data-stu-id="9c585-122">Enabling inter-node communication limits the maximum size of the Pool due to deployment restrictions on the Compute Nodes of the Pool.</span></span> <span data-ttu-id="9c585-123">Это может привести в пуле не достигают нужного размера.</span><span class="sxs-lookup"><span data-stu-id="9c585-123">This may result in the Pool not reaching its desired size.</span></span> <span data-ttu-id="9c585-124">По умолчанию для этого параметра используется значение false.</span><span class="sxs-lookup"><span data-stu-id="9c585-124">The default value is false.</span></span>
+    optional: true
+    syntax:
+      content: 'enableInterNodeCommunication?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-125">Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов.</span><span class="sxs-lookup"><span data-stu-id="9c585-125">The ID can contain any combination of alphanumeric characters including hyphens and underscores, and cannot contain more than 64 characters.</span></span> <span data-ttu-id="9c585-126">Идентификатор меняющее регистр и не учитывает регистр (то есть не имеется два идентификатора пула в учетной записи, которые различаются только регистром).</span><span class="sxs-lookup"><span data-stu-id="9c585-126">The ID is case-preserving and case-insensitive (that is, you may not have two Pool IDs within an Account that differ only by case).</span></span>'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.maxTasksPerNode
+    name: maxTasksPerNode
+    fullName: maxTasksPerNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9c585-127">Значение по умолчанию — 1.</span><span class="sxs-lookup"><span data-stu-id="9c585-127">The default value is 1.</span></span> <span data-ttu-id="9c585-128">Максимальное значение — это меньшее из 4 раза количество ядер vmSize пула или 256.</span><span class="sxs-lookup"><span data-stu-id="9c585-128">The maximum value is the smaller of 4 times the number of cores of the vmSize of the Pool or 256.</span></span>
+    optional: true
+    syntax:
+      content: 'maxTasksPerNode?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9c585-129">Пакетная служба не назначает значение для метаданных; Это исключительно для использования пользовательского кода.</span><span class="sxs-lookup"><span data-stu-id="9c585-129">The Batch service does not assign any meaning to metadata; it is solely for the use of user code.</span></span>
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.networkConfiguration
+    name: networkConfiguration
+    fullName: networkConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'networkConfiguration?: NetworkConfiguration'
+      return:
+        type:
+          - azure-batch.NetworkConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.resizeTimeout
+    name: resizeTimeout
+    fullName: resizeTimeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-130">Это время ожидания применяется только к ручное масштабирование; он не действует при элемента enableAutoScale задано значение в значение true.</span><span class="sxs-lookup"><span data-stu-id="9c585-130">This timeout applies only to manual scaling; it has no effect when enableAutoScale is set to true.</span></span> <span data-ttu-id="9c585-131">Значение по умолчанию — 15 минут.</span><span class="sxs-lookup"><span data-stu-id="9c585-131">The default value is 15 minutes.</span></span> <span data-ttu-id="9c585-132">Минимальное значение — 5 минут.</span><span class="sxs-lookup"><span data-stu-id="9c585-132">The minimum value is 5 minutes.</span></span> <span data-ttu-id="9c585-133">Если указать значение меньше 5 минут, то пакетная служба возвращает ошибку; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="9c585-133">If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'resizeTimeout?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="9c585-134">Задача выполняется при добавлении вычислительного узла к пулу или при перезапуске вычислительного узла.</span><span class="sxs-lookup"><span data-stu-id="9c585-134">The Task runs when the Compute Node is added to the Pool or when the Compute Node is restarted.</span></span>
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.targetDedicatedNodes
+    name: targetDedicatedNodes
+    fullName: targetDedicatedNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-135">Это свойство не должно быть указано, если enableAutoScale задано значение true.</span><span class="sxs-lookup"><span data-stu-id="9c585-135">This property must not be specified if enableAutoScale is set to true.</span></span> <span data-ttu-id="9c585-136">Если enableAutoScale имеет значение false, то необходимо задать либо targetDedicatedNodes, targetLowPriorityNodes или оба.</span><span class="sxs-lookup"><span data-stu-id="9c585-136">If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetDedicatedNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.targetLowPriorityNodes
+    name: targetLowPriorityNodes
+    fullName: targetLowPriorityNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-137">Это свойство не должно быть указано, если enableAutoScale задано значение true.</span><span class="sxs-lookup"><span data-stu-id="9c585-137">This property must not be specified if enableAutoScale is set to true.</span></span> <span data-ttu-id="9c585-138">Если enableAutoScale имеет значение false, то необходимо задать либо targetDedicatedNodes, targetLowPriorityNodes или оба.</span><span class="sxs-lookup"><span data-stu-id="9c585-138">If enableAutoScale is set to false, then you must set either targetDedicatedNodes, targetLowPriorityNodes, or both.</span></span>'
+    optional: true
+    syntax:
+      content: 'targetLowPriorityNodes?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.taskSchedulingPolicy
+    name: taskSchedulingPolicy
+    fullName: taskSchedulingPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-139">Если не указан, распределены по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="9c585-139">If not specified, the default is spread.</span></span>'
+    optional: true
+    syntax:
+      content: 'taskSchedulingPolicy?: TaskSchedulingPolicy'
+      return:
+        type:
+          - azure-batch.TaskSchedulingPolicy
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.userAccounts
+    name: userAccounts
+    fullName: userAccounts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'userAccounts?: UserAccount[]'
+      return:
+        type:
+          - 'azure-batch.UserAccount[]'
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.virtualMachineConfiguration
+    name: virtualMachineConfiguration
+    fullName: virtualMachineConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-140">Это свойство и cloudServiceConfiguration являются взаимоисключающими, и одно из свойств должен быть указан.</span><span class="sxs-lookup"><span data-stu-id="9c585-140">This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.</span></span>'
+    optional: true
+    syntax:
+      content: 'virtualMachineConfiguration?: VirtualMachineConfiguration'
+      return:
+        type:
+          - azure-batch.VirtualMachineConfiguration
+    package: azure-batch
+  - uid: azure-batch.PoolAddParameter.vmSize
+    name: vmSize
+    fullName: vmSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="9c585-141">Сведения о доступных размерах виртуальных машин для пулов облачных служб (пулы, созданные с помощью cloudServiceConfiguration), см. в разделе размеры для облачных служб (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/).</span><span class="sxs-lookup"><span data-stu-id="9c585-141">For information about available sizes of virtual machines for Cloud Services Pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/).</span></span> <span data-ttu-id="9c585-142">Пакетная служба поддерживает все размеры виртуальной Машине облачных служб, кроме "очень мелкий", A1V2 и A2V2.</span><span class="sxs-lookup"><span data-stu-id="9c585-142">Batch supports all Cloud Services VM sizes except ExtraSmall, A1V2 and A2V2.</span></span> <span data-ttu-id="9c585-143">Сведения о доступных виртуальных Машин размеры пулов при использовании образов из магазина виртуальных машин (пулы, созданные с помощью virtualMachineConfiguration) см. размеры виртуальных машин (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) или размеры виртуальных машин (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/).</span><span class="sxs-lookup"><span data-stu-id="9c585-143">For information about available VM sizes for Pools using Images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/).</span></span> <span data-ttu-id="9c585-144">Пакетная служба поддерживает все размеры виртуальных Машин Azure, за исключением STANDARD_A0 и с хранилищем класса premium (серии STANDARD_GS STANDARD_DS и STANDARD_DSV2).</span><span class="sxs-lookup"><span data-stu-id="9c585-144">Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).</span></span>'
+    syntax:
+      content: 'vmSize: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.CloudServiceConfiguration
+    name: CloudServiceConfiguration
+    spec.typeScript:
+      - name: CloudServiceConfiguration
+        fullName: CloudServiceConfiguration
+        uid: azure-batch.CloudServiceConfiguration
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    spec.typeScript:
+      - name: NetworkConfiguration
+        fullName: NetworkConfiguration
+        uid: azure-batch.NetworkConfiguration
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask
+  - uid: azure-batch.TaskSchedulingPolicy
+    name: TaskSchedulingPolicy
+    spec.typeScript:
+      - name: TaskSchedulingPolicy
+        fullName: TaskSchedulingPolicy
+        uid: azure-batch.TaskSchedulingPolicy
+  - uid: 'azure-batch.UserAccount[]'
+    name: 'UserAccount[]'
+    spec.typeScript:
+      - name: UserAccount
+        fullName: UserAccount
+        uid: azure-batch.UserAccount
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.VirtualMachineConfiguration
+    name: VirtualMachineConfiguration
+    spec.typeScript:
+      - name: VirtualMachineConfiguration
+        fullName: VirtualMachineConfiguration
+        uid: azure-batch.VirtualMachineConfiguration

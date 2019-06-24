@@ -1,0 +1,191 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobPreparationTask
+    name: JobPreparationTask
+    fullName: JobPreparationTask
+    children:
+      - azure-batch.JobPreparationTask.commandLine
+      - azure-batch.JobPreparationTask.constraints
+      - azure-batch.JobPreparationTask.containerSettings
+      - azure-batch.JobPreparationTask.environmentSettings
+      - azure-batch.JobPreparationTask.id
+      - azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+      - azure-batch.JobPreparationTask.resourceFiles
+      - azure-batch.JobPreparationTask.userIdentity
+      - azure-batch.JobPreparationTask.waitForSuccess
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="e8245-101">Подготовки задания можно использовать для подготовки узлов для выполнения задач для задания.</span><span class="sxs-lookup"><span data-stu-id="e8245-101">You can use Job Preparation to prepare a Node to run Tasks for the Job.</span></span> <span data-ttu-id="e8245-102">Действия, обычно осуществляются в подготовки задания, включают в себя: Загрузка общие файлы ресурсов, используемый всеми задачами в задании.</span><span class="sxs-lookup"><span data-stu-id="e8245-102">Activities commonly performed in Job Preparation include: Downloading common resource files used by all the Tasks in the Job.</span></span> <span data-ttu-id="e8245-103">Задача подготовки задания можно загрузить эти общие файлы ресурсов в общую папку на узле.</span><span class="sxs-lookup"><span data-stu-id="e8245-103">The Job Preparation Task can download these common resource files to the shared location on the Node.</span></span> <span data-ttu-id="e8245-104">(AZ_BATCH_NODE_ROOT_DIR\shared), или запуск локальной службы на узле, чтобы все задачи из этого задания может взаимодействовать с ним.</span><span class="sxs-lookup"><span data-stu-id="e8245-104">(AZ_BATCH_NODE_ROOT_DIR\shared), or starting a local service on the Node so that all Tasks of that Job can communicate with it.</span></span> <span data-ttu-id="e8245-105">Если происходит сбой задачи подготовки заданий (то есть истощает подсчета его повторных попыток перед завершением работы с кодом завершения 0), пакетной службы не запускаются задачи этого задания на узле.</span><span class="sxs-lookup"><span data-stu-id="e8245-105">If the Job Preparation Task fails (that is, exhausts its retry count before exiting with exit code 0), Batch will not run Tasks of this Job on the Node.</span></span> <span data-ttu-id="e8245-106">Вычислительный узел остается не может использоваться для выполнения задач этого задания до его повторном создании образа.</span><span class="sxs-lookup"><span data-stu-id="e8245-106">The Compute Node remains ineligible to run Tasks of this Job until it is reimaged.</span></span> <span data-ttu-id="e8245-107">Вычислительный узел остается активным и может использоваться для других заданий.</span><span class="sxs-lookup"><span data-stu-id="e8245-107">The Compute Node remains active and can be used for other Jobs.</span></span> <span data-ttu-id="e8245-108">Задача подготовки задания можно запускать несколько раз на одном узле.</span><span class="sxs-lookup"><span data-stu-id="e8245-108">The Job Preparation Task can run multiple times on the same Node.</span></span> <span data-ttu-id="e8245-109">Таким образом следует писать задачу подготовки задания для обработки повторного выполнения.</span><span class="sxs-lookup"><span data-stu-id="e8245-109">Therefore, you should write the Job Preparation Task to handle re-execution.</span></span> <span data-ttu-id="e8245-110">Если узел перезагружается, задача подготовки задания запускается снова на вычислительный узел перед планированием других задач задания, если rerunOnNodeRebootAfterSuccess имеет значение true, или если задача подготовки задания не была завершена ранее.</span><span class="sxs-lookup"><span data-stu-id="e8245-110">If the Node is rebooted, the Job Preparation Task is run again on the Compute Node before scheduling any other Task of the Job, if rerunOnNodeRebootAfterSuccess is true or if the Job Preparation Task did not previously complete.</span></span> <span data-ttu-id="e8245-111">При пересоздании образа узла задачу подготовки задания выполняется еще раз, перед планированием любой задачи задания.</span><span class="sxs-lookup"><span data-stu-id="e8245-111">If the Node is reimaged, the Job Preparation Task is run again before scheduling any Task of the Job.</span></span> <span data-ttu-id="e8245-112">Пакета повторит задачи, когда операция восстановления запускается на узле.</span><span class="sxs-lookup"><span data-stu-id="e8245-112">Batch will retry Tasks when a recovery operation is triggered on a Node.</span></span> <span data-ttu-id="e8245-113">Примеры операций восстановления причинами (но не ограничиваются) при неработоспособный узел перезагружается или вычислительного узла не отображается из-за сбоя узла.</span><span class="sxs-lookup"><span data-stu-id="e8245-113">Examples of recovery operations include (but are not limited to) when an unhealthy Node is rebooted or a Compute Node disappeared due to host failure.</span></span> <span data-ttu-id="e8245-114">Повторно из-за восстановления операций независимы и не учитываются для maxTaskRetryCount.</span><span class="sxs-lookup"><span data-stu-id="e8245-114">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="e8245-115">Даже если maxTaskRetryCount равно 0, может возникнуть внутренних повторных попыток из-за операции восстановления.</span><span class="sxs-lookup"><span data-stu-id="e8245-115">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="e8245-116">По этой причине все задачи должны быть идемпотентными.</span><span class="sxs-lookup"><span data-stu-id="e8245-116">Because of this, all Tasks should be idempotent.</span></span> <span data-ttu-id="e8245-117">Это означает, что задачи должны допускать прервана и перезапущена без возникновения любые повреждения или повторяющиеся данные.</span><span class="sxs-lookup"><span data-stu-id="e8245-117">This means Tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="e8245-118">Лучшие практики для долго выполняющихся задач является использование определенные виды создания контрольных точек.</span><span class="sxs-lookup"><span data-stu-id="e8245-118">The best practice for long running Tasks is to use some form of checkpointing.</span></span>'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e8245-119">В командной строке не выполняются в оболочке и таким образом, не может воспользоваться преимуществами функции оболочки, например расширение переменных среды.</span><span class="sxs-lookup"><span data-stu-id="e8245-119">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="e8245-120">Если вы хотите воспользоваться преимуществами таких функций, необходимо вызвать оболочку в командной строке, например с помощью «cmd /c MyCommand» в Windows или «/ bin/sh - c MyCommand» в Linux.</span><span class="sxs-lookup"><span data-stu-id="e8245-120">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="e8245-121">Если командной строке ссылается на пути к файлам, она должна использовать относительный путь (по отношению к рабочему каталогу задачи), или пакетное указанной переменной среды (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="e8245-121">If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - azure-batch.TaskConstraints
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e8245-122">Если этот параметр указан, все каталоги рекурсивно ниже AZ_BATCH_NODE_ROOT_DIR (корень каталогов пакетной службы Azure на узле) сопоставляются в контейнере, все переменные среды задач сопоставляются в контейнере и Командная строка задачи выполняется в контейнере.</span><span class="sxs-lookup"><span data-stu-id="e8245-122">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all Task environment variables are mapped into the container, and the Task command line is executed in the container.</span></span> <span data-ttu-id="e8245-123">Файлы, созданные в контейнере за пределами AZ_BATCH_NODE_ROOT_DIR могут не отражаться на диск узла, это означает, что API-интерфейсов файлового пакетного нельзя будет получить доступ к этим файлам.</span><span class="sxs-lookup"><span data-stu-id="e8245-123">Files produced in the container outside of AZ_BATCH_NODE_ROOT_DIR might not be reflected to the host disk, meaning that Batch file APIs will not be able to access those files.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e8245-124">Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов.</span><span class="sxs-lookup"><span data-stu-id="e8245-124">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span> <span data-ttu-id="e8245-125">Если это свойство не задано, пакетная служба назначает значение по умолчанию «jobpreparation».</span><span class="sxs-lookup"><span data-stu-id="e8245-125">If you do not specify this property, the Batch service assigns a default value of ''jobpreparation''.</span></span> <span data-ttu-id="e8245-126">Другие задачи в задании может иметь один и тот же идентификатор как задача подготовки задания.</span><span class="sxs-lookup"><span data-stu-id="e8245-126">No other Task in the Job can have the same ID as the Job Preparation Task.</span></span> <span data-ttu-id="e8245-127">Если вы пытаетесь передать задачу с одинаковым идентификатором, пакетная служба отклоняет запрос с кодом ошибки TaskIdSameAsJobPreparationTask; При вызове REST API напрямую, код состояния HTTP: 409 (конфликт).</span><span class="sxs-lookup"><span data-stu-id="e8245-127">If you try to submit a Task with the same id, the Batch service rejects the request with error code TaskIdSameAsJobPreparationTask; if you are calling the REST API directly, the HTTP status code is 409 (Conflict).</span></span>'
+    optional: true
+    syntax:
+      content: 'id?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.rerunOnNodeRebootAfterSuccess
+    name: rerunOnNodeRebootAfterSuccess
+    fullName: rerunOnNodeRebootAfterSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e8245-128">Задача подготовки задания всегда будет запускаться повторно при повторном создании образа вычислительного узла, или если не была завершена задача подготовки задания (например из-за перезагрузки во время выполнения задачи).</span><span class="sxs-lookup"><span data-stu-id="e8245-128">The Job Preparation Task is always rerun if a Compute Node is reimaged, or if the Job Preparation Task did not complete (e.g. because the reboot occurred while the Task was running).</span></span> <span data-ttu-id="e8245-129">Таким образом следует всегда писать задачу подготовки задания должны быть идемпотентными и ведут себя неправильно, если выполнить несколько раз.</span><span class="sxs-lookup"><span data-stu-id="e8245-129">Therefore, you should always write a Job Preparation Task to be idempotent and to behave correctly if run multiple times.</span></span> <span data-ttu-id="e8245-130">По умолчанию используется значение true.</span><span class="sxs-lookup"><span data-stu-id="e8245-130">The default value is true.</span></span>'
+    optional: true
+    syntax:
+      content: 'rerunOnNodeRebootAfterSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="e8245-131">Файлы, перечисленные в этом элементе, находятся в рабочем каталоге задачи.</span><span class="sxs-lookup"><span data-stu-id="e8245-131">Files listed under this element are located in the Task's working directory.</span></span>
+      <span data-ttu-id="e8245-132">Максимальный размер для список файлов ресурсов установлен.</span><span class="sxs-lookup"><span data-stu-id="e8245-132">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="e8245-133">При превышении максимального размера, запрос завершится ошибкой, и код ошибки ответа будет RequestEntityTooLarge.</span><span class="sxs-lookup"><span data-stu-id="e8245-133">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="e8245-134">В этом случае коллекция ResourceFiles необходимо уменьшить размер.</span><span class="sxs-lookup"><span data-stu-id="e8245-134">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="e8245-135">Это можно сделать с помощью ZIP-файлы, пакеты приложений или контейнеров Docker.</span><span class="sxs-lookup"><span data-stu-id="e8245-135">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e8245-136">Если не указано, задача выполняется как обычных пользователей, уникальные для задач на вычислительных узлах Windows или пользователь без прав администратора уникальный пул на вычислительных узлах Linux.</span><span class="sxs-lookup"><span data-stu-id="e8245-136">If omitted, the Task runs as a non-administrative user unique to the Task on Windows Compute Nodes, or a non-administrative user unique to the Pool on Linux Compute Nodes.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+  - uid: azure-batch.JobPreparationTask.waitForSuccess
+    name: waitForSuccess
+    fullName: waitForSuccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="e8245-137">Если значение true и происходит сбой задачи подготовки задания на узле, повторы пакетов службы, задача подготовки задания до его повторных попыток count (как указано в элементе ограничений).</span><span class="sxs-lookup"><span data-stu-id="e8245-137">If true and the Job Preparation Task fails on a Node, the Batch service retries the Job Preparation Task up to its maximum retry count (as specified in the constraints element).</span></span> <span data-ttu-id="e8245-138">Если задача по-прежнему не завершено после всех попыток, то пакетная служба не будем планировать задачи задания на узел.</span><span class="sxs-lookup"><span data-stu-id="e8245-138">If the Task has still not completed successfully after all retries, then the Batch service will not schedule Tasks of the Job to the Node.</span></span> <span data-ttu-id="e8245-139">Узел остается активных и допустимых для запуска задачами других заданий.</span><span class="sxs-lookup"><span data-stu-id="e8245-139">The Node remains active and eligible to run Tasks of other Jobs.</span></span> <span data-ttu-id="e8245-140">Если значение равно false, пакетная служба не будет ожидать завершения задачи подготовки задания.</span><span class="sxs-lookup"><span data-stu-id="e8245-140">If false, the Batch service will not wait for the Job Preparation Task to complete.</span></span> <span data-ttu-id="e8245-141">В этом случае другие задачи задания может начать выполнение на вычислительный узел, пока задача подготовки задания по-прежнему работает; и даже в случае сбоя задачи подготовки заданий, новые задачи будет планироваться на вычислительный узел.</span><span class="sxs-lookup"><span data-stu-id="e8245-141">In this case, other Tasks of the Job can start executing on the Compute Node while the Job Preparation Task is still running; and even if the Job Preparation Task fails, new Tasks will continue to be scheduled on the Compute Node.</span></span> <span data-ttu-id="e8245-142">По умолчанию используется значение true.</span><span class="sxs-lookup"><span data-stu-id="e8245-142">The default value is true.</span></span>'
+    optional: true
+    syntax:
+      content: 'waitForSuccess?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+references:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: azure-batch.TaskConstraints
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

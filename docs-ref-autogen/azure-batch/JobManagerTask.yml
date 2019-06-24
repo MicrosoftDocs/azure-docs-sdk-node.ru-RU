@@ -1,0 +1,294 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobManagerTask
+    name: JobManagerTask
+    fullName: JobManagerTask
+    children:
+      - azure-batch.JobManagerTask.allowLowPriorityNode
+      - azure-batch.JobManagerTask.applicationPackageReferences
+      - azure-batch.JobManagerTask.authenticationTokenSettings
+      - azure-batch.JobManagerTask.commandLine
+      - azure-batch.JobManagerTask.constraints
+      - azure-batch.JobManagerTask.containerSettings
+      - azure-batch.JobManagerTask.displayName
+      - azure-batch.JobManagerTask.environmentSettings
+      - azure-batch.JobManagerTask.id
+      - azure-batch.JobManagerTask.killJobOnCompletion
+      - azure-batch.JobManagerTask.outputFiles
+      - azure-batch.JobManagerTask.resourceFiles
+      - azure-batch.JobManagerTask.runExclusive
+      - azure-batch.JobManagerTask.userIdentity
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="dd5a5-101">Задача диспетчера заданий запускается автоматически при создании задания.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-101">The Job Manager Task is automatically started when the Job is created.</span></span> <span data-ttu-id="dd5a5-102">Пакетная служба пытается запланировать задачу диспетчера заданий перед выполнением других задач в задании.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-102">The Batch service tries to schedule the Job Manager Task before any other Tasks in the Job.</span></span> <span data-ttu-id="dd5a5-103">При сжатии пула, пакетная служба пытается сохранить узлов, где выполняются задачи диспетчера заданий для максимально (то есть, вычислительные узлы работает «нормальному» задачи удаляются перед вычислительные узлы под управлением задачи диспетчера заданий) долго.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-103">When shrinking a Pool, the Batch service tries to preserve Nodes where Job Manager Tasks are running for as long as possible (that is, Compute Nodes running 'normal' Tasks are removed before Compute Nodes running Job Manager Tasks).</span></span> <span data-ttu-id="dd5a5-104">При сбое задачи диспетчера заданий и должна быть перезапущена, система пытается запланировать его с наивысшим приоритетом.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-104">When a Job Manager Task fails and needs to be restarted, the system tries to schedule it at the highest priority.</span></span> <span data-ttu-id="dd5a5-105">Если имеются доступные не вычислительных узлов в неактивном состоянии, система может завершить одну из выполняющихся задач в пуле и вернуть его в очередь, чтобы освободить место для задачи диспетчера заданий для перезапуска.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-105">If there are no idle Compute Nodes available, the system may terminate one of the running Tasks in the Pool and return it to the queue in order to make room for the Job Manager Task to restart.</span></span> <span data-ttu-id="dd5a5-106">Обратите внимание на то, что задачу диспетчера заданий в одно задание имеет приоритет над задачами в других заданиях.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-106">Note that a Job Manager Task in one Job does not have priority over Tasks in other Jobs.</span></span> <span data-ttu-id="dd5a5-107">Для заданий только задания уровня являются приоритеты.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-107">Across Jobs, only Job level priorities are observed.</span></span> <span data-ttu-id="dd5a5-108">Например, если диспетчер заданий в приоритет 0 нужно перезапустить задание, он не заменит задачи с приоритетом 1 задание.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-108">For example, if a Job Manager in a priority 0 Job needs to be restarted, it will not displace Tasks of a priority 1 Job.</span></span> <span data-ttu-id="dd5a5-109">Пакета повторит задачи, когда операция восстановления запускается на узле.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-109">Batch will retry Tasks when a recovery operation is triggered on a Node.</span></span>
+      <span data-ttu-id="dd5a5-110">Примеры операций восстановления причинами (но не ограничиваются) при неработоспособный узел перезагружается или вычислительного узла не отображается из-за сбоя узла.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-110">Examples of recovery operations include (but are not limited to) when an unhealthy Node is rebooted or a Compute Node disappeared due to host failure.</span></span> <span data-ttu-id="dd5a5-111">Повторно из-за восстановления операций независимы и не учитываются для maxTaskRetryCount.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-111">Retries due to recovery operations are independent of and are not counted against the maxTaskRetryCount.</span></span> <span data-ttu-id="dd5a5-112">Даже если maxTaskRetryCount равно 0, может возникнуть внутренних повторных попыток из-за операции восстановления.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-112">Even if the maxTaskRetryCount is 0, an internal retry due to a recovery operation may occur.</span></span> <span data-ttu-id="dd5a5-113">По этой причине все задачи должны быть идемпотентными.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-113">Because of this, all Tasks should be idempotent.</span></span> <span data-ttu-id="dd5a5-114">Это означает, что задачи должны допускать прервана и перезапущена без возникновения любые повреждения или повторяющиеся данные.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-114">This means Tasks need to tolerate being interrupted and restarted without causing any corruption or duplicate data.</span></span> <span data-ttu-id="dd5a5-115">Лучшие практики для долго выполняющихся задач является использование определенные виды создания контрольных точек.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-115">The best practice for long running Tasks is to use some form of checkpointing.</span></span>
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.allowLowPriorityNode
+    name: allowLowPriorityNode
+    fullName: allowLowPriorityNode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="dd5a5-116">По умолчанию используется значение true.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-116">The default value is true.</span></span>
+    optional: true
+    syntax:
+      content: 'allowLowPriorityNode?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-117">Пакеты приложений загрузку и развертывание в общий каталог, не рабочем каталоге задачи.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-117">Application Packages are downloaded and deployed to a shared directory, not the Task working directory.</span></span> <span data-ttu-id="dd5a5-118">Таким образом Если указанный пакет приложения уже находится в вычислительный узел и в актуальном состоянии, то оно не повторно загружается; используется существующий копия на вычислительный узел вычислений.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-118">Therefore, if a referenced Application Package is already on the Compute Node, and is up to date, then it is not re-downloaded; the existing copy on the Compute Compute Node is used.</span></span> <span data-ttu-id="dd5a5-119">Если указанный пакет приложения нельзя установить, например потому, что пакет был удален, или из-за сбоя загрузки, задача завершается с ошибкой.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-119">If a referenced Application Package cannot be installed, for example because the package has been deleted or because download failed, the Task fails.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.authenticationTokenSettings
+    name: authenticationTokenSettings
+    fullName: authenticationTokenSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-120">Если это свойство имеет значение, пакетная служба предоставляет задачи с помощью маркера проверки подлинности, который может использоваться для проверки подлинности операций пакетной службы, не требуя ключ доступа учетной записи.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-120">If this property is set, the Batch service provides the Task with an authentication token which can be used to authenticate Batch service operations without requiring an Account access key.</span></span> <span data-ttu-id="dd5a5-121">Маркер предоставляется через переменную среды AZ_BATCH_AUTHENTICATION_TOKEN.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-121">The token is provided via the AZ_BATCH_AUTHENTICATION_TOKEN environment variable.</span></span> <span data-ttu-id="dd5a5-122">Операции, которые можно выполнять с помощью токена задачи зависят от параметров.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-122">The operations that the Task can carry out using the token depend on the settings.</span></span> <span data-ttu-id="dd5a5-123">Например задачу можно запросить задания разрешений, чтобы добавить другие задачи в задание, или проверить состояние задания или других задач в задании.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-123">For example, a Task can request Job permissions in order to add other Tasks to the Job, or check the status of the Job or of other Tasks under the Job.</span></span>'
+    optional: true
+    syntax:
+      content: 'authenticationTokenSettings?: AuthenticationTokenSettings'
+      return:
+        type:
+          - azure-batch.AuthenticationTokenSettings
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.commandLine
+    name: commandLine
+    fullName: commandLine
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-124">В командной строке не выполняются в оболочке и таким образом, не может воспользоваться преимуществами функции оболочки, например расширение переменных среды.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-124">The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion.</span></span> <span data-ttu-id="dd5a5-125">Если вы хотите воспользоваться преимуществами таких функций, необходимо вызвать оболочку в командной строке, например с помощью «cmd /c MyCommand» в Windows или «/ bin/sh - c MyCommand» в Linux.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-125">If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux.</span></span> <span data-ttu-id="dd5a5-126">Если командной строке ссылается на пути к файлам, она должна использовать относительный путь (по отношению к рабочему каталогу задачи), или пакетное указанной переменной среды (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span><span class="sxs-lookup"><span data-stu-id="dd5a5-126">If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/en-us/azure/batch/batch-compute-node-environment-variables).</span></span>'
+    syntax:
+      content: 'commandLine: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.constraints
+    name: constraints
+    fullName: constraints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'constraints?: TaskConstraints'
+      return:
+        type:
+          - azure-batch.TaskConstraints
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.containerSettings
+    name: containerSettings
+    fullName: containerSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-127">Если в пуле, который будет выполняться эта задача значение containerConfiguration, это необходимо также задать.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-127">If the Pool that will run this Task has containerConfiguration set, this must be set as well.</span></span> <span data-ttu-id="dd5a5-128">Если пул, который будет выполняться эта задача не имеет значение containerConfiguration, это не должно быть задано.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-128">If the Pool that will run this Task doesn''t have containerConfiguration set, this must not be set.</span></span> <span data-ttu-id="dd5a5-129">Если этот параметр указан, все каталоги рекурсивно ниже AZ_BATCH_NODE_ROOT_DIR (корень каталогов пакетной службы Azure на узле) сопоставляются в контейнере, все переменные среды задач сопоставляются в контейнере и Командная строка задачи выполняется в контейнере.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-129">When this is specified, all directories recursively below the AZ_BATCH_NODE_ROOT_DIR (the root of Azure Batch directories on the node) are mapped into the container, all Task environment variables are mapped into the container, and the Task command line is executed in the container.</span></span> <span data-ttu-id="dd5a5-130">Файлы, созданные в контейнере за пределами AZ_BATCH_NODE_ROOT_DIR могут не отражаться на диск узла, это означает, что API-интерфейсов файлового пакетного нельзя будет получить доступ к этим файлам.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-130">Files produced in the container outside of AZ_BATCH_NODE_ROOT_DIR might not be reflected to the host disk, meaning that Batch file APIs will not be able to access those files.</span></span>'
+    optional: true
+    syntax:
+      content: 'containerSettings?: TaskContainerSettings'
+      return:
+        type:
+          - azure-batch.TaskContainerSettings
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-131">Оно не обязано быть уникальным и может содержать любые символы Юникода, максимум — 1024.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-131">It need not be unique and can contain any Unicode characters up to a maximum length of 1024.</span></span>'
+    optional: true
+    syntax:
+      content: 'displayName?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.environmentSettings
+    name: environmentSettings
+    fullName: environmentSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'environmentSettings?: EnvironmentSetting[]'
+      return:
+        type:
+          - 'azure-batch.EnvironmentSetting[]'
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-132">Идентификатор может содержать любое сочетание буквенно-цифровые символы, включая дефисы и знаки подчеркивания и не может содержать более 64 символов.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-132">The ID can contain any combination of alphanumeric characters including hyphens and underscores and cannot contain more than 64 characters.</span></span>'
+    syntax:
+      content: 'id: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.killJobOnCompletion
+    name: killJobOnCompletion
+    fullName: killJobOnCompletion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-133">Если значение равно true, при завершении задачи диспетчера заданий, знаков обслуживания пакетное задание как завершенное.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-133">If true, when the Job Manager Task completes, the Batch service marks the Job as complete.</span></span> <span data-ttu-id="dd5a5-134">Если все задачи по-прежнему выполняются в данный момент (кроме прекращения задания), эти задачи завершаются.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-134">If any Tasks are still running at this time (other than Job Release), those Tasks are terminated.</span></span> <span data-ttu-id="dd5a5-135">Если значение равно false, завершения задачи диспетчера заданий не влияет на состояние задания.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-135">If false, the completion of the Job Manager Task does not affect the Job status.</span></span> <span data-ttu-id="dd5a5-136">В этом случае вам следует использовать атрибут onAllTasksComplete для завершения задания, или клиента или пользователя, которые явно завершить задание.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-136">In this case, you should either use the onAllTasksComplete attribute to terminate the Job, or have a client or user terminate the Job explicitly.</span></span> <span data-ttu-id="dd5a5-137">Примером этого является, если диспетчер заданий создает набор задач, но затем принимает роль не дальнейшей их выполнение.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-137">An example of this is if the Job Manager creates a set of Tasks but then takes no further role in their execution.</span></span> <span data-ttu-id="dd5a5-138">По умолчанию используется значение true.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-138">The default value is true.</span></span> <span data-ttu-id="dd5a5-139">Если вы с помощью атрибутов onAllTasksComplete и onTaskFailure для управления временем существования задания и с помощью задачи диспетчера заданий только для создания задачи для задания (не для отслеживания хода выполнения), затем важно задавать killJobOnCompletion значение false.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-139">If you are using the onAllTasksComplete and onTaskFailure attributes to control Job lifetime, and using the Job Manager Task only to create the Tasks for the Job (not to monitor progress), then it is important to set killJobOnCompletion to false.</span></span>'
+    optional: true
+    syntax:
+      content: 'killJobOnCompletion?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.outputFiles
+    name: outputFiles
+    fullName: outputFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-140">Для задач с несколькими экземплярами файлы будут отправлены только из вычислительного узла, на котором выполняется основная задача.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-140">For multi-instance Tasks, the files will only be uploaded from the Compute Node on which the primary Task is executed.</span></span>'
+    optional: true
+    syntax:
+      content: 'outputFiles?: OutputFile[]'
+      return:
+        type:
+          - 'azure-batch.OutputFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.resourceFiles
+    name: resourceFiles
+    fullName: resourceFiles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="dd5a5-141">Файлы, перечисленные в этом элементе, находятся в рабочем каталоге задачи.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-141">Files listed under this element are located in the Task's working directory.</span></span>
+      <span data-ttu-id="dd5a5-142">Максимальный размер для список файлов ресурсов установлен.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-142">There is a maximum size for the list of resource files.</span></span>  <span data-ttu-id="dd5a5-143">При превышении максимального размера, запрос завершится ошибкой, и код ошибки ответа будет RequestEntityTooLarge.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-143">When the max size is exceeded, the request will fail and the response error code will be RequestEntityTooLarge.</span></span> <span data-ttu-id="dd5a5-144">В этом случае коллекция ResourceFiles необходимо уменьшить размер.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-144">If this occurs, the collection of ResourceFiles must be reduced in size.</span></span> <span data-ttu-id="dd5a5-145">Это можно сделать с помощью ZIP-файлы, пакеты приложений или контейнеров Docker.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-145">This can be achieved using .zip files, Application Packages, or Docker Containers.</span></span>
+    optional: true
+    syntax:
+      content: 'resourceFiles?: ResourceFile[]'
+      return:
+        type:
+          - 'azure-batch.ResourceFile[]'
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.runExclusive
+    name: runExclusive
+    fullName: runExclusive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-146">Значение true, если никакие другие задачи будет выполняться на том же узле до тех пор, пока выполняется диспетчера заданий.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-146">If true, no other Tasks will run on the same Node for as long as the Job Manager is running.</span></span> <span data-ttu-id="dd5a5-147">Если значение равно false, другие задачи могут одновременно работать с помощью диспетчера заданий на узел вычислений.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-147">If false, other Tasks can run simultaneously with the Job Manager on a Compute Node.</span></span> <span data-ttu-id="dd5a5-148">Задача диспетчера заданий обычно учитывается предел одновременных задач вычислительного узла, поэтому это относится только если вычислительный узел допускает несколько параллельных задач.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-148">The Job Manager Task counts normally against the Compute Node''s concurrent Task limit, so this is only relevant if the Compute Node allows multiple concurrent Tasks.</span></span> <span data-ttu-id="dd5a5-149">По умолчанию используется значение true.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-149">The default value is true.</span></span>'
+    optional: true
+    syntax:
+      content: 'runExclusive?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.JobManagerTask.userIdentity
+    name: userIdentity
+    fullName: userIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="dd5a5-150">Если не указано, задача выполняется как пользователь без прав администратора уникальные задачи.</span><span class="sxs-lookup"><span data-stu-id="dd5a5-150">If omitted, the Task runs as a non-administrative user unique to the Task.</span></span>'
+    optional: true
+    syntax:
+      content: 'userIdentity?: UserIdentity'
+      return:
+        type:
+          - azure-batch.UserIdentity
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.AuthenticationTokenSettings
+    name: AuthenticationTokenSettings
+    spec.typeScript:
+      - name: AuthenticationTokenSettings
+        fullName: AuthenticationTokenSettings
+        uid: azure-batch.AuthenticationTokenSettings
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    spec.typeScript:
+      - name: TaskConstraints
+        fullName: TaskConstraints
+        uid: azure-batch.TaskConstraints
+  - uid: azure-batch.TaskContainerSettings
+    name: TaskContainerSettings
+    spec.typeScript:
+      - name: TaskContainerSettings
+        fullName: TaskContainerSettings
+        uid: azure-batch.TaskContainerSettings
+  - uid: 'azure-batch.EnvironmentSetting[]'
+    name: 'EnvironmentSetting[]'
+    spec.typeScript:
+      - name: EnvironmentSetting
+        fullName: EnvironmentSetting
+        uid: azure-batch.EnvironmentSetting
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.OutputFile[]'
+    name: 'OutputFile[]'
+    spec.typeScript:
+      - name: OutputFile
+        fullName: OutputFile
+        uid: azure-batch.OutputFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.ResourceFile[]'
+    name: 'ResourceFile[]'
+    spec.typeScript:
+      - name: ResourceFile
+        fullName: ResourceFile
+        uid: azure-batch.ResourceFile
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.UserIdentity
+    name: UserIdentity
+    spec.typeScript:
+      - name: UserIdentity
+        fullName: UserIdentity
+        uid: azure-batch.UserIdentity

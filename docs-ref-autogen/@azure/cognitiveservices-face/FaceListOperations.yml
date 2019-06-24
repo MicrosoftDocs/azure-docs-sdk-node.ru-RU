@@ -32,7 +32,7 @@ items:
     langs:
       - typeScript
     type: class
-    summary: '<span data-ttu-id="7a076-101">Класс, представляющий FaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="7a076-101">Class representing a FaceListOperations.</span></span>'
+    summary: '<span data-ttu-id="f3c01-101">Класс, представляющий FaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="f3c01-101">Class representing a FaceListOperations.</span></span>'
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.FaceListOperations.addFaceFromStream_2'
     name: 'addFaceFromStream(string, msRest.HttpRequestBody, FaceListAddFaceFromStreamOptionalParams, ServiceCallback<PersistedFace>)'
@@ -47,20 +47,20 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-102">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-102">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-102">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-102">Id referencing a particular face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="7a076-103">Поток данных изображения.</span><span class="sxs-lookup"><span data-stu-id="7a076-103">An image stream.</span></span>
+          description: <span data-ttu-id="f3c01-103">Поток данных изображения.</span><span class="sxs-lookup"><span data-stu-id="f3c01-103">An image stream.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListAddFaceFromStreamOptionalParams'
-          description: <span data-ttu-id="7a076-104">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="7a076-104">The optional parameters</span></span>
+          description: <span data-ttu-id="f3c01-104">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="f3c01-104">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="7a076-105">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-105">The callback</span></span>
+            <span data-ttu-id="f3c01-105">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-105">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListAddFaceFromStreamResponse>
@@ -72,19 +72,32 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="7a076-106">Добавьте фрагмент в список лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-106">Add a face to a face list.</span></span> <span data-ttu-id="7a076-107">Входной лиц указываются в виде изображения с прямоугольником targetFace.</span><span class="sxs-lookup"><span data-stu-id="7a076-107">The input face is specified as an image with a targetFace rectangle.</span></span>
-      <span data-ttu-id="7a076-108">Возвращает persistedFaceId, представляющий добавленный лиц и persistedFaceId не истекает.</span><span class="sxs-lookup"><span data-stu-id="7a076-108">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+      <span data-ttu-id="f3c01-106">Добавьте фрагмент списка указанного лиц, не более 1000 лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-106">Add a face to a specified face list, up to 1,000 faces.</span></span>
+      <br /> <span data-ttu-id="f3c01-107">Для работы с изображением содержит несколько лиц, входной лиц можно указать в качестве образа с прямоугольником targetFace.</span><span class="sxs-lookup"><span data-stu-id="f3c01-107">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="f3c01-108">Он возвращает persistedFaceId, представляющий добавленный лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-108">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="f3c01-109">Изображение не будут сохранены.</span><span class="sxs-lookup"><span data-stu-id="f3c01-109">No image will be stored.</span></span> <span data-ttu-id="f3c01-110">Только компонент извлеченные лиц, которые будут храниться на сервере, пока не [FaceList - удалить лиц](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) или [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) вызывается.</span><span class="sxs-lookup"><span data-stu-id="f3c01-110">Only the extracted face feature will be stored on server until [FaceList - Delete Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) or [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) is called.</span></span>
+      <br /> <span data-ttu-id="f3c01-111">Примечание persistedFaceId отличается от созданных faceId [лиц — обнаруживать](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="f3c01-111">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="f3c01-112">Более высоким качеством изображения лиц означает, что лучше обнаружения и точности распознавания.</span><span class="sxs-lookup"><span data-stu-id="f3c01-112">Higher face image quality means better detection and recognition precision.</span></span> <span data-ttu-id="f3c01-113">Попробуйте высокого качества лиц: в анфас, clear и лиц размер составляет 200 x 200 пикселей (100 пикселей между глаза) или больше.</span><span class="sxs-lookup"><span data-stu-id="f3c01-113">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="f3c01-114">Поддерживаются JPEG, PNG, GIF (первый кадр) и формат BMP.</span><span class="sxs-lookup"><span data-stu-id="f3c01-114">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="f3c01-115">Допустимый размер файла — 6 МБ из 1 КБ.</span><span class="sxs-lookup"><span data-stu-id="f3c01-115">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="f3c01-116">прямоугольник «targetFace» должен содержать одной грани.</span><span class="sxs-lookup"><span data-stu-id="f3c01-116">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="f3c01-117">Ноль или несколько лиц будет рассматриваться как ошибка.</span><span class="sxs-lookup"><span data-stu-id="f3c01-117">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="f3c01-118">Если предоставленный «targetFace» прямоугольник не возвращен из [лиц — обнаруживать](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), нет никакой гарантии, для обнаружения и успешно добавить начертание шрифта.</span><span class="sxs-lookup"><span data-stu-id="f3c01-118">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="f3c01-119">За пределы размера обнаруживаемых лиц (36 x 36-4096 x 4096 пикселей) больших occlusions головы или больших приведет к ошибкам.</span><span class="sxs-lookup"><span data-stu-id="f3c01-119">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="f3c01-120">Добавление или удаление лиц с тем же список лиц обрабатываются последовательно и с разных лиц списки являются в параллельном режиме.</span><span class="sxs-lookup"><span data-stu-id="f3c01-120">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>
+      * <span data-ttu-id="f3c01-121">Размер минимальное обнаруживаемых лиц — 36 x 36 пикселей изображения не больше 1920 x 1080 пикселей.</span><span class="sxs-lookup"><span data-stu-id="f3c01-121">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="f3c01-122">Изображения с размерами, выше, чем 1920 x 1080 пикселей понадобится пропорционально большего размера минимальное лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-122">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="f3c01-123">Можно указать значения различных «detectionModel».</span><span class="sxs-lookup"><span data-stu-id="f3c01-123">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="f3c01-124">Использовать и сравнения моделей обнаружения см. в статье [способы указания модели обнаружения](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="f3c01-124">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="f3c01-125">Модель</span><span class="sxs-lookup"><span data-stu-id="f3c01-125">Model</span></span> | <span data-ttu-id="f3c01-126">Рекомендуемое использование-case(s)</span><span class="sxs-lookup"><span data-stu-id="f3c01-126">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="f3c01-127">«detection_01»:</span><span class="sxs-lookup"><span data-stu-id="f3c01-127">'detection_01':</span></span> | <span data-ttu-id="f3c01-128">В модели обнаружения по умолчанию для [FaceList - Добавление</span><span class="sxs-lookup"><span data-stu-id="f3c01-128">The default detection model for [FaceList - Add</span></span>
+      <span data-ttu-id="f3c01-129">Face](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f30395250).</span><span class="sxs-lookup"><span data-stu-id="f3c01-129">Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250).</span></span> <span data-ttu-id="f3c01-130">Рекомендуем использовать для практически обнаружение лиц в анфас.</span><span class="sxs-lookup"><span data-stu-id="f3c01-130">Recommend for near frontal face detection.</span></span> <span data-ttu-id="f3c01-131">Для сценариев с чрезвычайно большого угол (головы) лица, перекрыто лиц или неправильное изображение ориентации лиц в таких случаях могут не обнаруживаться.</span><span class="sxs-lookup"><span data-stu-id="f3c01-131">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="f3c01-132">| | «detection_02»: | Модель обнаружения, выпущенная в 2019 может с повышенную точность, особенно для небольших, сторона и становится нечетким лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-132">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromStream(faceListId: string, image: msRest.HttpRequestBody, options?: Models.FaceListAddFaceFromStreamOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-109">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-109">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-133">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-133">Id referencing a particular face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="7a076-110">Поток данных изображения.</span><span class="sxs-lookup"><span data-stu-id="7a076-110">An image stream.</span></span>
+          description: <span data-ttu-id="f3c01-134">Поток данных изображения.</span><span class="sxs-lookup"><span data-stu-id="f3c01-134">An image stream.</span></span>
         - id: options
           type:
             - Models.FaceListAddFaceFromStreamOptionalParams
@@ -107,16 +120,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-111">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-111">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-135">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-135">Id referencing a particular face list.</span></span>
         - id: image
           type:
             - msRest.HttpRequestBody
-          description: <span data-ttu-id="7a076-112">Поток данных изображения.</span><span class="sxs-lookup"><span data-stu-id="7a076-112">An image stream.</span></span>
+          description: <span data-ttu-id="f3c01-136">Поток данных изображения.</span><span class="sxs-lookup"><span data-stu-id="f3c01-136">An image stream.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="7a076-113">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-113">The callback</span></span>
+            <span data-ttu-id="f3c01-137">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-137">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListAddFaceFromStreamResponse>
@@ -134,20 +147,20 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-114">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-114">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-138">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-138">Id referencing a particular face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="7a076-115">Публично доступную URL-адрес изображения</span><span class="sxs-lookup"><span data-stu-id="7a076-115">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="f3c01-139">Публично доступную URL-адрес изображения</span><span class="sxs-lookup"><span data-stu-id="f3c01-139">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListAddFaceFromUrlOptionalParams'
-          description: <span data-ttu-id="7a076-116">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="7a076-116">The optional parameters</span></span>
+          description: <span data-ttu-id="f3c01-140">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="f3c01-140">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="7a076-117">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-117">The callback</span></span>
+            <span data-ttu-id="f3c01-141">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-141">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListAddFaceFromUrlResponse>
@@ -159,19 +172,32 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="7a076-118">Добавьте фрагмент в список лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-118">Add a face to a face list.</span></span> <span data-ttu-id="7a076-119">Входной лиц указываются в виде изображения с прямоугольником targetFace.</span><span class="sxs-lookup"><span data-stu-id="7a076-119">The input face is specified as an image with a targetFace rectangle.</span></span>
-      <span data-ttu-id="7a076-120">Возвращает persistedFaceId, представляющий добавленный лиц и persistedFaceId не истекает.</span><span class="sxs-lookup"><span data-stu-id="7a076-120">It returns a persistedFaceId representing the added face, and persistedFaceId will not expire.</span></span>
+      <span data-ttu-id="f3c01-142">Добавьте фрагмент списка указанного лиц, не более 1000 лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-142">Add a face to a specified face list, up to 1,000 faces.</span></span>
+      <br /> <span data-ttu-id="f3c01-143">Для работы с изображением содержит несколько лиц, входной лиц можно указать в качестве образа с прямоугольником targetFace.</span><span class="sxs-lookup"><span data-stu-id="f3c01-143">To deal with an image contains multiple faces, input face can be specified as an image with a targetFace rectangle.</span></span> <span data-ttu-id="f3c01-144">Он возвращает persistedFaceId, представляющий добавленный лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-144">It returns a persistedFaceId representing the added face.</span></span> <span data-ttu-id="f3c01-145">Изображение не будут сохранены.</span><span class="sxs-lookup"><span data-stu-id="f3c01-145">No image will be stored.</span></span> <span data-ttu-id="f3c01-146">Только компонент извлеченные лиц, которые будут храниться на сервере, пока не [FaceList - удалить лиц](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) или [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) вызывается.</span><span class="sxs-lookup"><span data-stu-id="f3c01-146">Only the extracted face feature will be stored on server until [FaceList - Delete Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395251) or [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) is called.</span></span>
+      <br /> <span data-ttu-id="f3c01-147">Примечание persistedFaceId отличается от созданных faceId [лиц — обнаруживать](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span><span class="sxs-lookup"><span data-stu-id="f3c01-147">Note persistedFaceId is different from faceId generated by [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).</span></span>
+      * <span data-ttu-id="f3c01-148">Более высоким качеством изображения лиц означает, что лучше обнаружения и точности распознавания.</span><span class="sxs-lookup"><span data-stu-id="f3c01-148">Higher face image quality means better detection and recognition precision.</span></span> <span data-ttu-id="f3c01-149">Попробуйте высокого качества лиц: в анфас, clear и лиц размер составляет 200 x 200 пикселей (100 пикселей между глаза) или больше.</span><span class="sxs-lookup"><span data-stu-id="f3c01-149">Please consider high-quality faces: frontal, clear, and face size is 200x200 pixels (100 pixels between eyes) or bigger.</span></span>
+      * <span data-ttu-id="f3c01-150">Поддерживаются JPEG, PNG, GIF (первый кадр) и формат BMP.</span><span class="sxs-lookup"><span data-stu-id="f3c01-150">JPEG, PNG, GIF (the first frame), and BMP format are supported.</span></span> <span data-ttu-id="f3c01-151">Допустимый размер файла — 6 МБ из 1 КБ.</span><span class="sxs-lookup"><span data-stu-id="f3c01-151">The allowed image file size is from 1KB to 6MB.</span></span>
+      * <span data-ttu-id="f3c01-152">прямоугольник «targetFace» должен содержать одной грани.</span><span class="sxs-lookup"><span data-stu-id="f3c01-152">"targetFace" rectangle should contain one face.</span></span> <span data-ttu-id="f3c01-153">Ноль или несколько лиц будет рассматриваться как ошибка.</span><span class="sxs-lookup"><span data-stu-id="f3c01-153">Zero or multiple faces will be regarded as an error.</span></span> <span data-ttu-id="f3c01-154">Если предоставленный «targetFace» прямоугольник не возвращен из [лиц — обнаруживать](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), нет никакой гарантии, для обнаружения и успешно добавить начертание шрифта.</span><span class="sxs-lookup"><span data-stu-id="f3c01-154">If the provided "targetFace" rectangle is not returned from [Face - Detect](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236), there’s no guarantee to detect and add the face successfully.</span></span>
+      * <span data-ttu-id="f3c01-155">За пределы размера обнаруживаемых лиц (36 x 36-4096 x 4096 пикселей) больших occlusions головы или больших приведет к ошибкам.</span><span class="sxs-lookup"><span data-stu-id="f3c01-155">Out of detectable face size (36x36 - 4096x4096 pixels), large head-pose, or large occlusions will cause failures.</span></span>
+      * <span data-ttu-id="f3c01-156">Добавление или удаление лиц с тем же список лиц обрабатываются последовательно и с разных лиц списки являются в параллельном режиме.</span><span class="sxs-lookup"><span data-stu-id="f3c01-156">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>
+      * <span data-ttu-id="f3c01-157">Размер минимальное обнаруживаемых лиц — 36 x 36 пикселей изображения не больше 1920 x 1080 пикселей.</span><span class="sxs-lookup"><span data-stu-id="f3c01-157">The minimum detectable face size is 36x36 pixels in an image no larger than 1920x1080 pixels.</span></span>
+      <span data-ttu-id="f3c01-158">Изображения с размерами, выше, чем 1920 x 1080 пикселей понадобится пропорционально большего размера минимальное лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-158">Images with dimensions higher than 1920x1080 pixels will need a proportionally larger minimum face size.</span></span>
+      * <span data-ttu-id="f3c01-159">Можно указать значения различных «detectionModel».</span><span class="sxs-lookup"><span data-stu-id="f3c01-159">Different 'detectionModel' values can be provided.</span></span> <span data-ttu-id="f3c01-160">Использовать и сравнения моделей обнаружения см. в статье [способы указания модели обнаружения](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span><span class="sxs-lookup"><span data-stu-id="f3c01-160">To use and compare different detection models, please refer to [How to specify a detection model](https://docs.microsoft.com/en-us/azure/cognitive-services/face/face-api-how-to-topics/specify-detection-model)</span></span>
+      | <span data-ttu-id="f3c01-161">Модель</span><span class="sxs-lookup"><span data-stu-id="f3c01-161">Model</span></span> | <span data-ttu-id="f3c01-162">Рекомендуемое использование-case(s)</span><span class="sxs-lookup"><span data-stu-id="f3c01-162">Recommended use-case(s)</span></span> |
+      | ---------- | -------- |
+      | <span data-ttu-id="f3c01-163">«detection_01»:</span><span class="sxs-lookup"><span data-stu-id="f3c01-163">'detection_01':</span></span> | <span data-ttu-id="f3c01-164">В модели обнаружения по умолчанию для [FaceList - Добавление</span><span class="sxs-lookup"><span data-stu-id="f3c01-164">The default detection model for [FaceList - Add</span></span>
+      <span data-ttu-id="f3c01-165">Face](/docs/Services/563879b61984550e40cbbe8d/Operations/563879b61984550f30395250).</span><span class="sxs-lookup"><span data-stu-id="f3c01-165">Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250).</span></span> <span data-ttu-id="f3c01-166">Рекомендуем использовать для практически обнаружение лиц в анфас.</span><span class="sxs-lookup"><span data-stu-id="f3c01-166">Recommend for near frontal face detection.</span></span> <span data-ttu-id="f3c01-167">Для сценариев с чрезвычайно большого угол (головы) лица, перекрыто лиц или неправильное изображение ориентации лиц в таких случаях могут не обнаруживаться.</span><span class="sxs-lookup"><span data-stu-id="f3c01-167">For scenarios with exceptionally large angle (head-pose) faces, occluded faces or wrong image orientation, the faces in such cases may not be detected.</span></span> <span data-ttu-id="f3c01-168">| | «detection_02»: | Модель обнаружения, выпущенная в 2019 может с повышенную точность, особенно для небольших, сторона и становится нечетким лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-168">| | 'detection_02': | Detection model released in 2019 May with improved accuracy especially on small, side and blurry faces.</span></span> |
     syntax:
       content: 'function addFaceFromUrl(faceListId: string, url: string, options?: Models.FaceListAddFaceFromUrlOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-121">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-121">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-169">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-169">Id referencing a particular face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="7a076-122">Публично доступную URL-адрес изображения</span><span class="sxs-lookup"><span data-stu-id="7a076-122">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="f3c01-170">Публично доступную URL-адрес изображения</span><span class="sxs-lookup"><span data-stu-id="f3c01-170">Publicly reachable URL of an image</span></span>
         - id: options
           type:
             - Models.FaceListAddFaceFromUrlOptionalParams
@@ -194,16 +220,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-123">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-123">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-171">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-171">Id referencing a particular face list.</span></span>
         - id: url
           type:
             - string
-          description: <span data-ttu-id="7a076-124">Публично доступную URL-адрес изображения</span><span class="sxs-lookup"><span data-stu-id="7a076-124">Publicly reachable URL of an image</span></span>
+          description: <span data-ttu-id="f3c01-172">Публично доступную URL-адрес изображения</span><span class="sxs-lookup"><span data-stu-id="f3c01-172">Publicly reachable URL of an image</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.PersistedFace>
           description: |
-            <span data-ttu-id="7a076-125">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-125">The callback</span></span>
+            <span data-ttu-id="f3c01-173">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-173">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListAddFaceFromUrlResponse>
@@ -221,16 +247,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-126">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-126">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-174">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-174">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListCreateOptionalParams'
-          description: <span data-ttu-id="7a076-127">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="7a076-127">The optional parameters</span></span>
+          description: <span data-ttu-id="f3c01-175">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="f3c01-175">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="7a076-128">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-128">The callback</span></span>
+            <span data-ttu-id="f3c01-176">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-176">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -241,21 +267,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: |-
-      <span data-ttu-id="7a076-129">Создание списка пустой лиц с пользовательской faceListId, именем, необязательно userData и recognitionModel.</span><span class="sxs-lookup"><span data-stu-id="7a076-129">Create an empty face list with user-specified faceListId, name, an optional userData and recognitionModel.</span></span> <span data-ttu-id="7a076-130">До 64 лиц списки разрешены в одной подписке.</span><span class="sxs-lookup"><span data-stu-id="7a076-130">Up to 64 face lists are allowed in one subscription.</span></span>
-      <br /> <span data-ttu-id="7a076-131">Список лиц список лиц, до 1000 лиц и используемые [лиц - поиск похожих](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class="sxs-lookup"><span data-stu-id="7a076-131">Face list is a list of faces, up to 1,000 faces, and used by [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>
-      <br /> <span data-ttu-id="7a076-132">После создания, пользователь должен использовать [FaceList — добавление распознавания лиц](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) для импорта фрагменты.</span><span class="sxs-lookup"><span data-stu-id="7a076-132">After creation, user should use [FaceList - Add Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) to import the faces.</span></span> <span data-ttu-id="7a076-133">Фрагменты хранятся на сервере, пока не [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) вызывается.</span><span class="sxs-lookup"><span data-stu-id="7a076-133">Faces are stored on server until [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) is called.</span></span>
-      <br /> <span data-ttu-id="7a076-134">Найти подобный используется для сценария, например для поиска по принципу знаменитостей лиц, аналогичные лиц фильтрации, или как света способом сталкиваются идентификации.</span><span class="sxs-lookup"><span data-stu-id="7a076-134">Find Similar is used for scenario like finding celebrity-like faces, similar face filtering, or as a light way face identification.</span></span> <span data-ttu-id="7a076-135">Но если фактическое использование для идентификации пользователя, используйте [каждой группе людей](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
-      [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) и [сталкиваются - Идентификация](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class="sxs-lookup"><span data-stu-id="7a076-135">But if the actual use is to identify person, please use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /
-      [LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) and [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>
-      <br /> <span data-ttu-id="7a076-136">Попробуйте [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) при велико число лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-136">Please consider [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) when the face number is large.</span></span> <span data-ttu-id="7a076-137">Он может поддерживать до 1 000 000 лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-137">It can support up to 1,000,000 faces.</span></span> <span data-ttu-id="7a076-138">«recognitionModel» должно быть указано для связи с данным списком лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-138">'recognitionModel' should be specified to associate with this face list.</span></span> <span data-ttu-id="7a076-139">Значение по умолчанию для «recognitionModel» — «recognition_01», если последней модели необходимо явно указать модели, необходимые в этом параметре.</span><span class="sxs-lookup"><span data-stu-id="7a076-139">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id="7a076-140">Новые лица, которые добавляются в существующий список лиц будет использовать модель распознавания, которая уже связана с коллекцией.</span><span class="sxs-lookup"><span data-stu-id="7a076-140">New faces that are added to an existing face list will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id="7a076-141">Невозможно обновить существующие функции распознавания лиц в список лиц к функциям, извлеченным в ходе другая версия модель распознавания.</span><span class="sxs-lookup"><span data-stu-id="7a076-141">Existing face features in a face list can't be updated to features extracted by another version of recognition model.</span></span>
+    summary: "<span data-ttu-id=\"f3c01-177\">Создание списка пустой лиц с пользовательской faceListId, именем, необязательно userData и recognitionModel.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-177\">Create an empty face list with user-specified faceListId, name, an optional userData and recognitionModel.</span></span> <span data-ttu-id=\"f3c01-178\">До 64 лиц списки разрешены в одной подписке.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-178\">Up to 64 face lists are allowed in one subscription.</span></span>\n<br /> <span data-ttu-id=\"f3c01-179\">Список лиц список лиц, до 1000 лиц и используемые [лиц - поиск похожих](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-179\">Face list is a list of faces, up to 1,000 faces, and used by [Face - Find Similar](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395237).</span></span>\n<br /> <span data-ttu-id=\"f3c01-180\">После создания, пользователь должен использовать [FaceList — добавление распознавания лиц](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) для импорта фрагменты.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-180\">After creation, user should use [FaceList - Add Face](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395250) to import the faces.</span></span> <span data-ttu-id=\"f3c01-181\">Изображение не будут сохранены.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-181\">No image will be stored.</span></span> <span data-ttu-id=\"f3c01-182\">Только компоненты извлеченные лиц хранятся на сервере, пока не [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) вызывается.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-182\">Only the extracted face features are stored on server until [FaceList - Delete](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524f) is called.</span></span>\n<br /> <span data-ttu-id=\"f3c01-183\">Найти подобный используется для сценария, например для поиска по принципу знаменитостей лиц, аналогичные лиц фильтрации, или как света способом сталкиваются идентификации.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-183\">Find Similar is used for scenario like finding celebrity-like faces, similar face filtering, or as a light way face identification.</span></span> <span data-ttu-id=\"f3c01-184\">Но если фактическое использование для идентификации пользователя, используйте [каждой группе людей](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) и [сталкиваются - Идентификация](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-184\">But if the actual use is to identify person, please use [PersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395244) /\n[LargePersonGroup](/docs/services/563879b61984550e40cbbe8d/operations/599acdee6ac60f11b48b5a9d) and [Face - Identify](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239).</span></span>\n<br /> <span data-ttu-id=\"f3c01-185\">Попробуйте [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) при велико число лиц.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-185\">Please consider [LargeFaceList](/docs/services/563879b61984550e40cbbe8d/operations/5a157b68d2de3616c086f2cc) when the face number is large.</span></span> <span data-ttu-id=\"f3c01-186\">Он может поддерживать до 1 000 000 лиц.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-186\">It can support up to 1,000,000 faces.</span></span>\n<br /><span data-ttu-id=\"f3c01-187\">«recognitionModel» должно быть указано для связи с данным списком лиц.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-187\">'recognitionModel' should be specified to associate with this face list.</span></span> <span data-ttu-id=\"f3c01-188\">Значение по умолчанию для «recognitionModel» — «recognition_01», если последней модели необходимо явно указать модели, необходимые в этом параметре.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-188\">The default value for 'recognitionModel' is 'recognition_01', if the latest model needed, please explicitly specify the model you need in this parameter.</span></span> <span data-ttu-id=\"f3c01-189\">Новые лица, которые добавляются в существующий список лиц будет использовать модель распознавания, которая уже связана с коллекцией.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-189\">New faces that are added to an existing face list will use the recognition model that's already associated with the collection.</span></span> <span data-ttu-id=\"f3c01-190\">Невозможно обновить существующие функции распознавания лиц в список лиц к функциям, извлеченным в ходе другая версия модель распознавания.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-190\">Existing face features in a face list can't be updated to features extracted by another version of recognition model.</span></span>\n* <span data-ttu-id=\"f3c01-191\">«recognition_01»: Стандартная модель распознавания [FaceList - создание](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b).</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-191\">'recognition_01': The default recognition model for [FaceList- Create](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524b).</span></span> <span data-ttu-id=\"f3c01-192\">Все эти списки лиц, созданных до марта 2019 связанные с этой моделью распознавания.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-192\">All those face lists created before 2019 March are bonded with this recognition model.</span></span>\n* <span data-ttu-id=\"f3c01-193\">«recognition_02»: Модель распознавания, выпущенную в марте 2019 г.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-193\">'recognition_02': Recognition model released in 2019 March.</span></span> <span data-ttu-id=\"f3c01-194\">«recognition_02» рекомендуется, так как его общая точность улучшена по сравнению с «recognition_01».</span><span class=\"sxs-lookup\"><span data-stu-id=\"f3c01-194\">'recognition_02' is recommended since its\_overall accuracy is improved compared with 'recognition_01'.</span></span>"
     syntax:
       content: 'function create(faceListId: string, options?: Models.FaceListCreateOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-142">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-142">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-195">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-195">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - Models.FaceListCreateOptionalParams
@@ -278,12 +297,12 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-143">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-143">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-196">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-196">Id referencing a particular face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="7a076-144">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-144">The callback</span></span>
+            <span data-ttu-id="f3c01-197">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-197">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -295,19 +314,19 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="7a076-145">Удаление существующего лиц из списка лиц (при наличии persistedFaceId и faceListId).</span><span class="sxs-lookup"><span data-stu-id="7a076-145">Delete an existing face from a face list (given by a persistedFaceId and a faceListId).</span></span>
-      <span data-ttu-id="7a076-146">Также будут удалены постоянный образ, относящиеся к поверхности.</span><span class="sxs-lookup"><span data-stu-id="7a076-146">Persisted image related to the face will also be deleted.</span></span>
+      <span data-ttu-id="f3c01-198">Удалите фрагмент из списка лиц, указанный faceListId и persistedFaceId.</span><span class="sxs-lookup"><span data-stu-id="f3c01-198">Delete a face from a face list by specified faceListId and persistedFaceId.</span></span>
+      <br /> <span data-ttu-id="f3c01-199">Добавление или удаление лиц с тем же список лиц обрабатываются последовательно и с разных лиц списки являются в параллельном режиме.</span><span class="sxs-lookup"><span data-stu-id="f3c01-199">Adding/deleting faces to/from a same face list are processed sequentially and to/from different face lists are in parallel.</span></span>
     syntax:
       content: 'function deleteFace(faceListId: string, persistedFaceId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-147">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-147">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-200">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-200">Id referencing a particular face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="7a076-148">Идентификатор ссылки на определенный persistedFaceId существующей поверхности.</span><span class="sxs-lookup"><span data-stu-id="7a076-148">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3c01-201">Идентификатор ссылки на определенный persistedFaceId существующей поверхности.</span><span class="sxs-lookup"><span data-stu-id="f3c01-201">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -330,20 +349,20 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-149">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-149">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-202">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-202">Id referencing a particular face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="7a076-150">Идентификатор ссылки на определенный persistedFaceId существующей поверхности.</span><span class="sxs-lookup"><span data-stu-id="7a076-150">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3c01-203">Идентификатор ссылки на определенный persistedFaceId существующей поверхности.</span><span class="sxs-lookup"><span data-stu-id="f3c01-203">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7a076-151">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="7a076-151">The optional parameters</span></span>
+          description: <span data-ttu-id="f3c01-204">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="f3c01-204">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="7a076-152">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-152">The callback</span></span>
+            <span data-ttu-id="f3c01-205">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-205">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -361,16 +380,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-153">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-153">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-206">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-206">Id referencing a particular face list.</span></span>
         - id: persistedFaceId
           type:
             - string
-          description: <span data-ttu-id="7a076-154">Идентификатор ссылки на определенный persistedFaceId существующей поверхности.</span><span class="sxs-lookup"><span data-stu-id="7a076-154">Id referencing a particular persistedFaceId of an existing face.</span></span>
+          description: <span data-ttu-id="f3c01-207">Идентификатор ссылки на определенный persistedFaceId существующей поверхности.</span><span class="sxs-lookup"><span data-stu-id="f3c01-207">Id referencing a particular persistedFaceId of an existing face.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="7a076-155">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-155">The callback</span></span>
+            <span data-ttu-id="f3c01-208">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-208">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -381,14 +400,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="7a076-156">Удалите существующий список лиц в соответствии с faceListId.</span><span class="sxs-lookup"><span data-stu-id="7a076-156">Delete an existing face list according to faceListId.</span></span> <span data-ttu-id="7a076-157">Сохраненных лиц, которые также будут удалены изображений в списке лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-157">Persisted face images in the face list will also be deleted.</span></span>'
+    summary: <span data-ttu-id="f3c01-209">Удаление лиц указанного списка.</span><span class="sxs-lookup"><span data-stu-id="f3c01-209">Delete a specified face list.</span></span>
     syntax:
       content: 'function deleteMethod(faceListId: string, options?: msRest.RequestOptionsBase)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-158">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-158">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-210">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-210">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - msRest.RequestOptionsBase
@@ -411,16 +430,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-159">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-159">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-211">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-211">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - RequestOptionsBase
-          description: <span data-ttu-id="7a076-160">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="7a076-160">The optional parameters</span></span>
+          description: <span data-ttu-id="f3c01-212">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="f3c01-212">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="7a076-161">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-161">The callback</span></span>
+            <span data-ttu-id="f3c01-213">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-213">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -438,12 +457,12 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-162">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-162">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-214">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-214">Id referencing a particular face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="7a076-163">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-163">The callback</span></span>
+            <span data-ttu-id="f3c01-215">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-215">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -454,7 +473,7 @@ items:
     type: constructor
     langs:
       - typeScript
-    summary: <span data-ttu-id="7a076-164">Создайте FaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="7a076-164">Create a FaceListOperations.</span></span>
+    summary: <span data-ttu-id="f3c01-216">Создайте FaceListOperations.</span><span class="sxs-lookup"><span data-stu-id="f3c01-216">Create a FaceListOperations.</span></span>
     syntax:
       content: 'new FaceListOperations(client: FaceClientContext)'
       parameters:
@@ -462,7 +481,7 @@ items:
           type:
             - '@azure/cognitiveservices-face.FaceClientContext'
           description: |
-            <span data-ttu-id="7a076-165">Ссылка на клиента службы.</span><span class="sxs-lookup"><span data-stu-id="7a076-165">Reference to the service client.</span></span>
+            <span data-ttu-id="f3c01-217">Ссылка на клиента службы.</span><span class="sxs-lookup"><span data-stu-id="f3c01-217">Reference to the service client.</span></span>
     package: '@azure/cognitiveservices-face'
   - uid: '@azure/cognitiveservices-face.FaceListOperations.get_2'
     name: 'get(string, FaceListGetOptionalParams, ServiceCallback<FaceList>)'
@@ -477,16 +496,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-166">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-166">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-218">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-218">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListGetOptionalParams'
-          description: <span data-ttu-id="7a076-167">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="7a076-167">The optional parameters</span></span>
+          description: <span data-ttu-id="f3c01-219">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="f3c01-219">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.FaceList>
           description: |
-            <span data-ttu-id="7a076-168">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-168">The callback</span></span>
+            <span data-ttu-id="f3c01-220">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-220">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListGetResponse>
@@ -497,14 +516,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="7a076-169">Получить список лиц faceListId, имя, userData, recognitionModel и лиц, в списке лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-169">Retrieve a face list’s faceListId, name, userData, recognitionModel and faces in the face list.</span></span>'
+    summary: '<span data-ttu-id="f3c01-221">Получить список лиц faceListId, имя, userData, recognitionModel и лиц, в списке лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-221">Retrieve a face list’s faceListId, name, userData, recognitionModel and faces in the face list.</span></span>'
     syntax:
       content: 'function get(faceListId: string, options?: Models.FaceListGetOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-170">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-170">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-222">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-222">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - Models.FaceListGetOptionalParams
@@ -527,12 +546,12 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-171">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-171">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-223">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-223">Id referencing a particular face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<@azure/cognitiveservices-face.FaceList>
           description: |
-            <span data-ttu-id="7a076-172">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-172">The callback</span></span>
+            <span data-ttu-id="f3c01-224">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-224">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListGetResponse>
@@ -550,12 +569,12 @@ items:
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListListOptionalParams'
-          description: <span data-ttu-id="7a076-173">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="7a076-173">The optional parameters</span></span>
+          description: <span data-ttu-id="f3c01-225">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="f3c01-225">The optional parameters</span></span>
         - id: callback
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.FaceList[]>'
           description: |
-            <span data-ttu-id="7a076-174">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-174">The callback</span></span>
+            <span data-ttu-id="f3c01-226">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-226">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListListResponse>
@@ -567,8 +586,8 @@ items:
     langs:
       - typeScript
     summary: |-
-      <span data-ttu-id="7a076-175">Список faceListId, имя, userData и recognitionModel списки лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-175">List face lists’ faceListId, name, userData and recognitionModel.</span></span> <br />
-      <span data-ttu-id="7a076-176">Для получения сведений лиц внутри используйте faceList [FaceList - Get](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524c)</span><span class="sxs-lookup"><span data-stu-id="7a076-176">To get face information inside faceList use [FaceList - Get](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524c)</span></span>
+      <span data-ttu-id="f3c01-227">Список faceListId, имя, userData и recognitionModel списки лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-227">List face lists’ faceListId, name, userData and recognitionModel.</span></span> <br />
+      <span data-ttu-id="f3c01-228">Для получения сведений лиц внутри используйте faceList [FaceList - Get](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524c)</span><span class="sxs-lookup"><span data-stu-id="f3c01-228">To get face information inside faceList use [FaceList - Get](/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f3039524c)</span></span>
     syntax:
       content: 'function list(options?: Models.FaceListListOptionalParams)'
       parameters:
@@ -595,7 +614,7 @@ items:
           type:
             - 'ServiceCallback<@azure/cognitiveservices-face.FaceList[]>'
           description: |
-            <span data-ttu-id="7a076-177">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-177">The callback</span></span>
+            <span data-ttu-id="f3c01-229">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-229">The callback</span></span>
       return:
         type:
           - Promise<Models.FaceListListResponse>
@@ -613,16 +632,16 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-178">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-178">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-230">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-230">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - '@azure/cognitiveservices-face.FaceListUpdateOptionalParams'
-          description: <span data-ttu-id="7a076-179">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="7a076-179">The optional parameters</span></span>
+          description: <span data-ttu-id="f3c01-231">Возможно использование необязательных параметров</span><span class="sxs-lookup"><span data-stu-id="f3c01-231">The optional parameters</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="7a076-180">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-180">The callback</span></span>
+            <span data-ttu-id="f3c01-232">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-232">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>
@@ -633,14 +652,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="7a076-181">Обновите сведения о списке лиц.</span><span class="sxs-lookup"><span data-stu-id="7a076-181">Update information of a face list.</span></span>
+    summary: <span data-ttu-id="f3c01-233">Обновите сведения о списке лиц.</span><span class="sxs-lookup"><span data-stu-id="f3c01-233">Update information of a face list.</span></span>
     syntax:
       content: 'function update(faceListId: string, options?: Models.FaceListUpdateOptionalParams)'
       parameters:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-182">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-182">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-234">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-234">Id referencing a particular face list.</span></span>
         - id: options
           type:
             - Models.FaceListUpdateOptionalParams
@@ -663,12 +682,12 @@ items:
         - id: faceListId
           type:
             - string
-          description: <span data-ttu-id="7a076-183">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="7a076-183">Id referencing a particular face list.</span></span>
+          description: <span data-ttu-id="f3c01-235">Идентификатор ссылки на список конкретного лица.</span><span class="sxs-lookup"><span data-stu-id="f3c01-235">Id referencing a particular face list.</span></span>
         - id: callback
           type:
             - ServiceCallback<void>
           description: |
-            <span data-ttu-id="7a076-184">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="7a076-184">The callback</span></span>
+            <span data-ttu-id="f3c01-236">Функция обратного вызова</span><span class="sxs-lookup"><span data-stu-id="f3c01-236">The callback</span></span>
       return:
         type:
           - Promise<RestResponse>

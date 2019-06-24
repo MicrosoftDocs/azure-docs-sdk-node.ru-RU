@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.Schedule
+    name: Schedule
+    fullName: Schedule
+    children:
+      - azure-batch.Schedule.doNotRunAfter
+      - azure-batch.Schedule.doNotRunUntil
+      - azure-batch.Schedule.recurrenceInterval
+      - azure-batch.Schedule.startWindow
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.Schedule.doNotRunAfter
+    name: doNotRunAfter
+    fullName: doNotRunAfter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fd179-101">Если вы не укажете время doNotRunAfter и создании регулярное расписание задания, расписания задания будет оставаться активным, пока вы явным образом завершить его.</span><span class="sxs-lookup"><span data-stu-id="fd179-101">If you do not specify a doNotRunAfter time, and you are creating a recurring Job Schedule, the Job Schedule will remain active until you explicitly terminate it.</span></span>'
+    optional: true
+    syntax:
+      content: 'doNotRunAfter?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.Schedule.doNotRunUntil
+    name: doNotRunUntil
+    fullName: doNotRunUntil
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fd179-102">Если вы не укажете время doNotRunUntil, расписание становится все готово для создания задания немедленно.</span><span class="sxs-lookup"><span data-stu-id="fd179-102">If you do not specify a doNotRunUntil time, the schedule becomes ready to create Jobs immediately.</span></span>'
+    optional: true
+    syntax:
+      content: 'doNotRunUntil?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.Schedule.recurrenceInterval
+    name: recurrenceInterval
+    fullName: recurrenceInterval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fd179-103">Так как расписание заданий может иметь не более одного активного задания в в любой момент времени, пора создать задание в расписание заданий, когда предыдущее задание еще выполняется, пакетная служба не создаст новое задание, пока не завершится предыдущее.</span><span class="sxs-lookup"><span data-stu-id="fd179-103">Because a Job Schedule can have at most one active Job under it at any given time, if it is time to create a new Job under a Job Schedule, but the previous Job is still running, the Batch service will not create the new Job until the previous Job finishes.</span></span> <span data-ttu-id="fd179-104">Если предыдущее задание не завершается в течение startWindow новый recurrenceInterval, новое задание или не будет выполняться для этого интервала.</span><span class="sxs-lookup"><span data-stu-id="fd179-104">If the previous Job does not finish within the startWindow period of the new recurrenceInterval, then no new Job will be scheduled for that interval.</span></span> <span data-ttu-id="fd179-105">Для повторяющихся заданий обычно необходимо указать jobManagerTask в jobSpecification.</span><span class="sxs-lookup"><span data-stu-id="fd179-105">For recurring Jobs, you should normally specify a jobManagerTask in the jobSpecification.</span></span> <span data-ttu-id="fd179-106">Если вы не используете jobManagerTask, вам потребуется внешний процесс для отслеживания при создании заданий, добавьте задачи для заданий и завершить выполнение заданий, все готово для следующего повторения.</span><span class="sxs-lookup"><span data-stu-id="fd179-106">If you do not use jobManagerTask, you will need an external process to monitor when Jobs are created, add Tasks to the Jobs and terminate the Jobs ready for the next recurrence.</span></span> <span data-ttu-id="fd179-107">По умолчанию используется расписание повторения: создается одно задание, в пределах startWindow через время doNotRunUntil, расписание завершения и сразу же после завершения этого задания.</span><span class="sxs-lookup"><span data-stu-id="fd179-107">The default is that the schedule does not recur: one Job is created, within the startWindow after the doNotRunUntil time, and the schedule is complete as soon as that Job finishes.</span></span> <span data-ttu-id="fd179-108">Минимальное значение — 1 минута.</span><span class="sxs-lookup"><span data-stu-id="fd179-108">The minimum value is 1 minute.</span></span> <span data-ttu-id="fd179-109">Если указать более низкое значение, пакетная служба отклоняет расписание с ошибкой; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="fd179-109">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'recurrenceInterval?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.Schedule.startWindow
+    name: startWindow
+    fullName: startWindow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="fd179-110">Если в течение интервала startWindow не создается задание, затем «возможность» поддерживается. Задания не будут создаваться до следующего повторения расписания.</span><span class="sxs-lookup"><span data-stu-id="fd179-110">If a Job is not created within the startWindow interval, then the ''opportunity'' is lost; no Job will be created until the next recurrence of the schedule.</span></span> <span data-ttu-id="fd179-111">Если расписание повторяется и startWindow, превышающего интервал повторения, затем это эквивалентно startWindow бесконечного, так как задания, срок в один recurrenceInterval не переносится в следующий интервал повторения.</span><span class="sxs-lookup"><span data-stu-id="fd179-111">If the schedule is recurring, and the startWindow is longer than the recurrence interval, then this is equivalent to an infinite startWindow, because the Job that is ''due'' in one recurrenceInterval is not carried forward into the next recurrence interval.</span></span> <span data-ttu-id="fd179-112">Значение по умолчанию бесконечна.</span><span class="sxs-lookup"><span data-stu-id="fd179-112">The default is infinite.</span></span> <span data-ttu-id="fd179-113">Минимальное значение — 1 минута.</span><span class="sxs-lookup"><span data-stu-id="fd179-113">The minimum value is 1 minute.</span></span> <span data-ttu-id="fd179-114">Если указать более низкое значение, пакетная служба отклоняет расписание с ошибкой; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="fd179-114">If you specify a lower value, the Batch service rejects the schedule with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'startWindow?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

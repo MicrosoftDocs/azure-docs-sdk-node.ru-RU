@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.NetworkConfiguration
+    name: NetworkConfiguration
+    fullName: NetworkConfiguration
+    children:
+      - azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+      - azure-batch.NetworkConfiguration.endpointConfiguration
+      - azure-batch.NetworkConfiguration.subnetId
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="1874c-101">Конфигурация сети для пула.</span><span class="sxs-lookup"><span data-stu-id="1874c-101">The network configuration for a Pool.</span></span>
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.dynamicVNetAssignmentScope
+    name: dynamicVNetAssignmentScope
+    fullName: dynamicVNetAssignmentScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1874c-102">Возможные значения: «none», «задания»</span><span class="sxs-lookup"><span data-stu-id="1874c-102">Possible values include: ''none'', ''job''</span></span>'
+    optional: true
+    syntax:
+      content: 'dynamicVNetAssignmentScope?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.endpointConfiguration
+    name: endpointConfiguration
+    fullName: endpointConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="1874c-103">Конфигурация конечных точек пула поддерживается только в пулах со свойством virtualMachineConfiguration.</span><span class="sxs-lookup"><span data-stu-id="1874c-103">Pool endpoint configuration is only supported on Pools with the virtualMachineConfiguration property.</span></span>
+    optional: true
+    syntax:
+      content: 'endpointConfiguration?: PoolEndpointConfiguration'
+      return:
+        type:
+          - azure-batch.PoolEndpointConfiguration
+    package: azure-batch
+  - uid: azure-batch.NetworkConfiguration.subnetId
+    name: subnetId
+    fullName: subnetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1874c-104">Виртуальная сеть должна находиться в том же регионе и подписке, что учетной записи пакетной службы Azure.</span><span class="sxs-lookup"><span data-stu-id="1874c-104">The virtual network must be in the same region and subscription as the Azure Batch Account.</span></span> <span data-ttu-id="1874c-105">Указанной подсети должно быть достаточно свободного IP-адресов, чтобы вместить количество вычислительных узлов в пуле.</span><span class="sxs-lookup"><span data-stu-id="1874c-105">The specified subnet should have enough free IP addresses to accommodate the number of Compute Nodes in the Pool.</span></span> <span data-ttu-id="1874c-106">Если подсеть не имеет достаточно свободного IP-адресов, пул выделит частично узлов и возникнет ошибка изменения размера.</span><span class="sxs-lookup"><span data-stu-id="1874c-106">If the subnet doesn''t have enough free IP addresses, the Pool will partially allocate Nodes, and a resize error will occur.</span></span> <span data-ttu-id="1874c-107">Субъекту-службе «MicrosoftAzureBatch» должен быть «участник классических виртуальных машин» роли управления доступом на основе ролей (RBAC) для указанной виртуальной сети.</span><span class="sxs-lookup"><span data-stu-id="1874c-107">The ''MicrosoftAzureBatch'' service principal must have the ''Classic Virtual Machine Contributor'' Role-Based Access Control (RBAC) role for the specified VNet.</span></span> <span data-ttu-id="1874c-108">Указанная подсеть должна разрешать подключения из пакетной службы Azure, чтобы можно было назначать задачи на узлах.</span><span class="sxs-lookup"><span data-stu-id="1874c-108">The specified subnet must allow communication from the Azure Batch service to be able to schedule Tasks on the Nodes.</span></span> <span data-ttu-id="1874c-109">Это можно проверить путем проверки, если указанная виртуальная сеть содержит все связанные группы (безопасности).</span><span class="sxs-lookup"><span data-stu-id="1874c-109">This can be verified by checking if the specified VNet has any associated Network Security Groups (NSG).</span></span> <span data-ttu-id="1874c-110">Если взаимодействие с узлами в указанной подсети отклонен группой безопасности, пакетная служба установит состояние вычислительные узлы в непригодном для использования.</span><span class="sxs-lookup"><span data-stu-id="1874c-110">If communication to the Nodes in the specified subnet is denied by an NSG, then the Batch service will set the state of the Compute Nodes to unusable.</span></span> <span data-ttu-id="1874c-111">Для пулов, созданных с помощью virtualMachineConfiguration поддерживаются только ARM виртуальные сети («Microsoft.Network/virtualNetworks»), но для пулов, созданных с помощью cloudServiceConfiguration поддерживаются ARM и классических виртуальных сетей.</span><span class="sxs-lookup"><span data-stu-id="1874c-111">For Pools created with virtualMachineConfiguration only ARM virtual networks (''Microsoft.Network/virtualNetworks'') are supported, but for Pools created with cloudServiceConfiguration both ARM and classic virtual networks are supported.</span></span> <span data-ttu-id="1874c-112">Если у виртуальной сети есть связанные группы безопасности сети (NSG), необходимо включить несколько зарезервированных системных портов для входящего трафика.</span><span class="sxs-lookup"><span data-stu-id="1874c-112">If the specified VNet has any associated Network Security Groups (NSG), then a few reserved system ports must be enabled for inbound communication.</span></span> <span data-ttu-id="1874c-113">Для пулов, созданных с конфигурацией виртуальной машины включите порты 29876 и 29877, а также порт 22 для Linux и порт 3389 для Windows.</span><span class="sxs-lookup"><span data-stu-id="1874c-113">For Pools created with a virtual machine configuration, enable ports 29876 and 29877, as well as port 22 for Linux and port 3389 for Windows.</span></span> <span data-ttu-id="1874c-114">Для пулов, созданных с помощью конфигурации облачной службы включите порты 10100, 20100 и 30100.</span><span class="sxs-lookup"><span data-stu-id="1874c-114">For Pools created with a cloud service configuration, enable ports 10100, 20100, and 30100.</span></span> <span data-ttu-id="1874c-115">Также включите исходящие подключения к службе хранилища Azure через порт 443.</span><span class="sxs-lookup"><span data-stu-id="1874c-115">Also enable outbound connections to Azure Storage on port 443.</span></span> <span data-ttu-id="1874c-116">Дополнительные сведения см.: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span><span class="sxs-lookup"><span data-stu-id="1874c-116">For more details see: https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration</span></span>'
+    optional: true
+    syntax:
+      content: 'subnetId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.PoolEndpointConfiguration
+    name: PoolEndpointConfiguration
+    spec.typeScript:
+      - name: PoolEndpointConfiguration
+        fullName: PoolEndpointConfiguration
+        uid: azure-batch.PoolEndpointConfiguration

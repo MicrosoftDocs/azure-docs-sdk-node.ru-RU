@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolInformation
+    name: PoolInformation
+    fullName: PoolInformation
+    children:
+      - azure-batch.PoolInformation.autoPoolSpecification
+      - azure-batch.PoolInformation.poolId
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolInformation.autoPoolSpecification
+    name: autoPoolSpecification
+    fullName: autoPoolSpecification
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="91f00-101">В случае сбоя автоматического создания пула пакетная служба переводит задание в завершенное состояние, и ошибка создания пула задается в свойство планирования ошибки задания.</span><span class="sxs-lookup"><span data-stu-id="91f00-101">If auto Pool creation fails, the Batch service moves the Job to a completed state, and the Pool creation error is set in the Job''s scheduling error property.</span></span> <span data-ttu-id="91f00-102">Пакетная служба управляет временем существования (создании, так и, если не указан параметр keepAlive, удаление) для автоматического пула.</span><span class="sxs-lookup"><span data-stu-id="91f00-102">The Batch service manages the lifetime (both creation and, unless keepAlive is specified, deletion) of the auto Pool.</span></span> <span data-ttu-id="91f00-103">Любые действия пользователя, которые влияют на время существования автоматического пула, во время выполнения задания приведет к непредвиденному поведению.</span><span class="sxs-lookup"><span data-stu-id="91f00-103">Any user actions that affect the lifetime of the auto Pool while the Job is active will result in unexpected behavior.</span></span> <span data-ttu-id="91f00-104">Необходимо указать идентификатор пула или автоматического спецификации пула, но не оба.</span><span class="sxs-lookup"><span data-stu-id="91f00-104">You must specify either the Pool ID or the auto Pool specification, but not both.</span></span>'
+    optional: true
+    syntax:
+      content: 'autoPoolSpecification?: AutoPoolSpecification'
+      return:
+        type:
+          - azure-batch.AutoPoolSpecification
+    package: azure-batch
+  - uid: azure-batch.PoolInformation.poolId
+    name: poolId
+    fullName: poolId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="91f00-105">Необходимо убедиться, что пул ссылается это свойство существует.</span><span class="sxs-lookup"><span data-stu-id="91f00-105">You must ensure that the Pool referenced by this property exists.</span></span> <span data-ttu-id="91f00-106">Если пул не существует во время, пакетная служба пытается запланировать задание, задачи для задания не будет выполняться, пока вы не создадите пул с таким идентификатором. Обратите внимание, что пакетная служба не будет отклонять запрос задания; он просто не запустится задач пока не существует в пуле.</span><span class="sxs-lookup"><span data-stu-id="91f00-106">If the Pool does not exist at the time the Batch service tries to schedule a Job, no Tasks for the Job will run until you create a Pool with that id. Note that the Batch service will not reject the Job request; it will simply not run Tasks until the Pool exists.</span></span> <span data-ttu-id="91f00-107">Необходимо указать идентификатор пула или автоматического спецификации пула, но не оба.</span><span class="sxs-lookup"><span data-stu-id="91f00-107">You must specify either the Pool ID or the auto Pool specification, but not both.</span></span>'
+    optional: true
+    syntax:
+      content: 'poolId?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+references:
+  - uid: azure-batch.AutoPoolSpecification
+    name: AutoPoolSpecification
+    spec.typeScript:
+      - name: AutoPoolSpecification
+        fullName: AutoPoolSpecification
+        uid: azure-batch.AutoPoolSpecification

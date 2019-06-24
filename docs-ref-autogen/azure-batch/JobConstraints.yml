@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.JobConstraints
+    name: JobConstraints
+    fullName: JobConstraints
+    children:
+      - azure-batch.JobConstraints.maxTaskRetryCount
+      - azure-batch.JobConstraints.maxWallClockTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.JobConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4e4ac-101">Обратите внимание, что это значение определяет количество повторных попыток.</span><span class="sxs-lookup"><span data-stu-id="4e4ac-101">Note that this value specifically controls the number of retries.</span></span> <span data-ttu-id="4e4ac-102">Пакетная служба попытается каждую задачу один раз и повторите вплоть до этого предела.</span><span class="sxs-lookup"><span data-stu-id="4e4ac-102">The Batch service will try each Task once, and may then retry up to this limit.</span></span> <span data-ttu-id="4e4ac-103">Например если максимальное число повторных попыток равно 3, пакетная служба пытается выполнить задачу до 4 раз (одна начальная попытка и 3 повторных).</span><span class="sxs-lookup"><span data-stu-id="4e4ac-103">For example, if the maximum retry count is 3, Batch tries a Task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="4e4ac-104">Если максимальное число повторных попыток равно 0, пакетная служба не выполняет повторную попытку запуска задачи.</span><span class="sxs-lookup"><span data-stu-id="4e4ac-104">If the maximum retry count is 0, the Batch service does not retry Tasks.</span></span> <span data-ttu-id="4e4ac-105">Если максимальное число повторных попыток равно -1, пакетная служба повторяет задачи без ограничений.</span><span class="sxs-lookup"><span data-stu-id="4e4ac-105">If the maximum retry count is -1, the Batch service retries Tasks without limit.</span></span> <span data-ttu-id="4e4ac-106">Значение по умолчанию — 0 (без повторных попыток).</span><span class="sxs-lookup"><span data-stu-id="4e4ac-106">The default value is 0 (no retries).</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.JobConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4e4ac-107">Если задание не выполняется в течение ограниченного времени, пакетная служба завершит его и все задачи, которые по-прежнему работают.</span><span class="sxs-lookup"><span data-stu-id="4e4ac-107">If the Job does not complete within the time limit, the Batch service terminates it and any Tasks that are still running.</span></span> <span data-ttu-id="4e4ac-108">В этом случае причиной завершения работы будет MaxWallClockTimeExpiry.</span><span class="sxs-lookup"><span data-stu-id="4e4ac-108">In this case, the termination reason will be MaxWallClockTimeExpiry.</span></span> <span data-ttu-id="4e4ac-109">Если это свойство не указано, есть без временных ограничений на продолжительность выполнения задания.</span><span class="sxs-lookup"><span data-stu-id="4e4ac-109">If this property is not specified, there is no time limit on how long the Job may run.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

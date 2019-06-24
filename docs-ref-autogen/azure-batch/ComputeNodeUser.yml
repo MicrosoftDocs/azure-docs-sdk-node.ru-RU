@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.ComputeNodeUser
+    name: ComputeNodeUser
+    fullName: ComputeNodeUser
+    children:
+      - azure-batch.ComputeNodeUser.expiryTime
+      - azure-batch.ComputeNodeUser.isAdmin
+      - azure-batch.ComputeNodeUser.name
+      - azure-batch.ComputeNodeUser.password
+      - azure-batch.ComputeNodeUser.sshPublicKey
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.ComputeNodeUser.expiryTime
+    name: expiryTime
+    fullName: expiryTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7ee43-101">Если не указано, значение по умолчанию — 1 день от текущего времени.</span><span class="sxs-lookup"><span data-stu-id="7ee43-101">If omitted, the default is 1 day from the current time.</span></span> <span data-ttu-id="7ee43-102">Для вычислительных узлов Linux expiryTime имеет точность до в день.</span><span class="sxs-lookup"><span data-stu-id="7ee43-102">For Linux Compute Nodes, the expiryTime has a precision up to a day.</span></span>'
+    optional: true
+    syntax:
+      content: 'expiryTime?: Date'
+      return:
+        type:
+          - Date
+    package: azure-batch
+  - uid: azure-batch.ComputeNodeUser.isAdmin
+    name: isAdmin
+    fullName: isAdmin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="7ee43-103">По умолчанию для этого параметра используется значение false.</span><span class="sxs-lookup"><span data-stu-id="7ee43-103">The default value is false.</span></span>
+    optional: true
+    syntax:
+      content: 'isAdmin?: boolean'
+      return:
+        type:
+          - boolean
+    package: azure-batch
+  - uid: azure-batch.ComputeNodeUser.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: 'name: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNodeUser.password
+    name: password
+    fullName: password
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7ee43-104">Пароль необходим для Windows вычислительные узлы (которые созданные с помощью «cloudServiceConfiguration», или с помощью virtualMachineConfiguration с помощью ссылки на образ Windows).</span><span class="sxs-lookup"><span data-stu-id="7ee43-104">The password is required for Windows Compute Nodes (those created with ''cloudServiceConfiguration'', or created with ''virtualMachineConfiguration'' using a Windows Image reference).</span></span> <span data-ttu-id="7ee43-105">Для вычислительных узлов Linux пароль при необходимости можно указать вместе со свойством sshPublicKey.</span><span class="sxs-lookup"><span data-stu-id="7ee43-105">For Linux Compute Nodes, the password can optionally be specified along with the sshPublicKey property.</span></span>'
+    optional: true
+    syntax:
+      content: 'password?: string'
+      return:
+        type:
+          - string
+    package: azure-batch
+  - uid: azure-batch.ComputeNodeUser.sshPublicKey
+    name: sshPublicKey
+    fullName: sshPublicKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7ee43-106">Открытый ключ должен быть совместим с кодировкой OpenSSH и должны быть закодированы base-64.</span><span class="sxs-lookup"><span data-stu-id="7ee43-106">The public key should be compatible with OpenSSH encoding and should be base 64 encoded.</span></span> <span data-ttu-id="7ee43-107">Это свойство может быть указан только для вычислительных узлов Linux.</span><span class="sxs-lookup"><span data-stu-id="7ee43-107">This property can be specified only for Linux Compute Nodes.</span></span> <span data-ttu-id="7ee43-108">Если этот параметр указан для вычислительного узла Windows, пакетная служба отклоняет запрос; непосредственно при вызове REST API, код состояния HTTP: 400 (неправильный запрос).</span><span class="sxs-lookup"><span data-stu-id="7ee43-108">If this is specified for a Windows Compute Node, then the Batch service rejects the request; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).</span></span>'
+    optional: true
+    syntax:
+      content: 'sshPublicKey?: string'
+      return:
+        type:
+          - string
+    package: azure-batch

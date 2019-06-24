@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.TaskConstraints
+    name: TaskConstraints
+    fullName: TaskConstraints
+    children:
+      - azure-batch.TaskConstraints.maxTaskRetryCount
+      - azure-batch.TaskConstraints.maxWallClockTime
+      - azure-batch.TaskConstraints.retentionTime
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxTaskRetryCount
+    name: maxTaskRetryCount
+    fullName: maxTaskRetryCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="614b4-101">Обратите внимание на то, что это значение определяет количество повторных попыток для исполняемого файла задачи из-за ненулевой код выхода.</span><span class="sxs-lookup"><span data-stu-id="614b4-101">Note that this value specifically controls the number of retries for the Task executable due to a nonzero exit code.</span></span> <span data-ttu-id="614b4-102">Пакетная служба попытается выполнить задачу один раз и повторите вплоть до этого предела.</span><span class="sxs-lookup"><span data-stu-id="614b4-102">The Batch service will try the Task once, and may then retry up to this limit.</span></span> <span data-ttu-id="614b4-103">Например если максимальное число повторных попыток равно 3, пакетная служба пытается выполнить задачу до 4 раз (одна начальная попытка и 3 повторных).</span><span class="sxs-lookup"><span data-stu-id="614b4-103">For example, if the maximum retry count is 3, Batch tries the Task up to 4 times (one initial try and 3 retries).</span></span> <span data-ttu-id="614b4-104">Если максимальное число повторных попыток равно 0, пакетная служба не повторять попытку задачи после первой попытки.</span><span class="sxs-lookup"><span data-stu-id="614b4-104">If the maximum retry count is 0, the Batch service does not retry the Task after the first attempt.</span></span> <span data-ttu-id="614b4-105">Если максимальное число повторных попыток равно -1, пакетная служба повторяет неограниченное.</span><span class="sxs-lookup"><span data-stu-id="614b4-105">If the maximum retry count is -1, the Batch service retries the Task without limit.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxTaskRetryCount?: number'
+      return:
+        type:
+          - number
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.maxWallClockTime
+    name: maxWallClockTime
+    fullName: maxWallClockTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="614b4-106">Если этот параметр не указан, не ограничено время на время выполнения задачи.</span><span class="sxs-lookup"><span data-stu-id="614b4-106">If this is not specified, there is no time limit on how long the Task may run.</span></span>'
+    optional: true
+    syntax:
+      content: 'maxWallClockTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch
+  - uid: azure-batch.TaskConstraints.retentionTime
+    name: retentionTime
+    fullName: retentionTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="614b4-107">По умолчанию — 7 дней, т. е. каталогу задачи будут храниться 7 дней, если задание удалено или удалении вычислительного узла.</span><span class="sxs-lookup"><span data-stu-id="614b4-107">The default is 7 days, i.e. the Task directory will be retained for 7 days unless the Compute Node is removed or the Job is deleted.</span></span>'
+    optional: true
+    syntax:
+      content: 'retentionTime?: Duration'
+      return:
+        type:
+          - Duration
+    package: azure-batch

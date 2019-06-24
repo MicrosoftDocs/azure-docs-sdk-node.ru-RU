@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-batch.PoolPatchParameter
+    name: PoolPatchParameter
+    fullName: PoolPatchParameter
+    children:
+      - azure-batch.PoolPatchParameter.applicationPackageReferences
+      - azure-batch.PoolPatchParameter.certificateReferences
+      - azure-batch.PoolPatchParameter.metadata
+      - azure-batch.PoolPatchParameter.startTask
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: azure-batch
+  - uid: azure-batch.PoolPatchParameter.applicationPackageReferences
+    name: applicationPackageReferences
+    fullName: applicationPackageReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfffc-101">Изменения ссылок на пакеты влияют на все новые узлы, объединения в пул, но не влияют на вычислительные узлы, которые уже в пуле до перезагрузки или повторного создания образа.</span><span class="sxs-lookup"><span data-stu-id="cfffc-101">Changes to Package references affect all new Nodes joining the Pool, but do not affect Compute Nodes that are already in the Pool until they are rebooted or reimaged.</span></span> <span data-ttu-id="cfffc-102">Если этот элемент присутствует, он заменяет любые существующие ссылки на пакет.</span><span class="sxs-lookup"><span data-stu-id="cfffc-102">If this element is present, it replaces any existing Package references.</span></span> <span data-ttu-id="cfffc-103">Если указать пустую коллекцию, все ссылки на пакеты удаляются из пула.</span><span class="sxs-lookup"><span data-stu-id="cfffc-103">If you specify an empty collection, then all Package references are removed from the Pool.</span></span> <span data-ttu-id="cfffc-104">Если этот параметр опущен, любой существующий пакет, ссылки, остаются без изменений.</span><span class="sxs-lookup"><span data-stu-id="cfffc-104">If omitted, any existing Package references are left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationPackageReferences?: ApplicationPackageReference[]'
+      return:
+        type:
+          - 'azure-batch.ApplicationPackageReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolPatchParameter.certificateReferences
+    name: certificateReferences
+    fullName: certificateReferences
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="cfffc-105">Если этот элемент присутствует, он заменяет любой существующий сертификат ссылки, настроенные в пуле.</span><span class="sxs-lookup"><span data-stu-id="cfffc-105">If this element is present, it replaces any existing Certificate references configured on the Pool.</span></span> <span data-ttu-id="cfffc-106">Если этот параметр опущен, любой существующий сертификат, ссылки, остаются без изменений.</span><span class="sxs-lookup"><span data-stu-id="cfffc-106">If omitted, any existing Certificate references are left unchanged.</span></span>
+      <span data-ttu-id="cfffc-107">Для узлов Windows пакетная служба устанавливает сертификаты для указанного сертификата хранилища и расположение.</span><span class="sxs-lookup"><span data-stu-id="cfffc-107">For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location.</span></span> <span data-ttu-id="cfffc-108">Для вычислительных узлов Linux сертификаты хранятся в каталоге внутри задачи рабочего каталога и переменной среды, которые AZ_BATCH_CERTIFICATES_DIR передается в задачу для запроса для этого расположения.</span><span class="sxs-lookup"><span data-stu-id="cfffc-108">For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the Task to query for this location.</span></span> <span data-ttu-id="cfffc-109">Для сертификатов с видимостью «remoteUser» каталог «сертификаты» создается в домашнем каталоге пользователя (например, /home/ {имя_пользователя} / certs) и сертификаты помещаются в этот каталог.</span><span class="sxs-lookup"><span data-stu-id="cfffc-109">For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and Certificates are placed in that directory.</span></span>
+    optional: true
+    syntax:
+      content: 'certificateReferences?: CertificateReference[]'
+      return:
+        type:
+          - 'azure-batch.CertificateReference[]'
+    package: azure-batch
+  - uid: azure-batch.PoolPatchParameter.metadata
+    name: metadata
+    fullName: metadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfffc-110">Если этот элемент присутствует, он заменяет все существующие метаданные, которые настроены в пуле.</span><span class="sxs-lookup"><span data-stu-id="cfffc-110">If this element is present, it replaces any existing metadata configured on the Pool.</span></span> <span data-ttu-id="cfffc-111">Если указать пустую коллекцию, все метаданные, удаляется из пула.</span><span class="sxs-lookup"><span data-stu-id="cfffc-111">If you specify an empty collection, any metadata is removed from the Pool.</span></span> <span data-ttu-id="cfffc-112">Если этот параметр опущен, все существующие метаданные остается без изменений.</span><span class="sxs-lookup"><span data-stu-id="cfffc-112">If omitted, any existing metadata is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'metadata?: MetadataItem[]'
+      return:
+        type:
+          - 'azure-batch.MetadataItem[]'
+    package: azure-batch
+  - uid: azure-batch.PoolPatchParameter.startTask
+    name: startTask
+    fullName: startTask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="cfffc-113">Если этот элемент присутствует, он переопределяет любые существующие начала задачи.</span><span class="sxs-lookup"><span data-stu-id="cfffc-113">If this element is present, it overwrites any existing start Task.</span></span> <span data-ttu-id="cfffc-114">Если не указано, все существующие start, задача остается без изменений.</span><span class="sxs-lookup"><span data-stu-id="cfffc-114">If omitted, any existing start Task is left unchanged.</span></span>'
+    optional: true
+    syntax:
+      content: 'startTask?: StartTask'
+      return:
+        type:
+          - azure-batch.StartTask
+    package: azure-batch
+references:
+  - uid: 'azure-batch.ApplicationPackageReference[]'
+    name: 'ApplicationPackageReference[]'
+    spec.typeScript:
+      - name: ApplicationPackageReference
+        fullName: ApplicationPackageReference
+        uid: azure-batch.ApplicationPackageReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.CertificateReference[]'
+    name: 'CertificateReference[]'
+    spec.typeScript:
+      - name: CertificateReference
+        fullName: CertificateReference
+        uid: azure-batch.CertificateReference
+      - name: '[]'
+        fullName: '[]'
+  - uid: 'azure-batch.MetadataItem[]'
+    name: 'MetadataItem[]'
+    spec.typeScript:
+      - name: MetadataItem
+        fullName: MetadataItem
+        uid: azure-batch.MetadataItem
+      - name: '[]'
+        fullName: '[]'
+  - uid: azure-batch.StartTask
+    name: StartTask
+    spec.typeScript:
+      - name: StartTask
+        fullName: StartTask
+        uid: azure-batch.StartTask
