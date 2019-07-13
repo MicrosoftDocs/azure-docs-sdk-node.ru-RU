@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation'
+    name: ServiceHealthEvaluation
+    fullName: ServiceHealthEvaluation
+    children:
+      - '@azure/servicefabric.ServiceHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.ServiceHealthEvaluation.description'
+      - '@azure/servicefabric.ServiceHealthEvaluation.kind'
+      - '@azure/servicefabric.ServiceHealthEvaluation.serviceName'
+      - '@azure/servicefabric.ServiceHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="10ace-101">Представляет оценки работоспособности для службы, содержащий сведения о данных и алгоритма, используемого в хранилище данных о работоспособности для оценки работоспособности.</span><span class="sxs-lookup"><span data-stu-id="10ace-101">Represents health evaluation for a service, containing information about the data and the algorithm used by health store to evaluate health.</span></span> <span data-ttu-id="10ace-102">Вычисления возвращается только в том случае, когда сводное состояние работоспособности — ошибки или предупреждения.</span><span class="sxs-lookup"><span data-stu-id="10ace-102">The evaluation is returned only when the aggregated health state is either Error or Warning.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="10ace-103">Состояние работоспособности сущности Service Fabric, например кластера, узла, приложения, службы, секции, реплики и т.д. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»</span><span class="sxs-lookup"><span data-stu-id="10ace-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="10ace-104">Описание оценки работоспособности, который представляет сводку пробных испытаний.</span><span class="sxs-lookup"><span data-stu-id="10ace-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="10ace-105">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="10ace-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Service"'
+      return:
+        type:
+          - '"Service"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.serviceName'
+    name: serviceName
+    fullName: serviceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="10ace-106">Имя службы, в которых оценки работоспособности, описывается этим объектом.</span><span class="sxs-lookup"><span data-stu-id="10ace-106">Name of the service whose health evaluation is described by this object.</span></span>'
+    optional: true
+    syntax:
+      content: 'serviceName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="10ace-107">Список оценки неработоспособности, ставших причиной текущего общего состояния работоспособности службы.</span><span class="sxs-lookup"><span data-stu-id="10ace-107">List of unhealthy evaluations that led to the current aggregated health state of the service.</span></span>
+      <span data-ttu-id="10ace-108">Типы оценки неработоспособности может быть PartitionsHealthEvaluation или EventHealthEvaluation.</span><span class="sxs-lookup"><span data-stu-id="10ace-108">The types of the unhealthy evaluations can be PartitionsHealthEvaluation or EventHealthEvaluation.</span></span>
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

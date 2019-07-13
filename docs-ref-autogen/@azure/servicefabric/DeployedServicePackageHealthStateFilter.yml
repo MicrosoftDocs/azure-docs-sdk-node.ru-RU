@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+    name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="f6695-101">Определяет условия соответствия, чтобы определить, следует ли включить в качестве дочернего элемента развернутого приложения в фрагмент данных о работоспособности кластера развернутого пакета службы.</span><span class="sxs-lookup"><span data-stu-id="f6695-101">Defines matching criteria to determine whether a deployed service package should be included as a child of a deployed application in the cluster health chunk.</span></span>
+      <span data-ttu-id="f6695-102">Развернутые пакеты служб возвращается только в том случае, если родительских сущностей совпадающие с фильтром, указанного в описании запроса фрагмента данных о работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="f6695-102">The deployed service packages are only returned if the parent entities match a filter specified in the cluster health chunk query description.</span></span> <span data-ttu-id="f6695-103">Родительский развернутых приложений и родительского приложения должны быть включены в фрагмент данных о работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="f6695-103">The parent deployed application and its parent application must be included in the cluster health chunk.</span></span>
+      <span data-ttu-id="f6695-104">Один фильтр можно выделить ноль, один или несколько развернутых служб пакетов в зависимости от его свойства.</span><span class="sxs-lookup"><span data-stu-id="f6695-104">One filter can match zero, one or multiple deployed service packages, depending on its properties.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"f6695-105\">Фильтр состояния работоспособности развернутых пакетов служб.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-105\">The filter for the health state of the deployed service packages.</span></span> <span data-ttu-id=\"f6695-106\">Она позволяет, выбрав развернутых пакетов служб, если они совпадают, данные о состоянии работоспособности нужное.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-106\">It allows selecting deployed service packages if they match the desired health states.</span></span>\n<span data-ttu-id=\"f6695-107\">Возможные значения — целочисленное значение одного из приведенных ниже состояний работоспособности.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-107\">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id=\"f6695-108\">Возвращаются только те развернутые пакеты службы, которые соответствуют заданному фильтру.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-108\">Only deployed service packages that match the filter are returned.</span></span> <span data-ttu-id=\"f6695-109\">Все развернутые пакеты служб используются для оценки состояния работоспособности родительского развернутого приложения статистическая обработка.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-109\">All deployed service packages are used to evaluate the parent deployed application aggregated health state.</span></span>\n<span data-ttu-id=\"f6695-110\">Если не указан, значение по умолчанию — None, если не указан идентификатор пакета развернутой службы.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-110\">If not specified, default value is None, unless the deployed service package ID is specified.</span></span>\n<span data-ttu-id=\"f6695-111\">Если фильтр имеет значение по умолчанию и указан идентификатор пакета развернутой службы, возвращается соответствующий развернутый пакет службы.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-111\">If the filter has default value and deployed service package ID is specified, the matching deployed service package is returned.</span></span>\n<span data-ttu-id=\"f6695-112\">Значения состояния представляют собой перечисление на основе флага, поэтому значение может представлять собой сочетание этих значений, полученное с помощью битового оператора \"ИЛИ\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-112\">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>\n<span data-ttu-id=\"f6695-113\">Например если указано значение 6, она соответствует развернутые пакеты служб со значениями healthstate из ОК (2) \"и\" Warning \"(4).</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-113\">For example, if the provided value is 6, it matches deployed service packages with HealthState value of OK (2) and Warning (4).</span></span>\n- <span data-ttu-id=\"f6695-114\">По умолчанию — значение по умолчанию.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-114\">Default - Default value.</span></span> <span data-ttu-id=\"f6695-115\">Соответствует любому значению HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-115\">Matches any HealthState.</span></span> <span data-ttu-id=\"f6695-116\">Значение равно нулю.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-116\">The value is zero.</span></span>\n- <span data-ttu-id=\"f6695-117\">None — фильтр, который не совпадает с любым значением HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-117\">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id=\"f6695-118\">Используется для возвращения нуля результатов для определенной коллекции состояний.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-118\">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id=\"f6695-119\">Значение равно\_1.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-119\">The value is 1.</span></span>\n- <span data-ttu-id=\"f6695-120\">ОК — фильтр, извлекающий входные данные с HealthState со значением ОК.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-120\">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id=\"f6695-121\">Значение равно 2.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-121\">The value is 2.</span></span>\n- <span data-ttu-id=\"f6695-122\">Warning — фильтр, извлекающий входные данные с HealthState со значением предупреждение.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-122\">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id=\"f6695-123\">Значение равно 4.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-123\">The value is 4.</span></span>\n- <span data-ttu-id=\"f6695-124\">Error — фильтр, извлекающий входные данные с HealthState со значением ошибки.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-124\">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id=\"f6695-125\">Значение равно\_8.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-125\">The value is 8.</span></span>\n- <span data-ttu-id=\"f6695-126\">ALL — фильтр, извлекающий входные данные с любым значением HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-126\">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id=\"f6695-127\">Значение равно 65 535.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-127\">The value is 65535.</span></span> <span data-ttu-id=\"f6695-128\">Значение по умолчанию: 0.</span><span class=\"sxs-lookup\"><span data-stu-id=\"f6695-128\">Default value: 0.</span></span>\n"
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+    name: serviceManifestNameFilter
+    fullName: serviceManifestNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f6695-129">Имя манифеста службы, определяющий к развернутым пакетам операции, соответствующие критерию фильтра.</span><span class="sxs-lookup"><span data-stu-id="f6695-129">The name of the service manifest which identifies the deployed service packages that matches the filter.</span></span>
+      <span data-ttu-id="f6695-130">Если указано, фильтр, оно будет применено только к указанным развернутые пакеты служб, если таковые имеются.</span><span class="sxs-lookup"><span data-stu-id="f6695-130">If specified, the filter is applied only to the specified deployed service packages, if any.</span></span>
+      <span data-ttu-id="f6695-131">Если нет развернутых пакетов служб с указанным именем манифеста существует, ничего не возвращается в фрагмент данных о работоспособности кластера, на основе этого фильтра.</span><span class="sxs-lookup"><span data-stu-id="f6695-131">If no deployed service packages with specified manifest name exist, nothing is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="f6695-132">Если существует любой развернутый пакет службы, они включаются в фрагмент данных о работоспособности кластера, если она учитывает другие свойства фильтра.</span><span class="sxs-lookup"><span data-stu-id="f6695-132">If any deployed service package exists, they are included in the cluster health chunk if it respects the other filter properties.</span></span>
+      <span data-ttu-id="f6695-133">В противном случае службы указан, все развернутые пакеты, которые соответствуют родительские фильтры, (если таковые имеются) принимать во внимание и противопоставляется других элементов фильтра, как фильтр состояния работоспособности.</span><span class="sxs-lookup"><span data-stu-id="f6695-133">If not specified, all deployed service packages that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceManifestNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    name: servicePackageActivationIdFilter
+    fullName: servicePackageActivationIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="f6695-134">Идентификатор активации развернутого пакета службы, соответствующие критерию фильтра.</span><span class="sxs-lookup"><span data-stu-id="f6695-134">The activation ID of a deployed service package that matches the filter.</span></span>
+      <span data-ttu-id="f6695-135">Если не указан, фильтр применяется ко всем пакетам развернутой службы, которые соответствуют другие параметры.</span><span class="sxs-lookup"><span data-stu-id="f6695-135">If not specified, the filter applies to all deployed service packages that match the other parameters.</span></span>
+      <span data-ttu-id="f6695-136">Если указано, фильтр выполняет сопоставление только развернутый пакет службы с идентификатором указанные операции активации.</span><span class="sxs-lookup"><span data-stu-id="f6695-136">If specified, the filter matches only the deployed service package with the specified activation ID.</span></span>
+    optional: true
+    syntax:
+      content: 'servicePackageActivationIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
