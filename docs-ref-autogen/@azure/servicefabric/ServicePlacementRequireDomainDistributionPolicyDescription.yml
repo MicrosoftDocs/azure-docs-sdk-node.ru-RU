@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription'
+    name: ServicePlacementRequireDomainDistributionPolicyDescription
+    fullName: ServicePlacementRequireDomainDistributionPolicyDescription
+    children:
+      - '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName'
+      - '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      <span data-ttu-id="4b463-101">Описывает политику, используемую для размещения службы Service Fabric, где две реплики из одной секции никогда нельзя размещать в одном домене сбоя или обновления.</span><span class="sxs-lookup"><span data-stu-id="4b463-101">Describes the policy to be used for placement of a Service Fabric service where two replicas from the same partition should never be placed in the same fault or upgrade domain.</span></span>
+      <span data-ttu-id="4b463-102">Хотя это не общий доступ к службе создает высокий риск одновременных сбоев из-за незапланированного простоя или других случаях последующих/одновременных сбоев.</span><span class="sxs-lookup"><span data-stu-id="4b463-102">While this is not common it can expose the service to an increased risk of concurrent failures due to unplanned outages or other cases of subsequent/concurrent failures.</span></span> <span data-ttu-id="4b463-103">Например рассмотрим случай, где развернутых реплик в другом центре обработки данных, с одной репликой в каждом месте.</span><span class="sxs-lookup"><span data-stu-id="4b463-103">As an example, consider a case where replicas are deployed across different data center, with one replica per location.</span></span> <span data-ttu-id="4b463-104">В случае недоступности одного центра обработки данных отключится от сети, обычно реплики, которая была помещена в этот центр обработки данных будут упакованы в один из оставшихся центров обработки данных.</span><span class="sxs-lookup"><span data-stu-id="4b463-104">In the event that one of the datacenters goes offline, normally the replica that was placed in that datacenter will be packed into one of the remaining datacenters.</span></span> <span data-ttu-id="4b463-105">Если это нежелательно, то эта политика должно быть установлено.</span><span class="sxs-lookup"><span data-stu-id="4b463-105">If this is not desirable then this policy should be set.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.domainName'
+    name: domainName
+    fullName: domainName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4b463-106">Имя домена, который следует использовать для размещения в соответствии с этой политикой.</span><span class="sxs-lookup"><span data-stu-id="4b463-106">The name of the domain that should used for placement as per this policy.</span></span>'
+    optional: true
+    syntax:
+      content: 'domainName?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServicePlacementRequireDomainDistributionPolicyDescription.type'
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="4b463-107">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="4b463-107">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'type: "RequireDomainDistribution"'
+      return:
+        type:
+          - '"RequireDomainDistribution"'
+    package: '@azure/servicefabric'

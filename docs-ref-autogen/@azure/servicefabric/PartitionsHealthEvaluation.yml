@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation'
+    name: PartitionsHealthEvaluation
+    fullName: PartitionsHealthEvaluation
+    children:
+      - '@azure/servicefabric.PartitionsHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.description'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.kind'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.totalCount'
+      - '@azure/servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="42371-101">Представляет оценки работоспособности для секции службы, содержащий оценки работоспособности для каждой секции неработоспособное влияет на текущее состояние сводные данные о работоспособности.</span><span class="sxs-lookup"><span data-stu-id="42371-101">Represents health evaluation for the partitions of a service, containing health evaluations for each unhealthy partition that impacts current aggregated health state.</span></span> <span data-ttu-id="42371-102">Могут быть возвращены при оценке работоспособности служб и общего состояния работоспособности ошибки или предупреждения.</span><span class="sxs-lookup"><span data-stu-id="42371-102">Can be returned when evaluating service health and the aggregated health state is either Error or Warning.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="42371-103">Состояние работоспособности сущности Service Fabric, например кластера, узла, приложения, службы, секции, реплики и т.д. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»</span><span class="sxs-lookup"><span data-stu-id="42371-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="42371-104">Описание оценки работоспособности, который представляет сводку пробных испытаний.</span><span class="sxs-lookup"><span data-stu-id="42371-104">Description of the health evaluation, which represents a summary of the evaluation process.</span></span>'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="42371-105">Полиморфные дискриминатора</span><span class="sxs-lookup"><span data-stu-id="42371-105">Polymorphic Discriminator</span></span>
+    syntax:
+      content: 'kind: "Partitions"'
+      return:
+        type:
+          - '"Partitions"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.maxPercentUnhealthyPartitionsPerService'
+    name: maxPercentUnhealthyPartitionsPerService
+    fullName: maxPercentUnhealthyPartitionsPerService
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="42371-106">Максимально допустимый процент неработоспособных разделов на службу из ServiceTypeHealthPolicy.</span><span class="sxs-lookup"><span data-stu-id="42371-106">Maximum allowed percentage of unhealthy partitions per service from the ServiceTypeHealthPolicy.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyPartitionsPerService?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.totalCount'
+    name: totalCount
+    fullName: totalCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="42371-107">Общее число разделов службы из хранилища данных о работоспособности.</span><span class="sxs-lookup"><span data-stu-id="42371-107">Total number of partitions of the service from the health store.</span></span>
+    optional: true
+    syntax:
+      content: 'totalCount?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionsHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="42371-108">Список оценки неработоспособности, которые привели к общего состояния работоспособности.</span><span class="sxs-lookup"><span data-stu-id="42371-108">List of unhealthy evaluations that led to the aggregated health state.</span></span> <span data-ttu-id="42371-109">Включает в себя все PartitionHealthEvaluation неработоспособные, затронуты сводные данные о работоспособности.</span><span class="sxs-lookup"><span data-stu-id="42371-109">Includes all the unhealthy PartitionHealthEvaluation that impacted the aggregated health.</span></span>'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

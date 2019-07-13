@@ -1,0 +1,43 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.Epoch'
+    name: Epoch
+    fullName: Epoch
+    children:
+      - '@azure/servicefabric.Epoch.configurationVersion'
+      - '@azure/servicefabric.Epoch.dataLossVersion'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="97cf9-101">Состояние: номер конфигурации для раздела в целом.</span><span class="sxs-lookup"><span data-stu-id="97cf9-101">An Epoch is a configuration number for the partition as a whole.</span></span> <span data-ttu-id="97cf9-102">При конфигурации реплики набор изменений, например, при изменении первичной реплики, операции, которые реплицируются с новой первичной репликой, называются новой эпохи из тех, которые были отправлены в старое первичной репликой.</span><span class="sxs-lookup"><span data-stu-id="97cf9-102">When the configuration of the replica set changes, for example when the Primary replica changes, the operations that are replicated from the new Primary replica are said to be a new Epoch from the ones which were sent by the old Primary replica.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.Epoch.configurationVersion'
+    name: configurationVersion
+    fullName: configurationVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97cf9-103">Текущее количество конфигурации этой Эпохе.</span><span class="sxs-lookup"><span data-stu-id="97cf9-103">The current configuration number of this Epoch.</span></span> <span data-ttu-id="97cf9-104">Номер конфигурации — это значение увеличивается, обновляется каждый раз, когда изменения настройки этой реплики.</span><span class="sxs-lookup"><span data-stu-id="97cf9-104">The configuration number is an increasing value that is updated whenever the configuration of this replica set changes.</span></span>'
+    optional: true
+    syntax:
+      content: 'configurationVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.Epoch.dataLossVersion'
+    name: dataLossVersion
+    fullName: dataLossVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="97cf9-105">Текущий номер потери данных из этой Эпохе.</span><span class="sxs-lookup"><span data-stu-id="97cf9-105">The current data loss number of this Epoch.</span></span> <span data-ttu-id="97cf9-106">Свойство number потери данных — это значение увеличивается, который обновляется каждый раз, когда потенциально потери данных, как при потере кворума реплики в набор, включающий первичной реплики.</span><span class="sxs-lookup"><span data-stu-id="97cf9-106">The data loss number property is an increasing value which is updated whenever data loss is suspected, as when loss of a quorum of replicas in the replica set that includes the Primary replica.</span></span>'
+    optional: true
+    syntax:
+      content: 'dataLossVersion?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

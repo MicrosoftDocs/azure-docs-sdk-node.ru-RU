@@ -1,0 +1,60 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ReplicaHealthStateChunk'
+    name: ReplicaHealthStateChunk
+    fullName: ReplicaHealthStateChunk
+    children:
+      - '@azure/servicefabric.ReplicaHealthStateChunk.healthState'
+      - '@azure/servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="4bf54-101">Представляет фрагмент данных о работоспособности реплики службы с отслеживанием состояния или экземпляра службы без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="4bf54-101">Represents the health state chunk of a stateful service replica or a stateless service instance.</span></span>
+      <span data-ttu-id="4bf54-102">Состояние работоспособности реплики содержит идентификатор реплики и его общего состояния работоспособности.</span><span class="sxs-lookup"><span data-stu-id="4bf54-102">The replica health state contains the replica ID and its aggregated health state.</span></span>
+    extends:
+      name: '@azure/servicefabric.EntityHealthStateChunk'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthStateChunk.healthState'
+    name: healthState
+    fullName: healthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4bf54-103">Состояние работоспособности сущности Service Fabric, например кластера, узла, приложения, службы, секции, реплики и т.д. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»</span><span class="sxs-lookup"><span data-stu-id="4bf54-103">The health state of a Service Fabric entity such as Cluster, Node, Application, Service, Partition, Replica etc. Possible values include: ''Invalid'', ''Ok'', ''Warning'', ''Error'', ''Unknown''</span></span>'
+    optional: true
+    syntax:
+      content: 'healthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ReplicaHealthStateChunk.replicaOrInstanceId'
+    name: replicaOrInstanceId
+    fullName: replicaOrInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="4bf54-104">Идентификатор реплики службы с отслеживанием состояния или экземпляра службы без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="4bf54-104">Id of a stateful service replica or a stateless service instance.</span></span> <span data-ttu-id="4bf54-105">Этот идентификатор используется в запросах, которые применяются к службам с отслеживанием состояния и без отслеживания состояния.</span><span class="sxs-lookup"><span data-stu-id="4bf54-105">This ID is used in the queries that apply to both stateful and stateless services.</span></span> <span data-ttu-id="4bf54-106">Используется Service Fabric для уникальной идентификации реплике секции службы с отслеживанием состояния или экземпляру службы без отслеживания состояния секции.</span><span class="sxs-lookup"><span data-stu-id="4bf54-106">It is used by Service Fabric to uniquely identify a replica of a partition of a stateful service or an instance of a stateless service partition.</span></span> <span data-ttu-id="4bf54-107">Он уникален в пределах секции и остается неизменным в течение жизненного цикла реплики или экземпляра.</span><span class="sxs-lookup"><span data-stu-id="4bf54-107">It is unique within a partition and does not change for the lifetime of the replica or the instance.</span></span> <span data-ttu-id="4bf54-108">Если другая реплика создается на том же узле, для одной секции удалении реплики с отслеживанием состояния, он получит другое значение для идентификатора.</span><span class="sxs-lookup"><span data-stu-id="4bf54-108">If a stateful replica gets dropped and another replica gets created on the same node for the same partition, it will get a different value for the ID.</span></span> <span data-ttu-id="4bf54-109">Если экземпляр без отслеживания состояния выполняется отработка отказа на том же или другом узле он получит другое значение для идентификатора.</span><span class="sxs-lookup"><span data-stu-id="4bf54-109">If a stateless instance is failed over on the same or different node it will get a different value for the ID.</span></span>'
+    optional: true
+    syntax:
+      content: 'replicaOrInstanceId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.EntityHealthStateChunk'
+    name: EntityHealthStateChunk
+    spec.typeScript:
+      - name: EntityHealthStateChunk
+        fullName: EntityHealthStateChunk
+        uid: '@azure/servicefabric.EntityHealthStateChunk'
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'

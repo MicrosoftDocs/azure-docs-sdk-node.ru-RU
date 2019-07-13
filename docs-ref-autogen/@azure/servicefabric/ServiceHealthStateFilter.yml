@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter'
+    name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    children:
+      - '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+      - '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      <span data-ttu-id="484ba-101">Определяет условия соответствия, чтобы определить, следует ли служба в качестве дочернего элемента приложения в фрагмент данных о работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="484ba-101">Defines matching criteria to determine whether a service should be included as a child of an application in the cluster health chunk.</span></span>
+      <span data-ttu-id="484ba-102">Службы возвращается только в том случае, если родительское приложение, совпадающие с фильтром, указанного в описании запроса фрагмента данных о работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="484ba-102">The services are only returned if the parent application matches a filter specified in the cluster health chunk query description.</span></span>
+      <span data-ttu-id="484ba-103">Один фильтр может соответствовать нуля, одной или нескольких служб, в зависимости от его свойства.</span><span class="sxs-lookup"><span data-stu-id="484ba-103">One filter can match zero, one or multiple services, depending on its properties.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "<span data-ttu-id=\"484ba-104\">Фильтр состояния работоспособности служб.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-104\">The filter for the health state of the services.</span></span> <span data-ttu-id=\"484ba-105\">Она позволяет выбора служб, если они совпадают, данные о состоянии работоспособности нужное.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-105\">It allows selecting services if they match the desired health states.</span></span>\n<span data-ttu-id=\"484ba-106\">Возможные значения — целочисленное значение одного из приведенных ниже состояний работоспособности.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-106\">The possible values are integer value of one of the following health states.</span></span> <span data-ttu-id=\"484ba-107\">Возвращаются только те службы, которые соответствуют заданному фильтру.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-107\">Only services that match the filter are returned.</span></span> <span data-ttu-id=\"484ba-108\">Все службы используются для оценки состояния работоспособности кластера статистическая обработка.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-108\">All services are used to evaluate the cluster aggregated health state.</span></span>\n<span data-ttu-id=\"484ba-109\">Если не указан, значение по умолчанию — None, если не указано имя службы.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-109\">If not specified, default value is None, unless the service name is specified.</span></span> <span data-ttu-id=\"484ba-110\">Если фильтр имеет значение по умолчанию и указано имя службы, возвращаются сопоставления службы.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-110\">If the filter has default value and service name is specified, the matching service is returned.</span></span>\n<span data-ttu-id=\"484ba-111\">Значения состояния представляют собой перечисление на основе флага, поэтому значение может представлять собой сочетание этих значений, полученное с помощью битового оператора \"ИЛИ\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-111\">The state values are flag-based enumeration, so the value could be a combination of these values obtained using bitwise 'OR' operator.</span></span>\n<span data-ttu-id=\"484ba-112\">Например если указано значение 6, она соответствует служб со значениями healthstate из ОК (2) \"и\" Warning \"(4).</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-112\">For example, if the provided value is 6, it matches services with HealthState value of OK (2) and Warning (4).</span></span>\n- <span data-ttu-id=\"484ba-113\">По умолчанию — значение по умолчанию.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-113\">Default - Default value.</span></span> <span data-ttu-id=\"484ba-114\">Соответствует любому значению HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-114\">Matches any HealthState.</span></span> <span data-ttu-id=\"484ba-115\">Значение равно нулю.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-115\">The value is zero.</span></span>\n- <span data-ttu-id=\"484ba-116\">None — фильтр, который не совпадает с любым значением HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-116\">None - Filter that doesn't match any HealthState value.</span></span> <span data-ttu-id=\"484ba-117\">Используется для возвращения нуля результатов для определенной коллекции состояний.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-117\">Used in order to return no results on a given collection of states.</span></span> <span data-ttu-id=\"484ba-118\">Значение равно\_1.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-118\">The value is 1.</span></span>\n- <span data-ttu-id=\"484ba-119\">ОК — фильтр, извлекающий входные данные с HealthState со значением ОК.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-119\">Ok - Filter that matches input with HealthState value Ok.</span></span> <span data-ttu-id=\"484ba-120\">Значение равно 2.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-120\">The value is 2.</span></span>\n- <span data-ttu-id=\"484ba-121\">Warning — фильтр, извлекающий входные данные с HealthState со значением предупреждение.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-121\">Warning - Filter that matches input with HealthState value Warning.</span></span> <span data-ttu-id=\"484ba-122\">Значение равно 4.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-122\">The value is 4.</span></span>\n- <span data-ttu-id=\"484ba-123\">Error — фильтр, извлекающий входные данные с HealthState со значением ошибки.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-123\">Error - Filter that matches input with HealthState value Error.</span></span> <span data-ttu-id=\"484ba-124\">Значение равно\_8.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-124\">The value is 8.</span></span>\n- <span data-ttu-id=\"484ba-125\">ALL — фильтр, извлекающий входные данные с любым значением HealthState.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-125\">All - Filter that matches input with any HealthState value.</span></span> <span data-ttu-id=\"484ba-126\">Значение равно 65 535.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-126\">The value is 65535.</span></span> <span data-ttu-id=\"484ba-127\">Значение по умолчанию: 0.</span><span class=\"sxs-lookup\"><span data-stu-id=\"484ba-127\">Default value: 0.</span></span>\n"
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+    name: partitionFilters
+    fullName: partitionFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="484ba-128">Определяет список фильтров, которые указывают, какие секции должны быть включены в работоспособности кластера, возвращенный Фрагментирование как дочерние элементы службы.</span><span class="sxs-lookup"><span data-stu-id="484ba-128">Defines a list of filters that specify which partitions to be included in the returned cluster health chunk as children of the service.</span></span> <span data-ttu-id="484ba-129">Секции, возвращаются только в том случае, если фильтр совпадает с родительской службы.</span><span class="sxs-lookup"><span data-stu-id="484ba-129">The partitions are returned only if the parent service matches a filter.</span></span>
+      <span data-ttu-id="484ba-130">Если список пуст, возвращается ни одной секции.</span><span class="sxs-lookup"><span data-stu-id="484ba-130">If the list is empty, no partitions are returned.</span></span> <span data-ttu-id="484ba-131">Все секции используются для оценки состояния работоспособности службы статистическая обработка проводится родительского, вне зависимости от фильтров входа.</span><span class="sxs-lookup"><span data-stu-id="484ba-131">All the partitions are used to evaluate the parent service aggregated health state, regardless of the input filters.</span></span>
+      <span data-ttu-id="484ba-132">Фильтр службы может указать несколько фильтров секции.</span><span class="sxs-lookup"><span data-stu-id="484ba-132">The service filter may specify multiple partition filters.</span></span>
+      <span data-ttu-id="484ba-133">Например его можно указать фильтр для возврата всех секций с состоянием работоспособности ошибки и другого фильтра, чтобы всегда включать секции, определенной по его идентификатору секции.</span><span class="sxs-lookup"><span data-stu-id="484ba-133">For example, it can specify a filter to return all partitions with health state Error and another filter to always include a partition identified by its partition ID.</span></span>
+    optional: true
+    syntax:
+      content: 'partitionFilters?: PartitionHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    name: serviceNameFilter
+    fullName: serviceNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="484ba-134">Имя службы, соответствующие критерию фильтра.</span><span class="sxs-lookup"><span data-stu-id="484ba-134">The name of the service that matches the filter.</span></span> <span data-ttu-id="484ba-135">Фильтр применяется только к определенную службу, если он существует.</span><span class="sxs-lookup"><span data-stu-id="484ba-135">The filter is applied only to the specified service, if it exists.</span></span>
+      <span data-ttu-id="484ba-136">Если служба не существует, служба не возвращается в фрагмент данных о работоспособности кластера, на основе этого фильтра.</span><span class="sxs-lookup"><span data-stu-id="484ba-136">If the service doesn't exist, no service is returned in the cluster health chunk based on this filter.</span></span>
+      <span data-ttu-id="484ba-137">Если служба существует, она будет включена как дочерние приложения, если состояние работоспособности соответствует другие свойства фильтра.</span><span class="sxs-lookup"><span data-stu-id="484ba-137">If the service exists, it is included as the application's child if the health state matches the other filter properties.</span></span>
+      <span data-ttu-id="484ba-138">Если не указан, все службы, которые соответствуют родительские фильтры (если таковые имеются) принимать во внимание и противопоставляется других элементов фильтра, как фильтр состояния работоспособности.</span><span class="sxs-lookup"><span data-stu-id="484ba-138">If not specified, all services that match the parent filters (if any) are taken into consideration and matched against the other filter members, like health state filter.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter[]'
+    name: 'PartitionHealthStateFilter[]'
+    spec.typeScript:
+      - name: PartitionHealthStateFilter
+        fullName: PartitionHealthStateFilter
+        uid: '@azure/servicefabric.PartitionHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

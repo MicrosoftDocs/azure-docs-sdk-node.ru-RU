@@ -9,6 +9,7 @@ items:
       - '@azure/ms-rest-js.WebResource.clone'
       - '@azure/ms-rest-js.WebResource.formData'
       - '@azure/ms-rest-js.WebResource.headers'
+      - '@azure/ms-rest-js.WebResource.keepAlive'
       - '@azure/ms-rest-js.WebResource.method'
       - '@azure/ms-rest-js.WebResource.onDownloadProgress'
       - '@azure/ms-rest-js.WebResource.onUploadProgress'
@@ -28,8 +29,8 @@ items:
       - typeScript
     type: class
     summary: |
-      <span data-ttu-id="6b2d5-101">Создает новый объект WebResource.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-101">Creates a new WebResource object.</span></span>
-      <span data-ttu-id="6b2d5-102">Этот класс предоставляет абстракцию вызов REST, когда библиотека / независимой от реализации и упаковки необходимые свойства для инициирования запроса.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-102">This class provides an abstraction over a REST call by being library / implementation agnostic and wrapping the necessary properties to initiate a request.</span></span>
+      <span data-ttu-id="c9327-101">Создает новый объект WebResource.</span><span class="sxs-lookup"><span data-stu-id="c9327-101">Creates a new WebResource object.</span></span>
+      <span data-ttu-id="c9327-102">Этот класс предоставляет абстракцию вызов REST, когда библиотека / независимой от реализации и упаковки необходимые свойства для инициирования запроса.</span><span class="sxs-lookup"><span data-stu-id="c9327-102">This class provides an abstraction over a REST call by being library / implementation agnostic and wrapping the necessary properties to initiate a request.</span></span>
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.WebResource.abortSignal'
     name: abortSignal
@@ -67,7 +68,7 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="6b2d5-103">Клонируйте этот объект запроса WebResource HTTP.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-103">Clone this WebResource HTTP request object.</span></span>
+    summary: <span data-ttu-id="c9327-103">Клонируйте этот объект запроса WebResource HTTP.</span><span class="sxs-lookup"><span data-stu-id="c9327-103">Clone this WebResource HTTP request object.</span></span>
     syntax:
       content: function clone()
       parameters: []
@@ -104,6 +105,21 @@ items:
         type:
           - '@azure/ms-rest-js.HttpHeaders'
     package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.WebResource.keepAlive'
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'keepAlive?: boolean'
+      return:
+        type:
+          - boolean
+    package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.WebResource.method'
     name: method
     fullName: method
@@ -125,7 +141,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="6b2d5-104">Обратный вызов, который запускается после загрузки.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-104">Callback which fires upon download progress.</span></span>'
+    summary: '<span data-ttu-id="c9327-104">Обратный вызов, который запускается после загрузки.</span><span class="sxs-lookup"><span data-stu-id="c9327-104">Callback which fires upon download progress.</span></span>'
     optional: true
     syntax:
       content: 'onDownloadProgress?: (progress: TransferProgressEvent) => void'
@@ -140,7 +156,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="6b2d5-105">Обратный вызов, который срабатывает при ход передачи.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-105">Callback which fires upon upload progress.</span></span>'
+    summary: '<span data-ttu-id="c9327-105">Обратный вызов, который срабатывает при ход передачи.</span><span class="sxs-lookup"><span data-stu-id="c9327-105">Callback which fires upon upload progress.</span></span>'
     optional: true
     syntax:
       content: 'onUploadProgress?: (progress: TransferProgressEvent) => void'
@@ -155,7 +171,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="6b2d5-106">Функция, которая возвращает правильный OperationResponse для сочетания OperationSpec и HttpOperationResponse.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-106">A function that returns the proper OperationResponse for the given OperationSpec and HttpOperationResponse combination.</span></span> <span data-ttu-id="6b2d5-107">Если это не определен, используется код простой состояние уточняющего запроса.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-107">If this is undefined, then a simple status code lookup will be used.</span></span>'
+    summary: '<span data-ttu-id="c9327-106">Функция, которая возвращает правильный OperationResponse для сочетания OperationSpec и HttpOperationResponse.</span><span class="sxs-lookup"><span data-stu-id="c9327-106">A function that returns the proper OperationResponse for the given OperationSpec and HttpOperationResponse combination.</span></span> <span data-ttu-id="c9327-107">Если это не определен, используется код простой состояние уточняющего запроса.</span><span class="sxs-lookup"><span data-stu-id="c9327-107">If this is undefined, then a simple status code lookup will be used.</span></span>'
     optional: true
     syntax:
       content: 'operationResponseGetter?: (operationSpec: OperationSpec, response: HttpOperationResponse) => OperationResponse'
@@ -184,14 +200,14 @@ items:
     type: method
     langs:
       - typeScript
-    summary: <span data-ttu-id="6b2d5-108">Готовит запрос.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-108">Prepares the request.</span></span>
+    summary: <span data-ttu-id="c9327-108">Готовит запрос.</span><span class="sxs-lookup"><span data-stu-id="c9327-108">Prepares the request.</span></span>
     syntax:
       content: 'function prepare(options: RequestPrepareOptions)'
       parameters:
         - id: options
           type:
             - '@azure/ms-rest-js.RequestPrepareOptions'
-          description: <span data-ttu-id="6b2d5-109">Параметры для обеспечения подготовки запроса.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-109">Options to provide for preparing the request.</span></span>
+          description: <span data-ttu-id="c9327-109">Параметры для обеспечения подготовки запроса.</span><span class="sxs-lookup"><span data-stu-id="c9327-109">Options to provide for preparing the request.</span></span>
       return:
         type:
           - '@azure/ms-rest-js.WebResource'
@@ -233,7 +249,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="6b2d5-110">Ли HttpOperationResponse следует выполнить десериализацию.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-110">Whether or not the HttpOperationResponse should be deserialized.</span></span> <span data-ttu-id="6b2d5-111">Если это не определен, следует выполнить десериализацию HttpOperationResponse.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-111">If this is undefined, then the HttpOperationResponse should be deserialized.</span></span>'
+    summary: '<span data-ttu-id="c9327-110">Ли HttpOperationResponse следует выполнить десериализацию.</span><span class="sxs-lookup"><span data-stu-id="c9327-110">Whether or not the HttpOperationResponse should be deserialized.</span></span> <span data-ttu-id="c9327-111">Если это не определен, следует выполнить десериализацию HttpOperationResponse.</span><span class="sxs-lookup"><span data-stu-id="c9327-111">If this is undefined, then the HttpOperationResponse should be deserialized.</span></span>'
     optional: true
     syntax:
       content: 'shouldDeserialize?: boolean | (response: HttpOperationResponse) => boolean'
@@ -248,7 +264,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="6b2d5-112">Ли тело HttpOperationResponse следует считать поток.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-112">Whether or not the body of the HttpOperationResponse should be treated as a stream.</span></span>
+    summary: <span data-ttu-id="c9327-112">Ли тело HttpOperationResponse следует считать поток.</span><span class="sxs-lookup"><span data-stu-id="c9327-112">Whether or not the body of the HttpOperationResponse should be treated as a stream.</span></span>
     optional: true
     syntax:
       content: 'streamResponseBody?: boolean'
@@ -290,20 +306,20 @@ items:
     type: method
     langs:
       - typeScript
-    summary: '<span data-ttu-id="6b2d5-113">Проверяет, что определенные обязательные свойства, такие как метод, URL-адрес, заголовки [«Content-Type»], [«принять язык»].</span><span class="sxs-lookup"><span data-stu-id="6b2d5-113">Validates that the required properties such as method, url, headers["Content-Type"], headers["accept-language"] are defined.</span></span> <span data-ttu-id="6b2d5-114">Он будет выдавать ошибку, если одно из свойств упомянутое выше не определены.</span><span class="sxs-lookup"><span data-stu-id="6b2d5-114">It will throw an error if one of the above mentioned properties are not defined.</span></span>'
+    summary: '<span data-ttu-id="c9327-113">Проверяет, что определенные обязательные свойства, такие как метод, URL-адрес, заголовки [«Content-Type»], [«принять язык»].</span><span class="sxs-lookup"><span data-stu-id="c9327-113">Validates that the required properties such as method, url, headers["Content-Type"], headers["accept-language"] are defined.</span></span> <span data-ttu-id="c9327-114">Он будет выдавать ошибку, если одно из свойств упомянутое выше не определены.</span><span class="sxs-lookup"><span data-stu-id="c9327-114">It will throw an error if one of the above mentioned properties are not defined.</span></span>'
     syntax:
       content: function validateRequestProperties()
       parameters: []
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.WebResource.constructor'
-    name: 'WebResource(string, HttpMethods, any, [key: string]: any, [key: string]: any | HttpHeaders, boolean, boolean, AbortSignalLike, number, (progress: TransferProgressEvent) => void, (progress: TransferProgressEvent) => void, ProxySettings)'
+    name: 'WebResource(string, HttpMethods, any, [key: string]: any, [key: string]: any | HttpHeaders, boolean, boolean, AbortSignalLike, number, (progress: TransferProgressEvent) => void, (progress: TransferProgressEvent) => void, ProxySettings, boolean)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'new WebResource(url?: string, method?: HttpMethods, body?: any, query?: [key: string]: any, headers?: [key: string]: any | HttpHeaders, streamResponseBody?: boolean, withCredentials?: boolean, abortSignal?: AbortSignalLike, timeout?: number, onUploadProgress?: (progress: TransferProgressEvent) => void, onDownloadProgress?: (progress: TransferProgressEvent) => void, proxySettings?: ProxySettings)'
+      content: 'new WebResource(url?: string, method?: HttpMethods, body?: any, query?: [key: string]: any, headers?: [key: string]: any | HttpHeaders, streamResponseBody?: boolean, withCredentials?: boolean, abortSignal?: AbortSignalLike, timeout?: number, onUploadProgress?: (progress: TransferProgressEvent) => void, onDownloadProgress?: (progress: TransferProgressEvent) => void, proxySettings?: ProxySettings, keepAlive?: boolean)'
       parameters:
         - id: url
           type:
@@ -363,6 +379,11 @@ items:
         - id: proxySettings
           type:
             - '@azure/ms-rest-js.ProxySettings'
+          description: ''
+          optional: true
+        - id: keepAlive
+          type:
+            - boolean
           description: ''
           optional: true
     package: '@azure/ms-rest-js'

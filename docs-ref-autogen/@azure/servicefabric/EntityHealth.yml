@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.EntityHealth'
+    name: EntityHealth
+    fullName: EntityHealth
+    children:
+      - '@azure/servicefabric.EntityHealth.aggregatedHealthState'
+      - '@azure/servicefabric.EntityHealth.healthEvents'
+      - '@azure/servicefabric.EntityHealth.healthStatistics'
+      - '@azure/servicefabric.EntityHealth.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="56e4c-101">Сведения о работоспособности общими для всех сущностей в кластере.</span><span class="sxs-lookup"><span data-stu-id="56e4c-101">Health information common to all entities in the cluster.</span></span> <span data-ttu-id="56e4c-102">Он содержит сводное состояние работоспособности, события работоспособности и оценки неработоспособности.</span><span class="sxs-lookup"><span data-stu-id="56e4c-102">It contains the aggregated health state, health events and unhealthy evaluation.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EntityHealth.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="56e4c-103">HealthState, представляющий общего состояния работоспособности сущности, вычисляемые диспетчером работоспособности.</span><span class="sxs-lookup"><span data-stu-id="56e4c-103">The HealthState representing the aggregated health state of the entity computed by Health Manager.</span></span>
+      <span data-ttu-id="56e4c-104">Оценка работоспособности сущности отражает все события, указанное в отчетах для сущности и его дочерние элементы (если таковые имеются).</span><span class="sxs-lookup"><span data-stu-id="56e4c-104">The health evaluation of the entity reflects all events reported on the entity and its children (if any).</span></span>
+      <span data-ttu-id="56e4c-105">Статистическая обработка выполняется путем применения политики нужного работоспособности.</span><span class="sxs-lookup"><span data-stu-id="56e4c-105">The aggregation is done by applying the desired health policy.</span></span> <span data-ttu-id="56e4c-106">Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»</span><span class="sxs-lookup"><span data-stu-id="56e4c-106">Possible values include: 'Invalid', 'Ok', 'Warning', 'Error', 'Unknown'</span></span>
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EntityHealth.healthEvents'
+    name: healthEvents
+    fullName: healthEvents
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="56e4c-107">Список событий работоспособности сущности.</span><span class="sxs-lookup"><span data-stu-id="56e4c-107">The list of health events reported on the entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthEvents?: HealthEvent[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvent[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EntityHealth.healthStatistics'
+    name: healthStatistics
+    fullName: healthStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="56e4c-108">Показывает статистику работоспособности для всех типов дочерние элементы запрошенного объекта.</span><span class="sxs-lookup"><span data-stu-id="56e4c-108">Shows the health statistics for all children types of the queried entity.</span></span>
+    optional: true
+    syntax:
+      content: 'healthStatistics?: HealthStatistics'
+      return:
+        type:
+          - '@azure/servicefabric.HealthStatistics'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.EntityHealth.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="56e4c-109">Оценки неработоспособности, в которых показано, почему текущего общего состояния работоспособности был возвращен диспетчером работоспособности.</span><span class="sxs-lookup"><span data-stu-id="56e4c-109">The unhealthy evaluations that show why the current aggregated health state was returned by Health Manager.</span></span>'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvent[]'
+    name: 'HealthEvent[]'
+    spec.typeScript:
+      - name: HealthEvent
+        fullName: HealthEvent
+        uid: '@azure/servicefabric.HealthEvent'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.HealthStatistics'
+    name: HealthStatistics
+    spec.typeScript:
+      - name: HealthStatistics
+        fullName: HealthStatistics
+        uid: '@azure/servicefabric.HealthStatistics'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

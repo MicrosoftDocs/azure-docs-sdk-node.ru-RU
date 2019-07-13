@@ -7,10 +7,12 @@ items:
       - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.baseImageTriggerType'
       - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.name'
       - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.status'
+      - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.updateTriggerEndpoint'
+      - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.updateTriggerPayloadType'
     langs:
       - typeScript
     type: interface
-    summary: <span data-ttu-id="983d9-101">Обновление базового образа зависимостей триггера свойства.</span><span class="sxs-lookup"><span data-stu-id="983d9-101">The properties for updating base image dependency trigger.</span></span>
+    summary: <span data-ttu-id="743bb-101">Обновление базового образа зависимостей триггера свойства.</span><span class="sxs-lookup"><span data-stu-id="743bb-101">The properties for updating base image dependency trigger.</span></span>
     package: '@azure/arm-containerregistry'
   - uid: '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.baseImageTriggerType'
     name: baseImageTriggerType
@@ -19,7 +21,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="983d9-102">Тип триггера автоматического обновления зависимость базового образа.</span><span class="sxs-lookup"><span data-stu-id="983d9-102">The type of the auto trigger for base image dependency updates.</span></span> <span data-ttu-id="983d9-103">Ниже перечислены возможные значения. «All», «среда выполнения»</span><span class="sxs-lookup"><span data-stu-id="983d9-103">Possible values include: ''All'', ''Runtime''</span></span>'
+    summary: '<span data-ttu-id="743bb-102">Тип триггера автоматического обновления зависимость базового образа.</span><span class="sxs-lookup"><span data-stu-id="743bb-102">The type of the auto trigger for base image dependency updates.</span></span> <span data-ttu-id="743bb-103">Ниже перечислены возможные значения. «All», «среда выполнения»</span><span class="sxs-lookup"><span data-stu-id="743bb-103">Possible values include: ''All'', ''Runtime''</span></span>'
     optional: true
     syntax:
       content: 'baseImageTriggerType?: BaseImageTriggerType'
@@ -34,7 +36,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: <span data-ttu-id="983d9-104">Имя триггера.</span><span class="sxs-lookup"><span data-stu-id="983d9-104">The name of the trigger.</span></span>
+    summary: <span data-ttu-id="743bb-104">Имя триггера.</span><span class="sxs-lookup"><span data-stu-id="743bb-104">The name of the trigger.</span></span>
     syntax:
       content: 'name: string'
       return:
@@ -48,13 +50,43 @@ items:
     langs:
       - typeScript
     type: property
-    summary: '<span data-ttu-id="983d9-105">Текущее состояние триггера.</span><span class="sxs-lookup"><span data-stu-id="983d9-105">The current status of trigger.</span></span> <span data-ttu-id="983d9-106">Ниже перечислены возможные значения. «Отключено», «Enabled».</span><span class="sxs-lookup"><span data-stu-id="983d9-106">Possible values include: ''Disabled'', ''Enabled''.</span></span> <span data-ttu-id="983d9-107">Значение по умолчанию: «Enabled».</span><span class="sxs-lookup"><span data-stu-id="983d9-107">Default value: ''Enabled''.</span></span>'
+    summary: '<span data-ttu-id="743bb-105">Текущее состояние триггера.</span><span class="sxs-lookup"><span data-stu-id="743bb-105">The current status of trigger.</span></span> <span data-ttu-id="743bb-106">Ниже перечислены возможные значения. «Отключено», «Enabled».</span><span class="sxs-lookup"><span data-stu-id="743bb-106">Possible values include: ''Disabled'', ''Enabled''.</span></span> <span data-ttu-id="743bb-107">Значение по умолчанию: «Enabled».</span><span class="sxs-lookup"><span data-stu-id="743bb-107">Default value: ''Enabled''.</span></span>'
     optional: true
     syntax:
       content: 'status?: TriggerStatus'
       return:
         type:
           - '@azure/arm-containerregistry.TriggerStatus'
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.updateTriggerEndpoint'
+    name: updateTriggerEndpoint
+    fullName: updateTriggerEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="743bb-108">Конечная точка активирует URL-адрес для получения обновлений.</span><span class="sxs-lookup"><span data-stu-id="743bb-108">The endpoint URL for receiving update triggers.</span></span>
+    optional: true
+    syntax:
+      content: 'updateTriggerEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.updateTriggerPayloadType'
+    name: updateTriggerPayloadType
+    fullName: updateTriggerPayloadType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="743bb-109">Тип полезных данных текста для триггеров update базового образа.</span><span class="sxs-lookup"><span data-stu-id="743bb-109">Type of Payload body for Base image update triggers.</span></span> <span data-ttu-id="743bb-110">Ниже перечислены возможные значения. «Default», «Токен»</span><span class="sxs-lookup"><span data-stu-id="743bb-110">Possible values include: ''Default'', ''Token''</span></span>'
+    optional: true
+    syntax:
+      content: 'updateTriggerPayloadType?: UpdateTriggerPayloadType'
+      return:
+        type:
+          - '@azure/arm-containerregistry.UpdateTriggerPayloadType'
     package: '@azure/arm-containerregistry'
 references:
   - uid: '@azure/arm-containerregistry.BaseImageTriggerType'
@@ -69,3 +101,9 @@ references:
       - name: TriggerStatus
         fullName: TriggerStatus
         uid: '@azure/arm-containerregistry.TriggerStatus'
+  - uid: '@azure/arm-containerregistry.UpdateTriggerPayloadType'
+    name: UpdateTriggerPayloadType
+    spec.typeScript:
+      - name: UpdateTriggerPayloadType
+        fullName: UpdateTriggerPayloadType
+        uid: '@azure/arm-containerregistry.UpdateTriggerPayloadType'

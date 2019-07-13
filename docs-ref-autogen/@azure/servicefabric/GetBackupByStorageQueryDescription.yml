@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription'
+    name: GetBackupByStorageQueryDescription
+    fullName: GetBackupByStorageQueryDescription
+    children:
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.backupEntity'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.latest'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter'
+      - '@azure/servicefabric.GetBackupByStorageQueryDescription.storage'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="6118a-101">Описывает дополнительные фильтры, применяемые при составлении списка резервных копий и сведения о хранилище резервных копий, откуда необходимо получать резервные копии.</span><span class="sxs-lookup"><span data-stu-id="6118a-101">Describes additional filters to be applied, while listing backups, and backup storage details from where to fetch the backups.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.backupEntity'
+    name: backupEntity
+    fullName: backupEntity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6118a-102">Указывает сущность, для которого необходимо перечислить резервные копии.</span><span class="sxs-lookup"><span data-stu-id="6118a-102">Indicates the entity for which to enumerate backups.</span></span>'
+    syntax:
+      content: 'backupEntity: BackupEntityUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupEntityUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.endDateTimeFilter'
+    name: endDateTimeFilter
+    fullName: endDateTimeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6118a-103">Указывает окончание даты и времени в формате ISO8601, до которого необходимо перечислить резервные копии.</span><span class="sxs-lookup"><span data-stu-id="6118a-103">Specifies the end date time in ISO8601 till which to enumerate backups.</span></span> <span data-ttu-id="6118a-104">Если не указан, резервное копирование выполняется перечисление до конца.</span><span class="sxs-lookup"><span data-stu-id="6118a-104">If not specified, backups are enumerated till the end.</span></span>'
+    optional: true
+    syntax:
+      content: 'endDateTimeFilter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.latest'
+    name: latest
+    fullName: latest
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6118a-105">Если задано значение true, Получает самую последнюю резервную копию (в пределах определенного диапазона времени) для каждой секции в группе указанной сущности резервного копирования.</span><span class="sxs-lookup"><span data-stu-id="6118a-105">If specified as true, gets the most recent backup (within the specified time range) for every partition under the specified backup entity.</span></span> <span data-ttu-id="6118a-106">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="6118a-106">Default value: false.</span></span>'
+    optional: true
+    syntax:
+      content: 'latest?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.startDateTimeFilter'
+    name: startDateTimeFilter
+    fullName: startDateTimeFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6118a-107">Указывает на начало даты и времени в формате ISO8601, из которого необходимо перечислить резервные копии.</span><span class="sxs-lookup"><span data-stu-id="6118a-107">Specifies the start date time in ISO8601 from which to enumerate backups.</span></span> <span data-ttu-id="6118a-108">Если не указан, резервное копирование выполняется перечисление с самого начала.</span><span class="sxs-lookup"><span data-stu-id="6118a-108">If not specified, backups are enumerated from the beginning.</span></span>'
+    optional: true
+    syntax:
+      content: 'startDateTimeFilter?: Date'
+      return:
+        type:
+          - Date
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.GetBackupByStorageQueryDescription.storage'
+    name: storage
+    fullName: storage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="6118a-109">Описывает параметры для хранения резервных копий, с которого следует перечислить резервные копии.</span><span class="sxs-lookup"><span data-stu-id="6118a-109">Describes the parameters for the backup storage from where to enumerate backups.</span></span> <span data-ttu-id="6118a-110">Это является необязательным и по умолчанию перечисляются резервных копий из хранилища резервных копий, где этот резервную сущность в настоящее время архивируется (как указано в политике резервного копирования).</span><span class="sxs-lookup"><span data-stu-id="6118a-110">This is optional and by default backups are enumerated from the backup storage where this backup entity is currently being backed up (as specified in backup policy).</span></span> <span data-ttu-id="6118a-111">Этот параметр полезен иметь возможность перечислить резервные копии из другого кластера, где планируется восстановить.</span><span class="sxs-lookup"><span data-stu-id="6118a-111">This parameter is useful to be able to enumerate backups from another cluster where you may intend to restore.</span></span>'
+    syntax:
+      content: 'storage: BackupStorageDescriptionUnion'
+      return:
+        type:
+          - '@azure/servicefabric.BackupStorageDescriptionUnion'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.BackupEntityUnion'
+    name: BackupEntityUnion
+    spec.typeScript:
+      - name: BackupEntityUnion
+        fullName: BackupEntityUnion
+        uid: '@azure/servicefabric.BackupEntityUnion'
+  - uid: '@azure/servicefabric.BackupStorageDescriptionUnion'
+    name: BackupStorageDescriptionUnion
+    spec.typeScript:
+      - name: BackupStorageDescriptionUnion
+        fullName: BackupStorageDescriptionUnion
+        uid: '@azure/servicefabric.BackupStorageDescriptionUnion'

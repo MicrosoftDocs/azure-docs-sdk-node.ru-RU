@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    fullName: ClusterHealthPolicy
+    children:
+      - '@azure/servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap'
+      - '@azure/servicefabric.ClusterHealthPolicy.considerWarningAsError'
+      - '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications'
+      - '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="7e926-101">Определяет политику работоспособности, используемые для оценки работоспособности кластера или узла кластера.</span><span class="sxs-lookup"><span data-stu-id="7e926-101">Defines a health policy used to evaluate the health of the cluster or of a cluster node.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.applicationTypeHealthPolicyMap'
+    name: applicationTypeHealthPolicyMap
+    fullName: applicationTypeHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="7e926-102">Определяет сопоставление, содержащее максимальный процент неработоспособных приложений для конкретных типов приложений.</span><span class="sxs-lookup"><span data-stu-id="7e926-102">Defines a map with max percentage unhealthy applications for specific application types.</span></span>
+      <span data-ttu-id="7e926-103">Каждая запись содержит ключ, представляющий имя типа приложения, и значение — целое число, представляющее процент MaxPercentUnhealthyApplications, используемый для оценки приложений для указанного типа приложения.</span><span class="sxs-lookup"><span data-stu-id="7e926-103">Each entry specifies as key the application type name and as value an integer that represents the MaxPercentUnhealthyApplications percentage used to evaluate the applications of the specified application type.</span></span>
+      <span data-ttu-id="7e926-104">Сопоставление политики работоспособности для типа приложения используется во время оценки работоспособности кластера для описания особых типов приложений.</span><span class="sxs-lookup"><span data-stu-id="7e926-104">The application type health policy map can be used during cluster health evaluation to describe special application types.</span></span>
+      <span data-ttu-id="7e926-105">Типы приложений, включенные в сопоставление, анализируются с учетом процента, заданного в схеме, а не глобального показателя MaxPercentUnhealthyApplications, определенного в политике работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="7e926-105">The application types included in the map are evaluated against the percentage specified in the map, and not with the global MaxPercentUnhealthyApplications defined in the cluster health policy.</span></span>
+      <span data-ttu-id="7e926-106">Приложения типов, указанных в сопоставлении, не учитываются в рамках глобального пула приложений.</span><span class="sxs-lookup"><span data-stu-id="7e926-106">The applications of application types specified in the map are not counted against the global pool of applications.</span></span>
+      <span data-ttu-id="7e926-107">Например, если некоторые приложения принадлежат к типу "критический", администратор кластера может добавить в сопоставление запись для этого типа и присвоить ему значение 0 % (т. е. не допускать каких-либо ошибок).</span><span class="sxs-lookup"><span data-stu-id="7e926-107">For example, if some applications of a type are critical, the cluster administrator can add an entry to the map for that application type and assign it a value of 0% (that is, do not tolerate any failures).</span></span>
+      <span data-ttu-id="7e926-108">Все остальные приложения можно проанализировать при показателе MaxPercentUnhealthyApplications 20 %, чтобы допускать некоторые ошибки на тысячи экземпляров приложения.</span><span class="sxs-lookup"><span data-stu-id="7e926-108">All other applications can be evaluated with MaxPercentUnhealthyApplications set to 20% to tolerate some failures out of the thousands of application instances.</span></span>
+      <span data-ttu-id="7e926-109">Сопоставление политики работоспособности для типа приложения используется только в том случае, если манифест кластера включает оценку работоспособности типа приложения с использованием записи конфигурации для HealthManager/EnableApplicationTypeHealthEvaluation.</span><span class="sxs-lookup"><span data-stu-id="7e926-109">The application type health policy map is used only if the cluster manifest enables application type health evaluation using the configuration entry for HealthManager/EnableApplicationTypeHealthEvaluation.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationTypeHealthPolicyMap?: ApplicationTypeHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="7e926-110">Указывает, учитываются ли предупреждения с той же степенью серьезности, что и ошибки.</span><span class="sxs-lookup"><span data-stu-id="7e926-110">Indicates whether warnings are treated with the same severity as errors.</span></span> <span data-ttu-id="7e926-111">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="7e926-111">Default value: false.</span></span>'
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyApplications'
+    name: maxPercentUnhealthyApplications
+    fullName: maxPercentUnhealthyApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="7e926-112">Максимально допустимый процент неработоспособных приложений, по достижении которого отображается сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="7e926-112">The maximum allowed percentage of unhealthy applications before reporting an error.</span></span> <span data-ttu-id="7e926-113">Например, чтобы разрешить 10 % неработоспособных приложений, это значение должно быть равно 10.</span><span class="sxs-lookup"><span data-stu-id="7e926-113">For example, to allow 10% of applications to be unhealthy, this value would be 10.</span></span>
+      <span data-ttu-id="7e926-114">Это значение указывает максимально допустимый процент неработоспособных приложений, превышение которого вызывает состояние "Error" при оценке кластера.</span><span class="sxs-lookup"><span data-stu-id="7e926-114">The percentage represents the maximum tolerated percentage of applications that can be unhealthy before the cluster is considered in error.</span></span>
+      <span data-ttu-id="7e926-115">Если процент учитывается, но имеется по крайней мере одно неработоспособное приложение, то состояние работоспособности оценивается как "Warning".</span><span class="sxs-lookup"><span data-stu-id="7e926-115">If the percentage is respected but there is at least one unhealthy application, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="7e926-116">Это значение вычисляется путем деления числа неработоспособных приложений на общее число экземпляров приложения в кластере, за исключением приложений, типы которых указаны в ApplicationTypeHealthPolicyMap.</span><span class="sxs-lookup"><span data-stu-id="7e926-116">This is calculated by dividing the number of unhealthy applications over the total number of application instances in the cluster, excluding applications of application types that are included in the ApplicationTypeHealthPolicyMap.</span></span>
+      <span data-ttu-id="7e926-117">Расчет округляется: на небольшом количестве приложений допускается один сбой.</span><span class="sxs-lookup"><span data-stu-id="7e926-117">The computation rounds up to tolerate one failure on small numbers of applications.</span></span> <span data-ttu-id="7e926-118">Значение в процентах по умолчанию равняется нулю.</span><span class="sxs-lookup"><span data-stu-id="7e926-118">Default percentage is zero.</span></span> <span data-ttu-id="7e926-119">Значение по умолчанию: 0.</span><span class="sxs-lookup"><span data-stu-id="7e926-119">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy.maxPercentUnhealthyNodes'
+    name: maxPercentUnhealthyNodes
+    fullName: maxPercentUnhealthyNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |
+      <span data-ttu-id="7e926-120">Максимально допустимый процент неработоспособных узлов, по достижении которого отображается сообщение об ошибке.</span><span class="sxs-lookup"><span data-stu-id="7e926-120">The maximum allowed percentage of unhealthy nodes before reporting an error.</span></span> <span data-ttu-id="7e926-121">Например, чтобы разрешить 10 % неработоспособных узлов, это значение должно быть равно 10.</span><span class="sxs-lookup"><span data-stu-id="7e926-121">For example, to allow 10% of nodes to be unhealthy, this value would be 10.</span></span>
+      <span data-ttu-id="7e926-122">Это значение указывает максимально допустимый процент неработоспособных узлов, превышение которого вызывает состояние "Error" при оценке кластера.</span><span class="sxs-lookup"><span data-stu-id="7e926-122">The percentage represents the maximum tolerated percentage of nodes that can be unhealthy before the cluster is considered in error.</span></span>
+      <span data-ttu-id="7e926-123">Если процент учитывается, но имеется по крайней мере один неработоспособный узел, то состояние работоспособности оценивается как "Warning".</span><span class="sxs-lookup"><span data-stu-id="7e926-123">If the percentage is respected but there is at least one unhealthy node, the health is evaluated as Warning.</span></span>
+      <span data-ttu-id="7e926-124">Это процентное значение вычисляется путем деления числа неработоспособных узлов за общее число узлов в кластере.</span><span class="sxs-lookup"><span data-stu-id="7e926-124">The percentage is calculated by dividing the number of unhealthy nodes over the total number of nodes in the cluster.</span></span>
+      <span data-ttu-id="7e926-125">Расчет округляется: на небольшом количестве узлов допускается один сбой.</span><span class="sxs-lookup"><span data-stu-id="7e926-125">The computation rounds up to tolerate one failure on small numbers of nodes.</span></span> <span data-ttu-id="7e926-126">Значение в процентах по умолчанию равняется нулю.</span><span class="sxs-lookup"><span data-stu-id="7e926-126">Default percentage is zero.</span></span>
+
+      <span data-ttu-id="7e926-127">В крупных кластерах всегда есть отключенные узлы или узлы в состоянии восстановления. Следует учитывать это при настройке параметра.</span><span class="sxs-lookup"><span data-stu-id="7e926-127">In large clusters, some nodes will always be down or out for repairs, so this percentage should be configured to tolerate that.</span></span> <span data-ttu-id="7e926-128">Значение по умолчанию: 0.</span><span class="sxs-lookup"><span data-stu-id="7e926-128">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem[]'
+    name: 'ApplicationTypeHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ApplicationTypeHealthPolicyMapItem
+        fullName: ApplicationTypeHealthPolicyMapItem
+        uid: '@azure/servicefabric.ApplicationTypeHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'

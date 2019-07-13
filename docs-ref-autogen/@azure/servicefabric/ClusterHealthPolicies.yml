@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthPolicies'
+    name: ClusterHealthPolicies
+    fullName: ClusterHealthPolicies
+    children:
+      - '@azure/servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap'
+      - '@azure/servicefabric.ClusterHealthPolicies.clusterHealthPolicy'
+    langs:
+      - typeScript
+    type: interface
+    summary: <span data-ttu-id="67b79-101">Политики работоспособности для оценки работоспособности кластера.</span><span class="sxs-lookup"><span data-stu-id="67b79-101">Health policies to evaluate cluster health.</span></span>
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicies.applicationHealthPolicyMap'
+    name: applicationHealthPolicyMap
+    fullName: applicationHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="67b79-102">Определяет сопоставление, содержащее политики работоспособности конкретного приложения для разных приложений.</span><span class="sxs-lookup"><span data-stu-id="67b79-102">Defines a map that contains specific application health policies for different applications.</span></span>
+      <span data-ttu-id="67b79-103">Каждая запись содержит ключ имя приложения и как значение, которое ApplicationHealthPolicy используемых для оценки работоспособности приложения.</span><span class="sxs-lookup"><span data-stu-id="67b79-103">Each entry specifies as key the application name and as value an ApplicationHealthPolicy used to evaluate the application health.</span></span>
+      <span data-ttu-id="67b79-104">Если приложение не указан в сопоставлении, оценка работоспособности приложения использует ApplicationHealthPolicy, найти в манифесте приложения или политики работоспособности приложения по умолчанию (если нет политики работоспособности, определенная в манифесте).</span><span class="sxs-lookup"><span data-stu-id="67b79-104">If an application is not specified in the map, the application health evaluation uses the ApplicationHealthPolicy found in its application manifest or the default application health policy (if no health policy is defined in the manifest).</span></span>
+      <span data-ttu-id="67b79-105">Сопоставление является пустым по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="67b79-105">The map is empty by default.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicyMap?: ApplicationHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthPolicies.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="67b79-106">Определяет политику работоспособности, используемые для оценки работоспособности кластера или узла кластера.</span><span class="sxs-lookup"><span data-stu-id="67b79-106">Defines a health policy used to evaluate the health of the cluster or of a cluster node.</span></span>'
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicyMapItem[]'
+    name: 'ApplicationHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ApplicationHealthPolicyMapItem
+        fullName: ApplicationHealthPolicyMapItem
+        uid: '@azure/servicefabric.ApplicationHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'

@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription'
+    name: ClusterHealthChunkQueryDescription
+    fullName: ClusterHealthChunkQueryDescription
+    children:
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationFilters'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationHealthPolicies'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.clusterHealthPolicy'
+      - '@azure/servicefabric.ClusterHealthChunkQueryDescription.nodeFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="d662e-101">Кластера работоспособности фрагмента данных описания запроса, который можно указать политики работоспособности для оценки работоспособности кластера и слишком выразительны фильтры для выбора какие сущности кластера для включения в ответ.</span><span class="sxs-lookup"><span data-stu-id="d662e-101">The cluster health chunk query description, which can specify the health policies to evaluate cluster health and very expressive filters to select which cluster entities to include in response.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationFilters'
+    name: applicationFilters
+    fullName: applicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="d662e-102">Определяет список фильтров, какие приложения должны быть включены в фрагмент данных о работоспособности возвращаемый кластера.</span><span class="sxs-lookup"><span data-stu-id="d662e-102">Defines a list of filters that specify which applications to be included in the returned cluster health chunk.</span></span>
+      <span data-ttu-id="d662e-103">Если не указано ни одного фильтра, приложения не возвращаются.</span><span class="sxs-lookup"><span data-stu-id="d662e-103">If no filters are specified, no applications are returned.</span></span> <span data-ttu-id="d662e-104">Все приложения используются для оценки состояния сводные данные о работоспособности кластера, вне зависимости от фильтров входа.</span><span class="sxs-lookup"><span data-stu-id="d662e-104">All the applications are used to evaluate the cluster's aggregated health state, regardless of the input filters.</span></span>
+      <span data-ttu-id="d662e-105">Фрагмент запроса работоспособности кластера может указать несколько фильтров приложений.</span><span class="sxs-lookup"><span data-stu-id="d662e-105">The cluster health chunk query may specify multiple application filters.</span></span>
+      <span data-ttu-id="d662e-106">Например можно указать фильтр для возврата всех приложений с состоянием работоспособности ошибки и другой фильтр, чтобы всегда включать приложения указанного типа приложения.</span><span class="sxs-lookup"><span data-stu-id="d662e-106">For example, it can specify a filter to return all applications with health state Error and another filter to always include applications of a specified application type.</span></span>
+    optional: true
+    syntax:
+      content: 'applicationFilters?: ApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.applicationHealthPolicies'
+    name: applicationHealthPolicies
+    fullName: applicationHealthPolicies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d662e-107">Определяет сопоставление политики работоспособности приложения, используемые для оценки работоспособности приложения или одного из его дочерних сущностей.</span><span class="sxs-lookup"><span data-stu-id="d662e-107">Defines the application health policy map used to evaluate the health of an application or one of its children entities.</span></span>'
+    optional: true
+    syntax:
+      content: 'applicationHealthPolicies?: ApplicationHealthPolicies'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationHealthPolicies'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.clusterHealthPolicy'
+    name: clusterHealthPolicy
+    fullName: clusterHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="d662e-108">Определяет политику работоспособности, используемые для оценки работоспособности кластера или узла кластера.</span><span class="sxs-lookup"><span data-stu-id="d662e-108">Defines a health policy used to evaluate the health of the cluster or of a cluster node.</span></span>'
+    optional: true
+    syntax:
+      content: 'clusterHealthPolicy?: ClusterHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ClusterHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ClusterHealthChunkQueryDescription.nodeFilters'
+    name: nodeFilters
+    fullName: nodeFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="d662e-109">Определяет список фильтров, какие узлы должны быть включены в фрагмент данных о работоспособности кластера, возвращенный.</span><span class="sxs-lookup"><span data-stu-id="d662e-109">Defines a list of filters that specify which nodes to be included in the returned cluster health chunk.</span></span>
+      <span data-ttu-id="d662e-110">Если фильтры не указаны, возвращаются ни один из узлов.</span><span class="sxs-lookup"><span data-stu-id="d662e-110">If no filters are specified, no nodes are returned.</span></span> <span data-ttu-id="d662e-111">Все узлы используются для оценки состояния сводные данные о работоспособности кластера, вне зависимости от фильтров входа.</span><span class="sxs-lookup"><span data-stu-id="d662e-111">All the nodes are used to evaluate the cluster's aggregated health state, regardless of the input filters.</span></span>
+      <span data-ttu-id="d662e-112">Фрагмент запроса работоспособности кластера может указать несколько фильтров узла.</span><span class="sxs-lookup"><span data-stu-id="d662e-112">The cluster health chunk query may specify multiple node filters.</span></span>
+      <span data-ttu-id="d662e-113">Например можно указать фильтр, чтобы вернуть все узлы с состоянием работоспособности ошибки и другой фильтр, чтобы всегда включать узла, идентифицируемого выражением его NodeName.</span><span class="sxs-lookup"><span data-stu-id="d662e-113">For example, it can specify a filter to return all nodes with health state Error and another filter to always include a node identified by its NodeName.</span></span>
+    optional: true
+    syntax:
+      content: 'nodeFilters?: NodeHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.NodeHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter[]'
+    name: 'ApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: ApplicationHealthStateFilter
+        fullName: ApplicationHealthStateFilter
+        uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicies'
+    name: ApplicationHealthPolicies
+    spec.typeScript:
+      - name: ApplicationHealthPolicies
+        fullName: ApplicationHealthPolicies
+        uid: '@azure/servicefabric.ApplicationHealthPolicies'
+  - uid: '@azure/servicefabric.ClusterHealthPolicy'
+    name: ClusterHealthPolicy
+    spec.typeScript:
+      - name: ClusterHealthPolicy
+        fullName: ClusterHealthPolicy
+        uid: '@azure/servicefabric.ClusterHealthPolicy'
+  - uid: '@azure/servicefabric.NodeHealthStateFilter[]'
+    name: 'NodeHealthStateFilter[]'
+    spec.typeScript:
+      - name: NodeHealthStateFilter
+        fullName: NodeHealthStateFilter
+        uid: '@azure/servicefabric.NodeHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
