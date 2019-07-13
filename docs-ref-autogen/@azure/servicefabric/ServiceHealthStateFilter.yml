@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter'
+    name: ServiceHealthStateFilter
+    fullName: ServiceHealthStateFilter
+    children:
+      - '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+      - '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Определяет условия соответствия, чтобы определить, следует ли служба в качестве дочернего элемента приложения в фрагмент данных о работоспособности кластера.
+      Службы возвращается только в том случае, если родительское приложение, совпадающие с фильтром, указанного в описании запроса фрагмента данных о работоспособности кластера.
+      Один фильтр может соответствовать нуля, одной или нескольких служб, в зависимости от его свойства.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Фильтр состояния работоспособности служб. Она позволяет выбора служб, если они совпадают, данные о состоянии работоспособности нужное.\nВозможные значения — целочисленное значение одного из приведенных ниже состояний работоспособности. Возвращаются только те службы, которые соответствуют заданному фильтру. Все службы используются для оценки состояния работоспособности кластера статистическая обработка.\nЕсли не указан, значение по умолчанию — None, если не указано имя службы. Если фильтр имеет значение по умолчанию и указано имя службы, возвращаются сопоставления службы.\nЗначения состояния представляют собой перечисление на основе флага, поэтому значение может представлять собой сочетание этих значений, полученное с помощью битового оператора \"ИЛИ\".\nНапример если указано значение 6, она соответствует служб со значениями healthstate из ОК (2) \"и\" Warning \"(4).\n- По умолчанию — значение по умолчанию. Соответствует любому значению HealthState. Значение равно нулю.\n- None — фильтр, который не совпадает с любым значением HealthState. Используется для возвращения нуля результатов для определенной коллекции состояний. Значение равно\_1.\n- ОК — фильтр, извлекающий входные данные с HealthState со значением ОК. Значение равно 2.\n- Warning — фильтр, извлекающий входные данные с HealthState со значением предупреждение. Значение равно 4.\n- Error — фильтр, извлекающий входные данные с HealthState со значением ошибки. Значение равно\_8.\n- ALL — фильтр, извлекающий входные данные с любым значением HealthState. Значение равно 65 535. Значение по умолчанию: 0.\n"
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.partitionFilters'
+    name: partitionFilters
+    fullName: partitionFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Определяет список фильтров, которые указывают, какие секции должны быть включены в работоспособности кластера, возвращенный Фрагментирование как дочерние элементы службы. Секции, возвращаются только в том случае, если фильтр совпадает с родительской службы.
+      Если список пуст, возвращается ни одной секции. Все секции используются для оценки состояния работоспособности службы статистическая обработка проводится родительского, вне зависимости от фильтров входа.
+      Фильтр службы может указать несколько фильтров секции.
+      Например его можно указать фильтр для возврата всех секций с состоянием работоспособности ошибки и другого фильтра, чтобы всегда включать секции, определенной по его идентификатору секции.
+    optional: true
+    syntax:
+      content: 'partitionFilters?: PartitionHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.PartitionHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter.serviceNameFilter'
+    name: serviceNameFilter
+    fullName: serviceNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Имя службы, соответствующие критерию фильтра. Фильтр применяется только к определенную службу, если он существует.
+      Если служба не существует, служба не возвращается в фрагмент данных о работоспособности кластера, на основе этого фильтра.
+      Если служба существует, она будет включена как дочерние приложения, если состояние работоспособности соответствует другие свойства фильтра.
+      Если не указан, все службы, которые соответствуют родительские фильтры (если таковые имеются) принимать во внимание и противопоставляется других элементов фильтра, как фильтр состояния работоспособности.
+    optional: true
+    syntax:
+      content: 'serviceNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.PartitionHealthStateFilter[]'
+    name: 'PartitionHealthStateFilter[]'
+    spec.typeScript:
+      - name: PartitionHealthStateFilter
+        fullName: PartitionHealthStateFilter
+        uid: '@azure/servicefabric.PartitionHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

@@ -16,7 +16,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Необязательные параметры.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -87,7 +87,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Тип ключа для секции. Этот параметр является обязательным, если для службы используется схема секционирования Int64Range или Named. Возможные значения приведены ниже.\n- None (1) — указывает, что параметр partitionkeyvalue содержит не указан. Это допустимо для секций, использующих схему секционирования Singleton. Это значение по умолчанию. Значение равно\_1.\n- Int64Range (2) — указывает на то, что параметр partitionkeyvalue содержит ключ секции типа int64.\nЭто допустимо для секций, использующих схему секционирования Int64Range. Значение равно 2.\n- С именем (3) — указывает на то, что параметр partitionkeyvalue содержит имя секции. Это допустимо для секций, использующих схему секционирования Named. Значение равно 3."
     optional: true
     syntax:
       content: 'partitionKeyType?: undefined | number'
@@ -102,7 +102,10 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Ключ секции. Этот параметр является обязательным, если для службы используется схема секционирования Int64Range или Named.
+      Это не идентификатор секции, а значение ключа целого числа или имя идентификатора секции.
+      Например, если ваша служба использует секции диапазона от 0 до 10, то значение PartitionKeyValue будет целым числом в этом диапазоне. Выполните запрос описания службы, чтобы увидеть диапазон или имя.
     optional: true
     syntax:
       content: 'partitionKeyValue?: undefined | string'
@@ -117,7 +120,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Значение в поле Version в полученном ранее ответе. Это значение является обязательным, если пользователь знает, что ранее полученный результат является устаревшим.'
     optional: true
     syntax:
       content: 'previousRspVersion?: undefined | string'
@@ -147,7 +150,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Время ожидания сервера для выполнения операции в секундах. Это время ожидания задает промежуток времени, который клиент ожидает завершения запрошенной операции. Значение по умолчанию для этого параметра — 60 секунд. Значение по умолчанию: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

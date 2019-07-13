@@ -9,6 +9,7 @@ items:
       - '@azure/ms-rest-js.WebResource.clone'
       - '@azure/ms-rest-js.WebResource.formData'
       - '@azure/ms-rest-js.WebResource.headers'
+      - '@azure/ms-rest-js.WebResource.keepAlive'
       - '@azure/ms-rest-js.WebResource.method'
       - '@azure/ms-rest-js.WebResource.onDownloadProgress'
       - '@azure/ms-rest-js.WebResource.onUploadProgress'
@@ -103,6 +104,21 @@ items:
       return:
         type:
           - '@azure/ms-rest-js.HttpHeaders'
+    package: '@azure/ms-rest-js'
+  - uid: '@azure/ms-rest-js.WebResource.keepAlive'
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    optional: true
+    syntax:
+      content: 'keepAlive?: boolean'
+      return:
+        type:
+          - boolean
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.WebResource.method'
     name: method
@@ -296,14 +312,14 @@ items:
       parameters: []
     package: '@azure/ms-rest-js'
   - uid: '@azure/ms-rest-js.WebResource.constructor'
-    name: 'WebResource(string, HttpMethods, any, [key: string]: any, [key: string]: any | HttpHeaders, boolean, boolean, AbortSignalLike, number, (progress: TransferProgressEvent) => void, (progress: TransferProgressEvent) => void, ProxySettings)'
+    name: 'WebResource(string, HttpMethods, any, [key: string]: any, [key: string]: any | HttpHeaders, boolean, boolean, AbortSignalLike, number, (progress: TransferProgressEvent) => void, (progress: TransferProgressEvent) => void, ProxySettings, boolean)'
     children: []
     type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'new WebResource(url?: string, method?: HttpMethods, body?: any, query?: [key: string]: any, headers?: [key: string]: any | HttpHeaders, streamResponseBody?: boolean, withCredentials?: boolean, abortSignal?: AbortSignalLike, timeout?: number, onUploadProgress?: (progress: TransferProgressEvent) => void, onDownloadProgress?: (progress: TransferProgressEvent) => void, proxySettings?: ProxySettings)'
+      content: 'new WebResource(url?: string, method?: HttpMethods, body?: any, query?: [key: string]: any, headers?: [key: string]: any | HttpHeaders, streamResponseBody?: boolean, withCredentials?: boolean, abortSignal?: AbortSignalLike, timeout?: number, onUploadProgress?: (progress: TransferProgressEvent) => void, onDownloadProgress?: (progress: TransferProgressEvent) => void, proxySettings?: ProxySettings, keepAlive?: boolean)'
       parameters:
         - id: url
           type:
@@ -363,6 +379,11 @@ items:
         - id: proxySettings
           type:
             - '@azure/ms-rest-js.ProxySettings'
+          description: ''
+          optional: true
+        - id: keepAlive
+          type:
+            - boolean
           description: ''
           optional: true
     package: '@azure/ms-rest-js'

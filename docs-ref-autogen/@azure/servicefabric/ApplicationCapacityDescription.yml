@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription'
+    name: ApplicationCapacityDescription
+    fullName: ApplicationCapacityDescription
+    children:
+      - '@azure/servicefabric.ApplicationCapacityDescription.applicationMetrics'
+      - '@azure/servicefabric.ApplicationCapacityDescription.maximumNodes'
+      - '@azure/servicefabric.ApplicationCapacityDescription.minimumNodes'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Описывает сведения о емкости для служб этого приложения. Это описание может использоваться для описания ниже.
+      - Резервирование емкости для служб на узлах
+      - Ограничение на общее число узлов, в которых могут работать службы данного приложения
+      - Ограничение настраиваемые метрики емкости для ограничения общее потребление метрики с использованием служб этого приложения
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.applicationMetrics'
+    name: applicationMetrics
+    fullName: applicationMetrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Список описаний метрик емкости приложения.
+    optional: true
+    syntax:
+      content: 'applicationMetrics?: ApplicationMetricDescription[]'
+      return:
+        type:
+          - '@azure/servicefabric.ApplicationMetricDescription[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.maximumNodes'
+    name: maximumNodes
+    fullName: maximumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Максимальное количество узлов, емкость которых Service Fabric резервирует для этого приложения.
+      Обратите внимание: это не означает, что службы данного приложения размещаются на всех этих узлах. По умолчанию значение этого свойства равно нулю, и это означает, что службы может размещаться на любом узле. Значение по умолчанию: 0.
+    optional: true
+    syntax:
+      content: 'maximumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationCapacityDescription.minimumNodes'
+    name: minimumNodes
+    fullName: minimumNodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Минимальное количество узлов, емкость которых Service Fabric резервирует для этого приложения.
+      Обратите внимание: это не означает, что службы данного приложения размещаются на всех этих узлах. Если это свойство имеет значение 0, не будет запланировано. Значение этого свойства не может быть больше, чем значение свойства MaximumNodes.
+    optional: true
+    syntax:
+      content: 'minimumNodes?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ApplicationMetricDescription[]'
+    name: 'ApplicationMetricDescription[]'
+    spec.typeScript:
+      - name: ApplicationMetricDescription
+        fullName: ApplicationMetricDescription
+        uid: '@azure/servicefabric.ApplicationMetricDescription'
+      - name: '[]'
+        fullName: '[]'

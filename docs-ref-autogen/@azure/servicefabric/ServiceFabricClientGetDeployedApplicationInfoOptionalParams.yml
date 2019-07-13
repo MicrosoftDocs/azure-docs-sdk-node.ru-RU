@@ -14,7 +14,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Необязательные параметры.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -55,7 +55,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Добавление состояния работоспособности сущности.
+      Если этот параметр имеет значение false или не указан, возвращается состояние работоспособности Unknown.
+      Если для этого параметра задано значение true, параллельно выполняется запрос к узлу и службе системы работоспособности, после чего результаты объединяются.
+      В результате запрос требует больше ресурсов и времени. Значение по умолчанию: false.
     optional: true
     syntax:
       content: 'includeHealthState?: undefined | false | true'
@@ -115,7 +119,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Время ожидания сервера для выполнения операции в секундах. Это время ожидания задает промежуток времени, который клиент ожидает завершения запрошенной операции. Значение по умолчанию для этого параметра — 60 секунд. Значение по умолчанию: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

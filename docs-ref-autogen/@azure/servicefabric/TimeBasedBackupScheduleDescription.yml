@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription'
+    name: TimeBasedBackupScheduleDescription
+    fullName: TimeBasedBackupScheduleDescription
+    children:
+      - '@azure/servicefabric.TimeBasedBackupScheduleDescription.runDays'
+      - '@azure/servicefabric.TimeBasedBackupScheduleDescription.runTimes'
+      - '@azure/servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType'
+      - '@azure/servicefabric.TimeBasedBackupScheduleDescription.scheduleKind'
+    langs:
+      - typeScript
+    type: interface
+    summary: Описывает расписание резервного копирования на основе времени.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription.runDays'
+    name: runDays
+    fullName: runDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Выведите список дней недели, когда необходимо активировать периодическое резервное копирование. Это допустимо, только если тип частоту расписания резервного копирования — еженедельно.'
+    optional: true
+    syntax:
+      content: 'runDays?: DayOfWeek[]'
+      return:
+        type:
+          - '@azure/servicefabric.DayOfWeek[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription.runTimes'
+    name: runTimes
+    fullName: runTimes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Представляет список точное время в течение дня в формате ISO8601. Такие как "19: 00:00" будет представлять "7 PM» в течение дня. Дата, указанная времени будет игнорироваться.'
+    syntax:
+      content: 'runTimes: Date[] | string[]'
+      return:
+        type:
+          - 'Date[] | string[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription.scheduleFrequencyType'
+    name: scheduleFrequencyType
+    fullName: scheduleFrequencyType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Описывает частоту, с которой будет выполняться время на основе расписания резервного копирования. Ниже перечислены возможные значения. «Invalid», «Ежедневно», «Еженедельно»'
+    syntax:
+      content: 'scheduleFrequencyType: BackupScheduleFrequencyType'
+      return:
+        type:
+          - '@azure/servicefabric.BackupScheduleFrequencyType'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.TimeBasedBackupScheduleDescription.scheduleKind'
+    name: scheduleKind
+    fullName: scheduleKind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'scheduleKind: "TimeBased"'
+      return:
+        type:
+          - '"TimeBased"'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DayOfWeek[]'
+    name: 'DayOfWeek[]'
+    spec.typeScript:
+      - name: DayOfWeek
+        fullName: DayOfWeek
+        uid: '@azure/servicefabric.DayOfWeek'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.BackupScheduleFrequencyType'
+    name: BackupScheduleFrequencyType
+    spec.typeScript:
+      - name: BackupScheduleFrequencyType
+        fullName: BackupScheduleFrequencyType
+        uid: '@azure/servicefabric.BackupScheduleFrequencyType'

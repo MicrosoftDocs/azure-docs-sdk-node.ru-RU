@@ -7,6 +7,8 @@ items:
       - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.baseImageTriggerType'
       - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.name'
       - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.status'
+      - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.updateTriggerEndpoint'
+      - '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.updateTriggerPayloadType'
     langs:
       - typeScript
     type: interface
@@ -56,6 +58,36 @@ items:
         type:
           - '@azure/arm-containerregistry.TriggerStatus'
     package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.updateTriggerEndpoint'
+    name: updateTriggerEndpoint
+    fullName: updateTriggerEndpoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Конечная точка активирует URL-адрес для получения обновлений.
+    optional: true
+    syntax:
+      content: 'updateTriggerEndpoint?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/arm-containerregistry'
+  - uid: '@azure/arm-containerregistry.BaseImageTriggerUpdateParameters.updateTriggerPayloadType'
+    name: updateTriggerPayloadType
+    fullName: updateTriggerPayloadType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Тип полезных данных текста для триггеров update базового образа. Ниже перечислены возможные значения. «Default», «Токен»'
+    optional: true
+    syntax:
+      content: 'updateTriggerPayloadType?: UpdateTriggerPayloadType'
+      return:
+        type:
+          - '@azure/arm-containerregistry.UpdateTriggerPayloadType'
+    package: '@azure/arm-containerregistry'
 references:
   - uid: '@azure/arm-containerregistry.BaseImageTriggerType'
     name: BaseImageTriggerType
@@ -69,3 +101,9 @@ references:
       - name: TriggerStatus
         fullName: TriggerStatus
         uid: '@azure/arm-containerregistry.TriggerStatus'
+  - uid: '@azure/arm-containerregistry.UpdateTriggerPayloadType'
+    name: UpdateTriggerPayloadType
+    spec.typeScript:
+      - name: UpdateTriggerPayloadType
+        fullName: UpdateTriggerPayloadType
+        uid: '@azure/arm-containerregistry.UpdateTriggerPayloadType'
