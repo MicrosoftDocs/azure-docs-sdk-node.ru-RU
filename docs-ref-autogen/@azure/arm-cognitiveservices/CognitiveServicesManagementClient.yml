@@ -8,6 +8,9 @@ items:
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.accounts'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.apiVersion'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.beginLongRunningRequest'
+      - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability'
+      - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_2'
+      - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_1'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.constructor'
       - '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.credentials'
@@ -92,6 +95,91 @@ items:
       return:
         type:
           - Promise<LROPoller>
+    package: '@azure/arm-cognitiveservices'
+  - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability'
+    name: 'checkDomainAvailability(string, string, msRest.RequestOptionsBase)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: 'Проверьте, доступен ли домен.'
+    syntax:
+      content: 'function checkDomainAvailability(subdomainName: string, type: string, options?: msRest.RequestOptionsBase)'
+      parameters:
+        - id: subdomainName
+          type:
+            - string
+          description: Имя поддомена для использования.
+        - id: type
+          type:
+            - string
+          description: Тип ресурса.
+        - id: options
+          type:
+            - msRest.RequestOptionsBase
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<Models.CheckDomainAvailabilityResponse>
+    package: '@azure/arm-cognitiveservices'
+  - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_2'
+    name: 'checkDomainAvailability(string, string, RequestOptionsBase, ServiceCallback<CheckDomainAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkDomainAvailability(subdomainName: string, type: string, options: RequestOptionsBase, callback: ServiceCallback<CheckDomainAvailabilityResult>)'
+      parameters:
+        - id: subdomainName
+          type:
+            - string
+          description: Имя поддомена для использования.
+        - id: type
+          type:
+            - string
+          description: Тип ресурса.
+        - id: options
+          type:
+            - RequestOptionsBase
+          description: Возможно использование необязательных параметров
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cognitiveservices.CheckDomainAvailabilityResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CheckDomainAvailabilityResponse>
+    package: '@azure/arm-cognitiveservices'
+  - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkDomainAvailability_1'
+    name: 'checkDomainAvailability(string, string, ServiceCallback<CheckDomainAvailabilityResult>)'
+    children: []
+    type: method
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function checkDomainAvailability(subdomainName: string, type: string, callback: ServiceCallback<CheckDomainAvailabilityResult>)'
+      parameters:
+        - id: subdomainName
+          type:
+            - string
+          description: Имя поддомена для использования.
+        - id: type
+          type:
+            - string
+          description: Тип ресурса.
+        - id: callback
+          type:
+            - ServiceCallback<@azure/arm-cognitiveservices.CheckDomainAvailabilityResult>
+          description: |
+            Функция обратного вызова
+      return:
+        type:
+          - Promise<Models.CheckDomainAvailabilityResponse>
     package: '@azure/arm-cognitiveservices'
   - uid: '@azure/arm-cognitiveservices.CognitiveServicesManagementClient.checkSkuAvailability'
     name: checkSkuAvailability
@@ -347,3 +435,13 @@ references:
       - name: ResourceSkus
         fullName: ResourceSkus
         uid: '@azure/arm-cognitiveservices.ResourceSkus'
+  - uid: ServiceCallback<@azure/arm-cognitiveservices.CheckDomainAvailabilityResult>
+    name: CheckDomainAvailabilityResult>
+    spec.typeScript:
+      - name: ServiceCallback<
+        fullName: ServiceCallback<
+      - name: CheckDomainAvailabilityResult
+        fullName: CheckDomainAvailabilityResult
+        uid: '@azure/arm-cognitiveservices.CheckDomainAvailabilityResult'
+      - name: '>'
+        fullName: '>'

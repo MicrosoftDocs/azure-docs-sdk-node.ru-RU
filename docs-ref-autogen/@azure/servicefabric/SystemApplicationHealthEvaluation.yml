@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation'
+    name: SystemApplicationHealthEvaluation
+    fullName: SystemApplicationHealthEvaluation
+    children:
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.aggregatedHealthState'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.description'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.kind'
+      - '@azure/servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations'
+    langs:
+      - typeScript
+    type: interface
+    summary: 'Представляет оценки работоспособности для fabric: / системное приложение, содержащее сведения о данных и алгоритм, используемые в хранилище данных о работоспособности для оценки работоспособности. Вычисления возвращается только в том случае, если состояние сводные данные о работоспособности кластера — ошибки или предупреждения.'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.aggregatedHealthState'
+    name: aggregatedHealthState
+    fullName: aggregatedHealthState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Состояние работоспособности сущности Service Fabric, например кластера, узла, приложения, службы, секции, реплики и т.д. Ниже перечислены возможные значения. «Invalid», «ОК», «Предупреждение», «Ошибка», «Неизвестный»'
+    optional: true
+    syntax:
+      content: 'aggregatedHealthState?: HealthState'
+      return:
+        type:
+          - '@azure/servicefabric.HealthState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Описание оценки работоспособности, который представляет сводку пробных испытаний.'
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.kind'
+    name: kind
+    fullName: kind
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Полиморфные дискриминатора
+    syntax:
+      content: 'kind: "SystemApplication"'
+      return:
+        type:
+          - '"SystemApplication"'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.SystemApplicationHealthEvaluation.unhealthyEvaluations'
+    name: unhealthyEvaluations
+    fullName: unhealthyEvaluations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Список оценки неработоспособности, ставших причиной текущего общего состояния работоспособности для системного приложения. Типы оценки неработоспособности может быть DeployedApplicationsHealthEvaluation, ServicesHealthEvaluation или EventHealthEvaluation.'
+    optional: true
+    syntax:
+      content: 'unhealthyEvaluations?: HealthEvaluationWrapper[]'
+      return:
+        type:
+          - '@azure/servicefabric.HealthEvaluationWrapper[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.HealthState'
+    name: HealthState
+    spec.typeScript:
+      - name: HealthState
+        fullName: HealthState
+        uid: '@azure/servicefabric.HealthState'
+  - uid: '@azure/servicefabric.HealthEvaluationWrapper[]'
+    name: 'HealthEvaluationWrapper[]'
+    spec.typeScript:
+      - name: HealthEvaluationWrapper
+        fullName: HealthEvaluationWrapper
+        uid: '@azure/servicefabric.HealthEvaluationWrapper'
+      - name: '[]'
+        fullName: '[]'

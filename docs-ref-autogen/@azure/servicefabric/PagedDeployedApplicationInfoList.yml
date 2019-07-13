@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PagedDeployedApplicationInfoList'
+    name: PagedDeployedApplicationInfoList
+    fullName: PagedDeployedApplicationInfoList
+    children:
+      - '@azure/servicefabric.PagedDeployedApplicationInfoList.continuationToken'
+      - '@azure/servicefabric.PagedDeployedApplicationInfoList.items'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Список развернутых приложений в активации, скачивать или активного состояния на узле.
+      Список разбитых на страницы, когда все результаты не помещаются в одном сообщении.
+      Следующий набор результатов можно получить, выполнив тот же запрос с маркером продолжения, предоставленных в этом списке.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedDeployedApplicationInfoList.continuationToken'
+    name: continuationToken
+    fullName: continuationToken
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Параметр маркера продолжения используется для получения следующего набора результатов. Маркер продолжения включается в ответ API, когда результаты из системы не помещаются в одном ответе. Когда это значение передается в следующем вызове API, API возвращает следующий набор результатов.
+      Если следующий набор результатов отсутствует, маркер продолжения не включается в ответ.
+    optional: true
+    syntax:
+      content: 'continuationToken?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PagedDeployedApplicationInfoList.items'
+    name: items
+    fullName: items
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Список сведений о развернутом приложении.
+    optional: true
+    syntax:
+      content: 'items?: DeployedApplicationInfo[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationInfo[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedApplicationInfo[]'
+    name: 'DeployedApplicationInfo[]'
+    spec.typeScript:
+      - name: DeployedApplicationInfo
+        fullName: DeployedApplicationInfo
+        uid: '@azure/servicefabric.DeployedApplicationInfo'
+      - name: '[]'
+        fullName: '[]'

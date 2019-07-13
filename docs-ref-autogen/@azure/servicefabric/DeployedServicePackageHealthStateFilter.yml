@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter'
+    name: DeployedServicePackageHealthStateFilter
+    fullName: DeployedServicePackageHealthStateFilter
+    children:
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+      - '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Определяет условия соответствия, чтобы определить, следует ли включить в качестве дочернего элемента развернутого приложения в фрагмент данных о работоспособности кластера развернутого пакета службы.
+      Развернутые пакеты служб возвращается только в том случае, если родительских сущностей совпадающие с фильтром, указанного в описании запроса фрагмента данных о работоспособности кластера. Родительский развернутых приложений и родительского приложения должны быть включены в фрагмент данных о работоспособности кластера.
+      Один фильтр можно выделить ноль, один или несколько развернутых служб пакетов в зависимости от его свойства.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Фильтр состояния работоспособности развернутых пакетов служб. Она позволяет, выбрав развернутых пакетов служб, если они совпадают, данные о состоянии работоспособности нужное.\nВозможные значения — целочисленное значение одного из приведенных ниже состояний работоспособности. Возвращаются только те развернутые пакеты службы, которые соответствуют заданному фильтру. Все развернутые пакеты служб используются для оценки состояния работоспособности родительского развернутого приложения статистическая обработка.\nЕсли не указан, значение по умолчанию — None, если не указан идентификатор пакета развернутой службы.\nЕсли фильтр имеет значение по умолчанию и указан идентификатор пакета развернутой службы, возвращается соответствующий развернутый пакет службы.\nЗначения состояния представляют собой перечисление на основе флага, поэтому значение может представлять собой сочетание этих значений, полученное с помощью битового оператора \"ИЛИ\".\nНапример если указано значение 6, она соответствует развернутые пакеты служб со значениями healthstate из ОК (2) \"и\" Warning \"(4).\n- По умолчанию — значение по умолчанию. Соответствует любому значению HealthState. Значение равно нулю.\n- None — фильтр, который не совпадает с любым значением HealthState. Используется для возвращения нуля результатов для определенной коллекции состояний. Значение равно\_1.\n- ОК — фильтр, извлекающий входные данные с HealthState со значением ОК. Значение равно 2.\n- Warning — фильтр, извлекающий входные данные с HealthState со значением предупреждение. Значение равно 4.\n- Error — фильтр, извлекающий входные данные с HealthState со значением ошибки. Значение равно\_8.\n- ALL — фильтр, извлекающий входные данные с любым значением HealthState. Значение равно 65 535. Значение по умолчанию: 0.\n"
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.serviceManifestNameFilter'
+    name: serviceManifestNameFilter
+    fullName: serviceManifestNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Имя манифеста службы, определяющий к развернутым пакетам операции, соответствующие критерию фильтра.
+      Если указано, фильтр, оно будет применено только к указанным развернутые пакеты служб, если таковые имеются.
+      Если нет развернутых пакетов служб с указанным именем манифеста существует, ничего не возвращается в фрагмент данных о работоспособности кластера, на основе этого фильтра.
+      Если существует любой развернутый пакет службы, они включаются в фрагмент данных о работоспособности кластера, если она учитывает другие свойства фильтра.
+      В противном случае службы указан, все развернутые пакеты, которые соответствуют родительские фильтры, (если таковые имеются) принимать во внимание и противопоставляется других элементов фильтра, как фильтр состояния работоспособности.
+    optional: true
+    syntax:
+      content: 'serviceManifestNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.DeployedServicePackageHealthStateFilter.servicePackageActivationIdFilter'
+    name: servicePackageActivationIdFilter
+    fullName: servicePackageActivationIdFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Идентификатор активации развернутого пакета службы, соответствующие критерию фильтра.
+      Если не указан, фильтр применяется ко всем пакетам развернутой службы, которые соответствуют другие параметры.
+      Если указано, фильтр выполняет сопоставление только развернутый пакет службы с идентификатором указанные операции активации.
+    optional: true
+    syntax:
+      content: 'servicePackageActivationIdFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'

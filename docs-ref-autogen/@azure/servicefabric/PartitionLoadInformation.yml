@@ -1,0 +1,73 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.PartitionLoadInformation'
+    name: PartitionLoadInformation
+    fullName: PartitionLoadInformation
+    children:
+      - '@azure/servicefabric.PartitionLoadInformation.partitionId'
+      - '@azure/servicefabric.PartitionLoadInformation.primaryLoadMetricReports'
+      - '@azure/servicefabric.PartitionLoadInformation.secondaryLoadMetricReports'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Представляет загрузить данные для секции, который содержит метрики сообщаемой нагрузки первичных и вторичных.
+      Если они не имеют нагрузки сообщил, PartitionLoadInformation будет содержать нагрузка по умолчанию для службы, секции.
+      Для загрузки по умолчанию LastReportedUtc LoadMetricReport элемента имеет значение 0.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.partitionId'
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Идентификатор секции.
+    optional: true
+    syntax:
+      content: 'partitionId?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.primaryLoadMetricReports'
+    name: primaryLoadMetricReports
+    fullName: primaryLoadMetricReports
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Массив отчеты о нагрузке от первичной реплики для этой секции.
+    optional: true
+    syntax:
+      content: 'primaryLoadMetricReports?: LoadMetricReport[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReport[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.PartitionLoadInformation.secondaryLoadMetricReports'
+    name: secondaryLoadMetricReports
+    fullName: secondaryLoadMetricReports
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Массив объединенная нагрузка отчеты из всех вторичных реплик для этой секции.
+      Массив содержит только последние полученные сведения о нагрузке для каждой метрики.
+    optional: true
+    syntax:
+      content: 'secondaryLoadMetricReports?: LoadMetricReport[]'
+      return:
+        type:
+          - '@azure/servicefabric.LoadMetricReport[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.LoadMetricReport[]'
+    name: 'LoadMetricReport[]'
+    spec.typeScript:
+      - name: LoadMetricReport
+        fullName: LoadMetricReport
+        uid: '@azure/servicefabric.LoadMetricReport'
+      - name: '[]'
+        fullName: '[]'
