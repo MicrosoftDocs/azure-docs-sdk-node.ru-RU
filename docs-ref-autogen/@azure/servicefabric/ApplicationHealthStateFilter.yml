@@ -1,0 +1,127 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter'
+    name: ApplicationHealthStateFilter
+    fullName: ApplicationHealthStateFilter
+    children:
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+      - '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Определяет условия соответствия, чтобы определить, следует ли включать это приложение в фрагмент данных о работоспособности кластера.
+      Один фильтр может соответствовать нуля, одной или нескольких приложений в зависимости от его свойства.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationNameFilter'
+    name: applicationNameFilter
+    fullName: applicationNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Имя приложения, которое соответствует фильтру, как структура uri. Фильтр применяется только для указанного приложения, если он существует.
+      Если приложение не существует, приложение не возвращается в фрагмент данных о работоспособности кластера, на основе этого фильтра.
+      Если приложение есть, она включается в фрагмент данных о работоспособности кластера, если она учитывает другие свойства фильтра.
+      Если не указан, все приложения, сопоставляются с другими членами фильтра, как фильтр состояния работоспособности.
+    optional: true
+    syntax:
+      content: 'applicationNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.applicationTypeNameFilter'
+    name: applicationTypeNameFilter
+    fullName: applicationTypeNameFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Имя типа приложения, соответствующие критерию фильтра.
+      Если указано, фильтр применяется только к приложениям из выбранного типа приложения, если таковое существует.
+      Если приложения не из указанного типа приложения существует, приложение не возвращается в фрагмент данных о работоспособности кластера, на основе этого фильтра.
+      Каждое приложение указанного типа приложения, включается в фрагмент данных о работоспособности кластера, если она учитывает другие свойства фильтра.
+      Если не указан, все приложения, сопоставляются с другими членами фильтра, как фильтр состояния работоспособности.
+    optional: true
+    syntax:
+      content: 'applicationTypeNameFilter?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.deployedApplicationFilters'
+    name: deployedApplicationFilters
+    fullName: deployedApplicationFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Определяет список фильтров, которые указывают, какие развернутых приложений, включаемых в работоспособности кластера, возвращенный Фрагментирование как дочерние элементы приложения. Развернутые приложения возвращаются только в том случае, если родительское приложение, совпадающие с фильтром.
+      Если список пуст, возвращается не развернутых приложений. Для оценки родительского агрегированного состояния работоспособности приложения, независимо от того, фильтры входа используются все развернутые приложения.
+      Фильтр приложения могут указать несколько фильтров развернутого приложения.
+      Например можно указать фильтр для возврата всех развернутых приложений с состоянием работоспособности ошибки и другого фильтра, чтобы всегда включать развернутого приложения на указанном узле.
+    optional: true
+    syntax:
+      content: 'deployedApplicationFilters?: DeployedApplicationHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.healthStateFilter'
+    name: healthStateFilter
+    fullName: healthStateFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Фильтр состояния работоспособности приложений. Она позволяет выбор приложений, если они совпадают, данные о состоянии работоспособности нужное.\nВозможные значения — целочисленное значение одного из приведенных ниже состояний работоспособности. Возвращаются только те приложения, которые соответствуют заданному фильтру. Все приложения используются для оценки состояния работоспособности кластера статистическая обработка.\nЕсли не указан, значение по умолчанию — None, если не указаны имя приложения или имя типа приложения. Если фильтр имеет значение по умолчанию и имя приложения указано, возвращаются сопоставления приложения.\nЗначения состояния представляют собой перечисление на основе флага, поэтому значение может представлять собой сочетание этих значений, полученное с помощью битового оператора \"ИЛИ\".\nНапример если указано значение 6, она соответствует приложений со значениями healthstate ОК (2) \"и\" Warning \"(4).\n- По умолчанию — значение по умолчанию. Соответствует любому значению HealthState. Значение равно нулю.\n- None — фильтр, который не совпадает с любым значением HealthState. Используется для возвращения нуля результатов для определенной коллекции состояний. Значение равно\_1.\n- ОК — фильтр, извлекающий входные данные с HealthState со значением ОК. Значение равно 2.\n- Warning — фильтр, извлекающий входные данные с HealthState со значением предупреждение. Значение равно 4.\n- Error — фильтр, извлекающий входные данные с HealthState со значением ошибки. Значение равно\_8.\n- ALL — фильтр, извлекающий входные данные с любым значением HealthState. Значение равно 65 535. Значение по умолчанию: 0.\n"
+    optional: true
+    syntax:
+      content: 'healthStateFilter?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthStateFilter.serviceFilters'
+    name: serviceFilters
+    fullName: serviceFilters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Определяет список фильтров, которые указывают, какие службы будут включаться в возвращаемый кластера работоспособности Фрагментирование как дочерние элементы приложения. Только в том случае, если родительское приложение соответствует фильтру, возвращаются службы.
+      Если список пуст, возвращается ни одной службы. Все службы используются для оценки состояния работоспособности приложения, которые объединяются родительского, вне зависимости от фильтров входа.
+      Фильтр приложения могут указать несколько фильтров службы.
+      Например можно указать фильтр для возврата всех служб с состоянием работоспособности ошибки и еще один фильтр всегда включена служба идентифицируется по имени службы.
+    optional: true
+    syntax:
+      content: 'serviceFilters?: ServiceHealthStateFilter[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceHealthStateFilter[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter[]'
+    name: 'DeployedApplicationHealthStateFilter[]'
+    spec.typeScript:
+      - name: DeployedApplicationHealthStateFilter
+        fullName: DeployedApplicationHealthStateFilter
+        uid: '@azure/servicefabric.DeployedApplicationHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'
+  - uid: '@azure/servicefabric.ServiceHealthStateFilter[]'
+    name: 'ServiceHealthStateFilter[]'
+    spec.typeScript:
+      - name: ServiceHealthStateFilter
+        fullName: ServiceHealthStateFilter
+        uid: '@azure/servicefabric.ServiceHealthStateFilter'
+      - name: '[]'
+        fullName: '[]'

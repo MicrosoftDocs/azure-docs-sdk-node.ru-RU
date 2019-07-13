@@ -1,0 +1,172 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription'
+    name: RollingUpgradeUpdateDescription
+    fullName: RollingUpgradeUpdateDescription
+    children:
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.failureAction'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.forceRestart'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds'
+      - '@azure/servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds'
+    langs:
+      - typeScript
+    type: interface
+    summary: Описывает параметры для обновления последовательного обновления приложения или кластера.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.failureAction'
+    name: failureAction
+    fullName: failureAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Действие по исправлению ошибок для выполнения при отслеживаемого обновления обнаруживает мониторинга нарушений политики или работоспособности политики.
+      Недопустимый указывает, что действие при ошибке является недопустимым. Откат указывает, что обновление начнется автоматически откат.
+      Руководство указывает, что обновление будет переключен в неотслеживаемого автоматического обновления. Ниже перечислены возможные значения. «Invalid», «Rollback», «Вручную»
+    optional: true
+    syntax:
+      content: 'failureAction?: FailureAction'
+      return:
+        type:
+          - '@azure/servicefabric.FailureAction'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.forceRestart'
+    name: forceRestart
+    fullName: forceRestart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Если значение равно true, затем принудительно перезапускаются процессы во время обновления даже в том случае, если версия кода не изменился (только изменения службы обновления конфигурации или данных).'
+    optional: true
+    syntax:
+      content: 'forceRestart?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckRetryTimeoutInMilliseconds'
+    name: healthCheckRetryTimeoutInMilliseconds
+    fullName: healthCheckRetryTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Количество времени, чтобы повторить попытку оценки работоспособности, когда приложение или кластер находится в неработоспособном состоянии выполняется действие FailureAction. Сначала он интерпретируется как строка, представляющая длительность ISO 8601. В случае неудачи он интерпретируется как число, представляющее общее количество миллисекунд.'
+    optional: true
+    syntax:
+      content: 'healthCheckRetryTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckStableDurationInMilliseconds'
+    name: healthCheckStableDurationInMilliseconds
+    fullName: healthCheckStableDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Период времени, в течение которого приложение или кластер должен оставаться работоспособным, прежде чем процесс обновления перейдет к следующему домену обновления. Сначала он интерпретируется как строка, представляющая длительность ISO 8601. В случае неудачи он интерпретируется как число, представляющее общее количество миллисекунд.'
+    optional: true
+    syntax:
+      content: 'healthCheckStableDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.healthCheckWaitDurationInMilliseconds'
+    name: healthCheckWaitDurationInMilliseconds
+    fullName: healthCheckWaitDurationInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Время ожидания после завершения работы домена обновления перед применением политики работоспособности.
+      Сначала он интерпретируется как строка, представляющая длительность ISO 8601. В случае неудачи он интерпретируется как число, представляющее общее количество миллисекунд.
+    optional: true
+    syntax:
+      content: 'healthCheckWaitDurationInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.replicaSetCheckTimeoutInMilliseconds'
+    name: replicaSetCheckTimeoutInMilliseconds
+    fullName: replicaSetCheckTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: "Максимальный период времени, на протяжении которого можно блокировать обработку домена обновления и не допустить потери доступности в случае возникновения непредвиденных проблем. По истечении времени ожидания обработка домена обновления будет выполняться независимо от проблем с потерей доступа. Время ожидания сбрасывается при запуске каждого домена обновления. Допустимые значения\_— от 0\_до 42949672925\_включительно.\n(32-разрядное целое число без знака)."
+    optional: true
+    syntax:
+      content: 'replicaSetCheckTimeoutInMilliseconds?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.rollingUpgradeMode'
+    name: rollingUpgradeMode
+    fullName: rollingUpgradeMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Режим, используемый для отслеживания работоспособности во время последовательного обновления. Значения: UnmonitoredAuto "," UnmonitoredManual "и" Monitored. Ниже перечислены возможные значения. «Invalid», «UnmonitoredAuto», «UnmonitoredManual», «Мониторинг». Значение по умолчанию: «UnmonitoredAuto».'
+    syntax:
+      content: 'rollingUpgradeMode: UpgradeMode'
+      return:
+        type:
+          - '@azure/servicefabric.UpgradeMode'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.upgradeDomainTimeoutInMilliseconds'
+    name: upgradeDomainTimeoutInMilliseconds
+    fullName: upgradeDomainTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Время выполнения каждого домена обновления, по истечении которого выполняется действие FailureAction. Сначала он интерпретируется как строка, представляющая длительность ISO 8601. В случае неудачи он интерпретируется как число, представляющее общее количество миллисекунд.'
+    optional: true
+    syntax:
+      content: 'upgradeDomainTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RollingUpgradeUpdateDescription.upgradeTimeoutInMilliseconds'
+    name: upgradeTimeoutInMilliseconds
+    fullName: upgradeTimeoutInMilliseconds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Общее время завершения обновления, по истечении которого выполняется действие FailureAction. Сначала он интерпретируется как строка, представляющая длительность ISO 8601. В случае неудачи он интерпретируется как число, представляющее общее количество миллисекунд.'
+    optional: true
+    syntax:
+      content: 'upgradeTimeoutInMilliseconds?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.FailureAction'
+    name: FailureAction
+    spec.typeScript:
+      - name: FailureAction
+        fullName: FailureAction
+        uid: '@azure/servicefabric.FailureAction'
+  - uid: '@azure/servicefabric.UpgradeMode'
+    name: UpgradeMode
+    spec.typeScript:
+      - name: UpgradeMode
+        fullName: UpgradeMode
+        uid: '@azure/servicefabric.UpgradeMode'

@@ -18,7 +18,7 @@ items:
     langs:
       - typeScript
     type: interface
-    summary: ''
+    summary: Необязательные параметры.
     extends:
       name: RequestOptionsBase
     package: '@azure/servicefabric'
@@ -44,7 +44,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: "Используется для фильтрации по ApplicationDefinitionKind. Это механизм, необходимый для определения приложения Service Fabric.\n- По умолчанию — значение по умолчанию, которое выполняет ту же функцию, как выбрать «All». Значение равно\n0.\n- ALL — фильтр, извлекающий входные данные с любым значением ApplicationDefinitionKind. Значение равно\n65535.\n- ServiceFabricApplicationDescription — фильтр, извлекающий входные данные со значением ApplicationDefinitionKind, равным ServiceFabricApplicationDescription. Значение равно\_1.\n- Compose — фильтр, извлекающий входные данные со значением ApplicationDefinitionKind Compose. Значение равно 2. Значение по умолчанию: 0."
     optional: true
     syntax:
       content: 'applicationDefinitionKindFilter?: undefined | number'
@@ -59,7 +59,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Имя типа приложения, используемое для фильтрации запрашиваемых приложений. Это значение не должно содержать версию типа приложения.'
     optional: true
     syntax:
       content: 'applicationTypeName?: undefined | string'
@@ -74,7 +74,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Параметр маркера продолжения используется для получения следующего набора результатов. Маркер продолжения с непустым значением добавляется в ответ API, когда результаты из системы не помещаются в один ответ. Когда это значение передается в следующем вызове API, API возвращает следующий набор результатов. Если результаты отсутствуют, маркер продолжения не будет содержать значение. Значение этого параметра не должно быть указано в формате URL-адреса.'
     optional: true
     syntax:
       content: 'continuationToken?: undefined | string'
@@ -104,7 +104,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: |-
+      Флаг, указывающий, исключаются ли из результата параметры приложения.
+      Значение по умолчанию: false.
     optional: true
     syntax:
       content: 'excludeApplicationParameters?: undefined | false | true'
@@ -119,7 +121,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Максимальное количество результатов, возвращаемых в результате страничного запроса. Этот параметр определяет максимальное число возвращаемых результатов. Возвращаемых результатов может быть меньше, чем указанное максимальное количество результатов, если они не помещаются в сообщении согласно ограничениям максимального размера сообщения, определенным в конфигурации. Если этот параметр равен нулю или не указан, то результат страничного запроса содержит максимальное число результатов, помещающееся в возвращаемом сообщении. Значение по умолчанию: 0.'
     optional: true
     syntax:
       content: 'maxResults?: undefined | number'
@@ -179,7 +181,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: 'Время ожидания сервера для выполнения операции в секундах. Это время ожидания задает промежуток времени, который клиент ожидает завершения запрошенной операции. Значение по умолчанию для этого параметра — 60 секунд. Значение по умолчанию: 60.'
     optional: true
     syntax:
       content: 'timeoutParameter?: undefined | number'

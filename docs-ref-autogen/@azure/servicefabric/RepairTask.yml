@@ -1,0 +1,357 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.RepairTask'
+    name: RepairTask
+    fullName: RepairTask
+    children:
+      - '@azure/servicefabric.RepairTask.action'
+      - '@azure/servicefabric.RepairTask.description'
+      - '@azure/servicefabric.RepairTask.executor'
+      - '@azure/servicefabric.RepairTask.executorData'
+      - '@azure/servicefabric.RepairTask.flags'
+      - '@azure/servicefabric.RepairTask.history'
+      - '@azure/servicefabric.RepairTask.impact'
+      - '@azure/servicefabric.RepairTask.performPreparingHealthCheck'
+      - '@azure/servicefabric.RepairTask.performRestoringHealthCheck'
+      - '@azure/servicefabric.RepairTask.preparingHealthCheckState'
+      - '@azure/servicefabric.RepairTask.restoringHealthCheckState'
+      - '@azure/servicefabric.RepairTask.resultCode'
+      - '@azure/servicefabric.RepairTask.resultDetails'
+      - '@azure/servicefabric.RepairTask.resultStatus'
+      - '@azure/servicefabric.RepairTask.state'
+      - '@azure/servicefabric.RepairTask.target'
+      - '@azure/servicefabric.RepairTask.taskId'
+      - '@azure/servicefabric.RepairTask.version'
+    langs:
+      - typeScript
+    type: interface
+    summary: |
+      Представляет задачу восстановления, включающее информацию о какого рода восстановления была запрошена, каков ход его выполнения и какова ее конечный результат.
+      Этот тип поддерживает платформу Service Fabric; он не предназначен для использования непосредственно из программного кода.
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.action'
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Действие, запрошенное восстановления. Должен быть указан при создании задачи восстановления, и имеет значение неизменяемого один раз.'
+    syntax:
+      content: 'action: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.description'
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Описание назначения задачи восстановления или другие информационные сведения.
+      Можно задать при создании задачи восстановления и является неизменяемым после установки.
+    optional: true
+    syntax:
+      content: 'description?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.executor'
+    name: executor
+    fullName: executor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Имя исполнителя исправления. Должно быть указано в затребовано и последующих состояний и является неизменяемым после установки.
+    optional: true
+    syntax:
+      content: 'executor?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.executorData'
+    name: executorData
+    fullName: executorData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Строка данных, исполнителя исправления можно использовать для хранения внутреннего состояния.'
+    optional: true
+    syntax:
+      content: 'executorData?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.flags'
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Побитового или из следующих значений, которые предоставляет дополнительные сведения о состоянии задачи исправления.
+      - 1 - запрошена Отмена восстановления
+      - 2 - abort восстановления был запрошен
+      - 4 - утверждения восстановления была принудительно с помощью запроса клиента
+    optional: true
+    syntax:
+      content: 'flags?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.history'
+    name: history
+    fullName: history
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Объект, содержащий метки времени задачи восстановления между состояниями.
+      Эти метки времени обновляются системой и не может быть изменен непосредственно.
+    optional: true
+    syntax:
+      content: 'history?: RepairTaskHistory'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHistory'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.impact'
+    name: impact
+    fullName: impact
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Объект влияние определяет, какие действия, система будет предпринять для подготовки к влияние восстановления, прежде чем будет утверждено выполнения восстановления.
+      Влияние должен быть указан с исполнителя исправления, во время перехода в состояние подготовки, и имеет значение неизменяемого один раз.
+    optional: true
+    syntax:
+      content: 'impact?: RepairImpactDescriptionBaseUnion'
+      return:
+        type:
+          - '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.performPreparingHealthCheck'
+    name: performPreparingHealthCheck
+    fullName: performPreparingHealthCheck
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Значение, если проверки работоспособности будет выполняться, когда задание восстановления переходит в состояние подготовки.'
+    optional: true
+    syntax:
+      content: 'performPreparingHealthCheck?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.performRestoringHealthCheck'
+    name: performRestoringHealthCheck
+    fullName: performRestoringHealthCheck
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Значение, если проверки работоспособности будет выполняться, когда задание восстановления переходит в состояние Restoring.'
+    optional: true
+    syntax:
+      content: 'performRestoringHealthCheck?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.preparingHealthCheckState'
+    name: preparingHealthCheckState
+    fullName: preparingHealthCheckState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Состояние рабочего процесса проверки работоспособности, когда задание восстановления находится в состоянии подготовки.
+      Ниже перечислены возможные значения. «Не запущено», «Выполняется», «Succeeded», «пропущено», «TimedOut»
+    optional: true
+    syntax:
+      content: 'preparingHealthCheckState?: RepairTaskHealthCheckState'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHealthCheckState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.restoringHealthCheckState'
+    name: restoringHealthCheckState
+    fullName: restoringHealthCheckState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Состояние рабочего процесса проверки работоспособности, если задача восстановления находится в состоянии Restoring.
+      Ниже перечислены возможные значения. «Не запущено», «Выполняется», «Succeeded», «пропущено», «TimedOut»
+    optional: true
+    syntax:
+      content: 'restoringHealthCheckState?: RepairTaskHealthCheckState'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTaskHealthCheckState'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultCode'
+    name: resultCode
+    fullName: resultCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Числовое значение, предоставляя дополнительные сведения о результатах выполнения задачи восстановления.
+      Может быть указан в Restoring и последующих состояний и является неизменяемым после установки.
+    optional: true
+    syntax:
+      content: 'resultCode?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultDetails'
+    name: resultDetails
+    fullName: resultDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Строка, предоставляя дополнительные сведения о результатах выполнения задачи восстановления.
+      Может быть указан в Restoring и последующих состояний и является неизменяемым после установки.
+    optional: true
+    syntax:
+      content: 'resultDetails?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.resultStatus'
+    name: resultStatus
+    fullName: resultStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Значение, описывающее общий результат выполнения задачи восстановления. Должно быть указано в Restoring и последующих состояний и является неизменяемым после установки. Ниже перечислены возможные значения. «Invalid», «Succeeded», «Отменено», «Прервано», «Сбой», «Ожидание»'
+    optional: true
+    syntax:
+      content: 'resultStatus?: ResultStatus'
+      return:
+        type:
+          - '@azure/servicefabric.ResultStatus'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.state'
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Состояние рабочего процесса задачи восстановления. Допустимые состояния начальной: создано "," затребовано "и" Подготовка. Ниже перечислены возможные значения. «Invalid», «Созданный», «запрошенные», «Подготовка», «Утверждено», «Выполнение», «Восстановление», «Завершено»'
+    syntax:
+      content: 'state: State'
+      return:
+        type:
+          - '@azure/servicefabric.State'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.target'
+    name: target
+    fullName: target
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Целевой объект определяет, какие действия, система будет предпринять для подготовки к влияние восстановления, прежде чем будет утверждено выполнения восстановления.
+      Можно задать при создании задачи восстановления и является неизменяемым после установки.
+    optional: true
+    syntax:
+      content: 'target?: RepairTargetDescriptionBaseUnion'
+      return:
+        type:
+          - '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.taskId'
+    name: taskId
+    fullName: taskId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Идентификатор задачи восстановления.
+    syntax:
+      content: 'taskId: string'
+      return:
+        type:
+          - string
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.RepairTask.version'
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Версия задачи исправления.
+      При создании нового задания восстановления, версии должен быть равным нулю.  При обновлении задачи восстановления, то используется версия для проверок оптимистичного параллелизма.  Если версия равно нулю, обновление не будет проверять наличие конфликтов записи.  Если значение ненулевое, имеет значение версии, то обновление будет успешным только в том случае, если это значение соответствует фактической текущей версии задачи исправления.
+    optional: true
+    syntax:
+      content: 'version?: undefined | string'
+      return:
+        type:
+          - undefined | string
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.RepairTaskHistory'
+    name: RepairTaskHistory
+    spec.typeScript:
+      - name: RepairTaskHistory
+        fullName: RepairTaskHistory
+        uid: '@azure/servicefabric.RepairTaskHistory'
+  - uid: '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+    name: RepairImpactDescriptionBaseUnion
+    spec.typeScript:
+      - name: RepairImpactDescriptionBaseUnion
+        fullName: RepairImpactDescriptionBaseUnion
+        uid: '@azure/servicefabric.RepairImpactDescriptionBaseUnion'
+  - uid: '@azure/servicefabric.RepairTaskHealthCheckState'
+    name: RepairTaskHealthCheckState
+    spec.typeScript:
+      - name: RepairTaskHealthCheckState
+        fullName: RepairTaskHealthCheckState
+        uid: '@azure/servicefabric.RepairTaskHealthCheckState'
+  - uid: '@azure/servicefabric.ResultStatus'
+    name: ResultStatus
+    spec.typeScript:
+      - name: ResultStatus
+        fullName: ResultStatus
+        uid: '@azure/servicefabric.ResultStatus'
+  - uid: '@azure/servicefabric.State'
+    name: State
+    spec.typeScript:
+      - name: State
+        fullName: State
+        uid: '@azure/servicefabric.State'
+  - uid: '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
+    name: RepairTargetDescriptionBaseUnion
+    spec.typeScript:
+      - name: RepairTargetDescriptionBaseUnion
+        fullName: RepairTargetDescriptionBaseUnion
+        uid: '@azure/servicefabric.RepairTargetDescriptionBaseUnion'
