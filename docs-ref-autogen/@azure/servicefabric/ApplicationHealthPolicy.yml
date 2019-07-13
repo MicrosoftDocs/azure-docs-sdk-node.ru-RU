@@ -1,0 +1,94 @@
+### YamlMime:UniversalReference
+items:
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy'
+    name: ApplicationHealthPolicy
+    fullName: ApplicationHealthPolicy
+    children:
+      - '@azure/servicefabric.ApplicationHealthPolicy.considerWarningAsError'
+      - '@azure/servicefabric.ApplicationHealthPolicy.defaultServiceTypeHealthPolicy'
+      - '@azure/servicefabric.ApplicationHealthPolicy.maxPercentUnhealthyDeployedApplications'
+      - '@azure/servicefabric.ApplicationHealthPolicy.serviceTypeHealthPolicyMap'
+    langs:
+      - typeScript
+    type: interface
+    summary: '<span data-ttu-id="1a7c1-101">Определяет политику работоспособности, используемые для оценки работоспособности приложения или одного из его дочерних сущностей.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-101">Defines a health policy used to evaluate the health of an application or one of its children entities.</span></span>'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.considerWarningAsError'
+    name: considerWarningAsError
+    fullName: considerWarningAsError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1a7c1-102">Указывает, учитываются ли предупреждения с той же степенью серьезности, что и ошибки.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-102">Indicates whether warnings are treated with the same severity as errors.</span></span> <span data-ttu-id="1a7c1-103">Значение по умолчанию: false.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-103">Default value: false.</span></span>'
+    optional: true
+    syntax:
+      content: 'considerWarningAsError?: undefined | false | true'
+      return:
+        type:
+          - undefined | false | true
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.defaultServiceTypeHealthPolicy'
+    name: defaultServiceTypeHealthPolicy
+    fullName: defaultServiceTypeHealthPolicy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: '<span data-ttu-id="1a7c1-104">Политики работоспособности, используемые по умолчанию для оценки работоспособности типа службы.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-104">The health policy used by default to evaluate the health of a service type.</span></span>'
+    optional: true
+    syntax:
+      content: 'defaultServiceTypeHealthPolicy?: ServiceTypeHealthPolicy'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceTypeHealthPolicy'
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.maxPercentUnhealthyDeployedApplications'
+    name: maxPercentUnhealthyDeployedApplications
+    fullName: maxPercentUnhealthyDeployedApplications
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      <span data-ttu-id="1a7c1-105">Максимальный допустимый процент неработоспособных развернутых приложений.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-105">The maximum allowed percentage of unhealthy deployed applications.</span></span> <span data-ttu-id="1a7c1-106">Допустимые значения: байтовых значений от 0 до 100.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-106">Allowed values are Byte values from zero to 100.</span></span>
+      <span data-ttu-id="1a7c1-107">Процент представляет максимальный процент неработоспособных развернутых приложений, которые могут быть признаны неработоспособными, прежде чем error при оценке приложения.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-107">The percentage represents the maximum tolerated percentage of deployed applications that can be unhealthy before the application is considered in error.</span></span>
+      <span data-ttu-id="1a7c1-108">Это значение вычисляется путем деления числа неработоспособных развернутых приложений на количество узлов, где приложение в настоящее время развертывается на в кластере.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-108">This is calculated by dividing the number of unhealthy deployed applications over the number of nodes where the application is currently deployed on in the cluster.</span></span>
+      <span data-ttu-id="1a7c1-109">Расчет округляется: на небольшом количестве узлов допускается один сбой.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-109">The computation rounds up to tolerate one failure on small numbers of nodes.</span></span> <span data-ttu-id="1a7c1-110">Значение в процентах по умолчанию равняется нулю.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-110">Default percentage is zero.</span></span> <span data-ttu-id="1a7c1-111">Значение по умолчанию: 0.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-111">Default value: 0.</span></span>
+    optional: true
+    syntax:
+      content: 'maxPercentUnhealthyDeployedApplications?: undefined | number'
+      return:
+        type:
+          - undefined | number
+    package: '@azure/servicefabric'
+  - uid: '@azure/servicefabric.ApplicationHealthPolicy.serviceTypeHealthPolicyMap'
+    name: serviceTypeHealthPolicyMap
+    fullName: serviceTypeHealthPolicyMap
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <span data-ttu-id="1a7c1-112">Сопоставление политик работоспособности типа службы для имени типа службы.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-112">The map with service type health policy per service type name.</span></span> <span data-ttu-id="1a7c1-113">Сопоставление является пустым по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="1a7c1-113">The map is empty by default.</span></span>
+    optional: true
+    syntax:
+      content: 'serviceTypeHealthPolicyMap?: ServiceTypeHealthPolicyMapItem[]'
+      return:
+        type:
+          - '@azure/servicefabric.ServiceTypeHealthPolicyMapItem[]'
+    package: '@azure/servicefabric'
+references:
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+    name: ServiceTypeHealthPolicy
+    spec.typeScript:
+      - name: ServiceTypeHealthPolicy
+        fullName: ServiceTypeHealthPolicy
+        uid: '@azure/servicefabric.ServiceTypeHealthPolicy'
+  - uid: '@azure/servicefabric.ServiceTypeHealthPolicyMapItem[]'
+    name: 'ServiceTypeHealthPolicyMapItem[]'
+    spec.typeScript:
+      - name: ServiceTypeHealthPolicyMapItem
+        fullName: ServiceTypeHealthPolicyMapItem
+        uid: '@azure/servicefabric.ServiceTypeHealthPolicyMapItem'
+      - name: '[]'
+        fullName: '[]'
