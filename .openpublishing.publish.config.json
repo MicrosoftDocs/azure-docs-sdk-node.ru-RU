@@ -1,35 +1,5 @@
 {
-  "docsets_to_publish": [
-    {
-      "docset_name": "node-api",
-      "build_source_folder": ".",
-      "build_output_subfolder": "node-api",
-      "locale": "ru-RU",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "UniversalReference": "Content",
-        "LandingData": "Content",
-        "APIConnector": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/uref.plugins/content"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
-        ]
-      }
-    }
-  ],
+  "docsets_to_publish": [],
   "notification_subscribers": [],
   "branches_to_filter": [
     "live-sxs"
@@ -59,6 +29,11 @@
     ]
   },
   "need_generate_pdf_url_template": false,
+  "targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
   "dependent_packages": [
@@ -95,10 +70,5 @@
   ],
   "DiffFolder": [
     "docs-ref-autogen/overview/azure"
-  ],
-  "Targets": {
-    "Pdf": {
-      "template_folder": "_themes.pdf"
-    }
-  }
+  ]
 }
